@@ -1,0 +1,56 @@
+- quan trọng: Luồng order (sell, buy-back, return)
+- quan trọng: luồng quản lý nhân viên 
+	admin logins
+	admin set manager's access
+	manager logins
+	manager search staff
+	manager creates staff
+	manager fills info
+	system add staff in database
+	manager read staff info
+	manager updates staff info
+	system update staff in database
+	staff logins
+	staff view info
+	manager remove staff
+	manager request admin
+	admin confirms
+	system sign-outs staff
+	system remove staff out database
+	system creates log (report)
+	admin views logs (reports)
+- quan trọng: luồng quản lý sản phẩm (bao gồm cả quản lý kho)
+	admin logins
+	admin set manager's access
+	manager logins
+	manager search product
+	manager adds product
+	manager fill product info
+	manager save product
+	system add product to database
+	authorized user views product
+	manager updates product info
+	system update product in database
+	manager remove product
+	system remove product in database
+- quan trọng: luồng quản lý stall
+	admin logins 
+	admin set manager's access
+	manager logins
+	manager search stall
+	manager adds stall
+	manager fills stall info
+	manager save stall
+	system adds stall to database
+	manager updates stall info
+	system updates stall in database
+	manager removes stall 
+	system removes stall out database
+
+	
+	
+	
+	
+	
+	
+	
