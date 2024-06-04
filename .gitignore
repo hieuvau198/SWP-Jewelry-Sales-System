@@ -11,3 +11,6 @@
 
 # PowerPoint temporary
 ~$*.ppt*
+
+#appsettings.json
+**/code/JewelSystemBE/
