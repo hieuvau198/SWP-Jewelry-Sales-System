@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\JewelSystemBE.csproj": {}
+    "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\JewelSystemBE.csproj": {
+    "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\JewelSystemBE.csproj",
+        "projectUniqueName": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj",
         "projectName": "JewelSystemBE",
-        "projectPath": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\JewelSystemBE.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\obj\\",
+        "projectPath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj",
+        "packagesPath": "C:\\Users\\hoanv\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hoanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -108,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
