@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JewelSystemBE.Controllers
 {
-    [Route("v1/api/jewel")]
+    [Route("api/jewel")]
     [ApiController]
     public class JewelController : ControllerBase
     {

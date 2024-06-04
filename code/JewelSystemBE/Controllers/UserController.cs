@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JewelSystemBE.Controllers
 {
-    [Route("v1/api/user")]
+    [Route("api/user")]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -17,6 +17,22 @@ namespace JewelSystemBE.Controllers
         public IActionResult Get()
         {
             return Ok(_userService.GetUsers());
+        }
+        [HttpGet("{userId}")]
+        public IActionResult Get(string userId)
+        {
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                return BadRequest(new { message = "Invalid User ID." });
+            }
+
+            var user = _userService.GetUser(userId);
+            if (user == null)
+            {
+                return NotFound(new { message = "Product not found." });
+            }
+
+            return Ok(user);
         }
         [HttpPost]
         public IActionResult Post(User user)

@@ -49,6 +49,11 @@ namespace JewelSystemBE.Service.ServiceUser
             return _jewelDbContext.Users.OrderByDescending(x => x.Username).ToList();
         }
 
+        public User GetUser(string userId)
+        {
+            return _jewelDbContext.Users.Find(userId);
+        }
+
         public bool RemoveUser(string userId)
         {
             if(userId == null)

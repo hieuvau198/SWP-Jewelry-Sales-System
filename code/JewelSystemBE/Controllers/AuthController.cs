@@ -30,7 +30,7 @@ namespace JewelSystemBE.Controllers
             
             if(_authService.AuthenticateUser(username, password))
             {
-                return Ok(new { message = "User signed in successfully." });
+                return Ok(_authService.GetUserByUsername(username));
             }
             return Unauthorized(new { message = "Wrong username or password" });
         }
