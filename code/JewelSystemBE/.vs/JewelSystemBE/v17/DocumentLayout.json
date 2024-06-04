@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\jewelsystembe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\jewelsystembe\\data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Data\\JewelDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\JewelDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\jewelsystembe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\jewelsystembe\\jewelsystembe.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:jewelsystembe.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JewelSystemBE.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-06-04T03:50:40.06Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Data\\JewelDbContext.cs",
               "ViewState": "AQIAAIgBAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T03:50:26.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T03:50:26.916Z"
             },
             {
               "$type": "Document",
@@ -68,20 +67,18 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T03:46:29.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T03:46:29.6Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "JewelSystemBE",
+              "Title": "JewelSystemBE.csproj",
               "DocumentMoniker": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj",
               "RelativeDocumentMoniker": "JewelSystemBE.csproj",
               "ToolTip": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\JewelSystemBE.csproj",
               "RelativeToolTip": "JewelSystemBE.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-04T03:46:19.559Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-04T03:46:19.559Z"
             }
           ]
         }
