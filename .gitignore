@@ -13,4 +13,5 @@
 ~$*.ppt*
 
 #appsettings.json
-**/code/JewelSystemBE/
+code/JewelSystemBE/appsettings.json
+code/JewelSystemBE/obj/Debug
