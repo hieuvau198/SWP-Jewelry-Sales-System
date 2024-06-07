@@ -1,0 +1,17 @@
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelDAO.deps.json
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelDAO.dll
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelDAO.pdb
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.AssemblyInfoInputs.cache
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.AssemblyInfo.cs
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.csproj.CoreCompileInputs.cache
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.dll
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\refint\JewelDAO.dll
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.pdb
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\ref\JewelDAO.dll
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelBO.dll
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelDAL.dll
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelBO.pdb
+D:\workspace\vs\rebuild\JewelDAO\bin\Debug\net8.0\JewelDAL.pdb
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.csproj.AssemblyReference.cache
+D:\workspace\vs\rebuild\JewelDAO\obj\Debug\net8.0\JewelDAO.csproj.Up2Date

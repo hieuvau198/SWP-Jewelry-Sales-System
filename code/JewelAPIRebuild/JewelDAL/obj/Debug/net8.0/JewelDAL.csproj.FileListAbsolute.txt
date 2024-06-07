@@ -1,0 +1,15 @@
+D:\workspace\vs\rebuild\JewelDAL\bin\Debug\net8.0\JewelDAL.deps.json
+D:\workspace\vs\rebuild\JewelDAL\bin\Debug\net8.0\JewelDAL.dll
+D:\workspace\vs\rebuild\JewelDAL\bin\Debug\net8.0\JewelDAL.pdb
+D:\workspace\vs\rebuild\JewelDAL\bin\Debug\net8.0\JewelBO.dll
+D:\workspace\vs\rebuild\JewelDAL\bin\Debug\net8.0\JewelBO.pdb
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.csproj.AssemblyReference.cache
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.AssemblyInfoInputs.cache
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.AssemblyInfo.cs
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.csproj.CoreCompileInputs.cache
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.csproj.Up2Date
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.dll
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\refint\JewelDAL.dll
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\JewelDAL.pdb
+D:\workspace\vs\rebuild\JewelDAL\obj\Debug\net8.0\ref\JewelDAL.dll
