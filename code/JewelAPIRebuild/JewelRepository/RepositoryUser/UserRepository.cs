@@ -1,34 +1,40 @@
 ﻿
 
 using JewelBO;
+using JewelDAO.DAOUser;
 
 namespace JewelRepository.RepositoryUser
 {
     public class UserRepository : IUserRepository
     {
+        private IUserDao _userDao;
+        public UserRepository(IUserDao userDao)
+        {
+            _userDao = userDao;
+        }
         public bool AddUser(User user)
         {
-            throw new NotImplementedException();
+            return _userDao.AddUser(user);
         }
 
         public User GetUser(string userId)
         {
-            throw new NotImplementedException();
+            return _userDao.GetUser(userId);
         }
 
         public List<User> GetUsers()
         {
-            throw new NotImplementedException();
+            return _userDao.GetUsers();
         }
 
         public bool RemoveUser(string userId)
         {
-            throw new NotImplementedException();
+            return (_userDao.RemoveUser(userId));
         }
 
         public bool UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            return _userDao.UpdateUser(user);
         }
     }
 }

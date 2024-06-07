@@ -1,34 +1,41 @@
 ﻿
 
 using JewelBO;
+using JewelDAO.DAOProduct;
 
 namespace JewelRepository.RepositoryProduct
 {
     public class ProductRepository : IProductRepository
     {
+        private IProductDao _productDao;
+        public ProductRepository(IProductDao productDao)
+        {
+            _productDao = productDao;
+        }
+        
         public bool AddProduct(Product product)
         {
-            throw new NotImplementedException();
+            return _productDao.AddProduct(product);
         }
 
         public Product GetProduct(string productId)
         {
-            throw new NotImplementedException();
+            return _productDao.GetProduct(productId);
         }
 
         public List<Product> GetProducts()
         {
-            throw new NotImplementedException();
+            return _productDao.GetProducts();
         }
 
         public bool RemoveProduct(string productId)
         {
-            throw new NotImplementedException();
+            return (_productDao.RemoveProduct(productId));
         }
 
         public bool UpdateProduct(Product product)
         {
-            throw new NotImplementedException();
+            return _productDao.UpdateProduct(product);
         }
     }
 }
