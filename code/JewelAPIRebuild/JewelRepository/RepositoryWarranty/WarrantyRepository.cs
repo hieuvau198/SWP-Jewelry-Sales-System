@@ -1,34 +1,40 @@
 ﻿
 
 using JewelBO;
+using JewelDAO.DAOWarranty;
 
 namespace JewelRepository.RepositoryWarranty
 {
     public class WarrantyRepository : IWarrantyRepository
     {
+        private IWarrantyDao _warrantyDao;
+        public WarrantyRepository(IWarrantyDao warrantyDao)
+        {
+            this._warrantyDao = warrantyDao;
+        }
         public bool AddWarranty(Warranty warranty)
         {
-            throw new NotImplementedException();
+            return _warrantyDao.AddWarranty(warranty);
         }
 
         public List<Warranty> GetWarranties()
         {
-            throw new NotImplementedException();
+            return _warrantyDao.GetWarranties();
         }
 
         public Warranty GetWarranty(string warrantyId)
         {
-            throw new NotImplementedException();
+            return _warrantyDao.GetWarranty(warrantyId);
         }
 
         public bool RemoveWarranty(string warrantyId)
         {
-            throw new NotImplementedException();
+            return _warrantyDao.RemoveWarranty(warrantyId);
         }
 
         public bool UpdateWarranty(Warranty warranty)
         {
-            throw new NotImplementedException();
+            return _warrantyDao.UpdateWarranty(warranty);
         }
     }
 }
