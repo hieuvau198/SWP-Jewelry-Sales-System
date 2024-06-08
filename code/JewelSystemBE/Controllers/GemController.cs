@@ -1,5 +1,6 @@
 ﻿using JewelSystemBE.Model;
 using JewelSystemBE.Service.ServiceGem;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JewelSystemBE.Controllers

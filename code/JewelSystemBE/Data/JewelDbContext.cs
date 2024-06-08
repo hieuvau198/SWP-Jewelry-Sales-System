@@ -1,6 +1,5 @@
 ﻿using JewelSystemBE.Model;
 using Microsoft.EntityFrameworkCore;
-using BCrypt.Net;
 
 namespace JewelSystemBE.Data
 {
@@ -20,6 +19,8 @@ namespace JewelSystemBE.Data
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
 
+        public DbSet<JewelP> JewelPs { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,6 +30,16 @@ namespace JewelSystemBE.Data
 
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<JewelP>(builder =>
+                {
+                    builder.ToTable("jewelp");
+                    builder.HasKey(x => x.Name);
+                    builder.Property(x => x.Picture).IsRequired();
+                }
+            );
+            
+            
+            
             modelBuilder.Entity<User>(builder =>
             {
                 builder.ToTable("user");

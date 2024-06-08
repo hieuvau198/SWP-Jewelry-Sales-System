@@ -2,6 +2,7 @@
 using JewelSystemBE.Model;
 using JewelSystemBE.Service.ServiceGold;
 
+
 namespace JewelSystemBE.Controllers
 {
     [Route("api/gold")]
@@ -13,7 +14,9 @@ namespace JewelSystemBE.Controllers
         {
             _goldService = goldService;
         }
+        
         [HttpGet]
+        
         public IActionResult Get()
         {
             return Ok(_goldService.GetGolds());

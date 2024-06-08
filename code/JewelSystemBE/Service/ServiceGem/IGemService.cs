@@ -9,5 +9,6 @@ namespace JewelSystemBE.Service.ServiceGem
         Boolean AddGem(Gem gem);
         Boolean RemoveGem(string gemId);
         Boolean UpdateGem(Gem gem);
+
     }
 }

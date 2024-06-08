@@ -15,6 +15,7 @@ using JewelSystemBE.Service.ServiceWarranty;
 using JewelSystemBE.Service.ServiceCustomer;
 using JewelSystemBE.Service.ServiceInvoice;
 using JewelSystemBE.Service.ServiceInvoiceItem;
+using JewelSystemBE.Service.ServiceJewelP;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,10 @@ builder.Services.AddDbContext<JewelDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("JewelDBW2"));
 });
 
+// transient: create a new object every request
+// scope: create or use the existed object in scope
+// singleton: only one object
+
 builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IJewelService, JewelService>();
 builder.Services.AddTransient<IUserService, UserService>();
@@ -41,6 +46,8 @@ builder.Services.AddTransient<IWarrantyService, WarrantyService>();
 builder.Services.AddTransient<ICustomerService, CustomerService>();
 builder.Services.AddTransient<IInvoiceService, InvoiceService>();
 builder.Services.AddTransient<IInvoiceItemService, InvoiceItemService>();
+
+builder.Services.AddTransient<IJewelPService, JewelPService>();
 
 
 // Configure JWT authentication, it imports jwtbearer, token, text, model
