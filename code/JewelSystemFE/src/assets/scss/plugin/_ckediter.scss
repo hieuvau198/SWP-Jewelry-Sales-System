@@ -1,0 +1,14 @@
+
+.ck.ck-toolbar{
+    background: var(--card-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
+.ck.ck-reset_all, .ck.ck-reset_all *{
+    color: var(--text-color) !important;
+}
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused){
+    border-color: var(--border-color) !important;
+}
+.ck.ck-editor__main>.ck-editor__editable{
+    background: var(--card-color) !important;
+}

@@ -1,0 +1,43 @@
+// Bootstrap v5.1.0
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// Global
+@import "../scss/global/fonts"; 
+@import "../scss/global/themes";
+@import "../scss/global/variables";
+@import "../scss/global/mixins";
+@import "../scss/global/general";
+@import "../scss/global/rtl-mode";
+
+// Dynamic Color scss
+// @import "../dist/assets/plugin/colorpicker/colorpicker.min.scss";
+
+// Custom Bootstrap Components
+@import "../scss/bootstrap/custom";
+
+// Generic
+@import "../scss/generic/helpers";
+@import "../scss/generic/animate";
+@import "../scss/generic/setting-bar";
+
+// Skeleton
+@import "../scss/skeleton/ebazar-layout";
+
+// Plugin scss
+@import "../scss/plugin/calendar";
+@import "../scss/plugin/chat";
+@import "../scss/plugin/timeline";
+@import "../scss/plugin/cart";
+@import "../scss/plugin/product";
+@import "../scss/plugin/filter";
+@import "../scss/plugin/ckediter";
+@import "../scss/plugin/datatable";
+@import "../scss/plugin/charts";
+
+// Application widgets
+@import "../scss/widgets/card";
+
+//productEdit
+@import "../scss/ProductEdit/ProductEdit.scss"
+

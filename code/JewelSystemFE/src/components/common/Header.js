@@ -11,11 +11,9 @@ import Avatar5 from '../../assets/images/xs/avatar5.svg';
 import Avatar6 from '../../assets/images/xs/avatar6.svg';
 import Avatar7 from '../../assets/images/xs/avatar7.svg';
 import Profile from '../../assets/images/profile_av.svg';
-import { connect } from 'react-redux';
-import { Onopenmodalsetting } from '../../Redux/Actions/Action';
 import { Link } from 'react-router-dom';
 
-function Header (props) {
+function Header () {
         return (
             <div className="header">
                 <nav className="navbar py-4">
@@ -156,9 +154,6 @@ function Header (props) {
                                     </div>
                                 </Dropdown.Menu>
                             </Dropdown>
-                            <div className="setting ms-2">
-                                <a href='#!' onClick={(val) => {props.Onopenmodalsetting(true) }} ><i className="icofont-gear-alt fs-5"></i></a>
-                            </div>
                         </div>
                         <button className="navbar-toggler p-0 border-0 menu-toggle order-3" type="button" onClick={() => {
                             var sidebar = document.getElementById('mainsidemenu')
@@ -185,11 +180,6 @@ function Header (props) {
     }
 
 
-const mapSatetToProps = ({ Mainreducer }) => ({
-    Mainreducer
-})
 
 
-export default connect(mapSatetToProps, {
-    Onopenmodalsetting
-})(Header);
+export default Header;
