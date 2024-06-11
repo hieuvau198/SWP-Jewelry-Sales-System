@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageSrc from "../../assets/images/google.svg";
+// import ImageSrc from "../../assets/images/google.svg";
 import { useRef, useState, useEffect } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -41,11 +41,15 @@ function SignIn() {
             //console.log(JSON.stringify(response));
             const accessToken = response?.data?.accessToken;
             const roles = [2001,5150]; //response?.data?.roles;
-            console.log(from);
-            setAuth({ username, password, roles, accessToken });
+            const authUser = { username, password, roles, accessToken };
+            console.log(authUser);
+            setAuth(authUser);
+            window.localStorage.setItem('authUser',JSON.stringify(authUser)); //before jwt
+            console.log(JSON.parse(window.localStorage.getItem('authUser')));
             setUsername('');
             setpassword('');
-            navigate(from, { replace: true });
+            // navigate(from, { replace: true });
+            navigate('/dashboard');
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
