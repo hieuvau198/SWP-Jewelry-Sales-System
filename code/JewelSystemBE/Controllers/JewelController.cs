@@ -1,5 +1,6 @@
 ﻿using JewelSystemBE.Model;
 using JewelSystemBE.Service.ServiceJewel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -19,6 +20,7 @@ namespace JewelSystemBE.Controllers
 
         // GET: api/<JewelController>
         [HttpGet]
+        [Authorize(Policy = "AdminPolicy")]
         public IActionResult Get()
         {
             return Ok(_jewelService.GetJewels());
