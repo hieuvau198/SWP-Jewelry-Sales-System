@@ -23,3 +23,16 @@ C:\Users\hoanv\OneDrive\Documents\GitHub\SWP-Jewelry-Sales-System\code\reserve\J
 C:\Users\hoanv\OneDrive\Documents\GitHub\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\refint\JewelBO.dll
 C:\Users\hoanv\OneDrive\Documents\GitHub\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.pdb
 C:\Users\hoanv\OneDrive\Documents\GitHub\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\ref\JewelBO.dll
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\bin\Debug\net8.0\JewelBO.deps.json
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\bin\Debug\net8.0\JewelBO.dll
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\bin\Debug\net8.0\JewelBO.pdb
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.csproj.AssemblyReference.cache
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.GeneratedMSBuildEditorConfig.editorconfig
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.AssemblyInfoInputs.cache
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.AssemblyInfo.cs
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.csproj.CoreCompileInputs.cache
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.sourcelink.json
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.dll
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\refint\JewelBO.dll
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.pdb
+D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\ref\JewelBO.dll

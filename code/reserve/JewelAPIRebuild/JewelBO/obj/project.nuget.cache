@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Py3k4UhSK1o=",
+  "dgSpecHash": "yzut7958Ww7Kdf6xKJBDG5MH7aHmJohyg8OzOAi+TTYvplQ8BKGNVOcCDEPFHvrU8Qg+gVOqFbS2Fjjirlt49Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
+  "projectFilePath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hoanv\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\phamd\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JewelRepository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aac98af219c8c18031513a61bc7b5485a006ee81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d18a26fa83bbf33529c3d95497259aa0e023a43")]
 [assembly: System.Reflection.AssemblyProductAttribute("JewelRepository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JewelRepository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

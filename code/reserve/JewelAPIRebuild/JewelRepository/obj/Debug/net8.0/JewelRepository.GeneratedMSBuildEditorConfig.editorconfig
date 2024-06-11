@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JewelRepository
-build_property.ProjectDir = C:\Users\hoanv\OneDrive\Documents\GitHub\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelRepository\
+build_property.ProjectDir = D:\github\SWP\SWP-Jewelry-Sales-System\code\reserve\JewelAPIRebuild\JewelRepository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
