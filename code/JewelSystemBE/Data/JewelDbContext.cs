@@ -19,8 +19,8 @@ namespace JewelSystemBE.Data
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
 
-        public DbSet<JewelP> JewelPs { get; set; }
 
+        public DbSet<ImageRecord> ImageRecords { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,16 +30,18 @@ namespace JewelSystemBE.Data
 
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<JewelP>(builder =>
-                {
-                    builder.ToTable("jewelp");
-                    builder.HasKey(x => x.Name);
-                    builder.Property(x => x.Picture).IsRequired();
-                }
-            );
-            
-            
-            
+
+
+            modelBuilder.Entity<ImageRecord>(builder =>
+            {
+                builder.HasData(
+                    new ImageRecord {Id = "2f29b6a7-8010-4a90-853f-c896fd387793", FileName = "dfyqz4e-f004994b-129e-44ad-853f-3eaae3112671.jpg", Path = "dfyqz4e-f004994b-129e-44ad-853f-3eaae3112671.jpg" },
+                    new ImageRecord {Id = "58bbac95-17ef-484c-a0d8-24494f8d36a5", FileName = "hentai.png", Path = "hentai.png" },
+                    new ImageRecord {Id = "de9b5453-15d2-41a0-922e-1edbcc6e0bef", FileName = "maxresdefault.jpg", Path = "maxresdefault.jpg" },
+                    new ImageRecord {Id = "e4b1110f-0340-48d3-82b0-9315acc175e0", FileName = "RDT_20240603_1700187451959011441817016.jpg", Path = "RDT_20240603_1700187451959011441817016.jpg" }
+                    );
+            });
+
             modelBuilder.Entity<User>(builder =>
             {
                 builder.ToTable("user");

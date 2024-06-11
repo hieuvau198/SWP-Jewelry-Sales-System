@@ -18,15 +18,17 @@ namespace JewelSystemBE.Service.ServiceAuth
             _configuration = configuration;
         }
 
-        public bool AuthenticateUser(string username, string password)
+        public string AuthenticateUser(string username, string password)
         {
             var user = _jewelDbContext.Users.SingleOrDefault(
                 u => u.Username == username);
             if (user == null)
             {
-                return false;
+                return "Wrong Username";
             }
-            return BCrypt.Net.BCrypt.Verify(password, user.Password);
+            if(BCrypt.Net.BCrypt.Verify(password, user.Password))
+            { return user.Role; }
+            return "Wrong Password.";
         }
 
         public bool RegisterUser(User user)
@@ -53,27 +55,25 @@ namespace JewelSystemBE.Service.ServiceAuth
         {
             return _jewelDbContext.Users.SingleOrDefault(u => u.Username == username);
         }
-        string IAuthService.GenerateJwtToken(string username)
+        public string GenerateJwtToken(User user, string role)
         {
-            var user = GetUserByUsername(username);
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
             new Claim(JwtRegisteredClaimNames.Sub, user.Username),
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role),
+            new Claim("fullName", user.Fullname),
+            new Claim("email", user.Email),
+            new Claim(ClaimTypes.Role, role),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.Now.AddMinutes(30),
-                signingCredentials: creds);
+            var token = new JwtSecurityToken(_configuration["Jwt:Issuer"],
+                _configuration["Jwt:Audience"],
+                claims,
+                expires: DateTime.Now.AddMinutes(120),
+                signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

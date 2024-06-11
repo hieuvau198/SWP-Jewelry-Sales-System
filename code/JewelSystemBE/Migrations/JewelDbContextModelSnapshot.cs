@@ -22,6 +22,50 @@ namespace JewelSystemBE.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("JewelSystemBE.ImageRecord", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ImageRecords");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "2f29b6a7-8010-4a90-853f-c896fd387793",
+                            FileName = "dfyqz4e-f004994b-129e-44ad-853f-3eaae3112671.jpg",
+                            Path = "dfyqz4e-f004994b-129e-44ad-853f-3eaae3112671.jpg"
+                        },
+                        new
+                        {
+                            Id = "58bbac95-17ef-484c-a0d8-24494f8d36a5",
+                            FileName = "hentai.png",
+                            Path = "hentai.png"
+                        },
+                        new
+                        {
+                            Id = "de9b5453-15d2-41a0-922e-1edbcc6e0bef",
+                            FileName = "maxresdefault.jpg",
+                            Path = "maxresdefault.jpg"
+                        },
+                        new
+                        {
+                            Id = "e4b1110f-0340-48d3-82b0-9315acc175e0",
+                            FileName = "RDT_20240603_1700187451959011441817016.jpg",
+                            Path = "RDT_20240603_1700187451959011441817016.jpg"
+                        });
+                });
+
             modelBuilder.Entity("JewelSystemBE.Model.Customer", b =>
                 {
                     b.Property<string>("CustomerId")
@@ -529,20 +573,6 @@ namespace JewelSystemBE.Migrations
                         });
                 });
 
-            modelBuilder.Entity("JewelSystemBE.Model.JewelP", b =>
-                {
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<byte[]>("Picture")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.HasKey("Name");
-
-                    b.ToTable("jewelp", (string)null);
-                });
-
             modelBuilder.Entity("JewelSystemBE.Model.Product", b =>
                 {
                     b.Property<string>("ProductId")
@@ -642,8 +672,8 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            ProductId = "7fc44c91-bf82-4f92-bd49-307deab174b7",
-                            CreatedAt = new DateTime(2024, 6, 8, 0, 29, 11, 117, DateTimeKind.Local).AddTicks(5621),
+                            ProductId = "178058ea-7e48-450b-a710-7eb304d57d32",
+                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1520),
                             GemId = "1",
                             GemWeight = 5.0,
                             GoldId = "1",
@@ -660,8 +690,8 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "376db2ba-30e8-4813-b3fc-faf26a0b4d15",
-                            CreatedAt = new DateTime(2024, 6, 8, 0, 29, 11, 117, DateTimeKind.Local).AddTicks(5629),
+                            ProductId = "9a4be737-cb37-43e5-a317-e81c495e0af7",
+                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1529),
                             GemId = "2",
                             GemWeight = 2.0,
                             GoldId = "2",
@@ -678,8 +708,8 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "81264f38-0f31-47c8-8aa6-9b586ae657f9",
-                            CreatedAt = new DateTime(2024, 6, 8, 0, 29, 11, 117, DateTimeKind.Local).AddTicks(5635),
+                            ProductId = "9945b594-2bc1-4e76-beb9-990fe18d4ac5",
+                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1535),
                             GemId = "3",
                             GemWeight = 3.0,
                             GoldId = "3",
@@ -696,8 +726,8 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "a29ee577-96b2-4817-85cb-31a7839f307b",
-                            CreatedAt = new DateTime(2024, 6, 8, 0, 29, 11, 117, DateTimeKind.Local).AddTicks(5672),
+                            ProductId = "08ea4bc8-aaae-4292-b7f4-933608a0266a",
+                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1542),
                             GemId = "4",
                             GemWeight = 1.5,
                             GoldId = "4",
@@ -714,8 +744,8 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "616637ce-0f75-4950-82c8-5983fc318377",
-                            CreatedAt = new DateTime(2024, 6, 8, 0, 29, 11, 117, DateTimeKind.Local).AddTicks(5690),
+                            ProductId = "9b0b750c-bc7c-4c20-8515-a0e2bcd28c15",
+                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1549),
                             GemId = "5",
                             GemWeight = 2.5,
                             GoldId = "5",
@@ -732,8 +762,8 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "bbf01e3a-6bbf-4138-8270-d0282a625abf",
-                            CreatedAt = new DateTime(2024, 6, 8, 0, 29, 11, 117, DateTimeKind.Local).AddTicks(5696),
+                            ProductId = "5ef80e39-91d5-48bd-ba77-df4de5961262",
+                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1567),
                             GemId = "1",
                             GemWeight = 4.0,
                             GoldId = "2",
@@ -785,7 +815,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "1",
                             Email = "user1@example.com",
                             Fullname = "User One",
-                            Password = "$2a$11$wgvQhonrYqEkIJSgepdORud4GpUgkcBCxXfXmOqppW3bUvRrXvfni",
+                            Password = "$2a$11$3andJ4bgAxIv2YAcHvYIze3kbplZUqj7CWMYx9kdY.erke1v1GWqi",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -794,7 +824,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "2",
                             Email = "user2@example.com",
                             Fullname = "User Two",
-                            Password = "$2a$11$.q3DhZF/m5jgjpguLz0hDeNJmkh.yJj4OlpOMV.xB2gojixwxRyg6",
+                            Password = "$2a$11$GgbcgSY4LXqCuEkhZFYM0utI46HfuZzpWFyopopE8RHphfiYP8Fb.",
                             Role = "User",
                             Username = "user2"
                         },
@@ -803,7 +833,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "3",
                             Email = "user3@example.com",
                             Fullname = "User Three",
-                            Password = "$2a$11$Q8LeZf8YaEz9vFNgzlkkPeIhhdA2t2CS3SK2C529Za3z04XFT5M1a",
+                            Password = "$2a$11$ycDtLtRH/OQI4IRreSHY/.8CmmO7oZO7W3UsLPfbIHx2sPXs9dFNK",
                             Role = "User",
                             Username = "user3"
                         },
@@ -812,7 +842,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "4",
                             Email = "user4@example.com",
                             Fullname = "User Four",
-                            Password = "$2a$11$NnvjHC53c0LWxVAnvht4Zu2ILhJ6N83MMMkjXRgSAd1L6O68eY436",
+                            Password = "$2a$11$vABKssvxND4VuHsWt49lJ.9/qVUc75VqvSCGOZCuSkjfMxCwGd08u",
                             Role = "User",
                             Username = "user4"
                         },
@@ -821,7 +851,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "5",
                             Email = "user5@example.com",
                             Fullname = "User Five",
-                            Password = "$2a$11$Ha.iyV4TZxwWqR3LLveorOuMKgP376z3gUAk/nCo8ESsptC4SPYtC",
+                            Password = "$2a$11$cakHVK0kQNz1kTGirT1YWOG8pa3.Yo3H5ltua19VHEipqE6mAnwPu",
                             Role = "User",
                             Username = "user5"
                         });

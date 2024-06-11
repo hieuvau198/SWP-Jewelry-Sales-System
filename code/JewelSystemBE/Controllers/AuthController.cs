@@ -25,24 +25,31 @@ namespace JewelSystemBE.Controllers
             return BadRequest(new {message = "Username or email already existed."});
         }
         [HttpPost("login")]
-        public IActionResult Login(string username, string password)
+        public IActionResult Login([FromBody] User user)
         {
+
+            string verify = _authService.AuthenticateUser(user.Username, user.Password);
+            if (verify.Equals("Wrong Username"))
+            { return Unauthorized(new { message = "Wrong Username" }); }
+            if (verify.Equals("Wrong Password."))
+            { return Unauthorized(new { message = "Wrong Password" }); }
             
-            if(_authService.AuthenticateUser(username, password))
-            {
-                return Ok(_authService.GetUserByUsername(username));
-            }
-            return Unauthorized(new { message = "Wrong username or password" });
+            
+            return Ok(_authService.GetUserByUsername(user.Username));
+            
         }
         [HttpPost("logintoken")]
-        public IActionResult Logintoken(string username, string password)
+        public IActionResult Logintoken([FromBody] User user)
         {
-            if (_authService.AuthenticateUser(username, password))
-            {
-                var token = _authService.GenerateJwtToken(username);
-                return Ok(new { token });
-            }
-            return Unauthorized(new { message = "Invalid username or password." });
+            string verify = _authService.AuthenticateUser(user.Username, user.Password);
+            if (verify.Equals("Wrong Username"))
+            { return Unauthorized(new { message = "Wrong Username" }); }
+            if (verify.Equals("Wrong Password."))
+            { return Unauthorized(new { message = "Wrong Password" }); }
+
+            var token = _authService.GenerateJwtToken(user, verify);
+            return Ok(new { token });
+
         }
     }
 }
