@@ -78,7 +78,7 @@ function Sidebar(props) {
                 <span className="logo-icon">
                     <i className="bi bi-bag-check-fill fs-4"></i>
                 </span>
-                <span className="logo-text"  >eBazar</span>
+                <span className="logo-text"  >JEWEL</span>
             </a>
             <ul className="menu-list flex-grow-1 mt-3">
                 {

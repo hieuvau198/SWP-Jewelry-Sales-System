@@ -9,7 +9,12 @@ import RecentTransaction from '../../components/dashboard/RecentTransaction';
 import SalesStatus from '../../components/dashboard/SalesStatus';
 import { DashboardStatusData, MonthData, TodayData, WeekData, YearData } from '../../components/Data/Data';
 
+
 function Dashboard() {
+
+
+
+
     return (
         <div className="body d-flex py-3">
             <div className="container-xxl">
