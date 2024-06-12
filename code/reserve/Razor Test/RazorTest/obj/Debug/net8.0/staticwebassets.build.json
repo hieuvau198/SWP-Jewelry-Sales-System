@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AT6U811A/vy9p9xIAt7Iz7GSr3iP9yACn6rpMlFSW20=",
+  "Hash": "N0rQWnUeeCdoWNbN2cTPiHIhBUZsI0807WpWSA7AHUM=",
   "Source": "RazorTest",
   "BasePath": "_content/RazorTest",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "RazorTest\\wwwroot",
       "Source": "RazorTest",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RazorTest.styles.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RazorTest.styles.css",
       "SourceId": "RazorTest",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "RazorTest.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RazorTest.styles.css"
+      "OriginalItemSpec": "D:\\SWP391\\FE\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\RazorTest.styles.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RazorTest.bundle.scp.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RazorTest.bundle.scp.css",
       "SourceId": "RazorTest",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "RazorTest.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RazorTest.bundle.scp.css"
+      "OriginalItemSpec": "D:\\SWP391\\FE\\RazorTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RazorTest.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\css\\site.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\css\\site.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\favicon.ico",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\favicon.ico",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\js\\site.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\js\\site.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -1195,12 +1195,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\1507_anh-luffy-gear-5-one-piece-chat-luong-cao9.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\1507_anh-nen-nhan-vat-luffy-gear-5-one-piece-dep2.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/1507_anh-luffy-gear-5-one-piece-chat-luong-cao9.jpg",
+      "RelativePath": "ProductImages/1507_anh-nen-nhan-vat-luffy-gear-5-one-piece-dep2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1211,15 +1211,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\1507_anh-luffy-gear-5-one-piece-chat-luong-cao9.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\1507_anh-nen-nhan-vat-luffy-gear-5-one-piece-dep2.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\1507_anh-nen-nhan-vat-luffy-gear-5-one-piece-dep2.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau3.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/1507_anh-nen-nhan-vat-luffy-gear-5-one-piece-dep2.jpg",
+      "RelativePath": "ProductImages/1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1230,15 +1230,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\1507_anh-nen-nhan-vat-luffy-gear-5-one-piece-dep2.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau3.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau3.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau8.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau3.jpg",
+      "RelativePath": "ProductImages/1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau8.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1249,15 +1249,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau3.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau8.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau8.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\anime-ninja-4k-lo-1920x1080.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau8.jpg",
+      "RelativePath": "ProductImages/anime-ninja-4k-lo-1920x1080.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1268,15 +1268,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\1507_hinh-nen-luffy-gear-5-one-piece-cuc-ngau8.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\anime-ninja-4k-lo-1920x1080.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\anime-ninja-4k-lo-1920x1080.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\hinh-anh-luffy-va-zoro-1.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/anime-ninja-4k-lo-1920x1080.jpg",
+      "RelativePath": "ProductImages/hinh-anh-luffy-va-zoro-1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1287,15 +1287,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\anime-ninja-4k-lo-1920x1080.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\hinh-anh-luffy-va-zoro-1.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\hinh-anh-luffy-va-zoro-1.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\hinh-nen-one-piece-zoro-cho-dien-thoai-1.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/hinh-anh-luffy-va-zoro-1.jpg",
+      "RelativePath": "ProductImages/hinh-nen-one-piece-zoro-cho-dien-thoai-1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,15 +1306,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\hinh-anh-luffy-va-zoro-1.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\hinh-nen-one-piece-zoro-cho-dien-thoai-1.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\hinh-nen-one-piece-zoro-cho-dien-thoai-1.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\LogoSample_ByTailorBrands.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/hinh-nen-one-piece-zoro-cho-dien-thoai-1.jpg",
+      "RelativePath": "ProductImages/LogoSample_ByTailorBrands.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1325,15 +1325,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\hinh-nen-one-piece-zoro-cho-dien-thoai-1.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\LogoSample_ByTailorBrands.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\LogoSample_ByTailorBrands.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\Nhat-dinh-dung-bo-qua-bo-Hinh-Luffy-Gear-5-dep.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/LogoSample_ByTailorBrands.jpg",
+      "RelativePath": "ProductImages/Nhat-dinh-dung-bo-qua-bo-Hinh-Luffy-Gear-5-dep.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1344,15 +1344,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\LogoSample_ByTailorBrands.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\Nhat-dinh-dung-bo-qua-bo-Hinh-Luffy-Gear-5-dep.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\Nhat-dinh-dung-bo-qua-bo-Hinh-Luffy-Gear-5-dep.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\opr-02-groups-02-fesa-y-39.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/Nhat-dinh-dung-bo-qua-bo-Hinh-Luffy-Gear-5-dep.jpg",
+      "RelativePath": "ProductImages/opr-02-groups-02-fesa-y-39.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1363,15 +1363,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\Nhat-dinh-dung-bo-qua-bo-Hinh-Luffy-Gear-5-dep.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\opr-02-groups-02-fesa-y-39.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\opr-02-groups-02-fesa-y-39.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\sapphire_ring.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/opr-02-groups-02-fesa-y-39.jpg",
+      "RelativePath": "ProductImages/sapphire_ring.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1382,15 +1382,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\opr-02-groups-02-fesa-y-39.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\sapphire_ring.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\ScreenFlow_week2_nhat.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\ScreenFlow_week2_nhat.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/ScreenFlow_week2_nhat.jpg",
+      "RelativePath": "ProductImages/ScreenFlow_week2_nhat.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1401,15 +1401,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\ScreenFlow_week2_nhat.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\ScreenFlow_week2_nhat.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\z5520517178763_b15c71ce564304ec7c42e226679f134a.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\z5520517178763_b15c71ce564304ec7c42e226679f134a.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/z5520517178763_b15c71ce564304ec7c42e226679f134a.jpg",
+      "RelativePath": "ProductImages/z5520517178763_b15c71ce564304ec7c42e226679f134a.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1420,15 +1420,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\z5520517178763_b15c71ce564304ec7c42e226679f134a.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\z5520517178763_b15c71ce564304ec7c42e226679f134a.jpg"
     },
     {
-      "Identity": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\Product Images\\z5520609022542_8df939504a97fb41e751ece305023b72.jpg",
+      "Identity": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\ProductImages\\z5520609022542_8df939504a97fb41e751ece305023b72.jpg",
       "SourceId": "RazorTest",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\wwwroot\\",
+      "ContentRoot": "D:\\SWP391\\FE\\RazorTest\\wwwroot\\",
       "BasePath": "_content/RazorTest",
-      "RelativePath": "Product Images/z5520609022542_8df939504a97fb41e751ece305023b72.jpg",
+      "RelativePath": "ProductImages/z5520609022542_8df939504a97fb41e751ece305023b72.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1439,7 +1439,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Product Images\\z5520609022542_8df939504a97fb41e751ece305023b72.jpg"
+      "OriginalItemSpec": "wwwroot\\ProductImages\\z5520609022542_8df939504a97fb41e751ece305023b72.jpg"
     }
   ]
 }
