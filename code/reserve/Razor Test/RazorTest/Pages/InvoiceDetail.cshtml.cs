@@ -20,7 +20,7 @@ namespace RazorTest.Pages
 
         public async Task OnGetAsync()
         {
-            var invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5156/api/invoice");
+            var invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
 
             if (invoices != null)
             {

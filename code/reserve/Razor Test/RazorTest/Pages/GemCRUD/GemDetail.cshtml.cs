@@ -20,7 +20,7 @@ namespace RazorTest.Pages.GemCRUD
 
         public async Task OnGetAsync()
         {
-            var gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5156/api/gem");
+            var gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem");
 
             if (gems != null)
             {

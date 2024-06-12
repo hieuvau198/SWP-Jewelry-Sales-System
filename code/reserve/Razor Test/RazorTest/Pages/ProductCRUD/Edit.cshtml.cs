@@ -55,6 +55,7 @@ namespace RazorTest.Pages.ProductCRUD
                 return Page();
             }
 
+            
             _logger.LogInformation($"Updating product with ID {Product.ProductId}");
             _logger.LogInformation($"Product details: {JsonConvert.SerializeObject(Product)}");
 
@@ -68,7 +69,7 @@ namespace RazorTest.Pages.ProductCRUD
             }
 
             _logger.LogInformation("Successfully updated Product");
-            return RedirectToPage("./ProductDetail");
+            return RedirectToPage("./ProductDetail", new { id = Product.ProductId });
         }
     }
 }

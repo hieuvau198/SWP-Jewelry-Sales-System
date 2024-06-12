@@ -3,7 +3,9 @@
 @{
     ViewData["Title"] = "Edit Product";
 }
+
 <form method="post">
+    <input type="hidden" asp-for="Product.ProductId" />
     <div class="form-group">
         <label asp-for="Product.ProductCode"></label>
         <input asp-for="Product.ProductCode" class="form-control" />
@@ -37,16 +39,18 @@
         <input asp-for="Product.MarkupRate" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Product.GemId"></label>
+        <label asp-for="Product.GemId" class="control-label"></label>
         <input asp-for="Product.GemId" class="form-control" />
+        <span asp-validation-for="Product.GemId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Product.GemWeight"></label>
         <input asp-for="Product.GemWeight" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Product.GoldId"></label>
+        <label asp-for="Product.GoldId" class="control-label"></label>
         <input asp-for="Product.GoldId" class="form-control" />
+        <span asp-validation-for="Product.GoldId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Product.GoldWeight"></label>
