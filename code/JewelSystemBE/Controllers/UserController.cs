@@ -37,6 +37,7 @@ namespace JewelSystemBE.Controllers
         [HttpPost]
         public IActionResult Post(User user)
         {
+            user.UserId = Guid.NewGuid().ToString();
             return Ok(_userService.AddUser(user));
         }
         [HttpPut]
