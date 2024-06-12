@@ -23,7 +23,7 @@ function App(props) {
     );
   }
   return (
-    <div id="ebazar-layout" className='theme-blue'>
+    <div id="ebazar-layout" className='theme-red'>
       <Sidebar activekey={activekey()} history={props.history} />
       <AddModal />
         <MainIndex activekey={activekey()} />

@@ -6,7 +6,6 @@ import  menu2  from '../Data/Menu/menu2.json';
 
 function Sidebar(props) {
     const navigate = useNavigate();
-    const [isSidebarMini, setIsSidebarMini] = useState(false);
     const [menuData, setMenuData] = useState([...menu.menu]);
  
     const openChildren = (id) => {
@@ -72,7 +71,7 @@ function Sidebar(props) {
     }
     const { activekey } = props;
 
-    return (<div id="mainsidemenu" className={`sidebar px-4 py-4 py-md-4 me-0 ${isSidebarMini ? "sidebar-mini" : ""}`} style={{ overflow: 'scroll' }}>
+    return (<div id="mainsidemenu" className={`sidebar px-4 py-4 py-md-4 me-0 `} style={{ overflow: 'scroll' }}>
         <div className="d-flex flex-column h-100">
             <a href="/" className="mb-0 brand-icon" >
                 <span className="logo-icon">
@@ -131,9 +130,6 @@ function Sidebar(props) {
                     })
                 }
             </ul>
-            <button type="button" className="btn btn-link sidebar-mini-btn text-light" onClick={() => { setIsSidebarMini(!isSidebarMini) }}>
-                <span className="ms-2"><i className="icofont-bubble-right"></i></span>
-            </button>
         </div>
     </div>
     )

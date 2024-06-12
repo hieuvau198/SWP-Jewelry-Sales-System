@@ -2,8 +2,6 @@ import React from 'react';
 import { Route, Routes as ReactRoutes } from "react-router-dom";
 import Dashboard from './Dashboard/Dashboard';
 import Header from '../components/common/Header';
-import CustomersList from './Customers/CustomerList';
-import CustomerDetail from './Customers/CustomerDetail';
 import ProductAdd from './Products/ProductAdd';
 import ProductDetail from './Products/ProductDetail';
 import ProductList from './Products/ProductList';
@@ -18,9 +16,7 @@ function MainIndex (props) {
           <ReactRoutes>
             <Route exact path={process.env.PUBLIC_URL + "/"} element={<Dashboard />} />
             <Route exact path={process.env.PUBLIC_URL + "/dashboard"} element={<Dashboard />} />
-            <Route exact path={process.env.PUBLIC_URL + "/customer-list"} element={<CustomersList />} />
             <Route exact path={process.env.PUBLIC_URL + "/user-list"} element={<UserList />} />
-            <Route exact path={process.env.PUBLIC_URL + "/customer-detail"} element={<CustomerDetail />} />
             <Route exact path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
             <Route exact path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
             <Route exact path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />

@@ -73,34 +73,15 @@
             ]
         },
         {
-            "name": "Customers",
-            "routerLink": [""],
-            "identifier": "Customers",
+            "name": "User List",
+            "routerLink": ["user-list"],
+            "identifier": "User List",
             "iconClass": "icofont-funky-man fs-5",
             "breadcrumbMessage": "",
             "isCategory": false,
-            "isApp": true,
+            "isApp": false,
             "children": [
-                {
-                    "name": "Customers List",
-                    "routerLink": ["customer-list"],
-                    "identifier": "Customers List",
-                    "iconClass": "",
-                    "breadcrumbMessage": "",
-                    "isCategory": false,
-                    "isApp": false,
-                    "children": []
-                },
-                {
-                    "name": "Customers Detail",
-                    "routerLink": ["customer-detail"],
-                    "identifier": "Customers Detail",
-                    "iconClass": "",
-                    "breadcrumbMessage": "",
-                    "isCategory": false,
-                    "isApp": false,
-                    "children": []
-                }   
+              
             ]
         }
     ]
