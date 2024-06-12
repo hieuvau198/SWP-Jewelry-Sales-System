@@ -3,7 +3,7 @@ import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function PageHeader1 (props) {
-        const { pagetitle, righttitle, link, routebutton, modalbutton, button, invoicetab, changelog, Orderdetail, productgrid, productlist,documentation,cantactus } = props
+        const { pagetitle, righttitle, link, routebutton, modalbutton, button, invoicetab, changelog, Orderdetail,documentation,cantactus } = props
         return (
             <div className="row align-items-center">
                 <div className="border-0 mb-4">
@@ -59,18 +59,6 @@ function PageHeader1 (props) {
                                     <option value="6">Order-78419</option>
                                     <option value="7">Order-78420</option>
                                 </select>
-                            </div> : null
-                        }
-                        {
-                            productgrid ? <div className="btn-group group-link btn-set-task w-sm-100">
-                                <Link to={process.env.PUBLIC_URL+"/product-grid"} className="btn active d-inline-flex align-items-center" aria-current="page"><i className="icofont-wall px-2 fs-5"></i>Grid View</Link>
-                                <Link to={process.env.PUBLIC_URL+"/product-list"} className="btn d-inline-flex align-items-center"><i className="icofont-listing-box px-2 fs-5"></i> List View</Link>
-                            </div> : null
-                        }
-                        {
-                            productlist ? <div className="btn-group group-link btn-set-task w-sm-100">
-                                <Link to={process.env.PUBLIC_URL+"/product-grid"} className="btn  d-inline-flex align-items-center" aria-current="page"><i className="icofont-wall px-2 fs-5"></i>Grid View</Link>
-                                <Link to={process.env.PUBLIC_URL+"/product-list"} className="btn active d-inline-flex align-items-center"><i className="icofont-listing-box px-2 fs-5"></i> List View</Link>
                             </div> : null
                         }
                         {

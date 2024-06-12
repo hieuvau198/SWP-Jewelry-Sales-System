@@ -1,7 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Switch from 'react-router-dom';
-import withRouter  from 'react-router-dom';
 import AddModal from './components/common/AddModal';
 import Sidebar from './components/common/Sidebar';
 import AuthIndex from "./screens/AuthIndex";
