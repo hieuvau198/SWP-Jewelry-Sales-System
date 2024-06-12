@@ -21,7 +21,7 @@ namespace RazorTest.Pages
 
         public async Task OnGetAsync()
         {
-            var users = await _apiService.GetAsync<List<User>>("http://localhost:5156/api/user");
+            var users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
 
             if (users != null)
             {

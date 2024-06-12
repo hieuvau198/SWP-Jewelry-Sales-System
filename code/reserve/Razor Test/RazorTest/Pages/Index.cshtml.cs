@@ -42,27 +42,27 @@ namespace RazorTest.Pages
 
         public async Task OngetAsync()
         {
-            Discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5156/api/discount\r\n");
+            Discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount\r\n");
 
-            Customers = await _apiService.GetAsync<List<Customer>>("http://localhost:5156/api/customer\r\n");
+            Customers = await _apiService.GetAsync<List<Customer>>("http://localhost:5071/api/customer\r\n");
 
-            Gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5156/api/gem\r\n");
+            Gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem\r\n");
 
-            Golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5156/api/gold\r\n");
+            Golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold\r\n");
 
-            Invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5156/api/invoice\r\n");
+            Invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice\r\n");
 
-            InvoiceItems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5156/api/invoiceitem\r\n");
+            InvoiceItems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem\r\n");
 
-            Jewels = await _apiService.GetAsync<List<Jewel>>("http://localhost:5156/api/jewel\r\n");
+//            Jewels = await _apiService.GetAsync<List<Jewel>>("http://localhost:5071/api/jewel\r\n");
 
-            Products = await _apiService.GetAsync<List<Product>>("http://localhost:5156/api/product\r\n");
+            Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product\r\n");
 
-            Users = await _apiService.GetAsync<List<User>>("http://localhost:5156/api/user\r\n");
+            Users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user\r\n");
 
-            Warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5156/api/warranty\r\n");
+            Warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty\r\n");
 
-            //Logins = await _apiService.GetAsync<List<Login>>("http://localhost:5156/api/auth/login\r\n");
+            //Logins = await _apiService.GetAsync<List<Login>>("http://localhost:5071/api/auth/login\r\n");
 
             if (Discounts != null)
             {
@@ -94,10 +94,10 @@ namespace RazorTest.Pages
                 InvoiceItems = InvoiceItems.OrderBy(t => t.InvoiceItemId).ToList();
             }
 
-            if (Jewels != null)
+            /*if (Jewels != null)
             {
                 Jewels = Jewels.OrderBy(a => a.Id).ToList();
-            }
+            }*/
 
             if (Products != null)
             {

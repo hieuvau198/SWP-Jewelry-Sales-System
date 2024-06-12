@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<Gem>> GetGemsAsync()
         {
-            return await _apiService.GetAsync<List<Gem>>("http://localhost:5156/api/gem");
+            return await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem");
         }
 
         public async Task<Gem> GetGemByIdAsync(string gemId)
         {
-            return await _apiService.GetAsync<Gem>($"http://localhost:5156/api/gem/{gemId}");
+            return await _apiService.GetAsync<Gem>($"http://localhost:5071/api/gem/{gemId}");
         }
 
         public async Task<HttpResponseMessage> CreateGemAsync(Gem gem)
         {
-            return await _apiService.PostAsJsonAsync("http://localhost:5156/api/gem", gem);
+            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/gem", gem);
         }
 
         public async Task<HttpResponseMessage> UpdateGemAsync(Gem gem)
         {
-            var url = "http://localhost:5156/api/gem";
+            var url = "http://localhost:5071/api/gem";
             var json = JsonConvert.SerializeObject(gem, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteGemAsync(string gemId)
         {
-            return await _apiService.DeleteAsync($"http://localhost:5156/api/gem?gemId={gemId}");
+            return await _apiService.DeleteAsync($"http://localhost:5071/api/gem?gemId={gemId}");
         }
 
     }

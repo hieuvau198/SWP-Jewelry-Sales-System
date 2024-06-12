@@ -18,7 +18,7 @@ namespace RazorTest.Pages.ProductCRUD
 
         public async Task OnGetAsync()
         {
-            var products = await _apiService.GetAsync<List<Product>>("http://localhost:5156/api/product");
+            var products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
         }
     }
 }

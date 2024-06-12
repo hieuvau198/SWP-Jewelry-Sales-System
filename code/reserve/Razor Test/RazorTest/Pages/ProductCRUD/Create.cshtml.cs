@@ -1,6 +1,7 @@
 using JewelBO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
 using System.Threading.Tasks;
@@ -27,6 +28,7 @@ namespace RazorTest.Pages.ProductCRUD
             Product = new Product
             {
                 ProductId = Guid.NewGuid().ToString()
+
             };
         }
 
@@ -45,6 +47,7 @@ namespace RazorTest.Pages.ProductCRUD
 
                 return Page();
             }
+            
 
             // Check if GoldID is still empty and generate it
             if (string.IsNullOrEmpty(Product.ProductId))
@@ -52,7 +55,10 @@ namespace RazorTest.Pages.ProductCRUD
                 Product.ProductId = Guid.NewGuid().ToString();
             }
 
+            _logger.LogInformation($"Creating product with details: {JsonConvert.SerializeObject(Product)}");
+
             var response = await _productService.CreateProductAsync(Product);
+
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToPage("/ProductCRUD/ProductDetail");

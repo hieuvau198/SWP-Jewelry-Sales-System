@@ -20,7 +20,7 @@ namespace RazorTest.Pages.DiscountCRUD
 
         public async Task OnGetAsync()
         {
-            var discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5156/api/discount");
+            var discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount");
 
             if (discounts != null)
             {
