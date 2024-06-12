@@ -1,7 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Switch from 'react-router-dom';
-import withRouter  from 'react-router-dom';
 import AddModal from './components/common/AddModal';
 import Sidebar from './components/common/Sidebar';
 import AuthIndex from "./screens/AuthIndex";
@@ -26,7 +23,7 @@ function App(props) {
     );
   }
   return (
-    <div id="ebazar-layout" className='theme-blue'>
+    <div id="ebazar-layout" className='theme-red'>
       <Sidebar activekey={activekey()} history={props.history} />
       <AddModal />
         <MainIndex activekey={activekey()} />

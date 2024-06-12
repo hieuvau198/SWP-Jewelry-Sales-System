@@ -1,0 +1,34 @@
+﻿@page
+@model RazorTest.Pages.GemCRUD.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Gem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <!-- Hidden field for GemId -->
+            <input asp-for="Gem.GemId" type="hidden" />
+
+            <div class="form-group">
+                <label asp-for="Gem.GemName" class="control-label"></label>
+                <input asp-for="Gem.GemName" class="form-control" />
+                <span asp-validation-for="Gem.GemName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gem.GemPrice" class="control-label"></label>
+                <input asp-for="Gem.GemPrice" class="form-control" />
+                <span asp-validation-for="Gem.GemPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+

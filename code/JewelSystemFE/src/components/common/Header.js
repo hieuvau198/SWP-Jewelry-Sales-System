@@ -1,10 +1,5 @@
 import React from 'react';
-import { Dropdown, Image } from 'react-bootstrap';
-import GB from '../../assets/images/flag/GB.png';
-import DE from '../../assets/images/flag/DE.png';
-import FR from '../../assets/images/flag/FR.png';
-import IT from '../../assets/images/flag/IT.png';
-import RU from '../../assets/images/flag/RU.png';
+import { Dropdown } from 'react-bootstrap';
 import Avatar1 from '../../assets/images/xs/avatar1.svg';
 import Avatar3 from '../../assets/images/xs/avatar3.svg';
 import Avatar5 from '../../assets/images/xs/avatar5.svg';
@@ -19,37 +14,6 @@ function Header () {
                 <nav className="navbar py-4">
                     <div className="container-xxl">
                         <div className="h-right d-flex align-items-center order-1">  
-                            <div className="d-flex mx-2 mt-1">
-                                <Link to="help" className="nav-link text-primary collapsed" title="Get Help">
-                                    <i className="icofont-info-square fs-5"></i>
-                                </Link>
-                            </div>
-                            <Dropdown className="zindex-popover mx-2">
-                                <Dropdown.Toggle as='a' className="nav-Dropdown.Itemnk dropdown-toggle pulse" href="#!" >
-                                    <Image src={GB} alt='' />
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu className="dropdown-menu rounded-lg shadow border-0 dropdown-animation dropdown-menu-md-end p-0 m-0 mt-5 ">
-                                    <div className="card border-0">
-                                        <ul className="list-unstyled list py-2 px-3">
-                                            <li>
-                                                <Dropdown.Item href="#!"><Image src={GB} alt="" /> English</Dropdown.Item>
-                                            </li>
-                                            <li>
-                                                <Dropdown.Item href="#!"><Image src={DE} alt="" /> German</Dropdown.Item>
-                                            </li>
-                                            <li>
-                                                <Dropdown.Item href="#!"><Image src={FR} alt="" /> French</Dropdown.Item>
-                                            </li>
-                                            <li>
-                                                <Dropdown.Item href="#!"><Image src={IT} alt="" /> Italian</Dropdown.Item>
-                                            </li>
-                                            <li>
-                                                <Dropdown.Item href="#!"><Image src={RU} alt="" /> Russian</Dropdown.Item>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </Dropdown.Menu>
-                            </Dropdown>
                             <Dropdown className="notifications zindex-popover">
                                 <Dropdown.Toggle as="a" className="nav-link dropdown-toggle pulse">
                                     <i className="icofont-alarm fs-5"></i>
@@ -128,8 +92,8 @@ function Header () {
                             </Dropdown>
                             <Dropdown className="dropdown user-profilem ms-2 ms-sm-3 d-flex align-items-center zindex-popover">
                                 <div className="u-info me-2">
-                                    <p className="mb-0 text-end line-height-sm "><span className="font-weight-bold">John Quinn</span></p>
-                                    <small>Admin Profile</small>
+                                    <p className="mb-0 text-end line-height-sm "><span className="font-weight-bold">User1</span></p>
+                                    <small>Admin</small>
                                 </div>
                                 <Dropdown.Toggle as='a' className="nav-link dropdown-toggle pulse p-0 mb-3" href="#!" role="button">
                                     <img className="avatar lg rounded-circle img-thumbnail" src={Profile} alt="profile" />
