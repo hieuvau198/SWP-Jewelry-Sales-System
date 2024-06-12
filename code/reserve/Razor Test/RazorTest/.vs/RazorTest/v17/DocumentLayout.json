@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\",
+  "WorkspaceRootPath": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RazorTest\\Services\\ApiService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RazorTest\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razor test\\razortest\\pages\\productcrud\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\productcrud\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
-              "RelativeDocumentMoniker": "RazorTest\\Services\\ApiService.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
-              "RelativeToolTip": "RazorTest\\Services\\ApiService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T02:57:49.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Program.cs",
-              "RelativeDocumentMoniker": "RazorTest\\Program.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Program.cs",
-              "RelativeToolTip": "RazorTest\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T02:55:50.302Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\Pages\\ProductCRUD\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\ProductCRUD\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\Pages\\ProductCRUD\\Create.cshtml",
+              "RelativeToolTip": "Pages\\ProductCRUD\\Create.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-12T04:19:47.917Z",
               "EditorCaption": ""
             }
           ]
