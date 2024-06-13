@@ -31,7 +31,7 @@ namespace RazorTest.Pages.UserCRUD
         }
 
         public async Task<IActionResult> OnPostAsync()
-        {
+        {   
             if (!ModelState.IsValid)
             {
                 foreach (var modelStateKey in ModelState.Keys)
