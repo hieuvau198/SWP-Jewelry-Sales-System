@@ -19,17 +19,44 @@ namespace JewelSystemBE.Controllers
         }
 
         // Endpoint to get a specific image by ID
-        
+
 
         // Endpoint to get a list of all image records
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ImageRecord>>> GetImages()
+        public async Task<ActionResult<IEnumerable<ImageUploadRequest>>> GetImages()
         {
-            return await _context.ImageRecords.ToListAsync();
+            try
+            {
+                var imageRecords = await _context.ImageRecords.ToListAsync();
+                var imageUploadRequests = new List<ImageUploadRequest>();
+
+                foreach (var imageRecord in imageRecords)
+                {
+                    var filePath = Path.Combine(_imagesPath, imageRecord.Path);
+                    byte[] imageBytes = await System.IO.File.ReadAllBytesAsync(filePath);
+                    string base64String = Convert.ToBase64String(imageBytes);
+
+                    var imageUploadRequest = new ImageUploadRequest
+                    {
+                        FileName = imageRecord.FileName,
+                        FileContentBase64 = base64String
+                    };
+
+                    imageUploadRequests.Add(imageUploadRequest);
+                }
+
+                return Ok(imageUploadRequests);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (not shown here)
+                return StatusCode(500, "Internal server error");
+            }
         }
 
+
         // Endpoint to upload an image
-        
+
         [HttpGet("idOrName")]
         public async Task<IActionResult> GetImage(string idOrName)
         {

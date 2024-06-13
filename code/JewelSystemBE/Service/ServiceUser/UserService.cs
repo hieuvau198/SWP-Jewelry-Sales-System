@@ -13,19 +13,19 @@ namespace JewelSystemBE.Service.ServiceUser
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddUser(User user)
+        public User AddUser(User user)
         {
             if (user == null)
             {
                 // If user object is null, return false indicating failure
-                return false;
+                return null;
             }
 
             var existingUser = _jewelDbContext.Users.FirstOrDefault(u => u.Username == user.Username);
             if (existingUser != null)
             {
                 // Username already exists, return false indicating failure
-                return false;
+                return null;
             }
 
             try
@@ -33,13 +33,13 @@ namespace JewelSystemBE.Service.ServiceUser
                 // Add the user to the context and save changes
                 _jewelDbContext.Users.Add(user);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return user;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding user: {ex.Message}");
-                return false;
+                return null;
             }
         }
 

@@ -11,27 +11,27 @@ namespace JewelSystemBE.Service.ServiceGold
         {
             this._jewelDbContext = jewelDbContext;
         }
-        public bool AddGold(Gold gold)
+        public Gold AddGold(Gold gold)
         {
             if (gold == null)
             {
-                return false;
+                return null;
             }
             var existingGold = _jewelDbContext.Golds.Find(gold.GoldId);
             if (existingGold != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Golds.Add(gold);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return gold;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error adding gold: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
@@ -61,8 +61,15 @@ namespace JewelSystemBE.Service.ServiceGold
             Gold updatedGold = _jewelDbContext.Golds.Find(gold.GoldId);
             if (updatedGold != null)
             {
-                updatedGold.GoldPrice = gold.GoldPrice;
-                updatedGold.GoldName = gold.GoldName;
+                if(gold.GoldName != null)
+                {
+                    updatedGold.GoldName = gold.GoldName;
+                }
+                if(gold.GoldPrice != null)
+                {
+                    updatedGold.GoldPrice = gold.GoldPrice;
+                }
+                
                 _jewelDbContext.Golds.Update(updatedGold);
                 _jewelDbContext.SaveChanges();
                 return true;

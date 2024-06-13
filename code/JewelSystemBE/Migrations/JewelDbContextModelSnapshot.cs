@@ -148,6 +148,9 @@ namespace JewelSystemBE.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
+                    b.Property<double>("DiscountRate")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("ExpireDate")
                         .HasColumnType("datetime2");
 
@@ -173,6 +176,7 @@ namespace JewelSystemBE.Migrations
                         {
                             DiscountId = "1",
                             DiscountName = "Summer Sale",
+                            DiscountRate = 0.0,
                             ExpireDate = new DateTime(2024, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductType = "Jewelry 1",
@@ -182,6 +186,7 @@ namespace JewelSystemBE.Migrations
                         {
                             DiscountId = "2",
                             DiscountName = "Holiday Promotion",
+                            DiscountRate = 0.0,
                             ExpireDate = new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductType = "Jewelry 2",
@@ -191,6 +196,7 @@ namespace JewelSystemBE.Migrations
                         {
                             DiscountId = "3",
                             DiscountName = "Spring Clearance",
+                            DiscountRate = 0.0,
                             ExpireDate = new DateTime(2024, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Buyback",
                             ProductType = "Jewelry 3",
@@ -200,6 +206,7 @@ namespace JewelSystemBE.Migrations
                         {
                             DiscountId = "4",
                             DiscountName = "Back-to-School Sale",
+                            DiscountRate = 0.0,
                             ExpireDate = new DateTime(2024, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductType = "Jewelry 4",
@@ -209,6 +216,7 @@ namespace JewelSystemBE.Migrations
                         {
                             DiscountId = "5",
                             DiscountName = "Winter Warm-up",
+                            DiscountRate = 0.0,
                             ExpireDate = new DateTime(2025, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Buyback",
                             ProductType = "Jewelry 5",
@@ -229,8 +237,8 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("gem_name");
 
-                    b.Property<decimal>("GemPrice")
-                        .HasColumnType("decimal(10, 2)")
+                    b.Property<double>("GemPrice")
+                        .HasColumnType("float")
                         .HasColumnName("gem_price");
 
                     b.HasKey("GemId");
@@ -242,31 +250,31 @@ namespace JewelSystemBE.Migrations
                         {
                             GemId = "1",
                             GemName = "Ruby",
-                            GemPrice = 1000.00m
+                            GemPrice = 1000.0
                         },
                         new
                         {
                             GemId = "2",
                             GemName = "Sapphire",
-                            GemPrice = 1500.00m
+                            GemPrice = 1500.0
                         },
                         new
                         {
                             GemId = "3",
                             GemName = "Emerald",
-                            GemPrice = 1200.00m
+                            GemPrice = 1200.0
                         },
                         new
                         {
                             GemId = "4",
                             GemName = "Diamond",
-                            GemPrice = 5000.00m
+                            GemPrice = 5000.0
                         },
                         new
                         {
                             GemId = "5",
                             GemName = "Topaz",
-                            GemPrice = 800.00m
+                            GemPrice = 800.0
                         });
                 });
 
@@ -283,8 +291,8 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("gold_name");
 
-                    b.Property<decimal>("GoldPrice")
-                        .HasColumnType("decimal(10, 2)")
+                    b.Property<double>("GoldPrice")
+                        .HasColumnType("float")
                         .HasColumnName("gold_price");
 
                     b.HasKey("GoldId");
@@ -296,38 +304,37 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "1",
                             GoldName = "24K Gold",
-                            GoldPrice = 6000.00m
+                            GoldPrice = 6000.0
                         },
                         new
                         {
                             GoldId = "2",
                             GoldName = "22K Gold",
-                            GoldPrice = 5500.00m
+                            GoldPrice = 5500.0
                         },
                         new
                         {
                             GoldId = "3",
                             GoldName = "18K Gold",
-                            GoldPrice = 4500.00m
+                            GoldPrice = 4500.0
                         },
                         new
                         {
                             GoldId = "4",
                             GoldName = "14K Gold",
-                            GoldPrice = 4000.00m
+                            GoldPrice = 4000.0
                         },
                         new
                         {
                             GoldId = "5",
                             GoldName = "10K Gold",
-                            GoldPrice = 3500.00m
+                            GoldPrice = 3500.0
                         });
                 });
 
             modelBuilder.Entity("JewelSystemBE.Model.Invoice", b =>
                 {
                     b.Property<string>("InvoiceId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("invoice_id");
 
@@ -347,6 +354,10 @@ namespace JewelSystemBE.Migrations
                     b.Property<DateTime>("InvoiceDate")
                         .HasColumnType("date")
                         .HasColumnName("invoice_date");
+
+                    b.Property<string>("InvoiceStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("InvoiceType")
                         .IsRequired()
@@ -372,55 +383,60 @@ namespace JewelSystemBE.Migrations
                         {
                             InvoiceId = "I1",
                             CustomerId = "C1",
-                            CustomerVoucher = 50.00m,
-                            EndTotalPrice = 450.00m,
+                            CustomerVoucher = 50m,
+                            EndTotalPrice = 450m,
                             InvoiceDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Pending",
                             InvoiceType = "Type A",
-                            TotalPrice = 500.00m,
+                            TotalPrice = 500m,
                             UserId = "U1"
                         },
                         new
                         {
                             InvoiceId = "I2",
                             CustomerId = "C2",
-                            CustomerVoucher = 30.00m,
-                            EndTotalPrice = 670.00m,
+                            CustomerVoucher = 30m,
+                            EndTotalPrice = 670m,
                             InvoiceDate = new DateTime(2024, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Pending",
                             InvoiceType = "Type B",
-                            TotalPrice = 700.00m,
+                            TotalPrice = 700m,
                             UserId = "U2"
                         },
                         new
                         {
                             InvoiceId = "I3",
                             CustomerId = "C3",
-                            CustomerVoucher = 20.00m,
-                            EndTotalPrice = 280.00m,
+                            CustomerVoucher = 20m,
+                            EndTotalPrice = 280m,
                             InvoiceDate = new DateTime(2024, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Pending",
                             InvoiceType = "Type C",
-                            TotalPrice = 300.00m,
+                            TotalPrice = 300m,
                             UserId = "U3"
                         },
                         new
                         {
                             InvoiceId = "I4",
                             CustomerId = "C4",
-                            CustomerVoucher = 40.00m,
-                            EndTotalPrice = 960.00m,
+                            CustomerVoucher = 40m,
+                            EndTotalPrice = 960m,
                             InvoiceDate = new DateTime(2024, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Pending",
                             InvoiceType = "Type D",
-                            TotalPrice = 1000.00m,
+                            TotalPrice = 1000m,
                             UserId = "U1"
                         },
                         new
                         {
                             InvoiceId = "I5",
                             CustomerId = "C5",
-                            CustomerVoucher = 60.00m,
-                            EndTotalPrice = 740.00m,
+                            CustomerVoucher = 60m,
+                            EndTotalPrice = 740m,
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Pending",
                             InvoiceType = "Type E",
-                            TotalPrice = 800.00m,
+                            TotalPrice = 800m,
                             UserId = "U2"
                         });
                 });
@@ -436,18 +452,21 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("discount_id");
 
-                    b.Property<decimal?>("DiscountRate")
-                        .IsRequired()
-                        .HasColumnType("decimal(5, 2)")
+                    b.Property<double>("DiscountRate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0)
                         .HasColumnName("discount_rate");
 
-                    b.Property<decimal>("EndTotalPrice")
-                        .HasColumnType("decimal(18, 2)")
+                    b.Property<double>("EndTotalPrice")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0)
                         .HasColumnName("end_total_price");
 
                     b.Property<string>("InvoiceId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("invoice_id");
 
                     b.Property<string>("ProductName")
@@ -460,61 +479,52 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("int")
                         .HasColumnName("quantity");
 
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18, 2)")
+                    b.Property<double>("TotalPrice")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0)
                         .HasColumnName("total_price");
 
-                    b.Property<decimal>("UnitPrice")
-                        .HasColumnType("decimal(18, 2)")
+                    b.Property<double>("UnitPrice")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0)
                         .HasColumnName("unit_price");
 
                     b.Property<string>("WarrantyId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("warranty_id");
 
                     b.HasKey("InvoiceItemId");
 
-                    b.HasIndex("InvoiceId");
-
-                    b.HasIndex("WarrantyId");
-
-                    b.ToTable("invoice_item", null, t =>
-                        {
-                            t.HasCheckConstraint("CK_InvoiceItem_EndTotalPrice", "end_total_price >= 0");
-
-                            t.HasCheckConstraint("CK_InvoiceItem_Quantity", "quantity > 0");
-
-                            t.HasCheckConstraint("CK_InvoiceItem_TotalPrice", "total_price >= 0");
-
-                            t.HasCheckConstraint("CK_InvoiceItem_UnitPrice", "unit_price >= 0");
-                        });
+                    b.ToTable("invoice_item", (string)null);
 
                     b.HasData(
                         new
                         {
                             InvoiceItemId = "1",
                             DiscountId = "1",
-                            DiscountRate = 0m,
-                            EndTotalPrice = 21.00m,
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 21.0,
                             InvoiceId = "I1",
                             ProductName = "Product 1",
                             Quantity = 2,
-                            TotalPrice = 21.00m,
-                            UnitPrice = 10.50m,
+                            TotalPrice = 21.0,
+                            UnitPrice = 10.5,
                             WarrantyId = "W1"
                         },
                         new
                         {
                             InvoiceItemId = "2",
                             DiscountId = "1",
-                            DiscountRate = 0.15m,
-                            EndTotalPrice = 21.89m,
+                            DiscountRate = 0.14999999999999999,
+                            EndTotalPrice = 21.890000000000001,
                             InvoiceId = "I1",
                             ProductName = "Product 2",
                             Quantity = 1,
-                            TotalPrice = 21.89m,
-                            UnitPrice = 25.75m,
+                            TotalPrice = 21.890000000000001,
+                            UnitPrice = 25.75,
                             WarrantyId = "W2"
                         });
                 });
@@ -576,7 +586,6 @@ namespace JewelSystemBE.Migrations
             modelBuilder.Entity("JewelSystemBE.Model.Product", b =>
                 {
                     b.Property<string>("ProductId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("product_id");
 
@@ -588,7 +597,7 @@ namespace JewelSystemBE.Migrations
 
                     b.Property<string>("GemId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("gem_id");
 
                     b.Property<double>("GemWeight")
@@ -597,21 +606,21 @@ namespace JewelSystemBE.Migrations
 
                     b.Property<string>("GoldId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
+                        .HasColumnType("nvarchar(max)")
                         .HasColumnName("gold_id");
 
                     b.Property<double>("GoldWeight")
                         .HasColumnType("float")
                         .HasColumnName("gold_weight");
 
-                    b.Property<decimal>("LaborCost")
+                    b.Property<double>("LaborCost")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("decimal(10, 2)")
-                        .HasDefaultValue(0m)
+                        .HasColumnType("float")
+                        .HasDefaultValue(0.0)
                         .HasColumnName("labor_cost");
 
-                    b.Property<float>("MarkupRate")
-                        .HasColumnType("real")
+                    b.Property<double>("MarkupRate")
+                        .HasColumnType("float")
                         .HasColumnName("markup_rate");
 
                     b.Property<string>("ProductCode")
@@ -652,34 +661,19 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.HasIndex("GemId");
-
-                    b.HasIndex("GoldId");
-
-                    b.ToTable("product", null, t =>
-                        {
-                            t.HasCheckConstraint("CK_Products_GemWeight", "gem_weight > 0");
-
-                            t.HasCheckConstraint("CK_Products_GoldWeight", "gold_weight > 0");
-
-                            t.HasCheckConstraint("CK_Products_LaborCost", "labor_cost >= 0");
-
-                            t.HasCheckConstraint("CK_Products_ProductQuantity", "product_quantity > 0");
-
-                            t.HasCheckConstraint("CK_Products_ProductWeight", "product_weight > 0");
-                        });
+                    b.ToTable("product", (string)null);
 
                     b.HasData(
                         new
                         {
-                            ProductId = "178058ea-7e48-450b-a710-7eb304d57d32",
-                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1520),
+                            ProductId = "acf83b41-e788-40af-b25f-f982aa2a5f90",
+                            CreatedAt = new DateTime(2024, 6, 13, 15, 56, 50, 806, DateTimeKind.Local).AddTicks(8064),
                             GemId = "1",
                             GemWeight = 5.0,
                             GoldId = "1",
                             GoldWeight = 45.0,
-                            LaborCost = 200.00m,
-                            MarkupRate = 1.2f,
+                            LaborCost = 200.0,
+                            MarkupRate = 1.2,
                             ProductCode = "P001",
                             ProductImages = "ruby_necklace.jpg",
                             ProductName = "Ruby Necklace",
@@ -690,14 +684,14 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "9a4be737-cb37-43e5-a317-e81c495e0af7",
-                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1529),
+                            ProductId = "ec2b6a8c-4f3a-4b68-a314-cc097924c66e",
+                            CreatedAt = new DateTime(2024, 6, 13, 15, 56, 50, 806, DateTimeKind.Local).AddTicks(8074),
                             GemId = "2",
                             GemWeight = 2.0,
                             GoldId = "2",
                             GoldWeight = 18.0,
-                            LaborCost = 100.00m,
-                            MarkupRate = 1.5f,
+                            LaborCost = 100.0,
+                            MarkupRate = 1.5,
                             ProductCode = "P002",
                             ProductImages = "sapphire_ring.jpg",
                             ProductName = "Sapphire Ring",
@@ -708,14 +702,14 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "9945b594-2bc1-4e76-beb9-990fe18d4ac5",
-                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1535),
+                            ProductId = "cc40b070-8d60-48d6-8e87-d277225b4dae",
+                            CreatedAt = new DateTime(2024, 6, 13, 15, 56, 50, 806, DateTimeKind.Local).AddTicks(8079),
                             GemId = "3",
                             GemWeight = 3.0,
                             GoldId = "3",
                             GoldWeight = 27.0,
-                            LaborCost = 150.00m,
-                            MarkupRate = 1.3f,
+                            LaborCost = 150.0,
+                            MarkupRate = 1.3,
                             ProductCode = "P003",
                             ProductImages = "emerald_bracelet.jpg",
                             ProductName = "Emerald Bracelet",
@@ -726,14 +720,14 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "08ea4bc8-aaae-4292-b7f4-933608a0266a",
-                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1542),
+                            ProductId = "4b239c58-27ea-4c55-b53a-ccf3c528b57b",
+                            CreatedAt = new DateTime(2024, 6, 13, 15, 56, 50, 806, DateTimeKind.Local).AddTicks(8083),
                             GemId = "4",
                             GemWeight = 1.5,
                             GoldId = "4",
                             GoldWeight = 13.5,
-                            LaborCost = 180.00m,
-                            MarkupRate = 1.7f,
+                            LaborCost = 180.0,
+                            MarkupRate = 1.7,
                             ProductCode = "P004",
                             ProductImages = "diamond_earrings.jpg",
                             ProductName = "Diamond Earrings",
@@ -744,14 +738,14 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "9b0b750c-bc7c-4c20-8515-a0e2bcd28c15",
-                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1549),
+                            ProductId = "0201b730-fe3d-4583-accc-c036047931d0",
+                            CreatedAt = new DateTime(2024, 6, 13, 15, 56, 50, 806, DateTimeKind.Local).AddTicks(8087),
                             GemId = "5",
                             GemWeight = 2.5,
                             GoldId = "5",
                             GoldWeight = 7.5,
-                            LaborCost = 90.00m,
-                            MarkupRate = 1.1f,
+                            LaborCost = 90.0,
+                            MarkupRate = 1.1000000000000001,
                             ProductCode = "P005",
                             ProductImages = "topaz_pendant.jpg",
                             ProductName = "Topaz Pendant",
@@ -762,14 +756,14 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "5ef80e39-91d5-48bd-ba77-df4de5961262",
-                            CreatedAt = new DateTime(2024, 6, 9, 23, 46, 17, 538, DateTimeKind.Local).AddTicks(1567),
+                            ProductId = "6bb682e8-7e4b-4063-9198-750af2cdfec0",
+                            CreatedAt = new DateTime(2024, 6, 13, 15, 56, 50, 806, DateTimeKind.Local).AddTicks(8092),
                             GemId = "1",
                             GemWeight = 4.0,
                             GoldId = "2",
                             GoldWeight = 21.0,
-                            LaborCost = 130.00m,
-                            MarkupRate = 1.2f,
+                            LaborCost = 130.0,
+                            MarkupRate = 1.2,
                             ProductCode = "P006",
                             ProductImages = "ruby_bracelet.jpg",
                             ProductName = "Ruby Bracelet",
@@ -777,6 +771,132 @@ namespace JewelSystemBE.Migrations
                             ProductType = "Bracelet",
                             ProductWarranty = 12,
                             ProductWeight = 25.0
+                        });
+                });
+
+            modelBuilder.Entity("JewelSystemBE.Model.Stall", b =>
+                {
+                    b.Property<string>("StallId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("StaffId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallDescription")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StallId");
+
+                    b.ToTable("Stalls");
+
+                    b.HasData(
+                        new
+                        {
+                            StallId = "20697d01-508f-4df4-92e7-87471c5328c9",
+                            StaffId = "Some Staff Id",
+                            StallDescription = "Some Stall Description",
+                            StallName = "Some Stall Name",
+                            StallType = "None"
+                        },
+                        new
+                        {
+                            StallId = "ec5a2d30-65cb-4bae-9e27-59e21ed31044",
+                            StaffId = "Some Staff Id",
+                            StallDescription = "Some Stall Description",
+                            StallName = "Some Stall Name",
+                            StallType = "None"
+                        },
+                        new
+                        {
+                            StallId = "ca4a8fae-40a4-4222-9958-36c4c5857d63",
+                            StaffId = "Some Staff Id",
+                            StallDescription = "Some Stall Description",
+                            StallName = "Some Stall Name",
+                            StallType = "None"
+                        },
+                        new
+                        {
+                            StallId = "46c03bff-32b8-45a2-ad35-8444d498e1ff",
+                            StaffId = "Some Staff Id",
+                            StallDescription = "Some Stall Description",
+                            StallName = "Some Stall Name",
+                            StallType = "None"
+                        },
+                        new
+                        {
+                            StallId = "2da81895-d8a7-44b2-a6a3-3761b900a744",
+                            StaffId = "Some Staff Id",
+                            StallDescription = "Some Stall Description",
+                            StallName = "Some Stall Name",
+                            StallType = "None"
+                        });
+                });
+
+            modelBuilder.Entity("JewelSystemBE.Model.StallItem", b =>
+                {
+                    b.Property<string>("StallItemId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProductId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("StallItemId");
+
+                    b.ToTable("StallItems");
+
+                    b.HasData(
+                        new
+                        {
+                            StallItemId = "b279d6b7-b1c9-410c-ae14-a00885984a73",
+                            ProductId = "Some Product Id",
+                            ProductName = "Some Product Name",
+                            quantity = 0
+                        },
+                        new
+                        {
+                            StallItemId = "1ce17c34-d340-4cdb-ba61-01bb78e845ac",
+                            ProductId = "Some Product Id",
+                            ProductName = "Some Product Name",
+                            quantity = 0
+                        },
+                        new
+                        {
+                            StallItemId = "69957645-fe2a-4a3a-a5e2-88c7d347246e",
+                            ProductId = "Some Product Id",
+                            ProductName = "Some Product Name",
+                            quantity = 0
+                        },
+                        new
+                        {
+                            StallItemId = "3336ae01-0dcf-475b-ae21-b18912ee2438",
+                            ProductId = "Some Product Id",
+                            ProductName = "Some Product Name",
+                            quantity = 0
+                        },
+                        new
+                        {
+                            StallItemId = "d3aaae41-4a78-4468-94ad-cee2fb3d9e47",
+                            ProductId = "Some Product Id",
+                            ProductName = "Some Product Name",
+                            quantity = 0
                         });
                 });
 
@@ -815,7 +935,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "1",
                             Email = "user1@example.com",
                             Fullname = "User One",
-                            Password = "$2a$11$3andJ4bgAxIv2YAcHvYIze3kbplZUqj7CWMYx9kdY.erke1v1GWqi",
+                            Password = "$2a$11$M4zkGDmAxI0JSQoeazNyseXfrsubnOQX9xxAROdPiATsRbF131JNu",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -824,7 +944,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "2",
                             Email = "user2@example.com",
                             Fullname = "User Two",
-                            Password = "$2a$11$GgbcgSY4LXqCuEkhZFYM0utI46HfuZzpWFyopopE8RHphfiYP8Fb.",
+                            Password = "$2a$11$xy8p0nKIyWgMdlEMb/I0yes.TDm/1tQU4EVr5c1j0QyHvZ.L6p3bG",
                             Role = "User",
                             Username = "user2"
                         },
@@ -833,7 +953,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "3",
                             Email = "user3@example.com",
                             Fullname = "User Three",
-                            Password = "$2a$11$ycDtLtRH/OQI4IRreSHY/.8CmmO7oZO7W3UsLPfbIHx2sPXs9dFNK",
+                            Password = "$2a$11$3/ZxABqIXRJlmh9k1GE9M.FIdhlgEmfjyvq8Bk0JC6s56PSmJYwAu",
                             Role = "User",
                             Username = "user3"
                         },
@@ -842,7 +962,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "4",
                             Email = "user4@example.com",
                             Fullname = "User Four",
-                            Password = "$2a$11$vABKssvxND4VuHsWt49lJ.9/qVUc75VqvSCGOZCuSkjfMxCwGd08u",
+                            Password = "$2a$11$Aa6PrEp0crF60DhKIQGd4.i8gcgfA5kLmqJ8If0eTOegB8tWpEhAW",
                             Role = "User",
                             Username = "user4"
                         },
@@ -851,7 +971,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "5",
                             Email = "user5@example.com",
                             Fullname = "User Five",
-                            Password = "$2a$11$cakHVK0kQNz1kTGirT1YWOG8pa3.Yo3H5ltua19VHEipqE6mAnwPu",
+                            Password = "$2a$11$XXRQU3AXzhMGmCkwKQRibuwgBOQpilrhY3VkOVPc.LeheBMTYJcpK",
                             Role = "User",
                             Username = "user5"
                         });
@@ -909,45 +1029,15 @@ namespace JewelSystemBE.Migrations
                             ProductId = "P3",
                             ProductName = "Product C",
                             StartDate = new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            WarrantyId = "d9ac352c-bcb4-4f95-9c19-b823b8860f76",
+                            ExpireDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ProductId = "P3",
+                            ProductName = "Product C",
+                            StartDate = new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
-                });
-
-            modelBuilder.Entity("JewelSystemBE.Model.InvoiceItem", b =>
-                {
-                    b.HasOne("JewelSystemBE.Model.Invoice", "Invoice")
-                        .WithMany()
-                        .HasForeignKey("InvoiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("JewelSystemBE.Model.Warranty", "Warranty")
-                        .WithMany()
-                        .HasForeignKey("WarrantyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Invoice");
-
-                    b.Navigation("Warranty");
-                });
-
-            modelBuilder.Entity("JewelSystemBE.Model.Product", b =>
-                {
-                    b.HasOne("JewelSystemBE.Model.Gem", "Gem")
-                        .WithOne()
-                        .HasForeignKey("JewelSystemBE.Model.Product", "GemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("JewelSystemBE.Model.Gold", "Gold")
-                        .WithMany()
-                        .HasForeignKey("GoldId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Gem");
-
-                    b.Navigation("Gold");
                 });
 #pragma warning restore 612, 618
         }

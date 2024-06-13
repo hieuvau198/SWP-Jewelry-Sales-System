@@ -7,14 +7,13 @@ namespace JewelSystemBE.Model
         [Key]
         [Required]
         [StringLength(100)]
-        public string GemId { get; set; }
+        public string GemId { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
         [StringLength(200)]
-        public string GemName { get; set; }
+        public string GemName { get; set; } = "Some Gem";
 
         [Required]
-        [Range(0, (double)decimal.MaxValue)]
-        public decimal GemPrice { get; set; }
+        public double GemPrice { get; set; } = 0.0;
     }
 }

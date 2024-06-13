@@ -6,43 +6,33 @@ namespace JewelSystemBE.Model
     public class InvoiceItem
     {
         [Key]
-        [Required]
-        public string InvoiceItemId { get; set; }
+        public string InvoiceItemId { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
-        [ForeignKey("Invoice")]
-        public string InvoiceId { get; set; }
-        public Invoice Invoice { get; set; }
+        public string InvoiceId { get; set; } = "Some Invoice Id";
 
         [Required]
-        [StringLength(100)]
-        public string ProductName { get; set; }
+        public string ProductName { get; set; } = "Some Product Name";
 
         [Required]
-        public int Quantity { get; set; }
+        public int Quantity { get; set; } = 1;
 
         [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal UnitPrice { get; set; }
+        public double UnitPrice { get; set; } = 0.0;
 
         [Required]
-        public string DiscountId { get; set; }
+        public string DiscountId { get; set; } = "Some Discount Id";
 
         [Required]
-        [Column(TypeName = "decimal(5,2)")]
-        public decimal? DiscountRate { get; set; }
+        public double DiscountRate { get; set; } = 0.0;
 
         [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal TotalPrice { get; set; }
+        public double TotalPrice { get; set; } = 0.0;
 
         [Required]
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal EndTotalPrice { get; set; }
+        public double EndTotalPrice { get; set; } = 0.0;
 
         [Required]
-        [ForeignKey("Warranty")]
-        public string WarrantyId { get; set; }
-        public Warranty Warranty { get; set; }
+        public string WarrantyId { get; set; } = "Some Warranty Id";
     }
 }

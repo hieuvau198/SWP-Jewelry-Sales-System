@@ -6,7 +6,7 @@ namespace JewelSystemBE.Service.ServiceGold
     {
         List<Gold> GetGolds();
         Gold GetGold(string goldId);
-        Boolean AddGold(Gold gold);
+        Gold AddGold(Gold gold);
         Boolean RemoveGold(string goldId);
         Boolean UpdateGold(Gold gold);
     }

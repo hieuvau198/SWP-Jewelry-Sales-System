@@ -6,33 +6,32 @@ namespace JewelSystemBE.Model
     public class Invoice
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string InvoiceId { get; set; }
+        public string InvoiceId { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
         [MaxLength(50)]
-        public string InvoiceType { get; set; }
+        public string InvoiceType { get; set; } = "Sale";
 
         [Required]
-        public string CustomerId { get; set; }
+        public string CustomerId { get; set; } = "Some Customer Id";
 
         [Required]
-        public string UserId { get; set; }
+        public string UserId { get; set; } = "Some User Id";
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime InvoiceDate { get; set; }
+        public DateTime InvoiceDate { get; set; } = DateTime.Now;
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal CustomerVoucher { get; set; }
+        public double CustomerVoucher { get; set; } = 0.0;
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal TotalPrice { get; set; }
+        public double TotalPrice { get; set; } = 0.0;
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal EndTotalPrice { get; set; }
+        public double EndTotalPrice { get; set; } = 0.0;
+
+        [Required]
+        public string InvoiceStatus { get; set; } = "Pending";
     }
 }

@@ -17,6 +17,8 @@ using JewelSystemBE.Service.ServiceInvoice;
 using JewelSystemBE.Service.ServiceInvoiceItem;
 using JewelSystemBE;
 using Microsoft.Extensions.FileProviders;
+using JewelSystemBE.Service.ServiceStallItem;
+using JewelSystemBE.Service.ServiceStall;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +52,8 @@ builder.Services.AddTransient<IWarrantyService, WarrantyService>();
 builder.Services.AddTransient<ICustomerService, CustomerService>();
 builder.Services.AddTransient<IInvoiceService, InvoiceService>();
 builder.Services.AddTransient<IInvoiceItemService, InvoiceItemService>();
+builder.Services.AddTransient<IStallItemService, StallItemService>();
+builder.Services.AddTransient<IStallService, StallService>();
 
 
 // Configure JWT authentication, it imports jwtbearer, token, text, model

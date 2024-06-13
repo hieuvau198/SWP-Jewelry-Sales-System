@@ -12,28 +12,28 @@ namespace JewelSystemBE.Service.ServiceGem
             this._jewelDbContext = jewelDbContext;
         }
         
-        public bool AddGem(Gem gem)
+        public Gem AddGem(Gem gem)
         {
             if (gem == null)
             {
-                return false;
+                return null;
             }
             var existingGem = _jewelDbContext.Gems.Find(gem.GemId);
             if (existingGem != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Gems.Add(gem);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return gem;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding gem: {ex.Message}");
-                return false;
+                return null;
             }
         }
 

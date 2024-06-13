@@ -12,28 +12,28 @@ namespace JewelSystemBE.Service.ServiceWarranty
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddWarranty(Warranty warranty)
+        public Warranty AddWarranty(Warranty warranty)
         {
             if (warranty == null)
             {
-                return false;
+                return null;
             }
             var existingWarranty = _jewelDbContext.Warranties.Find(warranty.WarrantyId);
             if (existingWarranty != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Warranties.Add(warranty);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return warranty;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding warranty: {ex.Message}");
-                return false;
+                return null;
             }
         }
 

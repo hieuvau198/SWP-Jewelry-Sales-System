@@ -12,28 +12,28 @@ namespace JewelSystemBE.Service.ServiceProduct
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddProduct(Product product)
+        public Product AddProduct(Product product)
         {
             if (product == null)
             {
-                return false;
+                return null;
             }
             var existingProduct = _jewelDbContext.Products.Find(product.ProductId);
             if (existingProduct != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Products.Add(product);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return product;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding product: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
@@ -93,5 +93,5 @@ namespace JewelSystemBE.Service.ServiceProduct
             }
             return false;
         }
-        }
+    }
 }

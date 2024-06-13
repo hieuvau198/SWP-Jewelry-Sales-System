@@ -12,25 +12,25 @@ namespace JewelSystemBE.Service.ServiceDiscount
             _jewelDbContext = jewelDbContext;
         }
 
-        public bool AddDiscount(Discount discount)
+        public Discount AddDiscount(Discount discount)
         {
             if (discount == null)
-                return false;
+                return null;
 
             var existingDiscount = _jewelDbContext.Discounts.Find(discount.DiscountId);
             if (existingDiscount != null)
-                return false;
+                return null;
 
             try
             {
                 _jewelDbContext.Discounts.Add(discount);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return discount;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error adding discount: {ex.Message}");
-                return false;
+                return null;
             }
         }
 

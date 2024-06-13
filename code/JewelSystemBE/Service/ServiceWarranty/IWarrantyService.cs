@@ -6,7 +6,7 @@ namespace JewelSystemBE.Service.ServiceWarranty
     {
         List<Warranty> GetWarranties();
         Warranty GetWarranty(string warrantyId);
-        bool AddWarranty(Warranty warranty);
+        Warranty AddWarranty(Warranty warranty);
         bool RemoveWarranty(string warrantyId);
         bool UpdateWarranty(Warranty warranty);
     }

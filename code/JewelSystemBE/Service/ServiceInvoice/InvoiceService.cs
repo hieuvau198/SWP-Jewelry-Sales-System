@@ -12,28 +12,28 @@ namespace JewelSystemBE.Service.ServiceInvoice
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddInvoice(Invoice invoice)
+        public Invoice AddInvoice(Invoice invoice)
         {
             if (invoice == null)
             {
-                return false;
+                return null;
             }
             var existingInvoice = _jewelDbContext.Invoices.Find(invoice.InvoiceId);
             if (existingInvoice != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Invoices.Add(invoice);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return invoice;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding invoice: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
@@ -72,13 +72,24 @@ namespace JewelSystemBE.Service.ServiceInvoice
             Invoice updatedInvoice = _jewelDbContext.Invoices.Find(invoice.InvoiceId);
             if (updatedInvoice != null)
             {
-                updatedInvoice.InvoiceType = invoice.InvoiceType;
-                updatedInvoice.CustomerId = invoice.CustomerId;
-                updatedInvoice.UserId = invoice.UserId;
-                updatedInvoice.InvoiceDate = invoice.InvoiceDate;
-                updatedInvoice.CustomerVoucher = invoice.CustomerVoucher;
-                updatedInvoice.TotalPrice = invoice.TotalPrice;
-                updatedInvoice.EndTotalPrice = invoice.EndTotalPrice;
+                if (invoice.InvoiceType != null)
+                { updatedInvoice.InvoiceType = invoice.InvoiceType; }
+                if (invoice.CustomerId != null)
+                { updatedInvoice.CustomerId = invoice.CustomerId; }
+                if (invoice.UserId != null)
+                { updatedInvoice.UserId = invoice.UserId; }
+                if (invoice.InvoiceDate != null)
+                { updatedInvoice.InvoiceDate = invoice.InvoiceDate; }
+                if (invoice.CustomerVoucher != null)
+                { updatedInvoice.CustomerVoucher = invoice.CustomerVoucher; }
+                if (invoice.InvoiceStatus != null)
+                { updatedInvoice.InvoiceStatus = invoice.InvoiceStatus; }
+                if (invoice.TotalPrice != null)
+                { updatedInvoice.TotalPrice = invoice.TotalPrice; }
+                if (invoice.EndTotalPrice != null)
+                { updatedInvoice.EndTotalPrice = invoice.EndTotalPrice; }
+                
+                
                 _jewelDbContext.Invoices.Update(updatedInvoice);
                 _jewelDbContext.SaveChanges();
                 return true;

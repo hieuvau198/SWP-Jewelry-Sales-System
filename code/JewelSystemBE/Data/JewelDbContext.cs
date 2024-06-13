@@ -18,19 +18,15 @@ namespace JewelSystemBE.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
+        public DbSet<Stall> Stalls { get; set; }
+        public DbSet<StallItem> StallItems { get; set; }
 
 
         public DbSet<ImageRecord> ImageRecords { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new JewelConfiguration());
-
-            //modelBuilder.Seed();
-
             base.OnModelCreating(modelBuilder);
-
-
 
             modelBuilder.Entity<ImageRecord>(builder =>
             {
@@ -86,14 +82,14 @@ namespace JewelSystemBE.Data
                 entity.HasKey(e => e.GemId);
                 entity.Property(e => e.GemId).HasColumnName("gem_id");
                 entity.Property(e => e.GemName).HasColumnName("gem_name");
-                entity.Property(e => e.GemPrice).HasColumnName("gem_price").HasColumnType("decimal(10, 2)");
+                entity.Property(e => e.GemPrice).HasColumnName("gem_price");
 
                 entity.HasData(
-                    new Gem { GemId = "1", GemName = "Ruby", GemPrice = 1000.00m },
-                    new Gem { GemId = "2", GemName = "Sapphire", GemPrice = 1500.00m },
-                    new Gem { GemId = "3", GemName = "Emerald", GemPrice = 1200.00m },
-                    new Gem { GemId = "4", GemName = "Diamond", GemPrice = 5000.00m },
-                    new Gem { GemId = "5", GemName = "Topaz", GemPrice = 800.00m }
+                    new Gem { GemId = "1", GemName = "Ruby", GemPrice = 1000.00 },
+                    new Gem { GemId = "2", GemName = "Sapphire", GemPrice = 1500.00 },
+                    new Gem { GemId = "3", GemName = "Emerald", GemPrice = 1200.00 },
+                    new Gem { GemId = "4", GemName = "Diamond", GemPrice = 5000.00 },
+                    new Gem { GemId = "5", GemName = "Topaz", GemPrice = 800.00 }
                 );
             });
             modelBuilder.Entity<Gold>(entity =>
@@ -102,21 +98,21 @@ namespace JewelSystemBE.Data
                 entity.HasKey(e => e.GoldId);
                 entity.Property(e => e.GoldId).HasColumnName("gold_id");
                 entity.Property(e => e.GoldName).HasColumnName("gold_name");
-                entity.Property(e => e.GoldPrice).HasColumnName("gold_price").HasColumnType("decimal(10, 2)");
+                entity.Property(e => e.GoldPrice).HasColumnName("gold_price");
 
                 entity.HasData(
-                    new Gold { GoldId = "1", GoldName = "24K Gold", GoldPrice = 6000.00m },
-                    new Gold { GoldId = "2", GoldName = "22K Gold", GoldPrice = 5500.00m },
-                    new Gold { GoldId = "3", GoldName = "18K Gold", GoldPrice = 4500.00m },
-                    new Gold { GoldId = "4", GoldName = "14K Gold", GoldPrice = 4000.00m },
-                    new Gold { GoldId = "5", GoldName = "10K Gold", GoldPrice = 3500.00m }
+                    new Gold { GoldId = "1", GoldName = "24K Gold", GoldPrice = 6000.00 },
+                    new Gold { GoldId = "2", GoldName = "22K Gold", GoldPrice = 5500.00 },
+                    new Gold { GoldId = "3", GoldName = "18K Gold", GoldPrice = 4500.00 },
+                    new Gold { GoldId = "4", GoldName = "14K Gold", GoldPrice = 4000.00 },
+                    new Gold { GoldId = "5", GoldName = "10K Gold", GoldPrice = 3500.00 }
                 );
             });
 
             //config the Product entity with sql server begins here
             modelBuilder.Entity<Product>(entity =>
             {
-                //mapping the properties begins here
+                // Mapping the properties begins here
                 entity.ToTable("product");
                 entity.HasKey(e => e.ProductId);
                 entity.Property(e => e.ProductId).HasColumnName("product_id");
@@ -132,29 +128,9 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.GemWeight).HasColumnName("gem_weight").IsRequired();
                 entity.Property(e => e.GoldId).HasColumnName("gold_id").IsRequired();
                 entity.Property(e => e.GoldWeight).HasColumnName("gold_weight").IsRequired();
-                entity.Property(e => e.LaborCost).HasColumnName("labor_cost").HasColumnType("decimal(10, 2)").HasDefaultValue(0);
+                entity.Property(e => e.LaborCost).HasColumnName("labor_cost").IsRequired().HasDefaultValue(0.0);
                 entity.Property(e => e.CreatedAt).HasColumnName("created_at").HasDefaultValueSql("GETDATE()");
-                //mapping the proterties ends here
-
-                //checking values of some properties begins here
-                entity.HasCheckConstraint("CK_Products_ProductQuantity", "product_quantity > 0");
-                entity.HasCheckConstraint("CK_Products_ProductWeight", "product_weight > 0");
-                entity.HasCheckConstraint("CK_Products_GemWeight", "gem_weight > 0");
-                entity.HasCheckConstraint("CK_Products_GoldWeight", "gold_weight > 0");
-                entity.HasCheckConstraint("CK_Products_LaborCost", "labor_cost >= 0");
-                //checking values of some properties ends here
-
-                //linking the relationship begins here
-                entity.HasOne(p => p.Gem)
-                .WithOne()
-                .HasForeignKey<Product>(p => p.GemId);
-
-                entity.HasOne(p => p.Gold)
-                    .WithMany()
-                    .HasForeignKey(p => p.GoldId);
-                //linking the relationship ends here
-
-                //seeding data begins here
+                
                 entity.HasData(
                 new Product
                 {
@@ -166,12 +142,12 @@ namespace JewelSystemBE.Data
                     ProductType = "Necklace",
                     ProductWeight = 50.0,
                     ProductWarranty = 12,
-                    MarkupRate = 1.2f,
+                    MarkupRate = 1.2,
                     GemId = "1",
                     GemWeight = 5.0,
                     GoldId = "1",
                     GoldWeight = 45.0,
-                    LaborCost = 200.00m,
+                    LaborCost = 200.00,
                     CreatedAt = DateTime.Now
                 },
                 new Product
@@ -184,12 +160,12 @@ namespace JewelSystemBE.Data
                     ProductType = "Ring",
                     ProductWeight = 20.0,
                     ProductWarranty = 24,
-                    MarkupRate = 1.5f,
+                    MarkupRate = 1.5,
                     GemId = "2",
                     GemWeight = 2.0,
                     GoldId = "2",
                     GoldWeight = 18.0,
-                    LaborCost = 100.00m,
+                    LaborCost = 100.00,
                     CreatedAt = DateTime.Now
                 },
                 new Product
@@ -202,12 +178,12 @@ namespace JewelSystemBE.Data
                     ProductType = "Bracelet",
                     ProductWeight = 30.0,
                     ProductWarranty = 18,
-                    MarkupRate = 1.3f,
+                    MarkupRate = 1.3,
                     GemId = "3",
                     GemWeight = 3.0,
                     GoldId = "3",
                     GoldWeight = 27.0,
-                    LaborCost = 150.00m,
+                    LaborCost = 150.00,
                     CreatedAt = DateTime.Now
                 },
                 new Product
@@ -220,12 +196,12 @@ namespace JewelSystemBE.Data
                     ProductType = "Earrings",
                     ProductWeight = 15.0,
                     ProductWarranty = 24,
-                    MarkupRate = 1.7f,
+                    MarkupRate = 1.7,
                     GemId = "4",
                     GemWeight = 1.5,
                     GoldId = "4",
                     GoldWeight = 13.5,
-                    LaborCost = 180.00m,
+                    LaborCost = 180.00,
                     CreatedAt = DateTime.Now
                 },
                 new Product
@@ -238,12 +214,12 @@ namespace JewelSystemBE.Data
                     ProductType = "Pendant",
                     ProductWeight = 10.0,
                     ProductWarranty = 6,
-                    MarkupRate = 1.1f,
+                    MarkupRate = 1.1,
                     GemId = "5",
                     GemWeight = 2.5,
                     GoldId = "5",
                     GoldWeight = 7.5,
-                    LaborCost = 90.00m,
+                    LaborCost = 90.00,
                     CreatedAt = DateTime.Now
                 },
                 new Product
@@ -256,17 +232,15 @@ namespace JewelSystemBE.Data
                     ProductType = "Bracelet",
                     ProductWeight = 25.0,
                     ProductWarranty = 12,
-                    MarkupRate = 1.2f,
+                    MarkupRate = 1.2,
                     GemId = "1",
                     GemWeight = 4.0,
                     GoldId = "2",
                     GoldWeight = 21.0,
-                    LaborCost = 130.00m,
+                    LaborCost = 130.00,
                     CreatedAt = DateTime.Now
-                }); // seeding data ends here
+                });
 
-                entity.HasIndex(e => e.GemId).IsUnique(false);
-                entity.HasIndex(e => e.GoldId).IsUnique(false);
             });
             //config the Product entity with sql server ends here
 
@@ -362,7 +336,8 @@ namespace JewelSystemBE.Data
                 entity.HasData(
                     new Warranty { WarrantyId = "W1", ProductId = "P1", ProductName = "Product A", StartDate = new DateTime(2023, 1, 1), ExpireDate = new DateTime(2024, 1, 1) },
                     new Warranty { WarrantyId = "W2", ProductId = "P2", ProductName = "Product B", StartDate = new DateTime(2023, 2, 1), ExpireDate = new DateTime(2024, 2, 1) },
-                    new Warranty { WarrantyId = "W3", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) }
+                    new Warranty { WarrantyId = "W3", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) },
+                    new Warranty {ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) }
                 );
             });
             modelBuilder.Entity<Customer>(entity =>
@@ -395,13 +370,14 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.CustomerVoucher).HasColumnName("customer_voucher").HasColumnType("decimal(18, 2)").IsRequired();
                 entity.Property(e => e.TotalPrice).HasColumnName("total_price").HasColumnType("decimal(18, 2)").IsRequired();
                 entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").HasColumnType("decimal(18, 2)").IsRequired();
+                
 
                 entity.HasData(
-                    new Invoice { InvoiceId = "I1", InvoiceType = "Type A", CustomerId = "C1", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 1), CustomerVoucher = 50.00m, TotalPrice = 500.00m, EndTotalPrice = 450.00m },
-                    new Invoice { InvoiceId = "I2", InvoiceType = "Type B", CustomerId = "C2", UserId = "U2", InvoiceDate = new DateTime(2024, 6, 2), CustomerVoucher = 30.00m, TotalPrice = 700.00m, EndTotalPrice = 670.00m },
-                    new Invoice { InvoiceId = "I3", InvoiceType = "Type C", CustomerId = "C3", UserId = "U3", InvoiceDate = new DateTime(2024, 6, 3), CustomerVoucher = 20.00m, TotalPrice = 300.00m, EndTotalPrice = 280.00m },
-                    new Invoice { InvoiceId = "I4", InvoiceType = "Type D", CustomerId = "C4", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 4), CustomerVoucher = 40.00m, TotalPrice = 1000.00m, EndTotalPrice = 960.00m },
-                    new Invoice { InvoiceId = "I5", InvoiceType = "Type E", CustomerId = "C5", UserId = "U2", InvoiceDate = new DateTime(2024, 6, 5), CustomerVoucher = 60.00m, TotalPrice = 800.00m, EndTotalPrice = 740.00m }
+                    new Invoice { InvoiceId = "I1", InvoiceType = "Type A", CustomerId = "C1", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 1), CustomerVoucher = 50.00, TotalPrice = 500.00, EndTotalPrice = 450.00 },
+                    new Invoice { InvoiceId = "I2", InvoiceType = "Type B", CustomerId = "C2", UserId = "U2", InvoiceDate = new DateTime(2024, 6, 2), CustomerVoucher = 30.00, TotalPrice = 700.00, EndTotalPrice = 670.00 },
+                    new Invoice { InvoiceId = "I3", InvoiceType = "Type C", CustomerId = "C3", UserId = "U3", InvoiceDate = new DateTime(2024, 6, 3), CustomerVoucher = 20.00, TotalPrice = 300.00, EndTotalPrice = 280.00 },
+                    new Invoice { InvoiceId = "I4", InvoiceType = "Type D", CustomerId = "C4", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 4), CustomerVoucher = 40.00, TotalPrice = 1000.00, EndTotalPrice = 960.00 },
+                    new Invoice { InvoiceId = "I5", InvoiceType = "Type E", CustomerId = "C5", UserId = "U2", InvoiceDate = new DateTime(2024, 6, 5), CustomerVoucher = 60.00, TotalPrice = 800.00, EndTotalPrice = 740.00 }
                 );
             });
             modelBuilder.Entity<InvoiceItem>(entity =>
@@ -415,65 +391,62 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.InvoiceId).HasColumnName("invoice_id").IsRequired();
                 entity.Property(e => e.ProductName).HasColumnName("product_name").IsRequired().HasMaxLength(100);
                 entity.Property(e => e.Quantity).HasColumnName("quantity").IsRequired();
-                entity.Property(e => e.UnitPrice).HasColumnName("unit_price").IsRequired().HasColumnType("decimal(18, 2)");
-                entity.Property(e => e.DiscountId).HasColumnName("discount_id");
-                entity.Property(e => e.DiscountRate).HasColumnName("discount_rate").HasColumnType("decimal(5, 2)");
-                entity.Property(e => e.TotalPrice).HasColumnName("total_price").IsRequired().HasColumnType("decimal(18, 2)");
-                entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").IsRequired().HasColumnType("decimal(18, 2)");
+                entity.Property(e => e.UnitPrice).HasColumnName("unit_price").IsRequired().HasDefaultValue(0.0);
+                entity.Property(e => e.DiscountId).HasColumnName("discount_id").IsRequired();
+                entity.Property(e => e.DiscountRate).HasColumnName("discount_rate").IsRequired().HasDefaultValue(0.0);
+                entity.Property(e => e.TotalPrice).HasColumnName("total_price").IsRequired().HasDefaultValue(0.0);
+                entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").IsRequired().HasDefaultValue(0.0);
                 entity.Property(e => e.WarrantyId).HasColumnName("warranty_id");
-
-                // Adding check constraints
-                entity.HasCheckConstraint("CK_InvoiceItem_Quantity", "quantity > 0");
-                entity.HasCheckConstraint("CK_InvoiceItem_UnitPrice", "unit_price >= 0");
-                entity.HasCheckConstraint("CK_InvoiceItem_TotalPrice", "total_price >= 0");
-                entity.HasCheckConstraint("CK_InvoiceItem_EndTotalPrice", "end_total_price >= 0");
-
-                // Mapping the relationships
-                entity.HasOne(e => e.Invoice)
-                    .WithMany()
-                    .HasForeignKey(e => e.InvoiceId);
-
-                entity.HasOne(e => e.Warranty)
-                    .WithMany()
-                    .HasForeignKey(e => e.WarrantyId);
-                entity.HasIndex(e => e.InvoiceId).IsUnique(false);
-                entity.HasIndex(e => e.WarrantyId).IsUnique(false);
 
                 entity.HasData(
                     new InvoiceItem
                     {
                         InvoiceItemId = "1",
-                        InvoiceId = "I1", // Assuming this matches an existing InvoiceId
+                        InvoiceId = "I1", 
                         ProductName = "Product 1",
                         Quantity = 2,
-                        UnitPrice = 10.50m,
-                        DiscountId = "1", // Assuming this is a string, provide a valid DiscountId if it exists
+                        UnitPrice = 10.50,
+                        DiscountId = "1", 
                         DiscountRate = 0,
-                        TotalPrice = 21.00m,
-                        EndTotalPrice = 21.00m,
-                        WarrantyId = "W1", // Assuming this matches an existing WarrantyId
-                        Invoice = null, // Assign null to navigation properties
-                        Warranty = null
+                        TotalPrice = 21.00,
+                        EndTotalPrice = 21.00,
+                        WarrantyId = "W1", 
                     },
                     new InvoiceItem
                     {
                         InvoiceItemId = "2",
-                        InvoiceId = "I1", // Assuming this matches an existing InvoiceId
+                        InvoiceId = "I1", 
                         ProductName = "Product 2",
                         Quantity = 1,
-                        UnitPrice = 25.75m,
-                        DiscountId = "1", // Assuming this is a string, provide a valid DiscountId if it exists
-                        DiscountRate = 0.15m,
-                        TotalPrice = 21.89m,
-                        EndTotalPrice = 21.89m,
-                        WarrantyId = "W2", // Assuming this is a string, provide a valid WarrantyId if it exists
-                        Invoice = null, // Assign null to navigation properties
-                        Warranty = null
+                        UnitPrice = 25.75,
+                        DiscountId = "1", 
+                        DiscountRate = 0.15,
+                        TotalPrice = 21.89,
+                        EndTotalPrice = 21.89,
+                        WarrantyId = "W2", 
                     }
                     );
             });
-
-
+            modelBuilder.Entity<Stall>(entity =>
+            {
+                entity.HasData(
+                    new Stall { },
+                    new Stall { },
+                    new Stall { },
+                    new Stall { },
+                    new Stall { }
+                    );
+            });
+            modelBuilder.Entity<StallItem>(entity =>
+            {
+                entity.HasData(
+                    new StallItem { },
+                    new StallItem { },
+                    new StallItem { },
+                    new StallItem { },
+                    new StallItem { }
+                    );
+            });
 
 
         }

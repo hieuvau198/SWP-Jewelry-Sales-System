@@ -12,28 +12,28 @@ namespace JewelSystemBE.Service.ServiceCustomer
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddCustomer(Customer customer)
+        public Customer AddCustomer(Customer customer)
         {
             if (customer == null)
             {
-                return false;
+                return null;
             }
             var existingCustomer = _jewelDbContext.Customers.Find(customer.CustomerId);
             if (existingCustomer != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Customers.Add(customer);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return customer;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding customer: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
