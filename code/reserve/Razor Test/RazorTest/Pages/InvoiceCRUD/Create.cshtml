@@ -1,0 +1,67 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Invoice</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Invoice.InvoiceId" />  
+
+            <div class="form-group">
+                <label asp-for="Invoice.InvoiceType" class="control-label"></label>
+                <input asp-for="Invoice.InvoiceType" class="form-control" />
+                <span asp-validation-for="Invoice.InvoiceType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.CustomerId" class="control-label"></label>
+                <input asp-for="Invoice.CustomerId" class="form-control" />
+                <span asp-validation-for="Invoice.CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.UserId" class="control-label"></label>
+                <input asp-for="Invoice.UserId" class="form-control" />
+                <span asp-validation-for="Invoice.UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.InvoiceDate" class="control-label"></label>
+                <input asp-for="Invoice.InvoiceDate" class="form-control" />
+                <span asp-validation-for="Invoice.InvoiceDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.CustomerVoucher" class="control-label"></label>
+                <input asp-for="Invoice.CustomerVoucher" class="form-control" />
+                <span asp-validation-for="Invoice.CustomerVoucher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.TotalPrice" class="control-label"></label>
+                <input asp-for="Invoice.TotalPrice" class="form-control" />
+                <span asp-validation-for="Invoice.TotalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.EndTotalPrice" class="control-label"></label>
+                <input asp-for="Invoice.EndTotalPrice" class="form-control" />
+                <span asp-validation-for="Invoice.EndTotalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./InvoiceDetail">Back to List</a>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

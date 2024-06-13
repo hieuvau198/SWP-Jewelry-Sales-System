@@ -1,4 +1,5 @@
 using JewelBO;
+using JewelSystemBE;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
@@ -39,6 +40,8 @@ namespace RazorTest.Pages
 
         public List<Login> Logins { get; set; }
 
+        public List<GoldPrice> GoldPrices { get; set; }
+
 
         public async Task OngetAsync()
         {
@@ -61,6 +64,8 @@ namespace RazorTest.Pages
             Users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user\r\n");
 
             Warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty\r\n");
+
+            GoldPrices = await _apiService.GetAsync<List<GoldPrice>>("http://localhost:5071/api/goldprice\r\n");
 
             //Logins = await _apiService.GetAsync<List<Login>>("http://localhost:5071/api/auth/login\r\n");
 
@@ -112,6 +117,11 @@ namespace RazorTest.Pages
             if (Warranties != null)
             {
                 Warranties = Warranties.OrderBy(w => w.WarrantyId).ToList();
+            }
+
+            if (GoldPrices != null)
+            {
+                GoldPrices = GoldPrices.OrderBy(c => c.Name).ToList();
             }
         }
     }

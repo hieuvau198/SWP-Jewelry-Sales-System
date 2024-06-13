@@ -21,6 +21,16 @@ builder.Services.AddHttpClient<GoldService>();
 builder.Services.AddScoped<GoldService>();
 builder.Services.AddHttpClient<ProductService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddHttpClient<CustomerService>();
+builder.Services.AddScoped<CustomerService>();
+builder.Services.AddHttpClient<InvoiceService>();
+builder.Services.AddScoped<InvoiceService>();
+builder.Services.AddHttpClient<InvoiceItemService>();
+builder.Services.AddScoped<InvoiceItemService>();
+builder.Services.AddHttpClient<WarrantyService>();
+builder.Services.AddScoped<WarrantyService>();
+builder.Services.AddHttpClient<UserService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,62 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.IndexModel
+@{
+    ViewData["Title"] = "Invoice List";
+}
+
+<h2>Invoice</h2>
+
+<style>
+    /* Table styles */
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Ensures borders between cells are merged */
+        margin-top: 20px; /* Adds spacing above the table */
+    }
+
+    th, td {
+        border: 1px solid black; /* Adds border to cells and header cells */
+        padding: 8px; /* Adds space inside cells */
+        text-align: left; /* Aligns text to the left inside cells */
+    }
+
+    th {
+        background-color: #f9f9f9; /* Light grey background for header cells */
+    }
+</style>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Invoice Id</th>
+            <th>Invoice Type</th>
+            <th>Customer Id</th>
+            <th>User Id</th>
+            <th>Invoice Date</th>
+            <th>Customer Voucher</th>
+            <th>Total Price</th>
+            <th>End Total Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody border="1">
+        @foreach (var invoice in Model.Invoices)
+        {
+            <tr>
+                <td>@invoice.InvoiceId</td>
+                <td><strong>@invoice.InvoiceType</strong></td>
+                <td>@invoice.CustomerId</td>
+                <td>@invoice.UserId</td>
+                <td>@invoice.InvoiceDate.ToShortDateString()</td>
+                <td>@invoice.CustomerVoucher</td>
+                <td>@invoice.TotalPrice</td>
+                <td>@invoice.EndTotalPrice</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId">Edit</a>
+                    <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-page="./Create">Create New Invoice</a>
