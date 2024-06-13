@@ -72,6 +72,8 @@ namespace JewelSystemBE.Service.ServiceDiscount
                 updatedDiscount.ProductType = discount.ProductType;
                 updatedDiscount.PublicDate = discount.PublicDate;
                 updatedDiscount.ExpireDate = discount.ExpireDate;
+                updatedDiscount.ProductId = discount.ProductId;
+                updatedDiscount.DiscountRate = discount.DiscountRate;
 
                 _jewelDbContext.Discounts.Update(updatedDiscount);
                 _jewelDbContext.SaveChanges();

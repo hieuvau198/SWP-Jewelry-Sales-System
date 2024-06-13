@@ -19,6 +19,8 @@ namespace JewelSystemBE.Model
         [Required]
         [MaxLength(200)]
         public string ProductType { get; set; } = "All";
+        [Required]
+        public string ProductId { get; set; } = "All";
 
         [Required]
         public double DiscountRate { get; set; } = 0.0;
