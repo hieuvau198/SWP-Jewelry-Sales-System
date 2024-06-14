@@ -7,9 +7,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddDbContext<RazorTestContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RazorTestContext") ?? throw new InvalidOperationException("Connection string 'RazorTestContext' not found.")));
 builder.Services.AddHttpClient();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
+
 builder.Services.AddScoped<ApiService>();
 builder.Services.AddHttpClient<ApiService>();
 builder.Services.AddControllersWithViews();
@@ -32,6 +42,7 @@ builder.Services.AddScoped<WarrantyService>();
 builder.Services.AddHttpClient<UserService>();
 builder.Services.AddScoped<UserService>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -43,11 +54,15 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
+
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapRazorPages();
 

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using RazorTest.Models;
 
-namespace JewelBO
+namespace RazorTest.Models
 {
     public class Product
     {

@@ -1,4 +1,4 @@
-﻿namespace JewelBO
+﻿namespace RazorTest.Models
 {
     public class JwtSettings
     {

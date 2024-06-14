@@ -1,4 +1,3 @@
-using JewelBO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;

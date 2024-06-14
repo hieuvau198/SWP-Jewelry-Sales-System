@@ -186,6 +186,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENSVURcUHJvZHVjdERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Sale/SaleHomePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTYWxlSG9tZVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

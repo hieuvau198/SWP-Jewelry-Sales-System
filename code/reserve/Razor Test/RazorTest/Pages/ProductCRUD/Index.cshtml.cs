@@ -1,6 +1,6 @@
-using JewelBO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorTest.Models;
 using RazorTest.Services;
 
 namespace RazorTest.Pages.ProductCRUD
@@ -13,7 +13,6 @@ namespace RazorTest.Pages.ProductCRUD
         {
             _apiService = apiService;
         }
-
         public List<Product> Products { get; set; }
 
         public async Task OnGetAsync()

@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 using System.Text;
 using RazorTest.Models;
 using System.Text.Json;
-using JewelBO;
 
 namespace RazorTest.Services
 {

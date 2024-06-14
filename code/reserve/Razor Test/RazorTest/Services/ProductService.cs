@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Text;
 using RazorTest.Models;
-using JewelBO;
 
 namespace RazorTest.Services
 {

@@ -1,4 +1,3 @@
-using JewelSystemBE;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;

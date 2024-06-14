@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace JewelBO
+namespace RazorTest.Models
 {
     public class Jewel
     {

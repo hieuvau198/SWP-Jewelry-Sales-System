@@ -1,4 +1,4 @@
-﻿namespace JewelSystemBE
+﻿namespace RazorTest.Models
 {
     public class GoldPrice
     {
