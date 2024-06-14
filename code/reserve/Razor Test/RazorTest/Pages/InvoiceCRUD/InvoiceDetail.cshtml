@@ -34,6 +34,7 @@
             <th>Customer Voucher</th>
             <th>Total Price</th>
             <th>End Total Price</th>
+            <th>Status</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -49,6 +50,7 @@
                 <td>@invoice.CustomerVoucher</td>
                 <td>@invoice.TotalPrice</td>
                 <td>@invoice.EndTotalPrice</td>
+                <td>@invoice.InvoiceStatus</td>
                 <td>
                     <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId">Edit</a>
                     <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId">Delete</a>

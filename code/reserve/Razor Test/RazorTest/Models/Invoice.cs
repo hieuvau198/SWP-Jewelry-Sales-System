@@ -34,5 +34,6 @@ namespace RazorTest.Models
         [Required]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal EndTotalPrice { get; set; }
+        public string InvoiceStatus { get; set; }
     }
 }

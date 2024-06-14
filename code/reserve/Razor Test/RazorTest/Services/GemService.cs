@@ -31,7 +31,6 @@ namespace RazorTest.Services
         {
             return await _apiService.PostAsJsonAsync("http://localhost:5071/api/gem", gem);
         }
-
         public async Task<HttpResponseMessage> UpdateGemAsync(Gem gem)
         {
             var url = "http://localhost:5071/api/gem";

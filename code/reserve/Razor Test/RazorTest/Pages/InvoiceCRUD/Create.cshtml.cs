@@ -50,7 +50,6 @@ namespace RazorTest.Pages.InvoiceCRUD
             {
                 Invoice.InvoiceId = Guid.NewGuid().ToString();
             }
-
             var response = await _invoiceService.CreateInvoiceAsync(Invoice);
             if (response.IsSuccessStatusCode)
             {

@@ -17,10 +17,8 @@ namespace RazorTest.Pages.WarrantyCRUD
             _warrantyService = warrantyService;
             _logger = logger;
         }
-
         [BindProperty]
         public Warranty Warranty { get; set; }
-
         public async Task<IActionResult> OnGetAsync(string id)
         {
             if (id == null)
@@ -28,9 +26,7 @@ namespace RazorTest.Pages.WarrantyCRUD
                 _logger.LogError("ID is null");
                 return NotFound();
             }
-
             Warranty = await _warrantyService.GetWarrantyByIdAsync(id);
-
             if (Warranty == null)
             {
                 _logger.LogError($"Warranty not found for ID {id}");
@@ -38,7 +34,6 @@ namespace RazorTest.Pages.WarrantyCRUD
             }
             return Page();
         }
-
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
@@ -51,13 +46,11 @@ namespace RazorTest.Pages.WarrantyCRUD
                         _logger.LogError($"Key: {modelStateKey}, Error: {error.ErrorMessage}");
                     }
                 }
-
                 return Page();
             }
 
             _logger.LogInformation($"Updating warranty with ID {Warranty.WarrantyId}");
             _logger.LogInformation($"Warranty details: {JsonConvert.SerializeObject(Warranty)}");
-
             var response = await _warrantyService.UpdateWarrantyAsync(Warranty);
 
             if (!response.IsSuccessStatusCode)
@@ -66,7 +59,6 @@ namespace RazorTest.Pages.WarrantyCRUD
                 ModelState.AddModelError(string.Empty, "An error occurred while updating the warranty.");
                 return Page();
             }
-
             _logger.LogInformation("Successfully updated warranty");
             return RedirectToPage("./WarrantyDetail");
         }
