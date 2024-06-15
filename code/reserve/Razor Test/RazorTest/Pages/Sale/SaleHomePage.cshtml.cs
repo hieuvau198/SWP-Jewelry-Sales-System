@@ -1,89 +1,65 @@
 using RazorTest.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using RazorTest.Services;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+using RazorTest.Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using RazorTest.Utilities;
-
-
 
 namespace RazorTest.Pages.Sale
 {
     public class SaleHomePageModel : PageModel
     {
-
-        public const string SessionKeyMessage = "_Message";
         public const string SessionKeyCart = "_Cart";
-        public const string SessionKeyProductId = "_ProductId";
-
-
         private readonly ApiService _apiService;
-        private readonly ILogger<IndexModel> _logger;
+        private readonly ILogger<SaleHomePageModel> _logger;
 
-        public SaleHomePageModel(ApiService apiService, ILogger<IndexModel> logger)
+        public SaleHomePageModel(ApiService apiService, ILogger<SaleHomePageModel> logger)
         {
             _apiService = apiService;
             _logger = logger;
         }
+
         public List<Product> Products { get; set; } = new List<Product>();
-        public List<Product> Cart { get; set; }
-        public Customer Customer { get; set; }
-        public User User { get; set; }
-        public List<Discount> Discounts { get; set; }
-        public Invoice Invoice { get; set; }
-        public List<InvoiceItem> InvoiceItems { get; set; }
-        public string Message { get; set; } = "No Nut November";
 
+        public int CurrentPage { get; set; }
+        public int TotalPages { get; set; }
+        public const int PageSize = 6; // Number of products per page
 
-
-        //Call Data for List Products
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(int currentPage = 1)
         {
-            Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            var allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
 
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString(SessionKeyMessage)))
-            {
-                HttpContext.Session.SetString(SessionKeyMessage, "No Message");
-            }
-            var message = HttpContext.Session.GetString(SessionKeyMessage);
-            _logger.LogInformation("Session Message: {Name}", message);
-            if (HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) == null)
-            {
-                Cart = new List<Product>();
-                HttpContext.Session.SetObject(SessionKeyCart, Cart);
-            }
-            else
-            { Cart = (HttpContext.Session.GetObject<List<Product>>(SessionKeyCart)); }
+            // Calculate pagination details
+            CurrentPage = currentPage;
+            TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
 
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString(SessionKeyProductId)))
-            {
-                HttpContext.Session.SetString(SessionKeyMessage, "No Id");
-            }
-            var id = HttpContext.Session.GetString(SessionKeyProductId);
-            Product product = Products.Find(x => x.ProductId == id);
+            Products = allProducts.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
 
-            if (product != null && Cart.Find(x => x.ProductId == product.ProductId) == null)
-            {
-                Cart.Add(product);
-                HttpContext.Session.SetObject(SessionKeyCart, Cart);
-                HttpContext.Session.SetString(SessionKeyMessage, "Add Success");
-            }
-
+            // Store products in session to fetch them during post request
+            HttpContext.Session.SetObject("Products", allProducts);
         }
-        //Test button
 
-        public IActionResult OnPostA2(IFormCollection form)
+        public IActionResult OnPostAddToCart(string productId)
         {
-            string id = form["data"];
+            // Fetch products again to find the product by Id
+            var allProducts = HttpContext.Session.GetObject<List<Product>>("Products") ?? new List<Product>();
 
-            Product product = Products.Find(x => x.ProductId == id);
+            List<Product> cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
 
-            HttpContext.Session.SetString(SessionKeyMessage, "Still Fail");
+            Product product = allProducts.Find(x => x.ProductId == productId);
+            if (product != null && !cart.Exists(x => x.ProductId == productId))
+            {
+                cart.Add(product);
+                HttpContext.Session.SetObject(SessionKeyCart, cart);
+            }
 
-            HttpContext.Session.SetString(SessionKeyProductId, id);
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return new JsonResult(new { success = true });
+            }
 
-            return RedirectToPage();
+            return RedirectToPage(new { currentPage = CurrentPage });
         }
     }
 }

@@ -17,231 +17,235 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RazorTest
 build_property.RootNamespace = RazorTest
-build_property.ProjectDir = D:\workspace\github\swp\SWP-Jewelry-Sales-System\code\reserve\Razor Test\RazorTest\
+build_property.ProjectDir = D:\Asp dot net\SWP-Jewelry-Sales-System\code\reserve\Razor Test\RazorTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\workspace\github\swp\SWP-Jewelry-Sales-System\code\reserve\Razor Test\RazorTest
+build_property.MSBuildProjectDirectory = D:\Asp dot net\SWP-Jewelry-Sales-System\code\reserve\Razor Test\RazorTest
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJDUlVEXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/CustomerDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/CustomerDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJDUlVEXEN1c3RvbWVyRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJDUlVEXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJDUlVEXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/CustomerCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJDUlVEXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY291bnRDUlVEXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY291bnRDUlVEXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/DiscountDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/DiscountDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY291bnRDUlVEXERpc2NvdW50RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY291bnRDUlVEXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/DiscountCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlzY291bnRDUlVEXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Error.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtQ1JVRFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtQ1JVRFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtQ1JVRFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/GemDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/GemDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtQ1JVRFxHZW1EZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GemCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VtQ1JVRFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZENSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZENSVURcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZENSVURcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/GoldDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/GoldDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZENSVURcR29sZERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZENSVURcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldPriceDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/GoldPriceDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZFByaWNlRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUNSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUNSVURcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUNSVURcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUNSVURcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/InvoiceDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceCRUD/InvoiceDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUNSVURcSW52b2ljZURldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUl0ZW1DUlVEXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUl0ZW1DUlVEXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUl0ZW1DUlVEXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUl0ZW1DUlVEXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/InvoiceItemDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/InvoiceItemCRUD/InvoiceItemDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52b2ljZUl0ZW1DUlVEXEludm9pY2VJdGVtRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/JewelDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/JewelDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmV3ZWxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Privacy.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENSVURcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENSVURcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENSVURcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/ProductDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/ProductCRUD/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENSVURcUHJvZHVjdERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Sale/SaleHomePage.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Sale/SaleHomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTYWxlSG9tZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Sale/ViewCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxWaWV3Q2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNSVURcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNSVURcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNSVURcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/UserDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/UserCRUD/UserDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNSVURcVXNlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Create.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FycmFudHlDUlVEXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Delete.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FycmFudHlDUlVEXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Edit.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FycmFudHlDUlVEXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Index.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FycmFudHlDUlVEXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/WarrantyDetail.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/WarrantyCRUD/WarrantyDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FycmFudHlDUlVEXFdhcnJhbnR5RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/_ViewImports.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/_ViewStart.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/workspace/github/swp/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Shared/_Layout.cshtml]
+[D:/Asp dot net/SWP-Jewelry-Sales-System/code/reserve/Razor Test/RazorTest/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mvqunuzbmx
