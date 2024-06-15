@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj": {}
+    "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj": {
+    "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj",
+        "projectUniqueName": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj",
         "projectName": "RazorTest",
-        "projectPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\",
+        "projectPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj",
+        "packagesPath": "C:\\Users\\phamd\\.nuget\\packages\\",
+        "outputPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\phamd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
