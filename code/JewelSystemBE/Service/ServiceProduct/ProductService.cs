@@ -92,6 +92,8 @@ namespace JewelSystemBE.Service.ServiceProduct
                 updatedProduct.UnitPrice = product.UnitPrice;
                 updatedProduct.TotalPrice = product.TotalPrice;
 
+                updatedProduct = UpdatePrice(updatedProduct);
+
                 _jewelDbContext.Products.Update(updatedProduct);
                 _jewelDbContext.SaveChanges();
                 return true;

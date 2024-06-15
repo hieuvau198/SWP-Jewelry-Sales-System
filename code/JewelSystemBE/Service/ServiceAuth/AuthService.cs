@@ -53,7 +53,10 @@ namespace JewelSystemBE.Service.ServiceAuth
 
         public User GetUserByUsername(string username)
         {
-            return _jewelDbContext.Users.SingleOrDefault(u => u.Username == username);
+            User result = _jewelDbContext.Users.SingleOrDefault(u => u.Username == username);
+            if (result != null)
+            { result.Password = null; }
+            return result;
         }
         public string GenerateJwtToken(User user, string role)
         {

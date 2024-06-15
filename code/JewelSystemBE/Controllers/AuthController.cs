@@ -25,17 +25,17 @@ namespace JewelSystemBE.Controllers
             return BadRequest(new {message = "Username or email already existed."});
         }
         [HttpPost("login")]
-        public IActionResult Login([FromBody] User user)
+        public IActionResult Login([FromBody] LoginDto loginDto)
         {
 
-            string verify = _authService.AuthenticateUser(user.Username, user.Password);
+            string verify = _authService.AuthenticateUser(loginDto.Username, loginDto.Password);
             if (verify.Equals("Wrong Username"))
             { return Unauthorized(new { message = "Wrong Username" }); }
             if (verify.Equals("Wrong Password."))
             { return Unauthorized(new { message = "Wrong Password" }); }
             
             
-            return Ok(_authService.GetUserByUsername(user.Username));
+            return Ok(_authService.GetUserByUsername(loginDto.Username));
             
         }
         [HttpPost("logintoken")]

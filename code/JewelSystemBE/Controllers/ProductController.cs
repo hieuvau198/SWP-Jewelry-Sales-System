@@ -44,12 +44,12 @@ namespace JewelSystemBE.Controllers
             return Ok(_productService.AddProduct(product));
         }
         [HttpPost("UpdatePrice")]
-        public IActionResult PostUpdate(Product product)
+        public IActionResult PostUpdatePrice(Product product)
         {
             return Ok(_productService.UpdatePrice(product));
         }
-        [HttpPost("UpdatePriceList")]
-        public IActionResult PostUpdateList(List<Product> products)
+        [HttpPost("UpdatePrices")]
+        public IActionResult PostUpdate(List<Product> products)
         {
             return Ok(_productService.UpdatePrices(products));
         }

@@ -50,10 +50,10 @@ namespace JewelSystemBE.Data
                 // Seed data for User
                 builder.HasData(
                     new User { UserId = "1", Username = "user1", Password = BCrypt.Net.BCrypt.HashPassword("password1"), Fullname = "User One", Email = "user1@example.com", Role = "Admin" },
-                    new User { UserId = "2", Username = "user2", Password = BCrypt.Net.BCrypt.HashPassword("password2"), Fullname = "User Two", Email = "user2@example.com", Role = "User" },
-                    new User { UserId = "3", Username = "user3", Password = BCrypt.Net.BCrypt.HashPassword("password3"), Fullname = "User Three", Email = "user3@example.com", Role = "User" },
-                    new User { UserId = "4", Username = "user4", Password = BCrypt.Net.BCrypt.HashPassword("password4"), Fullname = "User Four", Email = "user4@example.com", Role = "User" },
-                    new User { UserId = "5", Username = "user5", Password = BCrypt.Net.BCrypt.HashPassword("password5"), Fullname = "User Five", Email = "user5@example.com", Role = "User" }
+                    new User { UserId = "2", Username = "user2", Password = BCrypt.Net.BCrypt.HashPassword("password2"), Fullname = "User Two", Email = "user2@example.com", Role = "Manager" },
+                    new User { UserId = "3", Username = "user3", Password = BCrypt.Net.BCrypt.HashPassword("password3"), Fullname = "User Three", Email = "user3@example.com", Role = "Sale" },
+                    new User { UserId = "4", Username = "user4", Password = BCrypt.Net.BCrypt.HashPassword("password4"), Fullname = "User Four", Email = "user4@example.com", Role = "Sale" },
+                    new User { UserId = "5", Username = "user5", Password = BCrypt.Net.BCrypt.HashPassword("password5"), Fullname = "User Five", Email = "user5@example.com", Role = "Cashier" }
                 );
             });
 

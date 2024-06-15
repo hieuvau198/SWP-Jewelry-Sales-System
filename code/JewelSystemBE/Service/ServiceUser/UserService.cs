@@ -1,6 +1,7 @@
 ﻿using JewelSystemBE.Data;
 using JewelSystemBE.Model;
 using BCrypt.Net;
+using Microsoft.IdentityModel.Tokens;
 
 namespace JewelSystemBE.Service.ServiceUser
 {
@@ -46,12 +47,23 @@ namespace JewelSystemBE.Service.ServiceUser
 
         public List<User> GetUsers()
         {
-            return _jewelDbContext.Users.OrderByDescending(x => x.Username).ToList();
+           List<User> results = _jewelDbContext.Users.OrderByDescending(x => x.Username).ToList();
+           if(!results.IsNullOrEmpty())
+            {
+                foreach(var user in results)
+                {
+                    user.Password = null;
+                }
+            }
+            return results;
         }
 
         public User GetUser(string userId)
         {
-            return _jewelDbContext.Users.Find(userId);
+            User result = _jewelDbContext.Users.Find(userId);
+            if(result != null)
+            { result.Password = null; }    
+            return result;
         }
 
         public bool RemoveUser(string userId)
