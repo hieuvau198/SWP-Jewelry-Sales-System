@@ -21,7 +21,6 @@ namespace JewelSystemBE.Data
         public DbSet<Stall> Stalls { get; set; }
         public DbSet<StallItem> StallItems { get; set; }
 
-
         public DbSet<ImageRecord> ImageRecords { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

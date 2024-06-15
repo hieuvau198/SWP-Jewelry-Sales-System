@@ -43,6 +43,16 @@ namespace JewelSystemBE.Controllers
         {
             return Ok(_productService.AddProduct(product));
         }
+        [HttpPost("UpdatePrice")]
+        public IActionResult PostUpdate(Product product)
+        {
+            return Ok(_productService.UpdatePrice(product));
+        }
+        [HttpPost("UpdatePriceList")]
+        public IActionResult PostUpdateList(List<Product> products)
+        {
+            return Ok(_productService.UpdatePrices(products));
+        }
 
         [HttpPut]
         public IActionResult Put(Product product)

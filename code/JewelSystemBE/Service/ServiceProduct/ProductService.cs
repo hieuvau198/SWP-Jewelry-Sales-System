@@ -25,6 +25,7 @@ namespace JewelSystemBE.Service.ServiceProduct
             }
             try
             {
+                product = UpdatePrice(product);
                 _jewelDbContext.Products.Add(product);
                 _jewelDbContext.SaveChanges();
                 return product;
@@ -39,11 +40,13 @@ namespace JewelSystemBE.Service.ServiceProduct
 
         public List<Product> GetProducts()
         {
-            return _jewelDbContext.Products.OrderByDescending(x => x.ProductId).ToList();
+            List<Product> products = _jewelDbContext.Products.OrderByDescending(x => x.ProductId).ToList();
+            return products;
         }
 
         public Product GetProduct(string productId)
         {
+            Product product = _jewelDbContext.Products.Find(productId);
             return _jewelDbContext.Products.Find(productId);
         }
 
@@ -86,12 +89,79 @@ namespace JewelSystemBE.Service.ServiceProduct
                 updatedProduct.GoldWeight = product.GoldWeight;
                 updatedProduct.LaborCost = product.LaborCost;
                 updatedProduct.CreatedAt = product.CreatedAt;
+                updatedProduct.UnitPrice = product.UnitPrice;
+                updatedProduct.TotalPrice = product.TotalPrice;
 
                 _jewelDbContext.Products.Update(updatedProduct);
                 _jewelDbContext.SaveChanges();
                 return true;
             }
             return false;
+        }
+
+        public List<Product> UpdatePrices(List<Product> products)
+        {
+            if (products == null)
+            {
+                return null;
+            }
+            if(products.Count == 0)
+            {
+                return products;
+            }
+            List<Product> results = products;
+            List<Gem> gems = _jewelDbContext.Gems.ToList();
+            List<Gold> golds = _jewelDbContext.Golds.ToList();
+
+            foreach(Product product in results)
+            {
+                double unitPrice = 0;
+                double totalPrice = 0;
+                Gem gem = gems.Find(x => x.GemId == product.GemId);
+                Gold gold = golds.Find(x => x.GoldId == product.GoldId);
+                if(gem != null)
+                { 
+                    unitPrice += (gem.GemPrice * product.GemWeight); 
+                }
+                if(gold != null)
+                {
+                    unitPrice += (gold.GoldPrice * product.GoldWeight);
+                }
+                unitPrice += product.LaborCost;
+                unitPrice = unitPrice * product.MarkupRate;
+                totalPrice = unitPrice * product.ProductQuantity;
+                product.UnitPrice = unitPrice;
+                product.TotalPrice = totalPrice;
+            }
+            return results;
+        }
+        public Product UpdatePrice(Product product)
+        {
+            if(product == null)
+            { return null; }
+            List<Gem> gems = _jewelDbContext.Gems.ToList();
+            List<Gold> golds = _jewelDbContext.Golds.ToList();
+            Product result = product;
+
+            double unitPrice = 0;
+            double totalPrice = 0;
+            Gem gem = gems.Find(x => x.GemId == result.GemId);
+            Gold gold = golds.Find(x => x.GoldId == result.GoldId);
+            if (gem != null)
+            {
+                unitPrice += gem.GemPrice * result.GemWeight;
+            }
+            if (gold != null)
+            {
+                unitPrice += gold.GoldPrice * result.GoldWeight;
+            }
+            unitPrice += result.LaborCost;
+            unitPrice = unitPrice * result.MarkupRate;
+            totalPrice = unitPrice * result.ProductQuantity;
+            result.UnitPrice = unitPrice;
+            result.TotalPrice = totalPrice;
+
+            return result;
         }
     }
 }

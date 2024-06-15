@@ -53,6 +53,10 @@ namespace JewelSystemBE.Model
 
         [Required]
         public double LaborCost { get; set; } = 0.0;
+        [Required]
+        public double UnitPrice { get; set; } = 0.0;
+        [Required]
+        public double TotalPrice { get; set; } = 0.0;
 
         [DataType(DataType.DateTime)]
         public DateTime CreatedAt { get; set; } = DateTime.Now;

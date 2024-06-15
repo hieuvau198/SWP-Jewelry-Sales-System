@@ -156,6 +156,8 @@ namespace JewelSystemBE.Migrations
                     gold_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     gold_weight = table.Column<double>(type: "float", nullable: false),
                     labor_cost = table.Column<double>(type: "float", nullable: false, defaultValue: 0.0),
+                    UnitPrice = table.Column<double>(type: "float", nullable: false),
+                    TotalPrice = table.Column<double>(type: "float", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
                 },
                 constraints: table =>
@@ -239,11 +241,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "15b76029-c3f9-4dbb-b261-ee3d0ff2b32e", "Some Product Id", "Some Product Name", 0 },
-                    { "3013554d-b590-42cf-a00e-99e9f8276608", "Some Product Id", "Some Product Name", 0 },
-                    { "5ddbe557-d600-4f08-a8da-ccb6dc348755", "Some Product Id", "Some Product Name", 0 },
-                    { "ac354895-1634-44c7-8956-d4a18bf26350", "Some Product Id", "Some Product Name", 0 },
-                    { "b63bbb8c-2113-4b0a-9fd0-0e840e8fbb58", "Some Product Id", "Some Product Name", 0 }
+                    { "4d95a531-384c-4347-b0a6-5451a042f7f3", "Some Product Id", "Some Product Name", 0 },
+                    { "6d03455c-9f98-41a4-96f6-e12fb29b327a", "Some Product Id", "Some Product Name", 0 },
+                    { "9a65dc61-e8c3-4d61-866d-fb4cf297b7ab", "Some Product Id", "Some Product Name", 0 },
+                    { "c836cc60-4627-4d13-a678-8c22450f3652", "Some Product Id", "Some Product Name", 0 },
+                    { "cedc0085-f199-42e0-8ddc-fe7386805156", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -251,11 +253,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallId", "StaffId", "StallDescription", "StallName", "StallType" },
                 values: new object[,]
                 {
-                    { "2958fd29-14cf-412f-b4a8-6584871919fc", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
-                    { "2adc5ec3-5125-4395-803a-ce3294224ca3", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
-                    { "3f6a1cfc-ab83-4d95-8ebc-430cb6830286", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
-                    { "a56eada0-5eb7-4076-afd1-5c6bcd16eacb", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
-                    { "c25a4a96-41c5-4626-9132-8ba0ae2c4cbc", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" }
+                    { "77d96057-68a0-40a2-9687-f911ff8bb38c", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
+                    { "8a3f06d3-5b44-467a-8094-c21227b6aaba", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
+                    { "8c94ff5e-2809-46a7-99e0-3ca4a4863609", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
+                    { "bc12a3cd-0210-4df2-baea-ecb3c287fab1", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" },
+                    { "c50318c3-318f-46e5-931c-1ca0cbb5e87f", "Some Staff Id", "Some Stall Description", "Some Stall Name", "None" }
                 });
 
             migrationBuilder.InsertData(
@@ -342,15 +344,15 @@ namespace JewelSystemBE.Migrations
 
             migrationBuilder.InsertData(
                 table: "product",
-                columns: new[] { "product_id", "created_at", "gem_id", "gem_weight", "gold_id", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight" },
+                columns: new[] { "product_id", "created_at", "gem_id", "gem_weight", "gold_id", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight", "TotalPrice", "UnitPrice" },
                 values: new object[,]
                 {
-                    { "31f33154-accc-4a59-b8a0-c106137fc9cc", new DateTime(2024, 6, 13, 17, 27, 49, 803, DateTimeKind.Local).AddTicks(985), "2", 2.0, "2", 18.0, 100.0, 1.5, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0 },
-                    { "32007392-1cbb-437d-8cf4-bc6aac900805", new DateTime(2024, 6, 13, 17, 27, 49, 803, DateTimeKind.Local).AddTicks(1002), "1", 4.0, "2", 21.0, 130.0, 1.2, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0 },
-                    { "67248496-5eed-438f-a7ff-c713e72d059d", new DateTime(2024, 6, 13, 17, 27, 49, 803, DateTimeKind.Local).AddTicks(989), "3", 3.0, "3", 27.0, 150.0, 1.3, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0 },
-                    { "696a60bd-08d0-4034-84d4-6b50cc4a7edc", new DateTime(2024, 6, 13, 17, 27, 49, 803, DateTimeKind.Local).AddTicks(979), "1", 5.0, "1", 45.0, 200.0, 1.2, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0 },
-                    { "b466c9b6-a35f-4a18-8375-6bdbb3fd60d5", new DateTime(2024, 6, 13, 17, 27, 49, 803, DateTimeKind.Local).AddTicks(993), "4", 1.5, "4", 13.5, 180.0, 1.7, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earrings", 24, 15.0 },
-                    { "dab0e68b-af2e-4854-81b8-eb4aa824f186", new DateTime(2024, 6, 13, 17, 27, 49, 803, DateTimeKind.Local).AddTicks(999), "5", 2.5, "5", 7.5, 90.0, 1.1000000000000001, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Pendant", 6, 10.0 }
+                    { "121c4772-a6ac-48f2-a7ca-19b8c288f20c", new DateTime(2024, 6, 15, 16, 51, 21, 155, DateTimeKind.Local).AddTicks(4751), "5", 2.5, "5", 7.5, 90.0, 1.1000000000000001, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Pendant", 6, 10.0, 0.0, 0.0 },
+                    { "1bda02cf-f01f-413c-8733-67e911ed19bd", new DateTime(2024, 6, 15, 16, 51, 21, 155, DateTimeKind.Local).AddTicks(4739), "3", 3.0, "3", 27.0, 150.0, 1.3, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0, 0.0, 0.0 },
+                    { "480400cd-96af-4b10-871c-04cd7fb93d0f", new DateTime(2024, 6, 15, 16, 51, 21, 155, DateTimeKind.Local).AddTicks(4725), "1", 5.0, "1", 45.0, 200.0, 1.2, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
+                    { "702fb73f-55b4-470b-b1ab-304bd8486f8b", new DateTime(2024, 6, 15, 16, 51, 21, 155, DateTimeKind.Local).AddTicks(4744), "4", 1.5, "4", 13.5, 180.0, 1.7, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earrings", 24, 15.0, 0.0, 0.0 },
+                    { "cbb2c07a-9512-405d-a0df-912f27338e5f", new DateTime(2024, 6, 15, 16, 51, 21, 155, DateTimeKind.Local).AddTicks(4733), "2", 2.0, "2", 18.0, 100.0, 1.5, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0, 0.0, 0.0 },
+                    { "f74e21ae-4cd7-4de3-8b1b-3737e5f4bfaf", new DateTime(2024, 6, 15, 16, 51, 21, 155, DateTimeKind.Local).AddTicks(4756), "1", 4.0, "2", 21.0, 130.0, 1.2, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0, 0.0, 0.0 }
                 });
 
             migrationBuilder.InsertData(
@@ -358,11 +360,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "1", "user1@example.com", "User One", "$2a$11$r1CgM4dpyw4ojJ2dOPGgkeJZcMfTCQQ.LvMecHfQIxZLe/Y8rrD3S", "Admin", "user1" },
-                    { "2", "user2@example.com", "User Two", "$2a$11$WIWsRPNH6MU1FSATT2MRb.71.HC6lQlXdygobEWqqOqbB5CLtZlby", "User", "user2" },
-                    { "3", "user3@example.com", "User Three", "$2a$11$aRxMcATv5QkElKgcCUZZv.huobbkU5Hg6oAWAZVqzW6.dgJQ/Jnca", "User", "user3" },
-                    { "4", "user4@example.com", "User Four", "$2a$11$9D7fERnf2w0JviJxkLG7u.69IevsGoncT9gTFtZpG/qcgiKGeOlrC", "User", "user4" },
-                    { "5", "user5@example.com", "User Five", "$2a$11$QDbBzgSTk394OzfrqcK1z.PSD6Xtgbiql4BFZH4NQxQrr3wSjwMaa", "User", "user5" }
+                    { "1", "user1@example.com", "User One", "$2a$11$VHG72XFEYySuTzlPxKlndOjnPvxMhTEs9Um0frV/PwyOMbob8AEuW", "Admin", "user1" },
+                    { "2", "user2@example.com", "User Two", "$2a$11$.PqwhkqsR75oC6T0ldkqNO5bBWXEZhfmkpaI.75McRjgvGtL895GS", "User", "user2" },
+                    { "3", "user3@example.com", "User Three", "$2a$11$hwM9xKTTwA2yTrivxtqXYuiVTaNRIdnQp6RV6RXaSAiSK5.P2IXr2", "User", "user3" },
+                    { "4", "user4@example.com", "User Four", "$2a$11$la6/7ESSCyNt3rIBeuYghu8PiPaZHOGtIpBTNoGIEQF9a5tTjK4Ki", "User", "user4" },
+                    { "5", "user5@example.com", "User Five", "$2a$11$luuNtF7u/pSaltmULAHG6OzaA6y8G8Hk36PoFH5obPP39iA02PrU6", "User", "user5" }
                 });
 
             migrationBuilder.InsertData(
@@ -370,7 +372,7 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "warranty_id", "expire_date", "product_id", "product_name", "start_date" },
                 values: new object[,]
                 {
-                    { "11a657c6-ca25-4124-b237-67f0b52fba1f", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "6986e833-e53a-489d-9562-4a3074b272a6", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { "W1", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P1", "Product A", new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { "W2", new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", "Product B", new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { "W3", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
