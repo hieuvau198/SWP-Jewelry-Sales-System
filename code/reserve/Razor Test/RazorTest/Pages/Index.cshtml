@@ -1,4 +1,6 @@
 ﻿@page
+@using RazorTest.Models
+@using RazorTest.Utilities
 @model RazorTest.Pages.IndexModel
 @{
     ViewData["Title"] = "View List";
@@ -6,28 +8,28 @@
 
 <style>
     .link-table {
-        width: 100%;
-        border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
     }
 
-        .link-table th, .link-table td {
-            border: 1px solid #000; 
-            padding: 8px;
-            text-align: left;
-        }
+    .link-table th, .link-table td {
+    border: 1px solid #000; 
+    padding: 8px;
+    text-align: left;
+    }
 
-        .link-table th {
-            background-color: #f2f2f2;
-        }
+    .link-table th {
+    background-color: #f2f2f2;
+    }
 
-        .link-table a {
-            color: #007bff;
-            text-decoration: none;
-        }
+    .link-table a {
+    color: #007bff;
+    text-decoration: none;
+    }
 
-            .link-table a:hover {
-                text-decoration: underline;
-            }
+    .link-table a:hover {
+    text-decoration: underline;
+    }
 </style>
 
 
@@ -58,7 +60,16 @@
         </tr>
         <tr>
             <td>Invoice</td>
-            <td><a asp-page="/InvoiceCRUD/InvoiceDetail">View all Invoices</a></td>
+            <td>
+                @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+                {
+                    <a asp-page="/InvoiceCRUD/InvoiceDetail">View all Invoices</a>
+                }
+                else
+                {
+                    <span>Access Limit: Manager, Cashier, Sale, Admin.</span>
+                }
+            </td>
         </tr>
         <tr>
             <td>Invoice Item</td>
@@ -74,11 +85,21 @@
         </tr>
         <tr>
             <td>User</td>
-            <td><a asp-page="/UserCRUD/UserDetail">View all Users</a></td>
+            <td>
+                @if (Model.VerifyAuth("Admin"))
+                { <a asp-page="/UserCRUD/UserDetail">View all Users</a> }
+                else
+                { <span>You need Admin Role to access this feature.</span> }
+            </td>
         </tr>
         <tr>
             <td>Warranty</td>
-            <td><a asp-page="/WarrantyCRUD/WarrantyDetail">View all Warranties</a></td>
+            <td>
+                @if (Model.VerifyAuth("Manager") || Model.VerifyAuth("Admin"))
+                { <a asp-page="/WarrantyCRUD/WarrantyDetail">View all Warranties</a> }
+                else
+                { <span>You need Manager Role or Admin Role to access this feature.</span> }
+            </td>
         </tr>
         <tr>
             <td>Gold Price</td>
@@ -86,7 +107,20 @@
         </tr>
         <tr>
             <td>Sale Feature</td>
-            <td><a asp-page="/Sale/SaleHomePage">Access Sale Feature</a></td>
+            <td>
+                @if (Model.VerifyAuth("Sale"))
+                { <a asp-page="/Sale/SaleHomePage">Access The Sale Feature</a> }
+                else
+                { <span>You need Sale Staff Role to access this feature.</span> }
+            </td>
+        </tr>
+        <tr>
+            <td>Login Feature</td>
+            <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
+        </tr>
+        <tr>
+            <td>Logout Feature</td>
+            <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
         </tr>
     </tbody>
 </table>

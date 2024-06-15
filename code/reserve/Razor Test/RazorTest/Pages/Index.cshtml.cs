@@ -3,13 +3,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
 using System.Net.Http;
-
+using RazorTest.Utilities;
 
 
 namespace RazorTest.Pages
 {
     public class IndexModel : PageModel
     {
+        public const string SessionKeyAuthState = "_AuthState";
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
         public IndexModel(ApiService apiService)
         {
@@ -119,6 +121,17 @@ namespace RazorTest.Pages
             {
                 GoldPrices = GoldPrices.OrderBy(c => c.Name).ToList();
             }
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            if (HttpContext.Session.GetObject<bool>(SessionKeyAuthState)
+                && HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals(role))
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }

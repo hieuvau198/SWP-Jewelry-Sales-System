@@ -1,10 +1,13 @@
 ﻿@page "{currentPage:int?}"
 @using RazorTest.Models
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
 @model RazorTest.Pages.Sale.CartModel
 @{
 }
 
 <h2>Cart Object</h2>
+<h2>@Accessor.HttpContext.Session.GetString("_Message")</h2>
 
 <style>
     table {
@@ -133,6 +136,26 @@
         <a asp-page="./Cart" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
     }
 </div>
+
+<h2>Customer</h2>
+<form method="post" asp-page-handler="AddCustomer">
+    <input type="hidden" name="customerId" />
+    Search Phone Contact <input type="text" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
+    <br />
+    @if (!Model.Customer.CustomerName.Equals("Not Identified"))
+    {
+        <div>
+            <p>Name:     @Model.Customer.CustomerName</p>
+            <p>Attend Date:  @Model.Customer.AttendDate</p>
+            <p>Rank:     @Model.Customer.CustomerRank</p>
+            <p>Points:   @Model.Customer.CustomerPoint</p>
+        </div>
+    }
+    
+</form>
+
+
+<h2>Sale & Cashier IDs (This should be hidden)</h2>
 
 <form method="get" action="/Sale/SaleHomePage">
     <input type="hidden" name="Back" value="/Sale/SaleHomePage" />

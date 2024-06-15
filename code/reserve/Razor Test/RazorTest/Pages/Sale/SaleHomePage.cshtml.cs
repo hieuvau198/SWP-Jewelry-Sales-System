@@ -12,6 +12,9 @@ namespace RazorTest.Pages.Sale
     {
         public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
         public const string SessionKeyCart = "_Cart";
+        public const string SessionKeyUserId = "_UserId";
+        public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyMessage = "_Message";
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
 
@@ -29,6 +32,15 @@ namespace RazorTest.Pages.Sale
 
         public async Task OnGetAsync(int currentPage = 1)
         {
+            if(HttpContext.Session.GetObject<User>(SessionKeyUserObject)==null )
+            {
+                HttpContext.Session.SetString(SessionKeyMessage, "Not Authen");
+                RedirectToPage("/Index");
+            }else
+            {
+                HttpContext.Session.SetString(SessionKeyMessage, "Is authen");
+            }
+            
             var allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
             // Calculate pagination details
             CurrentPage = currentPage;
@@ -38,6 +50,7 @@ namespace RazorTest.Pages.Sale
 
             // Store products in session to fetch them during post request
             HttpContext.Session.SetObject("Products", allProducts);
+            HttpContext.Session.SetString(SessionKeyUserId, "Fuck");
         }
 
         public async Task<IActionResult> OnPostAddToCart(string productId)

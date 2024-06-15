@@ -7,13 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddDbContext<RazorTestContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("RazorTestContext") ?? throw new InvalidOperationException("Connection string 'RazorTestContext' not found.")));
 builder.Services.AddHttpClient();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.IdleTimeout = TimeSpan.FromSeconds(3000);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
