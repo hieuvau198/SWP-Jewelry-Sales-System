@@ -156,6 +156,13 @@
 
 
 <h2>Sale & Cashier IDs (This should be hidden)</h2>
+<br />
+@if (User != null)
+{
+    <p>Fullname: @Model.User.Fullname</p>
+    <p>Role: @Model.User.Role</p>
+}
+<br />
 
 <form method="get" action="/Sale/SaleHomePage">
     <input type="hidden" name="Back" value="/Sale/SaleHomePage" />

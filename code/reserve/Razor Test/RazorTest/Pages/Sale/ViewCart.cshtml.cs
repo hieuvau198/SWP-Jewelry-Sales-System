@@ -18,6 +18,8 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyCustomerId = "_CustomerId";
         public const string SessionKeySearchCustomer = "_SearchCustomer";
         public const string SessionKeyCustomerObject = "_CustomerObject";
+        public const string SessionKeyAuthState = "_AuthState";
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
         private readonly ILogger<CartModel> _logger;
         public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
@@ -32,6 +34,7 @@ namespace RazorTest.Pages.Sale
 
         public List<Product> Cart { get; set; }
         public Customer Customer { get; set; }
+        public User User { get; set; }
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
         public const int PageSize = 6; // Number of products per page
@@ -50,7 +53,10 @@ namespace RazorTest.Pages.Sale
                 Customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject);
             }
 
-
+            if(User == null)
+            {
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            }
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
