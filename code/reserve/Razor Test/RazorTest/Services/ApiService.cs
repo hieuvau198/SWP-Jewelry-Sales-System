@@ -19,6 +19,17 @@ namespace RazorTest.Services
         {
             return await _httpClient.GetFromJsonAsync<T>(url);
         }
+        public async Task<T> PostAsJsonAndDeserializeAsync<T>(string url, T data)
+        {
+            var response = await _httpClient.PostAsJsonAsync(url, data);
+
+            // Ensure the response is successful
+            response.EnsureSuccessStatusCode();
+
+            // Deserialize the response content to the specified type
+            var result = await response.Content.ReadFromJsonAsync<T>();
+            return result;
+        }
 
         // Add other methods for POST, PUT, DELETE as needed
 
@@ -47,35 +58,7 @@ namespace RazorTest.Services
             return await _httpClient.PostAsync(url, content);
         }
 
-        public async Task<List<Product>> UpdatePrice(List<Product> products)
-        {
-            List<Gem> gems = await GetAsync<List<Gem>>("http://localhost:5071/api/gem");
-            List<Gold> golds = await GetAsync<List<Gold>>("http://localhost:5071/api/gold");
-            List<Product> results = products;
-            foreach (Product product in results)
-            {
-                double gemPrice = 0;
-                double goldPrice = 0;
-                double unitPrice = 0;
-                Gem gem = gems.Find(x => x.GemId == product.GemId);
-                Gold gold = golds.Find(x => x.GoldId == product.GoldId);
-                if (gem != null)
-                {
-                    gemPrice = gem.GemPrice * product.GemWeight;
-                    unitPrice += gemPrice;
-                }
-                if (gold != null)
-                {
-                    goldPrice = gold.GoldPrice * product.GoldWeight;
-                    unitPrice += goldPrice;
-                }
-                unitPrice += product.LaborCost;
-                unitPrice = unitPrice * product.MarkupRate;
-                product.UnitPrice = unitPrice;
-                product.TotalPrice = unitPrice * product.ProductQuantity;
-            }
-            return results;
-        }
+        
         /*
 
                  // Discount-specific methods for convenience

@@ -12,9 +12,12 @@ namespace RazorTest.Pages.Sale
 {
     public class CartModel : PageModel
     {
+        
         public const string SessionKeyCart = "_Cart";
         private readonly ApiService _apiService;
         private readonly ILogger<CartModel> _logger;
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string UrlUpdatePrices = "http://localhost:5071/api/product/UpdatePrices\r\n";
 
         public CartModel(ApiService apiService, ILogger<CartModel> logger)
         {
@@ -30,7 +33,7 @@ namespace RazorTest.Pages.Sale
         public async Task OnGetAsync(int currentPage = 1)
         {
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
-            Cart = await _apiService.UpdatePrice(Cart);
+            
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
@@ -50,13 +53,17 @@ namespace RazorTest.Pages.Sale
 
             return RedirectToPage(new { currentPage = CurrentPage });
         }
-        public IActionResult OnPostEditProduct(string productId, int quantity)
+        public async Task<IActionResult> OnPostEditProduct(string productId, int quantity)
         {
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
             var product = Cart.FirstOrDefault(p => p.ProductId == productId);
             if (product != null)
             {
-                Cart.FirstOrDefault(p => p.ProductId == productId).ProductQuantity = quantity;
+                product.ProductQuantity = quantity;
+                Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
+                Cart.Remove(product);
+                Cart.Add(updatedProduct);
+                
                 HttpContext.Session.SetObject(SessionKeyCart, Cart);
             }
             return RedirectToPage(new { currentPage = CurrentPage });

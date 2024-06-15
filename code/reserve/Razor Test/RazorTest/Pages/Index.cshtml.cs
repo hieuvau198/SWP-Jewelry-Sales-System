@@ -55,15 +55,13 @@ namespace RazorTest.Pages
 
             InvoiceItems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem\r\n");
 
-//            Jewels = await _apiService.GetAsync<List<Jewel>>("http://localhost:5071/api/jewel\r\n");
-
             Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product\r\n");
 
             Users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user\r\n");
 
             Warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty\r\n");
 
-            GoldPrices = await _apiService.GetAsync<List<GoldPrice>>("http://localhost:5071/api/goldprice\r\n");
+            //GoldPrices = await _apiService.GetAsync<List<GoldPrice>>("http://localhost:5071/api/goldprice\r\n");
 
             //Logins = await _apiService.GetAsync<List<Login>>("http://localhost:5071/api/auth/login\r\n");
 

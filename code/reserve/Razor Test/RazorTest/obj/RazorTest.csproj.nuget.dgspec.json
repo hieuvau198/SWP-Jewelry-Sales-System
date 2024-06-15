@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\RazorTest\\RazorTest.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\RazorTest\\RazorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\RazorTest.csproj",
         "projectName": "RazorTest",
-        "projectPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\RazorTest.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\RazorTest.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\Razor Test\\RazorTest\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10,6 +10,7 @@ namespace RazorTest.Pages.Sale
 {
     public class SaleHomePageModel : PageModel
     {
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
         public const string SessionKeyCart = "_Cart";
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
@@ -29,7 +30,6 @@ namespace RazorTest.Pages.Sale
         public async Task OnGetAsync(int currentPage = 1)
         {
             var allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
-            allProducts = await _apiService.UpdatePrice(allProducts);
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
@@ -40,7 +40,7 @@ namespace RazorTest.Pages.Sale
             HttpContext.Session.SetObject("Products", allProducts);
         }
 
-        public IActionResult OnPostAddToCart(string productId)
+        public async Task<IActionResult> OnPostAddToCart(string productId)
         {
             // Fetch products again to find the product by Id
             var allProducts = HttpContext.Session.GetObject<List<Product>>("Products") ?? new List<Product>();
@@ -50,15 +50,23 @@ namespace RazorTest.Pages.Sale
             Product product = allProducts.Find(x => x.ProductId == productId);
             if (product != null && !cart.Exists(x => x.ProductId == productId))
             {
+                // Set the quantity of the product to 1
                 product.ProductQuantity = 1;
-                cart.Add(product);
+
+                // Update the price by calling an external API
+                Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
+
+                // Add the updated product to the cart
+                cart.Add(updatedProduct);
+
+                // Save the updated cart back to the session
                 HttpContext.Session.SetObject(SessionKeyCart, cart);
             }
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
             {
                 return new JsonResult(new { success = true });
+                
             }
-
             return RedirectToPage(new { currentPage = CurrentPage });
         }
     }

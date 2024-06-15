@@ -86,7 +86,6 @@ namespace RazorTest.Services
                 var errorContent = await response.Content.ReadAsStringAsync();
                 throw new HttpRequestException($"Request failed with status code {response.StatusCode}: {errorContent}");
             }
-
             return response;
         }
 
@@ -99,7 +98,6 @@ namespace RazorTest.Services
                 var errorContent = await response.Content.ReadAsStringAsync();
                 throw new HttpRequestException($"Request failed with status code {response.StatusCode}: {errorContent}");
             }
-
             return response;
         }
     }
