@@ -14,7 +14,6 @@ namespace RazorTest.Models
         public string GemName { get; set; }
 
         [Required]
-        [Range(0, (double)decimal.MaxValue)]
-        public decimal GemPrice { get; set; }
+        public double GemPrice { get; set; } = 0;
     }
 }

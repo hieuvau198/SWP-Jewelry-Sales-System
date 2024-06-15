@@ -14,7 +14,6 @@ namespace RazorTest.Models
         public string GoldName { get; set; }
 
         [Required]
-        [Range(0, (double)decimal.MaxValue)]
-        public decimal GoldPrice { get; set; }
+        public double GoldPrice { get; set; } = 0;
     }
 }

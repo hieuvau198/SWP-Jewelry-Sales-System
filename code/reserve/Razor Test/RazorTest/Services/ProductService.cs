@@ -18,7 +18,31 @@ namespace RazorTest.Services
 
         public async Task<List<Product>> GetProductsAsync()
         {
-            return await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            List<Gem> gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem");
+            List<Gold> golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold");
+            List <Product> results = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            foreach (Product product in results)
+            {
+                double gemPrice = 0;
+                double goldPrice = 0;
+                double unitPrice = 0;
+                Gem gem = gems.Find(x => x.GemId == product.GemId);
+                Gold gold = golds.Find(x => x.GoldId == product.GoldId);
+                if(gem != null)
+                { 
+                    gemPrice = gem.GemPrice; 
+                    unitPrice += gemPrice;
+                }
+                if(gold != null)
+                { 
+                    goldPrice = gold.GoldPrice; 
+                    unitPrice += goldPrice;
+                }
+                unitPrice += product.LaborCost;
+                unitPrice = unitPrice * product.MarkupRate;
+                product.UnitPrice = unitPrice;
+            }
+            return results;
         }
 
         public async Task<Product> GetProductByIdAsync(string productId)

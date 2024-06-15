@@ -71,20 +71,15 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Product Id</th>
             <th>Product Code</th>
             <th>Product Name</th>
             <th>Product Images</th>
-            <th>Product Quantity</th>
             <th>Product Type</th>
-            <th>Product Weight</th>
             <th>Product Warranty</th>
-            <th>Gem Id</th>
-            <th>Gem Weight</th>
-            <th>Gold Id</th>
-            <th>Gold Weight</th>
-            <th>Labor Cost</th>
             <th>Create At</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+            <th>Total</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -92,20 +87,20 @@
         @foreach (var product in Model.Cart)
         {
             <tr>
-                <td><strong>@product.ProductId</strong></td>
                 <td>@product.ProductCode</td>
                 <td>@product.ProductName</td>
                 <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
-                <td>@product.ProductQuantity</td>
                 <td>@product.ProductType</td>
-                <td>@product.ProductWeight</td>
-                <td>@product.ProductWarranty</td>
-                <td>@product.GemId</td>
-                <td>@product.GemWeight</td>
-                <td>@product.GoldId</td>
-                <td>@product.GoldWeight</td>
-                <td>@product.LaborCost</td>
+                <td>@product.ProductWarranty Months</td>
                 <td>@product.CreatedAt.ToShortDateString()</td>
+                <td>
+                    <form method="post" asp-page-handler="EditProduct">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <input type="number" name="quantity" value="@product.ProductQuantity"/>
+                    </form>
+                </td>
+                <td>@String.Format("{0:F3}", product.UnitPrice)</td>
+                <td>@String.Format("{0:F3}", product.TotalPrice)</td>
                 <td>
                     <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to remove this product?');">
                         <input type="hidden" name="productId" value="@product.ProductId" />

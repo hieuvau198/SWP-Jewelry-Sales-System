@@ -29,7 +29,7 @@ namespace RazorTest.Pages.Sale
         public async Task OnGetAsync(int currentPage = 1)
         {
             var allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
-
+            allProducts = await _apiService.UpdatePrice(allProducts);
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
@@ -50,10 +50,10 @@ namespace RazorTest.Pages.Sale
             Product product = allProducts.Find(x => x.ProductId == productId);
             if (product != null && !cart.Exists(x => x.ProductId == productId))
             {
+                product.ProductQuantity = 1;
                 cart.Add(product);
                 HttpContext.Session.SetObject(SessionKeyCart, cart);
             }
-
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
             {
                 return new JsonResult(new { success = true });

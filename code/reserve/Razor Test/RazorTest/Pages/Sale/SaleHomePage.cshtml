@@ -106,9 +106,9 @@
                 <td>@product.ProductWeight</td>
                 <td>@product.ProductWarranty</td>
                 <td>@product.GemId</td>
-                <td>@product.GemWeight</td>
+                <td>@String.Format("{0:F2}", product.GemWeight)</td>
                 <td>@product.GoldId</td>
-                <td>@product.GoldWeight</td>
+                <td>@String.Format("{0:F2}", product.GoldWeight)</td>
                 <td>@product.LaborCost</td>
                 <td>@product.CreatedAt.ToShortDateString()</td>
                 <td>

@@ -30,7 +30,7 @@ namespace RazorTest.Pages.Sale
         public async Task OnGetAsync(int currentPage = 1)
         {
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
-
+            Cart = await _apiService.UpdatePrice(Cart);
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
@@ -50,5 +50,17 @@ namespace RazorTest.Pages.Sale
 
             return RedirectToPage(new { currentPage = CurrentPage });
         }
+        public IActionResult OnPostEditProduct(string productId, int quantity)
+        {
+            Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
+            var product = Cart.FirstOrDefault(p => p.ProductId == productId);
+            if (product != null)
+            {
+                Cart.FirstOrDefault(p => p.ProductId == productId).ProductQuantity = quantity;
+                HttpContext.Session.SetObject(SessionKeyCart, Cart);
+            }
+            return RedirectToPage(new { currentPage = CurrentPage });
+        }
+
     }
 }

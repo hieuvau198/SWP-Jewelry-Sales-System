@@ -2,13 +2,14 @@
 using System.Text;
 using RazorTest.Models;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using Microsoft.IdentityModel.Tokens;
 
 namespace RazorTest.Services
 {
     public class ApiService
     {
         private readonly HttpClient _httpClient;
-
         public ApiService(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -46,7 +47,35 @@ namespace RazorTest.Services
             return await _httpClient.PostAsync(url, content);
         }
 
-
+        public async Task<List<Product>> UpdatePrice(List<Product> products)
+        {
+            List<Gem> gems = await GetAsync<List<Gem>>("http://localhost:5071/api/gem");
+            List<Gold> golds = await GetAsync<List<Gold>>("http://localhost:5071/api/gold");
+            List<Product> results = products;
+            foreach (Product product in results)
+            {
+                double gemPrice = 0;
+                double goldPrice = 0;
+                double unitPrice = 0;
+                Gem gem = gems.Find(x => x.GemId == product.GemId);
+                Gold gold = golds.Find(x => x.GoldId == product.GoldId);
+                if (gem != null)
+                {
+                    gemPrice = gem.GemPrice * product.GemWeight;
+                    unitPrice += gemPrice;
+                }
+                if (gold != null)
+                {
+                    goldPrice = gold.GoldPrice * product.GoldWeight;
+                    unitPrice += goldPrice;
+                }
+                unitPrice += product.LaborCost;
+                unitPrice = unitPrice * product.MarkupRate;
+                product.UnitPrice = unitPrice;
+                product.TotalPrice = unitPrice * product.ProductQuantity;
+            }
+            return results;
+        }
         /*
 
                  // Discount-specific methods for convenience
