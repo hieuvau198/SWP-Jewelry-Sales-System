@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240615172457_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240615172457_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240616061211_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240616061211_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,19 +59,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20240615172457_x.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240615172457_x.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240615172457_x.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240615172457_x.cs",
-              "RelativeToolTip": "Migrations\\20240615172457_x.cs",
+              "Title": "20240616061211_x.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240616061211_x.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240616061211_x.cs",
+              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240616061211_x.cs",
+              "RelativeToolTip": "Migrations\\20240616061211_x.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T17:24:57.238Z",
+              "WhenOpened": "2024-06-16T06:12:11.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "InvoiceItemService.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "RelativeDocumentMoniker": "Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "RelativeToolTip": "Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAswEsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:07:39.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InvoiceItem.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Model\\InvoiceItem.cs",
+              "RelativeDocumentMoniker": "Model\\InvoiceItem.cs",
+              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Model\\InvoiceItem.cs",
+              "RelativeToolTip": "Model\\InvoiceItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:06:01.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "JewelDbContext.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Data\\JewelDbContext.cs",
               "RelativeDocumentMoniker": "Data\\JewelDbContext.cs",
@@ -71,12 +105,11 @@
               "RelativeToolTip": "Data\\JewelDbContext.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAuwDcAAAC9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T17:21:09.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T17:21:09.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceUser\\UserService.cs",
@@ -84,12 +117,11 @@
               "RelativeToolTip": "Service\\ServiceUser\\UserService.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAYwEAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T16:55:28.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T16:55:28.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceAuth\\AuthService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceAuth\\AuthService.cs",
@@ -97,12 +129,11 @@
               "RelativeToolTip": "Service\\ServiceAuth\\AuthService.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAgwDkAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T16:54:09.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T16:54:09.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -110,12 +141,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAYwCUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T16:40:52.673Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T16:40:52.673Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\LoginDto.cs",
               "RelativeDocumentMoniker": "LoginDto.cs",
@@ -123,12 +153,11 @@
               "RelativeToolTip": "LoginDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T16:41:35.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T16:41:35.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceProduct\\ProductService.cs",
@@ -136,12 +165,11 @@
               "RelativeToolTip": "Service\\ServiceProduct\\ProductService.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAAAswF8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:53:27.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T13:53:27.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ProductController.cs",
               "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
@@ -149,8 +177,7 @@
               "RelativeToolTip": "Controllers\\ProductController.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAkwDIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:10:43.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-15T13:10:43.23Z"
             }
           ]
         }

@@ -72,6 +72,10 @@ namespace JewelSystemBE.Service.ServiceInvoiceItem
             var updatedInvoiceItem = _jewelDbContext.InvoiceItems.Find(invoiceItem.InvoiceItemId);
             if (updatedInvoiceItem != null)
             {
+                if(invoiceItem.ProductId != null)
+                {
+                    updatedInvoiceItem.ProductId = invoiceItem.ProductId;
+                }
                 if (invoiceItem.ProductName != null)
                 {
                     updatedInvoiceItem.ProductName = invoiceItem.ProductName;

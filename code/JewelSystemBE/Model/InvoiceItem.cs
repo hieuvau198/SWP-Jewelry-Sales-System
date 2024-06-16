@@ -12,6 +12,9 @@ namespace JewelSystemBE.Model
         public string InvoiceId { get; set; } = "Some Invoice Id";
 
         [Required]
+        public string ProductId { get; set; } = "Some ProductId";
+
+        [Required]
         public string ProductName { get; set; } = "Some Product Name";
 
         [Required]
