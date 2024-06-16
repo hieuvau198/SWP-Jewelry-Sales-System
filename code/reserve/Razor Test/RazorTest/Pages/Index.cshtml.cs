@@ -97,10 +97,6 @@ namespace RazorTest.Pages
                 InvoiceItems = InvoiceItems.OrderBy(t => t.InvoiceItemId).ToList();
             }
 
-            /*if (Jewels != null)
-            {
-                Jewels = Jewels.OrderBy(a => a.Id).ToList();
-            }*/
 
             if (Products != null)
             {

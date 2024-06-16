@@ -1,0 +1,23 @@
+﻿@page
+@model RazorTest.Pages.Sale.CheckOutPageModel
+@{
+}
+
+<h2>Test Invoice</h2>
+
+@if(Model.Invoice!=null)
+{
+    <p>Invoice ID: @Model.Invoice.InvoiceId</p>
+    <p>Invoice Type: @Model.Invoice.InvoiceType</p>
+    <p>Customer ID: @Model.Invoice.CustomerId</p>
+    <p>User ID: @Model.Invoice.UserId</p>
+    <p>Customer Voucher: @Model.Invoice.CustomerVoucher</p>
+    <p>Total Price: @Model.Invoice.TotalPrice</p>
+    <p>Status: @Model.Invoice.InvoiceStatus</p>
+}
+
+
+<form method="get" action="/Sale/ViewCart">
+    <input type="hidden" name="Back" value="/Sale/ViewCart" />
+    <button type="submit" class="btn-pink">Back</button>
+</form>

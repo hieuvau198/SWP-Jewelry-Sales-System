@@ -114,13 +114,20 @@
                 { <span>You need Sale Staff Role to access this feature.</span> }
             </td>
         </tr>
-        <tr>
-            <td>Login Feature</td>
-            <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
-        </tr>
-        <tr>
-            <td>Logout Feature</td>
-            <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
-        </tr>
+        @if (!Model.VerifyAuth("Admin") && !Model.VerifyAuth("Manager") && !Model.VerifyAuth("Cashier") && !Model.VerifyAuth("Sale"))
+        {
+            <tr>
+                <td>Login Feature</td>
+                <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
+            </tr>
+        }
+        @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+        {
+            <tr>
+                <td>Logout Feature</td>
+                <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
+            </tr>
+        }
+        
     </tbody>
 </table>
