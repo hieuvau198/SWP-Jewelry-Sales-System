@@ -8,6 +8,7 @@ namespace RazorTest.Models
         public string InvoiceItemId { get; set; }
 
         public string InvoiceId { get; set; }
+        public string ProductId { get; set; }
 
         public string ProductName { get; set; }
 

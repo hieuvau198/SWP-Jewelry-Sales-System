@@ -19,6 +19,8 @@ namespace RazorTest.Models
         [Required]
         [MaxLength(200)]
         public string ProductType { get; set; }
+        public string ProductId { get; set; }
+        public double DiscountRate { get; set; } 
 
         [Required]
         public DateTime PublicDate { get; set; }

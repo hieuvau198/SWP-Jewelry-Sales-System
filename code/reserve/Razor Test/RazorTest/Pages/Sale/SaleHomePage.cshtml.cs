@@ -15,6 +15,8 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyUserId = "_UserId";
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyMessage = "_Message";
+        public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
+
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
 
@@ -74,11 +76,29 @@ namespace RazorTest.Pages.Sale
 
                 // Save the updated cart back to the session
                 HttpContext.Session.SetObject(SessionKeyCart, cart);
+
+                List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+                if (invoiceItems == null)
+                {
+                    invoiceItems = new List<InvoiceItem>();
+                }
+                if (invoiceItems.Find(x => x.ProductId == productId) == null)
+                {
+                    InvoiceItem invoiceItem = new InvoiceItem
+                    {
+                        InvoiceItemId = Guid.NewGuid().ToString(),
+                        DiscountId = "Test",
+                        ProductId = productId,
+                        ProductName = "Test"
+                    };
+                    invoiceItems.Add(invoiceItem);
+                }
+                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, invoiceItems);
+
             }
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
             {
                 return new JsonResult(new { success = true });
-                
             }
             return RedirectToPage(new { currentPage = CurrentPage });
         }

@@ -15,9 +15,12 @@ namespace RazorTest.Pages.Sale
     {
         
         public const string SessionKeyCart = "_Cart";
+        public const string SessionKeySaleDiscountProductId = "_SaleDiscountProductId";
         public const string SessionKeyCustomerId = "_CustomerId";
         public const string SessionKeySearchCustomer = "_SearchCustomer";
         public const string SessionKeyCustomerObject = "_CustomerObject";
+        public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
+
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
@@ -109,6 +112,13 @@ namespace RazorTest.Pages.Sale
             }
             HttpContext.Session.SetString(SessionKeySearchCustomer, searchCustomer);
             return RedirectToPage(new { currentPage = CurrentPage });
+        }
+
+        public async Task<IActionResult> OnPostSelectDiscount(string productId)
+        {
+            
+            HttpContext.Session.SetString(SessionKeySaleDiscountProductId, productId);
+            return RedirectToPage("/Sale/SelectDiscountPage");
         }
 
     }

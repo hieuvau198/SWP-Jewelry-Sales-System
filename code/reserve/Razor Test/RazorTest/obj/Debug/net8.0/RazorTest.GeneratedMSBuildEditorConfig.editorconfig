@@ -198,6 +198,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTYWxlSG9tZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/RazorTest/Pages/Sale/SelectDiscountPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTZWxlY3REaXNjb3VudFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/RazorTest/Pages/Sale/ViewCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxWaWV3Q2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

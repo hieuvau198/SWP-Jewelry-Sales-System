@@ -1,0 +1,67 @@
+﻿@page
+@model RazorTest.Pages.Sale.SelectDiscountPageModel
+@{
+}
+
+<h2>
+    Test productId: @Model.ProductId
+</h2>
+
+<h2>
+    Test Message: @Model.TestMessage
+</h2>
+
+<h2>
+    Test InvoiceItems: 
+</h2>
+
+
+    @if(Model.InvoiceItems.Count > 0)
+    {
+        foreach(var invoiceItem in Model.InvoiceItems)
+    {
+        <p>InvoiceItem Discount Id: @invoiceItem.DiscountId</p>
+        <p>InvoiceItem Product Id: @invoiceItem.ProductId</p>
+    }
+}
+
+<h2>
+    Available Discounts
+</h2>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Discount Name</th>
+                <th>Discount Rate</th>
+                <th>Reduction</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var discount in Model.Discounts)
+            {
+                @if (discount.DiscountRate > 0)
+                {
+                    <tr>
+                        <td>@discount.DiscountName</td>
+                        <td>@(discount.DiscountRate * 100)%</td>
+                        <td>Not Yet</td>
+                        <td>
+                            <form method="post" asp-page-handler="SelectDiscount">
+                                <input type="hidden" name="discountId" value="@discount.DiscountId"/>
+                                <button type="submit" class="btn-primary">Select</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+
+<form method="get" action="/Sale/ViewCart">
+    <input type="hidden" name="Back" value="/Sale/SaleHomePage" />
+    <button type="submit" class="btn-pink">Back to Product List</button>
+</form>

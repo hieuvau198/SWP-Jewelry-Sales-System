@@ -83,6 +83,7 @@
             <th>Quantity</th>
             <th>Unit</th>
             <th>Total</th>
+            <th>Discount</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -104,6 +105,12 @@
                 </td>
                 <td>@product.UnitPrice.ToString("#,##0") VND</td>
                 <td>@product.TotalPrice.ToString("#,##0") VND</td>
+                <td>
+                    <form method="post" asp-page-handler="SelectDiscount">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <button type="submit" class="btn-primary">More</button>
+                    </form>
+                </td>
                 <td>
                     <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to remove this product?');">
                         <input type="hidden" name="productId" value="@product.ProductId" />
