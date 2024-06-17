@@ -12,7 +12,7 @@ function ProductList() {
     <div className="container-xxl">
             <PageHeader1 pagetitle='Products' productlist={true} />
             <div className="row g-3 mb-3">
-                <div className="col-md-12 col-lg-4 col-xl-4 col-xxl-3" style={{display:"none"}}>
+                <div className="col-md-12 col-lg-4 col-xl-4 col-xxl-3">
                     <div className="sticky-lg-top">
                         <div className="card mb-3">
                             <div className="reset-block">

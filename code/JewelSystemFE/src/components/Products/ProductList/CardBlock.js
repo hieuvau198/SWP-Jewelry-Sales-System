@@ -1,54 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ProductListdata } from '../../Data/ProductListdata';
-import axios from "../../../api/axios";
+// import axios from "../../../api/axios";
+// import { useCookies } from 'react-cookie';
+import { useCart } from 'react-use-cart';
 
 
 function CardBlock() {
 
-    const [table_row, setTable_row] = useState();
-    const [productId, setProductId] = useState("");
-    const [productCode, setProductCode] = useState("");
-    const [productName, setProductName] = useState("");
-    const [productImages, setProductImages] = useState("");
-    const [productQuantity, setProductQuantity] = useState("");
-    const [productType, setProductType] = useState("");
-    const [productWeight, setProductWeight] = useState("");
-    const [productWarranty, setProductWarranty] = useState("");
-    const [markupRate, setMarkupRate] = useState("");
-    const [gemId, setGemId] = useState("");
-    const [gemWeight, setGemWeight] = useState("");
-    const [goldId, setGoldId] = useState("");
-    const [goldWeight, setGoldWeight] = useState("");
-    const [laborCost, setLaborCost] = useState("");
-    const [createdAt, setCreatedAt] = useState("");
-    const getProduct = () => {
-      let isMounted = true;
-      const controller = new AbortController();
-      const get = async () => {
-        try {
-          const response = await axios.get("/product");
-          isMounted && setTable_row(response.data);
-          console.log(JSON.stringify(response.data));
-        } catch (err) {
-          console.error(err);
-        }
-      };
-      get();
-      return () => {
-        isMounted = false;
-        controller.abort();
-      };
-    };
-  
 
+  const { addItem, items, setItems, getItem } = useCart();
+  const handleCartCheckbox = (d,i) => {
+    const checkbox = document.getElementById(i);
+    if(checkbox.checked){
+        d.id = d.productId;
+        d.price = d.laborCost;
+        addItem(d);
+    }
+    console.log(items);
+  }
 
 
     return (
         <div className="card mb-3 bg-transparent p-2">
+          <button type="button" className="btn btn-primary" onClick={()=>{console.log(items)}}>GG</button>
             {
                 ProductListdata.map((d, i) => {
                     return <div key={i} className="card border-0 mb-1">
+                    <div className="form-check form-switch position-absolute top-0 end-0 py-3 px-3 d-none d-md-block" >
+                        <input className="form-check-input" type="checkbox" id={i} onChange={() => handleCartCheckbox(d,i)} />
+                        <label className="form-check-label" htmlFor={i}>Add to Cart</label>
+                    </div>
                         <div className="card-body d-flex align-items-center flex-column flex-md-row">
                             <Link to={process.env.PUBLIC_URL + "/product-detail"}>
                                 <img className="w120 rounded img-fluid" src={d.productImages} alt="" />

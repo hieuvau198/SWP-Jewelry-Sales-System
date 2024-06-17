@@ -1,15 +1,12 @@
-import React from 'react';
-// import ImageSrc from "../../assets/images/google.svg";
 import { useRef, useState, useEffect } from 'react';
-import useAuth from '../../hooks/useAuth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 import axios from '../../api/axios';
-const LOGIN_URL = '/auth/logintoken';
+import ImageSrc from "../../assets/images/google.svg";
+const LOGIN_URL = '/auth/login';
 
-
-function SignIn() {
-    const { setAuth } = useAuth();
-
+const Login = () => {
+    const [cookies, setCookie] = useCookies()
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
@@ -33,23 +30,23 @@ function SignIn() {
         e.preventDefault();
 
         try {
-            const response = await axios.post(LOGIN_URL, null, { params: {
-                username,
-                password
-              }})
-            console.log(JSON.stringify(response?.data));
+            const response = await axios.post(LOGIN_URL, {
+                        "userId": "",
+                        "username": username,
+                        "password": password,
+                        "fullname": "",
+                        "email": "",
+                        "role": ""
+                      })
+            // console.log(JSON.stringify(response?.data));
             //console.log(JSON.stringify(response));
-            const accessToken = response?.data?.accessToken;
-            const roles = [2001,5150]; //response?.data?.roles;
-            const authUser = { username, password, roles, accessToken };
-            console.log(authUser);
-            setAuth(authUser);
-            window.localStorage.setItem('authUser',JSON.stringify(authUser)); //before jwt
-            console.log(JSON.parse(window.localStorage.getItem('authUser')));
+            // const accessToken = response?.data?.accessToken;
+            const roles = [response?.data?.role]; 
+            setCookie('user', {username,roles});
+            console.log(JSON.stringify(cookies?.user));
             setUsername('');
             setpassword('');
-            // navigate(from, { replace: true });
-            navigate('/dashboard');
+            navigate(process.env.PUBLIC_URL + "/dashboard", { replace: true });
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
@@ -66,41 +63,59 @@ function SignIn() {
 
     return (
 
-        <section>
-            <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-            <h1>Sign In</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">Username:</label>
-                <input
-                    type="text"
-                    id="username"
-                    ref={userRef}
-                    autoComplete="off"
-                    onChange={(e) => setUsername(e.target.value)}
-                    value={username}
-                    required
-                />
-
-                <label htmlFor="password">Password:</label>
-                <input
-                    type="password"
-                    id="password"
-                    onChange={(e) => setpassword(e.target.value)}
-                    value={password}
-                    required
-                />
-                <button>Sign In</button>
-            </form>
-            <p>
-                Need an Account?<br />
-                <span className="line">
-                    <Link to="/register">Sign Up</Link>
-                </span>
-            </p>
-        </section>
+        <div className="col-lg-6 d-flex justify-content-center align-items-center border-0 rounded-lg auth-h100 " >
+            <div className="w-100 p-3 p-md-5 card border-0 shadow-sm" style={{ maxwidth: "32rem" }}>
+                <form className="row g-1 p-3 p-md-4 mt-5" onSubmit={handleSubmit}>
+                    <div className="col-12 text-center mb-0">
+                        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+                        <h1>Sign  in</h1>
+                        <span>Free access to our dashboard.</span>
+                    </div>
+                    <div className="col-12 text-center mb-4">
+                        <Link className="btn btn-lg btn-light btn-block" to="#!">
+                            <span className="d-flex justify-content-center align-items-center">
+                                <img className="avatar xs me-2" src={ImageSrc} alt="img Description" />
+                                Sign in with Google
+                            </span>
+                        </Link>
+                        <span className="dividers text-muted mt-4">OR</span>
+                    </div>
+                    <div className="col-12">
+                        <div className="mb-2">
+                            <label htmlFor="username" className="form-label">User name:</label>
+                            <input  type="text" id="username" ref={userRef} autoComplete="off" onChange={(e) => setUsername(e.target.value)} value={username} required className="form-control form-control-lg lift"/>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="mb-2">
+                            <div className="form-label">
+                                <span className="d-flex justify-content-between align-items-center">
+                                    Password
+                                    <Link className="text-secondary" to={process.env.PUBLIC_URL + "/reset-password"}>Forgot Password?</Link>
+                                </span>
+                            </div>
+                            <input type="password" id="password" onChange={(e) => setpassword(e.target.value)} value={password} required className="form-control form-control-lg lift" placeholder="***************" />
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <label className="form-check-label" htmlFor="flexCheckDefault">
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div className="col-12 text-center mt-4">
+                        <button className="btn btn-lg btn-block btn-light lift text-uppercase">Sign In</button>
+                    </div>
+                    <div className="col-12 text-center mt-4">
+                        <span>Don't have an account yet? <Link to={process.env.PUBLIC_URL + "/sign-up"} className="text-secondary">Sign up here</Link></span>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     )
 }
 
-
-export default SignIn;
+export default Login

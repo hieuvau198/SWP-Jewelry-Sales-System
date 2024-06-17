@@ -3,8 +3,17 @@ import DataTable from "react-data-table-component";
 import { Link } from 'react-router-dom';
 import PageHeader1 from '../../components/common/PageHeader1';
 import {ShoppingCartData} from '../../components/Data/ShoppingCartData';
+import { useCart } from 'react-use-cart';
+import { useState } from 'react';
+
+
 
 function ShoppingCart () {
+
+    const { cartTotal  } = useCart();
+    const [ discount, setDiscount] = useState(10);
+    const [ standby, setStandby] = useState(10);
+
         return (
             <div className="body d-flex py-3">
                 <div className="container-xxl">
@@ -23,9 +32,9 @@ function ShoppingCart () {
                                                     <div className="row">
                                                         <div className="col-sm-12">
                                                             <DataTable
-                                                                title={ShoppingCartData.title}
-                                                                columns={ShoppingCartData.columns}
-                                                                data={ShoppingCartData.rows}
+                                                                title={ShoppingCartData().title}
+                                                                columns={ShoppingCartData().columns}
+                                                                data={ShoppingCartData().rows}
                                                                 defaultSortField="title"
                                                                 pagination
                                                                 selectableRows={false}
@@ -40,42 +49,36 @@ function ShoppingCart () {
                                         <div className="checkout-coupon-total checkout-coupon-total-2 d-flex flex-wrap mt-2">
                                             <div className="checkout-coupon">
                                                 <span>Apply Coupon to get discount!</span>
-                                                <form action="#">
                                                     <div className="single-form form-default d-inline-flex mt-3">
                                                         <div className="input-group mb-3">
-                                                            <input type="text" className="form-control" placeholder="Coupon Code" value='' onChange={()=>{}} />
-                                                            <button className="btn btn-primary" type="button">Apply</button>
+                                                            <input type="number" className="form-control" placeholder={discount} onChange={(e)=>{setStandby(e.target.value)}}  />
+                                                            <button className="btn btn-primary" onClick={()=>{setDiscount(standby)}}>Apply</button>
                                                         </div>
                                                     </div>
-                                                </form>
                                             </div>
                                             <div className="checkout-total">
                                             
                                                 <div className="single-total">
                                                     <p className="value">Subotal Price:</p>
-                                                    <p className="price">$1096.00</p>
+                                                    <p className="price">$ {cartTotal}.00</p>
                                                 </div>
                                                 <div className="single-total">
-                                                    <p className="value">Shipping Cost (+):</p>
-                                                    <p className="price">$12.00</p>
-                                                </div>
-                                                <div className="single-total">
-                                                    <p className="value">Discount (-):</p>
-                                                    <p className="price">$10.00</p>
+                                                    <p className="value">Discount (-{discount}%):</p>
+                                                    <p className="price">$ {cartTotal*discount/100}.00</p>
                                                 </div>
                                                 <div className="single-total">
                                                     <p className="value">Tax(18%):</p>
-                                                    <p className="price">$198.00</p>
+                                                    <p className="price">$ {Math.round(cartTotal*18/100)}.00</p>
                                                 </div>
                                                 <div className="single-total total-payable">
                                                     <p className="value">Total Payable:</p>
-                                                    <p className="price">$1296.00</p>
+                                                    <p className="price">$ {Math.round(cartTotal-cartTotal*discount/100+cartTotal*18/100)}.00</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="checkout-btn d-flex justify-content-between pt-3 flex-wrap mt-2">
                                             <div className="single-btn w-sm-100">
-                                                <Link to={process.env.PUBLIC_URL+"/product-grid"} className="btn btn-secondary w-sm-100">Continue Shopping</Link>
+                                                <Link to={process.env.PUBLIC_URL+"/product-list"} className="btn btn-secondary w-sm-100">Continue Shopping</Link>
                                             </div>
                                             <div className="single-btn w-sm-100">
                                                 <Link to={process.env.PUBLIC_URL+"/check-out"} className="btn btn-primary w-sm-100">Proceed to Checkout</Link>

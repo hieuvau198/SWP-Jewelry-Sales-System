@@ -1,10 +1,12 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
-// import useAuth from "../../hooks/useAuth";
+import { useCookies } from "react-cookie";
 
 const RequireAuth = ({ allowedRoles }) => {
-    // const { auth } = useAuth();
+    const [cookies, setCookie] = useCookies();
+    const auth = cookies.user;
+    const setAuth = setCookie.user;
     const location = useLocation();
-    const auth = JSON.parse(window.localStorage.getItem('authUser'));
+    console.log(JSON.stringify(auth));
 
     return (
         auth?.roles?.find(role => allowedRoles?.includes(role))

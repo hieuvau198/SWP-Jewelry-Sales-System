@@ -1,33 +1,62 @@
-import React from 'react';
-import AddModal from './components/common/AddModal';
-import Sidebar from './components/common/Sidebar';
-import AuthIndex from "./screens/AuthIndex";
-import MainIndex from './screens/MainIndex';
+import React from "react";
+import { Route, Routes as ReactRoutes } from "react-router-dom";
+import MainIndex from "./screens/layout/MainIndex";
+import RequireAuth from "../src/components/Auth/RequireAuth";
+import Page404 from "./components/Auth/Page404";
+import Dashboard from "./screens/Dashboard/Dashboard";
+import UserList from "./screens/User/Userlist";
+import ProductAdd from "./screens/Products/ProductAdd";
+import ProductDetail from "./screens/Products/ProductDetail";
+import ProductList from "./screens/Products/ProductList";
+import Signup from "./components/Auth/Signup";
+import SignIn from './components/Auth/SignIn';
+import Verification from "./components/Auth/Verification";
+import Resetpassword from "./components/Auth/Resetpassword";
+import AuthIndex from "./screens/layout/AuthIndex";
+import ShoppingCart from "./screens/Products/ShoppingCart"
 
-function App(props) {
-  const activekey = () => {
-    var res = window.location.pathname
-    var baseUrl = process.env.PUBLIC_URL
-    baseUrl = baseUrl.split("/");
-    res = res.split("/");
-    res = res.length > 0 ? res[baseUrl.length] : "/";
-    res = res ? "/" + res : "/";;
-    const activeKey1 = res;
-    return activeKey1
-  }
-  if (activekey() === '/sign-in' || activekey() === '/sign-up' || activekey() === '/reset-password' || activekey() === '/verification' || activekey() === '/page-404') {
-    return (
-      <div id="ebazar-layout" className='theme-blue'>
-        <AuthIndex />
-      </div>
-    );
-  }
+const ROLES = {
+  Staff: "Staff",
+  Manager: "Editor",
+  Admin: "Admin",
+};
+
+
+function App() {
+
   return (
-    <div id="ebazar-layout" className='theme-red'>
-      <Sidebar activekey={activekey()} history={props.history} />
-      <AddModal />
-        <MainIndex activekey={activekey()} />
-    </div>
-  )
+    <ReactRoutes>
+        <Route path="/" element={<AuthIndex />}>   
+            <Route path={process.env.PUBLIC_URL+"/sign-in"} element={ <SignIn /> }/>
+            <Route path={process.env.PUBLIC_URL+"/sign-up"} element={ <Signup /> } />
+            <Route path={process.env.PUBLIC_URL+"/reset-password"} element={ <Resetpassword /> } />
+            <Route path={process.env.PUBLIC_URL+"/verification"} element={ <Verification /> } />
+            <Route path="*" element={ <Page404 /> } />
+        </Route>
+        <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
+            <Route path="/"  element={<MainIndex />}>
+              <Route index element={<Dashboard />} />
+              <Route path={process.env.PUBLIC_URL + "/dashboard"} element={<Dashboard />} />
+              <Route path={process.env.PUBLIC_URL + "/user-list"} element={<UserList />} />
+              <Route path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
+              <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />          
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />                                                  
+            </Route>
+        </Route>
+        <Route element={<RequireAuth allowedRoles={[ROLES.Staff]} />}>
+            <Route path="/"  element={<MainIndex />}>
+              <Route index element={<Dashboard />} />
+              <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />                                 
+            </Route>
+        </Route>
+    </ReactRoutes>
+
+
+
+
+
+  );
 }
 export default App;

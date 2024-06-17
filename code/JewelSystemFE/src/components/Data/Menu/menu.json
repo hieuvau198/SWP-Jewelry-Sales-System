@@ -83,6 +83,18 @@
             "children": [
               
             ]
+        },
+        {
+            "name": "Log in",
+            "routerLink": ["page-404"],
+            "identifier": "User List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+              
+            ]
         }
     ]
 }

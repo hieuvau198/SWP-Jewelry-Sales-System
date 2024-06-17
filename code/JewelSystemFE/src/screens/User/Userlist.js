@@ -36,16 +36,26 @@ function UserList() {
 
   const handleSubmitAdd = async (e) => {
     e.preventDefault();
+    setUserId('33');
 
     try {
-      await axios.put("/user", {
+      const res = await axios.post("/user", {
         userID,
-        username,
+        username, 
         password,
         fullname,
         email,
         role,
       });
+      console.log(JSON.stringify(res));
+      console.log(JSON.stringify({
+        userID,
+        username,
+        password, 
+        fullname,
+        email,
+        role,
+      }));
       getUsers();
       setEmail("");
       setFullname("");
