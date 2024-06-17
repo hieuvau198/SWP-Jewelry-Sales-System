@@ -55,7 +55,6 @@ export const ShoppingCartData = () =>{
                 selector:  (row) => row.id,
                 sortable: false,
                 cell: (row) => <div className="btn-group" role="group" aria-label="Basic outlined example">
-                    <Link type="button" className="btn btn-outline-secondary" onClick={()=>{console.log(cartTotal)}}><i className="icofont-edit text-success"></i></Link>
                     <button type="button" className="btn btn-outline-secondary deleterow" onClick={()=>{console.log(removeItem(row.id))}}><i className="icofont-ui-delete text-danger"></i></button>
                 </div>
             }

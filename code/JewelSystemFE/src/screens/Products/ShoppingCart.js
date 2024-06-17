@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 function ShoppingCart () {
 
-    const { cartTotal  } = useCart();
+    const { cartTotal, emptyCart  } = useCart();
     const [ discount, setDiscount] = useState(10);
     const [ standby, setStandby] = useState(10);
 
@@ -48,6 +48,14 @@ function ShoppingCart () {
                                         </div>
                                         <div className="checkout-coupon-total checkout-coupon-total-2 d-flex flex-wrap mt-2">
                                             <div className="checkout-coupon">
+                                                    <div className="single-form form-default d-inline-flex mt-3">
+                                                        <div className="input-group mb-3">
+                                                        <button type="button" className="btn btn-primary" onClick={emptyCart}>emptycart</button>
+                                                        </div>
+                                                    </div>
+                                                    
+                                            </div>
+                                            <div className="checkout-coupon">
                                                 <span>Apply Coupon to get discount!</span>
                                                     <div className="single-form form-default d-inline-flex mt-3">
                                                         <div className="input-group mb-3">
@@ -55,6 +63,7 @@ function ShoppingCart () {
                                                             <button className="btn btn-primary" onClick={()=>{setDiscount(standby)}}>Apply</button>
                                                         </div>
                                                     </div>
+                                                    
                                             </div>
                                             <div className="checkout-total">
                                             

@@ -23,7 +23,6 @@ function CardBlock() {
 
     return (
         <div className="card mb-3 bg-transparent p-2">
-          <button type="button" className="btn btn-primary" onClick={()=>{console.log(items)}}>GG</button>
             {
                 ProductListdata.map((d, i) => {
                     return <div key={i} className="card border-0 mb-1">
