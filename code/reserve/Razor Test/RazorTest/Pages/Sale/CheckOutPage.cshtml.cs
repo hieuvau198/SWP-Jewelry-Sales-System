@@ -27,8 +27,6 @@ namespace RazorTest.Pages.Sale
         public List<InvoiceItem> InvoiceItems { get; set; }
         public Invoice Invoice { get; set; }
 
-
-
         public async Task OnGet()
         {
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart);

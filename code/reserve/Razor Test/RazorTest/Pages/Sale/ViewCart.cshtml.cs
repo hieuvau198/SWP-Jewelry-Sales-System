@@ -21,14 +21,18 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyCustomerObject = "_CustomerObject";
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
         public const string SessionKeySaleInvoiceObject = "_SaleInvoiceObject";
+        public const string SessionKeySaleDiscountSelectedList = "_SaleDiscountSelectedList";
 
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
-        private readonly ApiService _apiService;
-        private readonly ILogger<CartModel> _logger;
+
         public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
         public const string UrlUpdatePrices = "http://localhost:5071/api/product/UpdatePrices\r\n";
         public const string UrlGetCustomers = "http://localhost:5071/api/customer\r\n";
+
+        private readonly ApiService _apiService;
+        private readonly ILogger<CartModel> _logger;
+        
 
         public CartModel(ApiService apiService, ILogger<CartModel> logger)
         {
@@ -71,11 +75,18 @@ namespace RazorTest.Pages.Sale
         public IActionResult OnPostDelete(string productId)
         {
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
+            List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
             var product = Cart.FirstOrDefault(p => p.ProductId == productId);
             if (product != null)
             {
                 Cart.Remove(product);
                 HttpContext.Session.SetObject(SessionKeyCart, Cart);
+            }
+            var invoiceItem = invoiceItems.Find(x => x.ProductId == productId);
+            if (invoiceItem != null)
+            {
+                invoiceItems.Remove(invoiceItem);
+                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, invoiceItems);
             }
 
             return RedirectToPage(new { currentPage = CurrentPage });
@@ -126,9 +137,17 @@ namespace RazorTest.Pages.Sale
             Customer customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject);
             User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             Invoice savedInvoice = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
+            List<Product> cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart);
+            List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+            List<Discount> discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
+
             string customerId = "Some Customer ID";
             string userId = "Some User ID";
             string invoiceId;
+            string invoiceOrderType = "Sale";
+            double invoiceEndTotalPrice = 0;
+            double invoiceTotalPrice = 0;
+
             if(customer != null)
             {
                 customerId = customer.CustomerId;
@@ -146,16 +165,51 @@ namespace RazorTest.Pages.Sale
                 invoiceId = savedInvoice.InvoiceId;
             }
 
-            Invoice invoice = new Invoice
+            if (invoiceItems != null)
+            {
+                List<InvoiceItem> tempInvoiceItems = new List<InvoiceItem>();
+                foreach (var item in invoiceItems)
                 {
+                    Product product = cart.Find(x => x.ProductId == item.ProductId);
+                    if (product != null)
+                    {
+                        item.UnitPrice = product.UnitPrice;
+                        item.Quantity = product.ProductQuantity;
+                        item.TotalPrice = product.TotalPrice;
+                        
+                    }
+                    Discount discount = discounts.Find(x => x.ProductId == item.ProductId);
+                    if(discount != null && discount.DiscountRate > 0)
+                    {
+                        item.DiscountId = discount.DiscountId;
+                        item.DiscountRate = discount.DiscountRate;
+                        item.EndTotalPrice = discount.DiscountRate * item.TotalPrice;
+                        invoiceTotalPrice += item.TotalPrice;
+                        invoiceEndTotalPrice += item.EndTotalPrice;
+                    }
+                    else
+                    {
+                        item.EndTotalPrice = item.TotalPrice;
+                        invoiceTotalPrice += item.TotalPrice;
+                        invoiceEndTotalPrice += item.EndTotalPrice;
+                    }
+                    tempInvoiceItems.Add(item);
+                }
+                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, tempInvoiceItems);
+            }
+
+            
+            
+            Invoice invoice = new Invoice
+            {
                     InvoiceId = invoiceId,
                     CustomerId = customerId,
                     CustomerVoucher = 0,
-                    EndTotalPrice = 0,
+                    EndTotalPrice = invoiceEndTotalPrice,
                     InvoiceDate = DateTime.Now,
                     InvoiceStatus = "Pending",
-                    InvoiceType = "Sale",
-                    TotalPrice = 0,
+                    InvoiceType = invoiceOrderType,
+                    TotalPrice = invoiceTotalPrice,
                     UserId = userId
                 };
             HttpContext.Session.SetObject(SessionKeySaleInvoiceObject, invoice);

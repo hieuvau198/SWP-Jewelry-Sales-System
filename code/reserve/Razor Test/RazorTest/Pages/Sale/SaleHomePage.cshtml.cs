@@ -10,12 +10,14 @@ namespace RazorTest.Pages.Sale
 {
     public class SaleHomePageModel : PageModel
     {
-        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string SessionKeySaleProductList = "_SaleProductList";
         public const string SessionKeyCart = "_Cart";
         public const string SessionKeyUserId = "_UserId";
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyMessage = "_Message";
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
+
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
@@ -42,13 +44,18 @@ namespace RazorTest.Pages.Sale
             {
                 HttpContext.Session.SetString(SessionKeyMessage, "Is authen");
             }
-            
-            var allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+
+            List<Product> allProducts = HttpContext.Session.GetObject<List<Product>>(SessionKeySaleProductList);
+            if(allProducts == null  || allProducts.Count == 0 )
+            {
+                allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            }
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
 
             Products = allProducts.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+            
 
             // Store products in session to fetch them during post request
             HttpContext.Session.SetObject("Products", allProducts);
@@ -87,9 +94,16 @@ namespace RazorTest.Pages.Sale
                     InvoiceItem invoiceItem = new InvoiceItem
                     {
                         InvoiceItemId = Guid.NewGuid().ToString(),
-                        DiscountId = "Test",
-                        ProductId = productId,
-                        ProductName = "Test"
+                        InvoiceId = "Test",
+                        ProductId = product.ProductId,
+                        ProductName = product.ProductName,
+                        Quantity = product.ProductQuantity,
+                        UnitPrice = product.UnitPrice,
+                        DiscountId = "T",
+                        DiscountRate = 0,
+                        TotalPrice = 0,
+                        EndTotalPrice = 0,
+                        WarrantyId = "Test"
                     };
                     invoiceItems.Add(invoiceItem);
                 }

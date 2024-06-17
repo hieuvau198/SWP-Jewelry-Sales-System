@@ -16,6 +16,32 @@
     <p>Status: @Model.Invoice.InvoiceStatus</p>
 }
 
+@if(Model.InvoiceItems != null)
+{
+    foreach(var item in Model.InvoiceItems)
+    {
+        <table>
+            <thead>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                <th>Total Price</th>
+                <th>After Discount</th>
+            </thead>
+            <tbody>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.Quantity</td>
+                <td>@item.DiscountRate</td>
+                <td>@item.TotalPrice</td>
+                <td>@item.EndTotalPrice</td>
+            </tbody>
+        </table>
+        
+    }
+}
+
 
 <form method="get" action="/Sale/ViewCart">
     <input type="hidden" name="Back" value="/Sale/ViewCart" />

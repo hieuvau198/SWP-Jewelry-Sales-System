@@ -46,15 +46,33 @@ namespace RazorTest.Pages.Sale
                 }
                 Discounts = temp;
             }
-            InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList) ?? new List<InvoiceItem>();
+            SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
+
+            InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
 
             TestMessage = InvoiceItems.Find(x => x.ProductId == ProductId).ProductName ?? "Fucking Fail";
 
             string selectDiscountId = HttpContext.Session.GetString(SessionKeySaleDiscountSelectedId);
-            if(!string.IsNullOrEmpty(selectDiscountId) && InvoiceItems.Count > 0)
+            if(!string.IsNullOrEmpty(selectDiscountId) && InvoiceItems != null)
             {
-                InvoiceItems.Find(x => x.ProductId == ProductId).DiscountId = selectDiscountId;
+                Discount discount = Discounts.Find(x => x.DiscountId == selectDiscountId);
+                InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == ProductId);
+                Discount discountRemove = SelectedDiscounts.Find(x => x.DiscountId == selectDiscountId);
+                if(discountRemove != null)
+                {
+                    SelectedDiscounts.Remove(discountRemove);
+                }
+                discount.ProductId = selectDiscountId;
+                SelectedDiscounts.Add(discount);
+                
+
+                InvoiceItems.Remove(invoiceItem);
+                invoiceItem.DiscountId = discount.DiscountId;
+                invoiceItem.DiscountRate = discount.DiscountRate;
+                InvoiceItems.Add(invoiceItem);
+                
                 HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, InvoiceItems);
+                HttpContext.Session.SetObject(SessionKeySaleDiscountSelectedList, InvoiceItems);
                 HttpContext.Session.Remove(SessionKeySaleDiscountSelectedId);
                 TestMessage = "Success";
             }

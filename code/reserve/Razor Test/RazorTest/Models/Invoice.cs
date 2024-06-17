@@ -24,16 +24,13 @@ namespace RazorTest.Models
         public DateTime InvoiceDate { get; set; }
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal CustomerVoucher { get; set; }
+        public double CustomerVoucher { get; set; }
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal TotalPrice { get; set; }
+        public double TotalPrice { get; set; }
 
         [Required]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal EndTotalPrice { get; set; }
+        public double EndTotalPrice { get; set; }
         public string InvoiceStatus { get; set; }
     }
 }
