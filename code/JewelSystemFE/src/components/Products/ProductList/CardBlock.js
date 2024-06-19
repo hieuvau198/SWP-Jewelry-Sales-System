@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ProductListdata } from '../../Data/ProductListdata';
+import { getProduct } from '../../Data/ProductListdata';
 // import axios from "../../../api/axios";
 // import { useCookies } from 'react-cookie';
 import { useCart } from 'react-use-cart';
+import axios from '../../../api/axios';
+import { ProductListdata } from '../../Data/ProductListdata';
+
+
+
 
 
 function CardBlock() {
 
 
   const { addItem, items, setItems, getItem } = useCart();
+  const [ product, setProduct ] = useState(ProductListdata);
   const handleCartCheckbox = (d,i) => {
     const checkbox = document.getElementById(i);
     if(checkbox.checked){
@@ -19,12 +25,25 @@ function CardBlock() {
     }
     console.log(items);
   }
+  useEffect(() =>{
+
+    axios.get('/product').then(res=>{
+        const dataArr = res.data ; 
+        console.log(dataArr); 
+        setProduct(res.data); 
+       
+    }).catch(err=>{
+        console.log(err); 
+    }); 
+
+
+}, [])
 
 
     return (
         <div className="card mb-3 bg-transparent p-2">
             {
-                ProductListdata.map((d, i) => {
+                product?.map((d, i) => {
                     return <div key={i} className="card border-0 mb-1">
                     <div className="form-check form-switch position-absolute top-0 end-0 py-3 px-3 d-none d-md-block" >
                         <input className="form-check-input" type="checkbox" id={i} onChange={() => handleCartCheckbox(d,i)} />
@@ -71,3 +90,6 @@ function CardBlock() {
     )
 }
 export default CardBlock;
+
+
+

@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\",
+  "WorkspaceRootPath": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240616061211_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20240616061211_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\migrations\\20240616061211_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:migrations\\20240616061211_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\service\\serviceauth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\service\\serviceauth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceauth\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\service\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\service\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\workspace\\vs\\hieuweb1\\source\\reactnet\\backend\\jewelsystembe\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\new folder\\projectswp\\swp-jewelry-sales-system\\code\\jewelsystembe\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -60,11 +60,10 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "20240616061211_x.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240616061211_x.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Migrations\\20240616061211_x.cs",
               "RelativeDocumentMoniker": "Migrations\\20240616061211_x.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Migrations\\20240616061211_x.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Migrations\\20240616061211_x.cs",
               "RelativeToolTip": "Migrations\\20240616061211_x.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-16T06:12:11.669Z",
               "EditorCaption": ""
@@ -73,35 +72,33 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "InvoiceItemService.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
               "RelativeToolTip": "Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAAAswEsAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T06:07:39.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T06:07:39.14Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "InvoiceItem.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Model\\InvoiceItem.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Model\\InvoiceItem.cs",
               "RelativeDocumentMoniker": "Model\\InvoiceItem.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Model\\InvoiceItem.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Model\\InvoiceItem.cs",
               "RelativeToolTip": "Model\\InvoiceItem.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T06:06:01.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-16T06:06:01.756Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "JewelDbContext.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Data\\JewelDbContext.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Data\\JewelDbContext.cs",
               "RelativeDocumentMoniker": "Data\\JewelDbContext.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Data\\JewelDbContext.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Data\\JewelDbContext.cs",
               "RelativeToolTip": "Data\\JewelDbContext.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAuwDcAAAC9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -111,9 +108,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceUser\\UserService.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
               "RelativeToolTip": "Service\\ServiceUser\\UserService.cs",
               "ViewState": "AQIAACIAAAAAAAAAAAAYwEAAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -123,9 +120,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceAuth\\AuthService.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceAuth\\AuthService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceAuth\\AuthService.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceAuth\\AuthService.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceAuth\\AuthService.cs",
               "RelativeToolTip": "Service\\ServiceAuth\\AuthService.cs",
               "ViewState": "AQIAACwAAAAAAAAAAAAgwDkAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -135,9 +132,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAYwCUAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,9 +144,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "LoginDto.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\LoginDto.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\LoginDto.cs",
               "RelativeDocumentMoniker": "LoginDto.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\LoginDto.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\LoginDto.cs",
               "RelativeToolTip": "LoginDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -159,9 +156,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceProduct\\ProductService.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
               "RelativeToolTip": "Service\\ServiceProduct\\ProductService.cs",
               "ViewState": "AQIAAFYAAAAAAAAAAAAswF8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -171,9 +168,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
-              "ToolTip": "D:\\workspace\\vs\\HieuWeb1\\source\\reactnet\\backend\\JewelSystemBE\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\New folder\\projectSWP\\SWP-Jewelry-Sales-System\\code\\JewelSystemBE\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Controllers\\ProductController.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAAkwDIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

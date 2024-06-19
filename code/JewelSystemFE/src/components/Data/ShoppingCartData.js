@@ -12,7 +12,7 @@ import { useCart } from 'react-use-cart';
 export const ShoppingCartData = () =>{
 
 
-    const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal} = useCart();
+    const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal } = useCart();
     const totalPrice = (price,quantity) => {return (price*quantity)+'$'};
 
 

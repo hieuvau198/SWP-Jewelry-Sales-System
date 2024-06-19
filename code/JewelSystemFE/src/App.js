@@ -14,6 +14,7 @@ import Verification from "./components/Auth/Verification";
 import Resetpassword from "./components/Auth/Resetpassword";
 import AuthIndex from "./screens/layout/AuthIndex";
 import ShoppingCart from "./screens/Products/ShoppingCart"
+import CheckOut from "./screens/Products/CheckOut";
 
 const ROLES = {
   Staff: "Staff",
@@ -40,8 +41,9 @@ function App() {
               <Route path={process.env.PUBLIC_URL + "/user-list"} element={<UserList />} />
               <Route path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
-              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />          
-              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />                                                  
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} /> 
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />
+              <Route path={process.env.PUBLIC_URL + "/check-out"} element={<CheckOut />} />
             </Route>
         </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Staff]} />}>

@@ -5,23 +5,9 @@ import Product4 from '../../assets/images/product/product-4.jpg';
 import Product5 from '../../assets/images/product/product-5.jpg';
 import Product6 from '../../assets/images/product/product-6.jpg';
 import axios from "../../api/axios";
+import { useState } from 'react';
 
 
-function getProduct() {
-   let response = [];
-   const get = async () => {
-     try {
-       response = await axios.get("/product");
-       console.log(JSON.stringify(response.data));
-     } catch (err) {
-       console.error(err);
-     }
-   };
-   get();
-   return response.data;
- };
-
-// export default getProduct
 export const ProductListdata=[
    {
      "productId": "9b0b750c-bc7c-4c20-8515-a0e2bcd28c15",

@@ -10,9 +10,11 @@ import { useState } from 'react';
 
 function ShoppingCart () {
 
-    const { cartTotal, emptyCart  } = useCart();
+    const { cartTotal, emptyCart, setCartMetadata, metadata  } = useCart();
     const [ discount, setDiscount] = useState(10);
     const [ standby, setStandby] = useState(10);
+    
+
 
         return (
             <div className="body d-flex py-3">
@@ -30,7 +32,7 @@ function ShoppingCart () {
                                             <div className="table-responsive">
                                                 <div id="myCartTable_wrapper" className="dataTables_wrapper dt-bootstrap5 no-footer">
                                                     <div className="row">
-                                                        <div className="col-sm-12">
+                                                        <div className="col-sm-auto">
                                                             <DataTable
                                                                 title={ShoppingCartData().title}
                                                                 columns={ShoppingCartData().columns}
@@ -90,7 +92,7 @@ function ShoppingCart () {
                                                 <Link to={process.env.PUBLIC_URL+"/product-list"} className="btn btn-secondary w-sm-100">Continue Shopping</Link>
                                             </div>
                                             <div className="single-btn w-sm-100">
-                                                <Link to={process.env.PUBLIC_URL+"/check-out"} className="btn btn-primary w-sm-100">Proceed to Checkout</Link>
+                                                <Link to={process.env.PUBLIC_URL+"/check-out"} onClick={()=>{setCartMetadata({discount : discount})}} className="btn btn-primary w-sm-100">Proceed to Checkout</Link>
                                             </div>
                                         </div>
                                     </div>

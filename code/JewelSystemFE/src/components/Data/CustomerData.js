@@ -3,125 +3,125 @@ import Avatar1 from '../../assets/images/xs/avatar1.svg';
 import Avatar2 from '../../assets/images/xs/avatar2.svg';
 import Avatar3 from '../../assets/images/xs/avatar3.svg';
 import Avatar4 from '../../assets/images/xs/avatar4.svg';
+import axios from '../../api/axios';
+import { useState } from 'react';
 
-export const CustomerData= {
+
+
+
+
+
+
+
+
+
+const getdata = [
+  {
+    "customerId": "C5",
+    "customerName": "Emily Wilson",
+    "customerRank": "Bronze",
+    "customerPoint": 90,
+    "attendDate": "2024-05-05T00:00:00"
+  },
+  {
+    "customerId": "C4",
+    "customerName": "Bob Brown",
+    "customerRank": "Bronze",
+    "customerPoint": 120,
+    "attendDate": "2024-04-30T00:00:00"
+  },
+  {
+    "customerId": "C3",
+    "customerName": "Alice Johnson",
+    "customerRank": "Bronze",
+    "customerPoint": 50,
+    "attendDate": "2024-03-25T00:00:00"
+  },
+  {
+    "customerId": "C2",
+    "customerName": "Jane Smith",
+    "customerRank": "Silver",
+    "customerPoint": 80,
+    "attendDate": "2024-02-20T00:00:00"
+  },
+  {
+    "customerId": "C1",
+    "customerName": "John Doe",
+    "customerRank": "Gold",
+    "customerPoint": 100,
+    "attendDate": "2024-01-15T00:00:00"
+  }
+];
+
+  
+
+
+export const CustomerData= ()=>{ 
+  const [ rowdata, setrowData] = useState(getdata);
+  const get = async () => {
+    try {
+      console.log("response.data");
+      const response = await axios.get("/customer");
+      console.log(response.data);
+      setrowData(response.data);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  get();
+      console.log("response.data");
+  return( {
    
     columns: [
-        {
-            name: " ID",
-            selector: (row) => row.id,
-            sortable: true,
-        },
-        {
-            name: "CUSTOMER",
-            selector: (row) => row.name,
-            cell: row => <Link to={process.env.PUBLIC_URL+'/customer-detail'}>
-                <img className="avatar rounded lg" src={row.image} alt="" />
-                <span className="px-2">{row.name}</span>
-              </Link>,
-            sortable: true, minWidth: "200px"
-        },
-        {
-            name: "REGISTER DATE",
-            selector: (row) => row.date,
-            sortable: true,
-            
-        },
-        {
-            name: "MAIL",
-            selector: (row) => row.mail,
-            sortable: true
-        },
-        {
-            name: "PHONE",
-            selector: (row) => row.phone,
-            sortable: true
-        },
-        {
-            name: "COUNTRY",
-            selector: (row) => row.country,
-            sortable: true,
-        },
-        {
-          name: "TOTAL ORDER",
-          selector: (row) => row.order,
-          sortable: true,
-      },
+        
       {
-            name: "ACTION",
-            selector: (row) => { },
-            sortable: true,
-            cell: () => <div className="btn-group" role="group" aria-label="Basic outlined example">
-                <button type="button" className="btn btn-outline-secondary"><i className="icofont-edit text-success"></i></button>
-                <button type="button" className="btn btn-outline-secondary deleterow"><i className="icofont-ui-delete text-danger"></i></button>
-            </div>
-        }
+        name: " ID",
+        selector: (row) => row.customerId,
+        sortable: true,
+    },
+    {
+        name: "CUSTOMER",
+        selector: (row) => row.customerName,
+        cell: row => <Link to={process.env.PUBLIC_URL+'/customer-detail'}>
+            <img className="avatar rounded lg" src={Avatar1} alt="" />
+            <span className="px-2">{row.customerName}</span>
+          </Link>,
+        sortable: true, minWidth: "200px"
+    },
+    {
+        name: "REGISTER DATE",
+        selector: (row) => row.attendDate,
+        sortable: true,
+        
+    },
+    {
+      name: "CUSTOMER POINT",
+      selector: (row) => row.customerPoint,
+      sortable: true,
+  },
+    {
+      name: "CUSTOMER RANK",
+      selector: (row) => row.customerRank,
+      sortable: true,
+  },
+  {
+        name: "ACTION",
+        selector: (row) => { },
+        sortable: true,
+        cell: () => <div className="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" className="btn btn-outline-secondary"><i className="icofont-edit text-success"></i></button>
+            <button type="button" className="btn btn-outline-secondary deleterow"><i className="icofont-ui-delete text-danger"></i></button>
+        </div>
+    }
+
+
 
     ],
-    rows: [
-        {
-          id:'#CS-00002',
-          image:Avatar1,
-          name:'Joan Dyer',
-          date:'12/03/2021',
-          mail:'JoanDyer@gmail.com',
-          phone:'202-555-0983',
-          country:'South Africa',
-          order:'02'
-        },
-        {
-            id:'#CS-00004',
-            image:Avatar2,
-            name:'Phil	Glover',
-            date:'16/03/2021',
-            mail:'PhilGlover@gmail.com',
-            phone:'843-555-0175',
-            country:'Sri Lanka',
-            order:'03'
-          },
-          {
-            id:'#CS-00006',
-            image:Avatar3,
-            name:'Ryan	Randall',
-            date:'12/03/2021',
-            mail:'RyanRandall@gmail.com',
-            phone:'303-555-0151',
-            country:'Australia',
-            order:'05'
-          },
-          {
-            id:'#CS-00008',
-            image:Avatar4,
-            name:'Victor Rampling',
-            date:' 25/02/2021',
-            mail:'VictorRampling@gmail.com',
-            phone:'404-555-0100',
-            country:'Israel',
-            order:'14'
-          },
-          {
-            id:'#CS-00014',
-            image:Avatar1,
-            name:'Robert Anderson',
-            date:'18/01/2021',
-            mail:'RobertAnderson@gmail.com',
-            phone:'502-555-0133',
-            country:'Malaysia',
-            order:'18'
-          },
-          {
-            id:'#CS-00018',
-            image:Avatar3,
-            name:'Sally Graham',
-            date:'16/02/2021',
-            mail:'SallyGraham@gmail.com',
-            phone:'502-555-0118',
-            country:'Indonesia',
-            order:'4668'
-          },
+    rows: rowdata
+}
 
-       
-    ]
+  )
 }
 
 export const ProfileBlockData=[
