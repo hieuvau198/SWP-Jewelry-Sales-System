@@ -1,0 +1,115 @@
+{
+    "menuAdmin": [
+        {
+            "name": "Dashboard",
+            "routerLink": ["dashboard"],
+            "identifier": "Dashboard",
+            "iconClass": "icofont-home fs-5",
+            "breadcrumbMessage": "Welcome to Analytics Dashboard.",
+            "isCategory": false,
+            "isApp": false,
+            "children": []
+        },
+        {
+            "name": "User List",
+            "routerLink": ["user-list"],
+            "identifier": "User List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Products",
+            "routerLink": [""],
+            "identifier": "Products",
+            "iconClass": "icofont-truck-loaded fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "Product List",
+                    "routerLink": ["product-list"],
+                    "identifier": "Product List",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Product Edit",
+                    "routerLink": ["product-edit"],
+                    "identifier": "Product Edit",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Product Detail",
+                    "routerLink": ["product-detail"],
+                    "identifier": "Product Detail",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Product Add",
+                    "routerLink": ["product-Add"],
+                    "identifier": "Product Add",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Stalls",
+            "routerLink": ["stall-list"],
+            "identifier": "Stall Lists",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Gem List",
+            "routerLink": ["gem-list"],
+            "identifier": "Gem List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Gold List",
+            "routerLink": ["gold-list"],
+            "identifier": "Gold List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        }
+        
+
+    ]
+}
