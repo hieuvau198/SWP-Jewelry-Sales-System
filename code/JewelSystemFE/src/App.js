@@ -13,7 +13,8 @@ import SignIn from './components/Auth/SignIn';
 import Verification from "./components/Auth/Verification";
 import Resetpassword from "./components/Auth/Resetpassword";
 import AuthIndex from "./screens/layout/AuthIndex";
-import ShoppingCart from "./screens/Products/ShoppingCart"
+import ShoppingCart from "./screens/Products/ShoppingCart";
+import OrderInvoice from "./screens/Orders/OrderInvoice";
 
 const ROLES = {
   Staff: "Staff",
@@ -41,14 +42,17 @@ function App() {
               <Route path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
               <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />          
-              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />                                                  
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />       
+              <Route path={process.env.PUBLIC_URL + "/invoice-list"} element={<OrderInvoice />} />                                             
             </Route>
         </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Staff]} />}>
             <Route path="/"  element={<MainIndex />}>
               <Route index element={<Dashboard />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
-              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />                                 
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />   
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />  
+                                            
             </Route>
         </Route>
     </ReactRoutes>

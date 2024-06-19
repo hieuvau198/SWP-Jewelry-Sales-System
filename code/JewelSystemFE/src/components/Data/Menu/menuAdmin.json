@@ -74,7 +74,7 @@
             ]
         },
         {
-            "name": "Stalls",
+            "name": "Stall List",
             "routerLink": ["stall-list"],
             "identifier": "Stall Lists",
             "iconClass": "icofont-funky-man fs-5",

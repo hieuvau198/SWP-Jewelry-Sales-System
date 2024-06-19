@@ -1,6 +1,30 @@
 {
     "menuManager":[
         {
+            "name": "Staff List",
+            "routerLink": ["staff-list"],
+            "identifier": "Staff List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Stall List",
+            "routerLink": ["stall-list"],
+            "identifier": "Stall Lists",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
             "name": "Products",
             "routerLink": [""],
             "identifier": "Products",
@@ -27,7 +51,9 @@
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": []
+                    "children": [
+
+                    ]
                 },
                 {
                     "name": "Product Detail",
@@ -47,9 +73,83 @@
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": []
+                    "children": [
+
+                    ]
                 }
             ]
+        },
+        {
+            "name": "Discounts",
+            "routerLink": [""],
+            "identifier": "",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "Discount List",
+                    "routerLink": ["discount List"],
+                    "identifier": "Discount List",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": [
+
+                    ]
+                },
+                {
+                    "name": "Discount Edit",
+                    "routerLink": ["discount-edit"],
+                    "identifier": "Discount Edit",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": [
+
+                    ]
+                },
+                {
+                    "name": "Discount Detail",
+                    "routerLink": ["discount-detail"],
+                    "identifier": "Discount Detail",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": [
+
+                    ]
+                },
+                {
+                    "name": "Discount Add",
+                    "routerLink": ["discount-Add"],
+                    "identifier": "Discount Add",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": [
+
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Invoice List",
+            "routerLink": ["invoice-list"],
+            "identifier": "Invoice List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
         }
+
     ]
 }
