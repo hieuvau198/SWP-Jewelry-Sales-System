@@ -13,8 +13,11 @@ namespace RazorTest.Pages.InvoiceCRUD
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyCustomerObject = "_CustomerObject";
+        public const string SessionKeyCustomerList = "_CustomerList";
+        public const string SessionKeyUserList = "_UserList";
 
-
+        public const string UrlGetCustomers = "http://localhost:5071/api/customer\r\n";
+        public const string UrlGetUsers = "http://localhost:5071/api/user\r\n";
 
         private readonly ApiService _apiService;
 
@@ -25,6 +28,8 @@ namespace RazorTest.Pages.InvoiceCRUD
 
         public List<Invoice> Invoices { get; set; }
         public User User { get; set; }
+        public List<User> Users { get; set; }
+        public List<Customer> Customers { get; set; }
 
 
         public async Task OnGetAsync()
@@ -35,6 +40,10 @@ namespace RazorTest.Pages.InvoiceCRUD
             {
                 Invoices = invoices.OrderBy(c => c.InvoiceId).ToList();
             }
+            Users = HttpContext.Session.GetObject<List<User>>(SessionKeyUserList) 
+                ?? await _apiService.GetAsync<List<User>>(SessionKeyUserList);
+                
+            
         }
         public bool VerifyAuth(string role)
         {
