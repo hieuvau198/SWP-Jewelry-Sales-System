@@ -3,16 +3,10 @@
 @{
 }
 
-<h2>
-    Test productId: @Model.ProductId
-</h2>
+
 
 <h2>
-    Test Message: @Model.TestMessage
-</h2>
-
-<h2>
-    Test InvoiceItems: 
+    Cart Information: 
 </h2>
 
 
@@ -20,8 +14,8 @@
     {
         foreach(var invoiceItem in Model.InvoiceItems)
     {
-        <p>InvoiceItem Discount Id: @invoiceItem.DiscountId</p>
-        <p>InvoiceItem Product Id: @invoiceItem.ProductId</p>
+        <p>Discount: @(invoiceItem.DiscountRate * 100)% </p>
+        <p>Item: @invoiceItem.ProductName </p>
     }
 }
 

@@ -76,7 +76,7 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Product Id</th>
+            
             <th>Product Code</th>
             <th>Product Name</th>
             <th>Product Images</th>
@@ -97,7 +97,7 @@
         @foreach (Product product in Model.Products)
         {
             <tr>
-                <td><strong>@product.ProductId</strong></td>
+                
                 <td>@product.ProductCode</td>
                 <td>@product.ProductName</td>
                 <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>

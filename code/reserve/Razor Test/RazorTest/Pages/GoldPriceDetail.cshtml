@@ -4,47 +4,76 @@
     ViewData["Title"] = "Gold Price List";
 }
 
-<h2>Gold Price</h2>
+<h2 style="text-align: center;">Gold Price</h2>
 
 <style>
- 
-    table {
+    .luxury-table-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    .luxury-table {
         width: 100%;
         border-collapse: collapse;
-        margin-top: 20px; /* Adds spacing above the table */
+        margin-top: 20px;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
 
-    th, td {
-        border: 1px solid black; /* Adds border to cells and header cells */
-        padding: 8px; /* Adds space inside cells */
-        text-align: left; /* Aligns text to the left inside cells */
-    }
+        .luxury-table th, .luxury-table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
 
-    th {
-        background-color: #f9f9f9; /* Light grey background for header cells */
-    }
+        .luxury-table th {
+            background-color: #d4af37; /* Gold background for header */
+            color: #ffffff;
+            font-weight: bold;
+            border: 1px solid #b8860b;
+        }
+
+        .luxury-table td {
+            border: 1px solid #b8860b;
+        }
+
+        .luxury-table tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .luxury-table tbody tr:nth-of-type(even) {
+            background-color: #ffffff;
+        }
+
+        .luxury-table tbody tr:hover {
+            background-color: #f4e5c2; /* Light gold color for hover effect */
+        }
 </style>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Key</th>
-            <th>Sell</th>
-            <th>Buy</th>
-            <th>Date Time</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var goldPrice in Model.GoldPrices)
-        {
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
             <tr>
-                <td>@goldPrice.Name</td>
-                <td>@goldPrice.Key</td>
-                <td>@goldPrice.Sell</td>
-                <td>@goldPrice.Buy</td>
-                <td>@goldPrice.DateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <th>Name</th>
+                <th>Key</th>
+                <th>Sell</th>
+                <th>Buy</th>
+                <th>Date Time</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var goldPrice in Model.GoldPrices)
+            {
+                <tr>
+                    <td>@goldPrice.Name</td>
+                    <td>@goldPrice.Key</td>
+                    <td>@String.Format("{0:N0} VND", goldPrice.Sell)</td>
+                    <td>@String.Format("{0:N0} VND", goldPrice.Buy)</td>
+                    <td>@goldPrice.DateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

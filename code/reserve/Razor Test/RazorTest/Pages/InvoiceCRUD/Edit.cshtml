@@ -2,69 +2,81 @@
 @model RazorTest.Pages.InvoiceCRUD.EditModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Invoice";
 }
 
-<h1>Edit</h1>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Edit Invoice</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-<h4>Invoice</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Invoice.InvoiceId" />
 
-            <input type="hidden" asp-for="Invoice.InvoiceId" />
-            <div class="form-group">
-                <label asp-for="Invoice.InvoiceType" class="control-label"></label>
-                <input asp-for="Invoice.InvoiceType" class="form-control" />
-                <span asp-validation-for="Invoice.InvoiceType" class="text-danger"></span>
+                        <div class="form-group">
+                            <label asp-for="Invoice.InvoiceType" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.InvoiceType" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.InvoiceType" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.CustomerId" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.CustomerId" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.CustomerId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.UserId" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.UserId" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.UserId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.InvoiceDate" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.InvoiceDate" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.InvoiceDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.CustomerVoucher" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.CustomerVoucher" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.CustomerVoucher" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.TotalPrice" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.TotalPrice" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.TotalPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.EndTotalPrice" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.EndTotalPrice" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.EndTotalPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.InvoiceStatus" class="control-label font-weight-bold"></label>
+                            <input asp-for="Invoice.InvoiceStatus" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.InvoiceStatus" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <input type="submit" value="Approve" class="btn btn-success" />
+                            <a asp-page="./InvoiceDetail" class="btn btn-secondary ml-2">Back to List</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Invoice.CustomerId" class="control-label"></label>
-                <input asp-for="Invoice.CustomerId" class="form-control" />
-                <span asp-validation-for="Invoice.CustomerId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Invoice.UserId" class="control-label"></label>
-                <input asp-for="Invoice.UserId" class="form-control" />
-                <span asp-validation-for="Invoice.UserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Invoice.InvoiceDate" class="control-label"></label>
-                <input asp-for="Invoice.InvoiceDate" class="form-control" />
-                <span asp-validation-for="Invoice.InvoiceDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Invoice.CustomerVoucher" class="control-label"></label>
-                <input asp-for="Invoice.CustomerVoucher" class="form-control" />
-                <span asp-validation-for="Invoice.CustomerVoucher" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Invoice.TotalPrice" class="control-label"></label>
-                <input asp-for="Invoice.TotalPrice" class="form-control" />
-                <span asp-validation-for="Invoice.TotalPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Invoice.EndTotalPrice" class="control-label"></label>
-                <input asp-for="Invoice.EndTotalPrice" class="form-control" />
-                <span asp-validation-for="Invoice.EndTotalPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Invoice.InvoiceStatus" class="control-label"></label>
-                <input asp-for="Invoice.InvoiceStatus" class="form-control" />
-                <span asp-validation-for="Invoice.InvoiceStatus" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-page="./InvoiceDetail">Back to List</a>
-</div>
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
