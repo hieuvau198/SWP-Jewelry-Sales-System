@@ -1,0 +1,150 @@
+﻿@using RazorTest.Models
+@using RazorTest.Utilities
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RazorTest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #FFFFFF; /* Light gray background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif; /* Apply font to the body */
+        }
+
+        .navbar {
+            background-color: #FFFFFF; /* Dark gray navbar */
+        }
+
+        .navbar-brand-container {
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Center items vertically */
+            flex-direction: column;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .navbar-brand {
+            color: #8B4513; /* Light brown text color for navbar brand */
+            margin-top: 10px; /* Add margin to the top of the brand */
+            font-weight: 600; /* Bold font weight */
+        }
+
+        .home-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Add some space between the Home links */
+            margin-top: 10px; /* Add margin to the top of the Home links */
+        }
+
+        .home-link {
+            font-size: 0.8rem; /* Smaller font size for 'Home' link */
+            color: #8B4513; /* Black text color for 'Home' link */
+            text-align: center; /* Center align 'Home' link */
+            font-weight: 400; /* Normal font weight */
+        }
+
+        .logo-img {
+            height: 60px; /* Adjust height of the logo image */
+            margin-bottom: 10px; /* Add margin to the bottom of the logo */
+        }
+
+        .navbar-nav .nav-link {
+            color: #8B4513; /* Black text color for navbar links */
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #17a2b8; /* Turquoise text color on hover */
+            }
+
+        .login-logout-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-left: auto;
+        }
+
+        .login-logout {
+            color: #8B4513; /* Black text color for 'Login'/'Logout' link */
+            margin-left: 10px; /* Add margin to the left of 'Login'/'Logout' link */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between; /* Space out elements to center the brand container */
+            align-items: center;
+        }
+
+        /* Custom styles for login panel */
+        .login-panel {
+            background-color: #f8f9fa; /* Light gray background for the panel */
+            border: 1px solid #e0e0e0; /* Light border color */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Add padding */
+            width: 300px; /* Set a fixed width */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin: 20px auto; /* Center align horizontally */
+        }
+
+            .login-panel .form-group {
+                margin-bottom: 15px; /* Add spacing between form groups */
+            }
+
+            .login-panel .btn-primary {
+                background-color: #8B4513; /* Light brown button color */
+                border-color: #8B4513; /* Light brown border color */
+            }
+
+                .login-panel .btn-primary:hover {
+                    background-color: #6e370d; /* Darker shade on hover */
+                    border-color: #6e370d; /* Darker shade on hover */
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <div class="navbar-brand-container">
+                    <img src="~/ProductImages/KimCuongg.jpg" alt="Logo" class="logo-img" />
+                    <a class="navbar-brand" asp-area="" asp-page="/Index" style="color: #8B4513;">Jewelry Sales System</a>
+                    <div class="home-links">
+                        <a class="home-link" asp-area="" asp-page="/Index">Home</a>
+                        <a class="home-link" asp-area="" asp-page="/Index">Home</a>
+                        <a class="home-link" asp-area="" asp-page="/Index">Home</a>
+                    </div>
+                </div>
+                <div class="login-logout-container">
+                    @if (!Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
+                    {
+                        <a class="nav-link login-logout" asp-page="/Authentication/LoginPage">Login</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
+                    }
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

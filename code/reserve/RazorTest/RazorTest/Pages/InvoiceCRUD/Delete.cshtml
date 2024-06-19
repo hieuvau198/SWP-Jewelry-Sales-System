@@ -1,0 +1,69 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.DeleteModel
+
+@{
+    ViewData["Title"] = "Invoice History";
+}
+
+
+<h3>This Order will be REMOVED. Are you sure?</h3>
+<div>
+    <h4>Invoice</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.InvoiceType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.InvoiceType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.CustomerId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.CustomerId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.UserId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.UserId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.InvoiceDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.InvoiceDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.CustomerVoucher)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.CustomerVoucher)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.TotalPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.TotalPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.EndTotalPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.EndTotalPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.InvoiceStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.InvoiceStatus)
+        </dd>
+    </dl>
+    
+    <form method="post" onsubmit="return confirm('Are you sure you want to remove this order?');">
+        <input type="hidden" asp-for="Invoice.InvoiceId" />
+        <input type="submit" value="Disapprove" class="btn btn-danger" /> |
+        <a asp-page="./InvoiceDetail" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

@@ -1,0 +1,307 @@
+﻿@page
+@using RazorTest.Models
+@using RazorTest.Utilities
+@model RazorTest.Pages.IndexModel
+@{
+    ViewData["Title"] = "Jewelry Sales System";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Oswald"
+        }
+
+        body {
+            font-family: "Open Sans"
+        }
+
+        .link-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .link-table th, .link-table td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: left;
+            }
+
+            .link-table th {
+                background-color: #f8f9fa;
+            }
+
+            .link-table a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                .link-table a:hover {
+                    text-decoration: underline;
+                }
+
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+    <!-- w3-content defines a container for fixed size centered content, and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width:1600px">
+
+        <!-- Header -->
+        <header class="w3-container w3-center w3-padding-48 w3-white">
+            <h4>Welcome to the blog of <span class="w3-tag">Jewelry Store</span></h4>
+        </header>
+
+        <!-- Image header -->
+        <header class="w3-display-container w3-wide" id="home">
+            <img class="w3-image" src="~/ProductImages/3.jpg" alt="Jewelry" width="1600" height="10">
+            <div class="w3-display-left w3-padding-large">
+                <h1 class="w3-text-white">Your Subtitle Here</h1>
+                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Your Main Title Here</b></h1>
+            </div>
+        </header>
+
+        <!-- Grid -->
+        <div class="w3-row w3-padding w3-border">
+
+            <!-- Blog entries -->
+            <div class="w3-col l8 s12">
+                <!-- Your blog entries here -->
+            </div>
+
+            <!-- About/Information menu -->
+            <div class="w3-col l4">
+                <!-- About Card -->
+                <div class="w3-white w3-margin">
+                    <img src="about-image.jpg" alt="About" style="width:100%" class="w3-grayscale">
+                    <div class="w3-container w3-black">
+                        <h4>About Me</h4>
+                        <p>Your description here.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Additional sections here -->
+                <!-- Navigation -->
+                <div class="container">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Welcome to the Jewelry Sales System</h1>
+                        <p class="lead">Manage your store efficiently with our comprehensive system.</p>
+                    </div>
+                    <h2>Navigation</h2>
+                    <table class="link-table">
+                        <thead>
+                            <tr>
+                                <th>Section</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Customers</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin"))
+                                    {
+                                        <a asp-page="/CustomerCRUD/CustomerDetail">View all Customers</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Admin Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Discounts</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin"))
+                                    {
+                                        <a asp-page="/DiscountCRUD/DiscountDetail">View all Discounts</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Admin Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gems</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin"))
+                                    {
+                                        <a asp-page="/GemCRUD/GemDetail">View all Gems</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Admin Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Golds</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin"))
+                                    {
+                                        <a asp-page="/GoldCRUD/GoldDetail">View all Golds</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Admin Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Invoice</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+                                    {
+                                        <a asp-page="/InvoiceCRUD/InvoiceDetail">View all Invoices</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">Access Limit: Manager, Cashier, Sale, Admin.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Invoice Item</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+                                    {
+                                        <a asp-page="/InvoiceItemCRUD/InvoiceItemDetail">View all InvoiceItems</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">Access Limit: Manager, Cashier, Sale, Admin.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Product</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+                                    {
+                                        <a asp-page="/ProductCRUD/ProductDetail">View all Products</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">Access Limit: Manager, Cashier, Sale, Admin.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>User</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Admin"))
+                                    {
+                                        <a asp-page="/UserCRUD/UserDetail">View all Users</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Admin Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Warranty</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Manager") || Model.VerifyAuth("Admin"))
+                                    {
+                                        <a asp-page="/WarrantyCRUD/WarrantyDetail">View all Warranties</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Manager Role or Admin Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gold Price</td>
+                                <td><a asp-page="/GoldPriceDetail">View all Gold Prices</a></td>
+                            </tr>
+                            <tr>
+                                <td>Sale Feature</td>
+                                <td>
+                                    @if (Model.VerifyAuth("Sale"))
+                                    {
+                                        <a asp-page="/Sale/SaleHomePage">Access The Sale Feature</a>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-danger">You need Sale Staff Role to access this feature.</span>
+                                    }
+                                </td>
+                            </tr>
+                            @if (!Model.VerifyAuth("Admin") && !Model.VerifyAuth("Manager") && !Model.VerifyAuth("Cashier") && !Model.VerifyAuth("Sale"))
+                            {
+                                <tr>
+                                    <td>Login Feature</td>
+                                    <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
+                                </tr>
+                            }
+                            @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+                            {
+                                <tr>
+                                    <td>Logout Feature</td>
+                                    <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div><br>
+
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribe" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+                <h2 class="w3-wide">SUBSCRIBE</h2>
+                <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+        <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+        <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+
+    <script>
+        // Toggle the visibility of comments
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        // Like function
+        function likeFunction(x) {
+            x.style.fontWeight = "bold";
+            x.innerHTML = "✓ Liked";
+        }
+    </script>
+
+</body>
+</html>
