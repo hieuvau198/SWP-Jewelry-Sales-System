@@ -1,0 +1,36 @@
+{
+    "menuStaff": [
+        {
+            "name": "Products",
+            "routerLink": [""],
+            "identifier": "Products",
+            "iconClass": "icofont-truck-loaded fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "Product List",
+                    "routerLink": ["product-list"],
+                    "identifier": "Product List",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Shopping Cart",
+                    "routerLink": ["shopping-cart"],
+                    "identifier": "Shopping Cart",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+
+            ]
+        }
+    ]
+}
