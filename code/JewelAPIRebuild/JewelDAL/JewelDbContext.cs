@@ -19,6 +19,8 @@ namespace JewelDAL
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
+        public DbSet<Stall> Stalls { get; set; }
+        public DbSet<StallItem> StallItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

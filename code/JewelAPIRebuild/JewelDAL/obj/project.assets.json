@@ -2838,19 +2838,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\nammc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelDAL\\JewelDAL.csproj",
+      "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj",
       "projectName": "JewelDAL",
-      "projectPath": "D:\\workspace\\vs\\rebuild\\JewelDAL\\JewelDAL.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\vs\\rebuild\\JewelDAL\\obj\\",
+      "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj",
+      "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2865,8 +2865,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
-              "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj"
+            "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
+              "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj"
             }
           }
         }

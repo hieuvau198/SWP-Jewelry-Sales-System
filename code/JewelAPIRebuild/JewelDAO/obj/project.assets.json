@@ -2857,19 +2857,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\nammc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj",
+      "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj",
       "projectName": "JewelDAO",
-      "projectPath": "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\vs\\rebuild\\JewelDAO\\obj\\",
+      "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj",
+      "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2884,11 +2884,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
-              "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj"
+            "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
+              "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj"
             },
-            "D:\\workspace\\vs\\rebuild\\JewelDAL\\JewelDAL.csproj": {
-              "projectPath": "D:\\workspace\\vs\\rebuild\\JewelDAL\\JewelDAL.csproj"
+            "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj": {
+              "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj"
             }
           }
         }
