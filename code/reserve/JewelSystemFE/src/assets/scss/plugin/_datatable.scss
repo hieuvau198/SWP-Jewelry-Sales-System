@@ -1,0 +1,76 @@
+.table-hover>tbody>tr:hover{
+    --bs-table-accent-bg: var(--color-100);
+}
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, 
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before{
+    top: 50%;
+    background-color:var(--primary-color);
+    transform: translateY(-50%);
+}
+table.dataTable>tbody>tr.child ul.dtr-details{
+    display: block;
+}
+
+#myProjectTable_length,#myProjectTable_filter,#myProjectTable_info,
+#myDataTable_length,#myDataTable_filter,#myDataTable_info,
+#patient-table_length,#patient-table_filter,#patient-table_info{
+    @media only screen and (max-width:  $break-small - 1px) {
+        display: none;
+    }
+}
+
+#myProjectTable_paginate,#myDataTable_paginate,#patient-table_paginate{
+    ul.pagination {
+        @media only screen and (max-width:  $break-small - 1px) {
+            justify-content: start!important;
+        }
+    }
+}
+
+#myCartTable_length,#myCartTable_filter,#myCartTable_info,#myCartTable_paginate{
+    display: none;
+}
+
+.rdt_Table,.rdt_Pagination{
+    background-color: var(--card-color) !important;
+    color: var(--text-color) !important;
+}
+.rdt_TableHeader{
+    display: none !important;   
+}
+.rdt_TableHeadRow{
+    font-weight: bold; 
+    color: var(--text-color);
+    background-color: var(--card-color) !important;
+}
+.hLGqlg,.hCBnvI,.iAwKFK,.bhoXfZ{   
+    background-color: var(--card-color) !important;
+    color:var(--text-color) !important;      
+}
+.rdt_TableRow{
+    border-bottom: var(--border-color) !important;  
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    background-color: var(--card-color) !important;
+    color: var(--text-color) !important;
+    &:hover{
+        border-bottom: var(--border-color) !important;  
+        border-bottom-style: solid !important;
+        border-bottom-width: 1px !important;
+        outline-style:none !important;
+    }
+}
+.rdt_TableCell{
+    padding: 0.8rem 0.8rem;
+}
+
+.react-dual-listbox button, 
+.react-dual-listbox select{
+    background: var(--card-color);
+}
+.rdl-control optgroup{
+    color:var(--text-color) !important;
+}
+.gPLhoV:disabled{
+    fill:var(--text-color) !important;
+}

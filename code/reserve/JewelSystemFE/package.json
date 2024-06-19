@@ -1,0 +1,78 @@
+{
+  "name": "jewelsystemfe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.1.0",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@fullcalendar/core": "^6.1.9",
+    "@fullcalendar/daygrid": "^6.1.9",
+    "@fullcalendar/interaction": "^6.1.9",
+    "@fullcalendar/react": "^6.1.9",
+    "@outofaxis/react-dropzone-uploader": "^3.1.2",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "apexcharts": "^3.35.4",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.3.2",
+    "dropify": "^0.2.2",
+    "dropzone": "^6.0.0-beta.2",
+    "google-map-react": "^2.1.10",
+    "node-sass": "^9.0.0",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-bootstrap": "^2.9.1",
+    "react-collapse": "^5.1.1",
+    "react-color": "^2.19.3",
+    "react-color-picker": "^4.0.2",
+    "react-cookie": "^7.1.4",
+    "react-data-table-component": "^7.4.6",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^12.0.4",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-dual-listbox": "^2.2.0",
+    "react-image-crop": "^9.1.1",
+    "react-redux": "^8.1.3",
+    "react-router": "^6.2.2",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "^5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-use-cart": "^1.13.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
