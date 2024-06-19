@@ -41,6 +41,7 @@ namespace JewelSystemBE.Service.ServiceProduct
         public List<Product> GetProducts()
         {
             List<Product> products = _jewelDbContext.Products.OrderByDescending(x => x.ProductId).ToList();
+            products = UpdatePrices(products);
             return products;
         }
 
