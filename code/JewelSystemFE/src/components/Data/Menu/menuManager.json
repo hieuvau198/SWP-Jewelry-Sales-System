@@ -1,0 +1,144 @@
+{
+    "menu": [
+        {
+            "name": "Staff List",
+            "routerLink": ["user-list"],
+            "identifier": "User List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Stall List",
+            "routerLink": ["stall"],
+            "identifier": "Stall List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Products",
+            "routerLink": [""],
+            "identifier": "Products",
+            "iconClass": "icofont-truck-loaded fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "Product List",
+                    "routerLink": ["product-list"],
+                    "identifier": "Product List",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Product Edit",
+                    "routerLink": ["product-edit"],
+                    "identifier": "Product Edit",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Product Detail",
+                    "routerLink": ["product-detail"],
+                    "identifier": "Product Detail",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Product Add",
+                    "routerLink": ["product-Add"],
+                    "identifier": "Product Add",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+            ]
+        },
+        {
+            "name": "Order Invoice",
+            "routerLink": ["order"],
+            "identifier": "Order Invoice",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        },
+        {
+            "name": "Discounts",
+            "routerLink": [""],
+            "identifier": "Discounts",
+            "iconClass": "icofont-truck-loaded fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "Discount List",
+                    "routerLink": ["discount-list"],
+                    "identifier": "Disount List",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Discount Edit",
+                    "routerLink": ["discount-edit"],
+                    "identifier": "Disount Edit",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Discount Detail",
+                    "routerLink": ["discount-detail"],
+                    "identifier": "Disount Detail",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Discount Add",
+                    "routerLink": ["discount-Add"],
+                    "identifier": "Disount Add",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
+            ]
+        }
+        
+
+    ]
+}
