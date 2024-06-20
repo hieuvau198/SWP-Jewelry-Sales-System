@@ -55,19 +55,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\nammc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
+      "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
       "projectName": "JewelBO",
-      "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\obj\\",
+      "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
+      "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

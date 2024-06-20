@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UVmObbpldVA=",
+  "dgSpecHash": "k+VYOSznnzU=",
   "success": true,
-  "projectFilePath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
+  "projectFilePath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LENOVO\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\nammc\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

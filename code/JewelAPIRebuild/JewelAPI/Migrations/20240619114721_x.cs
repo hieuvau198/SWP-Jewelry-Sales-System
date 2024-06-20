@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace JewelAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class xx : Migration
+    public partial class x : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -95,7 +95,7 @@ namespace JewelAPI.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsComplete = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
+                    IsComplete = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -273,14 +273,14 @@ namespace JewelAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "jewel",
-                columns: new[] { "Id", "Name" },
+                columns: new[] { "Id", "IsComplete", "Name" },
                 values: new object[,]
                 {
-                    { 1, "Necklace" },
-                    { 2, "Bracelet" },
-                    { 3, "Ring" },
-                    { 4, "Earrings" },
-                    { 5, "Pendant" }
+                    { 1, false, "Necklace" },
+                    { 2, false, "Bracelet" },
+                    { 3, false, "Ring" },
+                    { 4, false, "Earrings" },
+                    { 5, false, "Pendant" }
                 });
 
             migrationBuilder.InsertData(
@@ -288,11 +288,11 @@ namespace JewelAPI.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "1", "user1@example.com", "User One", "$2a$10$Jy4CGLtyKFDijGIO7TWukONEFmujv8An7mgTagZXgNY859Ke.uFaG", "Admin", "user1" },
-                    { "2", "user2@example.com", "User Two", "$2a$10$NtwhIq5Vdg3ZMeNXxao1C.pLFrgAgy7cHLuK1cnsQJN0bcecOqIy6", "User", "user2" },
-                    { "3", "user3@example.com", "User Three", "$2a$10$N/SNz3KUGi.iNQ5A2ktDF.MyGwjJZcQYtWxOlbQZGwv96j03CCkX2", "User", "user3" },
-                    { "4", "user4@example.com", "User Four", "$2a$10$cUdOom5wQYIFf/rQwh7uGuQTQq.xuyS2OdwWsYCYzFFN4Rl6CTa..", "User", "user4" },
-                    { "5", "user5@example.com", "User Five", "$2a$10$ZbhoCwCEc8/x0G5ImxCJAOAXy7RbWoWuwrb2WYfLE39z5Bzf/iaZa", "User", "user5" }
+                    { "1", "user1@example.com", "User One", "$2a$10$W9JQqHLEAvIsuDRvJsFmtOyitIKr732D9wnUUqN1sL88CEJ1lHqy6", "Admin", "user1" },
+                    { "2", "user2@example.com", "User Two", "$2a$10$vml/KQj8U1K.iaUs1MZCk.cfoHCwVCrrUA6esQsB.r1mVEqvjxyT6", "User", "user2" },
+                    { "3", "user3@example.com", "User Three", "$2a$10$zd2gW0ES9onLymra.t1FreYYPXxeXA0glyxoitLeK2fXQMZxn9fda", "User", "user3" },
+                    { "4", "user4@example.com", "User Four", "$2a$10$H7vgCs9BM2.bqbl/Mac8QOUfeXh8iZdhG3.Dl1Uuvb9etZmKN3gbO", "User", "user4" },
+                    { "5", "user5@example.com", "User Five", "$2a$10$P3Q9zkp/OtV7x3nfDPylvOfWagDgacEuMXgf3GygSFbbb9ViJSKgO", "User", "user5" }
                 });
 
             migrationBuilder.InsertData(
@@ -319,12 +319,12 @@ namespace JewelAPI.Migrations
                 columns: new[] { "product_id", "created_at", "gem_id", "gem_weight", "gold_id", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight" },
                 values: new object[,]
                 {
-                    { "0a72af27-3f12-474b-add1-1a7be7b47d10", new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(153), "2", 2.0, "2", 18.0, 100.00m, 1.5f, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0 },
-                    { "258a7b4e-fca7-40bd-ac12-5118bf437f6c", new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(164), "3", 3.0, "3", 27.0, 150.00m, 1.3f, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0 },
-                    { "4dfb6380-6465-4800-8d90-25872ad5082a", new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(176), "4", 1.5, "4", 13.5, 180.00m, 1.7f, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earrings", 24, 15.0 },
-                    { "570180d5-79e7-41b2-be0d-3c6ec75e764f", new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(202), "5", 2.5, "5", 7.5, 90.00m, 1.1f, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Pendant", 6, 10.0 },
-                    { "a4933254-f47f-491a-8b32-8953470b6bf1", new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(214), "1", 4.0, "2", 21.0, 130.00m, 1.2f, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0 },
-                    { "cd7c4753-3e01-42f4-9e1e-1131c22c89a4", new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(136), "1", 5.0, "1", 45.0, 200.00m, 1.2f, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0 }
+                    { "282c1618-f2ff-4795-a9e5-03eb08111b5f", new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5200), "4", 1.5, "4", 13.5, 180.00m, 1.7f, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earrings", 24, 15.0 },
+                    { "35572135-fbd3-40c4-8eca-8a8005ff5d8f", new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5210), "1", 4.0, "2", 21.0, 130.00m, 1.2f, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0 },
+                    { "535b14b7-8050-41a6-a669-707fa2603769", new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5205), "5", 2.5, "5", 7.5, 90.00m, 1.1f, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Pendant", 6, 10.0 },
+                    { "5ecd075b-6056-4d68-b4dc-7b9a3245c529", new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5195), "3", 3.0, "3", 27.0, 150.00m, 1.3f, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0 },
+                    { "899af466-a560-45c6-95fe-cde96081ecf3", new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5169), "1", 5.0, "1", 45.0, 200.00m, 1.2f, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0 },
+                    { "e74a40d6-2cb8-4fe6-b052-bf4c334f6325", new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5186), "2", 2.0, "2", 18.0, 100.00m, 1.5f, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0 }
                 });
 
             migrationBuilder.CreateIndex(
