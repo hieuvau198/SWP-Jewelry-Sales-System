@@ -1,5 +1,5 @@
 {
-    "menu": [
+    "menuManager": [
         {
             "name": "Staff List",
             "routerLink": ["user-list"],
@@ -137,8 +137,19 @@
                     "children": []
                 }
             ]
-        }
-        
+        },
+        {
+            "name": "Customer List",
+            "routerLink": ["customer"],
+            "identifier": "Customer List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
+            ]
+        }        
 
     ]
 }

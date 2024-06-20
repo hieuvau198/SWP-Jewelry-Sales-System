@@ -19,7 +19,7 @@ import CouponsAdd from "./screens/Discounts/CouponsAdd";
 import CouponsList from "./screens/Discounts/CouponsList";
 import CouponsEdit from "./screens/Discounts/CouponsEdit";
 import ProductEdit from "./screens/Products/ProductEdit";
-
+import CheckOut from "./screens/Products/CheckOut";
 
 const ROLES = {
   Staff: "Staff",
@@ -48,13 +48,14 @@ function App() {
               <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />  
               <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />
               
+              
             </Route>
         </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Staff]} />}>
             <Route path="/"  element={<MainIndex />}>
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
               <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />
-              <Route path={process.env.PUBLIC_URL + "/checkout"} element={<CheckOut />} />
+              <Route path={process.env.PUBLIC_URL + "/checkout"} element={<CheckOut />} /> 
             </Route>
         </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Manager]} />}>
