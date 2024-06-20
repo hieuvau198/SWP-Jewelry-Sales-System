@@ -14,9 +14,13 @@ namespace JewelSystemBE.Model
 
         [Required]
         public string CustomerId { get; set; } = "Some Customer Id";
+        [Required]
+        public string CustomerName { get; set; } = "Some Customer Name";
 
         [Required]
         public string UserId { get; set; } = "Some User Id";
+        [Required]
+        public string UserFullname { get; set; } = "Some User Fullname";
 
         [Required]
         [DataType(DataType.Date)]

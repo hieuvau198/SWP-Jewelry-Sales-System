@@ -76,6 +76,8 @@ namespace JewelSystemBE.Service.ServiceCustomer
                 updatedCustomer.CustomerRank = customer.CustomerRank;
                 updatedCustomer.CustomerPoint = customer.CustomerPoint;
                 updatedCustomer.AttendDate = customer.AttendDate;
+                updatedCustomer.CustomerPhone = customer.CustomerPhone;
+
                 _jewelDbContext.Customers.Update(updatedCustomer);
                 _jewelDbContext.SaveChanges();
                 return true;

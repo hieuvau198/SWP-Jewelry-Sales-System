@@ -40,6 +40,8 @@ namespace JewelSystemBE.Model
         // Gem properties
         [Required]
         public string GemId { get; set; } = "Some Gem Id";
+        [Required]
+        public string GemName { get; set; } = "Some Gem Name";
 
         [Required]
         public double GemWeight { get; set; } = 0.0;
@@ -47,6 +49,8 @@ namespace JewelSystemBE.Model
         // Gold properties
         [Required]
         public string GoldId { get; set; } = "Some Gold Id";
+        [Required]
+        public string GoldName { get; set; } = "Some Gold Name";
 
         [Required]
         public double GoldWeight { get; set; } = 0.0;
