@@ -5,46 +5,106 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Warranty - RazorTest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            color: #495057;
+        }
 
-<h4>Warranty</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Warranty.WarrantyId" />
-            <div class="form-group">
-                <label asp-for="Warranty.ProductId" class="control-label"></label>
-                <input asp-for="Warranty.ProductId" class="form-control" />
-                <span asp-validation-for="Warranty.ProductId" class="text-danger"></span>
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #b8860b; /* Set label text color */
+        }
+
+        .form-control {
+            color: #495057; /* Set input text color */
+        }
+
+        .btn-primary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+            color: #fff; /* Set button text color */
+        }
+
+            .btn-primary:hover {
+                background-color: #a5702b; /* Darker shade of yellow on hover */
+                border-color: #a5702b;
+            }
+
+        .btn-secondary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+            color: #fff; /* Set button text color */
+            margin-right: 10px;
+        }
+
+            .btn-secondary:hover {
+                background-color: #a5702b; /* Darker shade of yellow on hover */
+                border-color: #a5702b;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Warranty</h1>
+        <h4>Warranty</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Warranty.WarrantyId" />
+                    <div class="form-group">
+                        <label asp-for="Warranty.ProductId" class="control-label"></label>
+                        <input asp-for="Warranty.ProductId" class="form-control" />
+                        <span asp-validation-for="Warranty.ProductId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Warranty.ProductName" class="control-label"></label>
+                        <input asp-for="Warranty.ProductName" class="form-control" />
+                        <span asp-validation-for="Warranty.ProductName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Warranty.StartDate" class="control-label"></label>
+                        <input asp-for="Warranty.StartDate" class="form-control" />
+                        <span asp-validation-for="Warranty.StartDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Warranty.ExpireDate" class="control-label"></label>
+                        <input asp-for="Warranty.ExpireDate" class="form-control" />
+                        <span asp-validation-for="Warranty.ExpireDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="Warranty.ProductName" class="control-label"></label>
-                <input asp-for="Warranty.ProductName" class="form-control" />
-                <span asp-validation-for="Warranty.ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Warranty.StartDate" class="control-label"></label>
-                <input asp-for="Warranty.StartDate" class="form-control" />
-                <span asp-validation-for="Warranty.StartDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Warranty.ExpireDate" class="control-label"></label>
-                <input asp-for="Warranty.ExpireDate" class="form-control" />
-                <span asp-validation-for="Warranty.ExpireDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
+        <div>
+            <a asp-page="./WarrantyDetail" class="btn btn-secondary">Back to List</a>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-page="./WarrantyDetail">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await Html.RenderPartialAsync("_ValidationScriptsPartial")
+</body>
+</html>

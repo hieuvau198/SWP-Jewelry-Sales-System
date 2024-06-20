@@ -4,124 +4,131 @@
 @{
 }
 
-<h2>Sale Feature</h2>
-
 <style>
-    /* Table styles */
-    table {
+    .luxury-table-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    .luxury-table {
         width: 100%;
-        border-collapse: collapse; /* Ensures borders between cells are merged */
-        margin-top: 20px; /* Adds spacing above the table */
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     }
 
-    th, td {
-        border: 1px solid black; /* Adds border to cells and header cells */
-        padding: 8px; /* Adds space inside cells */
-        text-align: left; /* Aligns text to the left inside cells */
-    }
+        .luxury-table th, .luxury-table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
 
-    th {
-        background-color: #f9f9f9; /* Light grey background for header cells */
-    }
+        .luxury-table th {
+            background-color: #d4af37; /* Gold background for header */
+            color: #ffffff;
+            font-weight: bold;
+            border: 1px solid #b8860b;
+        }
 
-    .btn-pink {
-        background-color: pink;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
+        .luxury-table td {
+            border: 1px solid #b8860b;
+        }
 
-        .btn-pink:hover {
-            background-color: #ff69b4;
+        .luxury-table tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .luxury-table tbody tr:nth-of-type(even) {
+            background-color: #ffffff;
+        }
+
+        .luxury-table tbody tr:hover {
+            background-color: #f4e5c2; /* Light gold color for hover effect */
         }
 
     .pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
+        text-align: center;
+        padding: 20px 0;
     }
 
         .pagination a {
-            color: black;
-            float: left;
+            margin: 0 5px;
             padding: 8px 16px;
             text-decoration: none;
-            transition: background-color .3s;
-            border: 1px solid #ddd;
-            margin: 0 4px;
+            color: #b8860b;
+            border: 1px solid #b8860b;
+            border-radius: 5px;
         }
 
             .pagination a.active {
-                background-color: #4CAF50;
+                background-color: #d4af37;
                 color: white;
-                border: 1px solid #4CAF50;
             }
 
-            .pagination a:hover:not(.active) {
-                background-color: #ddd;
+            .pagination a:hover {
+                background-color: #d4af37;
+                color: white;
             }
 </style>
+
+<h2>Sale Feature</h2>
 
 <form method="get" action="/Sale/ViewCart">
     <button type="submit">Go to Cart</button>
 </form>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            
-            <th>Product Code</th>
-            <th>Product Name</th>
-            <th>Product Images</th>
-            <th>Product Quantity</th>
-            <th>Product Type</th>
-            <th>Product Weight</th>
-            <th>Product Warranty</th>
-            <th>Gem Id</th>
-            <th>Gem Weight</th>
-            <th>Gold Id</th>
-            <th>Gold Weight</th>
-            <th>Labor Cost</th>
-            <th>Create At</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody border="1">
-        @foreach (Product product in Model.Products)
-        {
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
             <tr>
-                
-                <td>@product.ProductCode</td>
-                <td>@product.ProductName</td>
-                <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
-                <td>@product.ProductQuantity</td>
-                <td>@product.ProductType</td>
-                <td>@product.ProductWeight</td>
-                <td>@product.ProductWarranty</td>
-                <td>@product.GemId</td>
-                <td>@String.Format("{0:F2}", product.GemWeight)</td>
-                <td>@product.GoldId</td>
-                <td>@String.Format("{0:F2}", product.GoldWeight)</td>
-                <td>@product.LaborCost</td>
-                <td>@product.CreatedAt.ToShortDateString()</td>
-                <td>
-                    <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
-                        <input type="hidden" name="productId" value="@product.ProductId" />
-                        <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                        <input type="submit" value="Add to Cart" />
-                    </form>
-                </td>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Product Images</th>
+                <th>Product Quantity</th>
+                <th>Product Type</th>
+                <th>Product Weight</th>
+                <th>Product Warranty</th>
+                <th>Gem Id</th>
+                <th>Gem Weight</th>
+                <th>Gold Id</th>
+                <th>Gold Weight</th>
+                <th>Labor Cost</th>
+                <th>Create At</th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (Product product in Model.Products)
+            {
+                <tr>
+                    <td>@product.ProductCode</td>
+                    <td>@product.ProductName</td>
+                    <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
+                    <td>@product.ProductQuantity</td>
+                    <td>@product.ProductType</td>
+                    <td>@product.ProductWeight</td>
+                    <td>@product.ProductWarranty</td>
+                    <td>@product.GemId</td>
+                    <td>@String.Format("{0:F2}", product.GemWeight)</td>
+                    <td>@product.GoldId</td>
+                    <td>@String.Format("{0:F2}", product.GoldWeight)</td>
+                    <td>@product.LaborCost</td>
+                    <td>@product.CreatedAt.ToShortDateString()</td>
+                    <td>
+                        <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+                            <input type="submit" value="Add to Cart" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <div class="pagination">
     @if (Model.CurrentPage > 1)

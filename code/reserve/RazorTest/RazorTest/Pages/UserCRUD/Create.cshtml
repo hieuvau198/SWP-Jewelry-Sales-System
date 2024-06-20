@@ -5,51 +5,111 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create User - RazorTest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            color: #495057;
+        }
 
-<h4>User</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="User.UserId" />
-            <div class="form-group">
-                <label asp-for="User.Username" class="control-label"></label>
-                <input asp-for="User.Username" class="form-control" />
-                <span asp-validation-for="User.Username" class="text-danger"></span>
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #b8860b; /* Set label text color */
+        }
+
+        .form-control {
+            color: #495057; /* Set input text color */
+        }
+
+        .btn-primary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+            color: #fff; /* Set button text color */
+        }
+
+            .btn-primary:hover {
+                background-color: #a5702b; /* Darker shade of yellow on hover */
+                border-color: #a5702b;
+            }
+
+        .btn-secondary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+            color: #fff; /* Set button text color */
+            margin-right: 10px;
+        }
+
+            .btn-secondary:hover {
+                background-color: #a5702b; /* Darker shade of yellow on hover */
+                border-color: #a5702b;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create User</h1>
+        <h4>User</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="User.UserId" />
+                    <div class="form-group">
+                        <label asp-for="User.Username" class="control-label"></label>
+                        <input asp-for="User.Username" class="form-control" />
+                        <span asp-validation-for="User.Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.Password" class="control-label"></label>
+                        <input asp-for="User.Password" class="form-control" />
+                        <span asp-validation-for="User.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.Fullname" class="control-label"></label>
+                        <input asp-for="User.Fullname" class="form-control" />
+                        <span asp-validation-for="User.Fullname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.Email" class="control-label"></label>
+                        <input asp-for="User.Email" class="form-control" />
+                        <span asp-validation-for="User.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.Role" class="control-label"></label>
+                        <input asp-for="User.Role" class="form-control" />
+                        <span asp-validation-for="User.Role" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="User.Password" class="control-label"></label>
-                <input asp-for="User.Password" class="form-control" />
-                <span asp-validation-for="User.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="User.Fullname" class="control-label"></label>
-                <input asp-for="User.Fullname" class="form-control" />
-                <span asp-validation-for="User.Fullname" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="User.Email" class="control-label"></label>
-                <input asp-for="User.Email" class="form-control" />
-                <span asp-validation-for="User.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="User.Role" class="control-label"></label>
-                <input asp-for="User.Role" class="form-control" />
-                <span asp-validation-for="User.Role" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
+        <div>
+            <a asp-page="./UserDetail" class="btn btn-secondary">Back to List</a>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-page="./UserDetail">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await Html.RenderPartialAsync("_ValidationScriptsPartial")
+</body>
+</html>

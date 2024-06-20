@@ -1,7 +1,7 @@
 ﻿@page
-@model RazorTest.Pages.Authentication.LoginPageModel
+@model RazorTest.Pages.Sale.CreateModel
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Create";
 }
 
 <!DOCTYPE html>
@@ -16,10 +16,10 @@
         body {
             background-color: #f8f9fa;
             font-family: 'Poppins', sans-serif;
-            color: #8B4513; /* Set the text color */
+            color: #b8860b; /* Set the text color */
         }
 
-        .login-container {
+        .create-container {
             margin-top: 5rem;
         }
 
@@ -40,7 +40,7 @@
 
             .card-header h3 {
                 margin-bottom: 0;
-                color: #8B4513;
+                color: #b8860b;
                 font-weight: 600;
             }
 
@@ -50,21 +50,21 @@
 
         .form-group label {
             font-weight: 600;
-            color: #8B4513; /* Set the label text color */
+            color: #b8860b; /* Set the label text color */
         }
 
         .form-control {
-            color: #8B4513; /* Set the input text color */
+            color: #b8860b; /* Set the input text color */
         }
 
         .btn-primary {
-            background-color: #8B4513;
-            border-color: #8B4513;
+            background-color: #b8860b;
+            border-color: #b8860b;
         }
 
             .btn-primary:hover {
-                background-color: #6e370d;
-                border-color: #6e370d;
+                background-color: #b8860b;
+                border-color: #b8860b;
             }
 
         .card-footer {
@@ -74,7 +74,7 @@
         }
 
             .card-footer a {
-                color: #8B4513;
+                color: #b8860b;
                 text-decoration: none;
             }
 
@@ -84,28 +84,32 @@
     </style>
 </head>
 <body>
-    <div class="container login-container">
+    <div class="container create-container">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow-lg">
                     <div class="card-header text-center">
-                        <h3 class="mb-0">Login</h3>
+                        <h3 class="mb-0">Create Customer</h3>
                     </div>
                     <div class="card-body">
                         <form method="post">
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                                <label for="customerName">Customer Name</label>
+                                <input asp-for="Customer.CustomerName" class="form-control" id="customerName" required>
                             </div>
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                                <label for="customerRank">Customer Rank</label>
+                                <input asp-for="Customer.CustomerRank" class="form-control" id="customerRank" value="Bronze">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <div class="form-group">
+                                <label for="attendDate">Attend Date</label>
+                                <input asp-for="Customer.AttendDate" class="form-control" id="attendDate">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Create</button>
                         </form>
                     </div>
                     <div class="card-footer text-center">
-                        <a href="/Register">Don't have an account? Register</a>
+                        <a href="/ViewCart">Back to List</a>
                     </div>
                 </div>
             </div>

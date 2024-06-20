@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Create Product";
 }
+
 <h2>Create Product</h2>
 
 <form method="post">
@@ -12,49 +13,41 @@
         <label asp-for="Product.ProductCode"></label>
         <input asp-for="Product.ProductCode" class="form-control" />
         <span asp-validation-for="Product.ProductCode" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.ProductName"></label>
         <input asp-for="Product.ProductName" class="form-control" />
         <span asp-validation-for="Product.ProductName" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.ProductImages"></label>
         <input asp-for="Product.ProductImages" class="form-control" />
         <span asp-validation-for="Product.ProductImages" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.ProductQuantity"></label>
         <input asp-for="Product.ProductQuantity" class="form-control" />
         <span asp-validation-for="Product.ProductQuantity" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.ProductType"></label>
         <input asp-for="Product.ProductType" class="form-control" />
         <span asp-validation-for="Product.ProductType" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.ProductWeight"></label>
         <input asp-for="Product.ProductWeight" class="form-control" />
         <span asp-validation-for="Product.ProductWeight" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.ProductWarranty"></label>
         <input asp-for="Product.ProductWarranty" class="form-control" />
         <span asp-validation-for="Product.ProductWarranty" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.MarkupRate"></label>
         <input asp-for="Product.MarkupRate" class="form-control" />
         <span asp-validation-for="Product.MarkupRate" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.GemId" class="control-label"></label>
@@ -65,7 +58,6 @@
         <label asp-for="Product.GemWeight"></label>
         <input asp-for="Product.GemWeight" class="form-control" />
         <span asp-validation-for="Product.GemWeight" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.GoldId" class="control-label"></label>
@@ -76,20 +68,19 @@
         <label asp-for="Product.GoldWeight"></label>
         <input asp-for="Product.GoldWeight" class="form-control" />
         <span asp-validation-for="Product.GoldWeight" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.LaborCost"></label>
         <input asp-for="Product.LaborCost" class="form-control" />
         <span asp-validation-for="Product.LaborCost" class="text-danger"></span>
-
     </div>
     <div class="form-group">
         <label asp-for="Product.CreatedAt"></label>
         <input asp-for="Product.CreatedAt" class="form-control" type="datetime-local" />
         <span asp-validation-for="Product.CreatedAt" class="text-danger"></span>
-
     </div>
-    <button type="submit" class="btn btn-primary">Create</button>
+
+    <button type="submit" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Create</button>
 </form>
-<a asp-page="./ProductDetail">Back to List</a>
+
+<a asp-page="./ProductDetail" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b;">Back to List</a>

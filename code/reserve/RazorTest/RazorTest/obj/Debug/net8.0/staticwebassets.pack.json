@@ -5,20 +5,16 @@
       "PackagePath": "staticwebassets\\RazorTest.bundle.scp.css"
     },
     {
-      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\1.jpg",
-      "PackagePath": "staticwebassets\\ProductImages\\1.jpg"
-    },
-    {
-      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\2.jpg",
-      "PackagePath": "staticwebassets\\ProductImages\\2.jpg"
-    },
-    {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\3.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\3.jpg"
     },
     {
-      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\4.jpg",
-      "PackagePath": "staticwebassets\\ProductImages\\4.jpg"
+      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\6.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\6.jpg"
+    },
+    {
+      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\7.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\7.jpg"
     },
     {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\KimCuongg.jpg",
@@ -35,10 +31,6 @@
     {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\jewelry.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\jewelry.jpg"
-    },
-    {
-      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\kimcuong.jpg",
-      "PackagePath": "staticwebassets\\ProductImages\\kimcuong.jpg"
     },
     {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\ruby_bracelet.jpg",

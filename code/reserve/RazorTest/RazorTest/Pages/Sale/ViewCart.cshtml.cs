@@ -109,24 +109,38 @@ namespace RazorTest.Pages.Sale
             
             return RedirectToPage(new { currentPage = CurrentPage });
         }
-        
+
         public async Task<IActionResult> OnPostAddCustomer(string searchCustomer)
         {
+            // Retrieve list of customers from API
             List<Customer> customers = await _apiService.GetAsync<List<Customer>>(UrlGetCustomers);
-            Customer customer = customers.Find(x  => x.CustomerName == searchCustomer);
-            if(customer != null)
+
+            // Find customer by name in the list
+            Customer = customers.Find(x => x.CustomerName == searchCustomer);
+
+            if (Customer != null)
             {
-                HttpContext.Session.SetString(SessionKeyCustomerId, customer.CustomerId);
-                HttpContext.Session.SetObject(SessionKeyCustomerObject, customer);
+                // Customer found: Store customer info in session
+                HttpContext.Session.SetString(SessionKeyCustomerId, Customer.CustomerId);
+                HttpContext.Session.SetObject(SessionKeyCustomerObject, Customer);
             }
             else
             {
+                // Customer not found: Display message and clear session data
                 HttpContext.Session.Remove(SessionKeyCustomerId);
                 HttpContext.Session.Remove(SessionKeyCustomerObject);
+
+                // Set message to inform user
+                TempData["Message"] = "Customer not found. Please add new customer.";
             }
+
+            // Store search customer in session for display purposes
             HttpContext.Session.SetString(SessionKeySearchCustomer, searchCustomer);
+
+            // Redirect to current page
             return RedirectToPage(new { currentPage = CurrentPage });
         }
+
 
         public async Task<IActionResult> OnPostSelectDiscount(string productId)
         {

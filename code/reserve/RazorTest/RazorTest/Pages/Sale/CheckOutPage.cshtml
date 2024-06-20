@@ -156,18 +156,13 @@
             <td>@String.Format("{0:N0} VND", item.TotalPrice)</td>
             <td>@String.Format("{0:N0} VND", item.EndTotalPrice)</td>
             </tbody>
-            }
-
-            
-        </table>
-        
+            } 
+        </table>   
 }
-
 
 <form method="post" asp-page-handler="Confirm">
     <button type="submit" class="btn-pink">Confirm</button>
 </form>
-
 <br />
 
 <form method="get" action="/Sale/ViewCart">

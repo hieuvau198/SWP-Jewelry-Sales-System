@@ -7,64 +7,59 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RazorTest</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         /* Custom styles */
         body {
-            background-color: #FFFFFF; /* Light gray background */
+            background-color: #FFFFFF;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            font-family: 'Poppins', sans-serif; /* Apply font to the body */
+            font-family: 'Poppins', sans-serif;
         }
 
         .navbar {
-            background-color: #FFFFFF; /* Dark gray navbar */
+            background-color: #FFFFFF;
         }
 
         .navbar-brand-container {
-            display: flex; /* Use flexbox for centering */
-            align-items: center; /* Center items vertically */
+            display: flex;
+            align-items: center;
             flex-direction: column;
             text-align: center;
             flex-grow: 1;
+            margin: 0 10px;
         }
 
         .navbar-brand {
-            color: #8B4513; /* Light brown text color for navbar brand */
-            margin-top: 10px; /* Add margin to the top of the brand */
-            font-weight: 600; /* Bold font weight */
+            color: #8B4513;
+            margin-top: 10px;
+            font-weight: 600;
         }
 
-        .home-links {
+        .nav-links {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Add some space between the Home links */
-            margin-top: 10px; /* Add margin to the top of the Home links */
+            gap: 15px;
+            margin-top: 10px;
         }
 
-        .home-link {
-            font-size: 0.8rem; /* Smaller font size for 'Home' link */
-            color: #8B4513; /* Black text color for 'Home' link */
-            text-align: center; /* Center align 'Home' link */
-            font-weight: 400; /* Normal font weight */
+        .nav-link {
+            font-size: 1.1rem;
+            color: #8B4513 !important;
+            text-align: center;
+            font-weight: 400;
         }
+
+            .nav-link:hover {
+                color: #17a2b8;
+            }
 
         .logo-img {
-            height: 60px; /* Adjust height of the logo image */
-            margin-bottom: 10px; /* Add margin to the bottom of the logo */
+            height: 60px;
+            margin-bottom: 0%;
         }
-
-        .navbar-nav .nav-link {
-            color: #8B4513; /* Black text color for navbar links */
-        }
-
-            .navbar-nav .nav-link:hover {
-                color: #17a2b8; /* Turquoise text color on hover */
-            }
 
         .login-logout-container {
             display: flex;
@@ -73,64 +68,162 @@
         }
 
         .login-logout {
-            color: #8B4513; /* Black text color for 'Login'/'Logout' link */
-            margin-left: 10px; /* Add margin to the left of 'Login'/'Logout' link */
+            color: #8B4513;
+            margin-left: 10px;
         }
 
         .container {
             display: flex;
-            justify-content: space-between; /* Space out elements to center the brand container */
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
+            border-bottom: 1px solid #D3B183;
+        }
+
+        .header-container {
+            position: relative;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .login-logout-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 25px;
         }
 
         /* Custom styles for login panel */
         .login-panel {
-            background-color: #f8f9fa; /* Light gray background for the panel */
-            border: 1px solid #e0e0e0; /* Light border color */
-            border-radius: 8px; /* Rounded corners */
-            padding: 20px; /* Add padding */
-            width: 300px; /* Set a fixed width */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            margin: 20px auto; /* Center align horizontally */
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
         }
 
             .login-panel .form-group {
-                margin-bottom: 15px; /* Add spacing between form groups */
+                margin-bottom: 15px;
             }
 
             .login-panel .btn-primary {
-                background-color: #8B4513; /* Light brown button color */
-                border-color: #8B4513; /* Light brown border color */
+                background-color: #8B4513;
+                border-color: #8B4513;
             }
 
                 .login-panel .btn-primary:hover {
-                    background-color: #6e370d; /* Darker shade on hover */
-                    border-color: #6e370d; /* Darker shade on hover */
+                    background-color: #6e370d;
+                    border-color: #6e370d;
                 }
+
+        /* Add border to footer if you have one */
+        footer {
+            border-top: 1px solid #D3B183;
+            padding-top: 10px;
+            margin-top: auto;
+        }
+
+        /* Styles for the Gold Price page */
+        .luxury-table-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+
+        .luxury-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+            .luxury-table th, .luxury-table td {
+                padding: 12px 15px;
+                text-align: left;
+            }
+
+            .luxury-table th {
+                background-color: #d4af37;
+                color: #ffffff;
+                font-weight: bold;
+                border: 1px solid #b8860b;
+            }
+
+            .luxury-table td {
+                border: 1px solid #b8860b;
+            }
+
+            .luxury-table tbody tr:nth-of-type(odd) {
+                background-color: #f9f9f9;
+            }
+
+            .luxury-table tbody tr:nth-of-type(even) {
+                background-color: #ffffff;
+            }
+
+            .luxury-table tbody tr:hover {
+                background-color: #f4e5c2;
+            }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+            .pagination a {
+                margin: 0 5px;
+                padding: 8px 16px;
+                text-decoration: none;
+                background-color: #d4af37;
+                color: #ffffff;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+
+                .pagination a.active {
+                    background-color: #b8860b;
+                }
+
+                .pagination a:hover {
+                    background-color: #b8860b;
+                }
+
+        .title, .message, .customer-title {
+            text-align: left;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header-container">
         <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="login-logout-container">
+                @if (!Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
+                {
+                    <a class="nav-link login-logout" asp-page="/Authentication/LoginPage">Login</a>
+                }
+                else
+                {
+                    <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
+                }
+            </div>
             <div class="container">
                 <div class="navbar-brand-container">
-                    <img src="~/ProductImages/KimCuongg.jpg" alt="Logo" class="logo-img" />
-                    <a class="navbar-brand" asp-area="" asp-page="/Index" style="color: #8B4513;">Jewelry Sales System</a>
-                    <div class="home-links">
-                        <a class="home-link" asp-area="" asp-page="/Index">Home</a>
-                        <a class="home-link" asp-area="" asp-page="/Index">Home</a>
-                        <a class="home-link" asp-area="" asp-page="/Index">Home</a>
-                    </div>
+                    <a asp-page="/Index">
+                        <img src="~/ProductImages/7.jpg" alt="Logo" class="logo-img" />
+                    </a>
                 </div>
-                <div class="login-logout-container">
-                    @if (!Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
-                    {
-                        <a class="nav-link login-logout" asp-page="/Authentication/LoginPage">Login</a>
-                    }
-                    else
-                    {
-                        <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
-                    }
+                <div class="nav-links">
+                    <a class="nav-link" href="/Index">Home</a>
+                    <a class="nav-link" href="#about">About Us</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="/GoldPriceDetail">Gold Price</a>
                 </div>
             </div>
         </nav>
@@ -140,6 +233,13 @@
             @RenderBody()
         </main>
     </div>
+
+    @* Optional footer *@
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">© 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
