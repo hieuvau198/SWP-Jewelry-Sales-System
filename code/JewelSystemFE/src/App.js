@@ -13,8 +13,11 @@ import SignIn from './components/Auth/SignIn';
 import Verification from "./components/Auth/Verification";
 import Resetpassword from "./components/Auth/Resetpassword";
 import AuthIndex from "./screens/layout/AuthIndex";
-import ShoppingCart from "./screens/Products/ShoppingCart"
-
+import ShoppingCart from "./screens/Products/ShoppingCart";
+import OrderInvoice from "./screens/Orders/OrderInvoice";
+import CouponsAdd from "./screens/Discounts/CouponsAdd";
+import CouponsList from "./screens/Discounts/CouponsList";
+import CouponsEdit from "./screens/Discounts/CouponsEdit";
 const ROLES = {
   Staff: "Staff",
   Manager: "Editor",
@@ -41,7 +44,12 @@ function App() {
               <Route path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
               <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />          
-              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />                                                  
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />       
+              <Route path={process.env.PUBLIC_URL + "/order"} element={<OrderInvoice />} />  
+              <Route path={process.env.PUBLIC_URL + "/discount-list"} element={<CouponsList />} /> 
+              <Route path={process.env.PUBLIC_URL + "/discount-add"} element={<CouponsAdd />} /> 
+              <Route path={process.env.PUBLIC_URL + "/discount-Edit"} element={<CouponsEdit />} />   
+                                                                                          
             </Route>
         </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Staff]} />}>
