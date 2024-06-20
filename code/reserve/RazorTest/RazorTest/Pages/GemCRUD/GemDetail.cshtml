@@ -9,9 +9,12 @@
     <table class="luxury-table">
         <thead>
             <tr>
-                <th>Gem Id</th>
-                <th>Gem Name</th>
-                <th>Gem Price</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Weight</th>
+                <th>Unit</th>
+                <th>Buy Price</th>
+                <th>Sell Price</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -19,9 +22,12 @@
             @foreach (var gem in Model.Gems)
             {
                 <tr>
-                    <td>@gem.GemId</td>
                     <td><strong>@gem.GemName</strong></td>
-                    <td>@gem.GemPrice</td>
+                    <td>@gem.GemCode</td>
+                    <td>@gem.GemWeight</td>
+                    <td>@gem.Unit</td>
+                    <td>@String.Format("{0:N0} VND", gem.BuyPrice)</td>
+                    <td>@String.Format("{0:N0} VND", gem.GemPrice)</td>
                     <td>
                         <a asp-page="./Edit" asp-route-id="@gem.GemId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
                         <a asp-page="./Delete" asp-route-id="@gem.GemId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>

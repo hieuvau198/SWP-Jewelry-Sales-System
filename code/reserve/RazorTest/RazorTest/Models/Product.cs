@@ -20,7 +20,7 @@ namespace RazorTest.Models
         public string GemId { get; set; }
         public string GemName { get; set; } = "Some Gem Name";
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
-        public double GemWeight { get; set; }
+        public double GemWeight { get; set; } = 1;
         public string GoldId { get; set; }
         public string GoldName { get; set; } = "Some Gold Name";
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]

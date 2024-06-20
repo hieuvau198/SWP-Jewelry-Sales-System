@@ -104,6 +104,11 @@
                         <span asp-validation-for="Gem.GemName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="Gem.BuyPrice" class="control-label"></label>
+                        <input asp-for="Gem.BuyPrice" class="form-control" />
+                        <span asp-validation-for="Gem.BuyPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Gem.GemPrice" class="control-label"></label>
                         <input asp-for="Gem.GemPrice" class="form-control" />
                         <span asp-validation-for="Gem.GemPrice" class="text-danger"></span>
@@ -113,7 +118,7 @@
                     </div>
                 </form>
                 <div class="card-footer">
-                    <a asp-page="./Index">Back to List</a>
+                    <a asp-page="./GemDetail">Cancel</a>
                 </div>
             </div>
         </div>
