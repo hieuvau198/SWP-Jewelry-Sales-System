@@ -204,13 +204,15 @@
     <header class="header-container">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="login-logout-container">
-                @if (!Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
+                @if (Accessor.HttpContext.Session.GetObject<bool>("_AuthState") != null
+                && Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
                 {
-                    <a class="nav-link login-logout" asp-page="/Authentication/LoginPage">Login</a>
+                    
+                    <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
                 }
                 else
                 {
-                    <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
+                    <a class="nav-link login-logout" asp-page="/Authentication/LoginPage">Login</a>
                 }
             </div>
             <div class="container">

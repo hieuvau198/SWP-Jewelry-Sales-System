@@ -15,10 +15,10 @@ namespace RazorTest.Models
 
         [Required]
         public string CustomerId { get; set; }
-
+        public string CustomerName { get; set; } = "Some Customer Name";
         [Required]
         public string UserId { get; set; }
-
+        public string UserFullname { get; set; } = "Some User Fullname";
         [Required]
         [DataType(DataType.Date)]
         public DateTime InvoiceDate { get; set; }

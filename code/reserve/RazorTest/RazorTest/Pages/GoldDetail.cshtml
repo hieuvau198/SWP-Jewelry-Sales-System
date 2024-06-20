@@ -9,18 +9,22 @@
     <table class="luxury-table">
         <thead>
             <tr>
-                <th>Gold Id</th>
                 <th>Gold Name</th>
-                <th>Gold Price</th>
+                <th>Buy Price</th>
+                <th>Sell Price</th>
+                <th>Unit</th>
+                <th>Update Time</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var gold in Model.Golds)
             {
                 <tr>
-                    <td>@gold.GoldId</td>
                     <td><strong>@gold.GoldName</strong></td>
-                    <td>@gold.GoldPrice</td>
+                    <td>@String.Format("{0:N0}", gold.BuyPrice)</td>
+                    <td>@String.Format("{0:N0}", gold.SellPrice)</td>
+                    <td>@gold.Unit</td>
+                    <td>@gold.Date</td>
                 </tr>
             }
         </tbody>

@@ -131,12 +131,13 @@
 }
 <br />
 
-<form method="get" action="/Sale/SaleHomePage">
-    <input type="hidden" name="Back" value="/Sale/SaleHomePage" />
-    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back to Product List</button>
-</form>
 
-<form method="post" asp-page-handler="Checkout">
+
+<form method="post" asp-page-handler="Checkout" style="text-align: center;">
     <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Checkout</button>
 </form>
 
+<form method="get" action="/Sale/SaleHomePage" style="text-align: right;">
+    <input type="hidden" name="Back" value="/Sale/SaleHomePage" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back to Product List</button>
+</form>

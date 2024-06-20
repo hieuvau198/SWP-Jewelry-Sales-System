@@ -9,6 +9,7 @@ namespace RazorTest.Models
 
         [Required]
         public string CustomerName { get; set; }
+        public string CustomerPhone { get; set; }
 
         [Required]
         public string CustomerRank { get; set; }

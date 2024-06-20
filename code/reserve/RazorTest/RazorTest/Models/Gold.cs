@@ -12,8 +12,15 @@ namespace RazorTest.Models
         [Required]
         [StringLength(200)]
         public string GoldName { get; set; }
+        public string GoldCode { get; set; } = "Not Set Yet - from FE";
 
         [Required]
-        public double GoldPrice { get; set; } = 0;
+        public string Unit { get; set; } = "1000đ/Chỉ";
+        [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
+        public double SellPrice { get; set; } = 0.0;
+        [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
+        public double BuyPrice { get; set; } = 0.0;
+        [Required]
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }

@@ -199,7 +199,7 @@ namespace RazorTest.Pages.Sale
                     {
                         item.DiscountId = discount.DiscountId;
                         item.DiscountRate = discount.DiscountRate;
-                        item.EndTotalPrice = discount.DiscountRate * item.TotalPrice;
+                        item.EndTotalPrice = (1 - discount.DiscountRate) * item.TotalPrice;
                         invoiceTotalPrice += item.TotalPrice;
                         invoiceEndTotalPrice += item.EndTotalPrice;
                     }

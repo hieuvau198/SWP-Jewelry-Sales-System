@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
+﻿
 namespace RazorTest.Models
 {
     public class InvoiceItem
@@ -11,6 +9,8 @@ namespace RazorTest.Models
         public string ProductId { get; set; }
 
         public string ProductName { get; set; }
+        public string StallId { get; set; } = "Some Stall Id";
+        public string StallName { get; set; } = "Some Stall Name";
 
         public int Quantity { get; set; }
 
