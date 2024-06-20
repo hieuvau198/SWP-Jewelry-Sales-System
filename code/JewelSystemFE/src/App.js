@@ -18,12 +18,14 @@ import OrderInvoice from "./screens/Orders/OrderInvoice";
 import CouponsAdd from "./screens/Discounts/CouponsAdd";
 import CouponsList from "./screens/Discounts/CouponsList";
 import CouponsEdit from "./screens/Discounts/CouponsEdit";
+import ProductEdit from "./screens/Products/ProductEdit";
+
+
 const ROLES = {
   Staff: "Staff",
   Manager: "Editor",
   Admin: "Admin",
 };
-
 
 function App() {
 
@@ -43,20 +45,30 @@ function App() {
               <Route path={process.env.PUBLIC_URL + "/user-list"} element={<UserList />} />
               <Route path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
-              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />          
-              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />       
-              <Route path={process.env.PUBLIC_URL + "/order"} element={<OrderInvoice />} />  
-              <Route path={process.env.PUBLIC_URL + "/discount-list"} element={<CouponsList />} /> 
-              <Route path={process.env.PUBLIC_URL + "/discount-add"} element={<CouponsAdd />} /> 
-              <Route path={process.env.PUBLIC_URL + "/discount-Edit"} element={<CouponsEdit />} />   
-                                                                                          
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />  
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />
+              
             </Route>
         </Route>
         <Route element={<RequireAuth allowedRoles={[ROLES.Staff]} />}>
             <Route path="/"  element={<MainIndex />}>
-              <Route index element={<Dashboard />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
-              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />                                 
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />
+              <Route path={process.env.PUBLIC_URL + "/checkout"} element={<CheckOut />} />
+            </Route>
+        </Route>
+        <Route element={<RequireAuth allowedRoles={[ROLES.Manager]} />}>
+            <Route path="/"  element={<MainIndex />}>
+              <Route path={process.env.PUBLIC_URL + "/user-list"} element={<UserList />} />
+              <Route path={process.env.PUBLIC_URL + "/product-add"} element={<ProductAdd />} />
+              <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />
+              <Route path={process.env.PUBLIC_URL + "/product-edit"} element={<ProductEdit />} />
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />
+              <Route path={process.env.PUBLIC_URL + "/discount-list"} element={<CouponsList />} />
+              <Route path={process.env.PUBLIC_URL + "/discount-add"} element={<CouponsAdd />} />
+              <Route path={process.env.PUBLIC_URL + "/discount-Edit"} element={<CouponsEdit />} />
+              <Route path={process.env.PUBLIC_URL + "/order"} element={<OrderInvoice />} />
             </Route>
         </Route>
     </ReactRoutes>
