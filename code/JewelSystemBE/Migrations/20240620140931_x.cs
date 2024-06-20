@@ -53,7 +53,11 @@ namespace JewelSystemBE.Migrations
                 {
                     gem_id = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     gem_name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    gem_price = table.Column<double>(type: "float", nullable: false)
+                    GemCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Unit = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BuyPrice = table.Column<double>(type: "float", nullable: false),
+                    gem_price = table.Column<double>(type: "float", nullable: false),
+                    GemWeight = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -163,7 +167,7 @@ namespace JewelSystemBE.Migrations
                     markup_rate = table.Column<double>(type: "float", nullable: false),
                     gem_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    gem_weight = table.Column<double>(type: "float", nullable: false),
+                    GemWeight = table.Column<double>(type: "float", nullable: false),
                     gold_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GoldName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     gold_weight = table.Column<double>(type: "float", nullable: false),
@@ -254,11 +258,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "14bcc087-cb31-4fbe-9f29-7fbfa2462b6b", "Some Product Id", "Some Product Name", 0 },
-                    { "24e1ba0c-4424-4e8f-909b-93d33ae86199", "Some Product Id", "Some Product Name", 0 },
-                    { "42fe5699-2e28-4890-a424-dc7cfebab875", "Some Product Id", "Some Product Name", 0 },
-                    { "94109fcf-e104-4d2f-bb12-45b33ecc694c", "Some Product Id", "Some Product Name", 0 },
-                    { "be60fb52-af41-4f2a-bc94-27a64c10d830", "Some Product Id", "Some Product Name", 0 }
+                    { "0a065800-0367-40db-a551-b3c32700c22e", "Some Product Id", "Some Product Name", 0 },
+                    { "1ff834bd-a6d1-4111-90ff-4e2e115242bc", "Some Product Id", "Some Product Name", 0 },
+                    { "23a6c7e8-f884-4725-8a86-e4410120d938", "Some Product Id", "Some Product Name", 0 },
+                    { "8bc9f1d1-cc4d-4c4c-ac29-3578c5a460d0", "Some Product Id", "Some Product Name", 0 },
+                    { "a1da4e08-01f2-4cae-9a10-74bebb878cd6", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -299,14 +303,59 @@ namespace JewelSystemBE.Migrations
 
             migrationBuilder.InsertData(
                 table: "gem",
-                columns: new[] { "gem_id", "gem_name", "gem_price" },
+                columns: new[] { "gem_id", "BuyPrice", "GemCode", "gem_name", "gem_price", "GemWeight", "Unit" },
                 values: new object[,]
                 {
-                    { "GE1", "Ruby", 1000.0 },
-                    { "GE2", "Sapphire", 1500.0 },
-                    { "GE3", "Emerald", 1200.0 },
-                    { "GE4", "Diamond", 5000.0 },
-                    { "GE5", "Topaz", 800.0 }
+                    { "GE001", 50000000.0, "JSG-R1", "Natural Mozambique Ruby", 58000000.0, 0.97999999999999998, "ct" },
+                    { "GE002", 170000000.0, "JSG-R2", "Burmese Ruby", 190000000.0, 28.0, "ct" },
+                    { "GE003", 8235000.0, "JSG-R3", "Thai Ruby", 9756000.0, 9.9399999999999995, "ct" },
+                    { "GE004", 1322012.0, "JSG-R4", "India Ruby", 1709078.0, 5.9100000000000001, "ct" },
+                    { "GE005", 6900000.0, "JSG-R5", "Mozambique Ruby", 7859078.0, 0.33000000000000002, "ct" },
+                    { "GE006", 3700000.0, "JSG-R6", "Heated Natural Ruby", 4166666.0, 0.34000000000000002, "ct" },
+                    { "GE007", 8989000.0, "JSG-R7", "Mozambique Ruby", 9789973.0, 0.35999999999999999, "ct" },
+                    { "GE008", 4950000.0, "JSG-R8", "Mozambique Ruby (Heated)", 5826558.0, 0.48999999999999999, "ct" },
+                    { "GE009", 11900000.0, "JSG-R9", "Mozambique Ruby", 13000000.0, 0.48999999999999999, "ct" },
+                    { "GE010", 3000000.0, "JSG-R10", "Burma Ruby", 3658000.0, 0.54000000000000004, "ct" },
+                    { "GE011", 30000000.0, "JSG-S1", "Natural Ceylon Sapphire", 35000000.0, 1.02, "ct" },
+                    { "GE012", 65000000.0, "JSG-S2", "Burmese Sapphire", 75000000.0, 2.75, "ct" },
+                    { "GE013", 22000000.0, "JSG-S3", "Madagascar Sapphire", 26000000.0, 1.5, "ct" },
+                    { "GE014", 18000000.0, "JSG-S4", "Australian Sapphire", 21000000.0, 3.2000000000000002, "ct" },
+                    { "GE015", 120000000.0, "JSG-S5", "Kashmir Sapphire", 140000000.0, 0.94999999999999996, "ct" },
+                    { "GE016", 45000000.0, "JSG-S6", "Heated Natural Sapphire", 50000000.0, 2.1000000000000001, "ct" },
+                    { "GE017", 35000000.0, "JSG-S7", "Thai Sapphire", 40000000.0, 1.8, "ct" },
+                    { "GE018", 5000000.0, "JSG-S8", "Montana Sapphire", 6000000.0, 0.71999999999999997, "ct" },
+                    { "GE019", 28000000.0, "JSG-S9", "Ethiopian Sapphire", 32000000.0, 1.3, "ct" },
+                    { "GE020", 150000000.0, "JSG-S10", "Padparadscha Sapphire", 180000000.0, 1.0, "ct" },
+                    { "GE021", 5000000.0, "JSG-C1", "Moonstone Cabochon", 6000000.0, 3.5, "ct" },
+                    { "GE022", 12000000.0, "JSG-C2", "Opal Cabochon", 15000000.0, 2.1000000000000001, "ct" },
+                    { "GE023", 3000000.0, "JSG-C3", "Turquoise Cabochon", 4000000.0, 4.7000000000000002, "ct" },
+                    { "GE024", 2000000.0, "JSG-C4", "Labradorite Cabochon", 3000000.0, 5.0, "ct" },
+                    { "GE025", 25000000.0, "JSG-C5", "Star Sapphire Cabochon", 30000000.0, 3.2000000000000002, "ct" },
+                    { "GE026", 45000000.0, "JSG-C6", "Cat's Eye Chrysoberyl Cabochon", 52000000.0, 2.5, "ct" },
+                    { "GE027", 15000000.0, "JSG-C7", "Jade Cabochon", 18000000.0, 6.7999999999999998, "ct" },
+                    { "GE028", 5000000.0, "JSG-C8", "Lapis Lazuli Cabochon", 6000000.0, 7.5, "ct" },
+                    { "GE029", 2000000.0, "JSG-C9", "Amazonite Cabochon", 2500000.0, 4.2000000000000002, "ct" },
+                    { "GE030", 7000000.0, "JSG-C10", "Garnet Cabochon", 8500000.0, 3.0, "ct" },
+                    { "GE031", 50000000.0, "JSG-E1", "Colombian Emerald", 58000000.0, 1.2, "ct" },
+                    { "GE032", 120000000.0, "JSG-E2", "Zambian Emerald", 140000000.0, 2.5, "ct" },
+                    { "GE033", 80000000.0, "JSG-E3", "Brazilian Emerald", 92000000.0, 1.8, "ct" },
+                    { "GE034", 60000000.0, "JSG-E4", "Afghan Emerald", 75000000.0, 2.2000000000000002, "ct" },
+                    { "GE035", 70000000.0, "JSG-E5", "Russian Emerald", 82000000.0, 1.5, "ct" },
+                    { "GE036", 15000000.0, "JSG-E6", "Synthetic Emerald", 18000000.0, 3.0, "ct" },
+                    { "GE037", 100000000.0, "JSG-E7", "Zambian Emerald", 120000000.0, 1.1000000000000001, "ct" },
+                    { "GE038", 45000000.0, "JSG-E8", "Colombian Emerald", 52000000.0, 0.90000000000000002, "ct" },
+                    { "GE039", 95000000.0, "JSG-E9", "Brazilian Emerald", 110000000.0, 2.7000000000000002, "ct" },
+                    { "GE040", 55000000.0, "JSG-E10", "Ethiopian Emerald", 65000000.0, 1.3, "ct" },
+                    { "GE041", 150000000.0, "JSG-D1", "Round Brilliant Diamond", 170000000.0, 1.0, "ct" },
+                    { "GE042", 250000000.0, "JSG-D2", "Princess Cut Diamond", 290000000.0, 1.5, "ct" },
+                    { "GE043", 400000000.0, "JSG-D3", "Emerald Cut Diamond", 450000000.0, 2.0, "ct" },
+                    { "GE044", 180000000.0, "JSG-D4", "Oval Diamond", 210000000.0, 1.2, "ct" },
+                    { "GE045", 320000000.0, "JSG-D5", "Cushion Cut Diamond", 370000000.0, 1.8, "ct" },
+                    { "GE046", 200000000.0, "JSG-D6", "Asscher Cut Diamond", 230000000.0, 1.3, "ct" },
+                    { "GE047", 280000000.0, "JSG-D7", "Marquise Diamond", 320000000.0, 1.6000000000000001, "ct" },
+                    { "GE048", 170000000.0, "JSG-D8", "Radiant Cut Diamond", 200000000.0, 1.1000000000000001, "ct" },
+                    { "GE049", 230000000.0, "JSG-D9", "Pear Shaped Diamond", 270000000.0, 1.3999999999999999, "ct" },
+                    { "GE050", 150000000.0, "JSG-D10", "Heart Shaped Diamond", 180000000.0, 1.0, "ct" }
                 });
 
             migrationBuilder.InsertData(
@@ -314,10 +363,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(6304), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(6301), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(6297), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(6276), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2203), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2199), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2197), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2183), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
@@ -356,15 +405,15 @@ namespace JewelSystemBE.Migrations
 
             migrationBuilder.InsertData(
                 table: "product",
-                columns: new[] { "product_id", "created_at", "gem_id", "GemName", "gem_weight", "gold_id", "GoldName", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight", "TotalPrice", "UnitPrice" },
+                columns: new[] { "product_id", "created_at", "gem_id", "GemName", "GemWeight", "gold_id", "GoldName", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight", "TotalPrice", "UnitPrice" },
                 values: new object[,]
                 {
-                    { "P001", new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(8815), "GE1", "Some Gem Name", 5.0, "vang24k", "Some Gold Name", 45.0, 200.0, 1.2, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
-                    { "P002", new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(8828), "GE2", "Some Gem Name", 2.0, "vang10k", "Some Gold Name", 18.0, 100.0, 1.5, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0, 0.0, 0.0 },
-                    { "P003", new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(8834), "GE3", "Some Gem Name", 3.0, "vang24k", "Some Gold Name", 27.0, 150.0, 1.3, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0, 0.0, 0.0 },
-                    { "P004", new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(8840), "GE4", "Some Gem Name", 1.5, "vang10k", "Some Gold Name", 13.5, 180.0, 1.7, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earring", 24, 15.0, 0.0, 0.0 },
-                    { "P005", new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(8845), "GE5", "Some Gem Name", 2.5, "vang10k", "Some Gold Name", 7.5, 90.0, 1.1000000000000001, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Necklace", 6, 10.0, 0.0, 0.0 },
-                    { "P006", new DateTime(2024, 6, 20, 19, 29, 19, 245, DateTimeKind.Local).AddTicks(8850), "GE1", "Some Gem Name", 4.0, "vang24k", "Some Gold Name", 21.0, 130.0, 1.2, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0, 0.0, 0.0 }
+                    { "P001", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3889), "GE001", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 45.0, 200.0, 1.2, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
+                    { "P002", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3894), "GE005", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 18.0, 100.0, 1.5, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0, 0.0, 0.0 },
+                    { "P003", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3897), "GE015", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 27.0, 150.0, 1.3, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0, 0.0, 0.0 },
+                    { "P004", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3901), "GE035", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 13.5, 180.0, 1.7, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earring", 24, 15.0, 0.0, 0.0 },
+                    { "P005", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3904), "GE045", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 7.5, 90.0, 1.1000000000000001, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Necklace", 6, 10.0, 0.0, 0.0 },
+                    { "P006", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3908), "GE025", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 21.0, 130.0, 1.2, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0, 0.0, 0.0 }
                 });
 
             migrationBuilder.InsertData(
@@ -372,14 +421,14 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$DAoyHaiX76MV7NHbftIe1OYtHnVXN.Lvzg7IIE6pU7Fmb6zl3HsF.", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$qn/283LQysKix1Tdkcs71OMs2SnfOXoOCCOTGGnLLFSIld0OD1Diq", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$5CAeY873aXirb2BA2rCmGej0IFCcH6I0V8soZqhB5zID35SeXfZzi", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$nFSSRHphqEB144bpzPD/T.buooLE6vFwbxOZ5rGyaFBS9gU7R37h6", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$A7lAXniDKTaoCZithJotT.ZlW/KwUdsM1tK8XX4VGKywVgZ1nf7mm", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$2JsEptAhXeQhJ/u52nyLjOOaDhby5RatPX1jVzlV8xM.EGLq1XMzG", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$YWPfLN/r/SSDkFXi2RX3POw/oa0E4FH2iu0U1kJoBa4lc3S.B4ig2", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$jzolpZXaWRuJqNdB.bHD8.ASnYXj7aD0J6qBamRnIir89rjmZH90G", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$ust6h9lq1eeyVwUK1.Y7puVyIudsMtf.vrvRGf7PgICl7rwYpLldO", "Admin", "user1" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$T/IgV93/3LAhliCpFAX5ru9VConekNHrld19M.P.BXubkH2Qsegv2", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$hp4qyc2SsazOAXFQ51.GEufFXQpivWnulkvCTTAnJgTaVeToeOpdC", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$v.Y7RNlfE3sKETeUbnH03eeQto.R6CnvOUrQf4ntJWNOjKyltD8pq", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$Qb8l4rWVeVbfsEk6/aaTeOEmYchmvzP.GO0o.dt/bKNaKHLyztW42", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$UbTCpeBsXzpown8t44tW8.APrFjLbiOhlMWx/iTtdgKA7L.IqWmzi", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$.c3Owbw6Y04YZyk81Ab8QO.tHioTDtYElOS.1WCNY5mQh1auymgc6", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$eVOYztjoJEEcFgqg9iMRvO7MaOHn4u3kFnI0/637aippi4DX.Aore", "Sale", "user8" }
                 });
 
             migrationBuilder.InsertData(
