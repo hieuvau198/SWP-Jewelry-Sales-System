@@ -12,50 +12,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Customer - RazorTest</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Custom styles -->
     <style>
         body {
             background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
-            color: #495057;
+            font-family: 'Poppins', sans-serif;
+            color: #b8860b; /* Set the text color */
         }
 
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            background-color: #fff;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 5rem;
         }
 
-        .form-group label {
-            font-weight: 600;
-            color: #b8860b; /* Set label text color */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px; /* Adjusted width */
+            margin: auto;
+            background-color: #fff; /* White background */
+            padding: 1.5rem;
         }
+
+        .card-header h1 {
+            color: #b8860b; /* Set the heading color */
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 0;
+        }
+
+        .form-group {
+            padding: 1rem 0;
+        }
+
+            .form-group label {
+                font-weight: 600;
+                color: #b8860b; /* Set the label text color */
+            }
 
         .form-control {
-            color: #495057; /* Set input text color */
+            color: #b8860b; /* Set the input text color */
         }
 
         .btn-primary {
             background-color: #b8860b;
             border-color: #b8860b;
-            color: #fff; /* Set button text color */
+            width: 100%; /* Full width button */
         }
 
             .btn-primary:hover {
-                background-color: #a5702b; /* Darker shade of yellow on hover */
-                border-color: #a5702b;
+                background-color: #b8860b;
+                border-color: #b8860b;
+            }
+
+        .btn-secondary {
+            background-color: #f0ad4e; /* Orange button */
+            border-color: #f0ad4e;
+            color: #fff; /* White text color */
+            width: 100%; /* Full width button */
+        }
+
+            .btn-secondary:hover {
+                background-color: #ec971f; /* Darker shade of orange on hover */
+                border-color: #ec971f;
             }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Edit Customer</h1>
-        <h4>Customer</h4>
-        <hr />
-        <div class="row">
-            <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h1>Edit Customer</h1>
+            </div>
+            <div class="card-body">
                 <form method="post">
                     <input type="hidden" asp-for="Customer.CustomerId" />
                     <div class="form-group">
@@ -83,16 +117,13 @@
                     </div>
                 </form>
             </div>
-        </div>
-
-        <div>
-            <a asp-page="./CustomerDetail" class="btn btn-secondary">Back to List</a>
+            <div class="card-footer">
+                <a asp-page="./CustomerDetail" class="btn btn-secondary">Back to List</a>
+            </div>
         </div>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JS (if needed) -->
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    @* Include partial validation scripts *@
-    @await Html.RenderPartialAsync("_ValidationScriptsPartial")
 </body>
 </html>
