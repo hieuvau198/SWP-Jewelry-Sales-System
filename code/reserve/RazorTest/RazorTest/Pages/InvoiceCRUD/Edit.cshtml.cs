@@ -68,7 +68,7 @@ namespace RazorTest.Pages.InvoiceCRUD
                 }
                 else if(HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals("Cashier"))
                 {
-                    Invoice.InvoiceStatus = "Completed";
+                    Invoice.InvoiceStatus = "Complete";
                 }
             }
             

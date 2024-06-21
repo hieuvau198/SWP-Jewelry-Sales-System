@@ -10,17 +10,18 @@ namespace RazorTest.Pages.Buy
 {
     public class ProcessingModel : PageModel
     {
+        
+        public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
+        public const string SessionKeyBuyCustomerObject = "_BuyCustomerObject";
+
         public const string SessionKeyInvoiceList = "_InvoiceList";
         public const string SessionKeyBuyInvoiceList = "_BuyInvoiceList";
-        public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
-        public const string SessionKeyBuyInvoiceSearch = "_BuyInvoiceSearch";
-
         public const string SessionKeyCustomerList = "_CustomerList";
-        public const string SessionKeyBuyCustomerObject = "_BuyCustomerObject";
-        public const string SessionKeyBuyCustomerSearch = "_BuyCustomerSearch";
-
         public const string SessionKeyInvoiceItemList = "_InvoiceItemList";
         public const string SessionKeyBuyInvoiceItemList = "_BuyInvoiceItemList";
+
+        public const string SessionKeyBuyInvoiceSearch = "_BuyInvoiceSearch";
+        public const string SessionKeyBuyCustomerSearch = "_BuyCustomerSearch";
 
         public const string SessionKeyMessage = "_Message";
 
@@ -95,30 +96,35 @@ namespace RazorTest.Pages.Buy
                 CustomerList = HttpContext.Session.GetObject<List<Customer>>(SessionKeyCustomerList)
                     ?? await _apiService.GetAsync<List<Customer>>(UrlCustomer);
                 BuyInvoiceList = new List<Invoice>();
+
             //Set Data If client search for InvoiceId 
-            if (!buyInvoiceSearch.Equals(""))
-            {
-                Invoice invoice = InvoiceList.Find(x => x.InvoiceId == buyInvoiceSearch);
-                if(invoice != null)
+                if (!buyInvoiceSearch.Equals(""))
                 {
-                    BuyInvoiceList.Add(invoice);
-                }
-            }
-            if(!buyCustomerSearch.Equals(""))
-            {
-                Customer customer = CustomerList.Find(x => x.CustomerPhone == buyCustomerSearch);
-                if(customer != null)
-                {
-                    foreach(var invoice in InvoiceList)
+                    Invoice invoice = InvoiceList.Find(x => x.InvoiceId == buyInvoiceSearch);
+                    if(invoice != null 
+                        && invoice.InvoiceStatus.Equals("Complete")
+                        && invoice.InvoiceType.Equals("Sale"))
                     {
-                        if(invoice.CustomerId.Equals(customer.CustomerId))
+                        BuyInvoiceList.Add(invoice);
+                    }
+                }
+                if(!buyCustomerSearch.Equals(""))
+                {
+                    Customer customer = CustomerList.Find(x => x.CustomerPhone == buyCustomerSearch);
+                    if(customer != null)
+                    {
+                        foreach(var invoice in InvoiceList)
                         {
-                            BuyInvoiceList.Add(invoice);
+                            if(invoice.CustomerId.Equals(customer.CustomerId) 
+                                && invoice.InvoiceStatus.Equals("Complete")
+                                && invoice.InvoiceType.Equals("Sale"))
+                            {
+                                BuyInvoiceList.Add(invoice);
+                            }
                         }
                     }
                 }
-            }
-            HttpContext.Session.SetObject(SessionKeyBuyInvoiceList, BuyInvoiceList);
+                HttpContext.Session.SetObject(SessionKeyBuyInvoiceList, BuyInvoiceList);
 
             return RedirectToPage();
         }

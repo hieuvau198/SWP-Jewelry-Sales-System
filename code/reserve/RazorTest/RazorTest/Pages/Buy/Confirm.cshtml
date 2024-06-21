@@ -4,46 +4,47 @@
 }
 <h2>ITEM</h2>
 
-@if(Model.BuyInvoiceItemObject != null){
+@if (Model.BuyConfirmInvoiceItemObject != null)
+{
     <table>
         <tr>
-            <th>Invoice Item ID</th>
-            <td>@Model.BuyInvoiceItemObject.ProductId</td>
+            <th>ID</th>
+            <td>@Model.BuyConfirmInvoiceItemObject.InvoiceItemId</td>
         </tr>
         <tr>
             <th>Product Name</th>
-            <td>@Model.BuyInvoiceItemObject.ProductName</td>
+            <td>@Model.BuyConfirmInvoiceItemObject.ProductName</td>
         </tr>
         <tr>
             <th>Quantity</th>
-            <td>@Model.BuyInvoiceItemObject.Quantity</td>
+            <td>@Model.BuyConfirmInvoiceItemObject.Quantity</td>
         </tr>
         <tr>
-            <th>Unit Price</th>
-            <td>@Model.BuyInvoiceItemObject.UnitPrice</td>
+            <th>Price</th>
+            <td>@Model.BuyConfirmInvoiceItemObject.UnitPrice</td>
         </tr>
     </table>
 }
 
 <h2>Buying State</h2>
-@if (Model.BuyProductObject != null)
+@if (Model.BuyConfirmInvoiceObject != null)
 {
     <table>
         <tr>
-            <th>Product Code</th>
-            <td>@Model.BuyProductObject.ProductId</td>
+            <th>Invoice ID</th>
+            <td>@Model.BuyConfirmInvoiceObject.InvoiceId</td>
         </tr>
         <tr>
-            <th>Product Name</th>
-            <td>@Model.BuyProductObject.ProductName</td>
+            <th>Employee</th>
+            <td>@Model.BuyConfirmInvoiceObject.UserFullname</td>
         </tr>
         <tr>
-            <th>Quantity</th>
-            <td>@Model.BuyProductObject.ProductQuantity</td>
+            <th>Customer</th>
+            <td>@Model.BuyConfirmInvoiceObject.CustomerName</td>
         </tr>
         <tr>
-            <th>Buy Price</th>
-            <td>@Model.BuyProductObject.BuyPrice</td>
+            <th>Price</th>
+            <td>@Model.BuyConfirmInvoiceObject.EndTotalPrice</td>
         </tr>
     </table>
 

@@ -2,7 +2,7 @@
 @model RazorTest.Pages.Buy.BuyBackModel
 @{
 }
-<h2>Invoice Details</h2>
+<h2>Details</h2>
 
 @if (Model.BuyInvoiceObject != null)
 {
@@ -16,18 +16,27 @@
             <td>@Model.BuyInvoiceObject.CustomerName</td>
         </tr>
         <tr>
+            <th>Sale Staff:</th>
+            <td>@Model.BuyInvoiceObject.UserFullname</td>
+        </tr>
+        <tr>
             <th>Total Price:</th>
             <td>@String.Format("{0:N0} VND", Model.BuyInvoiceObject.EndTotalPrice)</td>
         </tr>
+        <tr>
+            <th>Date</th>
+            <td>@Model.BuyInvoiceObject.InvoiceDate</td>
+        </tr>
     </table>
 
-    <h3>Products</h3>
+    <h3>Items</h3>
     <table>
         <thead>
             <tr>
                 <th>Product Name</th>
                 <th>Quantity</th>
-                <th>Buy Price</th>
+                <th>Original Unit Price</th>
+                <th>Sell Price</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -38,10 +47,11 @@
                     <td>@item.ProductName</td>
                     <td>@item.Quantity</td>
                     <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+                    <td>@String.Format("{0:N0} VND", item.EndTotalPrice/item.Quantity)</td>
                     <td>
                         <form method="post" asp-page-handler="BuyItem">
                             <input type="hidden" id="invoiceItemId" name="invoiceItemId" value="@item.InvoiceItemId" />
-                            <button type="submit">Buy Back</button>
+                            <button type="submit">Request Buy Order</button>
                         </form>
                     </td>
                 </tr>

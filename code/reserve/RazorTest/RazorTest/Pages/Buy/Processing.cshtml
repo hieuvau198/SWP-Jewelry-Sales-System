@@ -4,7 +4,6 @@
     ViewData["Title"] = "Buy Back - Processing";
 }
 
-<h2>Search</h2>
 
 <form method="post" asp-page-handler="Search">
     <label for="invoiceId">Invoice ID:</label>
@@ -24,7 +23,7 @@
             <tr>
                 <th>Invoice Id</th>
                 <th>Customer Name</th>
-                <th>Total Price</th>
+                <th>Total Price (VND)</th>
                 <th>Date</th>
                 <th>Status</th>
                 <th>Action</th>
@@ -36,7 +35,7 @@
                 <tr>
                     <td>@invoice.InvoiceId</td>  
                     <td>@invoice.CustomerName</td>
-                    <td>@String.Format("{0:N0} VND", invoice.TotalPrice)</td>
+                    <td>@String.Format("{0:N0}", invoice.TotalPrice)</td>
                     <td>@invoice.InvoiceDate</td>
                     <td>@invoice.InvoiceStatus</td>
                     <td>
