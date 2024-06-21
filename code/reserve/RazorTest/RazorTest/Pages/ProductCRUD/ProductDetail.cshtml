@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Products";
 }
-
+    
 <h2 style="text-align: center;">Products</h2>
 <div class="luxury-table-wrapper">
     <table class="luxury-table">
@@ -29,7 +29,7 @@
         <tbody>
             @foreach (var product in Model.Products)
             {
-                <tr>
+                <tr>    
                     <td><strong>@product.ProductId</strong></td>
                     <td>@product.ProductCode</td>
                     <td>@product.ProductName</td>

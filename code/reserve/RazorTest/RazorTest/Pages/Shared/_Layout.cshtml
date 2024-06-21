@@ -12,7 +12,7 @@
     <style>
         /* Custom styles */
         body {
-            background-color: #FFFFFF;
+            background-color: white;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -20,7 +20,7 @@
         }
 
         .navbar {
-            background-color: #FFFFFF;
+            background-color: white;
         }
 
         .navbar-brand-container {
@@ -120,6 +120,8 @@
 
         /* Add border to footer if you have one */
         footer {
+            background-color: #F5F5F5 !important; /* Màu nền của footer */
+            color: #8B4513 !important; /* Màu chữ của footer */
             border-top: 1px solid #D3B183;
             padding-top: 10px;
             margin-top: auto;
@@ -207,7 +209,6 @@
                 @if (Accessor.HttpContext.Session.GetObject<bool>("_AuthState") != null
                 && Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
                 {
-                    
                     <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
                 }
                 else
