@@ -22,8 +22,44 @@
         }
 
         body {
-            font-family: "Open Sans";
+            font-family: "Open Sans", sans-serif;
         }
+
+        .sidebar {
+            height: 100%;
+            width: 300px;
+            position: fixed;
+            top: 156px; /* Adjust this value based on your header height */
+            bottom: 155px;
+            left: 0px;
+            padding-top: 20px;
+        }
+
+            .sidebar a {
+                padding: 15px 8px 15px 16px;
+                text-decoration: none;
+                font-size: 18px;
+                color: #8B4513;
+                display: block;
+                border: 1px solid transparent;
+                margin-bottom: 8px; /* Khoảng cách giữa các liên kết */
+                transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Hiệu ứng chuyển đổi màu */
+            }
+            
+
+                .sidebar a:hover {
+                    background-color: #8B4513;
+                    color: #F5F5F5;
+                    border-color: black;
+                }
+
+            .sidebar .submenu {
+                display: none; /* Hide submenu by default */
+            }
+
+            .sidebar .submenu a {
+                padding-left: 32px;
+            }
 
         .link-table {
             width: 100%;
@@ -69,66 +105,195 @@
                 margin: 5px 0 0;
             }
 
-        .navbar {
-            background-color: #f8f9fa;
-            padding: 10px 0;
-        }
-
-            .navbar a {
-                text-decoration: none;
-                padding: 10px 20px;
-                display: inline-block;
-                color: #333;
-            }
-
-                .navbar a:hover {
-                    background-color: #ddd;
-                }
-
         .main-content {
             padding: 20px;
+           /*  margin-left: 270px; */ /* Adjust to avoid overlap with sidebar */
         }
 
+        /* CSS for Footer */
         .footer {
-            background-color: #333;
-            color: white;
+            background-color: white;
+            color: #8B4513;
             padding: 20px;
             text-align: center;
         }
 
             .footer a {
-                color: #f8f9fa;
+                color: #8B4513;
                 text-decoration: none;
             }
 
                 .footer a:hover {
                     text-decoration: underline;
                 }
+
+        .product, .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .product img, .cart-item img {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+        .cart-total {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .subscribe-modal .w3-modal-content {
+            padding: 32px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+
+            .form-container h3 {
+                margin-bottom: 20px;
+            }
+
+        /* CSS for product list */
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa các phần tử */
+            text-align: center; /* Căn giữa text */
+        }
+
+        .product-list {
+            border: 1px solid #ddd;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+            .product-list h3 {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+            .product .product-image-wrapper {
+                width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
+                max-width: 300px; /* Đặt kích thước tối đa của ảnh */
+                margin-bottom: 20px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+            }
+
+            .product .product-name {
+                margin-top: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+                margin-bottom: 30px;
+            }
+
+            .product .product-image {
+                width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
+                height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+                max-width: 300px; /* Đặt kích thước tối đa của ảnh */
+            }
+        /* CSS for carousel images */
+        .carousel-img {
+            width: 100%;
+            height: 500px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure images cover the area without distortion */
+        }
+
     </style>
 </head>
 <body class="w3-light-grey">
-    <!-- Main Container -->
+
+     <!-- Main Container --> 
     <div class="w3-content" style="max-width:1600px">
 
-        <!-- Header -->
+         <!-- Header --> 
         <header class="header-title w3-center w3-padding-48 w3-white">
             <h1>Jewelry Store</h1>
             <p>Your Ultimate Destination for Exquisite Jewelry</p>
         </header>
 
-        <!-- Image header -->
-        <header class="w3-display-container w3-wide" id="home">
-            <img class="w3-image" src="~/ProductImages/3.jpg" alt="Jewelry" width="1600" height="800">
-            <div class="w3-display-left w3-padding-large">
-                <h1 class="w3-text-white">Luxury Redefined</h1>
-                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        <!-- Image header with carousel -->
+        <div class="w3-content w3-display-container" style="max-width:1600px;">
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/5.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
             </div>
-        </header>
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/11.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/12.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/13.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/14.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/15.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
+            </div>
+            <div class="w3-display-container mySlides">
+                <img src="~/ProductImages/16.jpg" class="carousel-img">
+                <div class="w3-display-left w3-padding-large">
+                    <h1 class="w3-text-white">Luxury Redefined</h1>
+                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+                </div>
+            </div>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
 
-        <!-- Main Content Grid -->
+         <!-- Main Content Grid --> 
         <div class="w3-row w3-padding w3-border main-content">
 
-            <!-- Blog entries / Main section -->
+            @* <!-- Blog entries / Main section --> *@
             <div class="w3-col l8 s12">
                 <div class="w3-card-4 w3-margin w3-white">
                     <img src="~/ProductImages/KimCuongg.jpg" alt="Diamond" style="width:auto">
@@ -151,12 +316,45 @@
                 </div>
                 <hr>
 
-                <!-- More blog entries can be added here -->
+                <!--Product List-->
+                <div class="w3-card-4 w3-margin w3-white product-list">
+                    <h3>Product List</h3>
+                    <div class="w3-row-padding">
+                        @foreach (var product in Model.PaginatedProducts)
+                        {
+                            <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
+                                <div class="product">
+                                    <div class="product-image-wrapper">
+                                        <img src="/ProductImages/@product.ProductImages" class="product-image" />
+                                    </div>
+                                    <div class="product-name">@product.ProductName</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <hr>
+                <!-- Pagination-->
+                <div class="w3-center">
+                    @if (Model.PaginatedProducts.HasPreviousPage)
+                    {
+                        <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button">&laquo; Previous</a>
+                    }
+                    @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
+                    {
+                        <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-blue" : "")">@i</a>
+                    }
+                    @if (Model.PaginatedProducts.HasNextPage)
+                    {
+                        <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button">Next &raquo;</a>
+                    }
+                </div>
+
             </div>
 
-            <!-- Sidebar / Info section -->
+            <!--Sidebar / Info section-->
             <div class="w3-col l4">
-                <!-- About Card -->
+                @* <!-- About Card --> *@
                 <div class="w3-card w3-margin w3-margin-top">
                     <img src="/ProductImages/diamond_earrings.jpg" alt="About" style="width:auto" class="w3-grayscale">
                     <div class="w3-container w3-white">
@@ -166,7 +364,7 @@
                 </div>
                 <hr>
 
-                <!-- Navigation and Authentication Section -->
+                <!--Navigation and Authentication Section-->
                 @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
                 {
                     <div class="w3-card w3-margin">
@@ -229,14 +427,11 @@
                                     {
                                         <tr>
                                             <td>Sale Feature</td>
-                                            <td><a asp-page="/Sale/SaleHomePage">Access</a></td>
+                                            <td><a asp-page="/Sale/SaleHomePage">Access The Sale Feature</a></td>
                                         </tr>
-                                    }
-                                    @if (Model.VerifyAuth("Sale"))
-                                    {
                                         <tr>
                                             <td>Buy Feature</td>
-                                            <td><a asp-page="/Buy/Processing">Access</a></td>
+                                            <td><a asp-page="/Buy/Processing">Access The Sale Feature</a></td>
                                         </tr>
                                     }
                                     <tr>
@@ -252,53 +447,37 @@
                         </div>
                     </div>
                 }
-                else
-                {
-                    <div class="w3-card w3-margin">
-                        <div class="w3-container w3-padding">
-                            <h4>Navigation</h4>
-                            <table class="link-table">
-                                <thead>
-                                    <tr>
-                                        <th>Section</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Login Feature</td>
-                                        <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                }
-
             </div>
         </div>
-
-
         <br>
 
-        <!-- Subscribe Modal -->
-        <div id="subscribe" class="w3-modal w3-animate-opacity">
-            <div class="w3-modal-content" style="padding:32px">
-                <div class="w3-container w3-white w3-center">
-                    <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-                    <h2 class="w3-wide">SUBSCRIBE</h2>
-                    <p>Join our mailing list to receive updates on the latest jewelry collections and special offers.</p>
-                    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-                    <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
-                </div>
+        <!-- Sidebar/menu -->
+        <nav class="sidebar">
+            <a href="#">Dashboard</a>
+            <a href="javascript:void(0)" onclick="toggleSubMenu()">Products</a>
+            <div class="submenu">
+                <a href="#">Product List</a>
+                <a href="#">Product Edit</a>
+                <a href="#">Product Detail</a>
+                <a href="#">Product Add</a>
+                <a href="#">Shopping Cart</a>
             </div>
-        </div>
+            <a href="#">User List</a>
+            <a href="#">Order Invoice</a>
+        </nav>
+
 
         <!-- Footer -->
-        <footer class="footer w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-            <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-            <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <footer class="footer w3-container w3-padding-32 w3-margin-top">
+            <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+                <a href="#" class="w3-hover-opacity"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+                <a href="#" class="w3-hover-opacity"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+                <a href="#" class="w3-hover-opacity"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+                <a href="#" class="w3-hover-opacity"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
+                <a href="#" class="w3-hover-opacity"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+                <a href="#" class="w3-hover-opacity"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+            </div>
         </footer>
 
         <script>
@@ -317,7 +496,48 @@
                 x.style.fontWeight = "bold";
                 x.innerHTML = "✓ Liked";
             }
+
+            function toggleSubMenu() {
+                var submenu = document.querySelector('.submenu');
+                if (submenu.style.display === 'block') {
+                    submenu.style.display = 'none';
+                } else {
+                    submenu.style.display = 'block';
+                }
+            }
+
+            var slideIndex = 0;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n >= x.length) { slideIndex = 0 }
+                if (n < 0) { slideIndex = x.length - 1 }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex].style.display = "block";
+            }
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) { slideIndex = 1 }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000); // Change image every 3 seconds
+            }
+            carousel();
         </script>
     </div>
 </body>
 </html>
+
