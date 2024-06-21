@@ -147,7 +147,9 @@ namespace JewelSystemBE.Data
                     GoldId = "1",
                     GoldWeight = 45.0,
                     LaborCost = 200.00,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    UnitPrice = 0,
+                    TotalPrice = 0
                 },
                 new Product
                 {
@@ -165,7 +167,9 @@ namespace JewelSystemBE.Data
                     GoldId = "2",
                     GoldWeight = 18.0,
                     LaborCost = 100.00,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    UnitPrice = 0,
+                    TotalPrice = 0
                 },
                 new Product
                 {
@@ -183,7 +187,9 @@ namespace JewelSystemBE.Data
                     GoldId = "3",
                     GoldWeight = 27.0,
                     LaborCost = 150.00,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    UnitPrice = 0,
+                    TotalPrice = 0
                 },
                 new Product
                 {
@@ -201,7 +207,9 @@ namespace JewelSystemBE.Data
                     GoldId = "4",
                     GoldWeight = 13.5,
                     LaborCost = 180.00,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    UnitPrice = 0,
+                    TotalPrice = 0
                 },
                 new Product
                 {
@@ -219,7 +227,9 @@ namespace JewelSystemBE.Data
                     GoldId = "5",
                     GoldWeight = 7.5,
                     LaborCost = 90.00,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    UnitPrice = 0,
+                    TotalPrice = 0
                 },
                 new Product
                 {
@@ -237,42 +247,33 @@ namespace JewelSystemBE.Data
                     GoldId = "2",
                     GoldWeight = 21.0,
                     LaborCost = 130.00,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    UnitPrice = 0,
+                    TotalPrice = 0
                 });
 
             });
-            //config the Product entity with sql server ends here
 
             modelBuilder.Entity<Discount>(entity =>
             {
                 entity.ToTable("discount");
-
                 entity.HasKey(e => e.DiscountId);
-
                 entity.Property(e => e.DiscountId)
                     .IsRequired()
                     .HasMaxLength(100);
-
                 entity.Property(e => e.DiscountName)
                     .IsRequired()
                     .HasMaxLength(200);
-
                 entity.Property(e => e.OrderType)
                     .IsRequired()
                     .HasMaxLength(200);
-
                 entity.Property(e => e.ProductType)
                     .IsRequired()
                     .HasMaxLength(200);
-
                 entity.Property(e => e.PublicDate)
                     .IsRequired();
-
                 entity.Property(e => e.ExpireDate)
                     .IsRequired();
-
-
-                // Seed sample data for Discounts
                 entity.HasData(
                     new Discount
                     {
@@ -281,7 +282,8 @@ namespace JewelSystemBE.Data
                         OrderType = "Sale",
                         ProductType = "Jewelry 1",
                         PublicDate = new DateTime(2024, 6, 1),
-                        ExpireDate = new DateTime(2024, 6, 30)
+                        ExpireDate = new DateTime(2024, 6, 30),
+                        DiscountRate = 0.2
                     },
                     new Discount
                     {
@@ -290,7 +292,8 @@ namespace JewelSystemBE.Data
                         OrderType = "Sale",
                         ProductType = "Jewelry 2",
                         PublicDate = new DateTime(2024, 11, 15),
-                        ExpireDate = new DateTime(2024, 12, 31)
+                        ExpireDate = new DateTime(2024, 12, 31),
+                        DiscountRate = 0.3
                     },
                     new Discount
                     {
@@ -299,7 +302,8 @@ namespace JewelSystemBE.Data
                         OrderType = "Buyback",
                         ProductType = "Jewelry 3",
                         PublicDate = new DateTime(2024, 3, 1),
-                        ExpireDate = new DateTime(2024, 3, 31)
+                        ExpireDate = new DateTime(2024, 3, 31),
+                        DiscountRate = 0.4
                     },
                     new Discount
                     {
@@ -308,7 +312,8 @@ namespace JewelSystemBE.Data
                         OrderType = "Sale",
                         ProductType = "Jewelry 4",
                         PublicDate = new DateTime(2024, 8, 1),
-                        ExpireDate = new DateTime(2024, 9, 15)
+                        ExpireDate = new DateTime(2024, 9, 15),
+                        DiscountRate = 0.5
                     },
                     new Discount
                     {
@@ -317,7 +322,8 @@ namespace JewelSystemBE.Data
                         OrderType = "Buyback",
                         ProductType = "Jewelry 5",
                         PublicDate = new DateTime(2024, 12, 1),
-                        ExpireDate = new DateTime(2025, 1, 31)
+                        ExpireDate = new DateTime(2025, 1, 31),
+                        DiscountRate = 0
                     }
 
                     );
@@ -368,8 +374,7 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.InvoiceDate).HasColumnName("invoice_date").HasColumnType("date").IsRequired();
                 entity.Property(e => e.CustomerVoucher).HasColumnName("customer_voucher").HasColumnType("decimal(18, 2)").IsRequired();
                 entity.Property(e => e.TotalPrice).HasColumnName("total_price").HasColumnType("decimal(18, 2)").IsRequired();
-                entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").HasColumnType("decimal(18, 2)").IsRequired();
-                
+                entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").HasColumnType("decimal(18, 2)").IsRequired();    
 
                 entity.HasData(
                     new Invoice { InvoiceId = "I1", InvoiceType = "Type A", CustomerId = "C1", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 1), CustomerVoucher = 50.00, TotalPrice = 500.00, EndTotalPrice = 450.00 },
@@ -381,10 +386,7 @@ namespace JewelSystemBE.Data
             });
             modelBuilder.Entity<InvoiceItem>(entity =>
             {
-                // Mapping the table
                 entity.ToTable("invoice_item");
-
-                // Mapping the properties
                 entity.HasKey(e => e.InvoiceItemId);
                 entity.Property(e => e.InvoiceItemId).HasColumnName("invoice_item_id");
                 entity.Property(e => e.InvoiceId).HasColumnName("invoice_id").IsRequired();
@@ -446,8 +448,6 @@ namespace JewelSystemBE.Data
                     new StallItem { }
                     );
             });
-
-
         }
     }
 }

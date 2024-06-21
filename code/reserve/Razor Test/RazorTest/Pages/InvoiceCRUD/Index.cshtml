@@ -4,60 +4,120 @@
     ViewData["Title"] = "Invoice List";
 }
 
-<h2>Invoice</h2>
+<h2 style="text-align: center;">Invoice List</h2>
 
 <style>
-    table {
+    .invoice-table-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .invoice-table {
         width: 100%;
-        border-collapse: collapse; 
-        margin-top: 20px; 
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 1em;
+        font-family: 'Arial', sans-serif;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
+        .invoice-table th, .invoice-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .invoice-table th {
+            background-color: #4c4c4c; /* Dark gray background for header */
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .invoice-table td {
+            background-color: #ffffff; /* White background for cells */
+            color: #333333; /* Dark gray text for cells */
+        }
+
+        .invoice-table tbody tr:nth-of-type(odd) {
+            background-color: #f2f2f2; /* Light gray background for odd rows */
+        }
+
+        .invoice-table tbody tr:nth-of-type(even) {
+            background-color: #ffffff; /* White background for even rows */
+        }
+
+        .invoice-table tbody tr:hover {
+            background-color: #e2e2e2; /* Light gray background for hover effect */
+        }
+
+        .invoice-table a {
+            color: #007bff; /* Blue color for links */
+            text-decoration: none;
+        }
+
+            .invoice-table a:hover {
+                text-decoration: underline;
+            }
+
+    .btn-create {
+        display: inline-block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff; /* Blue background for the button */
+        color: #ffffff; /* White text for the button */
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
     }
 
-    th {
-        background-color: #f9f9f9; 
+        .btn-create:hover {
+            background-color: #0056b3; /* Darker blue for hover effect */
+        }
+
+    .action-buttons a {
+        margin-right: 10px;
     }
 </style>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Invoice Id</th>
-            <th>Invoice Type</th>
-            <th>Customer Id</th>
-            <th>User Id</th>
-            <th>Invoice Date</th>
-            <th>Customer Voucher</th>
-            <th>Total Price</th>
-            <th>End Total Price</th>
-            <th>Status</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody border="1">
-        @foreach (var invoice in Model.Invoices)
-        {
+<div class="invoice-table-wrapper">
+    <table class="invoice-table">
+        <thead>
             <tr>
-                <td>@invoice.InvoiceId</td>
-                <td><strong>@invoice.InvoiceType</strong></td>
-                <td>@invoice.CustomerId</td>
-                <td>@invoice.UserId</td>
-                <td>@invoice.InvoiceDate.ToShortDateString()</td>
-                <td>@invoice.CustomerVoucher</td>
-                <td>@invoice.TotalPrice</td>
-                <td>@invoice.EndTotalPrice</td>
-                <td>@invoice.InvoiceStatus</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId">Edit</a>
-                    <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId">Delete</a>
-                </td>
+                <th>Invoice Type</th>
+                <th>Customer Id</th>
+                <th>User Id</th>
+                <th>Invoice Date</th>
+                <th>Customer Voucher</th>
+                <th>Total Price</th>
+                <th>End Total Price</th>
+                <th>Status</th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
-<a asp-page="./Create">Create New Invoice</a>
+        </thead>
+        <tbody>
+            @foreach (var invoice in Model.Invoices)
+            {
+                <tr>
+                    <td><strong>@invoice.InvoiceType</strong></td>
+                    <td>@invoice.CustomerId</td>
+                    <td>@invoice.UserId</td>
+                    <td>@invoice.InvoiceDate.ToShortDateString()</td>
+                    <td>@invoice.CustomerVoucher</td>
+                    <td>@String.Format("{0:N0} VND", invoice.TotalPrice)</td>
+                    <td>@invoice.EndTotalPrice</td>
+                    <td>@invoice.InvoiceStatus</td>
+                    <td class="action-buttons">
+                        <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId">Approve</a>
+                        <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId">Disapprove</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a class="btn-create" asp-page="./Create">Create New Invoice</a>

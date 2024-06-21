@@ -10,3 +10,15 @@ D:\workspace\vs\rebuild\JewelBO\obj\Debug\net8.0\refint\JewelBO.dll
 D:\workspace\vs\rebuild\JewelBO\obj\Debug\net8.0\JewelBO.pdb
 D:\workspace\vs\rebuild\JewelBO\obj\Debug\net8.0\ref\JewelBO.dll
 D:\workspace\vs\rebuild\JewelBO\obj\Debug\net8.0\JewelBO.csproj.AssemblyReference.cache
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\bin\Debug\net8.0\JewelBO.deps.json
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\bin\Debug\net8.0\JewelBO.dll
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\bin\Debug\net8.0\JewelBO.pdb
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.csproj.AssemblyReference.cache
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.AssemblyInfoInputs.cache
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.AssemblyInfo.cs
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.csproj.CoreCompileInputs.cache
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.dll
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\refint\JewelBO.dll
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\JewelBO.pdb
+C:\Users\nammc\Desktop\JewelAPIRebuild\JewelBO\obj\Debug\net8.0\ref\JewelBO.dll

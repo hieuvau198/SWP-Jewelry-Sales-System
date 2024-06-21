@@ -13,6 +13,7 @@ namespace RazorTest.Pages.Authentication
             // Clear authentication session variable
             HttpContext.Session.Remove(SessionKeyUserObject);
             HttpContext.Session.Remove(SessionKeyAuthState);
+            HttpContext.Session.Clear();
 
             // Redirect to login page or any other page
             return RedirectToPage("/Index");

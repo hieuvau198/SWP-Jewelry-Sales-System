@@ -56,7 +56,7 @@ namespace RazorTest.Pages.InvoiceCRUD
 
             _logger.LogInformation($"Updating invoice with ID {Invoice.InvoiceId}");
             _logger.LogInformation($"Invoice details: {JsonConvert.SerializeObject(Invoice)}");
-
+            Invoice.InvoiceStatus = "Confirmed By Manager";
             var response = await _invoiceService.UpdateInvoiceAsync(Invoice);
 
             if (!response.IsSuccessStatusCode)

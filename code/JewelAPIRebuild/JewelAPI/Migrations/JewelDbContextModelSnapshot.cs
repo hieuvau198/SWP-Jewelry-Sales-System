@@ -484,9 +484,7 @@ namespace JewelAPI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("IsComplete")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -628,8 +626,8 @@ namespace JewelAPI.Migrations
                     b.HasData(
                         new
                         {
-                            ProductId = "cd7c4753-3e01-42f4-9e1e-1131c22c89a4",
-                            CreatedAt = new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(136),
+                            ProductId = "899af466-a560-45c6-95fe-cde96081ecf3",
+                            CreatedAt = new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5169),
                             GemId = "1",
                             GemWeight = 5.0,
                             GoldId = "1",
@@ -646,8 +644,8 @@ namespace JewelAPI.Migrations
                         },
                         new
                         {
-                            ProductId = "0a72af27-3f12-474b-add1-1a7be7b47d10",
-                            CreatedAt = new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(153),
+                            ProductId = "e74a40d6-2cb8-4fe6-b052-bf4c334f6325",
+                            CreatedAt = new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5186),
                             GemId = "2",
                             GemWeight = 2.0,
                             GoldId = "2",
@@ -664,8 +662,8 @@ namespace JewelAPI.Migrations
                         },
                         new
                         {
-                            ProductId = "258a7b4e-fca7-40bd-ac12-5118bf437f6c",
-                            CreatedAt = new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(164),
+                            ProductId = "5ecd075b-6056-4d68-b4dc-7b9a3245c529",
+                            CreatedAt = new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5195),
                             GemId = "3",
                             GemWeight = 3.0,
                             GoldId = "3",
@@ -682,8 +680,8 @@ namespace JewelAPI.Migrations
                         },
                         new
                         {
-                            ProductId = "4dfb6380-6465-4800-8d90-25872ad5082a",
-                            CreatedAt = new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(176),
+                            ProductId = "282c1618-f2ff-4795-a9e5-03eb08111b5f",
+                            CreatedAt = new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5200),
                             GemId = "4",
                             GemWeight = 1.5,
                             GoldId = "4",
@@ -700,8 +698,8 @@ namespace JewelAPI.Migrations
                         },
                         new
                         {
-                            ProductId = "570180d5-79e7-41b2-be0d-3c6ec75e764f",
-                            CreatedAt = new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(202),
+                            ProductId = "535b14b7-8050-41a6-a669-707fa2603769",
+                            CreatedAt = new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5205),
                             GemId = "5",
                             GemWeight = 2.5,
                             GoldId = "5",
@@ -718,8 +716,8 @@ namespace JewelAPI.Migrations
                         },
                         new
                         {
-                            ProductId = "a4933254-f47f-491a-8b32-8953470b6bf1",
-                            CreatedAt = new DateTime(2024, 6, 6, 20, 57, 50, 972, DateTimeKind.Local).AddTicks(214),
+                            ProductId = "35572135-fbd3-40c4-8eca-8a8005ff5d8f",
+                            CreatedAt = new DateTime(2024, 6, 19, 18, 47, 20, 474, DateTimeKind.Local).AddTicks(5210),
                             GemId = "1",
                             GemWeight = 4.0,
                             GoldId = "2",
@@ -771,7 +769,7 @@ namespace JewelAPI.Migrations
                             UserId = "1",
                             Email = "user1@example.com",
                             Fullname = "User One",
-                            Password = "$2a$10$Jy4CGLtyKFDijGIO7TWukONEFmujv8An7mgTagZXgNY859Ke.uFaG",
+                            Password = "$2a$10$W9JQqHLEAvIsuDRvJsFmtOyitIKr732D9wnUUqN1sL88CEJ1lHqy6",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -780,7 +778,7 @@ namespace JewelAPI.Migrations
                             UserId = "2",
                             Email = "user2@example.com",
                             Fullname = "User Two",
-                            Password = "$2a$10$NtwhIq5Vdg3ZMeNXxao1C.pLFrgAgy7cHLuK1cnsQJN0bcecOqIy6",
+                            Password = "$2a$10$vml/KQj8U1K.iaUs1MZCk.cfoHCwVCrrUA6esQsB.r1mVEqvjxyT6",
                             Role = "User",
                             Username = "user2"
                         },
@@ -789,7 +787,7 @@ namespace JewelAPI.Migrations
                             UserId = "3",
                             Email = "user3@example.com",
                             Fullname = "User Three",
-                            Password = "$2a$10$N/SNz3KUGi.iNQ5A2ktDF.MyGwjJZcQYtWxOlbQZGwv96j03CCkX2",
+                            Password = "$2a$10$zd2gW0ES9onLymra.t1FreYYPXxeXA0glyxoitLeK2fXQMZxn9fda",
                             Role = "User",
                             Username = "user3"
                         },
@@ -798,7 +796,7 @@ namespace JewelAPI.Migrations
                             UserId = "4",
                             Email = "user4@example.com",
                             Fullname = "User Four",
-                            Password = "$2a$10$cUdOom5wQYIFf/rQwh7uGuQTQq.xuyS2OdwWsYCYzFFN4Rl6CTa..",
+                            Password = "$2a$10$H7vgCs9BM2.bqbl/Mac8QOUfeXh8iZdhG3.Dl1Uuvb9etZmKN3gbO",
                             Role = "User",
                             Username = "user4"
                         },
@@ -807,7 +805,7 @@ namespace JewelAPI.Migrations
                             UserId = "5",
                             Email = "user5@example.com",
                             Fullname = "User Five",
-                            Password = "$2a$10$ZbhoCwCEc8/x0G5ImxCJAOAXy7RbWoWuwrb2WYfLE39z5Bzf/iaZa",
+                            Password = "$2a$10$P3Q9zkp/OtV7x3nfDPylvOfWagDgacEuMXgf3GygSFbbb9ViJSKgO",
                             Role = "User",
                             Username = "user5"
                         });

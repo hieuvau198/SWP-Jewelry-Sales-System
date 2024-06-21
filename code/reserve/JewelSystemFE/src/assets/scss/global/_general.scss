@@ -1,0 +1,247 @@
+html{
+    *{
+        box-sizing: border-box;
+    }
+}
+
+/***********Body*********/
+body {
+    @include transition(ease .1s);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-weight: $font-weight-normal;
+    font-family: $font-opensans;
+    font-size: 14px;
+
+    &.font-opensans{
+        font-family: $font-opensans;
+    }
+    &.font-poppins{
+        font-family: $font-poppins;
+        font-size: 15px;
+    }
+    &.font-montserrat{
+        font-family: $font-montserrat;
+        font-size: 15px;
+    }
+    &.font-mukta{
+        font-family: $font-mukta;
+    }
+    @media only screen and (max-width: 554px){
+        body {
+            font-size: 12px;
+        }
+    }
+    a {
+        color: var(--text-color);
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+    }
+}
+
+/***********Button Set Resposive*********/
+.btn-set-task{
+    @media only screen and (max-width: 554px){
+        margin-top: 10px;
+    }
+}
+
+/***********Changelog Button-size*********/
+.mx-size{
+    @media only screen and (min-width: 480px){
+       max-width: 320px;
+    }
+}
+
+/***********Login-page responsive*********/
+.auth-detailblock{
+    strong{
+        @media only screen and (max-width: 480px){
+            font-size: 12px;
+        }
+    }
+}
+.auth-h100{
+    height: calc(100vh - 192px);
+    @media only screen and (max-width: $break-1280) {
+        height: calc(100vh - 96px);
+    }
+
+    @media only screen and (max-width: $break-xsmall) {
+        height: auto;
+    }
+}
+.form-control-lg {
+    @media only screen and (max-width: $break-small) {
+        min-height: calc(1.5em + 1rem + 2px) !important;
+    }
+}
+
+/***********Invoicepage & purchasepage tab*********/
+.invoice-set{
+    &.nav-tabs{
+        .nav-link{
+            @media only screen and (max-width:  $break-xxsmall) {
+                width: 100px;
+                text-align: center;
+            }
+        }
+    } 
+}
+
+/***********selectable & dropify*********/
+.ms-container {
+    .ms-list{
+        border: 1px solid var(--border-color);
+    }
+    .ms-selectable,.ms-selection{
+        background: var(--card-color);
+        color: var(--text-color);
+
+        li.ms-elem-selectable{
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+       
+        @media only screen and (max-width:  500px) {
+            width: 100%;
+            float: none;
+        }
+    }
+    .ms-selection{
+        @media only screen and (max-width:  500px) {
+            margin-top: 40px;
+        }
+    }
+}
+.dropify-wrapper{
+    .dropify-message{
+        font-size: 14px;
+        span.file-icon{
+            font-size: 20px;
+        }
+    }
+}
+
+/**********profile*********/
+.profile-fulldeatil{
+    @media only screen and (max-width: $break-xxsmall) {
+        flex-direction: column;
+    }
+    .profile-info{
+        &.border-start{
+            @media only screen and (max-width: $break-xxsmall) {
+                border-left: 0px !important;
+                padding-left: 0px !important;
+            }
+        }
+    }
+    .profile-av{
+        @media only screen and (max-width: $break-xxsmall) {
+            text-align: left !important;
+        }
+    }
+    .about-info{
+        @media only screen and (max-width: $break-xxsmall) {
+           justify-content: flex-start !important;
+        }
+    }
+}
+
+/***********Do not add in project*********/
+:not(pre) > code[class*="language-"], pre[class*="language-"]{
+    background: var(--color-100) !important;
+}
+code[class*="language-"], pre[class*="language-"]{
+    text-shadow: none !important;
+    color: var(--color-000) !important;
+}
+
+/***********icon-page*********/
+.ico-title {
+    font-size: 2em;
+}
+.iconlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .icon-holder {
+        position: relative;
+        text-align: center;
+        border-radius: 3px;
+        overflow: hidden;
+        padding-bottom: 5px;
+        border: 1px solid var(--border-color);
+        transition: all 0.2s linear 0s;
+        &:hover {
+            background: var(--secondary-color);
+            color: #ffffff;
+            .icon i {
+                color: #ffffff;
+            }
+        }
+        .icon {
+            padding: 20px;
+            text-align: center;
+            i {
+                font-size: 3em;
+                color: var(--font-color)
+            }
+        }
+        span {
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
+            border-radius: 3px;
+        }
+    }
+}
+
+/***********responsive*********/
+@media only screen and (max-width: 554px){
+    .w-sm-100{
+        width:100%;
+    }
+}
+@media only screen and (max-width: $break-xxsmall + 40) {
+
+    .profile-block{
+        margin: 0 auto;
+        padding-right: 0px !important;
+    }
+
+    .profile-card{
+        .card-body{
+            flex-direction: column;
+            .profile-av{
+                padding-right: 0px !important;
+                &.w220{
+                    width: 100%;
+                }
+                .about-info{
+                    justify-content: center !important;
+                }
+            }
+            .profile-info{
+                padding-left: 0px !important;
+                border-color: transparent !important;
+                text-align: center;
+                .social{
+                    justify-content: center;
+                }
+                .ct-btn-set{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+

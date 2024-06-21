@@ -50,7 +50,9 @@ function App() {
             <Route path="/"  element={<MainIndex />}>
               <Route index element={<Dashboard />} />
               <Route path={process.env.PUBLIC_URL + "/product-detail"} element={<ProductDetail />} />
-              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />                                 
+              <Route path={process.env.PUBLIC_URL + "/product-list"} element={<ProductList />} />   
+              <Route path={process.env.PUBLIC_URL + "/shopping-cart"} element={<ShoppingCart />} />  
+                                            
             </Route>
         </Route>
     </ReactRoutes>
