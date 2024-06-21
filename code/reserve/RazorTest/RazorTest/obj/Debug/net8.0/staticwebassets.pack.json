@@ -89,6 +89,10 @@
       "PackagePath": "staticwebassets\\ProductImages\\KimCuongg.jpg"
     },
     {
+      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\_string.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\_string.jpg"
+    },
+    {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\diamond_earrings.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\diamond_earrings.jpg"
     },
@@ -103,6 +107,14 @@
     {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\kimcuong.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\kimcuong.jpg"
+    },
+    {
+      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\mornaco.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\mornaco.jpg"
+    },
+    {
+      "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\mornaco_jack.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\mornaco_jack.jpg"
     },
     {
       "Id": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\wwwroot\\ProductImages\\ruby_bracelet.jpg",
