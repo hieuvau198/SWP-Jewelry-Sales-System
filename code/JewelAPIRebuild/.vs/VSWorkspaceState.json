@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\JewelAPI"
+    "\\JewelAPI",
+    "\\JewelRepository",
+    "\\JewelRepository\\RepositoryStallItem"
   ],
-  "SelectedNode": "\\JewelAPI\\Program.cs",
+  "SelectedNode": "\\JewelRepository\\RepositoryStallItem\\StallItemRepository.cs",
   "PreviewInSolutionExplorer": false
 }

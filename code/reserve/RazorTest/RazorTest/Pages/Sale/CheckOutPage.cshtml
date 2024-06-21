@@ -1,0 +1,177 @@
+﻿@page
+@model RazorTest.Pages.Sale.CheckOutPageModel
+@{
+}
+
+<style>
+    /* Table styles */
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Ensures borders between cells are merged */
+        margin-top: 20px; /* Adds spacing above the table */
+    }
+
+    th, td {
+        border: 1px solid black; /* Adds border to cells and header cells */
+        padding: 8px; /* Adds space inside cells */
+        text-align: left; /* Aligns text to the left inside cells */
+    }
+
+    th {
+        background-color: #f9f9f9; /* Light grey background for header cells */
+    }
+
+    
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+            .pagination a.active {
+                background-color: #4CAF50;
+                color: white;
+                border: 1px solid #4CAF50;
+            }
+
+            .pagination a:hover:not(.active) {
+                background-color: #ddd;
+            }
+
+    .invoice-table-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 600px;
+    }
+
+    .invoice-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+        .invoice-table th, .invoice-table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background-color: #b8860b;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .invoice-table tbody tr:nth-of-type(odd) {
+            background-color: #f3f3f3;
+        }
+
+        .invoice-table tbody tr:nth-of-type(even) {
+            background-color: #ffffff;
+        }
+
+    .btn-black {
+        background-color: darkseagreen;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
+    }
+
+        .btn-black:hover {
+            background-color: darkseagreen;
+        }
+</style>
+
+<h2 style="text-align: center;">Check Out Order</h2>
+
+
+
+@if(Model.InvoiceItems != null)
+{
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                <th>Total Price</th>
+                <th>After Discount</th>
+            </thead>
+
+            @foreach (var item in Model.InvoiceItems)
+            {
+            <tbody>
+            <td>@item.ProductName</td>
+            <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+            <td>@item.Quantity</td>
+            <td>@(item.DiscountRate * 100)%</td>
+            <td>@String.Format("{0:N0} VND", item.TotalPrice)</td>
+            <td>@String.Format("{0:N0} VND", item.EndTotalPrice)</td>
+            </tbody>
+            } 
+        </table>   
+}
+
+@if (Model.Invoice != null)
+{
+    <div class="invoice-table-wrapper">
+        <table class="invoice-table">
+            <tbody>
+                <tr>
+                    <th>Invoice Type:</th>
+                    <td>@Model.Invoice.InvoiceType</td>
+                </tr>
+                <tr>
+                    <th>Customer:</th>
+                    <td>@Model.Customer.CustomerName</td>
+                </tr>
+                <tr>
+                    <th>Staff:</th>
+                    <td>@Model.User.Fullname</td>
+                </tr>
+                <tr>
+                    <th>Customer Voucher:</th>
+                    <td>@Model.Invoice.CustomerVoucher</td>
+                </tr>
+                <tr>
+                    <th>Total Price:</th>
+                    <td>@String.Format("{0:N0} VND", Model.Invoice.TotalPrice)</td>
+                </tr>
+                <tr>
+                    <th>End Price:</th>
+                    <td>@String.Format("{0:N0} VND", Model.Invoice.EndTotalPrice)</td>
+                </tr>
+                <tr>
+                    <th>Order Status:</th>
+                    <td>@Model.Invoice.InvoiceStatus</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+
+<form method="post" asp-page-handler="Confirm" style="text-align: center;">
+    <button type="submit" class="btn-black">Confirm</button>
+</form>
+<br />
+
+<form method="get" action="/Sale/ViewCart" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Sale/ViewCart" />
+    <button type="submit" class="btn-black">Cancel</button>
+</form>

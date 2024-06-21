@@ -120,21 +120,30 @@ namespace JewelSystemBE.Service.ServiceProduct
             {
                 double unitPrice = 0;
                 double totalPrice = 0;
+
+                string gemName = "Not Found Gem Name";
+                string goldName = "Not Found Gold Name";
+
                 Gem gem = gems.Find(x => x.GemId == product.GemId);
                 Gold gold = golds.Find(x => x.GoldId == product.GoldId);
+
                 if(gem != null)
                 { 
                     unitPrice += (gem.GemPrice * product.GemWeight); 
+                    gemName = gem.GemName;
                 }
                 if(gold != null)
                 {
-                    unitPrice += (gold.GoldPrice * product.GoldWeight);
+                    unitPrice += (gold.SellPrice * product.GoldWeight);
+                    goldName = gold.GoldName;
                 }
                 unitPrice += product.LaborCost;
                 unitPrice = unitPrice * product.MarkupRate;
                 totalPrice = unitPrice * product.ProductQuantity;
                 product.UnitPrice = unitPrice;
                 product.TotalPrice = totalPrice;
+                product.GemName = gemName;
+                product.GoldName = goldName;
             }
             return results;
         }
@@ -148,23 +157,32 @@ namespace JewelSystemBE.Service.ServiceProduct
 
             double unitPrice = 0;
             double totalPrice = 0;
+            string gemName = "Some Gem Name";
+            string goldName = "Some Gold Name";
+
             Gem gem = gems.Find(x => x.GemId == result.GemId);
             Gold gold = golds.Find(x => x.GoldId == result.GoldId);
+
             if (gem != null)
             {
                 unitPrice += gem.GemPrice * result.GemWeight;
+                gemName = gem.GemName;
             }
             if (gold != null)
             {
-                unitPrice += gold.GoldPrice * result.GoldWeight;
+                unitPrice += gold.SellPrice * result.GoldWeight;
+                goldName = gold.GoldName;
             }
             unitPrice += result.LaborCost;
             unitPrice = unitPrice * result.MarkupRate;
             totalPrice = unitPrice * result.ProductQuantity;
             result.UnitPrice = unitPrice;
             result.TotalPrice = totalPrice;
+            result.GemName = gemName;
+            result.GoldName = goldName;
 
             return result;
         }
+        
     }
 }

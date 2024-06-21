@@ -81,6 +81,10 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("customer_name");
 
+                    b.Property<string>("CustomerPhone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("CustomerPoint")
                         .HasColumnType("int")
                         .HasColumnName("customer_point");
@@ -100,6 +104,7 @@ namespace JewelSystemBE.Migrations
                             CustomerId = "C1",
                             AttendDate = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerName = "John Doe",
+                            CustomerPhone = "012345678",
                             CustomerPoint = 100,
                             CustomerRank = "Gold"
                         },
@@ -108,6 +113,7 @@ namespace JewelSystemBE.Migrations
                             CustomerId = "C2",
                             AttendDate = new DateTime(2024, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerName = "Jane Smith",
+                            CustomerPhone = "012345677",
                             CustomerPoint = 80,
                             CustomerRank = "Silver"
                         },
@@ -116,6 +122,7 @@ namespace JewelSystemBE.Migrations
                             CustomerId = "C3",
                             AttendDate = new DateTime(2024, 3, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerName = "Alice Johnson",
+                            CustomerPhone = "012345676",
                             CustomerPoint = 50,
                             CustomerRank = "Bronze"
                         },
@@ -124,6 +131,7 @@ namespace JewelSystemBE.Migrations
                             CustomerId = "C4",
                             AttendDate = new DateTime(2024, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerName = "Bob Brown",
+                            CustomerPhone = "012345675",
                             CustomerPoint = 120,
                             CustomerRank = "Bronze"
                         },
@@ -132,6 +140,7 @@ namespace JewelSystemBE.Migrations
                             CustomerId = "C5",
                             AttendDate = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             CustomerName = "Emily Wilson",
+                            CustomerPhone = "012345674",
                             CustomerPoint = 90,
                             CustomerRank = "Bronze"
                         });
@@ -178,57 +187,57 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            DiscountId = "1",
+                            DiscountId = "D1",
                             DiscountName = "Summer Sale",
                             DiscountRate = 0.20000000000000001,
                             ExpireDate = new DateTime(2024, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Jewelry 1",
+                            ProductType = "All",
                             PublicDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            DiscountId = "2",
+                            DiscountId = "D2",
                             DiscountName = "Holiday Promotion",
                             DiscountRate = 0.29999999999999999,
                             ExpireDate = new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Jewelry 2",
+                            ProductType = "Ring",
                             PublicDate = new DateTime(2024, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            DiscountId = "3",
+                            DiscountId = "D3",
                             DiscountName = "Spring Clearance",
                             DiscountRate = 0.40000000000000002,
                             ExpireDate = new DateTime(2024, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderType = "Buyback",
+                            OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Jewelry 3",
+                            ProductType = "Bracelet",
                             PublicDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            DiscountId = "4",
+                            DiscountId = "D4",
                             DiscountName = "Back-to-School Sale",
                             DiscountRate = 0.5,
                             ExpireDate = new DateTime(2024, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
-                            ProductId = "All",
-                            ProductType = "Jewelry 4",
+                            ProductId = "P002",
+                            ProductType = "Ring",
                             PublicDate = new DateTime(2024, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
-                            DiscountId = "5",
+                            DiscountId = "D5",
                             DiscountName = "Winter Warm-up",
                             DiscountRate = 0.0,
                             ExpireDate = new DateTime(2025, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderType = "Buyback",
+                            OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Jewelry 5",
+                            ProductType = "Necklace",
                             PublicDate = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
@@ -240,6 +249,13 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("gem_id");
 
+                    b.Property<double>("BuyPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("GemCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("GemName")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -250,6 +266,13 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("float")
                         .HasColumnName("gem_price");
 
+                    b.Property<double>("GemWeight")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("GemId");
 
                     b.ToTable("gem", (string)null);
@@ -257,33 +280,503 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            GemId = "1",
-                            GemName = "Ruby",
-                            GemPrice = 1000.0
+                            GemId = "GE001",
+                            BuyPrice = 50000000.0,
+                            GemCode = "JSG-R1",
+                            GemName = "Natural Mozambique Ruby",
+                            GemPrice = 58000000.0,
+                            GemWeight = 0.97999999999999998,
+                            Unit = "ct"
                         },
                         new
                         {
-                            GemId = "2",
-                            GemName = "Sapphire",
-                            GemPrice = 1500.0
+                            GemId = "GE002",
+                            BuyPrice = 170000000.0,
+                            GemCode = "JSG-R2",
+                            GemName = "Burmese Ruby",
+                            GemPrice = 190000000.0,
+                            GemWeight = 28.0,
+                            Unit = "ct"
                         },
                         new
                         {
-                            GemId = "3",
-                            GemName = "Emerald",
-                            GemPrice = 1200.0
+                            GemId = "GE003",
+                            BuyPrice = 8235000.0,
+                            GemCode = "JSG-R3",
+                            GemName = "Thai Ruby",
+                            GemPrice = 9756000.0,
+                            GemWeight = 9.9399999999999995,
+                            Unit = "ct"
                         },
                         new
                         {
-                            GemId = "4",
-                            GemName = "Diamond",
-                            GemPrice = 5000.0
+                            GemId = "GE004",
+                            BuyPrice = 1322012.0,
+                            GemCode = "JSG-R4",
+                            GemName = "India Ruby",
+                            GemPrice = 1709078.0,
+                            GemWeight = 5.9100000000000001,
+                            Unit = "ct"
                         },
                         new
                         {
-                            GemId = "5",
-                            GemName = "Topaz",
-                            GemPrice = 800.0
+                            GemId = "GE005",
+                            BuyPrice = 6900000.0,
+                            GemCode = "JSG-R5",
+                            GemName = "Mozambique Ruby",
+                            GemPrice = 7859078.0,
+                            GemWeight = 0.33000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE006",
+                            BuyPrice = 3700000.0,
+                            GemCode = "JSG-R6",
+                            GemName = "Heated Natural Ruby",
+                            GemPrice = 4166666.0,
+                            GemWeight = 0.34000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE007",
+                            BuyPrice = 8989000.0,
+                            GemCode = "JSG-R7",
+                            GemName = "Mozambique Ruby",
+                            GemPrice = 9789973.0,
+                            GemWeight = 0.35999999999999999,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE008",
+                            BuyPrice = 4950000.0,
+                            GemCode = "JSG-R8",
+                            GemName = "Mozambique Ruby (Heated)",
+                            GemPrice = 5826558.0,
+                            GemWeight = 0.48999999999999999,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE009",
+                            BuyPrice = 11900000.0,
+                            GemCode = "JSG-R9",
+                            GemName = "Mozambique Ruby",
+                            GemPrice = 13000000.0,
+                            GemWeight = 0.48999999999999999,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE010",
+                            BuyPrice = 3000000.0,
+                            GemCode = "JSG-R10",
+                            GemName = "Burma Ruby",
+                            GemPrice = 3658000.0,
+                            GemWeight = 0.54000000000000004,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE011",
+                            BuyPrice = 30000000.0,
+                            GemCode = "JSG-S1",
+                            GemName = "Natural Ceylon Sapphire",
+                            GemPrice = 35000000.0,
+                            GemWeight = 1.02,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE012",
+                            BuyPrice = 65000000.0,
+                            GemCode = "JSG-S2",
+                            GemName = "Burmese Sapphire",
+                            GemPrice = 75000000.0,
+                            GemWeight = 2.75,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE013",
+                            BuyPrice = 22000000.0,
+                            GemCode = "JSG-S3",
+                            GemName = "Madagascar Sapphire",
+                            GemPrice = 26000000.0,
+                            GemWeight = 1.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE014",
+                            BuyPrice = 18000000.0,
+                            GemCode = "JSG-S4",
+                            GemName = "Australian Sapphire",
+                            GemPrice = 21000000.0,
+                            GemWeight = 3.2000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE015",
+                            BuyPrice = 120000000.0,
+                            GemCode = "JSG-S5",
+                            GemName = "Kashmir Sapphire",
+                            GemPrice = 140000000.0,
+                            GemWeight = 0.94999999999999996,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE016",
+                            BuyPrice = 45000000.0,
+                            GemCode = "JSG-S6",
+                            GemName = "Heated Natural Sapphire",
+                            GemPrice = 50000000.0,
+                            GemWeight = 2.1000000000000001,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE017",
+                            BuyPrice = 35000000.0,
+                            GemCode = "JSG-S7",
+                            GemName = "Thai Sapphire",
+                            GemPrice = 40000000.0,
+                            GemWeight = 1.8,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE018",
+                            BuyPrice = 5000000.0,
+                            GemCode = "JSG-S8",
+                            GemName = "Montana Sapphire",
+                            GemPrice = 6000000.0,
+                            GemWeight = 0.71999999999999997,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE019",
+                            BuyPrice = 28000000.0,
+                            GemCode = "JSG-S9",
+                            GemName = "Ethiopian Sapphire",
+                            GemPrice = 32000000.0,
+                            GemWeight = 1.3,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE020",
+                            BuyPrice = 150000000.0,
+                            GemCode = "JSG-S10",
+                            GemName = "Padparadscha Sapphire",
+                            GemPrice = 180000000.0,
+                            GemWeight = 1.0,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE021",
+                            BuyPrice = 5000000.0,
+                            GemCode = "JSG-C1",
+                            GemName = "Moonstone Cabochon",
+                            GemPrice = 6000000.0,
+                            GemWeight = 3.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE022",
+                            BuyPrice = 12000000.0,
+                            GemCode = "JSG-C2",
+                            GemName = "Opal Cabochon",
+                            GemPrice = 15000000.0,
+                            GemWeight = 2.1000000000000001,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE023",
+                            BuyPrice = 3000000.0,
+                            GemCode = "JSG-C3",
+                            GemName = "Turquoise Cabochon",
+                            GemPrice = 4000000.0,
+                            GemWeight = 4.7000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE024",
+                            BuyPrice = 2000000.0,
+                            GemCode = "JSG-C4",
+                            GemName = "Labradorite Cabochon",
+                            GemPrice = 3000000.0,
+                            GemWeight = 5.0,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE025",
+                            BuyPrice = 25000000.0,
+                            GemCode = "JSG-C5",
+                            GemName = "Star Sapphire Cabochon",
+                            GemPrice = 30000000.0,
+                            GemWeight = 3.2000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE026",
+                            BuyPrice = 45000000.0,
+                            GemCode = "JSG-C6",
+                            GemName = "Cat's Eye Chrysoberyl Cabochon",
+                            GemPrice = 52000000.0,
+                            GemWeight = 2.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE027",
+                            BuyPrice = 15000000.0,
+                            GemCode = "JSG-C7",
+                            GemName = "Jade Cabochon",
+                            GemPrice = 18000000.0,
+                            GemWeight = 6.7999999999999998,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE028",
+                            BuyPrice = 5000000.0,
+                            GemCode = "JSG-C8",
+                            GemName = "Lapis Lazuli Cabochon",
+                            GemPrice = 6000000.0,
+                            GemWeight = 7.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE029",
+                            BuyPrice = 2000000.0,
+                            GemCode = "JSG-C9",
+                            GemName = "Amazonite Cabochon",
+                            GemPrice = 2500000.0,
+                            GemWeight = 4.2000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE030",
+                            BuyPrice = 7000000.0,
+                            GemCode = "JSG-C10",
+                            GemName = "Garnet Cabochon",
+                            GemPrice = 8500000.0,
+                            GemWeight = 3.0,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE031",
+                            BuyPrice = 50000000.0,
+                            GemCode = "JSG-E1",
+                            GemName = "Colombian Emerald",
+                            GemPrice = 58000000.0,
+                            GemWeight = 1.2,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE032",
+                            BuyPrice = 120000000.0,
+                            GemCode = "JSG-E2",
+                            GemName = "Zambian Emerald",
+                            GemPrice = 140000000.0,
+                            GemWeight = 2.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE033",
+                            BuyPrice = 80000000.0,
+                            GemCode = "JSG-E3",
+                            GemName = "Brazilian Emerald",
+                            GemPrice = 92000000.0,
+                            GemWeight = 1.8,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE034",
+                            BuyPrice = 60000000.0,
+                            GemCode = "JSG-E4",
+                            GemName = "Afghan Emerald",
+                            GemPrice = 75000000.0,
+                            GemWeight = 2.2000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE035",
+                            BuyPrice = 70000000.0,
+                            GemCode = "JSG-E5",
+                            GemName = "Russian Emerald",
+                            GemPrice = 82000000.0,
+                            GemWeight = 1.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE036",
+                            BuyPrice = 15000000.0,
+                            GemCode = "JSG-E6",
+                            GemName = "Synthetic Emerald",
+                            GemPrice = 18000000.0,
+                            GemWeight = 3.0,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE037",
+                            BuyPrice = 100000000.0,
+                            GemCode = "JSG-E7",
+                            GemName = "Zambian Emerald",
+                            GemPrice = 120000000.0,
+                            GemWeight = 1.1000000000000001,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE038",
+                            BuyPrice = 45000000.0,
+                            GemCode = "JSG-E8",
+                            GemName = "Colombian Emerald",
+                            GemPrice = 52000000.0,
+                            GemWeight = 0.90000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE039",
+                            BuyPrice = 95000000.0,
+                            GemCode = "JSG-E9",
+                            GemName = "Brazilian Emerald",
+                            GemPrice = 110000000.0,
+                            GemWeight = 2.7000000000000002,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE040",
+                            BuyPrice = 55000000.0,
+                            GemCode = "JSG-E10",
+                            GemName = "Ethiopian Emerald",
+                            GemPrice = 65000000.0,
+                            GemWeight = 1.3,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE041",
+                            BuyPrice = 150000000.0,
+                            GemCode = "JSG-D1",
+                            GemName = "Round Brilliant Diamond",
+                            GemPrice = 170000000.0,
+                            GemWeight = 1.0,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE042",
+                            BuyPrice = 250000000.0,
+                            GemCode = "JSG-D2",
+                            GemName = "Princess Cut Diamond",
+                            GemPrice = 290000000.0,
+                            GemWeight = 1.5,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE043",
+                            BuyPrice = 400000000.0,
+                            GemCode = "JSG-D3",
+                            GemName = "Emerald Cut Diamond",
+                            GemPrice = 450000000.0,
+                            GemWeight = 2.0,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE044",
+                            BuyPrice = 180000000.0,
+                            GemCode = "JSG-D4",
+                            GemName = "Oval Diamond",
+                            GemPrice = 210000000.0,
+                            GemWeight = 1.2,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE045",
+                            BuyPrice = 320000000.0,
+                            GemCode = "JSG-D5",
+                            GemName = "Cushion Cut Diamond",
+                            GemPrice = 370000000.0,
+                            GemWeight = 1.8,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE046",
+                            BuyPrice = 200000000.0,
+                            GemCode = "JSG-D6",
+                            GemName = "Asscher Cut Diamond",
+                            GemPrice = 230000000.0,
+                            GemWeight = 1.3,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE047",
+                            BuyPrice = 280000000.0,
+                            GemCode = "JSG-D7",
+                            GemName = "Marquise Diamond",
+                            GemPrice = 320000000.0,
+                            GemWeight = 1.6000000000000001,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE048",
+                            BuyPrice = 170000000.0,
+                            GemCode = "JSG-D8",
+                            GemName = "Radiant Cut Diamond",
+                            GemPrice = 200000000.0,
+                            GemWeight = 1.1000000000000001,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE049",
+                            BuyPrice = 230000000.0,
+                            GemCode = "JSG-D9",
+                            GemName = "Pear Shaped Diamond",
+                            GemPrice = 270000000.0,
+                            GemWeight = 1.3999999999999999,
+                            Unit = "ct"
+                        },
+                        new
+                        {
+                            GemId = "GE050",
+                            BuyPrice = 150000000.0,
+                            GemCode = "JSG-D10",
+                            GemName = "Heart Shaped Diamond",
+                            GemPrice = 180000000.0,
+                            GemWeight = 1.0,
+                            Unit = "ct"
                         });
                 });
 
@@ -294,15 +787,28 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(100)")
                         .HasColumnName("gold_id");
 
+                    b.Property<double>("BuyPrice")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GoldCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("GoldName")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("gold_name");
 
-                    b.Property<double>("GoldPrice")
-                        .HasColumnType("float")
-                        .HasColumnName("gold_price");
+                    b.Property<double>("SellPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("GoldId");
 
@@ -311,33 +817,43 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            GoldId = "1",
-                            GoldName = "24K Gold",
-                            GoldPrice = 6000.0
+                            GoldId = "vang24k",
+                            BuyPrice = 0.0,
+                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2183),
+                            GoldCode = "Vàng nữ trang 99,99%",
+                            GoldName = "24K",
+                            SellPrice = 0.0,
+                            Unit = "VND/Chỉ"
                         },
                         new
                         {
-                            GoldId = "2",
-                            GoldName = "22K Gold",
-                            GoldPrice = 5500.0
+                            GoldId = "vang18k",
+                            BuyPrice = 0.0,
+                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2197),
+                            GoldCode = "Vàng nữ trang 75%",
+                            GoldName = "18K",
+                            SellPrice = 0.0,
+                            Unit = "VND/Chỉ"
                         },
                         new
                         {
-                            GoldId = "3",
-                            GoldName = "18K Gold",
-                            GoldPrice = 4500.0
+                            GoldId = "vang14k",
+                            BuyPrice = 0.0,
+                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2199),
+                            GoldCode = "Vàng nữ trang 58,3%",
+                            GoldName = "14K",
+                            SellPrice = 0.0,
+                            Unit = "VND/Chỉ"
                         },
                         new
                         {
-                            GoldId = "4",
-                            GoldName = "14K Gold",
-                            GoldPrice = 4000.0
-                        },
-                        new
-                        {
-                            GoldId = "5",
-                            GoldName = "10K Gold",
-                            GoldPrice = 3500.0
+                            GoldId = "vang10k",
+                            BuyPrice = 0.0,
+                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2203),
+                            GoldCode = "Vàng nữ trang 41,7%",
+                            GoldName = "10K",
+                            SellPrice = 0.0,
+                            Unit = "VND/Chỉ"
                         });
                 });
 
@@ -351,6 +867,10 @@ namespace JewelSystemBE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("customer_id");
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("CustomerVoucher")
                         .HasColumnType("decimal(18, 2)")
@@ -378,6 +898,10 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("decimal(18, 2)")
                         .HasColumnName("total_price");
 
+                    b.Property<string>("UserFullname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -392,60 +916,70 @@ namespace JewelSystemBE.Migrations
                         {
                             InvoiceId = "I1",
                             CustomerId = "C1",
+                            CustomerName = "Some Customer Name",
                             CustomerVoucher = 50m,
                             EndTotalPrice = 450m,
                             InvoiceDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Type A",
                             TotalPrice = 500m,
+                            UserFullname = "Some User Fullname",
                             UserId = "U1"
                         },
                         new
                         {
                             InvoiceId = "I2",
                             CustomerId = "C2",
+                            CustomerName = "Some Customer Name",
                             CustomerVoucher = 30m,
                             EndTotalPrice = 670m,
                             InvoiceDate = new DateTime(2024, 6, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Type B",
                             TotalPrice = 700m,
+                            UserFullname = "Some User Fullname",
                             UserId = "U2"
                         },
                         new
                         {
                             InvoiceId = "I3",
                             CustomerId = "C3",
+                            CustomerName = "Some Customer Name",
                             CustomerVoucher = 20m,
                             EndTotalPrice = 280m,
                             InvoiceDate = new DateTime(2024, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Type C",
                             TotalPrice = 300m,
+                            UserFullname = "Some User Fullname",
                             UserId = "U3"
                         },
                         new
                         {
                             InvoiceId = "I4",
                             CustomerId = "C4",
+                            CustomerName = "Some Customer Name",
                             CustomerVoucher = 40m,
                             EndTotalPrice = 960m,
                             InvoiceDate = new DateTime(2024, 6, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Type D",
                             TotalPrice = 1000m,
+                            UserFullname = "Some User Fullname",
                             UserId = "U1"
                         },
                         new
                         {
                             InvoiceId = "I5",
                             CustomerId = "C5",
+                            CustomerName = "Some Customer Name",
                             CustomerVoucher = 60m,
                             EndTotalPrice = 740m,
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Type E",
                             TotalPrice = 800m,
+                            UserFullname = "Some User Fullname",
                             UserId = "U2"
                         });
                 });
@@ -492,6 +1026,14 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("int")
                         .HasColumnName("quantity");
 
+                    b.Property<string>("StallId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("TotalPrice")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("float")
@@ -521,9 +1063,11 @@ namespace JewelSystemBE.Migrations
                             DiscountRate = 0.0,
                             EndTotalPrice = 21.0,
                             InvoiceId = "I1",
-                            ProductId = "Some ProductId",
+                            ProductId = "1",
                             ProductName = "Product 1",
                             Quantity = 2,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
                             TotalPrice = 21.0,
                             UnitPrice = 10.5,
                             WarrantyId = "W1"
@@ -535,9 +1079,11 @@ namespace JewelSystemBE.Migrations
                             DiscountRate = 0.14999999999999999,
                             EndTotalPrice = 21.890000000000001,
                             InvoiceId = "I1",
-                            ProductId = "Some ProductId",
+                            ProductId = "2",
                             ProductName = "Product 2",
                             Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
                             TotalPrice = 21.890000000000001,
                             UnitPrice = 25.75,
                             WarrantyId = "W2"
@@ -615,14 +1161,21 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("gem_id");
 
+                    b.Property<string>("GemName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("GemWeight")
-                        .HasColumnType("float")
-                        .HasColumnName("gem_weight");
+                        .HasColumnType("float");
 
                     b.Property<string>("GoldId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("gold_id");
+
+                    b.Property<string>("GoldName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("GoldWeight")
                         .HasColumnType("float")
@@ -687,11 +1240,13 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            ProductId = "253d8909-bd9d-424a-a6ae-f181f2f55fb9",
-                            CreatedAt = new DateTime(2024, 6, 19, 11, 30, 34, 918, DateTimeKind.Local).AddTicks(826),
-                            GemId = "1",
-                            GemWeight = 5.0,
-                            GoldId = "1",
+                            ProductId = "P001",
+                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3889),
+                            GemId = "GE001",
+                            GemName = "Some Gem Name",
+                            GemWeight = 0.0,
+                            GoldId = "vang24k",
+                            GoldName = "Some Gold Name",
                             GoldWeight = 45.0,
                             LaborCost = 200.0,
                             MarkupRate = 1.2,
@@ -707,11 +1262,13 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "05075254-12d4-4cd7-92b0-4fa9261552cd",
-                            CreatedAt = new DateTime(2024, 6, 19, 11, 30, 34, 918, DateTimeKind.Local).AddTicks(837),
-                            GemId = "2",
-                            GemWeight = 2.0,
-                            GoldId = "2",
+                            ProductId = "P002",
+                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3894),
+                            GemId = "GE005",
+                            GemName = "Some Gem Name",
+                            GemWeight = 0.0,
+                            GoldId = "vang10k",
+                            GoldName = "Some Gold Name",
                             GoldWeight = 18.0,
                             LaborCost = 100.0,
                             MarkupRate = 1.5,
@@ -727,11 +1284,13 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "510aa500-e82b-4956-94de-09bf830b51a9",
-                            CreatedAt = new DateTime(2024, 6, 19, 11, 30, 34, 918, DateTimeKind.Local).AddTicks(843),
-                            GemId = "3",
-                            GemWeight = 3.0,
-                            GoldId = "3",
+                            ProductId = "P003",
+                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3897),
+                            GemId = "GE015",
+                            GemName = "Some Gem Name",
+                            GemWeight = 0.0,
+                            GoldId = "vang24k",
+                            GoldName = "Some Gold Name",
                             GoldWeight = 27.0,
                             LaborCost = 150.0,
                             MarkupRate = 1.3,
@@ -747,11 +1306,13 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "8e656186-ef7c-40c9-b582-c881bf0e5c76",
-                            CreatedAt = new DateTime(2024, 6, 19, 11, 30, 34, 918, DateTimeKind.Local).AddTicks(849),
-                            GemId = "4",
-                            GemWeight = 1.5,
-                            GoldId = "4",
+                            ProductId = "P004",
+                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3901),
+                            GemId = "GE035",
+                            GemName = "Some Gem Name",
+                            GemWeight = 0.0,
+                            GoldId = "vang10k",
+                            GoldName = "Some Gold Name",
                             GoldWeight = 13.5,
                             LaborCost = 180.0,
                             MarkupRate = 1.7,
@@ -759,7 +1320,7 @@ namespace JewelSystemBE.Migrations
                             ProductImages = "diamond_earrings.jpg",
                             ProductName = "Diamond Earrings",
                             ProductQuantity = 12,
-                            ProductType = "Earrings",
+                            ProductType = "Earring",
                             ProductWarranty = 24,
                             ProductWeight = 15.0,
                             TotalPrice = 0.0,
@@ -767,11 +1328,13 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "af7a88ee-2331-4215-a367-ec503348b6af",
-                            CreatedAt = new DateTime(2024, 6, 19, 11, 30, 34, 918, DateTimeKind.Local).AddTicks(854),
-                            GemId = "5",
-                            GemWeight = 2.5,
-                            GoldId = "5",
+                            ProductId = "P005",
+                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3904),
+                            GemId = "GE045",
+                            GemName = "Some Gem Name",
+                            GemWeight = 0.0,
+                            GoldId = "vang10k",
+                            GoldName = "Some Gold Name",
                             GoldWeight = 7.5,
                             LaborCost = 90.0,
                             MarkupRate = 1.1000000000000001,
@@ -779,7 +1342,7 @@ namespace JewelSystemBE.Migrations
                             ProductImages = "topaz_pendant.jpg",
                             ProductName = "Topaz Pendant",
                             ProductQuantity = 20,
-                            ProductType = "Pendant",
+                            ProductType = "Necklace",
                             ProductWarranty = 6,
                             ProductWeight = 10.0,
                             TotalPrice = 0.0,
@@ -787,11 +1350,13 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            ProductId = "1f1762ec-14df-42ea-901b-fa55e9fc4645",
-                            CreatedAt = new DateTime(2024, 6, 19, 11, 30, 34, 918, DateTimeKind.Local).AddTicks(861),
-                            GemId = "1",
-                            GemWeight = 4.0,
-                            GoldId = "2",
+                            ProductId = "P006",
+                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3908),
+                            GemId = "GE025",
+                            GemName = "Some Gem Name",
+                            GemWeight = 0.0,
+                            GoldId = "vang24k",
+                            GoldName = "Some Gold Name",
                             GoldWeight = 21.0,
                             LaborCost = 130.0,
                             MarkupRate = 1.2,
@@ -812,7 +1377,7 @@ namespace JewelSystemBE.Migrations
                     b.Property<string>("StallId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("StaffId")
+                    b.Property<string>("StaffName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -828,6 +1393,10 @@ namespace JewelSystemBE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("StallId");
 
                     b.ToTable("Stalls");
@@ -835,43 +1404,48 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallId = "9d2659bb-c394-437c-9e56-4437ea188134",
-                            StaffId = "Some Staff Id",
-                            StallDescription = "Some Stall Description",
-                            StallName = "Some Stall Name",
-                            StallType = "None"
+                            StallId = "S1",
+                            StaffName = "1",
+                            StallDescription = "1",
+                            StallName = "Ring",
+                            StallType = "Ring",
+                            UserId = "US3"
                         },
                         new
                         {
-                            StallId = "be59c5f9-c33e-4f7d-a833-b14e94b6c7f2",
-                            StaffId = "Some Staff Id",
-                            StallDescription = "Some Stall Description",
-                            StallName = "Some Stall Name",
-                            StallType = "None"
+                            StallId = "S2",
+                            StaffName = "1",
+                            StallDescription = "1",
+                            StallName = "Bracelet",
+                            StallType = "Bracelet",
+                            UserId = "US4"
                         },
                         new
                         {
-                            StallId = "d710c963-28ff-427a-abe6-933bc63b00b7",
-                            StaffId = "Some Staff Id",
-                            StallDescription = "Some Stall Description",
-                            StallName = "Some Stall Name",
-                            StallType = "None"
+                            StallId = "S3",
+                            StaffName = "1",
+                            StallDescription = "1",
+                            StallName = "Necklace",
+                            StallType = "Necklace",
+                            UserId = "US6"
                         },
                         new
                         {
-                            StallId = "9f7a668d-bd45-4341-8f8f-12338cee2917",
-                            StaffId = "Some Staff Id",
-                            StallDescription = "Some Stall Description",
-                            StallName = "Some Stall Name",
-                            StallType = "None"
+                            StallId = "S4",
+                            StaffName = "1",
+                            StallDescription = "1",
+                            StallName = "Earring",
+                            StallType = "Earring",
+                            UserId = "US7"
                         },
                         new
                         {
-                            StallId = "a03ff6d8-56a7-492e-a837-25c52a65a6cf",
-                            StaffId = "Some Staff Id",
-                            StallDescription = "Some Stall Description",
-                            StallName = "Some Stall Name",
-                            StallType = "None"
+                            StallId = "S5",
+                            StaffName = "1",
+                            StallDescription = "1",
+                            StallName = "Anklet",
+                            StallType = "Anklet",
+                            UserId = "US8"
                         });
                 });
 
@@ -898,35 +1472,35 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "973513ac-48e5-4ba3-bf1e-f933c2f34ee9",
+                            StallItemId = "8bc9f1d1-cc4d-4c4c-ac29-3578c5a460d0",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "396ca43f-a2e2-4af7-98fb-2b9a8a8f6713",
+                            StallItemId = "23a6c7e8-f884-4725-8a86-e4410120d938",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "bdadf08a-aa9e-4b66-9585-89c42eca533a",
+                            StallItemId = "a1da4e08-01f2-4cae-9a10-74bebb878cd6",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "bbe79acf-7b9d-45fa-929d-8c831de96e24",
+                            StallItemId = "0a065800-0367-40db-a551-b3c32700c22e",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "db50bdb2-ffa8-492a-8a14-ee5cdfe6b456",
+                            StallItemId = "1ff834bd-a6d1-4111-90ff-4e2e115242bc",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
@@ -965,48 +1539,75 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "1",
-                            Email = "user1@example.com",
-                            Fullname = "User One",
-                            Password = "$2a$11$Vz/mkh1lAQMf4qY4BpTzX.3ufeuzWz7h3kl/MKD4rLq71cs1BWlH.",
+                            UserId = "US1",
+                            Email = "liam@gmail.com",
+                            Fullname = "Liam Williams",
+                            Password = "$2a$11$ust6h9lq1eeyVwUK1.Y7puVyIudsMtf.vrvRGf7PgICl7rwYpLldO",
                             Role = "Admin",
                             Username = "user1"
                         },
                         new
                         {
-                            UserId = "2",
-                            Email = "user2@example.com",
-                            Fullname = "User Two",
-                            Password = "$2a$11$pa8kX35pG/pK79HtPBijW.tJh90SQA1f13rnRa8GkSUqdIIGl9jRq",
+                            UserId = "US2",
+                            Email = "olivia@gmail.com",
+                            Fullname = "Olivia Miller",
+                            Password = "$2a$11$T/IgV93/3LAhliCpFAX5ru9VConekNHrld19M.P.BXubkH2Qsegv2",
                             Role = "Manager",
                             Username = "user2"
                         },
                         new
                         {
-                            UserId = "3",
-                            Email = "user3@example.com",
-                            Fullname = "User Three",
-                            Password = "$2a$11$QYaTE5p9I4F6NWZB9gkwE.SgFpHWQOCw/MDlpPQnukmB3bLQ/9m8i",
+                            UserId = "US3",
+                            Email = "james@gmail.com",
+                            Fullname = "James Martinez",
+                            Password = "$2a$11$hp4qyc2SsazOAXFQ51.GEufFXQpivWnulkvCTTAnJgTaVeToeOpdC",
                             Role = "Sale",
                             Username = "user3"
                         },
                         new
                         {
-                            UserId = "4",
-                            Email = "user4@example.com",
-                            Fullname = "User Four",
-                            Password = "$2a$11$VQrjYRhhWf0K73ZkhQbFNezaoa5O/3yRRJRTK7r/mWcO8uE5i.y9u",
+                            UserId = "US4",
+                            Email = "matao@gmail.com",
+                            Fullname = "Mateo Martinez",
+                            Password = "$2a$11$v.Y7RNlfE3sKETeUbnH03eeQto.R6CnvOUrQf4ntJWNOjKyltD8pq",
                             Role = "Sale",
                             Username = "user4"
                         },
                         new
                         {
-                            UserId = "5",
-                            Email = "user5@example.com",
-                            Fullname = "User Five",
-                            Password = "$2a$11$yZRALHGhgw9hUhm7wZZsIeAOCsp8v68Hh2fo8VYRwKVnI7/izwbye",
+                            UserId = "US5",
+                            Email = "theodore@gmail.com",
+                            Fullname = "Theodore Garcia",
+                            Password = "$2a$11$Qb8l4rWVeVbfsEk6/aaTeOEmYchmvzP.GO0o.dt/bKNaKHLyztW42",
                             Role = "Cashier",
                             Username = "user5"
+                        },
+                        new
+                        {
+                            UserId = "US6",
+                            Email = "isabel@gmail.com",
+                            Fullname = "Isabel Rodriguez",
+                            Password = "$2a$11$UbTCpeBsXzpown8t44tW8.APrFjLbiOhlMWx/iTtdgKA7L.IqWmzi",
+                            Role = "Sale",
+                            Username = "user6"
+                        },
+                        new
+                        {
+                            UserId = "US7",
+                            Email = "luna@gmail.com",
+                            Fullname = "Luna Taylor",
+                            Password = "$2a$11$.c3Owbw6Y04YZyk81Ab8QO.tHioTDtYElOS.1WCNY5mQh1auymgc6",
+                            Role = "Sale",
+                            Username = "user7"
+                        },
+                        new
+                        {
+                            UserId = "US8",
+                            Email = "emma@gmail.com",
+                            Fullname = "Emma Young",
+                            Password = "$2a$11$eVOYztjoJEEcFgqg9iMRvO7MaOHn4u3kFnI0/637aippi4DX.Aore",
+                            Role = "Sale",
+                            Username = "user8"
                         });
                 });
 
@@ -1065,7 +1666,7 @@ namespace JewelSystemBE.Migrations
                         },
                         new
                         {
-                            WarrantyId = "87b635b2-4093-49a3-b94d-a757825d535e",
+                            WarrantyId = "W4",
                             ExpireDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = "P3",
                             ProductName = "Product C",

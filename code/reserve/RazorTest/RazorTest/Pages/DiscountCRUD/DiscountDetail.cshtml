@@ -1,0 +1,41 @@
+﻿@page
+@model DiscountListModel
+@{
+    ViewData["Title"] = "Discount List";
+}
+
+<h2 style="text-align: center;">Discounts</h2>
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Discount Id</th>
+                <th>Discount Name</th>
+                <th>Order Type</th>
+                <th>Product Type</th>
+                <th>Public Date</th>
+                <th>Expire Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var discount in Model.Discounts)
+            {
+                <tr>
+                    <td>@discount.DiscountId</td>
+                    <td><strong>@discount.DiscountName</strong></td>
+                    <td>@discount.OrderType</td>
+                    <td>@discount.ProductType</td>
+                    <td>@discount.PublicDate.ToShortDateString()</td>
+                    <td>@discount.ExpireDate.ToShortDateString()</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@discount.DiscountId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@discount.DiscountId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Create New Discount</a>

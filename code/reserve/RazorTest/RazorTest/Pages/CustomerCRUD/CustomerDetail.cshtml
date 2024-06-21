@@ -1,0 +1,39 @@
+﻿@page
+@model CustomerListModel
+@{
+    ViewData["Title"] = "Customer List";
+}
+
+<h2 style="text-align: center;">Customers</h2>
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+                <th>Customer Rank</th>
+                <th>Customer Points</th>
+                <th>Attend Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.Customers)
+            {
+                <tr>
+                    <td>@customer.CustomerId</td>
+                    <td><strong>@customer.CustomerName</strong></td>
+                    <td>@customer.CustomerRank</td>
+                    <td>@customer.CustomerPoint</td>
+                    <td>@customer.AttendDate.ToShortDateString()</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@customer.CustomerId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                        <a asp-page="Delete" asp-route-id="@customer.CustomerId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a asp-page="Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Create New Customer</a>

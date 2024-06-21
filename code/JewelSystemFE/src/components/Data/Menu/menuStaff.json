@@ -20,16 +20,35 @@
                     "children": []
                 },
                 {
-                    "name": "Shopping Cart",
-                    "routerLink": ["shopping-cart"],
-                    "identifier": "Shopping Cart",
+                    "name": "Product Edit",
+                    "routerLink": ["product-edit"],
+                    "identifier": "Product Edit",
                     "iconClass": "",
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
                     "children": []
-                }
-
+                },
+                {
+                    "name": "Product Detail",
+                    "routerLink": ["product-detail"],
+                    "identifier": "Product Detail",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Checkout",
+                    "routerLink": ["check-out"],
+                    "identifier": "Checkout",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }   
             ]
         }
     ]

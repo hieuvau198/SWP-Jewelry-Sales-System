@@ -9,6 +9,8 @@ namespace JewelSystemBE.Model
 
         [Required]
         public string CustomerName { get; set; } = "Some Customer";
+        [Required]
+        public string CustomerPhone { get; set; } = "Some Phone Contact";
 
         [Required]
         public string CustomerRank { get; set; } = "Some Rank";

@@ -1,9 +1,9 @@
 {
-    "menuManager":[
+    "menuManager": [
         {
             "name": "Staff List",
-            "routerLink": ["staff-list"],
-            "identifier": "Staff List",
+            "routerLink": ["user-list"],
+            "identifier": "User List",
             "iconClass": "icofont-funky-man fs-5",
             "breadcrumbMessage": "",
             "isCategory": false,
@@ -14,8 +14,8 @@
         },
         {
             "name": "Stall List",
-            "routerLink": ["stall-list"],
-            "identifier": "Stall Lists",
+            "routerLink": ["stall"],
+            "identifier": "Stall List",
             "iconClass": "icofont-funky-man fs-5",
             "breadcrumbMessage": "",
             "isCategory": false,
@@ -51,9 +51,7 @@
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": [
-
-                    ]
+                    "children": []
                 },
                 {
                     "name": "Product Detail",
@@ -73,75 +71,77 @@
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": [
-
-                    ]
+                    "children": []
                 }
+            ]
+        },
+        {
+            "name": "Order Invoice",
+            "routerLink": ["order"],
+            "identifier": "Order Invoice",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
             ]
         },
         {
             "name": "Discounts",
             "routerLink": [""],
-            "identifier": "",
-            "iconClass": "icofont-funky-man fs-5",
+            "identifier": "Discounts",
+            "iconClass": "icofont-truck-loaded fs-5",
             "breadcrumbMessage": "",
             "isCategory": false,
             "isApp": false,
             "children": [
                 {
                     "name": "Discount List",
-                    "routerLink": ["discount List"],
-                    "identifier": "Discount List",
+                    "routerLink": ["discount-list"],
+                    "identifier": "Disount List",
                     "iconClass": "",
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": [
-
-                    ]
+                    "children": []
                 },
                 {
                     "name": "Discount Edit",
                     "routerLink": ["discount-edit"],
-                    "identifier": "Discount Edit",
+                    "identifier": "Disount Edit",
                     "iconClass": "",
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": [
-
-                    ]
+                    "children": []
                 },
                 {
                     "name": "Discount Detail",
                     "routerLink": ["discount-detail"],
-                    "identifier": "Discount Detail",
+                    "identifier": "Disount Detail",
                     "iconClass": "",
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": [
-
-                    ]
+                    "children": []
                 },
                 {
                     "name": "Discount Add",
                     "routerLink": ["discount-Add"],
-                    "identifier": "Discount Add",
+                    "identifier": "Disount Add",
                     "iconClass": "",
                     "breadcrumbMessage": "",
                     "isCategory": false,
                     "isApp": false,
-                    "children": [
-
-                    ]
+                    "children": []
                 }
             ]
         },
         {
-            "name": "Invoice List",
-            "routerLink": ["invoice-list"],
-            "identifier": "Invoice List",
+            "name": "Customer List",
+            "routerLink": ["customer"],
+            "identifier": "Customer List",
             "iconClass": "icofont-funky-man fs-5",
             "breadcrumbMessage": "",
             "isCategory": false,
@@ -149,7 +149,7 @@
             "children": [
 
             ]
-        }
+        }        
 
     ]
 }

@@ -76,31 +76,7 @@
         {
             "name": "Stall List",
             "routerLink": ["stall-list"],
-            "identifier": "Stall Lists",
-            "iconClass": "icofont-funky-man fs-5",
-            "breadcrumbMessage": "",
-            "isCategory": false,
-            "isApp": false,
-            "children": [
-
-            ]
-        },
-        {
-            "name": "Gem List",
-            "routerLink": ["gem-list"],
-            "identifier": "Gem List",
-            "iconClass": "icofont-funky-man fs-5",
-            "breadcrumbMessage": "",
-            "isCategory": false,
-            "isApp": false,
-            "children": [
-
-            ]
-        },
-        {
-            "name": "Gold List",
-            "routerLink": ["gold-list"],
-            "identifier": "Gold List",
+            "identifier": "Stall List",
             "iconClass": "icofont-funky-man fs-5",
             "breadcrumbMessage": "",
             "isCategory": false,

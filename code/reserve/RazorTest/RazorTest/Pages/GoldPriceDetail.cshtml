@@ -1,0 +1,35 @@
+﻿@* @page
+@model RazorTest.Pages.GoldListModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Gold List";
+}
+
+<h2 style="text-align: center;">Gold Price</h2>
+
+<div class="header-image-container">
+    <img src="~/ProductImages/3.jpg" alt="Gold Image" class="header-image" />
+</div>
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Gold Id</th>
+                <th>Gold Name</th>
+                <th>Gold Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var gold in Model.Golds)
+            {
+                <tr>
+                    <td>@goldPrice.Name</td>
+                    <td>@goldPrice.Key</td>
+                    <td>@goldPrice.DateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+ *@

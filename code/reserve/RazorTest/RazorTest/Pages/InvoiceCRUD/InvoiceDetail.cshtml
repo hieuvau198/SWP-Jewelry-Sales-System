@@ -1,0 +1,52 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.InvoiceListModel
+@{
+    ViewData["Title"] = "Invoice List";
+}
+
+<h2 style="text-align: center;">Invoice List</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Invoice Type</th>
+                <th>Customer Id</th>
+                <th>User Id</th>
+                <th>Invoice Date</th>
+                <th>Customer Voucher</th>
+                <th>Total Price</th>
+                <th>End Total Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var invoice in Model.Invoices)
+            {
+                <tr>
+                    <td><strong>@invoice.InvoiceType</strong></td>
+                    <td>@invoice.CustomerId</td>
+                    <td>@invoice.UserId</td>
+                    <td>@invoice.InvoiceDate.ToShortDateString()</td>
+                    <td>@invoice.CustomerVoucher</td>
+                    <td>@String.Format("{0:N0} VND", invoice.TotalPrice)</td>
+                    <td>@String.Format("{0:N0} VND", invoice.EndTotalPrice)</td>
+                    <td>@invoice.InvoiceStatus</td>
+                    <td class="action-buttons">
+                        @if (invoice.InvoiceStatus.Equals("Pending") && Model.VerifyAuth("Manager"))
+                        {
+                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Approve</a>
+                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Disapprove</a>
+                        }
+                        else if (Model.VerifyAuth("Sale"))
+                        {
+                            <span>Need Manager Role To Access</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 150px; text-align: center; margin: 10px auto;">Create New Invoice</a>

@@ -69,7 +69,7 @@ namespace JewelSystemBE.Service.ServiceStall
                 updatedStall.StallName = stall.StallName;
                 updatedStall.StallDescription = stall.StallDescription;
                 updatedStall.StallType = stall.StallType;
-                updatedStall.StaffId = stall.StaffId;
+                updatedStall.UserId = stall.UserId;
                 _jewelDbContext.Stalls.Update(updatedStall);
                 _jewelDbContext.SaveChanges();
                 return true;

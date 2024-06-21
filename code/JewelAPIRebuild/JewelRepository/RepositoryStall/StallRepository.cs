@@ -7,9 +7,9 @@ namespace JewelRepository.RepositoryStall
     public class StallRepository : IStallRepository
     {
         private readonly IStallDao _stallDao;
-        public StallRepository(IStallDao stallDao)
+        public StallRepository(IStallDao IstallDao)
         {
-            _stallDao = stallDao;
+            _stallDao = IstallDao;
         }
         public Stall AddStall(Stall stall)
         {

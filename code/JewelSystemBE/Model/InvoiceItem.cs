@@ -16,6 +16,10 @@ namespace JewelSystemBE.Model
 
         [Required]
         public string ProductName { get; set; } = "Some Product Name";
+        [Required]
+        public string StallId { get; set; } = "Some Stall Id";
+        [Required]
+        public string StallName { get; set; } = "Some Stall Name";
 
         [Required]
         public int Quantity { get; set; } = 1;

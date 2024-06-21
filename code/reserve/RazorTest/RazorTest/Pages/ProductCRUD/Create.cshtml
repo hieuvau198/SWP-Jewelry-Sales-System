@@ -1,0 +1,207 @@
+﻿@page
+@model RazorTest.Pages.ProductCRUD.CreateModel
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RazorTest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #b8860b; /* Set the text color */
+        }
+
+        .create-container {
+            margin-top: 5rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 1200px; /* Increased width */
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .card-header {
+            background-color: #fff;
+            border-bottom: none;
+            padding: 1.5rem 1.5rem 0;
+        }
+
+            .card-header h3 {
+                margin-bottom: 0;
+                color: #b8860b;
+                font-weight: 600;
+            }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #b8860b; /* Set the label text color */
+        }
+
+        .form-control {
+            color: #b8860b; /* Set the input text color */
+        }
+
+        .btn-primary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+        }
+
+            .btn-primary:hover {
+                background-color: #b8860b;
+                border-color: #b8860b;
+            }
+
+        .card-footer {
+            background-color: #fff;
+            border-top: none;
+            padding: 1rem 1.5rem;
+        }
+
+            .card-footer a {
+                background-color: #b8860b; /* Yellow background */
+                color: #ffffff; /* White text color */
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+
+                .card-footer a:hover {
+                    background-color: #a5702b; /* Darker shade of yellow on hover */
+                    color: #ffffff; /* Maintain white text color on hover */
+                    text-decoration: none;
+                }
+
+        /* Custom style for the Back to List button */
+        .btn-secondary {
+            background-color: #b8860b;
+            color: #ffffff;
+            border: none;
+        }
+
+            .btn-secondary:hover {
+                background-color: #a5702b;
+                color: #ffffff;
+            }
+    </style>
+</head>
+<body>
+    <div class="container create-container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Create Product</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <input asp-for="Product.ProductId" type="hidden" />
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductCode"></label>
+                        <input asp-for="Product.ProductCode" class="form-control" />
+                        <span asp-validation-for="Product.ProductCode" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductName"></label>
+                        <input asp-for="Product.ProductName" class="form-control" />
+                        <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductImages"></label>
+                        <input asp-for="Product.ProductImages" class="form-control" />
+                        <span asp-validation-for="Product.ProductImages" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductQuantity"></label>
+                        <input asp-for="Product.ProductQuantity" class="form-control" />
+                        <span asp-validation-for="Product.ProductQuantity" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductType"></label>
+                        <input asp-for="Product.ProductType" class="form-control" />
+                        <span asp-validation-for="Product.ProductType" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductWeight"></label>
+                        <input asp-for="Product.ProductWeight" class="form-control" />
+                        <span asp-validation-for="Product.ProductWeight" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.ProductWarranty"></label>
+                        <input asp-for="Product.ProductWarranty" class="form-control" />
+                        <span asp-validation-for="Product.ProductWarranty" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.MarkupRate"></label>
+                        <input asp-for="Product.MarkupRate" class="form-control" />
+                        <span asp-validation-for="Product.MarkupRate" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.GemId" class="control-label"></label>
+                        <input asp-for="Product.GemId" class="form-control" />
+                        <span asp-validation-for="Product.GemId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.GemWeight"></label>
+                        <input asp-for="Product.GemWeight" class="form-control" />
+                        <span asp-validation-for="Product.GemWeight" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.GoldId" class="control-label"></label>
+                        <input asp-for="Product.GoldId" class="form-control" />
+                        <span asp-validation-for="Product.GoldId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.GoldWeight"></label>
+                        <input asp-for="Product.GoldWeight" class="form-control" />
+                        <span asp-validation-for="Product.GoldWeight" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.LaborCost"></label>
+                        <input asp-for="Product.LaborCost" class="form-control" />
+                        <span asp-validation-for="Product.LaborCost" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.CreatedAt"></label>
+                        <input asp-for="Product.CreatedAt" class="form-control" type="datetime-local" />
+                        <span asp-validation-for="Product.CreatedAt" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create</button>
+                    <a asp-page="./ProductDetail" class="btn btn-secondary">Back to List</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

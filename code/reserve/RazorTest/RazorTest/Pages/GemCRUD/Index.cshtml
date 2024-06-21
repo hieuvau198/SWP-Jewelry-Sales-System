@@ -1,0 +1,58 @@
+﻿@page
+@model RazorTest.Pages.GemCRUD.IndexModel
+@{
+    ViewData["Title"] = "Gem List";
+}
+
+<h2>Gem</h2>
+
+<style>
+    /* Table styles */
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Ensures borders between cells are merged */
+        margin-top: 20px; /* Adds spacing above the table */
+    }
+
+    th, td {
+        border: 1px solid black; /* Adds border to cells and header cells */
+        padding: 8px; /* Adds space inside cells */
+        text-align: left; /* Aligns text to the left inside cells */
+    }
+
+    th {
+        background-color: #f9f9f9; /* Light grey background for header cells */
+    }
+</style>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Weight</th>
+            <th>Unit</th>
+            <th>Buy Price</th>
+            <th>Sell Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody border="1">
+        @foreach (var gem in Model.Gems)
+        {
+            <tr>
+                <td><strong>@gem.GemName</strong></td>
+                <td>@gem.GemCode</td>
+                <td>@gem.GemWeight</td>
+                <td>@gem.Unit</td>
+                <td>@String.Format("{0:N0} VND", gem.BuyPrice)</td>
+                <td>@String.Format("{0:N0} VND", gem.GemPrice)</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@gem.GemId">Edit</a>
+                    <a asp-page="./Delete" asp-route-id="@gem.GemId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-page="./Create">Create New Gem</a>

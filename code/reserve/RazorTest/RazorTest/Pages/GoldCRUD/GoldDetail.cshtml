@@ -1,0 +1,34 @@
+﻿@page
+@model RazorTest.Pages.GoldCRUD.GoldListModel
+@{
+    ViewData["Title"] = "Gold List";
+}
+
+<h2 style="text-align: center;">Gold</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Gold Id</th>
+                <th>Gold Name</th>
+                <th>Gold Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var gold in Model.Golds)
+            {
+                <tr>
+                    <td>@gold.GoldId</td>
+                    <td><strong>@gold.GoldName</strong></td>
+                    <td>@gold.SellPrice</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@gold.GoldId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                        <a asp-page="Delete" asp-route-id="@gold.GoldId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Create New Gold</a>

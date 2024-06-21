@@ -1,0 +1,57 @@
+﻿@page
+@model RazorTest.Pages.ProductCRUD.ProductListModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h2 style="text-align: center;">Products</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Product Id</th>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Product Images</th>
+                <th>Product Quantity</th>
+                <th>Product Type</th>
+                <th>Product Weight</th>
+                <th>Product Warranty</th>
+                <th>Gem Id</th>
+                <th>Gem Weight</th>
+                <th>Gold Id</th>
+                <th>Gold Weight</th>
+                <th>Labor Cost</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td><strong>@product.ProductId</strong></td>
+                    <td>@product.ProductCode</td>
+                    <td>@product.ProductName</td>
+                    <td><img src="/ProductImages/@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" /></td>
+                    <td>@product.ProductQuantity</td>
+                    <td>@product.ProductType</td>
+                    <td>@product.ProductWeight</td>
+                    <td>@product.ProductWarranty</td>
+                    <td>@product.GemId</td>
+                    <td>@product.GemWeight</td>
+                    <td>@product.GoldId</td>
+                    <td>@product.GoldWeight</td>
+                    <td>@product.LaborCost</td>
+                    <td>@product.CreatedAt.ToShortDateString()</td>
+                    <td class="action-buttons">
+                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Product</a>

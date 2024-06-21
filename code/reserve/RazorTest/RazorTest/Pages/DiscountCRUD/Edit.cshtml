@@ -1,0 +1,143 @@
+﻿@page
+@model RazorTest.Pages.DiscountCRUD.EditModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Discount</title>
+
+    <!-- Bootstrap CSS link (assuming you are using Bootstrap) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #b8860b; /* Set the text color */
+        }
+
+        .create-container {
+            margin-top: 5rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 1200px; /* Increased width */
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .card-header {
+            background-color: #fff;
+            border-bottom: none;
+            padding: 1.5rem 1.5rem 0;
+        }
+
+            .card-header h3 {
+                margin-bottom: 0;
+                color: #b8860b;
+                font-weight: 600;
+            }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #b8860b; /* Set the label text color */
+        }
+
+        .form-control {
+            color: #b8860b; /* Set the input text color */
+        }
+
+        .btn-primary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+        }
+
+            .btn-primary:hover {
+                background-color: #b8860b;
+                border-color: #b8860b;
+            }
+
+        .card-footer {
+            background-color: #fff;
+            border-top: none;
+            padding: 1rem 1.5rem;
+        }
+
+            .card-footer a {
+                background-color: #b8860b; /* Yellow background */
+                color: #ffffff; /* White text color */
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+
+                .card-footer a:hover {
+                    background-color: #b8860b; /* Darker shade of yellow on hover */
+                    color: #ffffff; /* Maintain white text color on hover */
+                    text-decoration: none;
+                }
+    </style>
+</head>
+<body>
+    <div class="container create-container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Edit Discount</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <!-- Hidden field for DiscountId -->
+                    <input asp-for="Discount.DiscountId" type="hidden" />
+
+                    <div class="form-group">
+                        <label asp-for="Discount.DiscountName"></label>
+                        <input asp-for="Discount.DiscountName" class="form-control" />
+                        <span asp-validation-for="Discount.DiscountName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Discount.OrderType"></label>
+                        <input asp-for="Discount.OrderType" class="form-control" />
+                        <span asp-validation-for="Discount.OrderType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Discount.ProductType"></label>
+                        <input asp-for="Discount.ProductType" class="form-control" />
+                        <span asp-validation-for="Discount.ProductType" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Discount.PublicDate"></label>
+                        <input asp-for="Discount.PublicDate" class="form-control" type="date" />
+                        <span asp-validation-for="Discount.PublicDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Discount.ExpireDate"></label>
+                        <input asp-for="Discount.ExpireDate" class="form-control" type="date" />
+                        <span asp-validation-for="Discount.ExpireDate" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+            </div>
+            <div class="card-footer">
+                <a asp-page="./Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (assuming you are using Bootstrap) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Emme1MtgwC/Y3O95jwe/ljwuVe5+6vO6B4"
+            crossorigin="anonymous"></script>
+</body>
+</html>

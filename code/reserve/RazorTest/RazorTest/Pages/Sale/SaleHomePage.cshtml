@@ -1,0 +1,180 @@
+﻿@page "{currentPage:int?}"
+@using RazorTest.Models
+@model RazorTest.Pages.Sale.SaleHomePageModel
+@{
+}
+
+<style>
+    .luxury-table-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 800px;
+    }
+
+    .luxury-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 1em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+        .luxury-table th, .luxury-table td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .luxury-table th {
+            background-color: #d4af37; /* Gold background for header */
+            color: #ffffff;
+            font-weight: bold;
+            border: 1px solid #b8860b;
+        }
+
+        .luxury-table td {
+            border: 1px solid #b8860b;
+        }
+
+        .luxury-table tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .luxury-table tbody tr:nth-of-type(even) {
+            background-color: #ffffff;
+        }
+
+        .luxury-table tbody tr:hover {
+            background-color: #f4e5c2; /* Light gold color for hover effect */
+        }
+
+    .pagination {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #b8860b;
+            border: 1px solid #b8860b;
+            border-radius: 5px;
+        }
+
+            .pagination a.active {
+                background-color: #d4af37;
+                color: white;
+            }
+
+            .pagination a:hover {
+                background-color: #d4af37;
+                color: white;
+            }
+</style>
+
+<h2>Sale Feature</h2>
+
+<form method="get" action="/Sale/ViewCart">
+    <button type="submit">Go to Cart</button>
+</form>
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Product Code</th>
+                <th>Product Name</th>
+                <th>Product Images</th>
+                <th>Product Quantity</th>
+                <th>Product Type</th>
+                <th>Product Weight</th>
+                <th>Product Warranty</th>
+                <th>Gem Id</th>
+                <th>Gem Weight</th>
+                <th>Gold Id</th>
+                <th>Gold Weight</th>
+                <th>Labor Cost</th>
+                <th>Create At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Product product in Model.Products)
+            {
+                <tr>
+                    <td>@product.ProductCode</td>
+                    <td>@product.ProductName</td>
+                    <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
+                    <td>@product.ProductQuantity</td>
+                    <td>@product.ProductType</td>
+                    <td>@product.ProductWeight</td>
+                    <td>@product.ProductWarranty</td>
+                    <td>@product.GemId</td>
+                    <td>@String.Format("{0:F2}", product.GemWeight)</td>
+                    <td>@product.GoldId</td>
+                    <td>@String.Format("{0:F2}", product.GoldWeight)</td>
+                    <td>@product.LaborCost</td>
+                    <td>@product.CreatedAt.ToShortDateString()</td>
+                    <td>
+                        <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+                            <input type="submit" value="Add to Cart" />
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    @if (Model.CurrentPage > 1)
+    {
+        <a asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
+    }
+    @for (var i = 1; i <= Model.TotalPages; i++)
+    {
+        if (i == Model.CurrentPage)
+        {
+            <a class="active" href="#">@i</a>
+        }
+        else
+        {
+            <a asp-page="./SaleHomePage" asp-route-currentPage="@i">@i</a>
+        }
+    }
+    @if (Model.CurrentPage < Model.TotalPages)
+    {
+        <a asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
+    }
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.add-to-cart-form').on('submit', function (event) {
+                event.preventDefault();
+                var $form = $(this);
+                var productId = $form.find('input[name="productId"]').val();
+                var currentPage = $form.find('input[name="currentPage"]').val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Page("SaleHomePage", "AddToCart")',
+                    data: $form.serialize(),
+                    success: function (response) {
+                        // Optionally update the UI or show a message that the product was added to the cart
+                        alert('Product added to cart!');
+                    },
+                    error: function () {
+                        alert('Failed to add product to cart.');
+                    }
+                });
+            });
+        });
+    </script>
+}
