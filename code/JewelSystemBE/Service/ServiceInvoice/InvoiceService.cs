@@ -1,15 +1,22 @@
 ﻿using JewelSystemBE.Data;
 using JewelSystemBE.Model;
+using JewelSystemBE.Service.ServiceInvoiceItem;
+using JewelSystemBE.Service.ServiceProduct;
+using System.Collections.Generic;
 
 namespace JewelSystemBE.Service.ServiceInvoice
 {
     public class InvoiceService : IInvoiceService
     {
         private readonly JewelDbContext _jewelDbContext;
+        private readonly IInvoiceItemService _invoiceItemService;
+        private readonly IProductService _productService;
 
-        public InvoiceService(JewelDbContext jewelDbContext)
+        public InvoiceService(JewelDbContext jewelDbContext, IInvoiceItemService invoiceItemService, IProductService productService)
         {
-            this._jewelDbContext = jewelDbContext;
+            _jewelDbContext = jewelDbContext;
+            _invoiceItemService = invoiceItemService;
+            _productService = productService;
         }
 
         public Invoice AddInvoice(Invoice invoice)
@@ -83,7 +90,13 @@ namespace JewelSystemBE.Service.ServiceInvoice
                 if (invoice.CustomerVoucher != null)
                 { updatedInvoice.CustomerVoucher = invoice.CustomerVoucher; }
                 if (invoice.InvoiceStatus != null)
-                { updatedInvoice.InvoiceStatus = invoice.InvoiceStatus; }
+                { 
+                    updatedInvoice.InvoiceStatus = invoice.InvoiceStatus; 
+                    if(updatedInvoice.InvoiceStatus.Equals("Complete"))
+                    {
+                        UpdateProductQuantity(updatedInvoice.InvoiceId, updatedInvoice.InvoiceType);
+                    }
+                }
                 if (invoice.TotalPrice != null)
                 { updatedInvoice.TotalPrice = invoice.TotalPrice; }
                 if (invoice.EndTotalPrice != null)
@@ -95,6 +108,49 @@ namespace JewelSystemBE.Service.ServiceInvoice
                 return true;
             }
             return false;
+        }
+
+        public void UpdateProductQuantity(string invoiceId, string invoiceType)
+        {
+            if(invoiceType == null || invoiceId == null) return;
+
+            //call data
+            List<Product> products = _jewelDbContext.Products.ToList();
+            List<InvoiceItem> invoiceItems = _jewelDbContext.InvoiceItems.ToList();
+            List<InvoiceItem> foundItems = new List<InvoiceItem>();
+            foreach (InvoiceItem item in invoiceItems)
+            {
+                if (item.InvoiceId.Equals(invoiceId))
+                {
+                    foundItems.Add(item);
+                }
+            }
+            if (invoiceType.Equals("Sale"))
+            { 
+                foreach (InvoiceItem item in foundItems)
+                {
+                    Product product = products.Find(x => x.ProductId ==  item.ProductId);
+                    if(product != null)
+                    {
+                        product.ProductQuantity = product.ProductQuantity - item.Quantity;
+                        _jewelDbContext.Products.Update(product);
+                        _jewelDbContext.SaveChanges();
+                    }
+                }
+            }
+            else if (invoiceType.Equals("Buy"))
+            {
+                foreach (InvoiceItem item in foundItems)
+                {
+                    Product product = products.Find(x => x.ProductId == item.ProductId);
+                    if (product != null)
+                    {
+                        product.ProductQuantity = product.ProductQuantity + item.Quantity;
+                        _jewelDbContext.Products.Update(product);
+                        _jewelDbContext.SaveChanges();
+                    }
+                }
+            }
         }
     }
 }
