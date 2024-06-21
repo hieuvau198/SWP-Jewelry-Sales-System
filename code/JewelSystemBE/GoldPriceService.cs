@@ -1,4 +1,5 @@
-﻿using System.Xml.Linq;
+﻿using System.Globalization;
+using System.Xml.Linq;
 
 namespace JewelSystemBE
 {
@@ -14,38 +15,42 @@ namespace JewelSystemBE
         public async Task<List<GoldPrice>> GetGoldPricesAsync()
         {
             var goldPrices = new List<GoldPrice>();
-            var response = await _httpClient.GetStringAsync("http://giavang.doji.vn/api/giavang/?api_key=258fbd2a72ce8481089d88c678e9fe4f");
+            var response = await _httpClient.GetStringAsync("https://sjc.com.vn/xml/tygiavang.xml");
 
             var xmlDoc = XDocument.Parse(response);
 
-            foreach (var element in xmlDoc.Descendants("Row"))
+            foreach (var cityElement in xmlDoc.Descendants("city"))
             {
-                var sellString = element.Attribute("Sell")?.Value.Replace(",", "");
-                var buyString = element.Attribute("Buy")?.Value.Replace(",", "");
-
-                decimal sell = 0;
-                decimal buy = 0;
-
-                if (!string.IsNullOrEmpty(sellString) && sellString != "-")
+                var cityName = cityElement.Attribute("name")?.Value;
+                foreach (var itemElement in cityElement.Descendants("item"))
                 {
-                    sell = decimal.Parse(sellString);
+                    var sellString = itemElement.Attribute("sell")?.Value.Replace(",", "");
+                    var buyString = itemElement.Attribute("buy")?.Value.Replace(",", "");
+
+                    double sell = 0;
+                    double buy = 0;
+
+                    if (!string.IsNullOrEmpty(sellString) && sellString != "-")
+                    {
+                        sell = double.Parse(sellString, CultureInfo.InvariantCulture) * 1000; // Converting from 'ngàn đồng/lượng' to 'đồng/lượng'
+                    }
+
+                    if (!string.IsNullOrEmpty(buyString) && buyString != "-")
+                    {
+                        buy = double.Parse(buyString, CultureInfo.InvariantCulture) * 1000; // Converting from 'ngàn đồng/lượng' to 'đồng/lượng'
+                    }
+
+                    var goldPrice = new GoldPrice
+                    {
+                        Name = itemElement.Attribute("type")?.Value,
+                        Key = $"{cityName}_{itemElement.Attribute("type")?.Value}", // Composite key for uniqueness
+                        Sell = sell,
+                        Buy = buy,
+                        DateTime = DateTime.Now,
+                    };
+
+                    goldPrices.Add(goldPrice);
                 }
-
-                if (!string.IsNullOrEmpty(buyString) && buyString != "-")
-                {
-                    buy = decimal.Parse(buyString);
-                }
-
-                var goldPrice = new GoldPrice
-                {
-                    Name = element.Attribute("Name")?.Value,
-                    Key = element.Attribute("Key")?.Value,
-                    Sell = sell,
-                    Buy = buy,
-                    DateTime = DateTime.Now
-                };
-
-                goldPrices.Add(goldPrice);
             }
             return goldPrices;
         }

@@ -1,136 +1,36 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razortest\\pages\\gemcrud\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\gemcrud\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\goldpricedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\goldpricedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razortest\\pages\\gemcrud\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\gemcrud\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\authentication\\loginpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\loginpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razortest\\pages\\gemcrud\\gemdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\gemcrud\\gemdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razortest\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\authentication\\loginpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\loginpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\authentication\\logoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\logoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\viewcart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewcart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\selectdiscountpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\selectdiscountpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\checkoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\checkoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\checkoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\checkoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\authentication\\logoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\logoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\invoicedetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\invoicedetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\salehomepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\salehomepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\models\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\models\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\discountcrud\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\discountcrud\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razortest\\models\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 195,
+      "VerticalTabListWidth": 189,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,379 +38,66 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Pages\\GemCRUD\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\GemCRUD\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Pages\\GemCRUD\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\GemCRUD\\Edit.cshtml",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAHMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-20T14:24:39.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginPage.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Authentication\\LoginPage.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml",
-              "RelativeToolTip": "Pages\\Authentication\\LoginPage.cshtml",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAiwCAAAAAAAAAA",
+              "Title": "GemDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Pages\\GemCRUD\\GemDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\GemCRUD\\GemDetail.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Pages\\GemCRUD\\GemDetail.cshtml",
+              "RelativeToolTip": "Pages\\GemCRUD\\GemDetail.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB0AAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T16:26:06.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ViewCart.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\ViewCart.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Sale\\ViewCart.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\ViewCart.cshtml.cs",
-              "RelativeToolTip": "Pages\\Sale\\ViewCart.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:07:54.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Services\\UserService.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\UserService.cs",
-              "RelativeToolTip": "Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T11:56:54.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LogoutPage.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LogoutPage.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Authentication\\LogoutPage.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LogoutPage.cshtml",
-              "RelativeToolTip": "Pages\\Authentication\\LogoutPage.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T17:43:07.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAIwIoAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T09:27:54.577Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CheckOutPage.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Sale\\CheckOutPage.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml.cs",
-              "RelativeToolTip": "Pages\\Sale\\CheckOutPage.cshtml.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAwEgAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T11:16:07.677Z",
+              "WhenOpened": "2024-06-20T14:16:56.148Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GoldPriceDetail.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\GoldPriceDetail.cshtml",
-              "RelativeDocumentMoniker": "Pages\\GoldPriceDetail.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\GoldPriceDetail.cshtml",
-              "RelativeToolTip": "Pages\\GoldPriceDetail.cshtml",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAAAEsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T08:40:48.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAiwEUAAAA0AAAA",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Pages\\GemCRUD\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\GemCRUD\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Pages\\GemCRUD\\Index.cshtml",
+              "RelativeToolTip": "Pages\\GemCRUD\\Index.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADkAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T16:29:23.923Z",
+              "WhenOpened": "2024-06-20T14:13:07.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SelectDiscountPage.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Sale\\SelectDiscountPage.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
-              "RelativeToolTip": "Pages\\Sale\\SelectDiscountPage.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAADAAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T03:42:04.721Z",
-              "EditorCaption": ""
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA7wBYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T14:11:35.046Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LoginPage.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Authentication\\LoginPage.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml.cs",
-              "RelativeToolTip": "Pages\\Authentication\\LoginPage.cshtml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAgwAsAAAAIAAAA",
+              "Title": "Gem.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Models\\Gem.cs",
+              "RelativeDocumentMoniker": "Models\\Gem.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorTest\\Models\\Gem.cs",
+              "RelativeToolTip": "Models\\Gem.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T16:26:12.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAIAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T11:14:35.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SaleHomePage.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Sale\\SaleHomePage.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
-              "RelativeToolTip": "Pages\\Sale\\SaleHomePage.cshtml.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAswGEAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:09:04.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ViewCart.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\ViewCart.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Sale\\ViewCart.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\ViewCart.cshtml",
-              "RelativeToolTip": "Pages\\Sale\\ViewCart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T14:57:52.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SelectDiscountPage.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Sale\\SelectDiscountPage.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml.cs",
-              "RelativeToolTip": "Pages\\Sale\\SelectDiscountPage.cshtml.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAiwFMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T03:58:30.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CheckOutPage.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Sale\\CheckOutPage.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml",
-              "RelativeToolTip": "Pages\\Sale\\CheckOutPage.cshtml",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAAAK0AAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T11:15:45.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ApiService.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
-              "RelativeDocumentMoniker": "Services\\ApiService.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
-              "RelativeToolTip": "Services\\ApiService.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAqwC4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T13:07:05.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "InvoiceItem.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\InvoiceItem.cs",
-              "RelativeDocumentMoniker": "Models\\InvoiceItem.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\InvoiceItem.cs",
-              "RelativeToolTip": "Models\\InvoiceItem.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAgwAUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T07:25:40.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Invoice.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Invoice.cs",
-              "RelativeDocumentMoniker": "Models\\Invoice.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Invoice.cs",
-              "RelativeToolTip": "Models\\Invoice.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBoAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T10:55:35.973Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Index.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Index.cshtml",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\Index.cshtml",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAAHIAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T08:18:58.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "InvoiceDetail.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAAAHYAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T08:39:16.797Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Index.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\Index.cshtml.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAkwCoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T08:45:51.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Edit.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\Edit.cshtml",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAAAFIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T08:49:36.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Edit.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml.cs",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\Edit.cshtml.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAkwDoAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:01:46.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Delete.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\Delete.cshtml",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\Delete.cshtml",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEAAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T09:06:28.72Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "InvoiceDetail.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
-              "RelativeToolTip": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:13:52.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\DiscountCRUD\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\DiscountCRUD\\Index.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\DiscountCRUD\\Index.cshtml",
-              "RelativeToolTip": "Pages\\DiscountCRUD\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T04:08:08.736Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Discount.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Discount.cs",
-              "RelativeDocumentMoniker": "Models\\Discount.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Discount.cs",
-              "RelativeToolTip": "Models\\Discount.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwAAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T04:05:46.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LogoutPage.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LogoutPage.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Authentication\\LogoutPage.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Authentication\\LogoutPage.cshtml.cs",
-              "RelativeToolTip": "Pages\\Authentication\\LogoutPage.cshtml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAqwA8AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T17:44:12.771Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T15:57:05.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SaleHomePage.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Sale\\SaleHomePage.cshtml",
-              "ToolTip": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml",
-              "RelativeToolTip": "Pages\\Sale\\SaleHomePage.cshtml",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGMAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-15T13:09:01.572Z"
+              "WhenOpened": "2024-06-20T14:10:01.031Z"
             }
           ]
         }

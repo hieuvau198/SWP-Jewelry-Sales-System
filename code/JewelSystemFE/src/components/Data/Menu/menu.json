@@ -68,7 +68,17 @@
                     "isCategory": false,
                     "isApp": false,
                     "children": []
-                }
+                },
+                {
+                    "name": "Checkout",
+                    "routerLink": ["check-out"],
+                    "identifier": "Checkout",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }   
 
             ]
         },
@@ -81,7 +91,7 @@
             "isCategory": false,
             "isApp": false,
             "children": [
-              
+
             ]
         },
         {
@@ -94,6 +104,69 @@
             "isApp": false,
             "children": [
               
+            ]
+        },
+        {
+            "name": "Order Invoice",
+            "routerLink": ["order"],
+            "identifier": "User List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+              
+            ]
+        },
+        {
+            "name": "Discounts",
+            "routerLink": [""],
+            "identifier": "Discounts",
+            "iconClass": "icofont-truck-loaded fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+                {
+                    "name": "Discount List",
+                    "routerLink": ["discount-list"],
+                    "identifier": "Disount List",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Discount Edit",
+                    "routerLink": ["discount-edit"],
+                    "identifier": "Disount Edit",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Discount Detail",
+                    "routerLink": ["discount-detail"],
+                    "identifier": "Disount Detail",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                },
+                {
+                    "name": "Discount Add",
+                    "routerLink": ["discount-Add"],
+                    "identifier": "Disount Add",
+                    "iconClass": "",
+                    "breadcrumbMessage": "",
+                    "isCategory": false,
+                    "isApp": false,
+                    "children": []
+                }
             ]
         }
     ]

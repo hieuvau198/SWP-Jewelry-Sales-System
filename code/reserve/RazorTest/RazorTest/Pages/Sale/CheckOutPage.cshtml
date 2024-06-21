@@ -71,7 +71,7 @@
         }
 
         .invoice-table th {
-            background-color: #009879;
+            background-color: #b8860b;
             color: #ffffff;
             font-weight: bold;
         }
@@ -84,8 +84,8 @@
             background-color: #ffffff;
         }
 
-    .btn-pink {
-        background-color: #e91e63;
+    .btn-black {
+        background-color: darkseagreen;
         color: #ffffff;
         padding: 10px 20px;
         border: none;
@@ -93,12 +93,40 @@
         font-size: 1em;
     }
 
-        .btn-pink:hover {
-            background-color: #d81b60;
+        .btn-black:hover {
+            background-color: darkseagreen;
         }
 </style>
 
 <h2 style="text-align: center;">Check Out Order</h2>
+
+
+
+@if(Model.InvoiceItems != null)
+{
+        <table class="table table-bordered table-striped">
+            <thead>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                <th>Total Price</th>
+                <th>After Discount</th>
+            </thead>
+
+            @foreach (var item in Model.InvoiceItems)
+            {
+            <tbody>
+            <td>@item.ProductName</td>
+            <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+            <td>@item.Quantity</td>
+            <td>@(item.DiscountRate * 100)%</td>
+            <td>@String.Format("{0:N0} VND", item.TotalPrice)</td>
+            <td>@String.Format("{0:N0} VND", item.EndTotalPrice)</td>
+            </tbody>
+            } 
+        </table>   
+}
 
 @if (Model.Invoice != null)
 {
@@ -126,6 +154,10 @@
                     <td>@String.Format("{0:N0} VND", Model.Invoice.TotalPrice)</td>
                 </tr>
                 <tr>
+                    <th>End Price:</th>
+                    <td>@String.Format("{0:N0} VND", Model.Invoice.EndTotalPrice)</td>
+                </tr>
+                <tr>
                     <th>Order Status:</th>
                     <td>@Model.Invoice.InvoiceStatus</td>
                 </tr>
@@ -134,43 +166,12 @@
     </div>
 }
 
-@if(Model.InvoiceItems != null)
-{
-        <table class="table table-bordered table-striped">
-            <thead>
-                <th>Product Name</th>
-                <th>Unit Price</th>
-                <th>Quantity</th>
-                <th>Discount</th>
-                <th>Total Price</th>
-                <th>After Discount</th>
-            </thead>
-
-            @foreach (var item in Model.InvoiceItems)
-            {
-            <tbody>
-            <td>@item.ProductName</td>
-            <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
-            <td>@item.Quantity</td>
-            <td>@item.DiscountRate</td>
-            <td>@String.Format("{0:N0} VND", item.TotalPrice)</td>
-            <td>@String.Format("{0:N0} VND", item.EndTotalPrice)</td>
-            </tbody>
-            }
-
-            
-        </table>
-        
-}
-
-
-<form method="post" asp-page-handler="Confirm">
-    <button type="submit" class="btn-pink">Confirm</button>
+<form method="post" asp-page-handler="Confirm" style="text-align: center;">
+    <button type="submit" class="btn-black">Confirm</button>
 </form>
-
 <br />
 
-<form method="get" action="/Sale/ViewCart">
+<form method="get" action="/Sale/ViewCart" style="text-align: center;">
     <input type="hidden" name="Back" value="/Sale/ViewCart" />
-    <button type="submit" class="btn-pink">Cancel</button>
+    <button type="submit" class="btn-black">Cancel</button>
 </form>

@@ -1,0 +1,32 @@
+﻿@page
+@model RazorTest.Pages.GoldModel
+@{
+    ViewData["Title"] = "Gold List";
+}
+
+<h2 style="text-align: center;">Gold</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Gold Name</th>
+                <th>Buy Price</th>
+                <th>Sell Price</th>
+                <th>Unit</th>
+                <th>Update Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var gold in Model.Golds)
+            {
+                <tr>
+                    <td><strong>@gold.GoldName</strong></td>
+                    <td>@String.Format("{0:N0}", gold.BuyPrice)</td>
+                    <td>@String.Format("{0:N0}", gold.SellPrice)</td>
+                    <td>@gold.Unit</td>
+                    <td>@gold.Date</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

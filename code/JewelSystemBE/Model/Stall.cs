@@ -13,7 +13,9 @@ namespace JewelSystemBE.Model
         [Required]
         public string StallType { get; set; } = "None";
         [Required]
-        public string StaffId { get; set; } = "Some Staff Id";
+        public string UserId { get; set; } = "Some Staff Id";
+        [Required]
+        public string StaffName { get; set;  } = "Some Staff Name";
 
     }
 }

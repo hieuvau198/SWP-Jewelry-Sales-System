@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         h1, h2, h3, h4, h5, h6 {
-            font-family: "Oswald"
+            font-family: "Oswald";
         }
 
         body {
-            font-family: "Open Sans"
+            font-family: "Open Sans";
         }
 
         .link-table {
@@ -52,256 +52,265 @@
         .container {
             margin-top: 20px;
         }
+
+        .header-title {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+            .header-title h1 {
+                font-size: 50px;
+                margin: 0;
+            }
+
+            .header-title p {
+                font-size: 20px;
+                margin: 5px 0 0;
+            }
+
+        .navbar {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
+
+            .navbar a {
+                text-decoration: none;
+                padding: 10px 20px;
+                display: inline-block;
+                color: #333;
+            }
+
+                .navbar a:hover {
+                    background-color: #ddd;
+                }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+            .footer a {
+                color: #f8f9fa;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    text-decoration: underline;
+                }
     </style>
 </head>
 <body class="w3-light-grey">
-    <!-- w3-content defines a container for fixed size centered content, and is wrapped around the whole page content, except for the footer in this example -->
+    <!-- Main Container -->
     <div class="w3-content" style="max-width:1600px">
 
         <!-- Header -->
-        <header class="w3-container w3-center w3-padding-48 w3-white">
-            <h4>Welcome to the blog of <span class="w3-tag">Jewelry Store</span></h4>
+        <header class="header-title w3-center w3-padding-48 w3-white">
+            <h1>Jewelry Store</h1>
+            <p>Your Ultimate Destination for Exquisite Jewelry</p>
         </header>
 
         <!-- Image header -->
         <header class="w3-display-container w3-wide" id="home">
-            <img class="w3-image" src="~/ProductImages/3.jpg" alt="Jewelry" width="1600" height="10">
+            <img class="w3-image" src="~/ProductImages/3.jpg" alt="Jewelry" width="1600" height="800">
             <div class="w3-display-left w3-padding-large">
-                <h1 class="w3-text-white">Your Subtitle Here</h1>
-                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Your Main Title Here</b></h1>
+                <h1 class="w3-text-white">Luxury Redefined</h1>
+                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
             </div>
         </header>
 
-        <!-- Grid -->
-        <div class="w3-row w3-padding w3-border">
+        <!-- Main Content Grid -->
+        <div class="w3-row w3-padding w3-border main-content">
 
-            <!-- Blog entries -->
+            <!-- Blog entries / Main section -->
             <div class="w3-col l8 s12">
-                <!-- Your blog entries here -->
-            </div>
+                <div class="w3-card-4 w3-margin w3-white">
+                    <img src="~/ProductImages/KimCuongg.jpg" alt="Diamond" style="width:auto">
+                    <div class="w3-container">
+                        <h3><b>Our Latest Collection</b></h3>
+                        <h5>New Arrivals, <span class="w3-opacity">June 2024</span></h5>
+                    </div>
 
-            <!-- About/Information menu -->
-            <div class="w3-col l4">
-                <!-- About Card -->
-                <div class="w3-white w3-margin">
-                    <img src="about-image.jpg" alt="About" style="width:100%" class="w3-grayscale">
-                    <div class="w3-container w3-black">
-                        <h4>About Me</h4>
-                        <p>Your description here.</p>
+                    <div class="w3-container">
+                        <p>Explore the finest diamonds crafted with perfection. Our new collection offers a blend of elegance and style, perfect for every occasion.</p>
+                        <div class="w3-row">
+                            <div class="w3-col m8 s12">
+                                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                            </div>
+                            <div class="w3-col m4 w3-hide-small">
+                                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <hr>
 
-                <!-- Additional sections here -->
-                <!-- Navigation -->
-                <div class="container">
-                    <div class="jumbotron">
-                        <h1 class="display-4">Welcome to the Jewelry Sales System</h1>
-                        <p class="lead">Manage your store efficiently with our comprehensive system.</p>
+                <!-- More blog entries can be added here -->
+            </div>
+
+            <!-- Sidebar / Info section -->
+            <div class="w3-col l4">
+                <!-- About Card -->
+                <div class="w3-card w3-margin w3-margin-top">
+                    <img src="/ProductImages/diamond_earrings.jpg" alt="About" style="width:auto" class="w3-grayscale">
+                    <div class="w3-container w3-white">
+                        <h4><b>About Us</b></h4>
+                        <p>We offer the finest collection of diamonds and jewelry. Our commitment is to provide exceptional quality and unmatched customer service.</p>
                     </div>
-                    <h2>Navigation</h2>
-                    <table class="link-table">
-                        <thead>
-                            <tr>
-                                <th>Section</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Customers</td>
-                                <td>
+                </div>
+                <hr>
+
+                <!-- Navigation and Authentication Section -->
+                @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+                {
+                    <div class="w3-card w3-margin">
+                        <div class="w3-container w3-padding">
+                            <h4>Navigation</h4>
+                            <table class="link-table">
+                                <thead>
+                                    <tr>
+                                        <th>Section</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
                                     @if (Model.VerifyAuth("Admin"))
                                     {
-                                        <a asp-page="/CustomerCRUD/CustomerDetail">View all Customers</a>
+                                        <tr>
+                                            <td>Customers</td>
+                                            <td><a asp-page="/CustomerCRUD/CustomerDetail">View all Customers</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discounts</td>
+                                            <td><a asp-page="/DiscountCRUD/DiscountDetail">View all Discounts</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gems</td>
+                                            <td><a asp-page="/GemCRUD/GemDetail">View all Gems</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Golds</td>
+                                            <td><a asp-page="/GoldCRUD/GoldDetail">View all Golds</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>User</td>
+                                            <td><a asp-page="/UserCRUD/UserDetail">View all Users</a></td>
+                                        </tr>
                                     }
-                                    else
+                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
                                     {
-                                        <span class="text-danger">You need Admin Role to access this feature.</span>
+                                        <tr>
+                                            <td>Warranty</td>
+                                            <td><a asp-page="/WarrantyCRUD/WarrantyDetail">View all Warranties</a></td>
+                                        </tr>
                                     }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Discounts</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Admin"))
-                                    {
-                                        <a asp-page="/DiscountCRUD/DiscountDetail">View all Discounts</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">You need Admin Role to access this feature.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Gems</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Admin"))
-                                    {
-                                        <a asp-page="/GemCRUD/GemDetail">View all Gems</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">You need Admin Role to access this feature.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Golds</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Admin"))
-                                    {
-                                        <a asp-page="/GoldCRUD/GoldDetail">View all Golds</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">You need Admin Role to access this feature.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Invoice</td>
-                                <td>
                                     @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
                                     {
-                                        <a asp-page="/InvoiceCRUD/InvoiceDetail">View all Invoices</a>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><a asp-page="/InvoiceCRUD/InvoiceDetail">View all Invoices</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Invoice Item</td>
+                                            <td><a asp-page="/InvoiceItemCRUD/InvoiceItemDetail">View all InvoiceItems</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Product</td>
+                                            <td><a asp-page="/ProductCRUD/ProductDetail">View all Products</a></td>
+                                        </tr>
                                     }
-                                    else
-                                    {
-                                        <span class="text-danger">Access Limit: Manager, Cashier, Sale, Admin.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Invoice Item</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
-                                    {
-                                        <a asp-page="/InvoiceItemCRUD/InvoiceItemDetail">View all InvoiceItems</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">Access Limit: Manager, Cashier, Sale, Admin.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Product</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
-                                    {
-                                        <a asp-page="/ProductCRUD/ProductDetail">View all Products</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">Access Limit: Manager, Cashier, Sale, Admin.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>User</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Admin"))
-                                    {
-                                        <a asp-page="/UserCRUD/UserDetail">View all Users</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">You need Admin Role to access this feature.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Warranty</td>
-                                <td>
-                                    @if (Model.VerifyAuth("Manager") || Model.VerifyAuth("Admin"))
-                                    {
-                                        <a asp-page="/WarrantyCRUD/WarrantyDetail">View all Warranties</a>
-                                    }
-                                    else
-                                    {
-                                        <span class="text-danger">You need Manager Role or Admin Role to access this feature.</span>
-                                    }
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Gold Price</td>
-                                <td><a asp-page="/GoldPriceDetail">View all Gold Prices</a></td>
-                            </tr>
-                            <tr>
-                                <td>Sale Feature</td>
-                                <td>
                                     @if (Model.VerifyAuth("Sale"))
                                     {
-                                        <a asp-page="/Sale/SaleHomePage">Access The Sale Feature</a>
+                                        <tr>
+                                            <td>Sale Feature</td>
+                                            <td><a asp-page="/Sale/SaleHomePage">Access The Sale Feature</a></td>
+                                        </tr>
                                     }
-                                    else
-                                    {
-                                        <span class="text-danger">You need Sale Staff Role to access this feature.</span>
-                                    }
-                                </td>
-                            </tr>
-                            @if (!Model.VerifyAuth("Admin") && !Model.VerifyAuth("Manager") && !Model.VerifyAuth("Cashier") && !Model.VerifyAuth("Sale"))
-                            {
-                                <tr>
-                                    <td>Login Feature</td>
-                                    <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
-                                </tr>
-                            }
-                            @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
-                            {
-                                <tr>
-                                    <td>Logout Feature</td>
-                                    <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                                    <tr>
+                                        <td>Gold Price</td>
+                                        <td><a asp-page="/GoldPriceDetail">View all Gold Prices</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logout Feature</td>
+                                        <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="w3-card w3-margin">
+                        <div class="w3-container w3-padding">
+                            <h4>Navigation</h4>
+                            <table class="link-table">
+                                <thead>
+                                    <tr>
+                                        <th>Section</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Login Feature</td>
+                                        <td><a asp-page="/Authentication/LoginPage">Access The Login Feature</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                }
 
-            </div>
-        </div><br>
-
-    </div>
-
-    <!-- Subscribe Modal -->
-    <div id="subscribe" class="w3-modal w3-animate-opacity">
-        <div class="w3-modal-content" style="padding:32px">
-            <div class="w3-container w3-white w3-center">
-                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-                <h2 class="w3-wide">SUBSCRIBE</h2>
-                <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
-        <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
-        <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </footer>
 
-    <script>
-        // Toggle the visibility of comments
-        function myFunction(id) {
-            var x = document.getElementById(id);
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
+        <br>
+
+        <!-- Subscribe Modal -->
+        <div id="subscribe" class="w3-modal w3-animate-opacity">
+            <div class="w3-modal-content" style="padding:32px">
+                <div class="w3-container w3-white w3-center">
+                    <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+                    <h2 class="w3-wide">SUBSCRIBE</h2>
+                    <p>Join our mailing list to receive updates on the latest jewelry collections and special offers.</p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+                    <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+            <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+            <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </footer>
+
+        <script>
+            // Toggle the visibility of comments
+            function myFunction(id) {
+                var x = document.getElementById(id);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
             }
-        }
 
-        // Like function
-        function likeFunction(x) {
-            x.style.fontWeight = "bold";
-            x.innerHTML = "✓ Liked";
-        }
-    </script>
-
+            // Like function
+            function likeFunction(x) {
+                x.style.fontWeight = "bold";
+                x.innerHTML = "✓ Liked";
+            }
+        </script>
+    </div>
 </body>
 </html>

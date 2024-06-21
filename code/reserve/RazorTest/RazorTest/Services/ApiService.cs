@@ -24,7 +24,7 @@ namespace RazorTest.Services
             var response = await _httpClient.PostAsJsonAsync(url, data);
 
             // Ensure the response is successful
-            response.EnsureSuccessStatusCode();
+            //response.EnsureSuccessStatusCode();
 
             // Deserialize the response content to the specified type
             var result = await response.Content.ReadFromJsonAsync<T>();

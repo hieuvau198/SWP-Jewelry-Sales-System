@@ -28,9 +28,12 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Gem Id</th>
-            <th>Gem Name</th>
-            <th>Gem Price</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Weight</th>
+            <th>Unit</th>
+            <th>Buy Price</th>
+            <th>Sell Price</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -38,9 +41,12 @@
         @foreach (var gem in Model.Gems)
         {
             <tr>
-                <td>@gem.GemId</td>
                 <td><strong>@gem.GemName</strong></td>
-                <td>@gem.GemPrice</td>
+                <td>@gem.GemCode</td>
+                <td>@gem.GemWeight</td>
+                <td>@gem.Unit</td>
+                <td>@String.Format("{0:N0} VND", gem.BuyPrice)</td>
+                <td>@String.Format("{0:N0} VND", gem.GemPrice)</td>
                 <td>
                     <a asp-page="./Edit" asp-route-id="@gem.GemId">Edit</a>
                     <a asp-page="./Delete" asp-route-id="@gem.GemId">Delete</a>

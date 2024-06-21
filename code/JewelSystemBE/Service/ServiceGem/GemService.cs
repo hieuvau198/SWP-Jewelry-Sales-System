@@ -70,6 +70,9 @@ namespace JewelSystemBE.Service.ServiceGem
             {
                 updatedGem.GemPrice = gem.GemPrice;
                 updatedGem.GemName = gem.GemName;
+                updatedGem.BuyPrice = gem.BuyPrice;
+
+
                 _jewelDbContext.Gems.Update(updatedGem);
                 _jewelDbContext.SaveChanges();
                 return true;

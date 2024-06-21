@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import menu from '../Data/Menu/menu.json';
-import  menu2  from '../Data/Menu/menu2.json';
+import  menuAdmin  from '../Data/Menu/menuAdmin.json';
 
 function Sidebar(props) {
     const navigate = useNavigate();
@@ -53,7 +53,7 @@ function Sidebar(props) {
     // const GotoChangeMenu = (val) => {
     //     if (val === "UI Components") {
     //         props.history.push("ui-alerts");
-    //         setMenuData([...menu2]);
+    //         setMenuData([...menuAdmin]);
     //     } else {
     //         props.history.push("dashboard");
     //         setMenuData([...menu]);
@@ -63,7 +63,7 @@ function Sidebar(props) {
     
         if (val === "UI Components") {
             navigate("ui-alerts");
-            setMenuData([...menu2.menu2]);
+            setMenuData([...menuAdmin.menuAdmin]);
         } else {
             navigate("dashboard");
             setMenuData([...menu.menu]);
@@ -117,7 +117,6 @@ function Sidebar(props) {
                                                         openChildren1("menu-Pages" + i)
                                                     }, 500);
                                                 }
-
                                             }
                                             return <li key={"jfdgj" + ind}>
                                                 <Link className={activekey === "/" + data.routerLink[0] ? "ms-link active" : "ms-link"} to={process.env.PUBLIC_URL + "/" + data.routerLink[0]}> <span>{data.name}</span></Link>

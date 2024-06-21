@@ -1,5 +1,5 @@
 {
-    "menu": [
+    "menuAdmin": [
         {
             "name": "Dashboard",
             "routerLink": ["dashboard"],
@@ -71,6 +71,18 @@
                     "isApp": false,
                     "children": []
                 }
+            ]
+        },
+        {
+            "name": "Stall List",
+            "routerLink": ["stall-list"],
+            "identifier": "Stall List",
+            "iconClass": "icofont-funky-man fs-5",
+            "breadcrumbMessage": "",
+            "isCategory": false,
+            "isApp": false,
+            "children": [
+
             ]
         }
         

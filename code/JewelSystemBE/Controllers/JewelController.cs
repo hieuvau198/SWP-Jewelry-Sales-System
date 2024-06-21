@@ -20,7 +20,7 @@ namespace JewelSystemBE.Controllers
 
         // GET: api/<JewelController>
         [HttpGet]
-        [Authorize(Policy = "AdminPolicy")]
+        //[Authorize(Policy = "AdminPolicy")]
         public IActionResult Get()
         {
             return Ok(_jewelService.GetJewels());
