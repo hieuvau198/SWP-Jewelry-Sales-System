@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Modal } from 'react-bootstrap';
 import DataTable from 'react-data-table-component';
 import { Link } from 'react-router-dom';
@@ -6,16 +6,18 @@ import PageHeader1 from '../../components/common/PageHeader1';
 import { CustomerData } from '../../components/Data/CustomerData';
 import Avatar1 from '../../assets/images/xs/avatar1.svg';
 import axios from '../../api/axios';
+import { useCart } from 'react-use-cart';
 
 function CustomerList() {
     const [ismodal, setIsmodal] = useState(false);
     const [iseditmodal, setIseditmodal] = useState(false);
     const [ rowdata, setrowData] = useState();
-    const [ userId, setUserId] = useState();
+    const [ userId, setUserId] = useState();    
+    const {updateCartMetadata, metadata } = useCart();
 
     function onSiteChanged (e) {
         setUserId(e.currentTarget.value);
-        console.log(userId);
+        updateCartMetadata({userId:userId});
       }
 
 
@@ -57,7 +59,7 @@ function CustomerList() {
                 selector: (row) => row.customerId,
                 sortable: true,
                 cell: (row) => <div className="btn-group" role="group" aria-label="Basic outlined example">
-                    <input type="radio" name="User" id={row.customerId} value={row.customerId} onChange={onSiteChanged}/>
+                    <input className='form-check-input' type="radio" name="User" id={row.customerId} value={row.customerId} onChange={onSiteChanged}/>
                 </div>
             }
     

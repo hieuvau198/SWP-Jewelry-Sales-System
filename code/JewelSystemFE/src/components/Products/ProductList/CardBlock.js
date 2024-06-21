@@ -20,10 +20,9 @@ function CardBlock() {
     const checkbox = document.getElementById(i);
     if(checkbox.checked){
         d.id = d.productId;
-        d.price = d.laborCost;
+        d.price = d.totalPrice;
         addItem(d);
     }
-    console.log(items);
   }
   useEffect(() =>{
 
@@ -78,7 +77,7 @@ function CardBlock() {
                                     </div>
                                     <div className="pe-xl-5 pe-md-4 ps-md-0 px-3 mb-2">
                                         <div className="text-muted small">Price</div>
-                                        <strong>{d.laborCost}$</strong>
+                                        <strong>{new Intl.NumberFormat("de-DE").format(Math.round(d.totalPrice))}d</strong>
                                     </div>
                                 </div>
                             </div>

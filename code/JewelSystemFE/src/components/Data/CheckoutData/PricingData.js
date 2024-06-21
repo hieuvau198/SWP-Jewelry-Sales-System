@@ -1,24 +1,24 @@
-export const PricingData = [
+import { useCart } from "react-use-cart"
+
+export const PricingData = () =>{
+    const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal,updateCartMetadata, metadata } = useCart();
+
+    return ([
     {
         color:'',
         name: 'Subotal Price:',
-        price: '$1096.00'
-    },
-    {
-        color:'shipping',
-        name: 'Shipping Cost:',
-        price: '$12.00'
+        price:  new Intl.NumberFormat("de-DE").format(Math.round(cartTotal)) + 'd'
     },
     {
         color:'discount',
         name: 'Discount Price:',
-        price: '$10.00'
+        price:  new Intl.NumberFormat("de-DE").format(Math.round(cartTotal*metadata.discount/100)) + 'd'
     },
     {
-        color:'',
+        color:'shipping',
         name: 'Tax(18%):',
-        price: '$198.00'
+        price:  new Intl.NumberFormat("de-DE").format(Math.round(cartTotal*18/100)) + 'd'
     },
     
-]
+])}
     

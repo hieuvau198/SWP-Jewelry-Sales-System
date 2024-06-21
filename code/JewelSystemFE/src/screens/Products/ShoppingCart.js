@@ -3,16 +3,16 @@ import DataTable from "react-data-table-component";
 import { Link } from 'react-router-dom';
 import PageHeader1 from '../../components/common/PageHeader1';
 import {ShoppingCartData} from '../../components/Data/ShoppingCartData';
-import { useCart } from 'react-use-cart';
 import { useState } from 'react';
+import { useCart } from 'react-use-cart';
 
 
 
 function ShoppingCart () {
 
-    const { cartTotal, emptyCart, setCartMetadata, metadata  } = useCart();
+    
+    const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal,updateCartMetadata, metadata } = useCart();
     const [ discount, setDiscount] = useState(10);
-    const [ standby, setStandby] = useState(10);
     
 
 
@@ -61,8 +61,8 @@ function ShoppingCart () {
                                                 <span>Apply Coupon to get discount!</span>
                                                     <div className="single-form form-default d-inline-flex mt-3">
                                                         <div className="input-group mb-3">
-                                                            <input type="number" className="form-control" placeholder={discount} onChange={(e)=>{setStandby(e.target.value)}}  />
-                                                            <button className="btn btn-primary" onClick={()=>{setDiscount(standby)}}>Apply</button>
+                                                            <input type="number" className="form-control" placeholder={discount} onChange={(e)=>{setDiscount(e.target.value)}}  />
+                                                            <button className="btn btn-primary" onClick={()=>{updateCartMetadata({discount:discount})}}>Apply</button>
                                                         </div>
                                                     </div>
                                                     
@@ -71,19 +71,19 @@ function ShoppingCart () {
                                             
                                                 <div className="single-total">
                                                     <p className="value">Subotal Price:</p>
-                                                    <p className="price">$ {cartTotal}.00</p>
+                                                    <p className="price"> {new Intl.NumberFormat("de-DE").format(Math.round(cartTotal)) }d</p>
                                                 </div>
                                                 <div className="single-total">
-                                                    <p className="value">Discount (-{discount}%):</p>
-                                                    <p className="price">$ {cartTotal*discount/100}.00</p>
+                                                    <p className="value">Discount ({0-metadata.discount}%):</p>
+                                                    <p className="price"> {new Intl.NumberFormat("de-DE").format(Math.round(cartTotal*metadata.discount/100)) }d</p>
                                                 </div>
                                                 <div className="single-total">
                                                     <p className="value">Tax(18%):</p>
-                                                    <p className="price">$ {Math.round(cartTotal*18/100)}.00</p>
+                                                    <p className="price"> {new Intl.NumberFormat("de-DE").format(Math.round(cartTotal*18/100)) }d </p>
                                                 </div>
                                                 <div className="single-total total-payable">
                                                     <p className="value">Total Payable:</p>
-                                                    <p className="price">$ {Math.round(cartTotal-cartTotal*discount/100+cartTotal*18/100)}.00</p>
+                                                    <p className="price"> {new Intl.NumberFormat("de-DE").format(Math.round(cartTotal-cartTotal*metadata.discount/100+cartTotal*18/100)) }d</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,7 +92,10 @@ function ShoppingCart () {
                                                 <Link to={process.env.PUBLIC_URL+"/product-list"} className="btn btn-secondary w-sm-100">Continue Shopping</Link>
                                             </div>
                                             <div className="single-btn w-sm-100">
-                                                <Link to={process.env.PUBLIC_URL+"/check-out"} onClick={()=>{setCartMetadata({discount : discount})}} className="btn btn-primary w-sm-100">Proceed to Checkout</Link>
+                                                <Link to={process.env.PUBLIC_URL+"/check-out"} className="btn btn-primary w-sm-100">Proceed to Checkout</Link>
+                                            </div>
+                                            <div className="single-btn w-sm-100">
+                                                <Link onClick={()=>{console.log(metadata)}} className="btn btn-primary w-sm-100">check metadata</Link>
                                             </div>
                                         </div>
                                     </div>

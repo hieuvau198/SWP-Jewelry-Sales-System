@@ -1,7 +1,9 @@
 import React from 'react';
 import { PricingData } from '../../Data/CheckoutData/PricingData';
+import { useCart } from "react-use-cart"
 
 function Pricing() {
+    const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal,updateCartMetadata, metadata } = useCart();
 
     return (
         <div className="card-body">
@@ -10,7 +12,7 @@ function Pricing() {
                     <h5 className="title fw-bold">Pricing</h5>
                     <div className="sub-total-price">
                         {
-                            PricingData.map((d, i) => {
+                            PricingData().map((d, i) => {
                                 return <div key={'a' + i} className={`total-price ${d.color}`}>
                                     <p className="value">{d.name}</p>
                                     <p className="price">{d.price}</p>
@@ -24,7 +26,7 @@ function Pricing() {
                     <div className="total-payable">
                         <div className="payable-price">
                             <p className="value fw-bold">Total Payable:</p>
-                            <p className="price fw-bold">$1296.00</p>
+                            <p className="price fw-bold"> {new Intl.NumberFormat("de-DE").format(Math.round(cartTotal-cartTotal*metadata.discount/100+cartTotal*18/100)) }d</p>
                         </div>
                     </div>
                 </div>

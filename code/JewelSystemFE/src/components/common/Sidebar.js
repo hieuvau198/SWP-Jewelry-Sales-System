@@ -2,7 +2,7 @@ import React, {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import menu from '../Data/Menu/menu.json';
-import  menu2  from '../Data/Menu/menu2.json';
+import  menuAdmin  from '../Data/Menu/menu.json';
 
 function Sidebar(props) {
     const navigate = useNavigate();
@@ -63,7 +63,7 @@ function Sidebar(props) {
     
         if (val === "UI Components") {
             navigate("ui-alerts");
-            setMenuData([...menu2.menu2]);
+            setMenuData([...menuAdmin.menuAdmin]);
         } else {
             navigate("dashboard");
             setMenuData([...menu.menu]);

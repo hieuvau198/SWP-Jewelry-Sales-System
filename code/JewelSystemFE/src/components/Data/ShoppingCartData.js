@@ -13,7 +13,7 @@ export const ShoppingCartData = () =>{
 
 
     const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal } = useCart();
-    const totalPrice = (price,quantity) => {return (price*quantity)+'$'};
+    const totalPrice = (price,quantity) => {return new Intl.NumberFormat("de-DE").format(Math.round(price*quantity))+'d'};
 
 
     return({
@@ -42,7 +42,7 @@ export const ShoppingCartData = () =>{
             },
             {
                 name: "PRICE",
-                selector: (row) => row.price+'$',
+                selector: (row) => new Intl.NumberFormat("de-DE").format(Math.round(row.price))+'d',
                 sortable: true
             },
             {

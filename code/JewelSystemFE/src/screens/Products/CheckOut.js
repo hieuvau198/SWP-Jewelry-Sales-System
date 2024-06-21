@@ -9,21 +9,22 @@ import DataTable from 'react-data-table-component';
 import { ShoppingCartData } from '../../components/Data/ShoppingCartData';
 import ShoppingCart from './ShoppingCart';
 import { useCart } from 'react-use-cart';
+
+
+    
+
+    
+
+
+
+
 function CheckOut() {
+
     const [firstCollapse, setFirstCollapse] = useState(true);
-    const [secondCollapse, setSecondCollapse] = useState(true);
-    const [discount, setDiscount] = useState();
-    const {cartTotal, emptyCart, setCartMetadata, cartItimes}= useCart();
-    const [user, setUser] = useState();
-
-    
-    useEffect(() =>{
-
-    
-    
-    }, []);
-
-
+    const [secondCollapse, setSecondCollapse] = useState(true);   
+    const [ discount, setDiscount] = useState(10);
+    const [ userId, setUserId] = useState();     
+    const {items, updateItemQuantity, removeItem, getItem, emptyCart, cartTotal,updateCartMetadata, metadata } = useCart();
 
 
     return (
@@ -83,12 +84,13 @@ function CheckOut() {
                 </div>
                 <div className="col-lg-12 col-xl-4">
                     <div className="card  mb-3">
-                        <Pricing />
+                        <Pricing metadata={metadata} />
                     </div>
                     <Bankdetail />
                 </div>
             </div>
         </div>
+        
     )
 }
 export default CheckOut;
