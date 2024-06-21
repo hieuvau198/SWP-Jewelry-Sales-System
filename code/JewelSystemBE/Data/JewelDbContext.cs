@@ -47,7 +47,6 @@ namespace JewelSystemBE.Data
                 builder.Property(x => x.Email).IsRequired();
                 builder.Property(x => x.Role).IsRequired();
 
-                // Seed data for User
                 builder.HasData(
                     new User { UserId = "US1", Username = "user1", Password = BCrypt.Net.BCrypt.HashPassword("password1"), Fullname = "Liam Williams", Email = "liam@gmail.com", Role = "Admin" },
                     new User { UserId = "US2", Username = "user2", Password = BCrypt.Net.BCrypt.HashPassword("password2"), Fullname = "Olivia Miller", Email = "olivia@gmail.com", Role = "Manager" },
@@ -60,7 +59,6 @@ namespace JewelSystemBE.Data
                 );
             });
 
-            // Configure Jewel entity
             modelBuilder.Entity<Jewel>(builder =>
             {
                 builder.ToTable("jewel");
@@ -68,7 +66,6 @@ namespace JewelSystemBE.Data
                 builder.Property(x => x.Name).IsRequired();
                 builder.Property(x => x.IsComplete).IsRequired().HasDefaultValue(false);
 
-                // Seed data for Jewel
                 builder.HasData(
                     new Jewel { Id = 1, Name = "Necklace", IsComplete = false },
                     new Jewel { Id = 2, Name = "Bracelet", IsComplete = false },
@@ -545,6 +542,7 @@ namespace JewelSystemBE.Data
                         }
                 );
             });
+
             modelBuilder.Entity<Gold>(entity =>
             {
                 entity.ToTable("gold");
@@ -560,10 +558,8 @@ namespace JewelSystemBE.Data
                 );
             });
 
-            //config the Product entity with sql server begins here
             modelBuilder.Entity<Product>(entity =>
             {
-                // Mapping the properties begins here
                 entity.ToTable("product");
                 entity.HasKey(e => e.ProductId);
                 entity.Property(e => e.ProductId).HasColumnName("product_id");
@@ -778,6 +774,7 @@ namespace JewelSystemBE.Data
 
                     );
             });
+
             modelBuilder.Entity<Warranty>(entity =>
             {
                 entity.ToTable("warranty");
@@ -795,6 +792,7 @@ namespace JewelSystemBE.Data
                     new Warranty { WarrantyId = "W4", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) }
                 );
             });
+
             modelBuilder.Entity<Customer>(entity =>
             {
                 entity.ToTable("customer");
@@ -813,6 +811,7 @@ namespace JewelSystemBE.Data
                     new Customer { CustomerId = "C5", CustomerName = "Emily Wilson", CustomerRank = "Bronze", CustomerPoint = 90, AttendDate = new DateTime(2024, 5, 5), CustomerPhone = "012345674" }
                 );
             });
+
             modelBuilder.Entity<Invoice>(entity =>
             {
                 entity.ToTable("invoice");

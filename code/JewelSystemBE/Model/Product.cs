@@ -59,6 +59,7 @@ namespace JewelSystemBE.Model
         public double LaborCost { get; set; } = 0.0;
         [Required]
         public double UnitPrice { get; set; } = 0.0;
+        public double BuyPrice { get; set; } = 0.0;
         [Required]
         public double TotalPrice { get; set; } = 0.0;
 

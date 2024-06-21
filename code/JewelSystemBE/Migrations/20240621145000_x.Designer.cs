@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JewelSystemBE.Migrations
 {
     [DbContext(typeof(JewelDbContext))]
-    [Migration("20240620140931_x")]
+    [Migration("20240621145000_x")]
     partial class x
     {
         /// <inheritdoc />
@@ -822,7 +822,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang24k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2183),
+                            Date = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2559),
                             GoldCode = "Vàng nữ trang 99,99%",
                             GoldName = "24K",
                             SellPrice = 0.0,
@@ -832,7 +832,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang18k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2197),
+                            Date = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2574),
                             GoldCode = "Vàng nữ trang 75%",
                             GoldName = "18K",
                             SellPrice = 0.0,
@@ -842,7 +842,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang14k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2199),
+                            Date = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2577),
                             GoldCode = "Vàng nữ trang 58,3%",
                             GoldName = "14K",
                             SellPrice = 0.0,
@@ -852,7 +852,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang10k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2203),
+                            Date = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2579),
                             GoldCode = "Vàng nữ trang 41,7%",
                             GoldName = "10K",
                             SellPrice = 0.0,
@@ -1153,6 +1153,9 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("product_id");
 
+                    b.Property<double>("BuyPrice")
+                        .HasColumnType("float");
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -1244,7 +1247,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             ProductId = "P001",
-                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3889),
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4897),
                             GemId = "GE001",
                             GemName = "Some Gem Name",
                             GemWeight = 0.0,
@@ -1266,7 +1270,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             ProductId = "P002",
-                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3894),
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4902),
                             GemId = "GE005",
                             GemName = "Some Gem Name",
                             GemWeight = 0.0,
@@ -1288,7 +1293,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             ProductId = "P003",
-                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3897),
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4939),
                             GemId = "GE015",
                             GemName = "Some Gem Name",
                             GemWeight = 0.0,
@@ -1310,7 +1316,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             ProductId = "P004",
-                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3901),
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4943),
                             GemId = "GE035",
                             GemName = "Some Gem Name",
                             GemWeight = 0.0,
@@ -1332,7 +1339,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             ProductId = "P005",
-                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3904),
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4946),
                             GemId = "GE045",
                             GemName = "Some Gem Name",
                             GemWeight = 0.0,
@@ -1354,7 +1362,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             ProductId = "P006",
-                            CreatedAt = new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3908),
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4949),
                             GemId = "GE025",
                             GemName = "Some Gem Name",
                             GemWeight = 0.0,
@@ -1475,35 +1484,35 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "8bc9f1d1-cc4d-4c4c-ac29-3578c5a460d0",
+                            StallItemId = "1fa19f53-fdb0-4c2a-ad8f-5ce35e94e76e",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "23a6c7e8-f884-4725-8a86-e4410120d938",
+                            StallItemId = "691dc2bd-e5c4-4e2b-a765-07057b195860",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "a1da4e08-01f2-4cae-9a10-74bebb878cd6",
+                            StallItemId = "519d9aa9-4a2c-48c6-92ef-eef9093e4334",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "0a065800-0367-40db-a551-b3c32700c22e",
+                            StallItemId = "bd30616b-cf77-48df-860b-4d15a07de47c",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "1ff834bd-a6d1-4111-90ff-4e2e115242bc",
+                            StallItemId = "3357a839-1a6e-4f57-9f33-92e387924dd3",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
@@ -1545,7 +1554,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US1",
                             Email = "liam@gmail.com",
                             Fullname = "Liam Williams",
-                            Password = "$2a$11$ust6h9lq1eeyVwUK1.Y7puVyIudsMtf.vrvRGf7PgICl7rwYpLldO",
+                            Password = "$2a$11$H47tctI1Rr43gAhBTEBVfuGvjlp3FgK5keO/ThoAlHxqmceMZTT0C",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -1554,7 +1563,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US2",
                             Email = "olivia@gmail.com",
                             Fullname = "Olivia Miller",
-                            Password = "$2a$11$T/IgV93/3LAhliCpFAX5ru9VConekNHrld19M.P.BXubkH2Qsegv2",
+                            Password = "$2a$11$H80l9U..HySqAatR9Bm8Pe749rrGjrMZgZv8Fg4RA1LRLKj3y8FUW",
                             Role = "Manager",
                             Username = "user2"
                         },
@@ -1563,7 +1572,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US3",
                             Email = "james@gmail.com",
                             Fullname = "James Martinez",
-                            Password = "$2a$11$hp4qyc2SsazOAXFQ51.GEufFXQpivWnulkvCTTAnJgTaVeToeOpdC",
+                            Password = "$2a$11$Mz9PkyplrXGBDiUb/TChXe/rvJpBzSZzpsoBwYgdQyuENEoFmJ8zK",
                             Role = "Sale",
                             Username = "user3"
                         },
@@ -1572,7 +1581,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US4",
                             Email = "matao@gmail.com",
                             Fullname = "Mateo Martinez",
-                            Password = "$2a$11$v.Y7RNlfE3sKETeUbnH03eeQto.R6CnvOUrQf4ntJWNOjKyltD8pq",
+                            Password = "$2a$11$cus678R3KnTMceiPz8pK1uFOVl7xUtAY7CqjhrwkVCMiKwQuNyYyS",
                             Role = "Sale",
                             Username = "user4"
                         },
@@ -1581,7 +1590,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US5",
                             Email = "theodore@gmail.com",
                             Fullname = "Theodore Garcia",
-                            Password = "$2a$11$Qb8l4rWVeVbfsEk6/aaTeOEmYchmvzP.GO0o.dt/bKNaKHLyztW42",
+                            Password = "$2a$11$wYqKwULxLxVShI7hb6QbRekQoKuraRRjq.DTwBrtM9LTtCaXz5VXa",
                             Role = "Cashier",
                             Username = "user5"
                         },
@@ -1590,7 +1599,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US6",
                             Email = "isabel@gmail.com",
                             Fullname = "Isabel Rodriguez",
-                            Password = "$2a$11$UbTCpeBsXzpown8t44tW8.APrFjLbiOhlMWx/iTtdgKA7L.IqWmzi",
+                            Password = "$2a$11$NbR58M5awB9MgCh9Z7cfeOsc9518d1qMeFLELCtCbj1bU3onuovI6",
                             Role = "Sale",
                             Username = "user6"
                         },
@@ -1599,7 +1608,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US7",
                             Email = "luna@gmail.com",
                             Fullname = "Luna Taylor",
-                            Password = "$2a$11$.c3Owbw6Y04YZyk81Ab8QO.tHioTDtYElOS.1WCNY5mQh1auymgc6",
+                            Password = "$2a$11$tpNi905Z5EXAyqVAFBf44euk20MEmpl.DT/UiqQvj49MiEYoxqQ5S",
                             Role = "Sale",
                             Username = "user7"
                         },
@@ -1608,7 +1617,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US8",
                             Email = "emma@gmail.com",
                             Fullname = "Emma Young",
-                            Password = "$2a$11$eVOYztjoJEEcFgqg9iMRvO7MaOHn4u3kFnI0/637aippi4DX.Aore",
+                            Password = "$2a$11$7e79F/m6LqVjnTU6kAIr7uIwci2j3uFlKTwL8j628Ajpd0OzAqR3C",
                             Role = "Sale",
                             Username = "user8"
                         });

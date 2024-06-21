@@ -173,6 +173,7 @@ namespace JewelSystemBE.Migrations
                     gold_weight = table.Column<double>(type: "float", nullable: false),
                     labor_cost = table.Column<double>(type: "float", nullable: false, defaultValue: 0.0),
                     UnitPrice = table.Column<double>(type: "float", nullable: false),
+                    BuyPrice = table.Column<double>(type: "float", nullable: false),
                     TotalPrice = table.Column<double>(type: "float", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
                 },
@@ -258,11 +259,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "0a065800-0367-40db-a551-b3c32700c22e", "Some Product Id", "Some Product Name", 0 },
-                    { "1ff834bd-a6d1-4111-90ff-4e2e115242bc", "Some Product Id", "Some Product Name", 0 },
-                    { "23a6c7e8-f884-4725-8a86-e4410120d938", "Some Product Id", "Some Product Name", 0 },
-                    { "8bc9f1d1-cc4d-4c4c-ac29-3578c5a460d0", "Some Product Id", "Some Product Name", 0 },
-                    { "a1da4e08-01f2-4cae-9a10-74bebb878cd6", "Some Product Id", "Some Product Name", 0 }
+                    { "1fa19f53-fdb0-4c2a-ad8f-5ce35e94e76e", "Some Product Id", "Some Product Name", 0 },
+                    { "3357a839-1a6e-4f57-9f33-92e387924dd3", "Some Product Id", "Some Product Name", 0 },
+                    { "519d9aa9-4a2c-48c6-92ef-eef9093e4334", "Some Product Id", "Some Product Name", 0 },
+                    { "691dc2bd-e5c4-4e2b-a765-07057b195860", "Some Product Id", "Some Product Name", 0 },
+                    { "bd30616b-cf77-48df-860b-4d15a07de47c", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -363,10 +364,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2203), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2199), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2197), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(2183), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2579), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2577), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2574), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(2559), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
@@ -405,15 +406,15 @@ namespace JewelSystemBE.Migrations
 
             migrationBuilder.InsertData(
                 table: "product",
-                columns: new[] { "product_id", "created_at", "gem_id", "GemName", "GemWeight", "gold_id", "GoldName", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight", "TotalPrice", "UnitPrice" },
+                columns: new[] { "product_id", "BuyPrice", "created_at", "gem_id", "GemName", "GemWeight", "gold_id", "GoldName", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight", "TotalPrice", "UnitPrice" },
                 values: new object[,]
                 {
-                    { "P001", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3889), "GE001", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 45.0, 200.0, 1.2, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
-                    { "P002", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3894), "GE005", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 18.0, 100.0, 1.5, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0, 0.0, 0.0 },
-                    { "P003", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3897), "GE015", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 27.0, 150.0, 1.3, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0, 0.0, 0.0 },
-                    { "P004", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3901), "GE035", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 13.5, 180.0, 1.7, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earring", 24, 15.0, 0.0, 0.0 },
-                    { "P005", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3904), "GE045", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 7.5, 90.0, 1.1000000000000001, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Necklace", 6, 10.0, 0.0, 0.0 },
-                    { "P006", new DateTime(2024, 6, 20, 21, 9, 31, 444, DateTimeKind.Local).AddTicks(3908), "GE025", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 21.0, 130.0, 1.2, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0, 0.0, 0.0 }
+                    { "P001", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4897), "GE001", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 45.0, 200.0, 1.2, "P001", "ruby_necklace.jpg", "Ruby Necklace", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
+                    { "P002", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4902), "GE005", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 18.0, 100.0, 1.5, "P002", "sapphire_ring.jpg", "Sapphire Ring", 5, "Ring", 24, 20.0, 0.0, 0.0 },
+                    { "P003", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4939), "GE015", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 27.0, 150.0, 1.3, "P003", "emerald_bracelet.jpg", "Emerald Bracelet", 8, "Bracelet", 18, 30.0, 0.0, 0.0 },
+                    { "P004", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4943), "GE035", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 13.5, 180.0, 1.7, "P004", "diamond_earrings.jpg", "Diamond Earrings", 12, "Earring", 24, 15.0, 0.0, 0.0 },
+                    { "P005", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4946), "GE045", "Some Gem Name", 0.0, "vang10k", "Some Gold Name", 7.5, 90.0, 1.1000000000000001, "P005", "topaz_pendant.jpg", "Topaz Pendant", 20, "Necklace", 6, 10.0, 0.0, 0.0 },
+                    { "P006", 0.0, new DateTime(2024, 6, 21, 21, 49, 59, 823, DateTimeKind.Local).AddTicks(4949), "GE025", "Some Gem Name", 0.0, "vang24k", "Some Gold Name", 21.0, 130.0, 1.2, "P006", "ruby_bracelet.jpg", "Ruby Bracelet", 7, "Bracelet", 12, 25.0, 0.0, 0.0 }
                 });
 
             migrationBuilder.InsertData(
@@ -421,14 +422,14 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$ust6h9lq1eeyVwUK1.Y7puVyIudsMtf.vrvRGf7PgICl7rwYpLldO", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$T/IgV93/3LAhliCpFAX5ru9VConekNHrld19M.P.BXubkH2Qsegv2", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$hp4qyc2SsazOAXFQ51.GEufFXQpivWnulkvCTTAnJgTaVeToeOpdC", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$v.Y7RNlfE3sKETeUbnH03eeQto.R6CnvOUrQf4ntJWNOjKyltD8pq", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$Qb8l4rWVeVbfsEk6/aaTeOEmYchmvzP.GO0o.dt/bKNaKHLyztW42", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$UbTCpeBsXzpown8t44tW8.APrFjLbiOhlMWx/iTtdgKA7L.IqWmzi", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$.c3Owbw6Y04YZyk81Ab8QO.tHioTDtYElOS.1WCNY5mQh1auymgc6", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$eVOYztjoJEEcFgqg9iMRvO7MaOHn4u3kFnI0/637aippi4DX.Aore", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$H47tctI1Rr43gAhBTEBVfuGvjlp3FgK5keO/ThoAlHxqmceMZTT0C", "Admin", "user1" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$H80l9U..HySqAatR9Bm8Pe749rrGjrMZgZv8Fg4RA1LRLKj3y8FUW", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$Mz9PkyplrXGBDiUb/TChXe/rvJpBzSZzpsoBwYgdQyuENEoFmJ8zK", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$cus678R3KnTMceiPz8pK1uFOVl7xUtAY7CqjhrwkVCMiKwQuNyYyS", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$wYqKwULxLxVShI7hb6QbRekQoKuraRRjq.DTwBrtM9LTtCaXz5VXa", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$NbR58M5awB9MgCh9Z7cfeOsc9518d1qMeFLELCtCbj1bU3onuovI6", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$tpNi905Z5EXAyqVAFBf44euk20MEmpl.DT/UiqQvj49MiEYoxqQ5S", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$7e79F/m6LqVjnTU6kAIr7uIwci2j3uFlKTwL8j628Ajpd0OzAqR3C", "Sale", "user8" }
                 });
 
             migrationBuilder.InsertData(

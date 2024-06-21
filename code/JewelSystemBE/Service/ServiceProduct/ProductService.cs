@@ -42,6 +42,10 @@ namespace JewelSystemBE.Service.ServiceProduct
         {
             List<Product> products = _jewelDbContext.Products.OrderByDescending(x => x.ProductId).ToList();
             products = UpdatePrices(products);
+            foreach (var product in products)
+            {
+                UpdateProduct(product);
+            }
             return products;
         }
 
@@ -92,6 +96,7 @@ namespace JewelSystemBE.Service.ServiceProduct
                 updatedProduct.CreatedAt = product.CreatedAt;
                 updatedProduct.UnitPrice = product.UnitPrice;
                 updatedProduct.TotalPrice = product.TotalPrice;
+                updatedProduct.BuyPrice = product.BuyPrice;
 
                 updatedProduct = UpdatePrice(updatedProduct);
 
@@ -120,8 +125,10 @@ namespace JewelSystemBE.Service.ServiceProduct
             {
                 double unitPrice = 0;
                 double totalPrice = 0;
+                double buyPrice = 0;
 
                 string gemName = "Not Found Gem Name";
+                double gemWeight = 0;
                 string goldName = "Not Found Gold Name";
 
                 Gem gem = gems.Find(x => x.GemId == product.GemId);
@@ -129,12 +136,16 @@ namespace JewelSystemBE.Service.ServiceProduct
 
                 if(gem != null)
                 { 
-                    unitPrice += (gem.GemPrice * product.GemWeight); 
+                    unitPrice += gem.GemPrice;
+                    buyPrice += gem.BuyPrice;
                     gemName = gem.GemName;
+                    gemWeight = gem.GemWeight;
+                    
                 }
                 if(gold != null)
                 {
                     unitPrice += (gold.SellPrice * product.GoldWeight);
+                    buyPrice += (gold.BuyPrice * product.GoldWeight);
                     goldName = gold.GoldName;
                 }
                 unitPrice += product.LaborCost;
@@ -142,8 +153,10 @@ namespace JewelSystemBE.Service.ServiceProduct
                 totalPrice = unitPrice * product.ProductQuantity;
                 product.UnitPrice = unitPrice;
                 product.TotalPrice = totalPrice;
+                product.BuyPrice = buyPrice;
                 product.GemName = gemName;
                 product.GoldName = goldName;
+                product.GemWeight = gemWeight;
             }
             return results;
         }
@@ -157,6 +170,8 @@ namespace JewelSystemBE.Service.ServiceProduct
 
             double unitPrice = 0;
             double totalPrice = 0;
+            double buyPrice = 0;
+            double gemWeight = 0;
             string gemName = "Some Gem Name";
             string goldName = "Some Gold Name";
 
@@ -165,12 +180,15 @@ namespace JewelSystemBE.Service.ServiceProduct
 
             if (gem != null)
             {
-                unitPrice += gem.GemPrice * result.GemWeight;
+                unitPrice += gem.GemPrice;
+                buyPrice += gem.BuyPrice;
                 gemName = gem.GemName;
+                gemWeight = gem.GemWeight;
             }
             if (gold != null)
             {
                 unitPrice += gold.SellPrice * result.GoldWeight;
+                buyPrice += gold.BuyPrice * result.GoldWeight;
                 goldName = gold.GoldName;
             }
             unitPrice += result.LaborCost;
@@ -178,8 +196,10 @@ namespace JewelSystemBE.Service.ServiceProduct
             totalPrice = unitPrice * result.ProductQuantity;
             result.UnitPrice = unitPrice;
             result.TotalPrice = totalPrice;
+            result.BuyPrice = buyPrice;
             result.GemName = gemName;
             result.GoldName = goldName;
+            result.GemWeight = gemWeight;
 
             return result;
         }
