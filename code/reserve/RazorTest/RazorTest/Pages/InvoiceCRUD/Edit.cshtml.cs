@@ -3,12 +3,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.InvoiceCRUD
 {
     public class EditModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
+
         private readonly InvoiceService _invoiceService;
         private readonly ILogger<EditModel> _logger;
         public EditModel(InvoiceService apiService, ILogger<EditModel> logger, InvoiceService invoiceService)
@@ -56,7 +60,18 @@ namespace RazorTest.Pages.InvoiceCRUD
 
             _logger.LogInformation($"Updating invoice with ID {Invoice.InvoiceId}");
             _logger.LogInformation($"Invoice details: {JsonConvert.SerializeObject(Invoice)}");
-            Invoice.InvoiceStatus = "Confirmed By Manager";
+            if(HttpContext.Session.GetObject<bool>(SessionKeyAuthState))
+            {
+                if(HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals("Manager"))
+                {
+                    Invoice.InvoiceStatus = "Processing Payment";
+                }
+                else if(HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals("Cashier"))
+                {
+                    Invoice.InvoiceStatus = "Completed";
+                }
+            }
+            
             var response = await _invoiceService.UpdateInvoiceAsync(Invoice);
 
             if (!response.IsSuccessStatusCode)

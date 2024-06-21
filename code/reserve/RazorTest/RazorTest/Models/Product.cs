@@ -30,6 +30,7 @@ namespace RazorTest.Models
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
         public double UnitPrice { get; set; } = 1.3;
         [DisplayFormat(DataFormatString = "{0:F2}", ApplyFormatInEditMode = true)]
+        public double BuyPrice { get; set; } = 69;
         public double TotalPrice { get; set; } = 1;
         public DateTime CreatedAt { get; set; }
     }

@@ -1,0 +1,61 @@
+﻿@page
+@model RazorTest.Pages.Buy.BuyBackModel
+@{
+}
+<h2>Invoice Details</h2>
+
+@if (Model.BuyInvoiceObject != null)
+{
+    <table>
+        <tr>
+            <th>Invoice Id:</th>
+            <td>@Model.BuyInvoiceObject.InvoiceId</td>
+        </tr>
+        <tr>
+            <th>Customer:</th>
+            <td>@Model.BuyInvoiceObject.CustomerName</td>
+        </tr>
+        <tr>
+            <th>Total Price:</th>
+            <td>@String.Format("{0:N0} VND", Model.BuyInvoiceObject.EndTotalPrice)</td>
+        </tr>
+    </table>
+
+    <h3>Products</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Buy Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.BuyInvoiceItemList)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Quantity</td>
+                    <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+                    <td>
+                        <form method="post" asp-page-handler="BuyItem">
+                            <input type="hidden" id="invoiceItemId" name="invoiceItemId" value="@item.InvoiceItemId" />
+                            <button type="submit">Buy Back</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Invoice not found.</p>
+}
+
+<form method="get" action="/Buy/Processing" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Buy/Processing" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back</button>
+</form>

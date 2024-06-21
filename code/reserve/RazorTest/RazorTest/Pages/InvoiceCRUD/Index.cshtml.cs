@@ -28,7 +28,7 @@ namespace RazorTest.Pages.InvoiceCRUD
 
             if (invoices != null)
             {
-                Invoices = invoices.OrderBy(c => c.InvoiceId).ToList();
+                Invoices = invoices.OrderBy(c => c.InvoiceDate).ToList();
             }
         }
         public bool VerifyAuth(string role)

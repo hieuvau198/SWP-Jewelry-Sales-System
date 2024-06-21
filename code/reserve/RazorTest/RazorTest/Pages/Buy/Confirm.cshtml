@@ -1,0 +1,60 @@
+﻿@page
+@model RazorTest.Pages.Buy.ConfirmModel
+@{
+}
+<h2>ITEM</h2>
+
+@if(Model.BuyInvoiceItemObject != null){
+    <table>
+        <tr>
+            <th>Invoice Item ID</th>
+            <td>@Model.BuyInvoiceItemObject.ProductId</td>
+        </tr>
+        <tr>
+            <th>Product Name</th>
+            <td>@Model.BuyInvoiceItemObject.ProductName</td>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td>@Model.BuyInvoiceItemObject.Quantity</td>
+        </tr>
+        <tr>
+            <th>Unit Price</th>
+            <td>@Model.BuyInvoiceItemObject.UnitPrice</td>
+        </tr>
+    </table>
+}
+
+<h2>Buying State</h2>
+@if (Model.BuyProductObject != null)
+{
+    <table>
+        <tr>
+            <th>Product Code</th>
+            <td>@Model.BuyProductObject.ProductId</td>
+        </tr>
+        <tr>
+            <th>Product Name</th>
+            <td>@Model.BuyProductObject.ProductName</td>
+        </tr>
+        <tr>
+            <th>Quantity</th>
+            <td>@Model.BuyProductObject.ProductQuantity</td>
+        </tr>
+        <tr>
+            <th>Buy Price</th>
+            <td>@Model.BuyProductObject.BuyPrice</td>
+        </tr>
+    </table>
+
+
+}
+
+<form method="post" asp-page-handler="ConfirmBuying">
+    <button type="submit">Create Buying Order</button>
+</form>
+
+<form method="get" action="/Buy/BuyBack" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Buy/BuyBack" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back</button>
+</form>

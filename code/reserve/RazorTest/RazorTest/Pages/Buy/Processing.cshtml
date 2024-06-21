@@ -1,0 +1,62 @@
+﻿@page
+@model RazorTest.Pages.Buy.ProcessingModel
+@{
+    ViewData["Title"] = "Buy Back - Processing";
+}
+
+<h2>Search</h2>
+
+<form method="post" asp-page-handler="Search">
+    <label for="invoiceId">Invoice ID:</label>
+    <input type="text" id="buyInvoiceSearch" name="buyInvoiceSearch" value="@Model.BuyInvoiceSearch" />
+
+    <label for="customerId">Customer Phone:</label>
+    <input type="text" id="buyCustomerSearch" name="buyCustomerSearch" value="@Model.BuyCustomerSearch" />
+
+    <button type="submit">Search</button>
+</form>
+
+@if (Model.BuyInvoiceList != null && Model.BuyInvoiceList.Any())
+{
+    <h3>Search Results</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice Id</th>
+                <th>Customer Name</th>
+                <th>Total Price</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var invoice in Model.BuyInvoiceList)
+            {
+                <tr>
+                    <td>@invoice.InvoiceId</td>  
+                    <td>@invoice.CustomerName</td>
+                    <td>@String.Format("{0:N0} VND", invoice.TotalPrice)</td>
+                    <td>@invoice.InvoiceDate</td>
+                    <td>@invoice.InvoiceStatus</td>
+                    <td>
+                        <form method="post" asp-page-handler="SelectInvoice">
+                            <input type="hidden" id="buyInvoiceId" name="buyInvoiceId" value="@invoice.InvoiceId"/>
+                            <button type="submit">Select</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Model.BuyInvoiceList != null)
+{
+    <p>No invoices found.</p>
+}
+
+
+<form method="get" action="/Index" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Index" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back</button>
+</form>

@@ -98,7 +98,8 @@ namespace RazorTest.Pages.Sale
             if (product != null)
             {
                 product.ProductQuantity = quantity;
-                Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
+                Product updatedProduct = product;
+                updatedProduct.TotalPrice = product.UnitPrice * quantity;
                 Cart.Remove(product);
                 Cart.Add(updatedProduct);
                 
@@ -158,20 +159,28 @@ namespace RazorTest.Pages.Sale
             List<Discount> discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
 
             string customerId = "Some Customer ID";
+            string customerName = "Some Customer Name";
             string userId = "Some User ID";
+            string userFullname = "Some User Full Name";
             string invoiceId;
             string invoiceOrderType = "Sale";
+            string invoiceStatus = "Pending";
             double invoiceEndTotalPrice = 0;
             double invoiceTotalPrice = 0;
+            DateTime invoiceDate = DateTime.Now;
 
-            if(customer != null)
+            if (customer != null)
             {
                 customerId = customer.CustomerId;
+                customerName = customer.CustomerName;
             }
+
             if(user != null)
             {
                 userId = user.UserId;
+                userFullname = user.Fullname;
             }
+
             if(savedInvoice==null)
             {
                 invoiceId = Guid.NewGuid().ToString();
@@ -220,13 +229,15 @@ namespace RazorTest.Pages.Sale
             {
                     InvoiceId = invoiceId,
                     CustomerId = customerId,
+                    CustomerName = customerName,
                     CustomerVoucher = 0,
                     EndTotalPrice = invoiceEndTotalPrice,
-                    InvoiceDate = DateTime.Now,
-                    InvoiceStatus = "Pending",
+                    InvoiceDate = invoiceDate,
+                    InvoiceStatus = invoiceStatus,
                     InvoiceType = invoiceOrderType,
                     TotalPrice = invoiceTotalPrice,
-                    UserId = userId
+                    UserId = userId,
+                    UserFullname = userFullname
                 };
             HttpContext.Session.SetObject(SessionKeySaleInvoiceObject, invoice);
             return RedirectToPage("/Sale/CheckOutPage");

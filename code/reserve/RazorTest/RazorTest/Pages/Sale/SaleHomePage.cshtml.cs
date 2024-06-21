@@ -74,12 +74,13 @@ namespace RazorTest.Pages.Sale
             {
                 // Set the quantity of the product to 1
                 product.ProductQuantity = 1;
+                product.TotalPrice = product.UnitPrice;
 
                 // Update the price by calling an external API
-                Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
+                //Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
 
                 // Add the updated product to the cart
-                cart.Add(updatedProduct);
+                cart.Add(product);
 
                 // Save the updated cart back to the session
                 HttpContext.Session.SetObject(SessionKeyCart, cart);

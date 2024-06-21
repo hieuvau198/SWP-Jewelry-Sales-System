@@ -90,7 +90,7 @@
     <input type="hidden" name="customerId" />
     Search Phone Contact <input type="text" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
     <br />
-    @if (!Model.Customer.CustomerName.Equals("Not Identified"))
+    @if (Model.Customer != null && !Model.Customer.CustomerName.Equals("Not Identified"))
     {
         <div>
             <p>Name: @Model.Customer.CustomerName</p>
@@ -110,26 +110,12 @@
 }
 
 <!-- Display customer details if identified -->
-@if (!Model.Customer.CustomerName.Equals("Not Identified"))
-{
-    <div>
-        <!-- Customer details -->
-    </div>
-}
+
 
 <form method="get" action="/Sale/CreateCustomer">
     <input type="hidden" name="Create" value="/Sale/CreateCustomer" />
     <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Add New Customer</button>
 </form>
-
-<h2>Sale & Cashier IDs (This should be hidden)</h2>
-<br />
-@if (User != null)
-{
-    <p>Fullname: @Model.User.Fullname</p>
-    <p>Role: @Model.User.Role</p>
-}
-<br />
 
 
 
