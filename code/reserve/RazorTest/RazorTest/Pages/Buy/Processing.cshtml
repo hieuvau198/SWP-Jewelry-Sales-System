@@ -4,6 +4,18 @@
     ViewData["Title"] = "Buy Back - Processing";
 }
 
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+</style>
+
+<div class="container">
+    <h2>Purchase Buy-Back Invoice</h2>
+</div>
 
 <form method="post" asp-page-handler="Search">
     <label for="invoiceId">Invoice ID:</label>
@@ -57,5 +69,5 @@ else if (Model.BuyInvoiceList != null)
 
 <form method="get" action="/Index" style="text-align: center;">
     <input type="hidden" name="Back" value="/Index" />
-    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back</button>
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Back</button>
 </form>
