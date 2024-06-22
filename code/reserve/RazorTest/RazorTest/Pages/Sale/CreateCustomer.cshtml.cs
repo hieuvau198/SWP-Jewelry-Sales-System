@@ -26,7 +26,8 @@ namespace RazorTest.Pages.Sale
             // Initialize the Customer with a new ID
             Customer = new Customer
             {
-                CustomerId = Guid.NewGuid().ToString()
+                CustomerId = Guid.NewGuid().ToString(),
+                AttendDate = DateTime.Now,
             };
         }
 

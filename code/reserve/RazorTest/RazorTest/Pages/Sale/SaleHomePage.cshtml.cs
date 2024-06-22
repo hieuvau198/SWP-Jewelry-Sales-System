@@ -5,6 +5,7 @@ using RazorTest.Services;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using RazorTest.Utilities;
+using Microsoft.Data.SqlClient;
 
 namespace RazorTest.Pages.Sale
 {
@@ -32,7 +33,7 @@ namespace RazorTest.Pages.Sale
 
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
-        public const int PageSize = 6; // Number of products per page
+        public const int PageSize = 3; // Number of products per page
 
         public async Task OnGetAsync(int currentPage = 1)
         {
@@ -50,6 +51,10 @@ namespace RazorTest.Pages.Sale
             {
                 allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
             }
+
+            // S?p x?p danh sách s?n ph?m theo Product Code
+            allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
+
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);

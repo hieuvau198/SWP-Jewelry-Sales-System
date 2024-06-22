@@ -5,6 +5,13 @@
 }
 
 <style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
     .luxury-table-wrapper {
         display: flex;
         justify-content: center;
@@ -74,10 +81,12 @@
             }
 </style>
 
-<h2>Sale Feature</h2>
+<div class="container">
+    <h2>Sale Feature</h2>
+</div>
 
 <form method="get" action="/Sale/ViewCart">
-    <button type="submit">Go to Cart</button>
+    <button type="submit" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: end; margin: 10px auto;">Go to Cart</button>
 </form>
 
 <div class="luxury-table-wrapper">
@@ -119,7 +128,7 @@
                         <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
                             <input type="hidden" name="productId" value="@product.ProductId" />
                             <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                            <input type="submit" value="Add to Cart" />
+                            <input type="submit" value="Add to Cart" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;" />
                         </form>
                     </td>
                 </tr>

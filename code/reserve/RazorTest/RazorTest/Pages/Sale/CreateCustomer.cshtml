@@ -103,7 +103,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="attendDate">Attend Date</label>
-                                <input asp-for="Customer.AttendDate" class="form-control" id="attendDate">
+                                <input asp-for="Customer.AttendDate" class="form-control" id="attendDate" value="@Model.Customer.AttendDate.ToString("dd-MM-yyyy HH:mm:ss")">
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Create</button>
                         </form>

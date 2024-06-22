@@ -45,7 +45,8 @@ namespace RazorTest.Pages.Sale
         public User User { get; set; }
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
-        public const int PageSize = 6; // Number of products per page
+
+        public const int PageSize = 3; // Number of products per page
 
         public async Task OnGetAsync(int currentPage = 1)
         {
@@ -69,7 +70,21 @@ namespace RazorTest.Pages.Sale
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
 
-            Cart = Cart.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+            // Ensure current page is within valid range
+            if (CurrentPage < 1)
+            {
+                CurrentPage = 1;
+            }
+            else if (CurrentPage > TotalPages)
+            {
+                CurrentPage = TotalPages;
+            }
+
+            // Get the products for the current page
+            var paginatedCart = Cart.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+
+            // Update the Cart property to hold only the paginated items
+            Cart = paginatedCart;
         }
 
         public IActionResult OnPostDelete(string productId)
