@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <style>
         h1, h2, h3, h4, h5, h6 {
             font-family: "Oswald";
@@ -27,9 +32,9 @@
 
         .sidebar {
             height: 100%;
-            width: 300px;
+            width: 205px;
             position: fixed;
-            top: 156px; /* Adjust this value based on your header height */
+            top: 136px; /* Adjust this value based on your header height */
             bottom: 155px;
             left: 0px;
             padding-top: 20px;
@@ -45,7 +50,7 @@
                 margin-bottom: 8px; /* Khoảng cách giữa các liên kết */
                 transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Hiệu ứng chuyển đổi màu */
             }
-            
+
 
                 .sidebar a:hover {
                     background-color: #8B4513;
@@ -57,9 +62,25 @@
                 display: none; /* Hide submenu by default */
             }
 
-            .sidebar .submenu a {
-                padding-left: 32px;
-            }
+                .sidebar .submenu a {
+                    padding-left: 32px;
+                }
+
+        /* Toggle button Styles */
+        .toggle-btn {
+            font-size: 10px;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 110px;
+            left: 10px;
+            z-index: 1001;
+            background-color: #F5F5F5;
+            border: 1px solid #8B4513;
+            border-radius: 5px;
+            color: #8B4513;
+            display: block;
+        }
 
         .link-table {
             width: 100%;
@@ -107,7 +128,7 @@
 
         .main-content {
             padding: 20px;
-           /*  margin-left: 270px; */ /* Adjust to avoid overlap with sidebar */
+            /*  margin-left: 270px; */ /* Adjust to avoid overlap with sidebar */
         }
 
         /* CSS for Footer */
@@ -199,22 +220,22 @@
                 margin-bottom: 10px;
             }
 
-            .product .product-image-wrapper {
-                width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
-                max-width: 300px; /* Đặt kích thước tối đa của ảnh */
-                margin-bottom: 20px; /* Khoảng cách giữa ảnh và tên sản phẩm */
-            }
+        .product .product-image-wrapper {
+            width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
+            max-width: 300px; /* Đặt kích thước tối đa của ảnh */
+            margin-bottom: 20px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+        }
 
-            .product .product-name {
-                margin-top: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
-                margin-bottom: 30px;
-            }
+        .product .product-name {
+            margin-top: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+            margin-bottom: 30px;
+        }
 
-            .product .product-image {
-                width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
-                height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị méo */
-                max-width: 300px; /* Đặt kích thước tối đa của ảnh */
-            }
+        .product .product-image {
+            width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
+            height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+            max-width: 300px; /* Đặt kích thước tối đa của ảnh */
+        }
         /* CSS for carousel images */
         .carousel-img {
             width: 100%;
@@ -224,12 +245,30 @@
 
     </style>
 </head>
-<body class="w3-light-grey">
+<body class="w3-light-grey w3-display-container">
 
-     <!-- Main Container --> 
-    <div class="w3-content" style="max-width:1600px">
+    <!-- Toggle button for sidebar -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-         <!-- Header --> 
+    <!-- Sidebar/menu -->
+    <nav class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="javascript:void(0)" onclick="toggleSubMenu()">Products</a>
+        <div class="submenu">
+            <a href="#">Product List</a>
+            <a href="#">Product Edit</a>
+            <a href="#">Product Detail</a>
+            <a href="#">Product Add</a>
+            <a href="#">Shopping Cart</a>
+        </div>
+        <a href="#">User List</a>
+        <a href="#">Order Invoice</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="w3-content  w3-display-container" style="max-width:1600px">
+
+        <!-- Header -->
         <header class="header-title w3-center w3-padding-48 w3-white">
             <h1>Jewelry Store</h1>
             <p>Your Ultimate Destination for Exquisite Jewelry</p>
@@ -290,7 +329,7 @@
             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
 
-         <!-- Main Content Grid --> 
+        <!-- Main Content Grid -->
         <div class="w3-row w3-padding w3-border main-content">
 
             @* <!-- Blog entries / Main section --> *@
@@ -451,22 +490,6 @@
         </div>
         <br>
 
-        <!-- Sidebar/menu -->
-        <nav class="sidebar">
-            <a href="#">Dashboard</a>
-            <a href="javascript:void(0)" onclick="toggleSubMenu()">Products</a>
-            <div class="submenu">
-                <a href="#">Product List</a>
-                <a href="#">Product Edit</a>
-                <a href="#">Product Detail</a>
-                <a href="#">Product Add</a>
-                <a href="#">Shopping Cart</a>
-            </div>
-            <a href="#">User List</a>
-            <a href="#">Order Invoice</a>
-        </nav>
-
-
         <!-- Footer -->
         <footer class="footer w3-container w3-padding-32 w3-margin-top">
             <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -497,13 +520,14 @@
                 x.innerHTML = "✓ Liked";
             }
 
+            function toggleSidebar() {
+                var sidebar = document.querySelector('.sidebar');
+                sidebar.style.left = sidebar.style.left === '0px' ? '-205px' : '0px';
+            }
+
             function toggleSubMenu() {
                 var submenu = document.querySelector('.submenu');
-                if (submenu.style.display === 'block') {
-                    submenu.style.display = 'none';
-                } else {
-                    submenu.style.display = 'block';
-                }
+                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
             }
 
             var slideIndex = 0;

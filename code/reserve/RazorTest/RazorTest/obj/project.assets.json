@@ -7838,19 +7838,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\hoanv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\RazorTest_HoanEdit\\RazorTest\\RazorTest.csproj",
+      "projectUniqueName": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\RazorTest.csproj",
       "projectName": "RazorTest",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\RazorTest_HoanEdit\\RazorTest\\RazorTest.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\RazorTest_HoanEdit\\RazorTest\\obj\\",
+      "projectPath": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\RazorTest.csproj",
+      "packagesPath": "C:\\Users\\hoanv\\.nuget\\packages\\",
+      "outputPath": "D:\\Asp dot net\\SWP-Jewelry-Sales-System\\RazorTest\\RazorTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hoanv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
