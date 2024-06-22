@@ -1,0 +1,88 @@
+﻿@page
+@model RazorTest.Pages.Dashboard.RevenueModel
+@{
+    ViewData["Title"] = "Charts";
+}
+
+<div>
+    <canvas id="myChart" width="1000px" height="500px"></canvas>
+    <canvas id="myChart2" width="800px" height="400px"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const invoices = @Html.Raw(Model.InvoicesJson);
+        //new
+            const buyInvoices = @Html.Raw(Model.BuyInvoicesJson);
+
+        const labels = invoices.map(item => new Date(item.InvoiceDate).toLocaleDateString('en-GB', {
+            year: 'numeric',
+            month: 'short'
+        }));
+        const data = invoices.map(item => item.EndTotalPrice);
+
+        //new
+            const data2 = buyInvoices.map(item => item.EndTotalPrice);
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Sale',
+                    data: data,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)'
+                },
+                {
+                    label: 'Buy',
+                    data: data2,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)'
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        // const ctx = document.getElementById('myChart2').getContext('2d');
+        // new Chart(ctx, {
+        //     type: 'bar',
+        //     data: {
+        //         labels: labels,
+        //         datasets: [{
+        //             label: 'Sale',
+        //             data: data,
+        //             borderWidth: 1,
+        //             backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        //             borderColor: 'rgba(54, 162, 235, 1)'
+        //         },
+        //         {
+        //             label: 'Buy',
+        //             data: data2,
+        //             borderWidth: 1,
+        //             backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        //             borderColor: 'rgba(255, 99, 132, 1)'
+        //         }]
+        //     },
+
+        //     options: {
+        //         scales: {
+        //             y: {
+        //                 beginAtZero: true
+        //             }
+        //         }
+        //     }
+        // });
+    });
+</script>
