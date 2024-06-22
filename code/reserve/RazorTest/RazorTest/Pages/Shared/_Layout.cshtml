@@ -2,10 +2,6 @@
 @using RazorTest.Utilities
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor Accessor
-@using RazorTest.Models
-@using RazorTest.Utilities
-@using Microsoft.AspNetCore.Http
-@inject IHttpContextAccessor Accessor
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -235,6 +231,7 @@
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

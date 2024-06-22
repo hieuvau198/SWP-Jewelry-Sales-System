@@ -246,25 +246,29 @@
     </style>
 </head>
 <body class="w3-light-grey w3-display-container">
+    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+    {
+        <!-- Toggle button for sidebar -->
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-    <!-- Toggle button for sidebar -->
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-
-    <!-- Sidebar/menu -->
-    <nav class="sidebar">
-        <a href="#">Dashboard</a>
-        <a href="javascript:void(0)" onclick="toggleSubMenu()">Products</a>
-        <div class="submenu">
-            <a href="#">Product List</a>
-            <a href="#">Product Edit</a>
-            <a href="#">Product Detail</a>
-            <a href="#">Product Add</a>
-            <a href="#">Shopping Cart</a>
-        </div>
-        <a href="#">User List</a>
-        <a href="#">Order Invoice</a>
-    </nav>
-
+        <!-- Sidebar/menu -->
+        <nav class="sidebar">
+            <a href="#">Dashboard</a>
+            @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
+            {
+                <a href="javascript:void(0)" onclick="toggleSubMenu()">Products</a>
+                <div class="submenu">
+                    <a href="#">Product List</a>
+                    <a href="#">Product Edit</a>
+                    <a asp-page="/ProductCRUD/ProductDetail">Product Detail</a>
+                    <a href="#">Product Add</a>
+                    <a href="#">Shopping Cart</a>
+                </div>
+            }
+            <a href="#">User List</a>
+            <a href="#">Order Invoice</a>
+        </nav>
+    }
     <!-- Main Container -->
     <div class="w3-content  w3-display-container" style="max-width:1600px">
 
@@ -470,7 +474,7 @@
                                         </tr>
                                         <tr>
                                             <td>Buy Feature</td>
-                                            <td><a asp-page="/Buy/Processing">Access The Sale Feature</a></td>
+                                            <td><a asp-page="/Buy/Processing">Access The Buy Feature</a></td>
                                         </tr>
                                     }
                                     <tr>
