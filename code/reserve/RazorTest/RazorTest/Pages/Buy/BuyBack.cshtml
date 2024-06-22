@@ -2,11 +2,23 @@
 @model RazorTest.Pages.Buy.BuyBackModel
 @{
 }
-<h2>Details</h2>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+</style>
+<div class="container">
+    <h2>Details</h2>
+</div>
+
 
 @if (Model.BuyInvoiceObject != null)
 {
-    <table>
+    <table class="luxury-table">
         <tr>
             <th>Invoice Id:</th>
             <td>@Model.BuyInvoiceObject.InvoiceId</td>
@@ -29,8 +41,11 @@
         </tr>
     </table>
 
-    <h3>Items</h3>
-    <table>
+    <div class="container">
+        <h2>Items</h2>
+    </div>
+
+    <table class="luxury-table">
         <thead>
             <tr>
                 <th>Product Name</th>
@@ -47,16 +62,15 @@
                     <td>@item.ProductName</td>
                     <td>@item.Quantity</td>
                     <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
-                    <td>@String.Format("{0:N0} VND", item.EndTotalPrice/item.Quantity)</td>
+                    <td>@String.Format("{0:N0} VND", item.EndTotalPrice / item.Quantity)</td>
                     <td>
                         <form method="post" asp-page-handler="BuyItem">
                             <input type="hidden" id="invoiceItemId" name="invoiceItemId" value="@item.InvoiceItemId" />
-                            <button type="submit">Request Buy Order</button>
+                            <button type="submit" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Request Buy Order</button>
                         </form>
                     </td>
                 </tr>
             }
-            
         </tbody>
     </table>
 }
@@ -67,5 +81,5 @@ else
 
 <form method="get" action="/Buy/Processing" style="text-align: center;">
     <input type="hidden" name="Back" value="/Buy/Processing" />
-    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back</button>
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Back</button>
 </form>

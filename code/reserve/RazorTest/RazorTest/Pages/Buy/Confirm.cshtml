@@ -2,11 +2,22 @@
 @model RazorTest.Pages.Buy.ConfirmModel
 @{
 }
-<h2>ITEM</h2>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+</style>
+
+<div class="container">
+    <h2>ITEM</h2>
+</div>
 
 @if (Model.BuyConfirmInvoiceItemObject != null)
 {
-    <table>
+    <table class="luxury-table">
         <tr>
             <th>ID</th>
             <td>@Model.BuyConfirmInvoiceItemObject.InvoiceItemId</td>
@@ -26,10 +37,14 @@
     </table>
 }
 
-<h2>Buying State</h2>
+
+<div class="container">
+    <h2>Buying State</h2>
+</div>
+
 @if (Model.BuyConfirmInvoiceObject != null)
 {
-    <table>
+    <table class="luxury-table">
         <tr>
             <th>Invoice ID</th>
             <td>@Model.BuyConfirmInvoiceObject.InvoiceId</td>
@@ -47,15 +62,14 @@
             <td>@Model.BuyConfirmInvoiceObject.EndTotalPrice</td>
         </tr>
     </table>
-
-
 }
 
+
 <form method="post" asp-page-handler="ConfirmBuying">
-    <button type="submit">Create Buying Order</button>
+    <button type="submit" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Create Buying Order</button>
 </form>
 
 <form method="get" action="/Buy/BuyBack" style="text-align: center;">
     <input type="hidden" name="Back" value="/Buy/BuyBack" />
-    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back</button>
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Back</button>
 </form>
