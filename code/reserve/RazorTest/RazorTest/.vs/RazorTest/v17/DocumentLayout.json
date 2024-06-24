@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -142,7 +142,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -222,26 +222,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Revenue.cshtml",
               "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
               "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml",
               "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
               "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAACsAAAAAAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAIwFwAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-22T12:05:49.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Revenue.cshtml.cs",
               "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml.cs",
               "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
               "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEUAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAEUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T12:05:53.207Z",
               "EditorCaption": ""

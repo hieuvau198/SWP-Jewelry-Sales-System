@@ -46,44 +46,52 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const invoices = @Html.Raw(Model.InvoicesJson);
-        //new
-            const buyInvoices = @Html.Raw(Model.BuyInvoicesJson);
+        const monthlySales = @Html.Raw(Model.MonthlySalesJson);
+        const monthlyPurchases = @Html.Raw(Model.MonthlyPurchasesJson);
+        const yearlySalesCount = @Html.Raw(ViewData["YearlySalesCount"]);
+        const yearlyPurchasesCount = @Html.Raw(ViewData["YearlyPurchasesCount"]);
+        const totalSales = monthlySales.reduce((acc, item) => acc + item.total, 0);
+        const totalPurchases = monthlyPurchases.reduce((acc, item) => acc + item.total, 0);
 
-        const labels = invoices.map(item => new Date(item.InvoiceDate).toLocaleDateString('en-GB', {
-            year: 'numeric',
-            month: 'short'
-        }));
-        const data = invoices.map(item => item.EndTotalPrice);
+        const labels = monthlySales.map(item => item.month);
 
-        //new
-            const data2 = buyInvoices.map(item => item.EndTotalPrice);
+        const dataSales = monthlySales.map(item => item.total);
+        const dataPurchases = monthlyPurchases.map(item => item.total);
 
+        // Bar Chart (myChart)
         const ctx = document.getElementById('myChart').getContext('2d');
         new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Sale',
-                    data: data,
+                    label: 'Total Sales',
+                    data: dataSales,
                     borderWidth: 1,
                     backgroundColor: 'rgba(54, 162, 235, 0.2)',
                     borderColor: 'rgba(54, 162, 235, 1)'
                 },
                 {
-                    label: 'Buy',
-                    data: data2,
+                    label: 'Total Purchases',
+                    data: dataPurchases,
                     borderWidth: 1,
                     backgroundColor: 'rgba(255, 99, 132, 0.2)',
                     borderColor: 'rgba(255, 99, 132, 1)'
                 }]
             },
-
             options: {
                 scales: {
                     y: {
                         beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Total Sale and Buy per Month',
+                        font: {
+                            size: 25
+                        }
                     }
                 }
             }
