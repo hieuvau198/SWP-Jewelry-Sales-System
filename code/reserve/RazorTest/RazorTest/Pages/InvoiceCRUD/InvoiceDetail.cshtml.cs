@@ -14,8 +14,6 @@ namespace RazorTest.Pages.InvoiceCRUD
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyCustomerObject = "_CustomerObject";
 
-
-
         private readonly ApiService _apiService;
 
         public InvoiceListModel(ApiService apiService)

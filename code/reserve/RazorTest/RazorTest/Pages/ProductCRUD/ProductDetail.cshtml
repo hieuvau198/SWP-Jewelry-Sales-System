@@ -45,8 +45,16 @@
                     <td>@product.LaborCost</td>
                     <td>@product.CreatedAt.ToShortDateString()</td>
                     <td class="action-buttons">
-                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
-                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                        @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
+                        {
+                            <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                            <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+
+                        }
+                        else if(Model.VerifyAuth("Sale") || Model.VerifyAuth("Cashier"))
+                        {
+                            <span>Need Manager,Admin Role To Access</span>
+                        }
                     </td>
                 </tr>
             }

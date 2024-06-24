@@ -224,8 +224,15 @@
                 </div>
                 <div class="nav-links">
                     <a class="nav-link" href="/Index">Home</a>
-                    <a class="nav-link" href="#about">About Us</a>
-                    <a class="nav-link" href="#contact">Contact</a>
+                    @* @{
+                        bool isAuthenticated = Context.Session.GetObject<bool>("_AuthState");
+                        var user = Context.Session.GetObject<User>("_UserObject");
+
+                        if (isAuthenticated && user != null && user.Role == "Admin")
+                        {
+                            <a class="nav-link" href="/ProductCRUD/ProductDetail">Products</a>
+                        }
+                    } *@
                     <a class="nav-link" href="/GoldDetail">Gold Price</a>
                 </div>
             </div>

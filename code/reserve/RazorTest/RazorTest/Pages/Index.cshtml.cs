@@ -43,7 +43,7 @@ namespace RazorTest.Pages
             Invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
             InvoiceItems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem");
 
-            const int pageSize = 3; // Number of products per page
+            const int pageSize = 4; // Number of products per page
             Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
             if (Products != null)
             {
@@ -84,11 +84,10 @@ namespace RazorTest.Pages
                 }
             }
             return result;
-            
-            //bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
-            //User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-
-            //return isAuthenticated && user?.Role.Equals(role) == true;
         }
     }
 }
+//bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+//User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+//return isAuthenticated && user?.Role.Equals(role) == true;

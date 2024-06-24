@@ -19,8 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         h1, h2, h3, h4, h5, h6 {
             font-family: "Oswald";
@@ -30,11 +29,17 @@
             font-family: "Open Sans", sans-serif;
         }
 
+        .w3-container p {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
         .sidebar {
             height: 100%;
             width: 205px;
             position: fixed;
-            top: 136px; /* Adjust this value based on your header height */
+            top: 117px; /* Adjust this value based on your header height */
             bottom: 155px;
             left: 0px;
             padding-top: 20px;
@@ -72,7 +77,7 @@
             padding: 10px;
             cursor: pointer;
             position: absolute;
-            top: 110px;
+            top: 100px;
             left: 10px;
             z-index: 1001;
             background-color: #F5F5F5;
@@ -107,7 +112,10 @@
                 }
 
         .container {
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
         }
 
         .header-title {
@@ -253,20 +261,33 @@
 
         <!-- Sidebar/menu -->
         <nav class="sidebar">
-            <a href="/Dashboard/Revenue">Dashboard</a>
             @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
             {
-                <a href="javascript:void(0)" onclick="toggleSubMenu()">Products</a>
-                <div class="submenu">
-                    <a href="#">Product List</a>
-                    <a href="#">Product Edit</a>
-                    <a asp-page="/ProductCRUD/ProductDetail">Product Detail</a>
-                    <a href="#">Product Add</a>
-                    <a href="#">Shopping Cart</a>
-                </div>
+                <a asp-page="/WarrantyCRUD/WarrantyDetail">Warranties</a>
             }
-            <a href="#">User List</a>
-            <a href="#">Order Invoice</a>
+
+            @if (Model.VerifyAuth("Admin"))
+            {
+                <a href="/Dashboard/Revenue">Dashboard</a>
+                <a asp-page="/CustomerCRUD/CustomerDetail">Customers</a>
+                <a asp-page="/DiscountCRUD/DiscountDetail">Discounts</a>
+@*                 <a asp-page="/GemCRUD/GemDetail">Gems</a>
+                <a asp-page="/GoldCRUD/GoldDetail">Golds</a> *@
+                <a asp-page="/UserCRUD/UserDetail">Users</a>
+            }
+
+            @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+            {
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Invoices</a>
+                <a asp-page="/InvoiceItemCRUD/InvoiceItemDetail">InvoiceItems</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+            }
+
+            @if (Model.VerifyAuth("Sale"))
+            {
+                <a asp-page="/Sale/SaleHomePage">Sale Feature</a>
+                <a asp-page="/Buy/Processing">Buy-Back Feature</a>
+            }
         </nav>
     }
     <!-- Main Container -->
@@ -334,183 +355,88 @@
         </div>
 
         <!-- Main Content Grid -->
-        <div class="w3-row w3-padding w3-border main-content">
+        <div class="w3-container w3-row w3-padding w3-border main-content">
 
-            @* <!-- Blog entries / Main section --> *@
-            <div class="w3-col l8 s12">
-                <div class="w3-card-4 w3-margin w3-white">
-                    <img src="~/ProductImages/KimCuongg.jpg" alt="Diamond" style="width:auto">
-                    <div class="w3-container">
-                        <h3><b>Our Latest Collection</b></h3>
-                        <h5>New Arrivals, <span class="w3-opacity">June 2024</span></h5>
-                    </div>
-
-                    <div class="w3-container">
-                        <p>Explore the finest diamonds crafted with perfection. Our new collection offers a blend of elegance and style, perfect for every occasion.</p>
-                        <div class="w3-row">
-                            <div class="w3-col m8 s12">
-                                <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-                            </div>
-                            <div class="w3-col m4 w3-hide-small">
-                                <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
-                            </div>
+            <div class="row">
+                <!-- Blog entries / Main section -->
+                <div class="col-lg-8 col-md-12">
+                    <div class="card mb-4">
+                        <img src="~/ProductImages/KimCuongg.jpg" alt="Diamond" class="card-img-top" style="width: 150px;">
+                        <div class="card-body">
+                            <h3 class="card-title"><b>Our Latest Collection</b></h3>
+                            <h5 class="card-subtitle mb-2 text-muted">New Arrivals, <span class="w3-opacity">June 2024</span></h5>
+                            <p class="card-text">
+                                At our esteemed establishment, we proudly present an unparalleled collection of the most exquisite diamonds and fine jewelry, meticulously curated to captivate and enchant.
+                                Our unwavering dedication to excellence ensures that each piece radiates exceptional quality, embodying the pinnacle of craftsmanship and elegance.
+                                With a steadfast commitment to providing an extraordinary customer experience, we strive to exceed expectations, offering personalized service that is as unique and remarkable as the treasures we offer.
+                                Join us in celebrating the timeless beauty and splendor of our exclusive collection, where luxury meets legacy and every moment sparkles with brilliance.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <hr>
-
-                <!--Product List-->
-                <div class="w3-card-4 w3-margin w3-white product-list">
-                    <h3>Product List</h3>
-                    <div class="w3-row-padding">
-                        @foreach (var product in Model.PaginatedProducts)
-                        {
-                            <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
-                                <div class="product">
-                                    <div class="product-image-wrapper">
-                                        <img src="/ProductImages/@product.ProductImages" class="product-image" />
-                                    </div>
-                                    <div class="product-name">@product.ProductName</div>
-                                </div>
-                            </div>
-                        }
+                <!-- Sidebar / Info section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="card mb-4">
+                        <img src="/ProductImages/diamond_earrings.jpg" alt="About" class="card-img-top" style="width: 225px;">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>About Us</b></h4>
+                            <p class="card-text">
+                                Experience luxury with our diamond collection. Each piece combines timeless elegance and modern sophistication, perfect for any occasion.
+                                Our diamonds shine with unmatched brilliance, making every moment unforgettable.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <hr>
-                <!-- Pagination-->
-                <div class="w3-center">
-                    @if (Model.PaginatedProducts.HasPreviousPage)
-                    {
-                        <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button">&laquo; Previous</a>
-                    }
-                    @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
-                    {
-                        <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-blue" : "")">@i</a>
-                    }
-                    @if (Model.PaginatedProducts.HasNextPage)
-                    {
-                        <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button">Next &raquo;</a>
-                    }
-                </div>
-
             </div>
+        </div>
 
-            <!--Sidebar / Info section-->
-            <div class="w3-col l4">
-                @* <!-- About Card --> *@
-                <div class="w3-card w3-margin w3-margin-top">
-                    <img src="/ProductImages/diamond_earrings.jpg" alt="About" style="width:auto" class="w3-grayscale">
-                    <div class="w3-container w3-white">
-                        <h4><b>About Us</b></h4>
-                        <p>We offer the finest collection of diamonds and jewelry. Our commitment is to provide exceptional quality and unmatched customer service.</p>
-                    </div>
-                </div>
-                <hr>
-
-                <!--Navigation and Authentication Section-->
-                @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+        <!--Product List-->
+        <div class="w3-container w3-card-4 w3-margin w3-white product-list">
+            <div class="container">
+                <h2>Product List</h2>
+            </div>
+            <div class="w3-row-padding">
+                @foreach (var product in Model.PaginatedProducts)
                 {
-                    <div class="w3-card w3-margin">
-                        <div class="w3-container w3-padding">
-                            <h4>Navigation</h4>
-                            <table class="link-table">
-                                <thead>
-                                    <tr>
-                                        <th>Section</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @if (Model.VerifyAuth("Admin"))
-                                    {
-                                        <tr>
-                                            <td>Customers</td>
-                                            <td><a asp-page="/CustomerCRUD/CustomerDetail">View all Customers</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Discounts</td>
-                                            <td><a asp-page="/DiscountCRUD/DiscountDetail">View all Discounts</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gems</td>
-                                            <td><a asp-page="/GemCRUD/GemDetail">View all Gems</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Golds</td>
-                                            <td><a asp-page="/GoldCRUD/GoldDetail">View all Golds</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>User</td>
-                                            <td><a asp-page="/UserCRUD/UserDetail">View all Users</a></td>
-                                        </tr>
-                                    }
-                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
-                                    {
-                                        <tr>
-                                            <td>Warranty</td>
-                                            <td><a asp-page="/WarrantyCRUD/WarrantyDetail">View all Warranties</a></td>
-                                        </tr>
-                                    }
-                                    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
-                                    {
-                                        <tr>
-                                            <td>Invoice</td>
-                                            <td><a asp-page="/InvoiceCRUD/InvoiceDetail">View all Invoices</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Invoice Item</td>
-                                            <td><a asp-page="/InvoiceItemCRUD/InvoiceItemDetail">View all InvoiceItems</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Product</td>
-                                            <td><a asp-page="/ProductCRUD/ProductDetail">View all Products</a></td>
-                                        </tr>
-                                    }
-                                    @if (Model.VerifyAuth("Sale"))
-                                    {
-                                        <tr>
-                                            <td>Sale Feature</td>
-                                            <td><a asp-page="/Sale/SaleHomePage">Access The Sale Feature</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Buy Feature</td>
-                                            <td><a asp-page="/Buy/Processing">Access The Buy Feature</a></td>
-                                        </tr>
-                                    }
-                                    <tr>
-                                        <td>Gold Price</td>
-                                        <td><a asp-page="/GoldPriceDetail">View all Gold Prices</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Logout Feature</td>
-                                        <td><a asp-page="/Authentication/LogoutPage">Access The Logout Feature</a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
+                        <div class="product">
+                            <div class="product-image-wrapper">
+                                <img src="/ProductImages/@product.ProductImages" class="product-image" style="width: 100%; height: 180px; object-fit: cover;" />
+                            </div>
+                            <div class="product-name">@product.ProductName</div>
                         </div>
                     </div>
                 }
             </div>
+        </div>
+
+        <hr>
+        <!-- Pagination-->
+        <div class="w3-center">
+            @if (Model.PaginatedProducts.HasPreviousPage)
+            {
+                <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button" style="background-color: #B8860B; color: white;">&laquo; Previous</a>
+            }
+            @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
+            {
+                <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-grey" : "")" style="@(i == Model.PaginatedProducts.PageIndex ? "" : "background-color: #B8860B; color: white;")">@i</a>
+            }
+            @if (Model.PaginatedProducts.HasNextPage)
+            {
+                <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button" style="background-color: #B8860B; color: white;">Next &raquo;</a>
+            }
         </div>
         <br>
 
         <!-- Footer -->
         <footer class="footer w3-container w3-padding-32 w3-margin-top">
             <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-            <div class="w3-xlarge w3-section">
-                <a href="#" class="w3-hover-opacity"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-                <a href="#" class="w3-hover-opacity"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-                <a href="#" class="w3-hover-opacity"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
-                <a href="#" class="w3-hover-opacity"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-                <a href="#" class="w3-hover-opacity"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-                <a href="#" class="w3-hover-opacity"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-            </div>
         </footer>
 
         <script>
             // Toggle the visibility of comments
             function myFunction(id) {
-                var x = document.getElementById(id);
+                var x = document.getEleSmentById(id);
                 if (x.style.display === "none") {
                     x.style.display = "block";
                 } else {
