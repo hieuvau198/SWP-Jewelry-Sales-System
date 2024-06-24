@@ -1,17 +1,17 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using static RazorTest.Pages.InvoiceCRUD.InvoiceListModel;
 
 namespace RazorTest.Pages.Dashboard
 {
     public class RevenueModel : PageModel
     {
-        public const string UrlInvoice = "http://localhost:5071/api/invoice";
-
         private readonly InvoiceService _invoiceService;
 
         public RevenueModel(InvoiceService invoiceService)
@@ -19,35 +19,54 @@ namespace RazorTest.Pages.Dashboard
             _invoiceService = invoiceService;
         }
 
-        public List<Invoice> Invoices { get; set; }
-        public string InvoicesJson { get; set; }
-        public string BuyInvoicesJson { get; set; }
-
+        public string MonthlySalesJson { get; set; }
+        public string MonthlyPurchasesJson { get; set; }
+        public string TopStaffSalesJson { get; set; }
 
         public async Task OnGetAsync()
         {
-            Invoices = await _invoiceService.GetInvoicesAsync();
+            var invoices = await _invoiceService.GetInvoicesAsync();
 
-            List<Invoice> saleInvoices = new List<Invoice>();
-            foreach (Invoice invoice in Invoices)
-            {
-                if (invoice.InvoiceType.Equals("Sale"))
+            var monthlySales = invoices
+                .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month })
+                .Select(g => new
                 {
-                    saleInvoices.Add(invoice);
-                }
-            }
-            InvoicesJson = JsonSerializer.Serialize(saleInvoices);
+                    month = $"{g.Key.Year}-{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(g.Key.Month)}",
+                    total = g.Sum(i => i.EndTotalPrice)
+                })
+                .ToList();
 
-            List<Invoice> buyInvoices = new List<Invoice>();
-            foreach (Invoice invoice in Invoices)
-            {
-                if (invoice.InvoiceType.Equals("Buy"))
+            var monthlyPurchases = invoices
+                .Where(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase))
+                .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month })
+                .Select(g => new
                 {
-                    buyInvoices.Add(invoice);
-                }
-            }
-            BuyInvoicesJson = JsonSerializer.Serialize(buyInvoices);
+                    month = $"{g.Key.Year}-{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(g.Key.Month)}",
+                    total = g.Sum(i => i.EndTotalPrice)
+                })
+                .ToList();
+
+            var topStaffSales = invoices
+              .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+              .GroupBy(i => i.UserFullname)
+              .Select(g => new
+              {
+                  staffName = g.Key,
+                  totalSales = g.Sum(i => i.EndTotalPrice)
+              })
+              .OrderByDescending(s => s.totalSales)
+              .ToList();
+
+            var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
+            var yearlyPurchasesCount = invoices.Count(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase));
+
+            MonthlySalesJson = JsonSerializer.Serialize(monthlySales);
+            MonthlyPurchasesJson = JsonSerializer.Serialize(monthlyPurchases);
+            TopStaffSalesJson = JsonSerializer.Serialize(topStaffSales);
+            ViewData["YearlySalesCount"] = yearlySalesCount;
+            ViewData["YearlyPurchasesCount"] = yearlyPurchasesCount;
         }
+
     }
 }
-

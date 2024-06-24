@@ -4,9 +4,42 @@
     ViewData["Title"] = "Charts";
 }
 
-<div>
-    <canvas id="myChart" width="1000px" height="500px"></canvas>
-    <canvas id="myChart2" width="800px" height="400px"></canvas>
+<style>
+    .chart-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .chart-box {
+        width: 1100px;
+        height: 600px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0.2, 0.1);
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    canvas {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<div class="chart-container">
+    <div class="chart-box">
+        <canvas id="myChart" width="1000" height="500"></canvas>
+    </div>
+    <div class="chart-box">
+        <canvas id="myChart2" width="1000" height="500"></canvas>
+    </div>
+    <div class="chart-box">
+        <canvas id="myChart3" width="1000" height="500"></canvas>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -55,34 +88,73 @@
                 }
             }
         });
-        // const ctx = document.getElementById('myChart2').getContext('2d');
-        // new Chart(ctx, {
-        //     type: 'bar',
-        //     data: {
-        //         labels: labels,
-        //         datasets: [{
-        //             label: 'Sale',
-        //             data: data,
-        //             borderWidth: 1,
-        //             backgroundColor: 'rgba(54, 162, 235, 0.2)',
-        //             borderColor: 'rgba(54, 162, 235, 1)'
-        //         },
-        //         {
-        //             label: 'Buy',
-        //             data: data2,
-        //             borderWidth: 1,
-        //             backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        //             borderColor: 'rgba(255, 99, 132, 1)'
-        //         }]
-        //     },
 
-        //     options: {
-        //         scales: {
-        //             y: {
-        //                 beginAtZero: true
-        //             }
-        //         }
-        //     }
-        // });
+        // Doughnut Chart (myChart2)
+        const ctx2 = document.getElementById('myChart2').getContext('2d');
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Total Sales', 'Total Purchases'],
+                datasets: [{
+                    data: [yearlySalesCount, yearlyPurchasesCount],
+                    backgroundColor: ['rgba(54, 162, 235, 0.2)', 'rgba(255, 99, 132, 0.2)'],
+                    borderColor: ['rgba(54, 162, 235, 5)', 'rgba(255, 99, 132, 5)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Total Invoice',
+                        font: {
+                            size: 25
+                        }
+                    }
+                }
+            }
+        });
+
+        // Pie Chart (myChart3)
+        const ctx3 = document.getElementById('myChart3').getContext('2d');
+        new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Total Sales', 'Total Purchases'],
+                datasets: [{
+                    data: [totalSales, totalPurchases],
+                    backgroundColor: ['rgba(54, 162, 235, 0.2)', 'rgba(255, 99, 132, 0.2)'],
+                    borderColor: ['rgba(54, 162, 235, 5)', 'rgba(255, 99, 132, 5)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                    title: {
+                        display: true,
+                        text: 'Total Sales and Purchases per Year',
+                        font: {
+                            size: 25
+                        }
+                    }
+                }
+            }
+        });
     });
 </script>
