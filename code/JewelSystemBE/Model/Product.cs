@@ -18,7 +18,6 @@ namespace JewelSystemBE.Model
         public string ProductName { get; set; } = "Some Product Name";
 
         [Required]
-        [MaxLength(200)]
         public string ProductImages { get; set; } = "Some Product Image";
 
         [Required]

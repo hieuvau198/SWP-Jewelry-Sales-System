@@ -26,6 +26,10 @@ namespace JewelSystemBE.Service.ServiceProduct
             try
             {
                 product = UpdatePrice(product);
+                List<Product> products = _jewelDbContext.Products.ToList();
+                string newId = GenerateProductId(product, products);
+                product.ProductId = newId;
+
                 _jewelDbContext.Products.Add(product);
                 _jewelDbContext.SaveChanges();
                 return product;
@@ -203,6 +207,26 @@ namespace JewelSystemBE.Service.ServiceProduct
 
             return result;
         }
-        
+
+        public string GenerateProductId(Product product, List<Product> products)
+        {
+            string baseId = $"{product.GemId}-{product.GoldName}";
+            string prefix = product.ProductType.Substring(0, 2).ToUpper();
+            
+            int suffix = 1;
+            string newId = $"{prefix}-{baseId}-{suffix}";
+
+            foreach (Product product2 in products)
+            {
+                if(product2.ProductId.ToUpper() == newId.ToUpper())
+                {
+                    suffix++;
+                }
+            }
+            
+            newId = $"{prefix}-{baseId}-{suffix}";
+            return newId;
+        }
+
     }
 }

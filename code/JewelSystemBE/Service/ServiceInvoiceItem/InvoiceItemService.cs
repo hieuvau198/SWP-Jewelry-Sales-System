@@ -37,6 +37,7 @@ namespace JewelSystemBE.Service.ServiceInvoiceItem
             }
         }
 
+        
         public List<InvoiceItem> GetInvoiceItems()
         {
             return _jewelDbContext.InvoiceItems.OrderByDescending(x => x.InvoiceItemId).ToList();
