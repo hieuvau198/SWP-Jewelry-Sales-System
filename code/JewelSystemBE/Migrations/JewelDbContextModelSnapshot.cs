@@ -819,7 +819,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang24k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7249),
+                            Date = new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4529),
                             GoldCode = "Vàng nữ trang 99,99%",
                             GoldName = "24K",
                             SellPrice = 0.0,
@@ -829,7 +829,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang18k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7274),
+                            Date = new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4542),
                             GoldCode = "Vàng nữ trang 75%",
                             GoldName = "18K",
                             SellPrice = 0.0,
@@ -839,7 +839,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang14k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7278),
+                            Date = new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4543),
                             GoldCode = "Vàng nữ trang 58,3%",
                             GoldName = "14K",
                             SellPrice = 0.0,
@@ -849,7 +849,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang10k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7281),
+                            Date = new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4545),
                             GoldCode = "Vàng nữ trang 41,7%",
                             GoldName = "10K",
                             SellPrice = 0.0,
@@ -933,7 +933,7 @@ namespace JewelSystemBE.Migrations
                             CustomerName = "Jane Smith",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 192000000m,
-                            InvoiceDate = new DateTime(2024, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
                             TotalPrice = 240000000m,
@@ -947,7 +947,7 @@ namespace JewelSystemBE.Migrations
                             CustomerName = "Alice Johnson",
                             CustomerVoucher = 1000000m,
                             EndTotalPrice = 209000000m,
-                            InvoiceDate = new DateTime(2024, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Sale",
                             TotalPrice = 225000000m,
@@ -961,7 +961,7 @@ namespace JewelSystemBE.Migrations
                             CustomerName = "Emily Wilson",
                             CustomerVoucher = 500000m,
                             EndTotalPrice = 84500000m,
-                            InvoiceDate = new DateTime(2024, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
                             TotalPrice = 85000000m,
@@ -975,7 +975,7 @@ namespace JewelSystemBE.Migrations
                             CustomerName = "Jane Smith",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 1200000000m,
-                            InvoiceDate = new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
                             TotalPrice = 1500000000m,
@@ -989,7 +989,7 @@ namespace JewelSystemBE.Migrations
                             CustomerName = "Bob Brown",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 2430000000m,
-                            InvoiceDate = new DateTime(2024, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
                             TotalPrice = 2700000000m,
@@ -1007,6 +1007,118 @@ namespace JewelSystemBE.Migrations
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
                             TotalPrice = 960000000m,
+                            UserFullname = "Luna Taylor",
+                            UserId = "US7"
+                        },
+                        new
+                        {
+                            InvoiceId = "I8",
+                            CustomerId = "C1",
+                            CustomerName = "John Doe",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 990000000m,
+                            InvoiceDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Sale",
+                            TotalPrice = 1100000000m,
+                            UserFullname = "Mateo Martinez",
+                            UserId = "US4"
+                        },
+                        new
+                        {
+                            InvoiceId = "I9",
+                            CustomerId = "C3",
+                            CustomerName = "Alice Johnson",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 720000000m,
+                            InvoiceDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Sale",
+                            TotalPrice = 800000000m,
+                            UserFullname = "Emma Young",
+                            UserId = "US8"
+                        },
+                        new
+                        {
+                            InvoiceId = "I10",
+                            CustomerId = "C2",
+                            CustomerName = "Jane Smith",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 1890000000m,
+                            InvoiceDate = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Sale",
+                            TotalPrice = 2100000000m,
+                            UserFullname = "Luna Taylor",
+                            UserId = "US7"
+                        },
+                        new
+                        {
+                            InvoiceId = "I11",
+                            CustomerId = "C5",
+                            CustomerName = "Emily Wilson",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 2700000000m,
+                            InvoiceDate = new DateTime(2023, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Sale",
+                            TotalPrice = 3000000000m,
+                            UserFullname = "Mateo Martinez",
+                            UserId = "US4"
+                        },
+                        new
+                        {
+                            InvoiceId = "I12",
+                            CustomerId = "C4",
+                            CustomerName = "Bob Brown",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 1500000000m,
+                            InvoiceDate = new DateTime(2023, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Buy",
+                            TotalPrice = 1500000000m,
+                            UserFullname = "James Martinez",
+                            UserId = "US3"
+                        },
+                        new
+                        {
+                            InvoiceId = "I13",
+                            CustomerId = "C3",
+                            CustomerName = "Alice Johnson",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 2400000000m,
+                            InvoiceDate = new DateTime(2023, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Buy",
+                            TotalPrice = 2400000000m,
+                            UserFullname = "Mateo Martinez",
+                            UserId = "US4"
+                        },
+                        new
+                        {
+                            InvoiceId = "I14",
+                            CustomerId = "C5",
+                            CustomerName = "Emily Wilson",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 810000000m,
+                            InvoiceDate = new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Buy",
+                            TotalPrice = 900000000m,
+                            UserFullname = "Isabel Rodriguez",
+                            UserId = "US6"
+                        },
+                        new
+                        {
+                            InvoiceId = "I15",
+                            CustomerId = "C1",
+                            CustomerName = "John Doe",
+                            CustomerVoucher = 0m,
+                            EndTotalPrice = 1200000000m,
+                            InvoiceDate = new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceStatus = "Complete",
+                            InvoiceType = "Buy",
+                            TotalPrice = 1200000000m,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
                         });
@@ -1323,6 +1435,198 @@ namespace JewelSystemBE.Migrations
                             TotalPrice = 480000000.0,
                             UnitPrice = 240000000.0,
                             WarrantyId = "W15"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II16",
+                            DiscountId = "D4",
+                            DiscountRate = 0.5,
+                            EndTotalPrice = 231744000.0,
+                            InvoiceId = "I8",
+                            ProductId = "P015",
+                            ProductName = "Diamond Necklace",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 463488000.0,
+                            UnitPrice = 463488000.0,
+                            WarrantyId = "W16"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II17",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 1200000000.0,
+                            InvoiceId = "I8",
+                            ProductId = "P019",
+                            ProductName = "Emerald Ring",
+                            Quantity = 2,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 1200000000.0,
+                            UnitPrice = 600000000.0,
+                            WarrantyId = "W17"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II18",
+                            DiscountId = "D2",
+                            DiscountRate = 0.29999999999999999,
+                            EndTotalPrice = 560000000.0,
+                            InvoiceId = "I9",
+                            ProductId = "P017",
+                            ProductName = "Sapphire Necklace",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 800000000.0,
+                            UnitPrice = 800000000.0,
+                            WarrantyId = "W18"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II19",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 500000000.0,
+                            InvoiceId = "I9",
+                            ProductId = "P012",
+                            ProductName = "Ruby Bracelet",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 500000000.0,
+                            UnitPrice = 500000000.0,
+                            WarrantyId = "W19"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II20",
+                            DiscountId = "D3",
+                            DiscountRate = 0.40000000000000002,
+                            EndTotalPrice = 1080000000.0,
+                            InvoiceId = "I10",
+                            ProductId = "P011",
+                            ProductName = "Sapphire Ring",
+                            Quantity = 2,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 1800000000.0,
+                            UnitPrice = 900000000.0,
+                            WarrantyId = "W20"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II21",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 600000000.0,
+                            InvoiceId = "I10",
+                            ProductId = "P020",
+                            ProductName = "Emerald Earring",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 600000000.0,
+                            UnitPrice = 600000000.0,
+                            WarrantyId = "W21"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II22",
+                            DiscountId = "D1",
+                            DiscountRate = 0.20000000000000001,
+                            EndTotalPrice = 1920000000.0,
+                            InvoiceId = "I11",
+                            ProductId = "P014",
+                            ProductName = "Turquoise Ring",
+                            Quantity = 2,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 2400000000.0,
+                            UnitPrice = 1200000000.0,
+                            WarrantyId = "W22"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II23",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 40000000.0,
+                            InvoiceId = "I11",
+                            ProductId = "P023",
+                            ProductName = "Turquoise Cabochon",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 40000000.0,
+                            UnitPrice = 40000000.0,
+                            WarrantyId = "W23"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II24",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 1500000000.0,
+                            InvoiceId = "I12",
+                            ProductId = "P016",
+                            ProductName = "Diamond Ring",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 1500000000.0,
+                            UnitPrice = 1500000000.0,
+                            WarrantyId = "Not Applied"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II26",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 2400000000.0,
+                            InvoiceId = "I13",
+                            ProductId = "P013",
+                            ProductName = "Opal Necklace",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 2400000000.0,
+                            UnitPrice = 2400000000.0,
+                            WarrantyId = "Not Applied"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II28",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 900000000.0,
+                            InvoiceId = "I14",
+                            ProductId = "P011",
+                            ProductName = "Sapphire Ring",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 900000000.0,
+                            UnitPrice = 900000000.0,
+                            WarrantyId = "Not Applied"
+                        },
+                        new
+                        {
+                            InvoiceItemId = "II29",
+                            DiscountId = "No Discount",
+                            DiscountRate = 0.0,
+                            EndTotalPrice = 1200000000.0,
+                            InvoiceId = "I15",
+                            ProductId = "P014",
+                            ProductName = "Turquoise Ring",
+                            Quantity = 1,
+                            StallId = "Some Stall Id",
+                            StallName = "Some Stall Name",
+                            TotalPrice = 1200000000.0,
+                            UnitPrice = 1200000000.0,
+                            WarrantyId = "Not Applied"
                         });
                 });
 
@@ -2061,35 +2365,35 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "a7204e5e-4520-46b1-bac5-a4d308cf30c1",
+                            StallItemId = "827553b0-846b-4436-b0fc-0a752ccda952",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "b9106785-39c7-4c96-a058-98475c8a8b4f",
+                            StallItemId = "6088939b-a0d9-4e66-a724-1e106031132f",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "9352540e-3090-488d-8b54-8acfc4ad11c5",
+                            StallItemId = "8ae86633-81bf-42b8-b099-583351d55c05",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "ac68ede5-06d5-4707-811a-b5e4eb9b8090",
+                            StallItemId = "6f3ddbd3-5163-493d-8c45-787297bbd39b",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "48026e20-2383-4fd8-8bc1-08ac316ce979",
+                            StallItemId = "efc5ba94-6e45-4a6e-9ee5-f462658125a5",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
@@ -2131,7 +2435,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US1",
                             Email = "liam@gmail.com",
                             Fullname = "Liam Williams",
-                            Password = "$2a$11$MU8GdvyYC/BoWSEtuQ/1GuVNPD41M.qdP0dtYmWZ3TyiuOnf/KFfC",
+                            Password = "$2a$11$P4wnRQaPyQP7TRVsnAaKIOO0zGTIquRjNV710uQWaur9tJ/cQWfHS",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -2140,7 +2444,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US2",
                             Email = "olivia@gmail.com",
                             Fullname = "Olivia Miller",
-                            Password = "$2a$11$pzNvK.fKaJt9Vw4VVFn/Fuh9PJ4fWKmls8pTYvqiJKbiVAFDPPP.C",
+                            Password = "$2a$11$i6P8dnx8diwhIn.MttXfrO1ZlaXuw2LcoIFz1458vuK3.kCqGOGTW",
                             Role = "Manager",
                             Username = "user2"
                         },
@@ -2149,7 +2453,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US3",
                             Email = "james@gmail.com",
                             Fullname = "James Martinez",
-                            Password = "$2a$11$doJuuChgZiKY6zReucb0PuivrwdvKuPR4UNplRw.zW5PZLys1uX5.",
+                            Password = "$2a$11$AahlB0ADnAnA6RxNkdp5MOxeFRlQ1Bbfukh3M6cgipNGxiL.yTfTW",
                             Role = "Sale",
                             Username = "user3"
                         },
@@ -2158,7 +2462,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US4",
                             Email = "matao@gmail.com",
                             Fullname = "Mateo Martinez",
-                            Password = "$2a$11$EN9t22XCl2M8yYv.XKrMpu3gfZlVPbDyWQu9Xzz9vyJMKbmjoiyCq",
+                            Password = "$2a$11$M3W6s.iV/bSmImPZ7dVXaOaottm6I1DNA6FWVOY6teg5TcfQHi2OK",
                             Role = "Sale",
                             Username = "user4"
                         },
@@ -2167,7 +2471,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US5",
                             Email = "theodore@gmail.com",
                             Fullname = "Theodore Garcia",
-                            Password = "$2a$11$jCOdaqokicOOaBVN8cZLuexk1we4HcrTzwGZDt/b6en.Pkio3I37W",
+                            Password = "$2a$11$345NjDMrce4R/wWeYnhcreJ9LF9WYPdPsOUllqNvMNLn1KHJmbL4K",
                             Role = "Cashier",
                             Username = "user5"
                         },
@@ -2176,7 +2480,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US6",
                             Email = "isabel@gmail.com",
                             Fullname = "Isabel Rodriguez",
-                            Password = "$2a$11$LfjG5LYthxpvKZ3UEQMRJOdOkTpdj/5Q7vKeHLu94ke/bbbtwhTYm",
+                            Password = "$2a$11$G4OSfnYEkppIOZB58klhkeSD6EIzxjosgl4Mv.CQxEaR2t92YCK0K",
                             Role = "Sale",
                             Username = "user6"
                         },
@@ -2185,7 +2489,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US7",
                             Email = "luna@gmail.com",
                             Fullname = "Luna Taylor",
-                            Password = "$2a$11$IO1.B5UKWq45KvCCqquFreQlU64.cQqVhFJUh6yGBEjEOARBv0ufi",
+                            Password = "$2a$11$zFYjZPJZok97XXkAH4pC8u9Sa4VFdNNPtAJYmaCvMoesta6tw1Cee",
                             Role = "Sale",
                             Username = "user7"
                         },
@@ -2194,7 +2498,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US8",
                             Email = "emma@gmail.com",
                             Fullname = "Emma Young",
-                            Password = "$2a$11$CBMbSuNV5xTloyoGSz60WuM9yiFo9RLhh0yOCmmqSqBnGxuZ9n3py",
+                            Password = "$2a$11$A2cRVqV3w4LqJMmm.4jrHOeG9Te3iI4qMU3CHLO7vyQPg27mG9pea",
                             Role = "Sale",
                             Username = "user8"
                         });

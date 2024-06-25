@@ -259,11 +259,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "48026e20-2383-4fd8-8bc1-08ac316ce979", "Some Product Id", "Some Product Name", 0 },
-                    { "9352540e-3090-488d-8b54-8acfc4ad11c5", "Some Product Id", "Some Product Name", 0 },
-                    { "a7204e5e-4520-46b1-bac5-a4d308cf30c1", "Some Product Id", "Some Product Name", 0 },
-                    { "ac68ede5-06d5-4707-811a-b5e4eb9b8090", "Some Product Id", "Some Product Name", 0 },
-                    { "b9106785-39c7-4c96-a058-98475c8a8b4f", "Some Product Id", "Some Product Name", 0 }
+                    { "6088939b-a0d9-4e66-a724-1e106031132f", "Some Product Id", "Some Product Name", 0 },
+                    { "6f3ddbd3-5163-493d-8c45-787297bbd39b", "Some Product Id", "Some Product Name", 0 },
+                    { "827553b0-846b-4436-b0fc-0a752ccda952", "Some Product Id", "Some Product Name", 0 },
+                    { "8ae86633-81bf-42b8-b099-583351d55c05", "Some Product Id", "Some Product Name", 0 },
+                    { "efc5ba94-6e45-4a6e-9ee5-f462658125a5", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -364,10 +364,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7281), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7278), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7274), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 6, 25, 23, 51, 24, 490, DateTimeKind.Local).AddTicks(7249), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4545), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4543), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4542), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4529), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
@@ -376,12 +376,20 @@ namespace JewelSystemBE.Migrations
                 values: new object[,]
                 {
                     { "I1", "C1", "John Doe", 0m, 798576000m, new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 882348000m, "James Martinez", "US3" },
-                    { "I2", "C2", "Jane Smith", 0m, 192000000m, new DateTime(2024, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 240000000m, "Mateo Martinez", "US4" },
-                    { "I3", "C3", "Alice Johnson", 1000000m, 209000000m, new DateTime(2024, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", "Sale", 225000000m, "Mateo Martinez", "US4" },
-                    { "I4", "C5", "Emily Wilson", 500000m, 84500000m, new DateTime(2024, 6, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 85000000m, "Isabel Rodriguez", "US6" },
-                    { "I5", "C2", "Jane Smith", 0m, 1200000000m, new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 1500000000m, "Luna Taylor", "US7" },
-                    { "I6", "C4", "Bob Brown", 0m, 2430000000m, new DateTime(2024, 5, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 2700000000m, "Isabel Rodriguez", "US6" },
-                    { "I7", "C3", "Alice Johnson", 0m, 864000000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 960000000m, "Luna Taylor", "US7" }
+                    { "I10", "C2", "Jane Smith", 0m, 1890000000m, new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 2100000000m, "Luna Taylor", "US7" },
+                    { "I11", "C5", "Emily Wilson", 0m, 2700000000m, new DateTime(2023, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 3000000000m, "Mateo Martinez", "US4" },
+                    { "I12", "C4", "Bob Brown", 0m, 1500000000m, new DateTime(2023, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 1500000000m, "James Martinez", "US3" },
+                    { "I13", "C3", "Alice Johnson", 0m, 2400000000m, new DateTime(2023, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 2400000000m, "Mateo Martinez", "US4" },
+                    { "I14", "C5", "Emily Wilson", 0m, 810000000m, new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 900000000m, "Isabel Rodriguez", "US6" },
+                    { "I15", "C1", "John Doe", 0m, 1200000000m, new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 1200000000m, "Luna Taylor", "US7" },
+                    { "I2", "C2", "Jane Smith", 0m, 192000000m, new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 240000000m, "Mateo Martinez", "US4" },
+                    { "I3", "C3", "Alice Johnson", 1000000m, 209000000m, new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", "Sale", 225000000m, "Mateo Martinez", "US4" },
+                    { "I4", "C5", "Emily Wilson", 500000m, 84500000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 85000000m, "Isabel Rodriguez", "US6" },
+                    { "I5", "C2", "Jane Smith", 0m, 1200000000m, new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 1500000000m, "Luna Taylor", "US7" },
+                    { "I6", "C4", "Bob Brown", 0m, 2430000000m, new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 2700000000m, "Isabel Rodriguez", "US6" },
+                    { "I7", "C3", "Alice Johnson", 0m, 864000000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 960000000m, "Luna Taylor", "US7" },
+                    { "I8", "C1", "John Doe", 0m, 990000000m, new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 1100000000m, "Mateo Martinez", "US4" },
+                    { "I9", "C3", "Alice Johnson", 0m, 720000000m, new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 800000000m, "Emma Young", "US8" }
                 });
 
             migrationBuilder.InsertData(
@@ -419,7 +427,60 @@ namespace JewelSystemBE.Migrations
                 values: new object[,]
                 {
                     { "II15", "D3", 0.40000000000000002, 288000000.0, "I7", "P022", "Opal Earring", 2, "Some Stall Id", "Some Stall Name", 480000000.0, 240000000.0, "W15" },
+                    { "II16", "D4", 0.5, 231744000.0, "I8", "P015", "Diamond Necklace", 1, "Some Stall Id", "Some Stall Name", 463488000.0, 463488000.0, "W16" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[] { "II17", "No Discount", 1200000000.0, "I8", "P019", "Emerald Ring", 2, "Some Stall Id", "Some Stall Name", 1200000000.0, 600000000.0, "W17" });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "discount_rate", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[] { "II18", "D2", 0.29999999999999999, 560000000.0, "I9", "P017", "Sapphire Necklace", 1, "Some Stall Id", "Some Stall Name", 800000000.0, 800000000.0, "W18" });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[] { "II19", "No Discount", 500000000.0, "I9", "P012", "Ruby Bracelet", 1, "Some Stall Id", "Some Stall Name", 500000000.0, 500000000.0, "W19" });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "discount_rate", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[,]
+                {
                     { "II2", "D1", 0.20000000000000001, 165120000.0, "I1", "P021", "Diamond Earring", 1, "Some Stall Id", "Some Stall Name", 206400000.0, 206400000.0, "W2" },
+                    { "II20", "D3", 0.40000000000000002, 1080000000.0, "I10", "P011", "Sapphire Ring", 2, "Some Stall Id", "Some Stall Name", 1800000000.0, 900000000.0, "W20" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[] { "II21", "No Discount", 600000000.0, "I10", "P020", "Emerald Earring", 1, "Some Stall Id", "Some Stall Name", 600000000.0, 600000000.0, "W21" });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "discount_rate", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[] { "II22", "D1", 0.20000000000000001, 1920000000.0, "I11", "P014", "Turquoise Ring", 2, "Some Stall Id", "Some Stall Name", 2400000000.0, 1200000000.0, "W22" });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[,]
+                {
+                    { "II23", "No Discount", 40000000.0, "I11", "P023", "Turquoise Cabochon", 1, "Some Stall Id", "Some Stall Name", 40000000.0, 40000000.0, "W23" },
+                    { "II24", "No Discount", 1500000000.0, "I12", "P016", "Diamond Ring", 1, "Some Stall Id", "Some Stall Name", 1500000000.0, 1500000000.0, "Not Applied" },
+                    { "II26", "No Discount", 2400000000.0, "I13", "P013", "Opal Necklace", 1, "Some Stall Id", "Some Stall Name", 2400000000.0, 2400000000.0, "Not Applied" },
+                    { "II28", "No Discount", 900000000.0, "I14", "P011", "Sapphire Ring", 1, "Some Stall Id", "Some Stall Name", 900000000.0, 900000000.0, "Not Applied" },
+                    { "II29", "No Discount", 1200000000.0, "I15", "P014", "Turquoise Ring", 1, "Some Stall Id", "Some Stall Name", 1200000000.0, 1200000000.0, "Not Applied" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "invoice_item",
+                columns: new[] { "invoice_item_id", "discount_id", "discount_rate", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
+                values: new object[,]
+                {
                     { "II3", "D3", 0.40000000000000002, 48000000.0, "I2", "P005", "Gold Bracelet", 1, "Some Stall Id", "Some Stall Name", 80000000.0, 80000000.0, "W3" },
                     { "II4", "D2", 0.29999999999999999, 144000000.0, "I2", "P010", "Silver Ring", 2, "Some Stall Id", "Some Stall Name", 160000000.0, 80000000.0, "W4" },
                     { "II5", "D1", 0.20000000000000001, 100000000.0, "I3", "P003", "Platinum Necklace", 1, "Some Stall Id", "Some Stall Name", 125000000.0, 125000000.0, "W5" }
@@ -490,14 +551,14 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$MU8GdvyYC/BoWSEtuQ/1GuVNPD41M.qdP0dtYmWZ3TyiuOnf/KFfC", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$pzNvK.fKaJt9Vw4VVFn/Fuh9PJ4fWKmls8pTYvqiJKbiVAFDPPP.C", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$doJuuChgZiKY6zReucb0PuivrwdvKuPR4UNplRw.zW5PZLys1uX5.", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$EN9t22XCl2M8yYv.XKrMpu3gfZlVPbDyWQu9Xzz9vyJMKbmjoiyCq", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$jCOdaqokicOOaBVN8cZLuexk1we4HcrTzwGZDt/b6en.Pkio3I37W", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$LfjG5LYthxpvKZ3UEQMRJOdOkTpdj/5Q7vKeHLu94ke/bbbtwhTYm", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$IO1.B5UKWq45KvCCqquFreQlU64.cQqVhFJUh6yGBEjEOARBv0ufi", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$CBMbSuNV5xTloyoGSz60WuM9yiFo9RLhh0yOCmmqSqBnGxuZ9n3py", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$P4wnRQaPyQP7TRVsnAaKIOO0zGTIquRjNV710uQWaur9tJ/cQWfHS", "Admin", "user1" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$i6P8dnx8diwhIn.MttXfrO1ZlaXuw2LcoIFz1458vuK3.kCqGOGTW", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$AahlB0ADnAnA6RxNkdp5MOxeFRlQ1Bbfukh3M6cgipNGxiL.yTfTW", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$M3W6s.iV/bSmImPZ7dVXaOaottm6I1DNA6FWVOY6teg5TcfQHi2OK", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$345NjDMrce4R/wWeYnhcreJ9LF9WYPdPsOUllqNvMNLn1KHJmbL4K", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$G4OSfnYEkppIOZB58klhkeSD6EIzxjosgl4Mv.CQxEaR2t92YCK0K", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$zFYjZPJZok97XXkAH4pC8u9Sa4VFdNNPtAJYmaCvMoesta6tw1Cee", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$A2cRVqV3w4LqJMmm.4jrHOeG9Te3iI4qMU3CHLO7vyQPg27mG9pea", "Sale", "user8" }
                 });
 
             migrationBuilder.InsertData(
