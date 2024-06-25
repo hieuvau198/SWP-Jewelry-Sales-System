@@ -678,7 +678,7 @@ namespace JewelSystemBE.Data
                 {
                     ProductId = "P006",
                     ProductCode = "NEEMA04618K",
-                    ProductName = "Diamond Necklace NE-EMA046-18K",
+                    ProductName = "Diamond Necklace NE-EMA046-24K",
                     ProductImages = "P006.png",
                     ProductQuantity = 10,
                     ProductType = "Necklace",
@@ -687,8 +687,8 @@ namespace JewelSystemBE.Data
                     MarkupRate = 1.35,
                     GemId = "GE046",
                     GemName = "Asscher Cut Diamond",
-                    GoldId = "vang18k",
-                    GoldName = "18K",
+                    GoldId = "vang24k",
+                    GoldName = "24K",
                     GoldWeight = 40.0,
                     LaborCost = 3000000,
                     CreatedAt = new DateTime(2022, 5, 10),
@@ -735,7 +735,7 @@ namespace JewelSystemBE.Data
                 {
                     ProductId = "P009",
                     ProductCode = "NEDIA04318K",
-                    ProductName = "Diamond Earrings NE-DIA043-18K",
+                    ProductName = "Diamond Earrings NE-DIA043-24K",
                     ProductImages = "P009.png",
                     ProductQuantity = 18,
                     ProductType = "Earrings",
@@ -849,7 +849,7 @@ namespace JewelSystemBE.Data
                 {
                     ProductId = "P015",
                     ProductCode = "NEDIA04414K",
-                    ProductName = "Diamond Necklace NE-DIA044-14K",
+                    ProductName = "Diamond Necklace NE-DIA044-24K",
                     ProductImages = "P015.png",
                     ProductQuantity = 16,
                     ProductType = "Necklace",
@@ -963,7 +963,7 @@ namespace JewelSystemBE.Data
                 {
                     ProductId = "P021",
                     ProductCode = "NEEMA04114K",
-                    ProductName = "Diamond Earrings NE-EMA041-14K",
+                    ProductName = "Diamond Earrings NE-EMA041-24K",
                     ProductImages = "P021.png",
                     ProductQuantity = 18,
                     ProductType = "Earrings",
@@ -972,8 +972,8 @@ namespace JewelSystemBE.Data
                     MarkupRate = 1.20,
                     GemId = "GE041",
                     GemName = "Round Brilliant Diamond",
-                    GoldId = "vang14k",
-                    GoldName = "14K",
+                    GoldId = "vang24k",
+                    GoldName = "24K",
                     GoldWeight = 18.0,
                     LaborCost = 2000000,
                     CreatedAt = new DateTime(2019, 5, 10),
@@ -1075,7 +1075,12 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.ExpireDate).HasColumnName("expire_date").IsRequired().HasColumnType("date");
 
                 entity.HasData(
-                    new Warranty { WarrantyId = "W1", ProductId = "P1", ProductName = "Product A", StartDate = new DateTime(2023, 1, 1), ExpireDate = new DateTime(2024, 1, 1) },
+                    new Warranty { 
+                        WarrantyId = "W1", 
+                        ProductId = "P1", 
+                        ProductName = "Product A", 
+                        StartDate = new DateTime(2023, 1, 1), 
+                        ExpireDate = new DateTime(2024, 1, 1) },
                     new Warranty { WarrantyId = "W2", ProductId = "P2", ProductName = "Product B", StartDate = new DateTime(2023, 2, 1), ExpireDate = new DateTime(2024, 2, 1) },
                     new Warranty { WarrantyId = "W3", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) },
                     new Warranty { WarrantyId = "W4", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) }
@@ -1115,11 +1120,103 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").HasColumnType("decimal(18, 2)").IsRequired();
 
                 entity.HasData(
-                    new Invoice { InvoiceId = "I1", InvoiceType = "Type A", CustomerId = "C1", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 1), CustomerVoucher = 50.00, TotalPrice = 500.00, EndTotalPrice = 450.00 },
-                    new Invoice { InvoiceId = "I2", InvoiceType = "Type B", CustomerId = "C2", UserId = "U2", InvoiceDate = new DateTime(2024, 6, 2), CustomerVoucher = 30.00, TotalPrice = 700.00, EndTotalPrice = 670.00 },
-                    new Invoice { InvoiceId = "I3", InvoiceType = "Type C", CustomerId = "C3", UserId = "U3", InvoiceDate = new DateTime(2024, 6, 3), CustomerVoucher = 20.00, TotalPrice = 300.00, EndTotalPrice = 280.00 },
-                    new Invoice { InvoiceId = "I4", InvoiceType = "Type D", CustomerId = "C4", UserId = "U1", InvoiceDate = new DateTime(2024, 6, 4), CustomerVoucher = 40.00, TotalPrice = 1000.00, EndTotalPrice = 960.00 },
-                    new Invoice { InvoiceId = "I5", InvoiceType = "Type E", CustomerId = "C5", UserId = "U2", InvoiceDate = new DateTime(2024, 6, 5), CustomerVoucher = 60.00, TotalPrice = 800.00, EndTotalPrice = 740.00 }
+                    new Invoice { 
+                        InvoiceId = "I1", 
+                        InvoiceType = "Sale", 
+                        CustomerId = "C1", 
+                        CustomerName = "John Doe",
+                        UserId = "US3", 
+                        UserFullname = "James Martinez",
+                        InvoiceDate = new DateTime(2024, 3, 1), 
+                        CustomerVoucher = 0, 
+                        TotalPrice = 882348000, 
+                        EndTotalPrice = 798576000,
+                        InvoiceStatus = "Complete"
+                    },
+                    new Invoice
+                    {
+                        InvoiceId = "I2",
+                        InvoiceType = "Sale",
+                        CustomerId = "C2",
+                        CustomerName = "Jane Smith",
+                        UserId = "US4",
+                        UserFullname = "Mateo Martinez",
+                        InvoiceDate = new DateTime(2024, 4, 15),
+                        CustomerVoucher = 0,
+                        TotalPrice = 240000000,
+                        EndTotalPrice = 192000000,
+                        InvoiceStatus = "Complete"
+                    },
+                    new Invoice
+                    {
+                        InvoiceId = "I3",
+                        InvoiceType = "Sale",
+                        CustomerId = "C3",
+                        CustomerName = "Alice Johnson",
+                        UserId = "US4",
+                        UserFullname = "Mateo Martinez",
+                        InvoiceDate = new DateTime(2024, 5, 10),
+                        CustomerVoucher = 1000000,
+                        TotalPrice = 225000000,
+                        EndTotalPrice = 209000000,
+                        InvoiceStatus = "Pending"
+                    },
+                    new Invoice
+                    {
+                        InvoiceId = "I4",
+                        InvoiceType = "Sale",
+                        CustomerId = "C5",
+                        CustomerName = "Emily Wilson",
+                        UserId = "US6",
+                        UserFullname = "Isabel Rodriguez",
+                        InvoiceDate = new DateTime(2024, 6, 20),
+                        CustomerVoucher = 500000,
+                        TotalPrice = 85000000,
+                        EndTotalPrice = 84500000,
+                        InvoiceStatus = "Complete"
+                    },
+                    new Invoice
+                    {
+                        InvoiceId = "I5",
+                        InvoiceType = "Sale",
+                        CustomerId = "C2",
+                        CustomerName = "Jane Smith",
+                        UserId = "US7",
+                        UserFullname = "Luna Taylor",
+                        InvoiceDate = new DateTime(2024, 4, 10),
+                        CustomerVoucher = 0,
+                        TotalPrice = 1500000000,
+                        EndTotalPrice = 1200000000,
+                        InvoiceStatus = "Complete"
+                    },
+                    new Invoice
+                    {
+                        InvoiceId = "I6",
+                        InvoiceType = "Sale",
+                        CustomerId = "C4",
+                        CustomerName = "Bob Brown",
+                        UserId = "US6",
+                        UserFullname = "Isabel Rodriguez",
+                        InvoiceDate = new DateTime(2024, 5, 20),
+                        CustomerVoucher = 0,
+                        TotalPrice = 2700000000,
+                        EndTotalPrice = 2430000000,
+                        InvoiceStatus = "Complete"
+                    },
+                    new Invoice
+                    {
+                        InvoiceId = "I7",
+                        InvoiceType = "Sale",
+                        CustomerId = "C3",
+                        CustomerName = "Alice Johnson",
+                        UserId = "US7",
+                        UserFullname = "Luna Taylor",
+                        InvoiceDate = new DateTime(2024, 6, 5),
+                        CustomerVoucher = 0,
+                        TotalPrice = 960000000,
+                        EndTotalPrice = 864000000,
+                        InvoiceStatus = "Complete"
+                    }
                 );
             });
 
@@ -1139,35 +1236,224 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.WarrantyId).HasColumnName("warranty_id");
 
                 entity.HasData(
+                    // Invoice I1
                     new InvoiceItem
                     {
-                        InvoiceItemId = "1",
+                        InvoiceItemId = "II1",
                         InvoiceId = "I1",
-                        ProductId = "1",
-                        ProductName = "Product 1",
-                        Quantity = 2,
-                        UnitPrice = 10.50,
-                        DiscountId = "1",
+                        ProductId = "P015",
+                        ProductName = "Diamond Necklace",
+                        Quantity = 1,
+                        UnitPrice = 463488000,
+                        DiscountId = "No Discount",
                         DiscountRate = 0,
-                        TotalPrice = 21.00,
-                        EndTotalPrice = 21.00,
+                        TotalPrice = 463488000,
+                        EndTotalPrice = 463488000,
                         WarrantyId = "W1",
                     },
                     new InvoiceItem
                     {
-                        InvoiceItemId = "2",
+                        InvoiceItemId = "II2",
                         InvoiceId = "I1",
-                        ProductId = "2",
-                        ProductName = "Product 2",
+                        ProductId = "P021",
+                        ProductName = "Diamond Earring",
                         Quantity = 1,
-                        UnitPrice = 25.75,
-                        DiscountId = "1",
-                        DiscountRate = 0.15,
-                        TotalPrice = 21.89,
-                        EndTotalPrice = 21.89,
+                        UnitPrice = 206400000,
+                        DiscountId = "D1",
+                        DiscountRate = 0.2,
+                        TotalPrice = 206400000,
+                        EndTotalPrice = 165120000,
                         WarrantyId = "W2",
+                    },
+                    //Invoice I2
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II3",
+                        InvoiceId = "I2",
+                        ProductId = "P005",
+                        ProductName = "Gold Bracelet",
+                        Quantity = 1,
+                        UnitPrice = 80000000,
+                        DiscountId = "D3",
+                        DiscountRate = 0.4,
+                        TotalPrice = 80000000,
+                        EndTotalPrice = 48000000,
+                        WarrantyId = "W3",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II4",
+                        InvoiceId = "I2",
+                        ProductId = "P010",
+                        ProductName = "Silver Ring",
+                        Quantity = 2,
+                        UnitPrice = 80000000,
+                        DiscountId = "D2",
+                        DiscountRate = 0.3,
+                        TotalPrice = 160000000,
+                        EndTotalPrice = 144000000,
+                        WarrantyId = "W4",
+                    },
+                    //Invoice I3
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II5",
+                        InvoiceId = "I3",
+                        ProductId = "P003",
+                        ProductName = "Platinum Necklace",
+                        Quantity = 1,
+                        UnitPrice = 125000000,
+                        DiscountId = "D1",
+                        DiscountRate = 0.2,
+                        TotalPrice = 125000000,
+                        EndTotalPrice = 100000000,
+                        WarrantyId = "W5",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II6",
+                        InvoiceId = "I3",
+                        ProductId = "P018",
+                        ProductName = "Ruby Pendant",
+                        Quantity = 1,
+                        UnitPrice = 100000000,
+                        DiscountId = "No Discount",
+                        DiscountRate = 0,
+                        TotalPrice = 100000000,
+                        EndTotalPrice = 100000000,
+                        WarrantyId = "W6",
+                    },
+                    //Invoice I4
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II7",
+                        InvoiceId = "I4",
+                        ProductId = "P011",
+                        ProductName = "Emerald Ring",
+                        Quantity = 1,
+                        UnitPrice = 50000000,
+                        DiscountId = "D2",
+                        DiscountRate = 0.3,
+                        TotalPrice = 50000000,
+                        EndTotalPrice = 35000000,
+                        WarrantyId = "W7",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II8",
+                        InvoiceId = "I4",
+                        ProductId = "P020",
+                        ProductName = "Sapphire Bracelet",
+                        Quantity = 1,
+                        UnitPrice = 35000000,
+                        DiscountId = "No Discount",
+                        DiscountRate = 0,
+                        TotalPrice = 35000000,
+                        EndTotalPrice = 35000000,
+                        WarrantyId = "W8",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II9",
+                        InvoiceId = "I4",
+                        ProductId = "P030",
+                        ProductName = "Gold Earrings",
+                        Quantity = 1,
+                        UnitPrice = 10000000,
+                        DiscountId = "D1",
+                        DiscountRate = 0.2,
+                        TotalPrice = 10000000,
+                        EndTotalPrice = 8000000,
+                        WarrantyId = "W9",
+                    },
+                    //Invoice I5
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II10",
+                        InvoiceId = "I5",
+                        ProductId = "P021",
+                        ProductName = "Diamond Earring",
+                        Quantity = 2,
+                        UnitPrice = 206400000,
+                        DiscountId = "D2",
+                        DiscountRate = 0.3,
+                        TotalPrice = 412800000,
+                        EndTotalPrice = 288960000,
+                        WarrantyId = "W10",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II11",
+                        InvoiceId = "I5",
+                        ProductId = "P016",
+                        ProductName = "Ruby Necklace",
+                        Quantity = 1,
+                        UnitPrice = 800000000,
+                        DiscountId = "No Discount",
+                        DiscountRate = 0,
+                        TotalPrice = 800000000,
+                        EndTotalPrice = 800000000,
+                        WarrantyId = "W11",
+                    },
+                    //Invoice I6
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II12",
+                        InvoiceId = "I6",
+                        ProductId = "P011",
+                        ProductName = "Sapphire Ring",
+                        Quantity = 2,
+                        UnitPrice = 900000000,
+                        DiscountId = "D1",
+                        DiscountRate = 0.2,
+                        TotalPrice = 1800000000,
+                        EndTotalPrice = 1440000000,
+                        WarrantyId = "W12",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II13",
+                        InvoiceId = "I6",
+                        ProductId = "P018",
+                        ProductName = "Emerald Bracelet",
+                        Quantity = 1,
+                        UnitPrice = 600000000,
+                        DiscountId = "No Discount",
+                        DiscountRate = 0,
+                        TotalPrice = 600000000,
+                        EndTotalPrice = 600000000,
+                        WarrantyId = "W13",
+                    },
+                    //Invoice I7
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II14",
+                        InvoiceId = "I7",
+                        ProductId = "P013",
+                        ProductName = "Opal Ring",
+                        Quantity = 1,
+                        UnitPrice = 480000000,
+                        DiscountId = "No Discount",
+                        DiscountRate = 0,
+                        TotalPrice = 480000000,
+                        EndTotalPrice = 480000000,
+                        WarrantyId = "W14",
+                    },
+                    new InvoiceItem
+                    {
+                        InvoiceItemId = "II15",
+                        InvoiceId = "I7",
+                        ProductId = "P022",
+                        ProductName = "Opal Earring",
+                        Quantity = 2,
+                        UnitPrice = 240000000,
+                        DiscountId = "D3",
+                        DiscountRate = 0.4,
+                        TotalPrice = 480000000,
+                        EndTotalPrice = 288000000,
+                        WarrantyId = "W15",
                     }
-                    );
+                );
             });
 
             modelBuilder.Entity<Stall>(entity =>
