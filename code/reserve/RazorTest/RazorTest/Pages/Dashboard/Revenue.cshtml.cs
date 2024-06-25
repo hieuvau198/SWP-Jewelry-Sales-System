@@ -22,6 +22,7 @@ namespace RazorTest.Pages.Dashboard
         public string MonthlySalesJson { get; set; }
         public string MonthlyPurchasesJson { get; set; }
         public string TopStaffSalesJson { get; set; }
+        public string BestStaffMonthlyJson { get; set; }
 
         public async Task OnGetAsync()
         {
@@ -58,12 +59,26 @@ namespace RazorTest.Pages.Dashboard
               .OrderByDescending(s => s.totalSales)
               .ToList();
 
+            var bestStaffMonthly = invoices
+                .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month, i.UserFullname })
+                .Select(g => new
+                {
+                    month = $"{g.Key.Year}-{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(g.Key.Month)}",
+                    staffName = g.Key.UserFullname,
+                    totalSales = g.Sum(i => i.EndTotalPrice)
+                })
+                .GroupBy(g => g.month)
+                .Select(g => g.OrderByDescending(s => s.totalSales).FirstOrDefault())
+                .ToList();
+
             var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
             var yearlyPurchasesCount = invoices.Count(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase));
 
             MonthlySalesJson = JsonSerializer.Serialize(monthlySales);
             MonthlyPurchasesJson = JsonSerializer.Serialize(monthlyPurchases);
             TopStaffSalesJson = JsonSerializer.Serialize(topStaffSales);
+            BestStaffMonthlyJson = JsonSerializer.Serialize(bestStaffMonthly);
             ViewData["YearlySalesCount"] = yearlySalesCount;
             ViewData["YearlyPurchasesCount"] = yearlyPurchasesCount;
         }

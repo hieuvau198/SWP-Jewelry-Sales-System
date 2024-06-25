@@ -40,6 +40,12 @@
     <div class="chart-box">
         <canvas id="myChart3" width="1000" height="500"></canvas>
     </div>
+    <div class="chart-box">
+        <canvas id="myChart4" width="1000" height="500"></canvas>
+    </div>
+    <div class="chart-box">
+        <canvas id="myChart5" width="1000" height="500"></canvas>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -48,6 +54,8 @@
     document.addEventListener('DOMContentLoaded', function () {
         const monthlySales = @Html.Raw(Model.MonthlySalesJson);
         const monthlyPurchases = @Html.Raw(Model.MonthlyPurchasesJson);
+        const topStaffSales = @Html.Raw(Model.TopStaffSalesJson);
+        const bestStaffMonthly = @Html.Raw(Model.BestStaffMonthlyJson);
         const yearlySalesCount = @Html.Raw(ViewData["YearlySalesCount"]);
         const yearlyPurchasesCount = @Html.Raw(ViewData["YearlyPurchasesCount"]);
         const totalSales = monthlySales.reduce((acc, item) => acc + item.total, 0);
@@ -57,6 +65,14 @@
 
         const dataSales = monthlySales.map(item => item.total);
         const dataPurchases = monthlyPurchases.map(item => item.total);
+
+        const staffLabels = topStaffSales.map(item => item.staffName);
+        const staffDataSales = topStaffSales.map(item => item.totalSales);
+
+        const bestStaffLabels = bestStaffMonthly.map(item => item.month);
+        const bestStaffNames = bestStaffMonthly.map(item => item.staffName);
+        const bestStaffSales = bestStaffMonthly.map(item => item.totalSales);
+
 
         // Bar Chart (myChart)
         const ctx = document.getElementById('myChart').getContext('2d');
@@ -90,7 +106,7 @@
                         display: true,
                         text: 'Total Sale and Buy per Month',
                         font: {
-                            size: 25
+                            size: 24
                         }
                     }
                 }
@@ -159,6 +175,78 @@
                         text: 'Total Sales and Purchases per Year',
                         font: {
                             size: 25
+                        }
+                    }
+                }
+            }
+        });
+
+        // Horizontal Bar Chart (myChart4)
+        const ctx4 = document.getElementById('myChart4').getContext('2d');
+        new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: staffLabels,
+                datasets: [{
+                    label: 'Total Sales by Staff',
+                    data: staffDataSales,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)'
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Top 10 Staff by Sales',
+                        font: {
+                            size: 24
+                        }
+                    }
+                }
+            }
+        });
+
+        // Best Staff of the Month Chart (myChart5)
+        const ctx5 = document.getElementById('myChart5').getContext('2d');
+        new Chart(ctx5, {
+            type: 'pie',
+            data: {
+                labels: bestStaffLabels,
+                datasets: [{
+                    label: 'Best Staff of the Month',
+                    data: bestStaffSales,
+                    borderWidth: 1,
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Best Staff of the Month with Total Sales',
+                        font: {
+                            size: 24
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.dataset.label}: ${context.formattedValue} (${bestStaffNames[context.dataIndex]})`;
+                            }
                         }
                     }
                 }
