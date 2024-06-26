@@ -22,6 +22,8 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
         public const string SessionKeySaleInvoiceObject = "_SaleInvoiceObject";
         public const string SessionKeySaleDiscountSelectedList = "_SaleDiscountSelectedList";
+        public const string SessionKeyDiscountList = "_DiscountList";
+
 
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
@@ -43,6 +45,9 @@ namespace RazorTest.Pages.Sale
         public List<Product> Cart { get; set; }
         public Customer Customer { get; set; }
         public User User { get; set; }
+
+        public Invoice SaleInvoiceObject { get; set; }
+        public List<InvoiceItem> SaleInvoiceItemList { get; set; }
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
 
@@ -66,6 +71,28 @@ namespace RazorTest.Pages.Sale
             {
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             }
+            //Get Sale Invoice Item List
+                SaleInvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList) ?? new List<InvoiceItem>();
+
+            //Get Invoice Object
+                SaleInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
+                if(SaleInvoiceObject==null)
+                {
+                    SaleInvoiceObject = new Invoice
+                    {
+                        TotalPrice = 0,
+                        EndTotalPrice = 0,
+                    };
+                
+                }
+                SaleInvoiceObject.TotalPrice = 0;
+                SaleInvoiceObject.EndTotalPrice = 0;
+                foreach (InvoiceItem item in SaleInvoiceItemList)
+                {
+                    SaleInvoiceObject.TotalPrice += item.TotalPrice;
+                    SaleInvoiceObject.EndTotalPrice += item.EndTotalPrice;
+                }
+                HttpContext.Session.SetObject(SessionKeySaleInvoiceObject, SaleInvoiceObject);
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
@@ -132,7 +159,7 @@ namespace RazorTest.Pages.Sale
             List<Customer> customers = await _apiService.GetAsync<List<Customer>>(UrlGetCustomers);
 
             // Find customer by name in the list
-            Customer = customers.Find(x => x.CustomerName == searchCustomer);
+            Customer = customers.Find(x => x.CustomerPhone == searchCustomer);
 
             if (Customer != null)
             {
@@ -257,6 +284,26 @@ namespace RazorTest.Pages.Sale
             HttpContext.Session.SetObject(SessionKeySaleInvoiceObject, invoice);
             return RedirectToPage("/Sale/CheckOutPage");
         }
+        public double GetDiscountRateInCart(string productId)
+        {
+            List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+
+            if (invoiceItems!=null)
+            {
+                InvoiceItem invoiceItem = invoiceItems.Find(x => x.ProductId == productId);
+                if (invoiceItem!=null)
+                {
+                    return invoiceItem.DiscountRate;
+                }
+                return 0;
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+        
 
     }
 }

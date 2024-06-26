@@ -46,22 +46,22 @@
 </style>
 
 <div class="container">
-    <h2>Cart Object</h2>
 </div>
 <div class="luxury-table-wrapper">
     <table class="luxury-table">
         <thead>
             <tr>
-                <th>Product Code</th>
                 <th>Product Name</th>
                 <th>Product Images</th>
                 <th>Product Type</th>
                 <th>Product Warranty</th>
-                <th>Create At</th>
                 <th>Quantity</th>
-                <th>Unit</th>
+                <th>Unit Price (VND)</th>
+                <th>Discount Rate</th>
+                <th>Unit Discount (VND)</th>
+                <th>Subtotal (VND)</th>
+                <th>Discount Total (VND)</th>
                 <th>Total</th>
-                <th>Discount</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -69,25 +69,62 @@
             @foreach (var product in Model.Cart)
             {
                 <tr>
-                    <td>@product.ProductCode</td>
                     <td><strong>@product.ProductName</strong></td>
-                    <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
+                    <td><img src="/ProductImages/@product.ProductImages" width="50px" /></td>
                     <td>@product.ProductType</td>
                     <td>@product.ProductWarranty Months</td>
-                    <td>@product.CreatedAt.ToShortDateString()</td>
                     <td>
                         <form method="post" asp-page-handler="EditProduct">
                             <input type="hidden" name="productId" value="@product.ProductId" />
                             <input type="number" name="quantity" value="@product.ProductQuantity" />
                         </form>
                     </td>
-                    <td>@product.UnitPrice.ToString("#,##0") VND</td>
-                    <td>@product.TotalPrice.ToString("#,##0") VND</td>
+                    <td>@product.UnitPrice.ToString("#,##0")</td>
+                    
+                    @if(Model.GetDiscountRateInCart(product.ProductId)>0)
+                    {
+                        <td>
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                                @(Model.GetDiscountRateInCart(product.ProductId) * 100)%
+                            </div>
+                        
+                            <form method="post" asp-page-handler="SelectDiscount">
+                                <input type="hidden" name="productId" value="@product.ProductId" />
+                                <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
+                            </form>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <form method="post" asp-page-handler="SelectDiscount">
+                                <input type="hidden" name="productId" value="@product.ProductId" />
+                                <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
+                            </form>
+                        </td>
+                    }
+
+                    @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
+                    {
+                        <td>@((Model.GetDiscountRateInCart(product.ProductId) * product.UnitPrice * -1).ToString("#,##0"))</td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                    
+                    <td>@product.TotalPrice.ToString("#,##0")</td>
+                    @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
+                    {
+                        <td>@((Model.GetDiscountRateInCart(product.ProductId) * product.UnitPrice * product.ProductQuantity * -1).ToString("#,##0"))</td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
                     <td>
-                        <form method="post" asp-page-handler="SelectDiscount">
-                            <input type="hidden" name="productId" value="@product.ProductId" />
-                            <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
-                        </form>
+                        @((product.TotalPrice * (1 - Model.GetDiscountRateInCart(product.ProductId))).ToString("#,##0"))
+
                     </td>
                     <td>
                         <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to remove this product?');">
@@ -97,6 +134,21 @@
                     </td>
                 </tr>
             }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>@Model.SaleInvoiceObject.TotalPrice.ToString("#,##0")</td>
+                <td>@((Model.SaleInvoiceObject.EndTotalPrice - Model.SaleInvoiceObject.TotalPrice).ToString("#,##0"))</td>
+                <td>@Model.SaleInvoiceObject.EndTotalPrice.ToString("#,##0")</td>
+                <td></td>
+            </tr>
+            
         </tbody>
     </table>
 </div>

@@ -27,8 +27,10 @@
                 <th>Unit Price</th>
                 <th>Quantity</th>
                 <th>Discount</th>
-                <th>Total Price</th>
-                <th>After Discount</th>
+                
+                <th>Discount Total</th>
+                <th>Subtotal</th>
+                <th>Total</th>
             </tr>
         </thead>
         <tbody>
@@ -39,8 +41,10 @@
                     <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
                     <td>@item.Quantity</td>
                     <td>@(item.DiscountRate * 100)%</td>
-                    <td>@String.Format("{0:N0} VND", item.TotalPrice)</td>
-                    <td>@String.Format("{0:N0} VND", item.EndTotalPrice)</td>
+                    
+                    <td>@String.Format("{0:N0}", (item.EndTotalPrice - item.TotalPrice))</td>
+                    <td>@String.Format("{0:N0}", item.TotalPrice)</td>
+                    <td>@String.Format("{0:N0}", item.EndTotalPrice)</td>
                 </tr>
             }
         </tbody>
@@ -70,11 +74,16 @@
                     <td>@Model.Invoice.CustomerVoucher</td>
                 </tr>
                 <tr>
-                    <th>Total Price:</th>
-                    <td>@String.Format("{0:N0} VND", Model.Invoice.TotalPrice)</td>
+                    <th>Discount:</th>
+                    <td>@String.Format("{0:N0} VND", (Model.Invoice.EndTotalPrice - Model.Invoice.TotalPrice))</td>
                 </tr>
                 <tr>
-                    <th>End Price:</th>
+                    <th>Subtotal:</th>
+                    <td>@String.Format("{0:N0} VND", Model.Invoice.TotalPrice)</td>
+                </tr>
+                
+                <tr>
+                    <th>Total:</th>
                     <td>@String.Format("{0:N0} VND", Model.Invoice.EndTotalPrice)</td>
                 </tr>
                 <tr>

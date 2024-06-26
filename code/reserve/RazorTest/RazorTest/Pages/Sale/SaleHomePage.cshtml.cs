@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RazorTest.Utilities;
 using Microsoft.Data.SqlClient;
+using Microsoft.CodeAnalysis;
 
 namespace RazorTest.Pages.Sale
 {
@@ -17,8 +18,11 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyMessage = "_Message";
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
+        public const string SessionKeySaleInvoiceObject = "_SaleInvoiceObject";
+        public const string SessionKeyDiscountList = "_DiscountList";
 
         public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string UrlGetDiscounts = "http://localhost:5071/api/discount\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
@@ -33,7 +37,9 @@ namespace RazorTest.Pages.Sale
 
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
-        public const int PageSize = 3; // Number of products per page
+        public Invoice InvoiceObject { get; set; }
+
+        public const int PageSize = 9; // Number of products per page
 
         public async Task OnGetAsync(int currentPage = 1)
         {
@@ -54,6 +60,8 @@ namespace RazorTest.Pages.Sale
 
             // S?p x?p danh sách s?n ph?m theo Product Code
             allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
+
+            
 
             // Calculate pagination details
             CurrentPage = currentPage;
@@ -77,10 +85,43 @@ namespace RazorTest.Pages.Sale
             Product product = allProducts.Find(x => x.ProductId == productId);
             if (product != null && !cart.Exists(x => x.ProductId == productId))
             {
-                // Set the quantity of the product to 1
-                product.ProductQuantity = 1;
-                product.TotalPrice = product.UnitPrice;
+                //Set some vars
+                    double discountRate = 0;
+                    double totalPrice = 0;
+                    double endPrice = 0;
+                    int quantity = 1;
+                
 
+                // Find Best Discount
+                    List<Discount> Discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeyDiscountList);
+                    if (Discounts == null)
+                    {
+                        Discounts = await _apiService.GetAsync<List<Discount>>(UrlGetDiscounts);
+                        List<Discount> temp = new List<Discount>();
+                        foreach (Discount discount in Discounts)
+                        {
+                            if (discount.ProductId.Equals("All")
+                                || discount.ProductId.Equals(productId))
+                            {
+                                temp.Add(discount);
+                            }
+                        }
+                        Discounts = temp;
+                    }
+                
+                    foreach (Discount discount in Discounts)
+                    {
+                        if(discount.DiscountRate > discountRate)
+                        {
+                            discountRate = discount.DiscountRate;
+                        }
+                    }
+                // Set the quantity of the product to 1
+                    product.ProductQuantity = quantity;
+                    product.TotalPrice = product.UnitPrice;
+                    totalPrice = product.TotalPrice;
+                    endPrice = product.UnitPrice * (1-discountRate);
+                    
                 // Update the price by calling an external API
                 //Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
 
@@ -106,9 +147,9 @@ namespace RazorTest.Pages.Sale
                         Quantity = product.ProductQuantity,
                         UnitPrice = product.UnitPrice,
                         DiscountId = "T",
-                        DiscountRate = 0,
-                        TotalPrice = 0,
-                        EndTotalPrice = 0,
+                        DiscountRate = discountRate,
+                        TotalPrice = totalPrice,
+                        EndTotalPrice = endPrice,
                         WarrantyId = "Test"
                     };
                     invoiceItems.Add(invoiceItem);

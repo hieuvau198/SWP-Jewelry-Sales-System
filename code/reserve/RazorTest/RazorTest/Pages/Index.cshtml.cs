@@ -43,7 +43,7 @@ namespace RazorTest.Pages
             Invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
             InvoiceItems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem");
 
-            const int pageSize = 4; // Number of products per page
+            const int pageSize = 9; // Number of products per page
             Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
             if (Products != null)
             {

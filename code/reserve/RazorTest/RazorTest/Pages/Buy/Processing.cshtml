@@ -14,6 +14,7 @@
 
     .search-container {
         display: flex;
+        justify-content: center;
         align-items: center;
     }
 
@@ -32,9 +33,11 @@
             border-left: none;
             background-color: #b8860b;
             color: white;
-            border-radius: 0 5px 5px 0;
+            border-radius: 5px 5px 5px 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
         }
 
             .search-container button:hover {
@@ -100,11 +103,12 @@
 
             <label for="customerId">Customer Phone:</label>
             <input type="text" id="buyCustomerSearch" name="buyCustomerSearch" value="@Model.BuyCustomerSearch" />
+            <div class="search-container">
+                <button type="submit" form="search-form" style="background-color: #b8860b;">Search</button>
+            </div>
         </div>
-
-        <div class="search-container">
-            <button type="submit" form="search-form">Search</button>
-        </div>
+        <br />
+        
     </form>
 
 </div>

@@ -11,24 +11,36 @@ namespace RazorTest.Pages.ProductCRUD
     {
         private readonly ProductService _productService;
         private readonly ILogger<CreateModel> _logger;
+        private readonly ApiService _apiService;
 
-        public CreateModel(ProductService productService, ILogger<CreateModel> logger)
+        public CreateModel(ProductService productService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _productService = productService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public Product Product { get; set; }
+        [BindProperty]
+        public IFormFile ProductImageUpload { get; set; }
+        [BindProperty]
+        public List<Gem> Gems { get; set; }
+        [BindProperty]
+        public List<Gold> Golds { get; set; }
 
-        public void OnGet()
+        public async Task OnGet()
         {
             // Initialize the Gold with a new ID
             Product = new Product
             {
-                ProductId = Guid.NewGuid().ToString()
-
+                ProductId = Guid.NewGuid().ToString(),
+                UnitPrice = 0,
+                BuyPrice = 0,
+                TotalPrice = 0
             };
+            Gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem") ?? new List<Gem>();
+            Golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold") ?? new List<Gold>();
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -46,7 +58,7 @@ namespace RazorTest.Pages.ProductCRUD
 
                 return Page();
             }
-            
+
 
             // Check if GoldID is still empty and generate it
             if (string.IsNullOrEmpty(Product.ProductId))
@@ -55,6 +67,20 @@ namespace RazorTest.Pages.ProductCRUD
             }
 
             _logger.LogInformation($"Creating product with details: {JsonConvert.SerializeObject(Product)}");
+
+            if (ProductImageUpload != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await ProductImageUpload.CopyToAsync(memoryStream);
+                    var fileBytes = memoryStream.ToArray();
+                    Product.ProductImages = Convert.ToBase64String(fileBytes);
+                }
+            }
+            else
+            {
+                Product.ProductImages = "No Image";
+            }
 
             var response = await _productService.CreateProductAsync(Product);
 

@@ -205,23 +205,24 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Top 10 Staff by Sales',
+                        text: 'Top Employees by Sales',
                         font: {
                             size: 24
                         }
                     }
                 }
+
             }
         });
 
         // Best Staff of the Month Chart (myChart5)
         const ctx5 = document.getElementById('myChart5').getContext('2d');
         new Chart(ctx5, {
-            type: 'pie',
+            type: 'bar',
             data: {
                 labels: bestStaffLabels,
                 datasets: [{
-                    label: 'Best Staff of the Month',
+                    label: 'Best Employee of the Month',
                     data: bestStaffSales,
                     borderWidth: 1,
                     backgroundColor: 'rgba(153, 102, 255, 0.2)',

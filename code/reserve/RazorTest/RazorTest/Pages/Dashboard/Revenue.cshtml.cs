@@ -30,6 +30,7 @@ namespace RazorTest.Pages.Dashboard
 
             var monthlySales = invoices
                 .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                .OrderBy(g => g.InvoiceDate)
                 .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month })
                 .Select(g => new
                 {
@@ -40,6 +41,7 @@ namespace RazorTest.Pages.Dashboard
 
             var monthlyPurchases = invoices
                 .Where(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase))
+                .OrderBy(g => g.InvoiceDate)
                 .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month })
                 .Select(g => new
                 {
@@ -50,6 +52,7 @@ namespace RazorTest.Pages.Dashboard
 
             var topStaffSales = invoices
               .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+              .OrderBy(g => g.InvoiceDate)
               .GroupBy(i => i.UserFullname)
               .Select(g => new
               {
@@ -61,6 +64,7 @@ namespace RazorTest.Pages.Dashboard
 
             var bestStaffMonthly = invoices
                 .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                .OrderBy(g => g.InvoiceDate)
                 .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month, i.UserFullname })
                 .Select(g => new
                 {

@@ -69,6 +69,7 @@ namespace RazorTest.Pages.Sale
                 InvoiceItems.Remove(invoiceItem);
                 invoiceItem.DiscountId = discount.DiscountId;
                 invoiceItem.DiscountRate = discount.DiscountRate;
+                invoiceItem.EndTotalPrice = invoiceItem.TotalPrice * (1 - discount.DiscountRate);
                 InvoiceItems.Add(invoiceItem);
                 
                 HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, InvoiceItems);

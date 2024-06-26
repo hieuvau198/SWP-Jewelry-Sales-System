@@ -261,32 +261,38 @@
 
         <!-- Sidebar/menu -->
         <nav class="sidebar">
-            @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
+            @if (Model.VerifyAuth("Manager"))
             {
-                <a asp-page="/WarrantyCRUD/WarrantyDetail">Warranties</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Manage Products</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+                <a asp-page="/GemCRUD/GemDetail">Manage Gems</a>
+                <a asp-page="/UserCRUD/UserDetail">Manage Staffs</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Manage Stalls</a>
             }
 
             @if (Model.VerifyAuth("Admin"))
             {
                 <a href="/Dashboard/Revenue">Dashboard</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Products</a>
                 <a asp-page="/CustomerCRUD/CustomerDetail">Customers</a>
                 <a asp-page="/DiscountCRUD/DiscountDetail">Discounts</a>
-@*                 <a asp-page="/GemCRUD/GemDetail">Gems</a>
-                <a asp-page="/GoldCRUD/GoldDetail">Golds</a> *@
-                <a asp-page="/UserCRUD/UserDetail">Users</a>
+                <a asp-page="/UserCRUD/UserDetail">Employees</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
             }
 
-            @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+            @if (Model.VerifyAuth("Cashier"))
             {
-                <a asp-page="/InvoiceCRUD/InvoiceDetail">Invoices</a>
-                <a asp-page="/InvoiceItemCRUD/InvoiceItemDetail">InvoiceItems</a>
                 <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+                
             }
 
             @if (Model.VerifyAuth("Sale"))
             {
-                <a asp-page="/Sale/SaleHomePage">Sale Feature</a>
-                <a asp-page="/Buy/Processing">Buy-Back Feature</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+                <a asp-page="/Sale/SaleHomePage">Order</a>
+                <a asp-page="/Buy/Processing">Buy-Back</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
             }
         </nav>
     }
@@ -300,60 +306,63 @@
         </header>
 
         <!-- Image header with carousel -->
+        
+        
+        @*
         <div class="w3-content w3-display-container" style="max-width:1600px;">
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/5.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/11.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/12.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/13.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/14.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/15.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <div class="w3-display-container mySlides">
-                <img src="~/ProductImages/16.jpg" class="carousel-img">
-                <div class="w3-display-left w3-padding-large">
-                    <h1 class="w3-text-white">Luxury Redefined</h1>
-                    <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-                </div>
-            </div>
-            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/5.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
         </div>
-
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/11.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/12.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/13.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/14.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/15.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/16.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        *@
         <!-- Main Content Grid -->
         <div class="w3-container w3-row w3-padding w3-border main-content">
 

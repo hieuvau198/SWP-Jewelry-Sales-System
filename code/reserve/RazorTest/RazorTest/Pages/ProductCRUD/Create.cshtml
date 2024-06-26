@@ -100,6 +100,7 @@
             }
     </style>
 </head>
+
 <body>
     <div class="container create-container">
         <div class="card">
@@ -107,7 +108,7 @@
                 <h3>Create Product</h3>
             </div>
             <div class="card-body">
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     <input asp-for="Product.ProductId" type="hidden" />
 
                     <div class="form-group">
@@ -123,10 +124,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="Product.ProductImages"></label>
-                        <input asp-for="Product.ProductImages" class="form-control" />
-                        <span asp-validation-for="Product.ProductImages" class="text-danger"></span>
+                        <label asp-for="ProductImageUpload"></label>
+                        <input asp-for="ProductImageUpload" class="form-control" type="file" accept="image/*" />
+                        <span asp-validation-for="ProductImageUpload" class="text-danger"></span>
                     </div>
+
+                    <input asp-for="Product.ProductImages" class="form-control" type="hidden" value="TESTIMAGE" />
 
                     <div class="form-group">
                         <label asp-for="Product.ProductQuantity"></label>
@@ -160,9 +163,28 @@
 
                     <div class="form-group">
                         <label asp-for="Product.GemId" class="control-label"></label>
-                        <input asp-for="Product.GemId" class="form-control" />
+                        <input asp-for="Product.GemId" class="form-control" readonly/>
                         <span asp-validation-for="Product.GemId" class="text-danger"></span>
                     </div>
+                    <div class="form-group">
+                        <label asp-for="Product.GemName" class="control-label">Gemstone</label>
+                        <select asp-for="Product.GemName" class="form-control" asp-items="@(new SelectList(Model.Gems, "GemId", "GemName"))" onchange="updateGemId(this)">
+                            <option value="">-- Select a Gem --</option>
+                        </select>
+                        <span asp-validation-for="Product.GemName" class="text-danger"></span>
+                    </div>
+                    
+
+                    <script>
+                        function updateGemId(selectElement) {
+                            var selectedIndex = selectElement.selectedIndex;
+                            var selectedOption = selectElement.options[selectedIndex];
+                            var gemId = selectedOption.value;
+
+                            // Update the hidden field with the selected GemId
+                            document.getElementById("Product_GemId").value = gemId;
+                        }
+                    </script>
 
                     <div class="form-group">
                         <label asp-for="Product.GemWeight"></label>
@@ -172,9 +194,30 @@
 
                     <div class="form-group">
                         <label asp-for="Product.GoldId" class="control-label"></label>
-                        <input asp-for="Product.GoldId" class="form-control" />
+                        <input asp-for="Product.GoldId" class="form-control" readonly/>
                         <span asp-validation-for="Product.GoldId" class="text-danger"></span>
                     </div>
+
+                    <div class="form-group">
+                        <label asp-for="Product.GoldName" class="control-label">Gold Material</label>
+                        
+
+                        <select asp-for="Product.GoldName" class="form-control" asp-items="@(new SelectList(Model.Golds, "GoldId", "GoldName"))" onchange="updateGoldId(this)">
+                            <option value="">-- Select Gold Material --</option>
+                        </select>
+
+                        <span asp-validation-for="Product.GoldName" class="text-danger"></span>
+                    </div>
+                    <script>
+                        function updateGoldId(selectElement) {
+                            var selectedIndex = selectElement.selectedIndex;
+                            var selectedOption = selectElement.options[selectedIndex];
+                            var goldId = selectedOption.value;
+
+                            // Update the hidden field with the selected GemId
+                            document.getElementById("Product_GoldId").value = goldId;
+                        }
+                    </script>
 
                     <div class="form-group">
                         <label asp-for="Product.GoldWeight"></label>
@@ -187,6 +230,7 @@
                         <input asp-for="Product.LaborCost" class="form-control" />
                         <span asp-validation-for="Product.LaborCost" class="text-danger"></span>
                     </div>
+
 
                     <div class="form-group">
                         <label asp-for="Product.CreatedAt"></label>

@@ -9,20 +9,20 @@
     <table class="luxury-table">
         <thead>
             <tr>
-                <th>Product Id</th>
-                <th>Product Code</th>
-                <th>Product Name</th>
-                <th>Product Images</th>
-                <th>Product Quantity</th>
-                <th>Product Type</th>
-                <th>Product Weight</th>
-                <th>Product Warranty</th>
-                <th>Gem Id</th>
-                <th>Gem Weight</th>
-                <th>Gold Id</th>
-                <th>Gold Weight</th>
-                <th>Labor Cost</th>
-                <th>Created At</th>
+                
+                <th>Code</th>
+                <th>Name</th>
+                <th>Portrait</th>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Warranty (Months)</th>
+                <th>Gemstone</th>
+                <th>Gem Weight (cts)</th>
+                <th>Gold Material</th>
+                <th>Gold Weight (cts)</th>
+                <th>Buy Price (VND)</th>
+                <th>Sell Price (VND)</th>
+                <th>Publish</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -30,19 +30,28 @@
             @foreach (var product in Model.Products)
             {
                 <tr>
-                    <td><strong>@product.ProductId</strong></td>
+                    
                     <td>@product.ProductCode</td>
                     <td>@product.ProductName</td>
-                    <td><img src="/ProductImages/@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" /></td>
+                    <td>
+                        @if (product.ProductImages.Length > 50)
+                        {
+                            <img src="data:image/jpeg;base64,@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
+                        }
+                        else
+                        {
+                            <img src="/ProductImages/@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
+                        }
+                    </td>
                     <td>@product.ProductQuantity</td>
                     <td>@product.ProductType</td>
-                    <td>@product.ProductWeight</td>
                     <td>@product.ProductWarranty</td>
-                    <td>@product.GemId</td>
+                    <td>@product.GemName</td>
                     <td>@product.GemWeight</td>
-                    <td>@product.GoldId</td>
+                    <td>@product.GoldName</td>
                     <td>@product.GoldWeight</td>
-                    <td>@product.LaborCost</td>
+                    <td>@String.Format("{0:N0}", product.BuyPrice)</td>
+                    <td>@String.Format("{0:N0}", product.UnitPrice)</td>
                     <td>@product.CreatedAt.ToShortDateString()</td>
                     <td class="action-buttons">
                         @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
@@ -53,7 +62,7 @@
                         }
                         else if(Model.VerifyAuth("Sale") || Model.VerifyAuth("Cashier"))
                         {
-                            <span>Need Manager,Admin Role To Access</span>
+                            <span>Need Access Role</span>
                         }
                     </td>
                 </tr>
