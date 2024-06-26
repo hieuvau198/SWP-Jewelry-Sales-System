@@ -56,13 +56,14 @@ namespace RazorTest.Pages.Sale
         {
             List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
             Invoice invoice = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
-            
+            string invoiceId = Guid.NewGuid().ToString();
 
             if(invoiceItems != null && invoice != null)
             {
-                foreach(var invoiceItem in invoiceItems)
+                invoice.InvoiceId = invoiceId;
+                foreach (var invoiceItem in invoiceItems)
                 {
-                    invoiceItem.InvoiceId = invoice.InvoiceId;
+                    invoiceItem.InvoiceId = invoiceId;
                     _apiService.PostAsJsonAsync<InvoiceItem>(UrlInvoiceItem, invoiceItem);
                     
                 }
