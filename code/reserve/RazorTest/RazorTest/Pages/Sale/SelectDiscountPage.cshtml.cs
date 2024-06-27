@@ -13,8 +13,10 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeySaleDiscountSelectedId = "_SaleDiscountSelectedId";
         public const string SessionKeySaleDiscountSelectedList = "_SaleDiscountSelectedList";
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
+        public const string SessionKeyProductList = "_ProductList";
 
         public const string UrlGetDiscounts = "http://localhost:5071/api/discount\r\n";
+        public const string UrlGetProducts = "http://localhost:5071/api/product\r\n";
 
         private readonly ApiService _apiService;
         public SelectDiscountPageModel(ApiService apiService)
@@ -25,62 +27,96 @@ namespace RazorTest.Pages.Sale
         public List<Discount> Discounts {  get; set; }
         public List<Discount> SelectedDiscounts { get; set; }
         public List<InvoiceItem> InvoiceItems { get; set; }
+        public List<Product> ProductList { get; set; }
+        public Product SelectedProduct { get; set; }
+        public Discount SelectedDiscount { get; set; }
         public string TestMessage { get; set; }
 
         public async Task OnGet()
         {
             ProductId = HttpContext.Session.GetString(SessionKeySaleDiscountProductId) ?? "Fail";
-
-            Discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeyDiscountList);
-            if(Discounts==null)
+            ProductList = HttpContext.Session.GetObject<List<Product>>(SessionKeyProductList);
+            if(ProductList == null)
             {
-                Discounts = await _apiService.GetAsync<List<Discount>>(UrlGetDiscounts);
-                List<Discount> temp = new List<Discount>();
-                foreach(Discount discount in Discounts)
+                ProductList = await _apiService.GetAsync<List<Product>>(UrlGetProducts);
+                HttpContext.Session.SetObject(SessionKeyProductList, ProductList);
+            }
+            SelectedProduct = ProductList.Find(x  => x.ProductId == ProductId);
+
+            // Set basic data to the page
+
+                if(SelectedProduct != null)
                 {
-                    if(discount.ProductId.Equals("All") 
-                        || discount.ProductId.Equals(ProductId) )
+                    Discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeyDiscountList);
+                    if (Discounts == null)
                     {
-                        temp.Add(discount);
+                        Discounts = await _apiService.GetAsync<List<Discount>>(UrlGetDiscounts);
+                        List<Discount> temp = new List<Discount>();
+                        DateTime currentTime = DateTime.Now;
+                        foreach (Discount discount in Discounts)
+                        {
+                            if (discount.ProductType.Equals("All")
+                                || discount.ProductId.Equals(ProductId)
+                                || (discount.ProductType.Equals(SelectedProduct.ProductType)
+                                            && discount.ProductId.Equals("All"))
+                                )
+                            {
+                                if (discount.PublicDate < currentTime
+                                && discount.ExpireDate > currentTime)
+                                {
+                                    temp.Add(discount);
+                                }
+
+                            }
+                        }
+                        Discounts = temp.OrderByDescending(d => d.DiscountRate).ToList();
                     }
+                    SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
+
+                    InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+                    if(InvoiceItems != null)
+                    {
+                        InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == SelectedProduct.ProductId);
+
+                        if(invoiceItem != null)
+                        {
+                            SelectedDiscount = Discounts.Find(x => x.DiscountId == invoiceItem.DiscountId);
+                        }
+                    }
+
+                    // Update data if user selected discount
+
+                        string selectDiscountId = HttpContext.Session.GetString(SessionKeySaleDiscountSelectedId);
+                    
+                        if (!string.IsNullOrEmpty(selectDiscountId) && InvoiceItems != null)
+                            {
+                                Discount discount = Discounts.Find(x => x.DiscountId == selectDiscountId);
+                                InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == ProductId);
+                                Discount discountRemove = SelectedDiscounts.Find(x => x.DiscountId == selectDiscountId);
+                                if (discountRemove != null)
+                                {
+                                    SelectedDiscounts.Remove(discountRemove);
+                                }
+                                discount.ProductId = selectDiscountId;
+                                SelectedDiscounts.Add(discount);
+                                SelectedDiscount = discount;
+
+                                InvoiceItems.Remove(invoiceItem);
+                                invoiceItem.DiscountId = discount.DiscountId;
+                                invoiceItem.DiscountRate = discount.DiscountRate;
+                                invoiceItem.EndTotalPrice = invoiceItem.TotalPrice * (1 - discount.DiscountRate);
+                                InvoiceItems.Add(invoiceItem);
+
+                                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, InvoiceItems);
+                                HttpContext.Session.SetObject(SessionKeySaleDiscountSelectedList, InvoiceItems);
+                                HttpContext.Session.Remove(SessionKeySaleDiscountSelectedId);
+                            }
+
                 }
-                Discounts = temp;
-            }
-            SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
 
-            InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
 
-            TestMessage = InvoiceItems.Find(x => x.ProductId == ProductId).ProductName ?? "Fucking Fail";
 
-            string selectDiscountId = HttpContext.Session.GetString(SessionKeySaleDiscountSelectedId);
-            if(!string.IsNullOrEmpty(selectDiscountId) && InvoiceItems != null)
-            {
-                Discount discount = Discounts.Find(x => x.DiscountId == selectDiscountId);
-                InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == ProductId);
-                Discount discountRemove = SelectedDiscounts.Find(x => x.DiscountId == selectDiscountId);
-                if(discountRemove != null)
-                {
-                    SelectedDiscounts.Remove(discountRemove);
-                }
-                discount.ProductId = selectDiscountId;
-                SelectedDiscounts.Add(discount);
-                
 
-                InvoiceItems.Remove(invoiceItem);
-                invoiceItem.DiscountId = discount.DiscountId;
-                invoiceItem.DiscountRate = discount.DiscountRate;
-                invoiceItem.EndTotalPrice = invoiceItem.TotalPrice * (1 - discount.DiscountRate);
-                InvoiceItems.Add(invoiceItem);
-                
-                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, InvoiceItems);
-                HttpContext.Session.SetObject(SessionKeySaleDiscountSelectedList, InvoiceItems);
-                HttpContext.Session.Remove(SessionKeySaleDiscountSelectedId);
-                TestMessage = "Success";
-            }
-            else { TestMessage = "Not Yet"; }
-            
-
-            
         }
 
         public async Task<IActionResult> OnPostSelectDiscount(string discountId)

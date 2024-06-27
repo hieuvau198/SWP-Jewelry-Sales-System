@@ -405,35 +405,43 @@
                 <h2>Product List</h2>
             </div>
             <div class="w3-row-padding">
-                @foreach (var product in Model.PaginatedProducts)
+                @if (Model.PaginatedProducts != null)
                 {
-                    <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
-                        <div class="product">
-                            <div class="product-image-wrapper">
-                                <img src="/ProductImages/@product.ProductImages" class="product-image" style="width: 100%; height: 180px; object-fit: cover;" />
+                    @foreach (var product in Model.PaginatedProducts)
+                    {
+                        <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
+                            <div class="product">
+                                <div class="product-image-wrapper">
+                                    <img src="/ProductImages/@product.ProductImages" class="product-image" style="width: 100%; height: 180px; object-fit: cover;" />
+                                </div>
+                                <div class="product-name">@product.ProductName</div>
                             </div>
-                            <div class="product-name">@product.ProductName</div>
                         </div>
-                    </div>
+                    }
                 }
+                
             </div>
         </div>
 
         <hr>
         <!-- Pagination-->
         <div class="w3-center">
-            @if (Model.PaginatedProducts.HasPreviousPage)
+            @if (Model.PaginatedProducts != null)
             {
-                <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button" style="background-color: #B8860B; color: white;">&laquo; Previous</a>
+                @if (Model.PaginatedProducts.HasPreviousPage)
+                {
+                    <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button" style="background-color: #B8860B; color: white;">&laquo; Previous</a>
+                }
+                @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
+                {
+                    <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-grey" : "")" style="@(i == Model.PaginatedProducts.PageIndex ? "" : "background-color: #B8860B; color: white;")">@i</a>
+                }
+                @if (Model.PaginatedProducts.HasNextPage)
+                {
+                    <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button" style="background-color: #B8860B; color: white;">Next &raquo;</a>
+                }
             }
-            @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
-            {
-                <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-grey" : "")" style="@(i == Model.PaginatedProducts.PageIndex ? "" : "background-color: #B8860B; color: white;")">@i</a>
-            }
-            @if (Model.PaginatedProducts.HasNextPage)
-            {
-                <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button" style="background-color: #B8860B; color: white;">Next &raquo;</a>
-            }
+            
         </div>
         <br>
 

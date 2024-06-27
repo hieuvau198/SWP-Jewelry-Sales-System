@@ -20,7 +20,6 @@ namespace RazorTest.Models
         public string UserId { get; set; }
         public string UserFullname { get; set; } = "Some User Fullname";
         [Required]
-        [DataType(DataType.Date)]
         public DateTime InvoiceDate { get; set; }
 
         [Required]

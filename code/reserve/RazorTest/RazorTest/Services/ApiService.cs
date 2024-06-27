@@ -17,7 +17,42 @@ namespace RazorTest.Services
 
         public async Task<T> GetAsync<T>(string url)
         {
-            return await _httpClient.GetFromJsonAsync<T>(url);
+            try
+            {
+                return await _httpClient.GetFromJsonAsync<T>(url);
+            }
+            catch (HttpRequestException httpRequestException)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"Request error: {httpRequestException.Message}");
+
+                // Return a default value or handle the exception as needed
+                return default(T);
+            }
+            catch (NotSupportedException notSupportedException)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"The content type is not supported: {notSupportedException.Message}");
+
+                // Return a default value or handle the exception as needed
+                return default(T);
+            }
+            catch (System.Text.Json.JsonException jsonException)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"Invalid JSON: {jsonException.Message}");
+
+                // Return a default value or handle the exception as needed
+                return default(T);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (optional)
+                Console.WriteLine($"Unexpected error: {ex.Message}");
+
+                // Return a default value or handle the exception as needed
+                return default(T);
+            }
         }
         public async Task<T> PostAsJsonAndDeserializeAsync<T>(string url, T data)
         {

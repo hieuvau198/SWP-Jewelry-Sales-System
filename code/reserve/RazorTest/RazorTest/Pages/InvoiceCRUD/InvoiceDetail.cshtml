@@ -27,7 +27,7 @@
                     <td><strong>@invoice.InvoiceType</strong></td>
                     <td>@invoice.CustomerName</td>
                     <td>@invoice.UserFullname</td>
-                    <td>@invoice.InvoiceDate.ToShortDateString()</td>
+                    <td>@invoice.InvoiceDate.ToString("MM/dd/yyyy HH:mm:ss")</td>
                     <td>@invoice.CustomerVoucher</td>
                     <td>@String.Format("{0:N0}", invoice.TotalPrice)</td>
                     <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>

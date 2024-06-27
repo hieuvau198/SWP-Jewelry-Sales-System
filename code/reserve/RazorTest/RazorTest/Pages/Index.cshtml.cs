@@ -36,37 +36,24 @@ namespace RazorTest.Pages
 
         public async Task OnGetAsync(int? pageIndex)
         {
-            Discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount");
-            Customers = await _apiService.GetAsync<List<Customer>>("http://localhost:5071/api/customer");
-            Gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem");
-            Golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold");
-            Invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
-            InvoiceItems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem");
+            
 
             const int pageSize = 9; // Number of products per page
             Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            
             if (Products != null)
             {
                 Products = Products.OrderBy(p => p.ProductCode).ToList();
                 PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
             }
-            Users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
-            Warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty");
-
-            // Commented out to prevent errors if APIs are not available
-            // GoldPrices = await _apiService.GetAsync<List<GoldPrice>>("http://localhost:5071/api/goldprice");
-            // Logins = await _apiService.GetAsync<List<Login>>("http://localhost:5071/api/auth/login");
-
-            if (Discounts != null) Discounts = Discounts.OrderBy(d => d.DiscountId).ToList();
-            if (Customers != null) Customers = Customers.OrderBy(c => c.CustomerId).ToList();
-            if (Gems != null) Gems = Gems.OrderBy(g => g.GemId).ToList();
-            if (Golds != null) Golds = Golds.OrderBy(b => b.GoldId).ToList();
-            if (Invoices != null) Invoices = Invoices.OrderBy(i => i.InvoiceId).ToList();
-            if (InvoiceItems != null) InvoiceItems = InvoiceItems.OrderBy(t => t.InvoiceItemId).ToList();
-            //if (Products != null) Products = Products.OrderBy(p => p.ProductCode).ToList();
-            if (Users != null) Users = Users.OrderBy(u => u.UserId).ToList();
-            if (Warranties != null) Warranties = Warranties.OrderBy(w => w.WarrantyId).ToList();
-            if (GoldPrices != null) GoldPrices = GoldPrices.OrderBy(c => c.Name).ToList();
+            else
+            {
+                Products = new List<Product>();
+                Products = Products.OrderBy(p => p.ProductCode).ToList();
+                PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
+            }
+            
+            
 
 
         }
@@ -87,7 +74,3 @@ namespace RazorTest.Pages
         }
     }
 }
-//bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
-//User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-
-//return isAuthenticated && user?.Role.Equals(role) == true;

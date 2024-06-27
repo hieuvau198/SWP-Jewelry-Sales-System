@@ -87,9 +87,11 @@ namespace RazorTest.Pages.Sale
             {
                 //Set some vars
                     double discountRate = 0;
+                    string discountId = "No Discount";
                     double totalPrice = 0;
                     double endPrice = 0;
                     int quantity = 1;
+                    string warrantyId = "No Warranty";
                 
 
                 // Find Best Discount
@@ -100,10 +102,19 @@ namespace RazorTest.Pages.Sale
                         List<Discount> temp = new List<Discount>();
                         foreach (Discount discount in Discounts)
                         {
-                            if (discount.ProductId.Equals("All")
-                                || discount.ProductId.Equals(productId))
+                            if (discount.ProductType.Equals("All")
+                                || discount.ProductId.Equals(productId)
+                                || (discount.ProductType.Equals(product.ProductType) 
+                                    && discount.ProductId.Equals("All"))
+                                )
+                            {
+                            DateTime currentTime = DateTime.Now;
+                            if (discount.PublicDate < currentTime
+                            && discount.ExpireDate > currentTime)
                             {
                                 temp.Add(discount);
+                            }
+                            
                             }
                         }
                         Discounts = temp;
@@ -114,47 +125,48 @@ namespace RazorTest.Pages.Sale
                         if(discount.DiscountRate > discountRate)
                         {
                             discountRate = discount.DiscountRate;
+                            discountId = discount.DiscountId;
                         }
                     }
-                // Set the quantity of the product to 1
+                    
+                // Set product quantity and price
                     product.ProductQuantity = quantity;
                     product.TotalPrice = product.UnitPrice;
                     totalPrice = product.TotalPrice;
                     endPrice = product.UnitPrice * (1-discountRate);
                     
-                // Update the price by calling an external API
-                //Product updatedProduct = await _apiService.PostAsJsonAndDeserializeAsync<Product>(UrlUpdatePrice, product);
-
-                // Add the updated product to the cart
-                cart.Add(product);
+                // Add the updated product to cart
+                    cart.Add(product);
 
                 // Save the updated cart back to the session
-                HttpContext.Session.SetObject(SessionKeyCart, cart);
+                    HttpContext.Session.SetObject(SessionKeyCart, cart);
 
-                List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
-                if (invoiceItems == null)
-                {
-                    invoiceItems = new List<InvoiceItem>();
-                }
-                if (invoiceItems.Find(x => x.ProductId == productId) == null)
-                {
-                    InvoiceItem invoiceItem = new InvoiceItem
+                // Set Invoice Item for this current product
+
+                    List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+                    if (invoiceItems == null)
                     {
-                        InvoiceItemId = Guid.NewGuid().ToString(),
-                        InvoiceId = "Test",
-                        ProductId = product.ProductId,
-                        ProductName = product.ProductName,
-                        Quantity = product.ProductQuantity,
-                        UnitPrice = product.UnitPrice,
-                        DiscountId = "T",
-                        DiscountRate = discountRate,
-                        TotalPrice = totalPrice,
-                        EndTotalPrice = endPrice,
-                        WarrantyId = "Test"
-                    };
-                    invoiceItems.Add(invoiceItem);
-                }
-                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, invoiceItems);
+                        invoiceItems = new List<InvoiceItem>();
+                    }
+                    if (invoiceItems.Find(x => x.ProductId == productId) == null)
+                    {
+                        InvoiceItem invoiceItem = new InvoiceItem
+                        {
+                            InvoiceItemId = Guid.NewGuid().ToString(),
+                            InvoiceId = "Test",
+                            ProductId = product.ProductId,
+                            ProductName = product.ProductName,
+                            Quantity = product.ProductQuantity,
+                            UnitPrice = product.UnitPrice,
+                            DiscountId = discountId,
+                            DiscountRate = discountRate,
+                            TotalPrice = totalPrice,
+                            EndTotalPrice = endPrice,
+                            WarrantyId = warrantyId
+                        };
+                        invoiceItems.Add(invoiceItem);
+                    }
+                    HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, invoiceItems);
 
             }
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")

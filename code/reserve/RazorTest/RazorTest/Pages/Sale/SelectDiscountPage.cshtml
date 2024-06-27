@@ -33,34 +33,17 @@
         }
 </style>
 
-<div class="container">
-    <h2>Cart Information</h2>
-</div>
-
-@if (Model.InvoiceItems.Count > 0)
+@if (Model.SelectedDiscount != null)
 {
-    <div class="luxury-table-wrapper">
-        <table class="luxury-table">
-            <thead>
-                <tr>
-                    <th>Discount</th>
-                    <th>Item</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var invoiceItem in Model.InvoiceItems)
-                {
-                    <tr>
-                        <td>@(invoiceItem.DiscountRate * 100)%</td>
-                        <td>@invoiceItem.ProductName</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="luxury-table-wrapper" style="font-weight: bold; font-size: 32px;">
+        <tr>
+            <th>@Model.SelectedDiscount.DiscountName</th>
+            <td> - @(Model.SelectedDiscount.DiscountRate * 100)%</td>
+        </tr>
     </div>
 }
 <div class="container">
-    <h2>Available Discounts</h2>
+    <h3>Available Discounts</h3>
 </div>
 
 
@@ -71,6 +54,8 @@
                 <th>Discount Name</th>
                 <th>Discount Rate</th>
                 <th>Reduction</th>
+                <th>Available Date</th>
+                <th>Expired Date</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -82,7 +67,9 @@
                     <tr>
                         <td>@discount.DiscountName</td>
                         <td>@(discount.DiscountRate * 100)%</td>
-                        <td>Not Yet</td>
+                        <td>@((discount.DiscountRate * Model.SelectedProduct.UnitPrice * -1).ToString("#,##0")) </td>
+                        <td>@discount.PublicDate.ToString("d/M/yyyy")</td>
+                        <td>@discount.ExpireDate.ToString("d/M/yyyy")</td>
                         <td>
                             <form method="post" asp-page-handler="SelectDiscount">
                                 <input type="hidden" name="discountId" value="@discount.DiscountId" />

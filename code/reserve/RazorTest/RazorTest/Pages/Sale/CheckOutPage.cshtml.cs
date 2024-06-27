@@ -61,6 +61,7 @@ namespace RazorTest.Pages.Sale
             if(invoiceItems != null && invoice != null)
             {
                 invoice.InvoiceId = invoiceId;
+                invoice.InvoiceDate = DateTime.Now;
                 foreach (var invoiceItem in invoiceItems)
                 {
                     invoiceItem.InvoiceId = invoiceId;
