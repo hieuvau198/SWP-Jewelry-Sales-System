@@ -188,57 +188,288 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             DiscountId = "D1",
-                            DiscountName = "Summer Sale",
-                            DiscountRate = 0.20000000000000001,
-                            ExpireDate = new DateTime(2024, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DiscountName = "Elegance",
+                            DiscountRate = 0.12,
+                            ExpireDate = new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductId = "All",
                             ProductType = "All",
-                            PublicDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            PublicDate = new DateTime(2024, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             DiscountId = "D2",
-                            DiscountName = "Holiday Promotion",
-                            DiscountRate = 0.29999999999999999,
+                            DiscountName = "Winter Warm-Up",
+                            DiscountRate = 0.050000000000000003,
                             ExpireDate = new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Ring",
-                            PublicDate = new DateTime(2024, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             DiscountId = "D3",
-                            DiscountName = "Spring Clearance",
-                            DiscountRate = 0.40000000000000002,
-                            ExpireDate = new DateTime(2024, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DiscountName = "Spring Special",
+                            DiscountRate = 0.14999999999999999,
+                            ExpireDate = new DateTime(2024, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Bracelet",
+                            ProductType = "All",
                             PublicDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             DiscountId = "D4",
-                            DiscountName = "Back-to-School Sale",
-                            DiscountRate = 0.5,
-                            ExpireDate = new DateTime(2024, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DiscountName = "Autumn Breath",
+                            DiscountRate = 0.10000000000000001,
+                            ExpireDate = new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
-                            ProductId = "P002",
-                            ProductType = "Ring",
-                            PublicDate = new DateTime(2024, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             DiscountId = "D5",
-                            DiscountName = "Winter Warm-up",
-                            DiscountRate = 0.0,
+                            DiscountName = "New Year Sale",
+                            DiscountRate = 0.14999999999999999,
                             ExpireDate = new DateTime(2025, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             OrderType = "Sale",
                             ProductId = "All",
-                            ProductType = "Necklace",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D6",
+                            DiscountName = "Expired Sale 1",
+                            DiscountRate = 0.059999999999999998,
+                            ExpireDate = new DateTime(2024, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D7",
+                            DiscountName = "Radiant Reductions I",
+                            DiscountRate = 0.089999999999999997,
+                            ExpireDate = new DateTime(2024, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D8",
+                            DiscountName = "Sparkle Savings II",
+                            DiscountRate = 0.10000000000000001,
+                            ExpireDate = new DateTime(2024, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D9",
+                            DiscountName = "Radiant Reductions II",
+                            DiscountRate = 0.070000000000000007,
+                            ExpireDate = new DateTime(2025, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
                             PublicDate = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D10",
+                            DiscountName = "Sparkle Savings III",
+                            DiscountRate = 0.080000000000000002,
+                            ExpireDate = new DateTime(2024, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D11",
+                            DiscountName = "Ring Gala",
+                            DiscountRate = 0.10000000000000001,
+                            ExpireDate = new DateTime(2024, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D12",
+                            DiscountName = "Wedding Night",
+                            DiscountRate = 0.12,
+                            ExpireDate = new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D13",
+                            DiscountName = "For Your Love",
+                            DiscountRate = 0.17000000000000001,
+                            ExpireDate = new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D14",
+                            DiscountName = "For Your Love II",
+                            DiscountRate = 0.23999999999999999,
+                            ExpireDate = new DateTime(2024, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D15",
+                            DiscountName = "Wedding Night II",
+                            DiscountRate = 0.14999999999999999,
+                            ExpireDate = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D16",
+                            DiscountName = "Necklace IV",
+                            DiscountRate = 0.17999999999999999,
+                            ExpireDate = new DateTime(2024, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D17",
+                            DiscountName = "Necklace V",
+                            DiscountRate = 0.13,
+                            ExpireDate = new DateTime(2024, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D18",
+                            DiscountName = "Necklace Special",
+                            DiscountRate = 0.10000000000000001,
+                            ExpireDate = new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P001",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D19",
+                            DiscountName = "Earrings Speical III",
+                            DiscountRate = 0.070000000000000007,
+                            ExpireDate = new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P003",
+                            ProductType = "Earrings",
+                            PublicDate = new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D20",
+                            DiscountName = "Earrings Speical VI",
+                            DiscountRate = 0.10000000000000001,
+                            ExpireDate = new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P009",
+                            ProductType = "Earrings",
+                            PublicDate = new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D21",
+                            DiscountName = "Sapphire Bracelet Discount",
+                            DiscountRate = 0.27000000000000002,
+                            ExpireDate = new DateTime(2024, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P011",
+                            ProductType = "Bracelet",
+                            PublicDate = new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D22",
+                            DiscountName = "Emerald Necklace Discount",
+                            DiscountRate = 0.20000000000000001,
+                            ExpireDate = new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P012",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D23",
+                            DiscountName = "Ruby Earrings Discount",
+                            DiscountRate = 0.17999999999999999,
+                            ExpireDate = new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P013",
+                            ProductType = "Earrings",
+                            PublicDate = new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D24",
+                            DiscountName = "Sapphire Necklace Discount",
+                            DiscountRate = 0.17999999999999999,
+                            ExpireDate = new DateTime(2024, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P014",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D25",
+                            DiscountName = "Diamond Necklace Discount",
+                            DiscountRate = 0.22,
+                            ExpireDate = new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P015",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            DiscountId = "D26",
+                            DiscountName = "Emerald Bracelet Discount",
+                            DiscountRate = 0.20999999999999999,
+                            ExpireDate = new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            OrderType = "Sale",
+                            ProductId = "P016",
+                            ProductType = "Bracelet",
+                            PublicDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -819,7 +1050,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang24k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1436),
+                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1620),
                             GoldCode = "Vàng nữ trang 99,99%",
                             GoldName = "24K",
                             SellPrice = 0.0,
@@ -829,7 +1060,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang18k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1458),
+                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1633),
                             GoldCode = "Vàng nữ trang 75%",
                             GoldName = "18K",
                             SellPrice = 0.0,
@@ -839,7 +1070,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang14k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1461),
+                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1637),
                             GoldCode = "Vàng nữ trang 58,3%",
                             GoldName = "14K",
                             SellPrice = 0.0,
@@ -849,7 +1080,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang10k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1463),
+                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1638),
                             GoldCode = "Vàng nữ trang 41,7%",
                             GoldName = "10K",
                             SellPrice = 0.0,
@@ -881,7 +1112,7 @@ namespace JewelSystemBE.Migrations
                         .HasColumnName("end_total_price");
 
                     b.Property<DateTime>("InvoiceDate")
-                        .HasColumnType("date")
+                        .HasColumnType("datetime2")
                         .HasColumnName("invoice_date");
 
                     b.Property<string>("InvoiceStatus")
@@ -2365,35 +2596,35 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "fd929cb1-c64c-47b7-87bb-82f3f8727da6",
+                            StallItemId = "6bd19672-6a06-47bf-85dc-29fb27031084",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "f9e0f526-fa82-4bdd-9b86-8dde6cf29c7d",
+                            StallItemId = "fc3bcb78-7a27-4fa0-a5b9-b529727984eb",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "6cfbace2-eba1-4d92-be09-a0101743da60",
+                            StallItemId = "a8f21b99-74f9-4bfb-b8ff-86da24aa039c",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "5049fdf0-b29b-4dd9-9fb7-63f8e857c79f",
+                            StallItemId = "2e7160a3-82ac-4f7a-93c0-91a0d849cb4d",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "19ea01f5-a1d3-4dea-b2a0-ea842489a1a8",
+                            StallItemId = "3e476202-1b8a-470d-b8b1-7c476edd0d3b",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
@@ -2435,7 +2666,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US1",
                             Email = "liam@gmail.com",
                             Fullname = "Liam Williams",
-                            Password = "$2a$11$2Zvk3WcwelDOAFrxAlSUJOjQLrH1M5S7O6Gc0kyZE8je35k82EP5W",
+                            Password = "$2a$11$V1Q7hJNVNcryhyzNW0TCNe/QNaanhYLOdUHT7Q1nVSUlgUJFhTPvK",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -2444,7 +2675,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US2",
                             Email = "olivia@gmail.com",
                             Fullname = "Olivia Miller",
-                            Password = "$2a$11$d3.YlTWawxIMaobnNAgFHeSEQ/pmeMPdJwpxxA5nHQo1Hxo4TPtoS",
+                            Password = "$2a$11$l8kje79yWPmKpsdxWKzG8e/hWlKkuJjz.SivoTzWoYLfPZpZNKYe2",
                             Role = "Manager",
                             Username = "user2"
                         },
@@ -2453,7 +2684,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US3",
                             Email = "james@gmail.com",
                             Fullname = "James Martinez",
-                            Password = "$2a$11$Vz0DakMkIY84JcoFlPm1r.FFBI3ima0U2MiOIkfT7VW8ZQIgn.dzK",
+                            Password = "$2a$11$3bAm5AyOZk.r/zpYacEOJOPnOX6wuRTazAl2CGF.z0yOwIjWSb0O6",
                             Role = "Sale",
                             Username = "user3"
                         },
@@ -2462,7 +2693,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US4",
                             Email = "matao@gmail.com",
                             Fullname = "Mateo Martinez",
-                            Password = "$2a$11$efWiYg/Pcd9nJ1qQeNIHTOIpAzmGUpVMZPksU9.e7mjcVmOBBBdum",
+                            Password = "$2a$11$xMdQ91n5E87kMGRHYH0EMuVU4dyNXCEz9t5rSen/K3ibNi76SOJkq",
                             Role = "Sale",
                             Username = "user4"
                         },
@@ -2471,7 +2702,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US5",
                             Email = "theodore@gmail.com",
                             Fullname = "Theodore Garcia",
-                            Password = "$2a$11$XLWp.gLa5j9BpEuBJzPv9.6P..Phxn0f8Cyz2TMCr5fOqJK2zgT/K",
+                            Password = "$2a$11$qMhF5LymbSOHLnsPAwQfset6k2MKSmSDIvVO1D9j9wsOCbTvq3Y4O",
                             Role = "Cashier",
                             Username = "user5"
                         },
@@ -2480,7 +2711,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US6",
                             Email = "isabel@gmail.com",
                             Fullname = "Isabel Rodriguez",
-                            Password = "$2a$11$eGLcQb2LCiMCi1V8UXlu8uZvGwq/9OpDfHDWUgE40yuBCFdBDe/eW",
+                            Password = "$2a$11$V3s79vWChxm0N.C9b76z8OXjTbJhG0kl3gZ8XKNfoCddh5.SnTQNq",
                             Role = "Sale",
                             Username = "user6"
                         },
@@ -2489,7 +2720,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US7",
                             Email = "luna@gmail.com",
                             Fullname = "Luna Taylor",
-                            Password = "$2a$11$zKwQuoQiB0H8NjDq/SlDI.rO05MGxq7zTC.75/.p9aElhuR1590UW",
+                            Password = "$2a$11$dEDLQwp3nsmkztX58WjSE.MDQRiBcmy99WSli/cc28BtR4OVoNyUK",
                             Role = "Sale",
                             Username = "user7"
                         },
@@ -2498,7 +2729,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US8",
                             Email = "emma@gmail.com",
                             Fullname = "Emma Young",
-                            Password = "$2a$11$.E/fHwour0zqxPsfUdj5we8UtsYZ6qmia.aDJQiBSMnlVpC7G3hUS",
+                            Password = "$2a$11$fahgY/rCXKbZnmJYd9XnUu85pDw8NUTBh1Rq2vdl009WZ6SisBLfy",
                             Role = "Sale",
                             Username = "user8"
                         });
@@ -2537,7 +2768,7 @@ namespace JewelSystemBE.Migrations
                         {
                             WarrantyId = "W1",
                             ExpireDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProductId = "P1",
+                            ProductId = "P002",
                             ProductName = "Product A",
                             StartDate = new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },

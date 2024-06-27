@@ -104,7 +104,7 @@ namespace JewelSystemBE.Migrations
                     CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     user_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserFullname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    invoice_date = table.Column<DateTime>(type: "date", nullable: false),
+                    invoice_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     customer_voucher = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     total_price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     end_total_price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -259,11 +259,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "19ea01f5-a1d3-4dea-b2a0-ea842489a1a8", "Some Product Id", "Some Product Name", 0 },
-                    { "5049fdf0-b29b-4dd9-9fb7-63f8e857c79f", "Some Product Id", "Some Product Name", 0 },
-                    { "6cfbace2-eba1-4d92-be09-a0101743da60", "Some Product Id", "Some Product Name", 0 },
-                    { "f9e0f526-fa82-4bdd-9b86-8dde6cf29c7d", "Some Product Id", "Some Product Name", 0 },
-                    { "fd929cb1-c64c-47b7-87bb-82f3f8727da6", "Some Product Id", "Some Product Name", 0 }
+                    { "2e7160a3-82ac-4f7a-93c0-91a0d849cb4d", "Some Product Id", "Some Product Name", 0 },
+                    { "3e476202-1b8a-470d-b8b1-7c476edd0d3b", "Some Product Id", "Some Product Name", 0 },
+                    { "6bd19672-6a06-47bf-85dc-29fb27031084", "Some Product Id", "Some Product Name", 0 },
+                    { "a8f21b99-74f9-4bfb-b8ff-86da24aa039c", "Some Product Id", "Some Product Name", 0 },
+                    { "fc3bcb78-7a27-4fa0-a5b9-b529727984eb", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -295,11 +295,32 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "DiscountId", "DiscountName", "DiscountRate", "ExpireDate", "OrderType", "ProductId", "ProductType", "PublicDate" },
                 values: new object[,]
                 {
-                    { "D1", "Summer Sale", 0.20000000000000001, new DateTime(2024, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "D2", "Holiday Promotion", 0.29999999999999999, new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Ring", new DateTime(2024, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "D3", "Spring Clearance", 0.40000000000000002, new DateTime(2024, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Bracelet", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "D4", "Back-to-School Sale", 0.5, new DateTime(2024, 9, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P002", "Ring", new DateTime(2024, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "D5", "Winter Warm-up", 0.0, new DateTime(2025, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Necklace", new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { "D1", "Elegance", 0.12, new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D10", "Sparkle Savings III", 0.080000000000000002, new DateTime(2024, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D11", "Ring Gala", 0.10000000000000001, new DateTime(2024, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Ring", new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D12", "Wedding Night", 0.12, new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Ring", new DateTime(2024, 6, 8, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D13", "For Your Love", 0.17000000000000001, new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Ring", new DateTime(2024, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D14", "For Your Love II", 0.23999999999999999, new DateTime(2024, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Ring", new DateTime(2024, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D15", "Wedding Night II", 0.14999999999999999, new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Ring", new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D16", "Necklace IV", 0.17999999999999999, new DateTime(2024, 10, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Necklace", new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D17", "Necklace V", 0.13, new DateTime(2024, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "Necklace", new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D18", "Necklace Special", 0.10000000000000001, new DateTime(2024, 8, 25, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P001", "Necklace", new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D19", "Earrings Speical III", 0.070000000000000007, new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P003", "Earrings", new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D2", "Winter Warm-Up", 0.050000000000000003, new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D20", "Earrings Speical VI", 0.10000000000000001, new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P009", "Earrings", new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D21", "Sapphire Bracelet Discount", 0.27000000000000002, new DateTime(2024, 10, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P011", "Bracelet", new DateTime(2024, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D22", "Emerald Necklace Discount", 0.20000000000000001, new DateTime(2024, 11, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P012", "Necklace", new DateTime(2024, 11, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D23", "Ruby Earrings Discount", 0.17999999999999999, new DateTime(2024, 12, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P013", "Earrings", new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D24", "Sapphire Necklace Discount", 0.17999999999999999, new DateTime(2024, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P014", "Necklace", new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D25", "Diamond Necklace Discount", 0.22, new DateTime(2024, 8, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P015", "Necklace", new DateTime(2024, 8, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D26", "Emerald Bracelet Discount", 0.20999999999999999, new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "P016", "Bracelet", new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D3", "Spring Special", 0.14999999999999999, new DateTime(2024, 3, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D4", "Autumn Breath", 0.10000000000000001, new DateTime(2024, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D5", "New Year Sale", 0.14999999999999999, new DateTime(2025, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D6", "Expired Sale 1", 0.059999999999999998, new DateTime(2024, 4, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D7", "Radiant Reductions I", 0.089999999999999997, new DateTime(2024, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D8", "Sparkle Savings II", 0.10000000000000001, new DateTime(2024, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "D9", "Radiant Reductions II", 0.070000000000000007, new DateTime(2025, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Sale", "All", "All", new DateTime(2024, 12, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
@@ -364,10 +385,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1463), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1461), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1458), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1436), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1638), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1637), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1633), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1620), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
@@ -551,14 +572,14 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$2Zvk3WcwelDOAFrxAlSUJOjQLrH1M5S7O6Gc0kyZE8je35k82EP5W", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$d3.YlTWawxIMaobnNAgFHeSEQ/pmeMPdJwpxxA5nHQo1Hxo4TPtoS", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$Vz0DakMkIY84JcoFlPm1r.FFBI3ima0U2MiOIkfT7VW8ZQIgn.dzK", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$efWiYg/Pcd9nJ1qQeNIHTOIpAzmGUpVMZPksU9.e7mjcVmOBBBdum", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$XLWp.gLa5j9BpEuBJzPv9.6P..Phxn0f8Cyz2TMCr5fOqJK2zgT/K", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$eGLcQb2LCiMCi1V8UXlu8uZvGwq/9OpDfHDWUgE40yuBCFdBDe/eW", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$zKwQuoQiB0H8NjDq/SlDI.rO05MGxq7zTC.75/.p9aElhuR1590UW", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$.E/fHwour0zqxPsfUdj5we8UtsYZ6qmia.aDJQiBSMnlVpC7G3hUS", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$V1Q7hJNVNcryhyzNW0TCNe/QNaanhYLOdUHT7Q1nVSUlgUJFhTPvK", "Admin", "user1" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$l8kje79yWPmKpsdxWKzG8e/hWlKkuJjz.SivoTzWoYLfPZpZNKYe2", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$3bAm5AyOZk.r/zpYacEOJOPnOX6wuRTazAl2CGF.z0yOwIjWSb0O6", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$xMdQ91n5E87kMGRHYH0EMuVU4dyNXCEz9t5rSen/K3ibNi76SOJkq", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$qMhF5LymbSOHLnsPAwQfset6k2MKSmSDIvVO1D9j9wsOCbTvq3Y4O", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$V3s79vWChxm0N.C9b76z8OXjTbJhG0kl3gZ8XKNfoCddh5.SnTQNq", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$dEDLQwp3nsmkztX58WjSE.MDQRiBcmy99WSli/cc28BtR4OVoNyUK", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$fahgY/rCXKbZnmJYd9XnUu85pDw8NUTBh1Rq2vdl009WZ6SisBLfy", "Sale", "user8" }
                 });
 
             migrationBuilder.InsertData(
@@ -566,7 +587,7 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "warranty_id", "expire_date", "product_id", "product_name", "start_date" },
                 values: new object[,]
                 {
-                    { "W1", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P1", "Product A", new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W1", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P002", "Product A", new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { "W2", new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", "Product B", new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { "W3", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { "W4", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }

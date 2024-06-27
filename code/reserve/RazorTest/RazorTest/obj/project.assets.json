@@ -7843,11 +7843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\RazorTest.csproj",
+      "projectUniqueName": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\RazorTest.csproj",
       "projectName": "RazorTest",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\RazorTest.csproj",
+      "projectPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\RazorTest.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\obj\\",
+      "outputPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

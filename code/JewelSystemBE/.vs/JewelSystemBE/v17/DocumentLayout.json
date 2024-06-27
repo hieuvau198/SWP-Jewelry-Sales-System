@@ -1,121 +1,113 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SWP\\JewelSystemBE\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\controllers\\vnpaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:controllers\\vnpaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\vnpay\\vnpaysetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:vnpay\\vnpaysetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\vnpay\\vnpayhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:vnpay\\vnpayhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceuser\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceuser\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\migrations\\jeweldbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:migrations\\jeweldbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\warranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\warranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\stall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\stall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\jewel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\jewel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceinvoiceitem\\iinvoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoiceitem\\iinvoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceinvoice\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoice\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceinvoice\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoice\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\servicecustomer\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\servicecustomer\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\migrations\\20240627070139_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:migrations\\20240627070139_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:data\\jeweldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\servicegold\\goldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\controllers\\vnpaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:controllers\\vnpaycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\vnpay\\vnpaysetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:vnpay\\vnpaysetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\vnpay\\vnpayhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:vnpay\\vnpayhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceuser\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceuser\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\warranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\warranty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\stall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\stall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\jewel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\jewel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\gem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceinvoiceitem\\iinvoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoiceitem\\iinvoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceinvoice\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoice\\invoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceinvoice\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceinvoice\\iinvoiceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\servicecustomer\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\servicecustomer\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\servicegold\\goldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\servicegold\\goldservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\model\\gold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\model\\gold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:model\\gold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|d:\\swp\\jewelsystembe\\service\\servicegem\\gemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|c:\\users\\lenovo\\desktop\\jewelsystembe\\service\\servicegem\\gemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB0403B-5AEB-4416-BF1D-BF8B5CEFB0A4}|JewelSystemBE.csproj|solutionrelative:service\\servicegem\\gemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -126,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 19,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,9 +128,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\appsettings.json",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -147,232 +139,203 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Program.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAB0AAAAAAAAAAAAAACsAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T09:11:35.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VNPayHelper.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\VNPay\\VNPayHelper.cs",
-              "RelativeDocumentMoniker": "VNPay\\VNPayHelper.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\VNPay\\VNPayHelper.cs",
-              "RelativeToolTip": "VNPay\\VNPayHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:52:57.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T09:11:35.992Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
-              "RelativeDocumentMoniker": "Service\\ServiceUser\\UserService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
-              "RelativeToolTip": "Service\\ServiceUser\\UserService.cs",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAswGoAAAABAAAA",
+              "Title": "VNPayHelper.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\VNPay\\VNPayHelper.cs",
+              "RelativeDocumentMoniker": "VNPay\\VNPayHelper.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\VNPay\\VNPayHelper.cs",
+              "RelativeToolTip": "VNPay\\VNPayHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:47:30.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:52:57.167Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\ServiceUser\\UserService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceUser\\UserService.cs",
+              "RelativeToolTip": "Service\\ServiceUser\\UserService.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAswGoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:47:30.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceUser\\IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceUser\\IUserService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceUser\\IUserService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceUser\\IUserService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceUser\\IUserService.cs",
               "RelativeToolTip": "Service\\ServiceUser\\IUserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:45:57.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:45:57.136Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Warranty.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Warranty.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Warranty.cs",
               "RelativeDocumentMoniker": "Model\\Warranty.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Warranty.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Warranty.cs",
               "RelativeToolTip": "Model\\Warranty.cs",
               "ViewState": "AQIAABAAAAAAAAAAAAA5wAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:43:33.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:43:33.188Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Stall.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Stall.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Stall.cs",
               "RelativeDocumentMoniker": "Model\\Stall.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Stall.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Stall.cs",
               "RelativeToolTip": "Model\\Stall.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:43:23.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "JewelDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Migrations\\JewelDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Migrations\\JewelDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Migrations\\JewelDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Migrations\\JewelDbContextModelSnapshot.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:43:17.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:43:23.819Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\User.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\User.cs",
               "RelativeDocumentMoniker": "Model\\User.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\User.cs",
               "RelativeToolTip": "Model\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:43:13.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:43:13.546Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Jewel.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Jewel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Jewel.cs",
               "RelativeDocumentMoniker": "Model\\Jewel.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Jewel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Jewel.cs",
               "RelativeToolTip": "Model\\Jewel.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAA1wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:43:09.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:43:09.181Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "InvoiceItem.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\InvoiceItem.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\InvoiceItem.cs",
               "RelativeDocumentMoniker": "Model\\InvoiceItem.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\InvoiceItem.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\InvoiceItem.cs",
               "RelativeToolTip": "Model\\InvoiceItem.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAUwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:43:03.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:43:03.221Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Discount.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Discount.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Discount.cs",
               "RelativeDocumentMoniker": "Model\\Discount.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Discount.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Discount.cs",
               "RelativeToolTip": "Model\\Discount.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:42:56.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:42:56.218Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Customer.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Customer.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Customer.cs",
               "RelativeDocumentMoniker": "Model\\Customer.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Customer.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Customer.cs",
               "RelativeToolTip": "Model\\Customer.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:42:51.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:42:51.809Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "IInvoiceItemService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoiceItem\\IInvoiceItemService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoiceItem\\IInvoiceItemService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceInvoiceItem\\IInvoiceItemService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoiceItem\\IInvoiceItemService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoiceItem\\IInvoiceItemService.cs",
               "RelativeToolTip": "Service\\ServiceInvoiceItem\\IInvoiceItemService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:38:58.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:38:58.741Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "CustomerService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceCustomer\\CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceCustomer\\CustomerService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceCustomer\\CustomerService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceCustomer\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceCustomer\\CustomerService.cs",
               "RelativeToolTip": "Service\\ServiceCustomer\\CustomerService.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:38:43.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:38:43.592Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "Invoice.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Invoice.cs",
               "RelativeDocumentMoniker": "Model\\Invoice.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Invoice.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Invoice.cs",
               "RelativeToolTip": "Model\\Invoice.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:25:28.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:25:28.766Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "IInvoiceService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoice\\IInvoiceService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoice\\IInvoiceService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceInvoice\\IInvoiceService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoice\\IInvoiceService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoice\\IInvoiceService.cs",
               "RelativeToolTip": "Service\\ServiceInvoice\\IInvoiceService.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAzwAYAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:23:08.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T08:23:08.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VNPaySetting.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\VNPay\\VNPaySetting.cs",
+              "RelativeDocumentMoniker": "VNPay\\VNPaySetting.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\VNPay\\VNPaySetting.cs",
+              "RelativeToolTip": "VNPay\\VNPaySetting.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T08:19:27.055Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VNPaySetting.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\VNPay\\VNPaySetting.cs",
-              "RelativeDocumentMoniker": "VNPay\\VNPaySetting.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\VNPay\\VNPaySetting.cs",
-              "RelativeToolTip": "VNPay\\VNPaySetting.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T08:19:27.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "VNPayController.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Controllers\\VNPayController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Controllers\\VNPayController.cs",
               "RelativeDocumentMoniker": "Controllers\\VNPayController.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Controllers\\VNPayController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Controllers\\VNPayController.cs",
               "RelativeToolTip": "Controllers\\VNPayController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -383,61 +346,45 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "InvoiceItemService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
               "RelativeToolTip": "Service\\ServiceInvoiceItem\\InvoiceItemService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T13:58:00.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "20240627070139_x.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Migrations\\20240627070139_x.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240627070139_x.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Migrations\\20240627070139_x.cs",
-              "RelativeToolTip": "Migrations\\20240627070139_x.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T07:01:39.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T13:58:00.928Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "InvoiceService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoice\\InvoiceService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoice\\InvoiceService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceInvoice\\InvoiceService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceInvoice\\InvoiceService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceInvoice\\InvoiceService.cs",
               "RelativeToolTip": "Service\\ServiceInvoice\\InvoiceService.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAADAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T19:54:48.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T19:54:48.225Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "Product.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Product.cs",
               "RelativeDocumentMoniker": "Model\\Product.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Product.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Product.cs",
               "RelativeToolTip": "Model\\Product.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T14:40:53.376Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T14:40:53.376Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 24,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceProduct\\ProductService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceProduct\\ProductService.cs",
               "RelativeToolTip": "Service\\ServiceProduct\\ProductService.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAswAoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -445,11 +392,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 26,
               "Title": "GemService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceGem\\GemService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceGem\\GemService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceGem\\GemService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceGem\\GemService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceGem\\GemService.cs",
               "RelativeToolTip": "Service\\ServiceGem\\GemService.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAowEkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -459,34 +406,34 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Gem.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Gem.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Gem.cs",
               "RelativeDocumentMoniker": "Model\\Gem.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Gem.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Gem.cs",
               "RelativeToolTip": "Model\\Gem.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAYwBQAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T12:43:39.66Z",
+              "WhenOpened": "2024-06-20T12:43:39.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JewelDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Data\\JewelDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\JewelDbContext.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Data\\JewelDbContext.cs",
+              "RelativeToolTip": "Data\\JewelDbContext.cs",
+              "ViewState": "AQIAAPsEAAAAAAAAAAAAANIGAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:25:14.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "JewelDbContext.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Data\\JewelDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\JewelDbContext.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Data\\JewelDbContext.cs",
-              "RelativeToolTip": "Data\\JewelDbContext.cs",
-              "ViewState": "AQIAANsFAAAAAAAAAAAcwNIGAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T12:25:14.657Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 25,
               "Title": "Gold.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Model\\Gold.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Gold.cs",
               "RelativeDocumentMoniker": "Model\\Gold.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Model\\Gold.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Model\\Gold.cs",
               "RelativeToolTip": "Model\\Gold.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwAwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -494,11 +441,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 23,
               "Title": "GoldService.cs",
-              "DocumentMoniker": "D:\\SWP\\JewelSystemBE\\Service\\ServiceGold\\GoldService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceGold\\GoldService.cs",
               "RelativeDocumentMoniker": "Service\\ServiceGold\\GoldService.cs",
-              "ToolTip": "D:\\SWP\\JewelSystemBE\\Service\\ServiceGold\\GoldService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\JewelSystemBE\\Service\\ServiceGold\\GoldService.cs",
               "RelativeToolTip": "Service\\ServiceGold\\GoldService.cs",
               "ViewState": "AQIAAG0AAAAAAAAAAAAkwC4AAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

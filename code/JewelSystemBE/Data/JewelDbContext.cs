@@ -1005,61 +1005,298 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.ExpireDate)
                     .IsRequired();
                 entity.HasData(
-                    new Discount
-                    {
-                        DiscountId = "D1",
-                        DiscountName = "Summer Sale",
-                        OrderType = "Sale",
-                        ProductId = "All",
-                        ProductType = "All",
-                        PublicDate = new DateTime(2024, 6, 1),
-                        ExpireDate = new DateTime(2024, 6, 30),
-                        DiscountRate = 0.2
-                    },
-                    new Discount
-                    {
-                        DiscountId = "D2",
-                        DiscountName = "Holiday Promotion",
-                        OrderType = "Sale",
-                        ProductId = "All",
-                        ProductType = "Ring",
-                        PublicDate = new DateTime(2024, 11, 15),
-                        ExpireDate = new DateTime(2024, 12, 31),
-                        DiscountRate = 0.3
-                    },
-                    new Discount
-                    {
-                        DiscountId = "D3",
-                        DiscountName = "Spring Clearance",
-                        OrderType = "Sale",
-                        ProductId = "All",
-                        ProductType = "Bracelet",
-                        PublicDate = new DateTime(2024, 3, 1),
-                        ExpireDate = new DateTime(2024, 3, 31),
-                        DiscountRate = 0.4
-                    },
-                    new Discount
-                    {
-                        DiscountId = "D4",
-                        DiscountName = "Back-to-School Sale",
-                        OrderType = "Sale",
-                        ProductId = "P002",
-                        ProductType = "Ring",
-                        PublicDate = new DateTime(2024, 8, 1),
-                        ExpireDate = new DateTime(2024, 9, 15),
-                        DiscountRate = 0.5
-                    },
-                    new Discount
-                    {
-                        DiscountId = "D5",
-                        DiscountName = "Winter Warm-up",
-                        OrderType = "Sale",
-                        ProductId = "All",
-                        ProductType = "Necklace",
-                        PublicDate = new DateTime(2024, 12, 1),
-                        ExpireDate = new DateTime(2025, 1, 31),
-                        DiscountRate = 0
-                    }
+                    // For All type, All ID
+                        new Discount
+                        {
+                            DiscountId = "D1",
+                            DiscountName = "Elegance",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 6, 25),
+                            ExpireDate = new DateTime(2024, 8, 25),
+                            DiscountRate = 0.12
+                        },
+                        new Discount // in future
+                        {
+                            DiscountId = "D2",
+                            DiscountName = "Winter Warm-Up",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 12, 1),
+                            ExpireDate = new DateTime(2024, 12, 31),
+                            DiscountRate = 0.05
+                        },
+                        new Discount // expired
+                        {
+                            DiscountId = "D3",
+                            DiscountName = "Spring Special",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 3, 1),
+                            ExpireDate = new DateTime(2024, 3, 30),
+                            DiscountRate = 0.15
+                        },
+                        new Discount // in future
+                        {
+                            DiscountId = "D4",
+                            DiscountName = "Autumn Breath",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 9, 1),
+                            ExpireDate = new DateTime(2024, 9, 30),
+                            DiscountRate = 0.1
+                        },
+                        new Discount // in future
+                        {
+                            DiscountId = "D5",
+                            DiscountName = "New Year Sale",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2025, 1, 1),
+                            ExpireDate = new DateTime(2025, 1, 31),
+                            DiscountRate = 0.15
+                        },
+                        new Discount // expired
+                        {
+                            DiscountId = "D6",
+                            DiscountName = "Expired Sale 1",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 1, 1),
+                            ExpireDate = new DateTime(2024, 4, 30),
+                            DiscountRate = 0.06
+                        },
+                        new Discount // expired
+                        {
+                            DiscountId = "D7",
+                            DiscountName = "Radiant Reductions I",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 3, 1),
+                            ExpireDate = new DateTime(2024, 5, 15),
+                            DiscountRate = 0.09
+                        },
+                        new Discount // expired
+                        {
+                            DiscountId = "D8",
+                            DiscountName = "Sparkle Savings II",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 2, 1),
+                            ExpireDate = new DateTime(2024, 3, 15),
+                            DiscountRate = 0.1
+                        },
+                        new Discount // in future
+                        {
+                            DiscountId = "D9",
+                            DiscountName = "Radiant Reductions II",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 12, 1),
+                            ExpireDate = new DateTime(2025, 1, 15),
+                            DiscountRate = 0.07
+                        },
+                        new Discount // available
+                        {
+                            DiscountId = "D10",
+                            DiscountName = "Sparkle Savings III",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "All",
+                            PublicDate = new DateTime(2024, 5, 1),
+                            ExpireDate = new DateTime(2024, 12, 10),
+                            DiscountRate = 0.08
+                        },
+
+                    // For one type, All ID
+                        new Discount
+                        {
+                            DiscountId = "D11",
+                            DiscountName = "Ring Gala",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 7, 1),
+                            ExpireDate = new DateTime(2024, 7, 31),
+                            DiscountRate = 0.1
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D12",
+                            DiscountName = "Wedding Night",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 6, 8),
+                            ExpireDate = new DateTime(2024, 8, 31),
+                            DiscountRate = 0.12
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D13",
+                            DiscountName = "For Your Love",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 6, 9),
+                            ExpireDate = new DateTime(2024, 9, 30),
+                            DiscountRate = 0.17
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D14",
+                            DiscountName = "For Your Love II",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 5, 10),
+                            ExpireDate = new DateTime(2024, 10, 31),
+                            DiscountRate = 0.24
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D15",
+                            DiscountName = "Wedding Night II",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Ring",
+                            PublicDate = new DateTime(2024, 6, 1),
+                            ExpireDate = new DateTime(2024, 11, 30),
+                            DiscountRate = 0.15
+                        },
+
+                        new Discount
+                        {
+                            DiscountId = "D16",
+                            DiscountName = "Necklace IV",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 5, 1),
+                            ExpireDate = new DateTime(2024, 10, 25),
+                            DiscountRate = 0.18
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D17",
+                            DiscountName = "Necklace V",
+                            OrderType = "Sale",
+                            ProductId = "All",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 6, 1),
+                            ExpireDate = new DateTime(2024, 11, 25),
+                            DiscountRate = 0.13
+                        },
+
+                    // For one type, one ID
+                        new Discount
+                        {
+                            DiscountId = "D18",
+                            DiscountName = "Necklace Special",
+                            OrderType = "Sale",
+                            ProductId = "P001",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 6, 1),
+                            ExpireDate = new DateTime(2024, 8, 25),
+                            DiscountRate = 0.10
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D19",
+                            DiscountName = "Earrings Speical III",
+                            OrderType = "Sale",
+                            ProductId = "P003",
+                            ProductType = "Earrings",
+                            PublicDate = new DateTime(2024, 5, 1),
+                            ExpireDate = new DateTime(2024, 9, 30),
+                            DiscountRate = 0.07
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D20",
+                            DiscountName = "Earrings Speical VI",
+                            OrderType = "Sale",
+                            ProductId = "P009",
+                            ProductType = "Earrings",
+                            PublicDate = new DateTime(2024, 5, 1),
+                            ExpireDate = new DateTime(2024, 8, 31),
+                            DiscountRate = 0.10
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D21",
+                            DiscountName = "Sapphire Bracelet Discount",
+                            OrderType = "Sale",
+                            ProductId = "P011",
+                            ProductType = "Bracelet",
+                            PublicDate = new DateTime(2024, 5, 1),
+                            ExpireDate = new DateTime(2024, 10, 31),
+                            DiscountRate = 0.27
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D22",
+                            DiscountName = "Emerald Necklace Discount",
+                            OrderType = "Sale",
+                            ProductId = "P012",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 11, 1),
+                            ExpireDate = new DateTime(2024, 11, 30),
+                            DiscountRate = 0.2
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D23",
+                            DiscountName = "Ruby Earrings Discount",
+                            OrderType = "Sale",
+                            ProductId = "P013",
+                            ProductType = "Earrings",
+                            PublicDate = new DateTime(2024, 12, 1),
+                            ExpireDate = new DateTime(2024, 12, 31),
+                            DiscountRate = 0.18
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D24",
+                            DiscountName = "Sapphire Necklace Discount",
+                            OrderType = "Sale",
+                            ProductId = "P014",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 7, 1),
+                            ExpireDate = new DateTime(2024, 7, 31),
+                            DiscountRate = 0.18
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D25",
+                            DiscountName = "Diamond Necklace Discount",
+                            OrderType = "Sale",
+                            ProductId = "P015",
+                            ProductType = "Necklace",
+                            PublicDate = new DateTime(2024, 8, 1),
+                            ExpireDate = new DateTime(2024, 8, 31),
+                            DiscountRate = 0.22
+                        },
+                        new Discount
+                        {
+                            DiscountId = "D26",
+                            DiscountName = "Emerald Bracelet Discount",
+                            OrderType = "Sale",
+                            ProductId = "P016",
+                            ProductType = "Bracelet",
+                            PublicDate = new DateTime(2024, 6, 1),
+                            ExpireDate = new DateTime(2024, 9, 30),
+                            DiscountRate = 0.21
+                        }
 
                     );
             });
@@ -1077,13 +1314,28 @@ namespace JewelSystemBE.Data
                 entity.HasData(
                     new Warranty { 
                         WarrantyId = "W1", 
-                        ProductId = "P1", 
+                        ProductId = "P002", 
                         ProductName = "Product A", 
                         StartDate = new DateTime(2023, 1, 1), 
                         ExpireDate = new DateTime(2024, 1, 1) },
-                    new Warranty { WarrantyId = "W2", ProductId = "P2", ProductName = "Product B", StartDate = new DateTime(2023, 2, 1), ExpireDate = new DateTime(2024, 2, 1) },
-                    new Warranty { WarrantyId = "W3", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) },
-                    new Warranty { WarrantyId = "W4", ProductId = "P3", ProductName = "Product C", StartDate = new DateTime(2023, 3, 1), ExpireDate = new DateTime(2024, 3, 1) }
+                    new Warranty { 
+                        WarrantyId = "W2", 
+                        ProductId = "P2", 
+                        ProductName = "Product B", 
+                        StartDate = new DateTime(2023, 2, 1), 
+                        ExpireDate = new DateTime(2024, 2, 1) },
+                    new Warranty { 
+                        WarrantyId = "W3", 
+                        ProductId = "P3", 
+                        ProductName = "Product C", 
+                        StartDate = new DateTime(2023, 3, 1), 
+                        ExpireDate = new DateTime(2024, 3, 1) },
+                    new Warranty { 
+                        WarrantyId = "W4", 
+                        ProductId = "P3", 
+                        ProductName = "Product C", 
+                        StartDate = new DateTime(2023, 3, 1), 
+                        ExpireDate = new DateTime(2024, 3, 1) }
                 );
             });
 
@@ -1114,7 +1366,7 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.InvoiceType).HasColumnName("invoice_type").IsRequired();
                 entity.Property(e => e.CustomerId).HasColumnName("customer_id").IsRequired();
                 entity.Property(e => e.UserId).HasColumnName("user_id").IsRequired();
-                entity.Property(e => e.InvoiceDate).HasColumnName("invoice_date").HasColumnType("date").IsRequired();
+                entity.Property(e => e.InvoiceDate).HasColumnName("invoice_date").HasColumnType("datetime2").IsRequired();
                 entity.Property(e => e.CustomerVoucher).HasColumnName("customer_voucher").HasColumnType("decimal(18, 2)").IsRequired();
                 entity.Property(e => e.TotalPrice).HasColumnName("total_price").HasColumnType("decimal(18, 2)").IsRequired();
                 entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").HasColumnType("decimal(18, 2)").IsRequired();
@@ -1798,7 +2050,7 @@ namespace JewelSystemBE.Data
                     }
                     );
             });
-
+                
             modelBuilder.Entity<StallItem>(entity =>
             {
                 entity.HasData(
