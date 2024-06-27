@@ -1,0 +1,1001 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Guru.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Guru.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\css\\animate.css\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css\\css\\animate.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\css\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\css\\jquery.mCustomScrollbar.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery.mCustomScrollbar.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\css\\morris.js\\css\\morris.css",
+      "PackagePath": "staticwebassets\\assets\\css\\morris.js\\css\\morris.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\icofont\\css\\icofont.css",
+      "PackagePath": "staticwebassets\\assets\\icon\\icofont\\css\\icofont.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\icofont\\fonts\\icofont.eot",
+      "PackagePath": "staticwebassets\\assets\\icon\\icofont\\fonts\\icofont.eot"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\icofont\\fonts\\icofont.svg",
+      "PackagePath": "staticwebassets\\assets\\icon\\icofont\\fonts\\icofont.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\icofont\\fonts\\icofont.ttf",
+      "PackagePath": "staticwebassets\\assets\\icon\\icofont\\fonts\\icofont.ttf"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\icofont\\fonts\\icofont.woff",
+      "PackagePath": "staticwebassets\\assets\\icon\\icofont\\fonts\\icofont.woff"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\assets\\icon\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\assets\\icon\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\assets\\icon\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\assets\\icon\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\icon\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\assets\\icon\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\auth\\Logo-small-bottom.png",
+      "PackagePath": "staticwebassets\\assets\\images\\auth\\Logo-small-bottom.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\auth\\logo-dark.png",
+      "PackagePath": "staticwebassets\\assets\\images\\auth\\logo-dark.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\auth\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\auth\\logo.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar-1.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\avatar-4.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bg.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\flags\\ENGLISH.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\flags\\ENGLISH.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\flags\\FRANCE.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\flags\\FRANCE.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\flags\\PORTO.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\flags\\PORTO.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\flags\\SPAIN.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\flags\\SPAIN.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\mega-menu\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\01.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\mega-menu\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\02.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\mega-menu\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\03.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\mega-menu\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\04.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\mega-menu\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\05.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\mega-menu\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\06.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\pattern2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\pattern2.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\images\\user.png",
+      "PackagePath": "staticwebassets\\assets\\images\\user.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\SmoothScroll.js",
+      "PackagePath": "staticwebassets\\assets\\js\\SmoothScroll.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\bootstrap-growl.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap-growl.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\classie.js",
+      "PackagePath": "staticwebassets\\assets\\js\\classie.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\classie\\classie.js",
+      "PackagePath": "staticwebassets\\assets\\js\\classie\\classie.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\common-pages.js",
+      "PackagePath": "staticwebassets\\assets\\js\\common-pages.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\demo-12.js",
+      "PackagePath": "staticwebassets\\assets\\js\\demo-12.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\jquery-slimscroll\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-slimscroll\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\jquery.mCustomScrollbar.concat.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\jquery.mousewheel.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.mousewheel.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\modernizr\\css-scrollbars.js",
+      "PackagePath": "staticwebassets\\assets\\js\\modernizr\\css-scrollbars.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\modernizr\\modernizr.js",
+      "PackagePath": "staticwebassets\\assets\\js\\modernizr\\modernizr.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\morris.js\\morris.js",
+      "PackagePath": "staticwebassets\\assets\\js\\morris.js\\morris.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\pcoded.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\pcoded.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\popper.js\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popper.js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\raphael\\raphael.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\raphael\\raphael.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\script.js",
+      "PackagePath": "staticwebassets\\assets\\js\\script.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\js\\script.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\script.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\accordion\\accordion.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\accordion\\accordion.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\accordion\\accordion.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\accordion\\accordion.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\chart\\morris\\morris-custom-chart.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\chart\\morris\\morris-custom-chart.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\css\\amchart.css",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\css\\amchart.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\css\\export.css",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\css\\export.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\amcharts.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\amcharts.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\custom-amchart.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\custom-amchart.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\export.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\export.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBig.svg",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBig.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBigH.svg",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBigH.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\light.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\light.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\amchart\\js\\serial.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\amchart\\js\\serial.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\dashboard\\custom-dashboard.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\dashboard\\custom-dashboard.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\google-maps\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\google-maps\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\google-maps\\jquery.gmaps.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\google-maps\\jquery.gmaps.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\icon-modal.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\icon-modal.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\notification\\notification.css",
+      "PackagePath": "staticwebassets\\assets\\pages\\notification\\notification.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\notification\\notification.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\notification\\notification.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\todo\\todo.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\todo\\todo.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\amcharts.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\amcharts.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\amcharts.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\amcharts.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\ammap.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\ammap.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\ammap.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\ammap.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\continentsLow.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\continentsLow.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\continentsLow.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\continentsLow.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\gauge.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\gauge.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\gauge.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\gauge.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\light.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\light.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\light.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\light.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\pie.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\pie.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\pie.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\pie.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\serial.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\serial.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\serial.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\serial.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\worldLow.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\worldLow.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\assets\\pages\\widget\\amchart\\worldLow.min.js",
+      "PackagePath": "staticwebassets\\assets\\pages\\widget\\amchart\\worldLow.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\css\\animate.css\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css\\css\\animate.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\css\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\css\\jquery.mCustomScrollbar.css",
+      "PackagePath": "staticwebassets\\css\\jquery.mCustomScrollbar.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\css\\morris.js\\css\\morris.css",
+      "PackagePath": "staticwebassets\\css\\morris.js\\css\\morris.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\icofont\\css\\icofont.css",
+      "PackagePath": "staticwebassets\\icon\\icofont\\css\\icofont.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\icofont\\fonts\\icofont.eot",
+      "PackagePath": "staticwebassets\\icon\\icofont\\fonts\\icofont.eot"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\icofont\\fonts\\icofont.svg",
+      "PackagePath": "staticwebassets\\icon\\icofont\\fonts\\icofont.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\icofont\\fonts\\icofont.ttf",
+      "PackagePath": "staticwebassets\\icon\\icofont\\fonts\\icofont.ttf"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\icofont\\fonts\\icofont.woff",
+      "PackagePath": "staticwebassets\\icon\\icofont\\fonts\\icofont.woff"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\themify-icons\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\icon\\themify-icons\\fonts\\themify.eot"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\themify-icons\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\icon\\themify-icons\\fonts\\themify.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\icon\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\icon\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\icon\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\icon\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\auth\\Logo-small-bottom.png",
+      "PackagePath": "staticwebassets\\images\\auth\\Logo-small-bottom.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\auth\\logo-dark.png",
+      "PackagePath": "staticwebassets\\images\\auth\\logo-dark.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\auth\\logo.png",
+      "PackagePath": "staticwebassets\\images\\auth\\logo.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\avatar-1.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar-1.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\avatar-2.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar-2.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\avatar-3.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar-3.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\avatar-4.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar-4.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\bg.jpg",
+      "PackagePath": "staticwebassets\\images\\bg.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\flags\\ENGLISH.jpg",
+      "PackagePath": "staticwebassets\\images\\flags\\ENGLISH.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\flags\\FRANCE.jpg",
+      "PackagePath": "staticwebassets\\images\\flags\\FRANCE.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\flags\\PORTO.jpg",
+      "PackagePath": "staticwebassets\\images\\flags\\PORTO.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\flags\\SPAIN.jpg",
+      "PackagePath": "staticwebassets\\images\\flags\\SPAIN.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\mega-menu\\01.jpg",
+      "PackagePath": "staticwebassets\\images\\mega-menu\\01.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\mega-menu\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\mega-menu\\02.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\mega-menu\\03.jpg",
+      "PackagePath": "staticwebassets\\images\\mega-menu\\03.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\mega-menu\\04.jpg",
+      "PackagePath": "staticwebassets\\images\\mega-menu\\04.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\mega-menu\\05.jpg",
+      "PackagePath": "staticwebassets\\images\\mega-menu\\05.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\mega-menu\\06.jpg",
+      "PackagePath": "staticwebassets\\images\\mega-menu\\06.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\pattern2.jpg",
+      "PackagePath": "staticwebassets\\images\\pattern2.jpg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\images\\user.png",
+      "PackagePath": "staticwebassets\\images\\user.png"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\SmoothScroll.js",
+      "PackagePath": "staticwebassets\\js\\SmoothScroll.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\bootstrap-growl.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-growl.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\classie.js",
+      "PackagePath": "staticwebassets\\js\\classie.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\classie\\classie.js",
+      "PackagePath": "staticwebassets\\js\\classie\\classie.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\common-pages.js",
+      "PackagePath": "staticwebassets\\js\\common-pages.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\demo-12.js",
+      "PackagePath": "staticwebassets\\js\\demo-12.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\jquery-slimscroll\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\js\\jquery-slimscroll\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\jquery-ui\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\jquery.mCustomScrollbar.concat.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\jquery.mousewheel.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.mousewheel.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\modernizr\\css-scrollbars.js",
+      "PackagePath": "staticwebassets\\js\\modernizr\\css-scrollbars.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\modernizr\\modernizr.js",
+      "PackagePath": "staticwebassets\\js\\modernizr\\modernizr.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\morris.js\\morris.js",
+      "PackagePath": "staticwebassets\\js\\morris.js\\morris.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\pcoded.min.js",
+      "PackagePath": "staticwebassets\\js\\pcoded.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\popper.js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\raphael\\raphael.min.js",
+      "PackagePath": "staticwebassets\\js\\raphael\\raphael.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\script.min.js",
+      "PackagePath": "staticwebassets\\js\\script.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\accordion\\accordion.js",
+      "PackagePath": "staticwebassets\\pages\\accordion\\accordion.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\accordion\\accordion.min.js",
+      "PackagePath": "staticwebassets\\pages\\accordion\\accordion.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\chart\\morris\\morris-custom-chart.js",
+      "PackagePath": "staticwebassets\\pages\\chart\\morris\\morris-custom-chart.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\css\\amchart.css",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\css\\amchart.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\css\\export.css",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\css\\export.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\amcharts.js",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\amcharts.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\custom-amchart.js",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\custom-amchart.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\export.min.js",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\export.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBig.svg",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBig.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBigH.svg",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\images\\dragIconRoundBigH.svg"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\light.js",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\light.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\amchart\\js\\serial.js",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\amchart\\js\\serial.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\dashboard\\custom-dashboard.js",
+      "PackagePath": "staticwebassets\\pages\\dashboard\\custom-dashboard.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\google-maps\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\pages\\google-maps\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\google-maps\\jquery.gmaps.js",
+      "PackagePath": "staticwebassets\\pages\\google-maps\\jquery.gmaps.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\icon-modal.js",
+      "PackagePath": "staticwebassets\\pages\\icon-modal.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\notification\\notification.css",
+      "PackagePath": "staticwebassets\\pages\\notification\\notification.css"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\notification\\notification.js",
+      "PackagePath": "staticwebassets\\pages\\notification\\notification.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\todo\\todo.js",
+      "PackagePath": "staticwebassets\\pages\\todo\\todo.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\amcharts.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\amcharts.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\amcharts.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\amcharts.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\ammap.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\ammap.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\ammap.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\ammap.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\continentsLow.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\continentsLow.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\continentsLow.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\continentsLow.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\gauge.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\gauge.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\gauge.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\gauge.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\light.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\light.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\light.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\light.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\pie.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\pie.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\pie.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\pie.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\serial.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\serial.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\serial.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\serial.min.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\worldLow.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\worldLow.js"
+    },
+    {
+      "Id": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\wwwroot\\pages\\widget\\amchart\\worldLow.min.js",
+      "PackagePath": "staticwebassets\\pages\\widget\\amchart\\worldLow.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Guru.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Guru.props",
+      "PackagePath": "build\\Guru.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Guru.props",
+      "PackagePath": "buildMultiTargeting\\Guru.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Guru.props",
+      "PackagePath": "buildTransitive\\Guru.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

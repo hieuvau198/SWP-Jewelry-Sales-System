@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|d:\\workspace\\vs\\other\\template\\new\\guru\\pages\\gurufolder\\chart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|solutionrelative:pages\\gurufolder\\chart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|d:\\workspace\\vs\\other\\template\\new\\guru\\pages\\chart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|solutionrelative:pages\\chart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|d:\\workspace\\vs\\other\\template\\new\\guru\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|d:\\workspace\\vs\\other\\template\\new\\guru\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{821E6D28-402C-426E-B6A7-5C82E3E3B459}|Guru.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "chart.cshtml",
+              "DocumentMoniker": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\guruFolder\\chart.cshtml",
+              "RelativeDocumentMoniker": "Pages\\guruFolder\\chart.cshtml",
+              "ToolTip": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\guruFolder\\chart.cshtml",
+              "RelativeToolTip": "Pages\\guruFolder\\chart.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-27T21:25:24.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "chart.cshtml",
+              "DocumentMoniker": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\chart.cshtml",
+              "RelativeDocumentMoniker": "Pages\\chart.cshtml",
+              "ToolTip": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\chart.cshtml",
+              "RelativeToolTip": "Pages\\chart.cshtml",
+              "ViewState": "AQIAAPUBAAAAAAAAAAAAABICAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-27T21:13:35.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-27T21:12:35.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\workspace\\vs\\other\\Template\\new\\Guru\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-27T21:11:34.603Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
