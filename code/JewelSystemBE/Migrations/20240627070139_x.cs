@@ -259,11 +259,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "6088939b-a0d9-4e66-a724-1e106031132f", "Some Product Id", "Some Product Name", 0 },
-                    { "6f3ddbd3-5163-493d-8c45-787297bbd39b", "Some Product Id", "Some Product Name", 0 },
-                    { "827553b0-846b-4436-b0fc-0a752ccda952", "Some Product Id", "Some Product Name", 0 },
-                    { "8ae86633-81bf-42b8-b099-583351d55c05", "Some Product Id", "Some Product Name", 0 },
-                    { "efc5ba94-6e45-4a6e-9ee5-f462658125a5", "Some Product Id", "Some Product Name", 0 }
+                    { "19ea01f5-a1d3-4dea-b2a0-ea842489a1a8", "Some Product Id", "Some Product Name", 0 },
+                    { "5049fdf0-b29b-4dd9-9fb7-63f8e857c79f", "Some Product Id", "Some Product Name", 0 },
+                    { "6cfbace2-eba1-4d92-be09-a0101743da60", "Some Product Id", "Some Product Name", 0 },
+                    { "f9e0f526-fa82-4bdd-9b86-8dde6cf29c7d", "Some Product Id", "Some Product Name", 0 },
+                    { "fd929cb1-c64c-47b7-87bb-82f3f8727da6", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -364,10 +364,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4545), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4543), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4542), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 6, 26, 0, 36, 49, 996, DateTimeKind.Local).AddTicks(4529), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1463), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1461), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1458), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 6, 27, 14, 1, 36, 528, DateTimeKind.Local).AddTicks(1436), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
@@ -551,14 +551,14 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$P4wnRQaPyQP7TRVsnAaKIOO0zGTIquRjNV710uQWaur9tJ/cQWfHS", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$i6P8dnx8diwhIn.MttXfrO1ZlaXuw2LcoIFz1458vuK3.kCqGOGTW", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$AahlB0ADnAnA6RxNkdp5MOxeFRlQ1Bbfukh3M6cgipNGxiL.yTfTW", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$M3W6s.iV/bSmImPZ7dVXaOaottm6I1DNA6FWVOY6teg5TcfQHi2OK", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$345NjDMrce4R/wWeYnhcreJ9LF9WYPdPsOUllqNvMNLn1KHJmbL4K", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$G4OSfnYEkppIOZB58klhkeSD6EIzxjosgl4Mv.CQxEaR2t92YCK0K", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$zFYjZPJZok97XXkAH4pC8u9Sa4VFdNNPtAJYmaCvMoesta6tw1Cee", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$A2cRVqV3w4LqJMmm.4jrHOeG9Te3iI4qMU3CHLO7vyQPg27mG9pea", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$2Zvk3WcwelDOAFrxAlSUJOjQLrH1M5S7O6Gc0kyZE8je35k82EP5W", "Admin", "user1" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$d3.YlTWawxIMaobnNAgFHeSEQ/pmeMPdJwpxxA5nHQo1Hxo4TPtoS", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$Vz0DakMkIY84JcoFlPm1r.FFBI3ima0U2MiOIkfT7VW8ZQIgn.dzK", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$efWiYg/Pcd9nJ1qQeNIHTOIpAzmGUpVMZPksU9.e7mjcVmOBBBdum", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$XLWp.gLa5j9BpEuBJzPv9.6P..Phxn0f8Cyz2TMCr5fOqJK2zgT/K", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$eGLcQb2LCiMCi1V8UXlu8uZvGwq/9OpDfHDWUgE40yuBCFdBDe/eW", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$zKwQuoQiB0H8NjDq/SlDI.rO05MGxq7zTC.75/.p9aElhuR1590UW", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$.E/fHwour0zqxPsfUdj5we8UtsYZ6qmia.aDJQiBSMnlVpC7G3hUS", "Sale", "user8" }
                 });
 
             migrationBuilder.InsertData(

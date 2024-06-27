@@ -19,6 +19,8 @@ using JewelSystemBE;
 using Microsoft.Extensions.FileProviders;
 using JewelSystemBE.Service.ServiceStallItem;
 using JewelSystemBE.Service.ServiceStall;
+using JewelSystemBE.VNPay;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,10 +33,11 @@ builder.Services.AddHttpClient<GoldPriceService>();//new
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.Configure<VNPaySetting>(builder.Configuration.GetSection("VNPaySetting"));
 builder.Services.AddDbContext<JewelDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("JewelDBW2"));
+   
 });
 
 // transient: create a new object every request
@@ -54,7 +57,6 @@ builder.Services.AddTransient<IInvoiceService, InvoiceService>();
 builder.Services.AddTransient<IInvoiceItemService, InvoiceItemService>();
 builder.Services.AddTransient<IStallItemService, StallItemService>();
 builder.Services.AddTransient<IStallService, StallService>();
-
 
 // Configure JWT authentication, it imports jwtbearer, token, text, model
 var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSettings>();
