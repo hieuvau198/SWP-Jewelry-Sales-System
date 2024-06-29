@@ -24,6 +24,11 @@ namespace RazorTest.Pages.Dashboard
         public string TopStaffSalesJson { get; set; }
         public string BestStaffMonthlyJson { get; set; }
 
+        public decimal TotalSales { get; set; }
+        public decimal TotalPurchases { get; set; }
+        public int TotalInvoices { get; set; }
+        public string BestStaff { get; set; }
+
         public async Task OnGetAsync()
         {
             var invoices = await _invoiceService.GetInvoicesAsync();
@@ -35,7 +40,7 @@ namespace RazorTest.Pages.Dashboard
                 .Select(g => new
                 {
                     month = $"{g.Key.Year}-{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(g.Key.Month)}",
-                    total = g.Sum(i => i.EndTotalPrice)
+                    total = g.Sum(i => (decimal)i.EndTotalPrice) // Explicit conversion to decimal
                 })
                 .ToList();
 
@@ -46,7 +51,7 @@ namespace RazorTest.Pages.Dashboard
                 .Select(g => new
                 {
                     month = $"{g.Key.Year}-{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(g.Key.Month)}",
-                    total = g.Sum(i => i.EndTotalPrice)
+                    total = g.Sum(i => (decimal)i.EndTotalPrice) // Explicit conversion to decimal
                 })
                 .ToList();
 
@@ -57,7 +62,7 @@ namespace RazorTest.Pages.Dashboard
               .Select(g => new
               {
                   staffName = g.Key,
-                  totalSales = g.Sum(i => i.EndTotalPrice)
+                  totalSales = g.Sum(i => (decimal)i.EndTotalPrice) // Explicit conversion to decimal
               })
               .OrderByDescending(s => s.totalSales)
               .ToList();
@@ -70,7 +75,7 @@ namespace RazorTest.Pages.Dashboard
                 {
                     month = $"{g.Key.Year}-{CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(g.Key.Month)}",
                     staffName = g.Key.UserFullname,
-                    totalSales = g.Sum(i => i.EndTotalPrice)
+                    totalSales = g.Sum(i => (decimal)i.EndTotalPrice) // Explicit conversion to decimal
                 })
                 .GroupBy(g => g.month)
                 .Select(g => g.OrderByDescending(s => s.totalSales).FirstOrDefault())
@@ -79,6 +84,11 @@ namespace RazorTest.Pages.Dashboard
             var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
             var yearlyPurchasesCount = invoices.Count(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase));
 
+            TotalSales = monthlySales.Sum(s => s.total);
+            TotalPurchases = monthlyPurchases.Sum(p => p.total);
+            TotalInvoices = invoices.Count;
+            BestStaff = topStaffSales.FirstOrDefault()?.staffName ?? "N/A";
+
             MonthlySalesJson = JsonSerializer.Serialize(monthlySales);
             MonthlyPurchasesJson = JsonSerializer.Serialize(monthlyPurchases);
             TopStaffSalesJson = JsonSerializer.Serialize(topStaffSales);
@@ -86,6 +96,5 @@ namespace RazorTest.Pages.Dashboard
             ViewData["YearlySalesCount"] = yearlySalesCount;
             ViewData["YearlyPurchasesCount"] = yearlyPurchasesCount;
         }
-
     }
 }

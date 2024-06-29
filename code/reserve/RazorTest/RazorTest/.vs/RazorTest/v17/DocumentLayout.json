@@ -1,49 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\",
+  "WorkspaceRootPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\selectdiscountpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\sale\\selectdiscountpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\selectdiscountpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\sale\\checkoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\sale\\checkoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\checkoutpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\template\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\template\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\template\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\workspace\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\template\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\template\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\template\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -54,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,11 +70,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Revenue.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
+              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAcwGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T09:21:58.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Revenue.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
+              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml",
+              "ViewState": "AQIAAG4BAAAAAAAAAAAAADYAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-29T09:21:54.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "CheckOutPage.cshtml.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Sale\\CheckOutPage.cshtml.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml.cs",
               "RelativeToolTip": "Pages\\Sale\\CheckOutPage.cshtml.cs",
               "ViewState": "AQIAACsAAAAAAAAAAADwvz4AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -74,11 +108,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "InvoiceDetail.cshtml",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
               "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
               "RelativeToolTip": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
               "ViewState": "AQIAABgAAAAAAAAAAAAAACkAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -86,11 +120,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Invoice.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Invoice.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Invoice.cs",
               "RelativeDocumentMoniker": "Models\\Invoice.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Invoice.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Models\\Invoice.cs",
               "RelativeToolTip": "Models\\Invoice.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAYwBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -98,24 +132,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SelectDiscountPage.cshtml",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
               "RelativeDocumentMoniker": "Pages\\Sale\\SelectDiscountPage.cshtml",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
               "RelativeToolTip": "Pages\\Sale\\SelectDiscountPage.cshtml",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFEAAAAQAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-27T09:08:48.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SelectDiscountPage.cshtml.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Sale\\SelectDiscountPage.cshtml.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml.cs",
               "RelativeToolTip": "Pages\\Sale\\SelectDiscountPage.cshtml.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAwwFIAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -123,11 +157,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SaleHomePage.cshtml.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Sale\\SaleHomePage.cshtml.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
               "RelativeToolTip": "Pages\\Sale\\SaleHomePage.cshtml.cs",
               "ViewState": "AQIAAJQAAAAAAAAAAAAwwJEAAABuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -135,11 +169,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ApiService.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "Services\\ApiService.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Services\\ApiService.cs",
               "RelativeToolTip": "Services\\ApiService.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAgwCcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,11 +181,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml",
               "RelativeToolTip": "Pages\\Index.cshtml",
               "ViewState": "AQIAAMEAAAAAAAAAAAAwwLkBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -159,11 +193,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAUwCkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -171,11 +205,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Template\\Index.cshtml.cs",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Template\\Index.cshtml.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAqwDAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -183,11 +217,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Template\\Index.cshtml",
-              "ToolTip": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Template\\Index.cshtml",
               "RelativeToolTip": "Pages\\Template\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAKEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
