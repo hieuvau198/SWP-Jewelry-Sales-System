@@ -43,6 +43,10 @@ namespace RazorTest.Pages.Authentication
                     
                     HttpContext.Session.SetObject(SessionKeyUserObject, user);
                     HttpContext.Session.SetObject(SessionKeyAuthState, true);
+
+                    // Set the ViewData["Username"] with the logged-in username
+                    ViewData["Username"] = user.Username;
+
                     return RedirectToPage("/Index");
                 }
                 HttpContext.Session.SetObject(SessionKeyAuthState, false);

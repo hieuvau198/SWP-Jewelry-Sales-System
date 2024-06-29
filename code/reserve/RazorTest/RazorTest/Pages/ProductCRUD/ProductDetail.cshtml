@@ -5,6 +5,15 @@
 }
 
 <h2 style="text-align: center;">Products</h2>
+
+<form method="get">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+        <button type="submit" style="padding: 5px 10px; background-color: #b8860b; color: white; border: none; cursor: pointer;">Search</button>
+    </div>
+</form>
+
+
 <div class="luxury-table-wrapper">
     <table class="luxury-table">
         <thead>
@@ -69,6 +78,20 @@
             }
         </tbody>
     </table>
+</div>
+<div class="pagination">
+    @if (Model.Products.HasPreviousPage)
+    {
+        <a asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Products.TotalPages; i++)
+    {
+        <a asp-page="./ProductDetail" asp-route-currentPage="@i" class="@(i == Model.Products.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Products.HasNextPage)
+    {
+        <a asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex + 1)">Next &raquo;</a>
+    }
 </div>
 
 <a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Product</a>

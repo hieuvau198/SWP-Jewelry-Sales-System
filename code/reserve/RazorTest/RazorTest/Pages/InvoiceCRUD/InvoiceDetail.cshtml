@@ -54,5 +54,19 @@
     </table>
 </div>
 
+<div class="pagination">
+    @if (Model.Invoices.HasPreviousPage)
+    {
+        <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
+    {
+        <a asp-page="./InvoiceDetail" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Invoices.HasNextPage)
+    {
+        <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+    }
+</div>
 
 <a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>

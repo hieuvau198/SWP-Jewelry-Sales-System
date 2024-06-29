@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
+using RazorTest.Pages.Authentication;
 using RazorTest.Services;
 using RazorTest.Utilities;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace RazorTest.Pages
 
             const int pageSize = 9; // Number of products per page
             Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
-            
+
             if (Products != null)
             {
                 Products = Products.OrderBy(p => p.ProductCode).ToList();
@@ -52,10 +53,6 @@ namespace RazorTest.Pages
                 Products = Products.OrderBy(p => p.ProductCode).ToList();
                 PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
             }
-            
-            
-
-
         }
 
         public bool VerifyAuth(string role)

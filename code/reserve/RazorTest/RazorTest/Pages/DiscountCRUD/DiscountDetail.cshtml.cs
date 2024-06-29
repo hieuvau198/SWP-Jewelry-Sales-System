@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,15 +17,18 @@ namespace RazorTest.Pages.DiscountCRUD
             _apiService = apiService;
         }
 
-        public List<Discount> Discounts { get; set; }
+       // public List<Discount> Discounts { get; set; }
+        public PaginatedList<Discount> Discounts { get; set; }
 
-        public async Task OnGetAsync()
+        private const int PageSize = 10;
+ 
+        public async Task OnGetAsync(int currentPage = 1)
         {
             var discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount");
 
             if (discounts != null)
             {
-                Discounts = discounts.OrderBy(d => d.DiscountId).ToList();
+                Discounts = PaginatedList<Discount>.Create(discounts.AsQueryable(), currentPage, 10);
             }
         }
     }

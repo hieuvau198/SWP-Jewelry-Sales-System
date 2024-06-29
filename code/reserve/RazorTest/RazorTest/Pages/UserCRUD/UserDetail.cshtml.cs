@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,15 +17,19 @@ namespace RazorTest.Pages.UserCRUD
             _apiService = apiService;
         }
 
-        public List<User> Users { get; set; }
+      //  public List<User> Users { get; set; }
 
-        public async Task OnGetAsync()
+        public PaginatedList<User> Users { get; set; }
+
+        public const int PageSize = 6;
+        public async Task OnGetAsync(int currentPage = 1)
         {
             var users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
 
             if (users != null)
             {
-                Users = users.OrderBy(u => u.UserId).ToList();
+                Users = PaginatedList<User>.Create(users.AsQueryable(), currentPage, 6);
+
             }
         }
     }

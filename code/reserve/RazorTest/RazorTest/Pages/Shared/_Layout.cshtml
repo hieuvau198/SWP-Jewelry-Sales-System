@@ -9,198 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <style>
-        /* Custom styles */
-        body {
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .navbar {
-            background-color: white;
-        }
-
-        .navbar-brand-container {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            flex-grow: 1;
-            margin: 0 10px;
-        }
-
-        .navbar-brand {
-            color: #8B4513;
-            margin-top: 10px;
-            font-weight: 600;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .nav-link {
-            font-size: 1.1rem;
-            color: #8B4513 !important;
-            text-align: center;
-            font-weight: 400;
-        }
-
-            .nav-link:hover {
-                color: #17a2b8;
-            }
-
-        .logo-img {
-            height: 60px;
-            margin-bottom: 0%;
-        }
-
-        .login-logout-container {
-            display: flex;
-            justify-content: flex-end;
-            margin-left: auto;
-        }
-
-        .login-logout {
-            color: #8B4513;
-            margin-left: 10px;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            border-bottom: 1px solid #D3B183;
-        }
-
-        .header-container {
-            position: relative;
-            width: 100%;
-            padding: 10px 0;
-        }
-
-        .login-logout-container {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 25px;
-        }
-
-        /* Custom styles for login panel */
-        .login-panel {
-            background-color: #f8f9fa;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-        }
-
-            .login-panel .form-group {
-                margin-bottom: 15px;
-            }
-
-            .login-panel .btn-primary {
-                background-color: #8B4513;
-                border-color: #8B4513;
-            }
-
-                .login-panel .btn-primary:hover {
-                    background-color: #6e370d;
-                    border-color: #6e370d;
-                }
-
-        /* Add border to footer if you have one */
-        footer {
-            background-color: #F5F5F5 !important; /* Màu nền của footer */
-            color: #8B4513 !important; /* Màu chữ của footer */
-            border-top: 1px solid #D3B183;
-            padding-top: 10px;
-            margin-top: auto;
-        }
-
-        /* Styles for the Gold Price page */
-        .luxury-table-wrapper {
-            display: flex;
-            justify-content: center;
-            margin: 20px auto;
-            max-width: 1000px;
-        }
-
-        .luxury-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 1em;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        }
-
-            .luxury-table th, .luxury-table td {
-                padding: 12px 15px;
-                text-align: left;
-            }
-
-            .luxury-table th {
-                background-color: #d4af37;
-                color: #ffffff;
-                font-weight: bold;
-                border: 1px solid #b8860b;
-            }
-
-            .luxury-table td {
-                border: 1px solid #b8860b;
-            }
-
-            .luxury-table tbody tr:nth-of-type(odd) {
-                background-color: #f9f9f9;
-            }
-
-            .luxury-table tbody tr:nth-of-type(even) {
-                background-color: #ffffff;
-            }
-
-            .luxury-table tbody tr:hover {
-                background-color: #f4e5c2;
-            }
-
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-            .pagination a {
-                margin: 0 5px;
-                padding: 8px 16px;
-                text-decoration: none;
-                background-color: #d4af37;
-                color: #ffffff;
-                border-radius: 5px;
-                transition: background-color 0.3s ease;
-            }
-
-                .pagination a.active {
-                    background-color: #b8860b;
-                }
-
-                .pagination a:hover {
-                    background-color: #b8860b;
-                }
-
-        .title, .message, .customer-title {
-            text-align: left;
-            margin-left: 20px;
-        }
-    </style>
 </head>
 <body>
     <header class="header-container">
@@ -209,6 +17,12 @@
                 @if (Accessor.HttpContext.Session.GetObject<bool>("_AuthState") != null
                 && Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
                 {
+                    var user = Accessor.HttpContext.Session.GetObject<User>("_UserObject");
+                    if (user != null)
+                    {
+                        <span class="navbar-text user-role">Hello, @user.Role</span>
+                    }
+
                     <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
                 }
                 else
@@ -248,6 +62,7 @@
     @* Optional footer *@
     <footer class="footer">
         <div class="container">
+            <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
             <p class="text-center">© 2024 Your Company. All rights reserved.</p>
         </div>
     </footer>

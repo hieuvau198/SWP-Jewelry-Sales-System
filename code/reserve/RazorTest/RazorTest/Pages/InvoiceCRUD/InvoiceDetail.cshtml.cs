@@ -21,17 +21,21 @@ namespace RazorTest.Pages.InvoiceCRUD
             _apiService = apiService;
         }
 
-        public List<Invoice> Invoices { get; set; }
+      //  public List<Invoice> Invoices { get; set; }
         public User User { get; set; }
 
+        public PaginatedList<Invoice> Invoices { get; set; }
 
-        public async Task OnGetAsync()
+        private const int PageSize = 10;
+
+        public async Task OnGetAsync(int currentPage = 1)
         {
             var invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
 
             if (invoices != null)
             {
-                Invoices = invoices.OrderBy(c => c.InvoiceDate).ToList();
+                Invoices = PaginatedList<Invoice>.Create(invoices.AsQueryable(), currentPage, 10);
+
             }
         }
         public bool VerifyAuth(string role)

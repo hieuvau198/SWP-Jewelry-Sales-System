@@ -36,6 +36,22 @@
         </tbody>
     </table>
 </div>
+
+<div class="pagination">
+    @if (Model.Customers.HasPreviousPage)
+    {
+        <a asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Customers.TotalPages; i++)
+    {
+        <a asp-page="./CustomerDetail" asp-route-currentPage="@i" class="@(i == Model.Customers.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Customers.HasNextPage)
+    {
+        <a asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex + 1)">Next &raquo;</a>
+    }
+</div>
+
 <a asp-page="Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Customer</a>
 <a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>
 

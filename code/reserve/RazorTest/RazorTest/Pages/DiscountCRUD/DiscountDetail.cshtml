@@ -38,5 +38,21 @@
         </tbody>
     </table>
 </div>
+
+<div class="pagination">
+    @if (Model.Discounts.HasPreviousPage)
+    {
+        <a asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Discounts.TotalPages; i++)
+    {
+        <a asp-page="./DiscountDetail" asp-route-currentPage="@i" class="@(i == Model.Discounts.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Discounts.HasNextPage)
+    {
+        <a asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex + 1)">Next &raquo;</a>
+    }
+</div>
+
 <a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Discount</a>
 <a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>

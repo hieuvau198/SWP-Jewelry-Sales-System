@@ -5,6 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using RazorTest.Models;
 using RazorTest.Services;
 using RazorTest.Utilities;
+using System.Drawing.Printing;
 
 namespace RazorTest.Pages.Buy
 {
@@ -49,8 +50,9 @@ namespace RazorTest.Pages.Buy
         public List<InvoiceItem> BuyInvoiceItemList { get; set; }
         public string Message { get; set; }
 
+        public PaginatedList<Invoice> PaginatedBuyInvoiceList { get; set; }
 
-        public async Task OnGet()
+        public async Task OnGet(int pageIndex = 1, int pageSize = 6)
         {
             //Get Data For Invoice on each Redirection
                 InvoiceList = HttpContext.Session.GetObject<List<Invoice>>(SessionKeyInvoiceList)
@@ -73,61 +75,67 @@ namespace RazorTest.Pages.Buy
 
             //Test Message
                 Message = HttpContext.Session.GetString(SessionKeyMessage) ?? "Not Yet";
+
+            // Paginate the filtered list if BuyInvoiceList is not null
+            if (BuyInvoiceList != null)
+            {
+                PaginatedBuyInvoiceList = PaginatedList<Invoice>.Create(BuyInvoiceList.AsQueryable(), pageIndex, pageSize);
+            }
         }
 
-        public async Task<IActionResult> OnPostSearch(string buyInvoiceSearch, string buyCustomerSearch)
+        public async Task<IActionResult> OnPostSearch(string buyInvoiceSearch, string buyCustomerSearch, int pageIndex = 1, int pageSize = 6)
         {
-            //Set data for search value
-                if (string.IsNullOrEmpty(buyInvoiceSearch))
-                { 
-                    buyInvoiceSearch = ""; 
-                }
-                if (string.IsNullOrEmpty(buyCustomerSearch))
-                { 
-                    buyCustomerSearch = ""; 
-                }
+            // Set data for search value
+            buyInvoiceSearch ??= "";
+            buyCustomerSearch ??= "";
 
-                HttpContext.Session.SetString(SessionKeyBuyInvoiceSearch, buyInvoiceSearch);
-                HttpContext.Session.SetString(SessionKeyBuyCustomerSearch, buyCustomerSearch);
+            HttpContext.Session.SetString(SessionKeyBuyInvoiceSearch, buyInvoiceSearch);
+            HttpContext.Session.SetString(SessionKeyBuyCustomerSearch, buyCustomerSearch);
 
-            //Get Invoice List, Customer List from Session or API
-                InvoiceList = HttpContext.Session.GetObject<List<Invoice>>(SessionKeyInvoiceList)
-                    ?? await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
-                CustomerList = HttpContext.Session.GetObject<List<Customer>>(SessionKeyCustomerList)
-                    ?? await _apiService.GetAsync<List<Customer>>(UrlCustomer);
-                BuyInvoiceList = new List<Invoice>();
+            // Get Invoice List, Customer List from Session or API
+            InvoiceList = HttpContext.Session.GetObject<List<Invoice>>(SessionKeyInvoiceList)
+                          ?? await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
+            CustomerList = HttpContext.Session.GetObject<List<Customer>>(SessionKeyCustomerList)
+                           ?? await _apiService.GetAsync<List<Customer>>(UrlCustomer);
+            BuyInvoiceList = new List<Invoice>();
 
-            //Set Data If client search for InvoiceId 
-                if (!buyInvoiceSearch.Equals(""))
+            // Search by InvoiceId
+            if (!string.IsNullOrEmpty(buyInvoiceSearch))
+            {
+                foreach (var invoice in InvoiceList)
                 {
-                    Invoice invoice = InvoiceList.Find(x => x.InvoiceId == buyInvoiceSearch);
-                    if(invoice != null 
-                        && invoice.InvoiceStatus.Equals("Complete")
-                        && invoice.InvoiceType.Equals("Sale"))
+                    if (invoice.InvoiceId.Contains(buyInvoiceSearch, StringComparison.OrdinalIgnoreCase)
+                        && invoice.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase)
+                        && invoice.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
                     {
                         BuyInvoiceList.Add(invoice);
                     }
                 }
-                if(!buyCustomerSearch.Equals(""))
-                {
-                    Customer customer = CustomerList.Find(x => x.CustomerPhone == buyCustomerSearch);
-                    if(customer != null)
-                    {
-                        foreach(var invoice in InvoiceList)
-                        {
-                            if(invoice.CustomerId.Equals(customer.CustomerId) 
-                                && invoice.InvoiceStatus.Equals("Complete")
-                                && invoice.InvoiceType.Equals("Sale"))
-                            {
-                                BuyInvoiceList.Add(invoice);
-                            }
-                        }
-                    }
-                }
-                HttpContext.Session.SetObject(SessionKeyBuyInvoiceList, BuyInvoiceList);
+            }
 
-            return RedirectToPage();
-        }
+            // Search by CustomerPhone
+            if (!string.IsNullOrEmpty(buyCustomerSearch))
+            {
+                var matchedCustomers = CustomerList.Where(x => x.CustomerPhone.Contains(buyCustomerSearch, StringComparison.OrdinalIgnoreCase)).ToList();
+
+                foreach (var customer in matchedCustomers)
+                {
+                    var customerInvoices = InvoiceList.Where(x => x.CustomerId.Equals(customer.CustomerId)
+                                                                && x.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase)
+                                                                && x.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
+
+                    BuyInvoiceList.AddRange(customerInvoices);
+                }
+            }
+            // Paginate the filtered list
+            PaginatedBuyInvoiceList = PaginatedList<Invoice>.Create(BuyInvoiceList.AsQueryable(), pageIndex, pageSize);
+
+            // Store paginated list in session
+            HttpContext.Session.SetObject(SessionKeyBuyInvoiceList, BuyInvoiceList);
+            
+            return RedirectToPage(new { pageIndex }); // Redirect back to the page with current page index
+    }
+
 
         public async Task<IActionResult> OnPostSelectInvoice(string buyInvoiceId)
         {

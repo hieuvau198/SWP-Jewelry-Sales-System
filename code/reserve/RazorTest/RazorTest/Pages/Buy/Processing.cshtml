@@ -89,6 +89,30 @@
             .search-form button:hover {
                 background-color: #45a049; /* Màu nền khi hover */
             }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #d4af37;
+            color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .pagination a.active {
+                background-color: #b8860b;
+            }
+
+            .pagination a:hover {
+                background-color: grey;
+            }
 </style>
 
 <div class="container">
@@ -108,13 +132,12 @@
             </div>
         </div>
         <br />
-        
-    </form>
 
+    </form>
 </div>
 
 <div>
-    @if (Model.BuyInvoiceList != null && Model.BuyInvoiceList.Any())
+    @if (Model.PaginatedBuyInvoiceList != null && Model.PaginatedBuyInvoiceList.Any())
     {
         <div class="container">
             <h3 style="margin-top: 20px;">Search Results</h3>
@@ -132,7 +155,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var invoice in Model.BuyInvoiceList)
+                @foreach (var invoice in Model.PaginatedBuyInvoiceList)
                 {
                     <tr>
                         <td>@invoice.InvoiceId</td>
@@ -150,6 +173,21 @@
                 }
             </tbody>
         </table>
+
+        <div class="pagination">
+            @if (Model.PaginatedBuyInvoiceList.HasPreviousPage)
+            {
+                <a asp-page="./Processing" asp-route-pageIndex="@(Model.PaginatedBuyInvoiceList.PageIndex - 1)" class="w3-button">&laquo; Previous</a>
+            }
+            @for (int i = 1; i <= Model.PaginatedBuyInvoiceList.TotalPages; i++)
+            {
+                <a asp-page="./Processing" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedBuyInvoiceList.PageIndex ? "w3-grey" : "")">@i</a>
+            }
+            @if (Model.PaginatedBuyInvoiceList.HasNextPage)
+            {
+                <a asp-page="./Processing" asp-route-pageIndex="@(Model.PaginatedBuyInvoiceList.PageIndex + 1)" class="w3-button">Next &raquo;</a>
+            }
+        </div>
     }
     else if (Model.BuyInvoiceList != null)
     {
@@ -158,9 +196,6 @@
         </div>
     }
 </div>
-
-
-
 
 <form method="get" action="/Index" style="text-align: center;">
     <input type="hidden" name="Back" value="/Index" />

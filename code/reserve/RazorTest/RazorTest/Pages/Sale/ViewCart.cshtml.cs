@@ -51,7 +51,7 @@ namespace RazorTest.Pages.Sale
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
 
-        public const int PageSize = 3; // Number of products per page
+        public const int PageSize = 6; // Number of products per page
 
         public async Task OnGetAsync(int currentPage = 1)
         {
