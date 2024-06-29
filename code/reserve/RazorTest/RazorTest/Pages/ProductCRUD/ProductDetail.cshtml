@@ -6,9 +6,66 @@
 
 <h2 style="text-align: center;">Products</h2>
 
+@{
+    var typeOptions = new List<string> { "All", "Ring", "Necklace", "Bracelet", "Earrings" };
+    var gemOptions = new List<string> { "All", "Ruby", "Sapphire", "Emerald", "Cabochon", "Diamond" };
+    var goldOptions = new List<string> { "All", "24K", "18K", "14K", "10K"};
+}
+
+
 <form method="get">
     <div style="text-align: center; margin-bottom: 20px;">
+
         <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+        <label>Type</label>
+
+        <select name="filterType">
+            @foreach (var option in typeOptions)
+            {
+                if(option.Equals(Model.FilterType))
+                {
+                    <option value="@option" selected>@option</option>
+                }else{
+                    <option value="@option">@option</option>
+                }
+                
+            }
+        </select>
+
+        <label>Gemstone</label>
+        <select name="filterGem">
+            @foreach (var option in gemOptions)
+            {
+                if (option.Equals(Model.FilterGem))
+                {
+                    <option value="@option" selected>@option</option>
+                }
+                else
+                {
+                    <option value="@option">@option</option>
+                }
+
+            }
+        </select>
+
+        <label>Gold</label>
+        <select name="filterGold">
+            @foreach (var option in goldOptions)
+            {
+                if (option.Equals(Model.FilterGold))
+                {
+                    <option value="@option" selected>@option</option>
+                }
+                else
+                {
+                    <option value="@option">@option</option>
+                }
+
+            }
+        </select>
+
+        
+
         <button type="submit" style="padding: 5px 10px; background-color: #b8860b; color: white; border: none; cursor: pointer;">Search</button>
     </div>
 </form>

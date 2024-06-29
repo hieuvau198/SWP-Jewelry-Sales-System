@@ -28,20 +28,54 @@ namespace RazorTest.Pages.ProductCRUD
         public PaginatedList<Product> Products { get; set; }
 
         public string SearchTerm { get; set; }
+        public string FilterType { get; set; } = "All";
+        public string FilterGem { get; set; } = "All";
+        public string FilterGold { get; set; } = "All";
+        
 
         private const int PageSize = 10;
-        public async Task OnGetAsync(string searchTerm ,int currentPage = 1)
+        public async Task OnGetAsync(string searchTerm, string filterType, string filterGem, string filterGold, int currentPage = 1)
         {
-            SearchTerm = searchTerm;
+            // Set some vars
+                SearchTerm = searchTerm;
+                if(!string.IsNullOrEmpty(filterType))
+                {
+                    FilterType = filterType;
+                }
+                if (!string.IsNullOrEmpty(filterGem))
+                {
+                    FilterGem = filterGem;
+                }
+                if (!string.IsNullOrEmpty(filterGold))
+                {
+                    FilterGold = filterGold;
+                }
+
 
             var products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
             
-            // Filter products based on the search term
+            // Filter products based on string filterType, filterGem, filterGold
+                if(!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))
+                {
+                    products = products.Where(p => 
+                        (p.ProductType != null && p.ProductType.Contains(filterType))).ToList();
+                }
+                if (!string.IsNullOrEmpty(filterGem) && !filterGem.Equals("All"))
+                {
+                    products = products.Where(p =>
+                        (p.GemName != null && p.GemName.Contains(filterGem))).ToList();
+                }
+                if (!string.IsNullOrEmpty(filterGold) && !filterGold.Equals("All"))
+                {
+                    products = products.Where(p =>
+                        (p.GoldName != null && p.GoldName.Contains(filterGold))).ToList();
+                }
+            // Search products based on string searchTerm
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 products = products.Where(p =>
-                    (p.ProductCode != null && p.ProductCode.Contains(searchTerm)) ||
-                    (p.ProductName != null && p.ProductName.Contains(searchTerm)) ||
+                    (p.ProductCode != null && p.ProductCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (p.ProductName != null && p.ProductName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
                     (p.ProductQuantity.ToString().Contains(searchTerm)) ||
                     (p.ProductType != null && p.ProductType.Contains(searchTerm)) ||
                     (p.ProductWarranty.ToString().Contains(searchTerm)) ||
