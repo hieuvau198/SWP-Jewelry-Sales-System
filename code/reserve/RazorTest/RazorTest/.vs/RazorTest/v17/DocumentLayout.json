@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\",
+  "WorkspaceRootPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\productcrud\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\productcrud\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\productcrud\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\productcrud\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\productcrud\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\productcrud\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,11 +34,37 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Revenue.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
+              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAAGUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T05:18:44.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Revenue.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
+              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAAAN4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-30T05:18:24.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProductDetail.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
               "RelativeToolTip": "Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAQwCEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -39,11 +73,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductDetail.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml",
+              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml",
               "RelativeDocumentMoniker": "Pages\\ProductCRUD\\ProductDetail.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml",
+              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml",
               "RelativeToolTip": "Pages\\ProductCRUD\\ProductDetail.cshtml",
               "ViewState": "AQIAADgAAAAAAAAAAAAwwEIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

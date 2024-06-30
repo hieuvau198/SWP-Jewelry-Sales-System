@@ -24,6 +24,11 @@ namespace RazorTest.Pages.Dashboard
         public string TopStaffSalesJson { get; set; }
         public string BestStaffMonthlyJson { get; set; }
 
+        public double TotalSales { get; set; }
+        public double TotalPurchases { get; set; }
+        public int TotalInvoices { get; set; }
+        public string BestStaff { get; set; }
+
         public async Task OnGetAsync()
         {
             var invoices = await _invoiceService.GetInvoicesAsync();
@@ -78,6 +83,11 @@ namespace RazorTest.Pages.Dashboard
 
             var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
             var yearlyPurchasesCount = invoices.Count(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase));
+
+            TotalSales = monthlySales.Sum(s => s.total);
+            TotalPurchases = monthlyPurchases.Sum(p => p.total);
+            TotalInvoices = invoices.Count;
+            BestStaff = topStaffSales.FirstOrDefault()?.staffName ?? "N/A";
 
             MonthlySalesJson = JsonSerializer.Serialize(monthlySales);
             MonthlyPurchasesJson = JsonSerializer.Serialize(monthlyPurchases);
