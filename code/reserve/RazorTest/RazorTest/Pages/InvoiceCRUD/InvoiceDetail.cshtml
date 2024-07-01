@@ -18,6 +18,7 @@
                 <th>Total Price (VND)</th>
                 <th>Status</th>
                 <th>Actions</th>
+                <th>View</th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +48,12 @@
                             <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Confirm Payment</a>
                             <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Cancel Order</a>
                         }
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="ViewDetail">
+                            <input type="hidden" name="invoiceId" value="@invoice.InvoiceId"/>
+                            <button type="submit">Detail</button>
+                        </form>
                     </td>
                 </tr>
             }

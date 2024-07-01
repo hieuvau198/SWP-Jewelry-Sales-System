@@ -62,13 +62,18 @@ namespace RazorTest.Pages.InvoiceCRUD
             _logger.LogInformation($"Invoice details: {JsonConvert.SerializeObject(Invoice)}");
             if(HttpContext.Session.GetObject<bool>(SessionKeyAuthState))
             {
-                if(HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals("Manager"))
+                User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+                if (user != null && user.Role.Equals("Manager"))
                 {
                     Invoice.InvoiceStatus = "Processing Payment";
+                    Invoice.ManagerId = user.UserId;
+                    Invoice.ManagerFullname = user.Fullname;
                 }
-                else if(HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals("Cashier"))
+                else if(user != null && user.Role.Equals("Cashier"))
                 {
                     Invoice.InvoiceStatus = "Complete";
+                    Invoice.CashierId = user.UserId;
+                    Invoice.CashierFullname = user.Fullname;
                 }
             }
             

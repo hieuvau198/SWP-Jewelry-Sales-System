@@ -224,6 +224,12 @@ namespace RazorTest.Pages.Sale
                 double customerVoucher = 0;
                 string userId = "Some User ID";
                 string userFullname = "Some User Full Name";
+                string managerId = "Not yet";
+                string managerFullname = "Not yet";
+                string cashierId = "Not yet";
+                string cashierFullname = "Not yet";
+                string stallId = "Not yet";
+                string stallName = "Not yet";
                 string invoiceId;
                 string invoiceOrderType = "Sale";
                 string invoiceStatus = "Pending";
@@ -253,41 +259,6 @@ namespace RazorTest.Pages.Sale
                 invoiceId = savedInvoice.InvoiceId;
             }
 
-            /*
-                if (invoiceItems != null)
-                {
-                    List<InvoiceItem> tempInvoiceItems = new List<InvoiceItem>();
-                    foreach (var item in invoiceItems)
-                    {
-                        Product product = cart.Find(x => x.ProductId == item.ProductId);
-                        if (product != null)
-                        {
-                            item.UnitPrice = product.UnitPrice;
-                            item.Quantity = product.ProductQuantity;
-                            item.TotalPrice = product.TotalPrice;
-                        
-                        }
-                        Discount discount = discounts.Find(x => x.ProductId == item.ProductId);
-                        if(discount != null && discount.DiscountRate > 0)
-                        {
-                            item.DiscountId = discount.DiscountId;
-                            item.DiscountRate = discount.DiscountRate;
-                            item.EndTotalPrice = (1 - discount.DiscountRate) * item.TotalPrice;
-                            invoiceTotalPrice += item.TotalPrice;
-                            invoiceEndTotalPrice += item.EndTotalPrice;
-                        }
-                        else
-                        {
-                            item.EndTotalPrice = item.TotalPrice;
-                            invoiceTotalPrice += item.TotalPrice;
-                            invoiceEndTotalPrice += item.EndTotalPrice;
-                        }
-                        tempInvoiceItems.Add(item);
-                    }
-                    HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, tempInvoiceItems);
-                }
-            */
-
             // Set Sale Invoice Object
 
                 SaleInvoiceObject.InvoiceId = invoiceId;
@@ -299,6 +270,12 @@ namespace RazorTest.Pages.Sale
                 SaleInvoiceObject.InvoiceType = invoiceOrderType;
                 SaleInvoiceObject.UserId = userId;
                 SaleInvoiceObject.UserFullname = userFullname;
+                SaleInvoiceObject.ManagerId = managerId;
+                SaleInvoiceObject.ManagerFullname = managerFullname;
+                SaleInvoiceObject.CashierId = cashierId;
+                SaleInvoiceObject.CashierFullname = cashierFullname;
+                SaleInvoiceObject.StallId = stallId;
+                SaleInvoiceObject.StallName = stallName;
 
                 HttpContext.Session.SetObject(SessionKeySaleInvoiceObject, SaleInvoiceObject);
 

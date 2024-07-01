@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\invoicecrud\\invoicedetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\invoicedetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\github\\swp\\swp-jewelry-sales-system\\code\\reserve\\razortest\\razortest\\pages\\productcrud\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\productcrud\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\invoicecrud\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\pages\\productcrud\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\productcrud\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\invoicecrud\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\invoicecrud\\viewdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\viewdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\sale\\viewcart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewcart.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\pages\\invoicecrud\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\invoicecrud\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor3\\razortest\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +50,107 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Revenue.cshtml.cs",
-              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml.cs",
-              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml.cs",
-              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAAAGUAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\InvoiceCRUD\\Edit.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAwwHoAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-01T02:05:25.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ViewCart.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\Sale\\ViewCart.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Sale\\ViewCart.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\Sale\\ViewCart.cshtml.cs",
+              "RelativeToolTip": "Pages\\Sale\\ViewCart.cshtml.cs",
+              "ViewState": "AQIAABMBAAAAAAAAAAAwwBABAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T05:18:44.322Z",
+              "WhenOpened": "2024-07-01T01:47:33.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewDetail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\ViewDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\ViewDetail.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\ViewDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\InvoiceCRUD\\ViewDetail.cshtml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwCkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T01:04:33.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ViewDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\ViewDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\ViewDetail.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\ViewDetail.cshtml",
+              "RelativeToolTip": "Pages\\InvoiceCRUD\\ViewDetail.cshtml",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAwwB4AAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-01T01:04:29.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InvoiceDetail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T01:01:32.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Revenue.cshtml",
-              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml",
-              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
-              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml",
-              "ViewState": "AQIAAJoAAAAAAAAAAAAAAN4AAAAkAAAA",
+              "Title": "InvoiceDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
+              "RelativeToolTip": "Pages\\InvoiceCRUD\\InvoiceDetail.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T05:18:24.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductDetail.cshtml.cs",
-              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
-              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
-              "RelativeToolTip": "Pages\\ProductCRUD\\ProductDetail.cshtml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwCEAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T11:13:15.531Z",
+              "WhenOpened": "2024-07-01T00:59:00.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductDetail.cshtml",
-              "DocumentMoniker": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml",
-              "RelativeDocumentMoniker": "Pages\\ProductCRUD\\ProductDetail.cshtml",
-              "ToolTip": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\Pages\\ProductCRUD\\ProductDetail.cshtml",
-              "RelativeToolTip": "Pages\\ProductCRUD\\ProductDetail.cshtml",
-              "ViewState": "AQIAADgAAAAAAAAAAAAwwEIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T11:05:21.159Z"
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\InvoiceCRUD\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Pages\\InvoiceCRUD\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\InvoiceCRUD\\Edit.cshtml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAswEUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T00:56:05.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "Models\\Invoice.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\Models\\Invoice.cs",
+              "RelativeToolTip": "Models\\Invoice.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T00:52:50.737Z",
+              "EditorCaption": ""
             }
           ]
         }

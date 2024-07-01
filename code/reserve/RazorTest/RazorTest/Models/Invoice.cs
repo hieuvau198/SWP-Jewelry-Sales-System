@@ -19,6 +19,12 @@ namespace RazorTest.Models
         [Required]
         public string UserId { get; set; }
         public string UserFullname { get; set; } = "Some User Fullname";
+        public string ManagerId { get; set; } = "Not yet";
+        public string ManagerFullname { get; set; } = "Not yet";
+        public string CashierId { get; set; } = "Not yet";
+        public string CashierFullname { get; set; } = "Not yet";
+        public string StallId { get; set; } = "Not yet";
+        public string StallName { get; set; } = "Not yet";
         [Required]
         public DateTime InvoiceDate { get; set; }
 

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -13,6 +14,10 @@ namespace RazorTest.Pages.InvoiceCRUD
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyCustomerObject = "_CustomerObject";
+        public const string SessionKeyInvoiceList = "_InvoiceList";
+        public const string SessionKeyViewDetailInvoiceObject = "_InvoiceViewDetail";
+
+        public const string UrlInvoice = "http://localhost:5071/api/invoice";
 
         private readonly ApiService _apiService;
 
@@ -30,13 +35,29 @@ namespace RazorTest.Pages.InvoiceCRUD
 
         public async Task OnGetAsync(int currentPage = 1)
         {
-            var invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
-
+            List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
             if (invoices != null)
             {
+                invoices = invoices.OrderByDescending(x => x.InvoiceDate).ToList();
                 Invoices = PaginatedList<Invoice>.Create(invoices.AsQueryable(), currentPage, 10);
-
             }
+
+        }
+
+        public async Task<IActionResult> OnPostViewDetail(string invoiceId)
+        {
+            List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
+
+            if (invoiceId != null && invoices != null)
+            {
+                Invoice invoice = invoices.Find(x => x.InvoiceId == invoiceId);
+                HttpContext.Session.SetObject(SessionKeyViewDetailInvoiceObject, invoice);
+            }
+            else
+            {
+                return RedirectToPage();
+            }
+            return RedirectToPage("./ViewDetail");
         }
         public bool VerifyAuth(string role)
         {

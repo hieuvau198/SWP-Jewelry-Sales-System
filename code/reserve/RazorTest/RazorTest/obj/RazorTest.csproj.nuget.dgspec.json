@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\RazorTest.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\RazorTest.csproj": {}
   },
   "projects": {
-    "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\RazorTest.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\RazorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\RazorTest.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\RazorTest.csproj",
         "projectName": "RazorTest",
-        "projectPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\RazorTest.csproj",
-        "packagesPath": "C:\\Users\\phamd\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\SWP\\SWP-Jewelry-Sales-System\\code\\reserve\\RazorTest\\RazorTest\\obj\\",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\RazorTest.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\phamd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
