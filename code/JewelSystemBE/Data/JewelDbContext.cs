@@ -20,6 +20,7 @@ namespace JewelSystemBE.Data
         public DbSet<InvoiceItem> InvoiceItems { get; set; }
         public DbSet<Stall> Stalls { get; set; }
         public DbSet<StallItem> StallItems { get; set; }
+        public DbSet<StallEmployee> StallEmployees { get; set; }
 
         public DbSet<ImageRecord> ImageRecords { get; set; }
 
@@ -55,7 +56,17 @@ namespace JewelSystemBE.Data
                     new User { UserId = "US5", Username = "user5", Password = BCrypt.Net.BCrypt.HashPassword("password5"), Fullname = "Theodore Garcia", Email = "theodore@gmail.com", Role = "Cashier" },
                     new User { UserId = "US6", Username = "user6", Password = BCrypt.Net.BCrypt.HashPassword("password6"), Fullname = "Isabel Rodriguez", Email = "isabel@gmail.com", Role = "Sale" },
                     new User { UserId = "US7", Username = "user7", Password = BCrypt.Net.BCrypt.HashPassword("password7"), Fullname = "Luna Taylor", Email = "luna@gmail.com", Role = "Sale" },
-                    new User { UserId = "US8", Username = "user8", Password = BCrypt.Net.BCrypt.HashPassword("password8"), Fullname = "Emma Young", Email = "emma@gmail.com", Role = "Sale" }
+                    new User { UserId = "US8", Username = "user8", Password = BCrypt.Net.BCrypt.HashPassword("password8"), Fullname = "Emma Young", Email = "emma@gmail.com", Role = "Sale" },
+                    new User { UserId = "US9", Username = "user9", Password = BCrypt.Net.BCrypt.HashPassword("password9"), Fullname = "Ava Davis", Email = "ava@gmail.com", Role = "Cashier" },
+                    new User { UserId = "US10", Username = "user10", Password = BCrypt.Net.BCrypt.HashPassword("password10"), Fullname = "Sophia Wilson", Email = "sophia@gmail.com", Role = "Cashier" },
+                    new User { UserId = "US11", Username = "user11", Password = BCrypt.Net.BCrypt.HashPassword("password11"), Fullname = "Charlotte Brown", Email = "charlotte@gmail.com", Role = "Cashier" },
+                    new User { UserId = "US12", Username = "user12", Password = BCrypt.Net.BCrypt.HashPassword("password12"), Fullname = "Amelia Jones", Email = "amelia@gmail.com", Role = "Cashier" },
+                    new User { UserId = "US13", Username = "user13", Password = BCrypt.Net.BCrypt.HashPassword("password13"), Fullname = "Mia Anderson", Email = "mia@gmail.com", Role = "Sale" },
+                    new User { UserId = "US14", Username = "user14", Password = BCrypt.Net.BCrypt.HashPassword("password14"), Fullname = "Harper Thomas", Email = "harper@gmail.com", Role = "Sale" },
+                    new User { UserId = "US15", Username = "user15", Password = BCrypt.Net.BCrypt.HashPassword("password15"), Fullname = "Evelyn White", Email = "evelyn@gmail.com", Role = "Sale" },
+                    new User { UserId = "US16", Username = "user16", Password = BCrypt.Net.BCrypt.HashPassword("password16"), Fullname = "Abigail Harris", Email = "abigail@gmail.com", Role = "Sale" },
+                    new User { UserId = "US17", Username = "user17", Password = BCrypt.Net.BCrypt.HashPassword("password17"), Fullname = "Ella Clark", Email = "ella@gmail.com", Role = "Sale" },
+                    new User { UserId = "US18", Username = "user18", Password = BCrypt.Net.BCrypt.HashPassword("password18"), Fullname = "Avery Lewis", Email = "avery@gmail.com", Role = "Sale" }
                 );
             });
 
@@ -2106,47 +2117,47 @@ namespace JewelSystemBE.Data
                 entity.HasData(
                     new Stall
                     {
-                        StallId = "S1",
-                        UserId = "US3",
-                        StaffName = "1",
-                        StallDescription = "1",
-                        StallName = "Ring",
+                        StallId = "ST01",
+                        UserId = "US2",
+                        StaffName = "Olivia Miller",
+                        StallDescription = "Not yet",
+                        StallName = "Stall A",
                         StallType = "Ring"
                     },
                     new Stall
                     {
-                        StallId = "S2",
-                        UserId = "US4",
-                        StaffName = "1",
-                        StallDescription = "1",
-                        StallName = "Bracelet",
+                        StallId = "ST02",
+                        UserId = "US2",
+                        StaffName = "Olivia Miller",
+                        StallDescription = "Not Yet",
+                        StallName = "Stall B",
                         StallType = "Bracelet"
                     },
                     new Stall
                     {
-                        StallId = "S3",
-                        UserId = "US6",
-                        StaffName = "1",
-                        StallDescription = "1",
-                        StallName = "Necklace",
+                        StallId = "ST03",
+                        UserId = "US2",
+                        StaffName = "Olivia Miller",
+                        StallDescription = "Not Yet",
+                        StallName = "Stall C",
                         StallType = "Necklace"
                     },
                     new Stall
                     {
-                        StallId = "S4",
-                        UserId = "US7",
-                        StaffName = "1",
-                        StallDescription = "1",
-                        StallName = "Earring",
+                        StallId = "ST04",
+                        UserId = "US2",
+                        StaffName = "Olivia Miller",
+                        StallDescription = "Not Yet",
+                        StallName = "Stall D",
                         StallType = "Earring"
                     },
                     new Stall
                     {
-                        StallId = "S5",
-                        UserId = "US8",
-                        StaffName = "1",
-                        StallDescription = "1",
-                        StallName = "Anklet",
+                        StallId = "ST05",
+                        UserId = "US2",
+                        StaffName = "Olivia Miller",
+                        StallDescription = "Not Yet",
+                        StallName = "Stall E",
                         StallType = "Anklet"
                     }
                     );
@@ -2160,6 +2171,145 @@ namespace JewelSystemBE.Data
                     new StallItem { },
                     new StallItem { },
                     new StallItem { }
+                    );
+            });
+
+            modelBuilder.Entity<StallEmployee>(entity => 
+            {
+                entity.HasData(
+                    // Stall A, US3 US7 US9 US18
+                    new StallEmployee { 
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        EmployeeId = "US3",
+                        EmployeeFullname = "James Martinez",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        EmployeeId = "US7",
+                        EmployeeFullname = "Luna Taylor",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        EmployeeId = "US9",
+                        EmployeeFullname = "Ava Davis",
+                        Role = "Cashier"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        EmployeeId = "US18",
+                        EmployeeFullname = "Avery Lewis",
+                        Role = "Sale"
+                    },
+                    // Stall B, US13 US10 US8 US15 US16
+                    new StallEmployee
+                    {
+                        StallId = "ST02",
+                        StallName = "Stall B",
+                        EmployeeId = "US13",
+                        EmployeeFullname = "Mia Anderson",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST02",
+                        StallName = "Stall B",
+                        EmployeeId = "US10",
+                        EmployeeFullname = "Sophia Wilson",
+                        Role = "Cashier"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST02",
+                        StallName = "Stall B",
+                        EmployeeId = "US8",
+                        EmployeeFullname = "Emma Young",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST02",
+                        StallName = "Stall B",
+                        EmployeeId = "US15",
+                        EmployeeFullname = "Evelyn White",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST02",
+                        StallName = "Stall B",
+                        EmployeeId = "US16",
+                        EmployeeFullname = "Abigail Harris",
+                        Role = "Sale"
+                    },
+                    // Stall C, US4 US11 US17
+                    new StallEmployee
+                    {
+                        StallId = "ST03",
+                        StallName = "Stall C",
+                        EmployeeId = "US4",
+                        EmployeeFullname = "Mateo Martinez",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST03",
+                        StallName = "Stall C",
+                        EmployeeId = "US11",
+                        EmployeeFullname = "Charlotte Brown",
+                        Role = "Cashier"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST03",
+                        StallName = "Stall C",
+                        EmployeeId = "US17",
+                        EmployeeFullname = "Ella Clark",
+                        Role = "Sale"
+                    },
+                    // Stall D, US14 US5
+                    new StallEmployee
+                    {
+                        StallId = "ST04",
+                        StallName = "Stall D",
+                        EmployeeId = "US14",
+                        EmployeeFullname = "Harper Thomas",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST04",
+                        StallName = "Stall D",
+                        EmployeeId = "US5",
+                        EmployeeFullname = "Theodore Garcia",
+                        Role = "Cashier"
+                    },
+                    // Stall E, US6 US12
+                    new StallEmployee
+                    {
+                        StallId = "ST05",
+                        StallName = "Stall E",
+                        EmployeeId = "US6",
+                        EmployeeFullname = "Isabel Rodriguez",
+                        Role = "Sale"
+                    },
+                    new StallEmployee
+                    {
+                        StallId = "ST05",
+                        StallName = "Stall E",
+                        EmployeeId = "US12",
+                        EmployeeFullname = "Amelia Jones",
+                        Role = "Cashier"
+                    }
+
                     );
             });
         }

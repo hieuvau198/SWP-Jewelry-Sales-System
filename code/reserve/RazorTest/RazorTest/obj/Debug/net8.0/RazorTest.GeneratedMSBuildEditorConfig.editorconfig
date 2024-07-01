@@ -246,6 +246,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVtcGxhdGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Template/test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVtcGxhdGVcdGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/UserCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

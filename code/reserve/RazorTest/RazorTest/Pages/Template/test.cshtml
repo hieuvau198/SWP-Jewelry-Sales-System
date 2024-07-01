@@ -1,0 +1,16 @@
+﻿@page
+@model RazorTest.Pages.Template.testModel
+@{
+}
+
+@if(Model.Discounts != null)
+{
+    <h2>Success</h2>
+}
+@if(Model.Stalls != null)
+{
+    @foreach (var stall in Model.Stalls)
+    {
+        <p>@stall.StallName</p>
+    }
+}

@@ -189,6 +189,22 @@ namespace JewelSystemBE.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "StallEmployees",
+                columns: table => new
+                {
+                    StallEmployeeId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    StallId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StallName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EmployeeId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EmployeeFullname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StallEmployees", x => x.StallEmployeeId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "StallItems",
                 columns: table => new
                 {
@@ -261,15 +277,38 @@ namespace JewelSystemBE.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "StallEmployees",
+                columns: new[] { "StallEmployeeId", "EmployeeFullname", "EmployeeId", "Role", "StallId", "StallName" },
+                values: new object[,]
+                {
+                    { "02ea9b14-b70e-47f4-ae32-5b79dc4a9cb1", "Sophia Wilson", "US10", "Cashier", "ST02", "Stall B" },
+                    { "0d04a92b-5575-4c72-b946-2592e7177d53", "Evelyn White", "US15", "Sale", "ST02", "Stall B" },
+                    { "0f325057-445d-4864-8bb1-bb510adf5dc3", "Ava Davis", "US9", "Cashier", "ST01", "Stall A" },
+                    { "111a363d-c0a7-4963-a544-cbd7f2b2eef5", "Charlotte Brown", "US11", "Cashier", "ST03", "Stall C" },
+                    { "1d7bef13-579f-490b-b534-c37d00cbf728", "Emma Young", "US8", "Sale", "ST02", "Stall B" },
+                    { "3295e5f8-88dc-45d6-b64f-82bcb9ead550", "Amelia Jones", "US12", "Cashier", "ST05", "Stall E" },
+                    { "3e621bb3-613f-4ff5-894a-fb473fa2f12c", "Isabel Rodriguez", "US6", "Sale", "ST05", "Stall E" },
+                    { "45559cdc-eda1-4479-a544-0d516b812b35", "Mateo Martinez", "US4", "Sale", "ST03", "Stall C" },
+                    { "6b32b050-e8f1-42d9-a2fd-03d5d3427856", "Theodore Garcia", "US5", "Cashier", "ST04", "Stall D" },
+                    { "6f3737a0-9a0f-42fc-abd6-e06aa35f2d39", "Mia Anderson", "US13", "Sale", "ST02", "Stall B" },
+                    { "79f44046-d870-4035-99f7-26a2747a22a1", "Harper Thomas", "US14", "Sale", "ST04", "Stall D" },
+                    { "92f47aec-d275-4ee2-be8a-b6c6d71d16dc", "Ella Clark", "US17", "Sale", "ST03", "Stall C" },
+                    { "9cf185c1-e2c2-4d23-a6d1-eac41aecc2ea", "Avery Lewis", "US18", "Sale", "ST01", "Stall A" },
+                    { "a399dd18-0cb7-4ee3-bf85-6248c3fd8f7b", "Luna Taylor", "US7", "Sale", "ST01", "Stall A" },
+                    { "aedda019-639f-4497-9a96-34fd332d345f", "James Martinez", "US3", "Sale", "ST01", "Stall A" },
+                    { "bcd29df5-da33-44ea-820e-0b8fc7f4e02b", "Abigail Harris", "US16", "Sale", "ST02", "Stall B" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "StallItems",
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "4a82df7d-3020-45da-84b2-095641ce2c6d", "Some Product Id", "Some Product Name", 0 },
-                    { "53510273-6d64-4dc2-b6e0-1793f7e9a33f", "Some Product Id", "Some Product Name", 0 },
-                    { "ae996ef2-bdfd-4f0d-967c-bff25284a1dc", "Some Product Id", "Some Product Name", 0 },
-                    { "fc27c631-d19e-4df9-acbe-653f8fb761a4", "Some Product Id", "Some Product Name", 0 },
-                    { "fff1e9c2-34d0-46a6-b6c1-058e5e58cab5", "Some Product Id", "Some Product Name", 0 }
+                    { "042593c8-a810-4c58-ac83-31ea56e1ce38", "Some Product Id", "Some Product Name", 0 },
+                    { "55671df8-bbe6-481e-9596-6bc442bab49d", "Some Product Id", "Some Product Name", 0 },
+                    { "6b64a4b8-f927-455a-90ac-042b2d48968a", "Some Product Id", "Some Product Name", 0 },
+                    { "86a83a08-7b09-4e0f-aac0-03e430a1d5c8", "Some Product Id", "Some Product Name", 0 },
+                    { "8fe53dc2-170e-40cb-bc39-b9672dadc2f1", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -277,11 +316,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallId", "StaffName", "StallDescription", "StallName", "StallType", "UserId" },
                 values: new object[,]
                 {
-                    { "S1", "1", "1", "Ring", "Ring", "US3" },
-                    { "S2", "1", "1", "Bracelet", "Bracelet", "US4" },
-                    { "S3", "1", "1", "Necklace", "Necklace", "US6" },
-                    { "S4", "1", "1", "Earring", "Earring", "US7" },
-                    { "S5", "1", "1", "Anklet", "Anklet", "US8" }
+                    { "ST01", "Olivia Miller", "Not yet", "Stall A", "Ring", "US2" },
+                    { "ST02", "Olivia Miller", "Not Yet", "Stall B", "Bracelet", "US2" },
+                    { "ST03", "Olivia Miller", "Not Yet", "Stall C", "Necklace", "US2" },
+                    { "ST04", "Olivia Miller", "Not Yet", "Stall D", "Earring", "US2" },
+                    { "ST05", "Olivia Miller", "Not Yet", "Stall E", "Anklet", "US2" }
                 });
 
             migrationBuilder.InsertData(
@@ -391,10 +430,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(309), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(307), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(304), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(288), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7806), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7804), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7799), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7783), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
@@ -578,14 +617,24 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$6vtGA1Xl0wk1735LJ9h/QuanpOZXynUfxAtwRI0ga.THyQkU/kd/m", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$fTsEeQHb2ajbCk6Ivyw.Bu/Jkb3n5x0Mc6aOltnrhxVZxBn/uecKG", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$qrglP8M6If4fzw8asS9GS.mJvQPWKeOFlRCkds7gLk4pUMbvBezZ2", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$pJqLz8Y3scHtuVLPUaxxKucvPwqfzW2bimc4I0j6/C5fs6Q1Bonqm", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$2iXZTaGUnl6db.rzsFZjguIKNWim0ajbmF2Ae1IibsI1eF0JowAWi", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$zr0E7x7XJcoJ8uCCYQfXYeUHvZP7gJ77mShL1WTSU5LPLitVMlS2O", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$cxejYJeBX9pqWhw8RMTsN.AcENFzQMxfItSPFlJYDdzmjQ7kcOUZO", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$ZGCOKranAihlL57KUqyy5.XSzpHDS27.cpGLnbe2Hh18XL6plJR0q", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$w14xf.WsBZgudjGLBA7iUuCYXuBVD4CntpMtj4Fl5P9TQNpGmk5Q.", "Admin", "user1" },
+                    { "US10", "sophia@gmail.com", "Sophia Wilson", "$2a$11$Ng1V8NaXcxL/1PAh.YZ3heQRxDEU6d2B9H6wOUY7qIiii7LxXMs6O", "Cashier", "user10" },
+                    { "US11", "charlotte@gmail.com", "Charlotte Brown", "$2a$11$rG5avCQBECRdBjyahuO5huYBEKdXqpc8tmAHmU7.MQeYrGHs.0Ywm", "Cashier", "user11" },
+                    { "US12", "amelia@gmail.com", "Amelia Jones", "$2a$11$LUIPZZXGzr2Sko8rZeUEOOuLiVrEb15JYicPKmULqonddplMlxG0C", "Cashier", "user12" },
+                    { "US13", "mia@gmail.com", "Mia Anderson", "$2a$11$0ju1vf2r/9QLzF9WcAtQZ.OzeBP8tz.1dcaXTa1OeuqOidxr5/P22", "Sale", "user13" },
+                    { "US14", "harper@gmail.com", "Harper Thomas", "$2a$11$7LqXN1z.uWyYgAqSIx.kMuhUts3XhWM6OadaN37/EVEcGL7COqvaG", "Sale", "user14" },
+                    { "US15", "evelyn@gmail.com", "Evelyn White", "$2a$11$QQ8gL/9oofK5/F0SGq/0GuBO3Duj9u0KT3nOyvGwJ/h0V8yqJUYjm", "Sale", "user15" },
+                    { "US16", "abigail@gmail.com", "Abigail Harris", "$2a$11$elkvVZzLN6lbhqOGGgFHCuNeleHxxaS9nyv9gLsD/dGTo8mXt0iN.", "Sale", "user16" },
+                    { "US17", "ella@gmail.com", "Ella Clark", "$2a$11$mEFzRtwA/ZViTwbMK9YZee81lKISZaDiiX4tP.uAuqUVDXQQ0W0KG", "Sale", "user17" },
+                    { "US18", "avery@gmail.com", "Avery Lewis", "$2a$11$G2HTcp6y927zgfZ6xxNqQeV412QLDt7NFkEWDG.I1TPowjxZ6GRHm", "Sale", "user18" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$nuv7NzrTUiIwLOU/nhFPge6lxWGQUabYPNGL2GyS5w7EAtIAUMuZ6", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$itlgiRNXlxqOpMqchkAFiuUPi149zYXrulDnl2tCMooqm/8FhG/z6", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$h6ghSLJYJMVpGtTqmbOkEOgvNFrL2Tw84pnWbG9gP4FlZlikGRT6.", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$InspFlXn9aqd5pt44yNji.TFO97qW8DB/2ThOXLd1fT1ai9wl7hry", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$.kiQ39QziymXHADL5d0tJOZtQePVoMTytBbExLTiVJM5IuvOCFtzK", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$cihFKJexjIuScrYO8MCTz.wT8l9ltvi7I.en8av0veFD7xRRYznCO", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$VATab9qgE/FogItvcMdzNOjT2O5KTv66nrHxEpGEq4lv6XDzjyXOq", "Sale", "user8" },
+                    { "US9", "ava@gmail.com", "Ava Davis", "$2a$11$LnLXvPN6HnjFe9xDx36vAueD8gRa5SklFLPU1WdJ.TUACMmD60/Ge", "Cashier", "user9" }
                 });
 
             migrationBuilder.InsertData(
@@ -629,6 +678,9 @@ namespace JewelSystemBE.Migrations
 
             migrationBuilder.DropTable(
                 name: "product");
+
+            migrationBuilder.DropTable(
+                name: "StallEmployees");
 
             migrationBuilder.DropTable(
                 name: "StallItems");

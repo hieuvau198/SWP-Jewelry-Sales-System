@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JewelSystemBE.Migrations
 {
     [DbContext(typeof(JewelDbContext))]
-    [Migration("20240701021625_x")]
+    [Migration("20240701084825_x")]
     partial class x
     {
         /// <inheritdoc />
@@ -1053,7 +1053,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang24k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(288),
+                            Date = new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7783),
                             GoldCode = "Vàng nữ trang 99,99%",
                             GoldName = "24K",
                             SellPrice = 0.0,
@@ -1063,7 +1063,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang18k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(304),
+                            Date = new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7799),
                             GoldCode = "Vàng nữ trang 75%",
                             GoldName = "18K",
                             SellPrice = 0.0,
@@ -1073,7 +1073,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang14k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(307),
+                            Date = new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7804),
                             GoldCode = "Vàng nữ trang 58,3%",
                             GoldName = "14K",
                             SellPrice = 0.0,
@@ -1083,7 +1083,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang10k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(309),
+                            Date = new DateTime(2024, 7, 1, 15, 48, 23, 325, DateTimeKind.Local).AddTicks(7806),
                             GoldCode = "Vàng nữ trang 41,7%",
                             GoldName = "10K",
                             SellPrice = 0.0,
@@ -2645,48 +2645,224 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallId = "S1",
-                            StaffName = "1",
-                            StallDescription = "1",
-                            StallName = "Ring",
+                            StallId = "ST01",
+                            StaffName = "Olivia Miller",
+                            StallDescription = "Not yet",
+                            StallName = "Stall A",
                             StallType = "Ring",
-                            UserId = "US3"
+                            UserId = "US2"
                         },
                         new
                         {
-                            StallId = "S2",
-                            StaffName = "1",
-                            StallDescription = "1",
-                            StallName = "Bracelet",
+                            StallId = "ST02",
+                            StaffName = "Olivia Miller",
+                            StallDescription = "Not Yet",
+                            StallName = "Stall B",
                             StallType = "Bracelet",
-                            UserId = "US4"
+                            UserId = "US2"
                         },
                         new
                         {
-                            StallId = "S3",
-                            StaffName = "1",
-                            StallDescription = "1",
-                            StallName = "Necklace",
+                            StallId = "ST03",
+                            StaffName = "Olivia Miller",
+                            StallDescription = "Not Yet",
+                            StallName = "Stall C",
                             StallType = "Necklace",
-                            UserId = "US6"
+                            UserId = "US2"
                         },
                         new
                         {
-                            StallId = "S4",
-                            StaffName = "1",
-                            StallDescription = "1",
-                            StallName = "Earring",
+                            StallId = "ST04",
+                            StaffName = "Olivia Miller",
+                            StallDescription = "Not Yet",
+                            StallName = "Stall D",
                             StallType = "Earring",
-                            UserId = "US7"
+                            UserId = "US2"
                         },
                         new
                         {
-                            StallId = "S5",
-                            StaffName = "1",
-                            StallDescription = "1",
-                            StallName = "Anklet",
+                            StallId = "ST05",
+                            StaffName = "Olivia Miller",
+                            StallDescription = "Not Yet",
+                            StallName = "Stall E",
                             StallType = "Anklet",
-                            UserId = "US8"
+                            UserId = "US2"
+                        });
+                });
+
+            modelBuilder.Entity("JewelSystemBE.Model.StallEmployee", b =>
+                {
+                    b.Property<string>("StallEmployeeId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("EmployeeFullname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StallEmployeeId");
+
+                    b.ToTable("StallEmployees");
+
+                    b.HasData(
+                        new
+                        {
+                            StallEmployeeId = "aedda019-639f-4497-9a96-34fd332d345f",
+                            EmployeeFullname = "James Martinez",
+                            EmployeeId = "US3",
+                            Role = "Sale",
+                            StallId = "ST01",
+                            StallName = "Stall A"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "a399dd18-0cb7-4ee3-bf85-6248c3fd8f7b",
+                            EmployeeFullname = "Luna Taylor",
+                            EmployeeId = "US7",
+                            Role = "Sale",
+                            StallId = "ST01",
+                            StallName = "Stall A"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "0f325057-445d-4864-8bb1-bb510adf5dc3",
+                            EmployeeFullname = "Ava Davis",
+                            EmployeeId = "US9",
+                            Role = "Cashier",
+                            StallId = "ST01",
+                            StallName = "Stall A"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "9cf185c1-e2c2-4d23-a6d1-eac41aecc2ea",
+                            EmployeeFullname = "Avery Lewis",
+                            EmployeeId = "US18",
+                            Role = "Sale",
+                            StallId = "ST01",
+                            StallName = "Stall A"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "6f3737a0-9a0f-42fc-abd6-e06aa35f2d39",
+                            EmployeeFullname = "Mia Anderson",
+                            EmployeeId = "US13",
+                            Role = "Sale",
+                            StallId = "ST02",
+                            StallName = "Stall B"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "02ea9b14-b70e-47f4-ae32-5b79dc4a9cb1",
+                            EmployeeFullname = "Sophia Wilson",
+                            EmployeeId = "US10",
+                            Role = "Cashier",
+                            StallId = "ST02",
+                            StallName = "Stall B"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "1d7bef13-579f-490b-b534-c37d00cbf728",
+                            EmployeeFullname = "Emma Young",
+                            EmployeeId = "US8",
+                            Role = "Sale",
+                            StallId = "ST02",
+                            StallName = "Stall B"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "0d04a92b-5575-4c72-b946-2592e7177d53",
+                            EmployeeFullname = "Evelyn White",
+                            EmployeeId = "US15",
+                            Role = "Sale",
+                            StallId = "ST02",
+                            StallName = "Stall B"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "bcd29df5-da33-44ea-820e-0b8fc7f4e02b",
+                            EmployeeFullname = "Abigail Harris",
+                            EmployeeId = "US16",
+                            Role = "Sale",
+                            StallId = "ST02",
+                            StallName = "Stall B"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "45559cdc-eda1-4479-a544-0d516b812b35",
+                            EmployeeFullname = "Mateo Martinez",
+                            EmployeeId = "US4",
+                            Role = "Sale",
+                            StallId = "ST03",
+                            StallName = "Stall C"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "111a363d-c0a7-4963-a544-cbd7f2b2eef5",
+                            EmployeeFullname = "Charlotte Brown",
+                            EmployeeId = "US11",
+                            Role = "Cashier",
+                            StallId = "ST03",
+                            StallName = "Stall C"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "92f47aec-d275-4ee2-be8a-b6c6d71d16dc",
+                            EmployeeFullname = "Ella Clark",
+                            EmployeeId = "US17",
+                            Role = "Sale",
+                            StallId = "ST03",
+                            StallName = "Stall C"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "79f44046-d870-4035-99f7-26a2747a22a1",
+                            EmployeeFullname = "Harper Thomas",
+                            EmployeeId = "US14",
+                            Role = "Sale",
+                            StallId = "ST04",
+                            StallName = "Stall D"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "6b32b050-e8f1-42d9-a2fd-03d5d3427856",
+                            EmployeeFullname = "Theodore Garcia",
+                            EmployeeId = "US5",
+                            Role = "Cashier",
+                            StallId = "ST04",
+                            StallName = "Stall D"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "3e621bb3-613f-4ff5-894a-fb473fa2f12c",
+                            EmployeeFullname = "Isabel Rodriguez",
+                            EmployeeId = "US6",
+                            Role = "Sale",
+                            StallId = "ST05",
+                            StallName = "Stall E"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "3295e5f8-88dc-45d6-b64f-82bcb9ead550",
+                            EmployeeFullname = "Amelia Jones",
+                            EmployeeId = "US12",
+                            Role = "Cashier",
+                            StallId = "ST05",
+                            StallName = "Stall E"
                         });
                 });
 
@@ -2713,35 +2889,35 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "ae996ef2-bdfd-4f0d-967c-bff25284a1dc",
+                            StallItemId = "042593c8-a810-4c58-ac83-31ea56e1ce38",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "fc27c631-d19e-4df9-acbe-653f8fb761a4",
+                            StallItemId = "8fe53dc2-170e-40cb-bc39-b9672dadc2f1",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "53510273-6d64-4dc2-b6e0-1793f7e9a33f",
+                            StallItemId = "86a83a08-7b09-4e0f-aac0-03e430a1d5c8",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "4a82df7d-3020-45da-84b2-095641ce2c6d",
+                            StallItemId = "6b64a4b8-f927-455a-90ac-042b2d48968a",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "fff1e9c2-34d0-46a6-b6c1-058e5e58cab5",
+                            StallItemId = "55671df8-bbe6-481e-9596-6bc442bab49d",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
@@ -2783,7 +2959,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US1",
                             Email = "liam@gmail.com",
                             Fullname = "Liam Williams",
-                            Password = "$2a$11$6vtGA1Xl0wk1735LJ9h/QuanpOZXynUfxAtwRI0ga.THyQkU/kd/m",
+                            Password = "$2a$11$w14xf.WsBZgudjGLBA7iUuCYXuBVD4CntpMtj4Fl5P9TQNpGmk5Q.",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -2792,7 +2968,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US2",
                             Email = "olivia@gmail.com",
                             Fullname = "Olivia Miller",
-                            Password = "$2a$11$fTsEeQHb2ajbCk6Ivyw.Bu/Jkb3n5x0Mc6aOltnrhxVZxBn/uecKG",
+                            Password = "$2a$11$nuv7NzrTUiIwLOU/nhFPge6lxWGQUabYPNGL2GyS5w7EAtIAUMuZ6",
                             Role = "Manager",
                             Username = "user2"
                         },
@@ -2801,7 +2977,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US3",
                             Email = "james@gmail.com",
                             Fullname = "James Martinez",
-                            Password = "$2a$11$qrglP8M6If4fzw8asS9GS.mJvQPWKeOFlRCkds7gLk4pUMbvBezZ2",
+                            Password = "$2a$11$itlgiRNXlxqOpMqchkAFiuUPi149zYXrulDnl2tCMooqm/8FhG/z6",
                             Role = "Sale",
                             Username = "user3"
                         },
@@ -2810,7 +2986,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US4",
                             Email = "matao@gmail.com",
                             Fullname = "Mateo Martinez",
-                            Password = "$2a$11$pJqLz8Y3scHtuVLPUaxxKucvPwqfzW2bimc4I0j6/C5fs6Q1Bonqm",
+                            Password = "$2a$11$h6ghSLJYJMVpGtTqmbOkEOgvNFrL2Tw84pnWbG9gP4FlZlikGRT6.",
                             Role = "Sale",
                             Username = "user4"
                         },
@@ -2819,7 +2995,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US5",
                             Email = "theodore@gmail.com",
                             Fullname = "Theodore Garcia",
-                            Password = "$2a$11$2iXZTaGUnl6db.rzsFZjguIKNWim0ajbmF2Ae1IibsI1eF0JowAWi",
+                            Password = "$2a$11$InspFlXn9aqd5pt44yNji.TFO97qW8DB/2ThOXLd1fT1ai9wl7hry",
                             Role = "Cashier",
                             Username = "user5"
                         },
@@ -2828,7 +3004,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US6",
                             Email = "isabel@gmail.com",
                             Fullname = "Isabel Rodriguez",
-                            Password = "$2a$11$zr0E7x7XJcoJ8uCCYQfXYeUHvZP7gJ77mShL1WTSU5LPLitVMlS2O",
+                            Password = "$2a$11$.kiQ39QziymXHADL5d0tJOZtQePVoMTytBbExLTiVJM5IuvOCFtzK",
                             Role = "Sale",
                             Username = "user6"
                         },
@@ -2837,7 +3013,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US7",
                             Email = "luna@gmail.com",
                             Fullname = "Luna Taylor",
-                            Password = "$2a$11$cxejYJeBX9pqWhw8RMTsN.AcENFzQMxfItSPFlJYDdzmjQ7kcOUZO",
+                            Password = "$2a$11$cihFKJexjIuScrYO8MCTz.wT8l9ltvi7I.en8av0veFD7xRRYznCO",
                             Role = "Sale",
                             Username = "user7"
                         },
@@ -2846,9 +3022,99 @@ namespace JewelSystemBE.Migrations
                             UserId = "US8",
                             Email = "emma@gmail.com",
                             Fullname = "Emma Young",
-                            Password = "$2a$11$ZGCOKranAihlL57KUqyy5.XSzpHDS27.cpGLnbe2Hh18XL6plJR0q",
+                            Password = "$2a$11$VATab9qgE/FogItvcMdzNOjT2O5KTv66nrHxEpGEq4lv6XDzjyXOq",
                             Role = "Sale",
                             Username = "user8"
+                        },
+                        new
+                        {
+                            UserId = "US9",
+                            Email = "ava@gmail.com",
+                            Fullname = "Ava Davis",
+                            Password = "$2a$11$LnLXvPN6HnjFe9xDx36vAueD8gRa5SklFLPU1WdJ.TUACMmD60/Ge",
+                            Role = "Cashier",
+                            Username = "user9"
+                        },
+                        new
+                        {
+                            UserId = "US10",
+                            Email = "sophia@gmail.com",
+                            Fullname = "Sophia Wilson",
+                            Password = "$2a$11$Ng1V8NaXcxL/1PAh.YZ3heQRxDEU6d2B9H6wOUY7qIiii7LxXMs6O",
+                            Role = "Cashier",
+                            Username = "user10"
+                        },
+                        new
+                        {
+                            UserId = "US11",
+                            Email = "charlotte@gmail.com",
+                            Fullname = "Charlotte Brown",
+                            Password = "$2a$11$rG5avCQBECRdBjyahuO5huYBEKdXqpc8tmAHmU7.MQeYrGHs.0Ywm",
+                            Role = "Cashier",
+                            Username = "user11"
+                        },
+                        new
+                        {
+                            UserId = "US12",
+                            Email = "amelia@gmail.com",
+                            Fullname = "Amelia Jones",
+                            Password = "$2a$11$LUIPZZXGzr2Sko8rZeUEOOuLiVrEb15JYicPKmULqonddplMlxG0C",
+                            Role = "Cashier",
+                            Username = "user12"
+                        },
+                        new
+                        {
+                            UserId = "US13",
+                            Email = "mia@gmail.com",
+                            Fullname = "Mia Anderson",
+                            Password = "$2a$11$0ju1vf2r/9QLzF9WcAtQZ.OzeBP8tz.1dcaXTa1OeuqOidxr5/P22",
+                            Role = "Sale",
+                            Username = "user13"
+                        },
+                        new
+                        {
+                            UserId = "US14",
+                            Email = "harper@gmail.com",
+                            Fullname = "Harper Thomas",
+                            Password = "$2a$11$7LqXN1z.uWyYgAqSIx.kMuhUts3XhWM6OadaN37/EVEcGL7COqvaG",
+                            Role = "Sale",
+                            Username = "user14"
+                        },
+                        new
+                        {
+                            UserId = "US15",
+                            Email = "evelyn@gmail.com",
+                            Fullname = "Evelyn White",
+                            Password = "$2a$11$QQ8gL/9oofK5/F0SGq/0GuBO3Duj9u0KT3nOyvGwJ/h0V8yqJUYjm",
+                            Role = "Sale",
+                            Username = "user15"
+                        },
+                        new
+                        {
+                            UserId = "US16",
+                            Email = "abigail@gmail.com",
+                            Fullname = "Abigail Harris",
+                            Password = "$2a$11$elkvVZzLN6lbhqOGGgFHCuNeleHxxaS9nyv9gLsD/dGTo8mXt0iN.",
+                            Role = "Sale",
+                            Username = "user16"
+                        },
+                        new
+                        {
+                            UserId = "US17",
+                            Email = "ella@gmail.com",
+                            Fullname = "Ella Clark",
+                            Password = "$2a$11$mEFzRtwA/ZViTwbMK9YZee81lKISZaDiiX4tP.uAuqUVDXQQ0W0KG",
+                            Role = "Sale",
+                            Username = "user17"
+                        },
+                        new
+                        {
+                            UserId = "US18",
+                            Email = "avery@gmail.com",
+                            Fullname = "Avery Lewis",
+                            Password = "$2a$11$G2HTcp6y927zgfZ6xxNqQeV412QLDt7NFkEWDG.I1TPowjxZ6GRHm",
+                            Role = "Sale",
+                            Username = "user18"
                         });
                 });
 
