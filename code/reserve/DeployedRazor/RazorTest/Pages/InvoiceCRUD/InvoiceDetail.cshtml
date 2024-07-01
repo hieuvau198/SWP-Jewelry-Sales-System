@@ -1,0 +1,79 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.InvoiceListModel
+@{
+    ViewData["Title"] = "Invoice List";
+}
+
+<h2 style="text-align: center;">Invoice List</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Invoice Type</th>
+                <th>Customer Name</th>
+                <th>Employee</th>
+                <th>Invoice Date</th>
+                <th>Customer Voucher</th>
+                <th>Original Price (VND)</th>
+                <th>Total Price (VND)</th>
+                <th>Status</th>
+                <th>Actions</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var invoice in Model.Invoices)
+            {
+                <tr>
+                    <td><strong>@invoice.InvoiceType</strong></td>
+                    <td>@invoice.CustomerName</td>
+                    <td>@invoice.UserFullname</td>
+                    <td>@invoice.InvoiceDate.ToString("MM/dd/yyyy HH:mm:ss")</td>
+                    <td>@invoice.CustomerVoucher</td>
+                    <td>@String.Format("{0:N0}", invoice.TotalPrice)</td>
+                    <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>
+                    <td>@invoice.InvoiceStatus</td>
+                    <td class="action-buttons">
+                        @if (invoice.InvoiceStatus.Equals("Pending") && Model.VerifyAuth("Manager"))
+                        {
+                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Approve</a>
+                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Disapprove</a>
+                        }
+                        else if (Model.VerifyAuth("Sale"))
+                        {
+                            <span>Need Manager Role To Access</span>
+                        }
+                        else if (invoice.InvoiceStatus.Equals("Processing Payment") && Model.VerifyAuth("Cashier"))
+                        {
+                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Confirm Payment</a>
+                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Cancel Order</a>
+                        }
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="ViewDetail">
+                            <input type="hidden" name="invoiceId" value="@invoice.InvoiceId"/>
+                            <button type="submit">Detail</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    @if (Model.Invoices.HasPreviousPage)
+    {
+        <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
+    {
+        <a asp-page="./InvoiceDetail" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Invoices.HasNextPage)
+    {
+        <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+    }
+</div>
+
+<a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back</a>

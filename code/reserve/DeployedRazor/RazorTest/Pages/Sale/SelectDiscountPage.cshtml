@@ -1,0 +1,89 @@
+﻿@page
+@model RazorTest.Pages.Sale.SelectDiscountPageModel
+@{
+}
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .invoice-items {
+        margin: 20px 0;
+    }
+
+    .invoice-item {
+        border: 1px solid #d4af37;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #fff7e6;
+    }
+
+        .invoice-item .discount {
+            font-weight: bold;
+            color: #b8860b;
+        }
+
+        .invoice-item .item {
+            color: #333;
+        }
+</style>
+
+@if (Model.SelectedDiscount != null)
+{
+    <div class="luxury-table-wrapper" style="font-weight: bold; font-size: 32px;">
+        <tr>
+            <th>@Model.SelectedDiscount.DiscountName</th>
+            <td> - @(Model.SelectedDiscount.DiscountRate * 100)%</td>
+        </tr>
+    </div>
+}
+<div class="container">
+    <h3>Available Discounts</h3>
+</div>
+
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Discount Name</th>
+                <th>Discount Rate</th>
+                <th>Reduction</th>
+                <th>Available Date</th>
+                <th>Expired Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var discount in Model.Discounts)
+            {
+                @if (discount.DiscountRate > 0)
+                {
+                    <tr>
+                        <td>@discount.DiscountName</td>
+                        <td>@(discount.DiscountRate * 100)%</td>
+                        <td>@((discount.DiscountRate * Model.SelectedProduct.UnitPrice * -1).ToString("#,##0")) </td>
+                        <td>@discount.PublicDate.ToString("d/M/yyyy")</td>
+                        <td>@discount.ExpireDate.ToString("d/M/yyyy")</td>
+                        <td>
+                            <form method="post" asp-page-handler="SelectDiscount">
+                                <input type="hidden" name="discountId" value="@discount.DiscountId" />
+                                <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Select</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<form method="get" action="/Sale/ViewCart">
+    <input type="hidden" name="Back" value="/Sale/SaleHomePage" />
+    <button type="submit" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to Product List</button>
+</form>

@@ -1,0 +1,168 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.EditModel
+
+@{
+    ViewData["Title"] = "Manage Order";
+}
+
+<!-- Custom styles -->
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+        color: #b8860b; /* Set the text color */
+    }
+
+    .create-container {
+        margin-top: 5rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 1200px; /* Increased width */
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .card-header {
+        background-color: #fff;
+        border-bottom: none;
+        padding: 1.5rem 1.5rem 0;
+    }
+
+        .card-header h3 {
+            margin-bottom: 0;
+            color: #b8860b;
+            font-weight: 600;
+        }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #b8860b; /* Set the label text color */
+    }
+
+    .form-control {
+        color: #b8860b; /* Set the input text color */
+    }
+
+    .btn-primary, .btn-success, .btn-secondary {
+        background-color: #b8860b;
+        border-color: #b8860b;
+    }
+
+        .btn-primary:hover, .btn-success:hover, .btn-secondary:hover {
+            background-color: #b8860b;
+            border-color: #b8860b;
+        }
+
+    .card-footer {
+        background-color: #fff;
+        border-top: none;
+        padding: 1rem 1.5rem;
+    }
+
+        .card-footer a {
+            background-color: #b8860b; /* Yellow background */
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+            .card-footer a:hover {
+                background-color: #b8860b; /* Darker shade of yellow on hover */
+                color: #ffffff; /* Maintain white text color on hover */
+                text-decoration: none;
+            }
+</style>
+
+<div class="container mt-5 create-container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3></h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <input type="hidden" asp-for="Invoice.InvoiceId" />
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.InvoiceType" class="control-label"></label>
+                            <input asp-for="Invoice.InvoiceType" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.InvoiceType" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.CustomerId" class="control-label"></label>
+                            <input asp-for="Invoice.CustomerId" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.CustomerId" class="text-danger"></span>
+                        </div>
+                        <input type="hidden" asp-for="Invoice.CustomerName" />
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.UserId" class="control-label"></label>
+                            <input asp-for="Invoice.UserId" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.UserId" class="text-danger"></span>
+                        </div>
+                        <input type="hidden" asp-for="Invoice.UserFullname" />
+                        <input type="hidden" asp-for="Invoice.ManagerId" />
+                        <input type="hidden" asp-for="Invoice.ManagerFullname" />
+                        <input type="hidden" asp-for="Invoice.CashierId" />
+                        <input type="hidden" asp-for="Invoice.CashierFullname" />
+                        <input type="hidden" asp-for="Invoice.StallId" />
+                        <input type="hidden" asp-for="Invoice.StallName" />
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.InvoiceDate" class="control-label"></label>
+                            <input asp-for="Invoice.InvoiceDate" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.InvoiceDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.CustomerVoucher" class="control-label"></label>
+                            <input asp-for="Invoice.CustomerVoucher" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.CustomerVoucher" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.TotalPrice" class="control-label"></label>
+                            <input asp-for="Invoice.TotalPrice" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.TotalPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.EndTotalPrice" class="control-label"></label>
+                            <input asp-for="Invoice.EndTotalPrice" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.EndTotalPrice" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Invoice.InvoiceStatus" class="control-label"></label>
+                            <input asp-for="Invoice.InvoiceStatus" class="form-control" readonly />
+                            <span asp-validation-for="Invoice.InvoiceStatus" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <input type="submit" value="Approve" class="btn btn-primary" />
+                            <a asp-page="./InvoiceDetail" class="btn btn-secondary ml-2">Back to List</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

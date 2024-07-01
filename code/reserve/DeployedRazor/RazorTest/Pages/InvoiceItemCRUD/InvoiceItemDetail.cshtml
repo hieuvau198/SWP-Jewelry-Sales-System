@@ -1,0 +1,50 @@
+﻿@page
+@model RazorTest.Pages.InvoiceItemCRUD.InvoiceItemListModel
+@{
+    ViewData["Title"] = "Invoice Item List";
+}
+
+<h2 style="text-align: center;">Invoice Item List</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Invoice Item Id</th>
+                <th>Invoice Id</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Discount Id</th>
+                <th>Discount Rate</th>
+                <th>Total Price</th>
+                <th>End Total Price</th>
+                <th>Warranty Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var invoiceitem in Model.Invoiceitems)
+            {
+                <tr>
+                    <td><strong>@invoiceitem.InvoiceItemId</strong></td>
+                    <td>@invoiceitem.InvoiceId</td>
+                    <td>@invoiceitem.ProductName</td>
+                    <td>@invoiceitem.Quantity</td>
+                    <td>@invoiceitem.UnitPrice</td>
+                    <td>@invoiceitem.DiscountId</td>
+                    <td>@invoiceitem.DiscountRate</td>
+                    <td>@invoiceitem.TotalPrice</td>
+                    <td>@invoiceitem.EndTotalPrice</td>
+                    <td>@invoiceitem.WarrantyId</td>
+                    <td class="action-buttons">
+                        <a asp-page="./Edit" asp-route-id="@invoiceitem.InvoiceItemId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@invoiceitem.InvoiceItemId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Invoice Item</a>
+<a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>

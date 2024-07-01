@@ -1,0 +1,107 @@
+﻿@page
+@model RazorTest.Pages.Sale.CheckOutPageModel
+@{
+}
+
+<style>
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+</style>
+
+<div class="container">
+    <h2>Check Out Order</h2>
+</div>
+
+@if (Model.InvoiceItems != null)
+{
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Discount</th>
+                
+                <th>Discount Total</th>
+                <th>Subtotal</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.InvoiceItems)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+                    <td>@item.Quantity</td>
+                    <td>@(item.DiscountRate * 100)%</td>
+                    
+                    <td>@String.Format("{0:N0}", (item.EndTotalPrice - item.TotalPrice))</td>
+                    <td>@String.Format("{0:N0}", item.TotalPrice)</td>
+                    <td>@String.Format("{0:N0}", item.EndTotalPrice)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@if (Model.Invoice != null)
+{
+    <div class="invoice-table-wrapper">
+        <table class="luxury-table">
+            <tbody>
+                <tr>
+                    <th>Invoice Type:</th>
+                    <td>@Model.Invoice.InvoiceType</td>
+                </tr>
+                <tr>
+                    <th>Customer:</th>
+                    <td>@Model.Customer.CustomerName</td>
+                </tr>
+                <tr>
+                    <th>Staff:</th>
+                    <td>@Model.User.Fullname</td>
+                </tr>
+                <tr>
+                    <th>Customer Voucher:</th>
+                    <td>@Model.Invoice.CustomerVoucher</td>
+                </tr>
+                <tr>
+                    <th>Discount:</th>
+                    <td>@String.Format("{0:N0} VND", (Model.Invoice.EndTotalPrice - Model.Invoice.TotalPrice))</td>
+                </tr>
+                <tr>
+                    <th>Subtotal:</th>
+                    <td>@String.Format("{0:N0} VND", Model.Invoice.TotalPrice)</td>
+                </tr>
+                
+                <tr>
+                    <th>Total:</th>
+                    <td>@String.Format("{0:N0} VND", Model.Invoice.EndTotalPrice)</td>
+                </tr>
+                <tr>
+                    <th>Order Status:</th>
+                    <td>@Model.Invoice.InvoiceStatus</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+
+
+<form method="post" asp-page-handler="Confirm" style="text-align: center;">
+    <button type="submit" class="btn-black" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Confirm</button>
+</form>
+<br />
+
+<form method="get" action="/Sale/ViewCart" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Sale/ViewCart" />
+    <button type="submit" class="btn-black" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Cancel</button>
+</form>

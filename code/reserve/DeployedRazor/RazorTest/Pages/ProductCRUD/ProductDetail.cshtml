@@ -1,0 +1,155 @@
+﻿@page
+@model RazorTest.Pages.ProductCRUD.ProductListModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h2 style="text-align: center;">Products</h2>
+
+@{
+    var typeOptions = new List<string> { "All", "Ring", "Necklace", "Bracelet", "Earrings" };
+    var gemOptions = new List<string> { "All", "Ruby", "Sapphire", "Emerald", "Cabochon", "Diamond" };
+    var goldOptions = new List<string> { "All", "24K", "18K", "14K", "10K"};
+}
+
+
+<form method="get">
+    <div style="text-align: center; margin-bottom: 20px;">
+
+        <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+        <label>Type</label>
+
+        <select name="filterType">
+            @foreach (var option in typeOptions)
+            {
+                if(option.Equals(Model.FilterType))
+                {
+                    <option value="@option" selected>@option</option>
+                }else{
+                    <option value="@option">@option</option>
+                }
+                
+            }
+        </select>
+
+        <label>Gemstone</label>
+        <select name="filterGem">
+            @foreach (var option in gemOptions)
+            {
+                if (option.Equals(Model.FilterGem))
+                {
+                    <option value="@option" selected>@option</option>
+                }
+                else
+                {
+                    <option value="@option">@option</option>
+                }
+
+            }
+        </select>
+
+        <label>Gold</label>
+        <select name="filterGold">
+            @foreach (var option in goldOptions)
+            {
+                if (option.Equals(Model.FilterGold))
+                {
+                    <option value="@option" selected>@option</option>
+                }
+                else
+                {
+                    <option value="@option">@option</option>
+                }
+
+            }
+        </select>
+
+        
+
+        <button type="submit" style="padding: 5px 10px; background-color: #b8860b; color: white; border: none; cursor: pointer;">Search</button>
+    </div>
+</form>
+
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                
+                <th>Code</th>
+                <th>Name</th>
+                <th>Portrait</th>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Warranty (Months)</th>
+                <th>Gemstone</th>
+                <th>Gem Weight (cts)</th>
+                <th>Gold Material</th>
+                <th>Gold Weight (cts)</th>
+                <th>Buy Price (VND)</th>
+                <th>Sell Price (VND)</th>
+                <th>Publish</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    
+                    <td>@product.ProductCode</td>
+                    <td>@product.ProductName</td>
+                    <td>
+                        @if (product.ProductImages.Length > 50)
+                        {
+                            <img src="data:image/jpeg;base64,@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
+                        }
+                        else
+                        {
+                            <img src="/ProductImages/@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
+                        }
+                    </td>
+                    <td>@product.ProductQuantity</td>
+                    <td>@product.ProductType</td>
+                    <td>@product.ProductWarranty</td>
+                    <td>@product.GemName</td>
+                    <td>@product.GemWeight</td>
+                    <td>@product.GoldName</td>
+                    <td>@product.GoldWeight</td>
+                    <td>@String.Format("{0:N0}", product.BuyPrice)</td>
+                    <td>@String.Format("{0:N0}", product.UnitPrice)</td>
+                    <td>@product.CreatedAt.ToShortDateString()</td>
+                    <td class="action-buttons">
+                        @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
+                        {
+                            <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                            <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+
+                        }
+                        else if(Model.VerifyAuth("Sale") || Model.VerifyAuth("Cashier"))
+                        {
+                            <span>Need Access Role</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="pagination">
+    @if (Model.Products.HasPreviousPage)
+    {
+        <a asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Products.TotalPages; i++)
+    {
+        <a asp-page="./ProductDetail" asp-route-currentPage="@i" class="@(i == Model.Products.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Products.HasNextPage)
+    {
+        <a asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex + 1)">Next &raquo;</a>
+    }
+</div>
+
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Product</a>
+<a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>

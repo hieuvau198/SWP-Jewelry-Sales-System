@@ -1,0 +1,502 @@
+﻿@page
+@using RazorTest.Models
+@using RazorTest.Utilities
+@model RazorTest.Pages.IndexModel
+@{
+    ViewData["Title"] = "Jewelry Sales System";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Oswald";
+        }
+
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .w3-container p {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 205px;
+            position: fixed;
+            top: 0px; /*  Adjust this value based on your header height */
+            bottom: 155px;
+            left: 0px;
+            padding-top: 20px;
+            background-color: #424949;
+        }
+
+            .sidebar a {
+                padding: 15px 8px 15px 16px;
+                text-decoration: none;
+                font-size: 18px;
+                color: ghostwhite;                    /* color: #8B4513; */
+                background-color: #008080;
+                display: block;
+                border: 1px solid transparent;
+                margin-bottom: 8px; /* Khoảng cách giữa các liên kết */
+                transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Hiệu ứng chuyển đổi màu */
+            }
+
+
+                .sidebar a:hover {
+                    background-color: #76D7C4;
+                    color: #F5F5F5;
+                    border-color: black;
+                }
+
+            .sidebar .submenu {
+                display: none; /* Hide submenu by default */
+            }
+
+                .sidebar .submenu a {
+                    padding-left: 32px;
+                }
+
+        /* Toggle button Styles */
+        .toggle-btn {
+            font-size: 10px;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+            z-index: 1001;
+            background-color: #F5F5F5;
+            border: 1px solid #8B4513;
+            border-radius: 5px;
+            color: #8B4513;
+            display: block;
+        }
+
+        .link-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            .link-table th, .link-table td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: left;
+            }
+
+            .link-table th {
+                background-color: #f8f9fa;
+            }
+
+            .link-table a {
+                color: #007bff;
+                text-decoration: none;
+            }
+
+                .link-table a:hover {
+                    text-decoration: underline;
+                }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .header-title {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+            .header-title h1 {
+                font-size: 50px;
+                margin: 0;
+            }
+
+            .header-title p {
+                font-size: 20px;
+                margin: 5px 0 0;
+            }
+
+        .main-content {
+            padding: 20px;
+            /*  margin-left: 270px; */ /* Adjust to avoid overlap with sidebar */
+        }
+
+        .product, .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .product img, .cart-item img {
+                width: 50px;
+                height: 50px;
+                margin-right: 10px;
+            }
+
+        .cart-total {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+        .subscribe-modal .w3-modal-content {
+            padding: 32px;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+        .form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+
+            .form-container h3 {
+                margin-bottom: 20px;
+            }
+
+        /* CSS for product list */
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Căn giữa các phần tử */
+            text-align: center; /* Căn giữa text */
+        }
+
+        .product-list {
+            border: 1px solid #ddd;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+            .product-list h3 {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+        .product .product-image-wrapper {
+            width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
+            max-width: 300px; /* Đặt kích thước tối đa của ảnh */
+            margin-bottom: 20px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+        }
+
+        .product .product-name {
+            margin-top: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
+            margin-bottom: 30px;
+        }
+
+        .product .product-image {
+            width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
+            height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+            max-width: 300px; /* Đặt kích thước tối đa của ảnh */
+        }
+        /* CSS for carousel images */
+        .carousel-img {
+            width: 100%;
+            height: 500px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure images cover the area without distortion */
+        }
+
+    </style>
+</head>
+<body class="w3-light-grey w3-display-container">
+    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
+    {
+        <!-- Toggle button for sidebar
+
+            <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        -->
+        
+
+        <!-- Sidebar/menu -->
+        <nav class="sidebar">
+            @if (Model.VerifyAuth("Manager"))
+            {
+                <a asp-page="/ProductCRUD/ProductDetail">Manage Products</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+                <a asp-page="/GemCRUD/GemDetail">Manage Gems</a>
+                <a asp-page="/UserCRUD/UserDetail">Manage Staffs</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Manage Stalls</a>
+            }
+
+            @if (Model.VerifyAuth("Admin"))
+            {
+                <a href="/Dashboard/Revenue">Dashboard</a>
+                <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+                <a asp-page="/CustomerCRUD/CustomerDetail">Customers</a>
+                <a asp-page="/DiscountCRUD/DiscountDetail">Discounts</a>
+                <a asp-page="/UserCRUD/UserDetail">Employees</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+            }
+
+            @if (Model.VerifyAuth("Cashier"))
+            {
+                <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+                
+            }
+
+            @if (Model.VerifyAuth("Sale"))
+            {
+                <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+                <a asp-page="/Sale/SaleHomePage">Order</a>
+                <a asp-page="/Buy/Processing">Buy-Back</a>
+                <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+            }
+        </nav>
+    }
+    <!-- Main Container -->
+    <div class="w3-content  w3-display-container" style="max-width:1600px">
+
+        <!-- Header -->
+        <header class="header-title w3-center w3-padding-48 w3-white">
+            <h1>Jewelry Store</h1>
+            <p>Your Ultimate Destination for Exquisite Jewelry</p>
+        </header>
+
+        <!-- Image header with carousel -->
+        
+        
+        @*
+        <div class="w3-content w3-display-container" style="max-width:1600px;">
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/5.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/11.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/12.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/13.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/14.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/15.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <div class="w3-display-container mySlides">
+        <img src="~/ProductImages/16.jpg" class="carousel-img">
+        <div class="w3-display-left w3-padding-large">
+        <h1 class="w3-text-white">Luxury Redefined</h1>
+        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
+        </div>
+        </div>
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        *@
+        <!-- Main Content Grid -->
+        <div class="w3-container w3-row w3-padding w3-border main-content">
+
+            <div class="row">
+                <!-- Blog entries / Main section -->
+                <div class="col-lg-8 col-md-12">
+                    <div class="card mb-4">
+                        <img src="~/ProductImages/KimCuongg.jpg" alt="Diamond" class="card-img-top" style="width: 150px;">
+                        <div class="card-body">
+                            <h3 class="card-title"><b>Our Latest Collection</b></h3>
+                            <h5 class="card-subtitle mb-2 text-muted">New Arrivals, <span class="w3-opacity">June 2024</span></h5>
+                            <p class="card-text">
+                                At our esteemed establishment, we proudly present an unparalleled collection of the most exquisite diamonds and fine jewelry, meticulously curated to captivate and enchant.
+                                Our unwavering dedication to excellence ensures that each piece radiates exceptional quality, embodying the pinnacle of craftsmanship and elegance.
+                                With a steadfast commitment to providing an extraordinary customer experience, we strive to exceed expectations, offering personalized service that is as unique and remarkable as the treasures we offer.
+                                Join us in celebrating the timeless beauty and splendor of our exclusive collection, where luxury meets legacy and every moment sparkles with brilliance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar / Info section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="card mb-4">
+                        <img src="/ProductImages/diamond_earrings.jpg" alt="About" class="card-img-top" style="width: 225px;">
+                        <div class="card-body">
+                            <h4 class="card-title"><b>About Us</b></h4>
+                            <p class="card-text">
+                                Experience luxury with our diamond collection. Each piece combines timeless elegance and modern sophistication, perfect for any occasion.
+                                Our diamonds shine with unmatched brilliance, making every moment unforgettable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Product List-->
+        <div class="w3-container w3-card-4 w3-margin w3-white product-list">
+            <div class="container">
+                <h2>Product List</h2>
+            </div>
+            <div class="w3-row-padding">
+                @if (Model.PaginatedProducts != null)
+                {
+                    @foreach (var product in Model.PaginatedProducts)
+                    {
+                        <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
+                            <div class="product">
+                                <div class="product-image-wrapper">
+                                    <img src="/ProductImages/@product.ProductImages" class="product-image" style="width: 100%; height: 180px; object-fit: cover;" />
+                                </div>
+                                <div class="product-name">@product.ProductName</div>
+                            </div>
+                        </div>
+                    }
+                }
+                
+            </div>
+        </div>
+
+        <hr>
+        <!-- Pagination-->
+        <div class="w3-center">
+            @if (Model.PaginatedProducts != null)
+            {
+                @if (Model.PaginatedProducts.HasPreviousPage)
+                {
+                    <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button" style="background-color: #B8860B; color: white;">&laquo; Previous</a>
+                }
+                @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
+                {
+                    <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-grey" : "")" style="@(i == Model.PaginatedProducts.PageIndex ? "" : "background-color: #B8860B; color: white;")">@i</a>
+                }
+                @if (Model.PaginatedProducts.HasNextPage)
+                {
+                    <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button" style="background-color: #B8860B; color: white;">Next &raquo;</a>
+                }
+            }
+            
+        </div>
+        <br>
+
+        <!-- Footer -->
+@*         <footer class="footer w3-container w3-padding-32 w3-margin-top">
+            <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        </footer> *@
+
+        <script>
+            // Toggle the visibility of comments
+            function myFunction(id) {
+                var x = document.getEleSmentById(id);
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+
+            // Like function
+            function likeFunction(x) {
+                x.style.fontWeight = "bold";
+                x.innerHTML = "✓ Liked";
+            }
+
+            function toggleSidebar() {
+                var sidebar = document.querySelector('.sidebar');
+                sidebar.style.left = sidebar.style.left === '0px' ? '-205px' : '0px';
+            }
+
+            function toggleSubMenu() {
+                var submenu = document.querySelector('.submenu');
+                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+            }
+
+            var slideIndex = 0;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n >= x.length) { slideIndex = 0 }
+                if (n < 0) { slideIndex = x.length - 1 }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex].style.display = "block";
+            }
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) { slideIndex = 1 }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 3000); // Change image every 3 seconds
+            }
+            carousel();
+        </script>
+    </div>
+</body>
+</html>
+

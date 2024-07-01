@@ -1,0 +1,120 @@
+﻿@page
+@model RazorTest.Pages.GemCRUD.CreateModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Gem - RazorTest</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            color: #b8860b; /* Set the text color */
+        }
+
+        .create-container {
+            margin-top: 5rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 1200px; /* Increased width */
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .card-header {
+            background-color: #fff;
+            border-bottom: none;
+            padding: 1.5rem 1.5rem 0;
+        }
+
+            .card-header h3 {
+                margin-bottom: 0;
+                color: #b8860b;
+                font-weight: 600;
+            }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #b8860b; /* Set the label text color */
+        }
+
+        .form-control {
+            color: #b8860b; /* Set the input text color */
+        }
+
+        .btn-primary {
+            background-color: #b8860b;
+            border-color: #b8860b;
+        }
+
+            .btn-primary:hover {
+                background-color: #b8860b;
+                border-color: #b8860b;
+            }
+
+        .card-footer {
+            background-color: #fff;
+            border-top: none;
+            padding: 1rem 1.5rem;
+        }
+
+            .card-footer a {
+                background-color: #b8860b; /* Yellow background */
+                color: #ffffff; /* White text color */
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                display: inline-block;
+            }
+
+                .card-footer a:hover {
+                    background-color: #a5702b; /* Darker shade of yellow on hover */
+                    color: #ffffff; /* Maintain white text color on hover */
+                    text-decoration: none;
+                }
+    </style>
+</head>
+<body>
+    <div class="container create-container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-header text-center">
+                        <h3 class="mb-0">Create Gem</h3>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="gemName">Gem Name</label>
+                                <input asp-for="Gem.GemName" class="form-control" id="gemName" required>
+                                <span asp-validation-for="Gem.GemName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="gemPrice">Gem Price</label>
+                                <input asp-for="Gem.GemPrice" class="form-control" id="gemPrice">
+                                <span asp-validation-for="Gem.GemPrice" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Create</button>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a asp-page="./GemList" class="btn btn-secondary">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

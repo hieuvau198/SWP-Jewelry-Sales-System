@@ -1,0 +1,49 @@
+﻿@page
+@model RazorTest.Pages.InvoiceCRUD.ViewDetailModel
+@{
+}
+
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Customer</th>
+                <th>Employee</th>
+                <th>Manager Confirmation</th>
+                <th>Payment Confirmation</th>
+                <th>Date</th>
+                <th>Voucher</th>
+                <th>Subtotal (VND)</th>
+                <th>Total (VND)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        @if(Model.ViewDetailInvoiceObject != null)
+        {
+            <tbody>
+                <tr>
+                    <td><strong>@Model.ViewDetailInvoiceObject.InvoiceType</strong></td>
+                    <td>@Model.ViewDetailInvoiceObject.CustomerName</td>
+                    <td>@Model.ViewDetailInvoiceObject.UserFullname</td>
+                    <td>@Model.ViewDetailInvoiceObject.ManagerFullname</td>
+                    <td>@Model.ViewDetailInvoiceObject.CashierFullname</td>
+                    <td>@Model.ViewDetailInvoiceObject.InvoiceDate.ToString("MM/dd/yyyy HH:mm:ss")</td>
+                    <td>@Model.ViewDetailInvoiceObject.CustomerVoucher</td>
+                    <td>@String.Format("{0:N0}", Model.ViewDetailInvoiceObject.TotalPrice)</td>
+                    <td>@String.Format("{0:N0}", Model.ViewDetailInvoiceObject.EndTotalPrice)</td>
+                    <td>@Model.ViewDetailInvoiceObject.InvoiceStatus</td>
+                </tr>
+            </tbody>
+        }
+        
+    </table>
+
+
+</div>
+
+<form method="get" action="/InvoiceCRUD/InvoiceDetail" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Index" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Back</button>
+</form>

@@ -1,0 +1,85 @@
+﻿@page
+@model RazorTest.Pages.Buy.BuyBackModel
+@{
+}
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+</style>
+<div class="container">
+    <h2>Details</h2>
+</div>
+
+
+@if (Model.BuyInvoiceObject != null)
+{
+    <table class="luxury-table">
+        <tr>
+            <th>Invoice Id:</th>
+            <td>@Model.BuyInvoiceObject.InvoiceId</td>
+        </tr>
+        <tr>
+            <th>Customer:</th>
+            <td>@Model.BuyInvoiceObject.CustomerName</td>
+        </tr>
+        <tr>
+            <th>Sale Staff:</th>
+            <td>@Model.BuyInvoiceObject.UserFullname</td>
+        </tr>
+        <tr>
+            <th>Total Price:</th>
+            <td>@String.Format("{0:N0} VND", Model.BuyInvoiceObject.EndTotalPrice)</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>@Model.BuyInvoiceObject.InvoiceDate</td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <h2>Items</h2>
+    </div>
+
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Original Unit Price</th>
+                <th>Sell Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.BuyInvoiceItemList)
+            {
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Quantity</td>
+                    <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+                    <td>@String.Format("{0:N0} VND", item.EndTotalPrice / item.Quantity)</td>
+                    <td>
+                        <form method="post" asp-page-handler="BuyItem">
+                            <input type="hidden" id="invoiceItemId" name="invoiceItemId" value="@item.InvoiceItemId" />
+                            <button type="submit" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Request Buy Order</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Invoice not found.</p>
+}
+
+<form method="get" action="/Buy/Processing" style="text-align: center;">
+    <input type="hidden" name="Back" value="/Buy/Processing" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">Back</button>
+</form>

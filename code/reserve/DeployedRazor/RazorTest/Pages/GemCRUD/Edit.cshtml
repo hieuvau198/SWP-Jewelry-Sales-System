@@ -1,0 +1,129 @@
+﻿@page
+@model RazorTest.Pages.GemCRUD.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<!-- Custom styles -->
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+        color: #b8860b; /* Set the text color */
+    }
+
+    .create-container {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically, if needed */
+    }
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 1500px; /* Increased width */
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .card-header {
+        background-color: #fff;
+        border-bottom: none;
+        padding: 1.5rem 1.5rem 0;
+    }
+
+        .card-header h3 {
+            margin-bottom: 0;
+            color: #b8860b;
+            font-weight: 600;
+        }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #b8860b; /* Set the label text color */
+    }
+
+    .form-control {
+        color: #b8860b; /* Set the input text color */
+    }
+
+    .btn-primary {
+        background-color: #b8860b;
+        border-color: #b8860b;
+    }
+
+        .btn-primary:hover {
+            background-color: #b8860b;
+            border-color: #b8860b;
+        }
+
+    .card-footer {
+        background-color: #fff;
+        border-top: none;
+        padding: 1rem 1.5rem;
+    }
+
+        .card-footer a {
+            background-color: #b8860b; /* Yellow background */
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+            .card-footer a:hover {
+                background-color: #b8860b; /* Darker shade of yellow on hover */
+                color: #ffffff; /* Maintain white text color on hover */
+                text-decoration: none;
+            }
+</style>
+
+<h1>Edit</h1>
+
+<h4>Gem</h4>
+<hr />
+<div class="row create-container">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h3>Edit Gem</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <!-- Hidden field for GemId -->
+                    <input asp-for="Gem.GemId" type="hidden" />
+
+                    <div class="form-group">
+                        <label asp-for="Gem.GemName" class="control-label"></label>
+                        <input asp-for="Gem.GemName" class="form-control" />
+                        <span asp-validation-for="Gem.GemName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gem.BuyPrice" class="control-label"></label>
+                        <input asp-for="Gem.BuyPrice" class="form-control" />
+                        <span asp-validation-for="Gem.BuyPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gem.GemPrice" class="control-label"></label>
+                        <input asp-for="Gem.GemPrice" class="form-control" />
+                        <span asp-validation-for="Gem.GemPrice" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </form>
+                <div class="card-footer">
+                    <a asp-page="./GemDetail">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

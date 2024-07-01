@@ -1,0 +1,266 @@
+﻿@page "{currentPage:int?}"
+@using RazorTest.Models
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+@model RazorTest.Pages.Sale.CartModel
+@{
+    ViewData["Title"] = "Cart";
+}
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-left: none;
+            background-color: #b8860b;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .search-container button:hover {
+                background-color: #b8860b;
+            }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: #d4af37;
+            color: #ffffff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .pagination a.active {
+                background-color: #b8860b;
+            }
+
+            .pagination a:hover {
+                background-color: grey;
+            }
+
+</style>
+
+<div class="container">
+</div>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Images</th>
+                <th>Product Type</th>
+                <th>Product Warranty</th>
+                <th>Quantity</th>
+                <th>Unit Price (VND)</th>
+                <th>Discount Rate</th>
+                <th>Unit Discount (VND)</th>
+                <th>Subtotal (VND)</th>
+                <th>Discount Total (VND)</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model.Cart)
+            {
+                <tr>
+                    <td><strong>@product.ProductName</strong></td>
+                    <td><img src="/ProductImages/@product.ProductImages" width="50px" /></td>
+                    <td>@product.ProductType</td>
+                    <td>@product.ProductWarranty Months</td>
+                    <td>
+                        <form method="post" asp-page-handler="EditProduct">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="number" name="quantity" value="@product.ProductQuantity" />
+                        </form>
+                    </td>
+                    <td>@product.UnitPrice.ToString("#,##0")</td>
+                    
+                    @if(Model.GetDiscountRateInCart(product.ProductId)>0)
+                    {
+                        <td>
+                            <div style="display: flex;justify-content: center;align-items: center;">
+                                @(Model.GetDiscountRateInCart(product.ProductId) * 100)%
+                            </div>
+                        
+                            <form method="post" asp-page-handler="SelectDiscount">
+                                <input type="hidden" name="productId" value="@product.ProductId" />
+                                <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
+                            </form>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <form method="post" asp-page-handler="SelectDiscount">
+                                <input type="hidden" name="productId" value="@product.ProductId" />
+                                <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
+                            </form>
+                        </td>
+                    }
+
+                    @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
+                    {
+                        <td>@((Model.GetDiscountRateInCart(product.ProductId) * product.UnitPrice * -1).ToString("#,##0"))</td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                    
+                    <td>@product.TotalPrice.ToString("#,##0")</td>
+                    @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
+                    {
+                        <td>@((Model.GetDiscountRateInCart(product.ProductId) * product.UnitPrice * product.ProductQuantity * -1).ToString("#,##0"))</td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                    <td>
+                        @((product.TotalPrice * (1 - Model.GetDiscountRateInCart(product.ProductId))).ToString("#,##0"))
+
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to remove this product?');">
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>@Model.SaleInvoiceObject.TotalPrice.ToString("#,##0")</td>
+                <td>@((Model.SaleInvoiceObject.EndTotalPrice - Model.SaleInvoiceObject.TotalPrice).ToString("#,##0"))</td>
+                <td>@Model.SaleInvoiceObject.EndTotalPrice.ToString("#,##0")</td>
+                <td></td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    @if (Model.CurrentPage > 1)
+    {
+        <a asp-page="./ViewCart" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
+    }
+    @for (var i = 1; i <= Model.TotalPages; i++)
+    {
+        if (i == Model.CurrentPage)
+        {
+            <a class="active" href="#">@i</a>
+        }
+        else
+        {
+            <a asp-page="./ViewCart" asp-route-currentPage="@i">@i</a>
+        }
+    }
+    @if (Model.CurrentPage < Model.TotalPages)
+    {
+        <a asp-page="./ViewCart" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
+    }
+</div>
+
+
+
+<div class="container">
+    <h2>Customer</h2>
+</div>
+<form method="post" asp-page-handler="AddCustomer">
+    <input type="hidden" name="customerId" />
+    <div class="title">Search Phone Contact</div>
+    <div class="search-container">
+        <input type="text" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
+        <button type="submit">Search</button>
+    </div>
+    <br />
+    @if (Model.Customer != null && !Model.Customer.CustomerName.Equals("Not Identified"))
+    {
+        <div class="luxury-table-wrapper">
+            <table class="luxury-table">
+                <tr>
+                    <th>Name</th>
+                    <td>@Model.Customer.CustomerName</td>
+                </tr>
+                <tr>
+                    <th>Attend Date</th>
+                    <td>@Model.Customer.AttendDate</td>
+                </tr>
+                <tr>
+                    <th>Rank</th>
+                    <td>@Model.Customer.CustomerRank</td>
+                </tr>
+                <tr>
+                    <th>Points</th>
+                    <td>@Model.Customer.CustomerPoint</td>
+                </tr>
+            </table>
+        </div>
+    }
+</form>
+
+<!-- Display message when customer is not found -->
+@if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+{
+    <div class="alert alert-warning" role="alert">
+        @TempData["Message"]
+    </div>
+}
+
+<!-- Display customer details if identified -->
+
+
+<form method="get" action="/Sale/CreateCustomer">
+    <input type="hidden" name="Create" value="/Sale/CreateCustomer" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Add New Customer</button>
+</form>
+
+
+
+<form method="post" asp-page-handler="Checkout" style="text-align: center;">
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Checkout</button>
+</form>
+
+<form method="get" action="/Sale/SaleHomePage" style="text-align: right;">
+    <input type="hidden" name="Back" value="/Sale/SaleHomePage" />
+    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Back to Product List</button>
+</form>

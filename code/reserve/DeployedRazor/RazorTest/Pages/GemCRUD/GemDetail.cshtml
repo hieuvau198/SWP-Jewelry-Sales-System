@@ -1,0 +1,41 @@
+﻿@page
+@model RazorTest.Pages.GemCRUD.GemListModel
+@{
+    ViewData["Title"] = "Gem List";
+}
+
+<h2 style="text-align: center;">Gems</h2>
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Weight</th>
+                <th>Unit</th>
+                <th>Buy Price</th>
+                <th>Sell Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var gem in Model.Gems)
+            {
+                <tr>
+                    <td><strong>@gem.GemName</strong></td>
+                    <td>@gem.GemCode</td>
+                    <td>@gem.GemWeight</td>
+                    <td>@gem.Unit</td>
+                    <td>@String.Format("{0:N0} VND", gem.BuyPrice)</td>
+                    <td>@String.Format("{0:N0} VND", gem.GemPrice)</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@gem.GemId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@gem.GemId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Gem</a>
+<a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>
