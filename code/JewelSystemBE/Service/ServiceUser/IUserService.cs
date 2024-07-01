@@ -9,7 +9,5 @@ namespace JewelSystemBE.Service.ServiceUser
         User AddUser(User user);
         Boolean RemoveUser(string userId);
         Boolean UpdateUser(User user);
-        
-        Boolean ExistUser(string userId);
     }
 }

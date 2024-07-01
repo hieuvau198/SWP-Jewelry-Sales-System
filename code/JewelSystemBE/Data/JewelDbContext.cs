@@ -1372,6 +1372,7 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.EndTotalPrice).HasColumnName("end_total_price").HasColumnType("decimal(18, 2)").IsRequired();
 
                 entity.HasData(
+                    //I1 - Sale
                     new Invoice { 
                         InvoiceId = "I1", 
                         InvoiceType = "Sale", 
@@ -1379,12 +1380,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "John Doe",
                         UserId = "US3", 
                         UserFullname = "James Martinez",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 3, 1), 
                         CustomerVoucher = 0, 
                         TotalPrice = 882348000, 
                         EndTotalPrice = 798576000,
                         InvoiceStatus = "Complete"
                     },
+                    //I2 - Sale
                     new Invoice
                     {
                         InvoiceId = "I2",
@@ -1393,12 +1401,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Jane Smith",
                         UserId = "US4",
                         UserFullname = "Mateo Martinez",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 4, 4),
                         CustomerVoucher = 0,
                         TotalPrice = 240000000,
                         EndTotalPrice = 192000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I3 - Sale
                     new Invoice
                     {
                         InvoiceId = "I3",
@@ -1407,12 +1422,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Alice Johnson",
                         UserId = "US4",
                         UserFullname = "Mateo Martinez",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 5, 5),
                         CustomerVoucher = 1000000,
                         TotalPrice = 225000000,
                         EndTotalPrice = 209000000,
                         InvoiceStatus = "Pending"
                     },
+                    //I4 - Sale
                     new Invoice
                     {
                         InvoiceId = "I4",
@@ -1421,12 +1443,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Emily Wilson",
                         UserId = "US6",
                         UserFullname = "Isabel Rodriguez",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 6, 5),
                         CustomerVoucher = 500000,
                         TotalPrice = 85000000,
                         EndTotalPrice = 84500000,
                         InvoiceStatus = "Complete"
                     },
+                    //I5 - Sale
                     new Invoice
                     {
                         InvoiceId = "I5",
@@ -1435,12 +1464,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Jane Smith",
                         UserId = "US7",
                         UserFullname = "Luna Taylor",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 4, 5),
                         CustomerVoucher = 0,
                         TotalPrice = 1500000000,
                         EndTotalPrice = 1200000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I6 - Sale
                     new Invoice
                     {
                         InvoiceId = "I6",
@@ -1449,12 +1485,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Bob Brown",
                         UserId = "US6",
                         UserFullname = "Isabel Rodriguez",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 5, 3),
                         CustomerVoucher = 0,
                         TotalPrice = 2700000000,
                         EndTotalPrice = 2430000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I7 - Sale
                     new Invoice
                     {
                         InvoiceId = "I7",
@@ -1463,12 +1506,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Alice Johnson",
                         UserId = "US7",
                         UserFullname = "Luna Taylor",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 6, 5),
                         CustomerVoucher = 0,
                         TotalPrice = 960000000,
                         EndTotalPrice = 864000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I8 - Sale
                     new Invoice
                     {
                         InvoiceId = "I8",
@@ -1477,12 +1527,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "John Doe",
                         UserId = "US4",
                         UserFullname = "Mateo Martinez",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 3, 3),
                         CustomerVoucher = 0,
                         TotalPrice = 1100000000,
                         EndTotalPrice = 990000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I9 - Sale
                     new Invoice
                     {
                         InvoiceId = "I9",
@@ -1491,12 +1548,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Alice Johnson",
                         UserId = "US8",
                         UserFullname = "Emma Young",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 3, 3),
                         CustomerVoucher = 0,
                         TotalPrice = 800000000,
                         EndTotalPrice = 720000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I10 - Sale
                     new Invoice
                     {
                         InvoiceId = "I10",
@@ -1505,12 +1569,19 @@ namespace JewelSystemBE.Data
                         CustomerName = "Jane Smith",
                         UserId = "US7",
                         UserFullname = "Luna Taylor",
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
                         InvoiceDate = new DateTime(2024, 2, 2),
                         CustomerVoucher = 0,
                         TotalPrice = 2100000000,
                         EndTotalPrice = 1890000000,
                         InvoiceStatus = "Complete"
                     },
+                    //I11 - Sale
                     new Invoice
                     {
                         InvoiceId = "I11",
@@ -1519,7 +1590,13 @@ namespace JewelSystemBE.Data
                         CustomerName = "Emily Wilson",
                         UserId = "US4",
                         UserFullname = "Mateo Martinez",
-                        InvoiceDate = new DateTime(2023, 10, 5),
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        InvoiceDate = new DateTime(2024, 6, 5),
                         CustomerVoucher = 0,
                         TotalPrice = 3000000000,
                         EndTotalPrice = 2700000000,
@@ -1534,7 +1611,13 @@ namespace JewelSystemBE.Data
                         CustomerName = "Bob Brown",
                         UserId = "US3",
                         UserFullname = "James Martinez",
-                        InvoiceDate = new DateTime(2023, 11, 15),
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        InvoiceDate = new DateTime(2024, 5, 15),
                         CustomerVoucher = 0,
                         TotalPrice = 1500000000,
                         EndTotalPrice = 1500000000,
@@ -1549,7 +1632,13 @@ namespace JewelSystemBE.Data
                         CustomerName = "Alice Johnson",
                         UserId = "US4",
                         UserFullname = "Mateo Martinez",
-                        InvoiceDate = new DateTime(2023, 12, 10),
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        InvoiceDate = new DateTime(2024, 4, 10),
                         CustomerVoucher = 0,
                         TotalPrice = 2400000000,
                         EndTotalPrice = 2400000000,
@@ -1564,7 +1653,13 @@ namespace JewelSystemBE.Data
                         CustomerName = "Emily Wilson",
                         UserId = "US6",
                         UserFullname = "Isabel Rodriguez",
-                        InvoiceDate = new DateTime(2025, 1, 5),
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        InvoiceDate = new DateTime(2024, 1, 5),
                         CustomerVoucher = 0,
                         TotalPrice = 900000000,
                         EndTotalPrice = 810000000,
@@ -1579,7 +1674,13 @@ namespace JewelSystemBE.Data
                         CustomerName = "John Doe",
                         UserId = "US7",
                         UserFullname = "Luna Taylor",
-                        InvoiceDate = new DateTime(2025, 2, 20),
+                        ManagerId = "US2",
+                        ManagerFullname = "Olivia Miller",
+                        CashierId = "US5",
+                        CashierFullname = "Theodore Garcia",
+                        StallId = "ST01",
+                        StallName = "Stall A",
+                        InvoiceDate = new DateTime(2024, 2, 20),
                         CustomerVoucher = 0,
                         TotalPrice = 1200000000,
                         EndTotalPrice = 1200000000,

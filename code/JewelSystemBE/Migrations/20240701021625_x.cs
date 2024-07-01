@@ -104,6 +104,12 @@ namespace JewelSystemBE.Migrations
                     CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     user_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserFullname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ManagerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ManagerFullname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CashierId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CashierFullname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StallId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StallName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     invoice_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     customer_voucher = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     total_price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
@@ -259,11 +265,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "2e7160a3-82ac-4f7a-93c0-91a0d849cb4d", "Some Product Id", "Some Product Name", 0 },
-                    { "3e476202-1b8a-470d-b8b1-7c476edd0d3b", "Some Product Id", "Some Product Name", 0 },
-                    { "6bd19672-6a06-47bf-85dc-29fb27031084", "Some Product Id", "Some Product Name", 0 },
-                    { "a8f21b99-74f9-4bfb-b8ff-86da24aa039c", "Some Product Id", "Some Product Name", 0 },
-                    { "fc3bcb78-7a27-4fa0-a5b9-b529727984eb", "Some Product Id", "Some Product Name", 0 }
+                    { "4a82df7d-3020-45da-84b2-095641ce2c6d", "Some Product Id", "Some Product Name", 0 },
+                    { "53510273-6d64-4dc2-b6e0-1793f7e9a33f", "Some Product Id", "Some Product Name", 0 },
+                    { "ae996ef2-bdfd-4f0d-967c-bff25284a1dc", "Some Product Id", "Some Product Name", 0 },
+                    { "fc27c631-d19e-4df9-acbe-653f8fb761a4", "Some Product Id", "Some Product Name", 0 },
+                    { "fff1e9c2-34d0-46a6-b6c1-058e5e58cab5", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -385,32 +391,32 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1638), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1637), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1633), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1620), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(309), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
+                    { "vang14k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(307), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
+                    { "vang18k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(304), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
+                    { "vang24k", 0.0, new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(288), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
                 });
 
             migrationBuilder.InsertData(
                 table: "invoice",
-                columns: new[] { "invoice_id", "customer_id", "CustomerName", "customer_voucher", "end_total_price", "invoice_date", "InvoiceStatus", "invoice_type", "total_price", "UserFullname", "user_id" },
+                columns: new[] { "invoice_id", "CashierFullname", "CashierId", "customer_id", "CustomerName", "customer_voucher", "end_total_price", "invoice_date", "InvoiceStatus", "invoice_type", "ManagerFullname", "ManagerId", "StallId", "StallName", "total_price", "UserFullname", "user_id" },
                 values: new object[,]
                 {
-                    { "I1", "C1", "John Doe", 0m, 798576000m, new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 882348000m, "James Martinez", "US3" },
-                    { "I10", "C2", "Jane Smith", 0m, 1890000000m, new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 2100000000m, "Luna Taylor", "US7" },
-                    { "I11", "C5", "Emily Wilson", 0m, 2700000000m, new DateTime(2023, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 3000000000m, "Mateo Martinez", "US4" },
-                    { "I12", "C4", "Bob Brown", 0m, 1500000000m, new DateTime(2023, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 1500000000m, "James Martinez", "US3" },
-                    { "I13", "C3", "Alice Johnson", 0m, 2400000000m, new DateTime(2023, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 2400000000m, "Mateo Martinez", "US4" },
-                    { "I14", "C5", "Emily Wilson", 0m, 810000000m, new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 900000000m, "Isabel Rodriguez", "US6" },
-                    { "I15", "C1", "John Doe", 0m, 1200000000m, new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", 1200000000m, "Luna Taylor", "US7" },
-                    { "I2", "C2", "Jane Smith", 0m, 192000000m, new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 240000000m, "Mateo Martinez", "US4" },
-                    { "I3", "C3", "Alice Johnson", 1000000m, 209000000m, new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", "Sale", 225000000m, "Mateo Martinez", "US4" },
-                    { "I4", "C5", "Emily Wilson", 500000m, 84500000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 85000000m, "Isabel Rodriguez", "US6" },
-                    { "I5", "C2", "Jane Smith", 0m, 1200000000m, new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 1500000000m, "Luna Taylor", "US7" },
-                    { "I6", "C4", "Bob Brown", 0m, 2430000000m, new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 2700000000m, "Isabel Rodriguez", "US6" },
-                    { "I7", "C3", "Alice Johnson", 0m, 864000000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 960000000m, "Luna Taylor", "US7" },
-                    { "I8", "C1", "John Doe", 0m, 990000000m, new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 1100000000m, "Mateo Martinez", "US4" },
-                    { "I9", "C3", "Alice Johnson", 0m, 720000000m, new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", 800000000m, "Emma Young", "US8" }
+                    { "I1", "Theodore Garcia", "US5", "C1", "John Doe", 0m, 798576000m, new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 882348000m, "James Martinez", "US3" },
+                    { "I10", "Theodore Garcia", "US5", "C2", "Jane Smith", 0m, 1890000000m, new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 2100000000m, "Luna Taylor", "US7" },
+                    { "I11", "Theodore Garcia", "US5", "C5", "Emily Wilson", 0m, 2700000000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 3000000000m, "Mateo Martinez", "US4" },
+                    { "I12", "Theodore Garcia", "US5", "C4", "Bob Brown", 0m, 1500000000m, new DateTime(2024, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", "Olivia Miller", "US2", "ST01", "Stall A", 1500000000m, "James Martinez", "US3" },
+                    { "I13", "Theodore Garcia", "US5", "C3", "Alice Johnson", 0m, 2400000000m, new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", "Olivia Miller", "US2", "ST01", "Stall A", 2400000000m, "Mateo Martinez", "US4" },
+                    { "I14", "Theodore Garcia", "US5", "C5", "Emily Wilson", 0m, 810000000m, new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", "Olivia Miller", "US2", "ST01", "Stall A", 900000000m, "Isabel Rodriguez", "US6" },
+                    { "I15", "Theodore Garcia", "US5", "C1", "John Doe", 0m, 1200000000m, new DateTime(2024, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Buy", "Olivia Miller", "US2", "ST01", "Stall A", 1200000000m, "Luna Taylor", "US7" },
+                    { "I2", "Theodore Garcia", "US5", "C2", "Jane Smith", 0m, 192000000m, new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 240000000m, "Mateo Martinez", "US4" },
+                    { "I3", "Theodore Garcia", "US5", "C3", "Alice Johnson", 1000000m, 209000000m, new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Pending", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 225000000m, "Mateo Martinez", "US4" },
+                    { "I4", "Theodore Garcia", "US5", "C5", "Emily Wilson", 500000m, 84500000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 85000000m, "Isabel Rodriguez", "US6" },
+                    { "I5", "Theodore Garcia", "US5", "C2", "Jane Smith", 0m, 1200000000m, new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 1500000000m, "Luna Taylor", "US7" },
+                    { "I6", "Theodore Garcia", "US5", "C4", "Bob Brown", 0m, 2430000000m, new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 2700000000m, "Isabel Rodriguez", "US6" },
+                    { "I7", "Theodore Garcia", "US5", "C3", "Alice Johnson", 0m, 864000000m, new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 960000000m, "Luna Taylor", "US7" },
+                    { "I8", "Theodore Garcia", "US5", "C1", "John Doe", 0m, 990000000m, new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 1100000000m, "Mateo Martinez", "US4" },
+                    { "I9", "Theodore Garcia", "US5", "C3", "Alice Johnson", 0m, 720000000m, new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "Complete", "Sale", "Olivia Miller", "US2", "ST01", "Stall A", 800000000m, "Emma Young", "US8" }
                 });
 
             migrationBuilder.InsertData(
@@ -572,14 +578,14 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$V1Q7hJNVNcryhyzNW0TCNe/QNaanhYLOdUHT7Q1nVSUlgUJFhTPvK", "Admin", "user1" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$l8kje79yWPmKpsdxWKzG8e/hWlKkuJjz.SivoTzWoYLfPZpZNKYe2", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$3bAm5AyOZk.r/zpYacEOJOPnOX6wuRTazAl2CGF.z0yOwIjWSb0O6", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$xMdQ91n5E87kMGRHYH0EMuVU4dyNXCEz9t5rSen/K3ibNi76SOJkq", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$qMhF5LymbSOHLnsPAwQfset6k2MKSmSDIvVO1D9j9wsOCbTvq3Y4O", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$V3s79vWChxm0N.C9b76z8OXjTbJhG0kl3gZ8XKNfoCddh5.SnTQNq", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$dEDLQwp3nsmkztX58WjSE.MDQRiBcmy99WSli/cc28BtR4OVoNyUK", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$fahgY/rCXKbZnmJYd9XnUu85pDw8NUTBh1Rq2vdl009WZ6SisBLfy", "Sale", "user8" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$6vtGA1Xl0wk1735LJ9h/QuanpOZXynUfxAtwRI0ga.THyQkU/kd/m", "Admin", "user1" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$fTsEeQHb2ajbCk6Ivyw.Bu/Jkb3n5x0Mc6aOltnrhxVZxBn/uecKG", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$qrglP8M6If4fzw8asS9GS.mJvQPWKeOFlRCkds7gLk4pUMbvBezZ2", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$pJqLz8Y3scHtuVLPUaxxKucvPwqfzW2bimc4I0j6/C5fs6Q1Bonqm", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$2iXZTaGUnl6db.rzsFZjguIKNWim0ajbmF2Ae1IibsI1eF0JowAWi", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$zr0E7x7XJcoJ8uCCYQfXYeUHvZP7gJ77mShL1WTSU5LPLitVMlS2O", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$cxejYJeBX9pqWhw8RMTsN.AcENFzQMxfItSPFlJYDdzmjQ7kcOUZO", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$ZGCOKranAihlL57KUqyy5.XSzpHDS27.cpGLnbe2Hh18XL6plJR0q", "Sale", "user8" }
                 });
 
             migrationBuilder.InsertData(

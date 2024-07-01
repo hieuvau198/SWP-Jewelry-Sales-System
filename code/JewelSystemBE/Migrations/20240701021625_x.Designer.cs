@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JewelSystemBE.Migrations
 {
     [DbContext(typeof(JewelDbContext))]
-    [Migration("20240627105157_x")]
+    [Migration("20240701021625_x")]
     partial class x
     {
         /// <inheritdoc />
@@ -1053,7 +1053,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang24k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1620),
+                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(288),
                             GoldCode = "Vàng nữ trang 99,99%",
                             GoldName = "24K",
                             SellPrice = 0.0,
@@ -1063,7 +1063,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang18k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1633),
+                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(304),
                             GoldCode = "Vàng nữ trang 75%",
                             GoldName = "18K",
                             SellPrice = 0.0,
@@ -1073,7 +1073,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang14k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1637),
+                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(307),
                             GoldCode = "Vàng nữ trang 58,3%",
                             GoldName = "14K",
                             SellPrice = 0.0,
@@ -1083,7 +1083,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang10k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 6, 27, 17, 51, 55, 584, DateTimeKind.Local).AddTicks(1638),
+                            Date = new DateTime(2024, 7, 1, 9, 16, 23, 517, DateTimeKind.Local).AddTicks(309),
                             GoldCode = "Vàng nữ trang 41,7%",
                             GoldName = "10K",
                             SellPrice = 0.0,
@@ -1096,6 +1096,14 @@ namespace JewelSystemBE.Migrations
                     b.Property<string>("InvoiceId")
                         .HasColumnType("nvarchar(450)")
                         .HasColumnName("invoice_id");
+
+                    b.Property<string>("CashierFullname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CashierId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CustomerId")
                         .IsRequired()
@@ -1128,6 +1136,22 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasColumnName("invoice_type");
 
+                    b.Property<string>("ManagerFullname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ManagerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StallName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("decimal(18, 2)")
                         .HasColumnName("total_price");
@@ -1149,6 +1173,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I1",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C1",
                             CustomerName = "John Doe",
                             CustomerVoucher = 0m,
@@ -1156,6 +1182,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 882348000m,
                             UserFullname = "James Martinez",
                             UserId = "US3"
@@ -1163,6 +1193,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I2",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C2",
                             CustomerName = "Jane Smith",
                             CustomerVoucher = 0m,
@@ -1170,6 +1202,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 240000000m,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
@@ -1177,6 +1213,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I3",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
                             CustomerVoucher = 1000000m,
@@ -1184,6 +1222,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 225000000m,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
@@ -1191,6 +1233,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I4",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C5",
                             CustomerName = "Emily Wilson",
                             CustomerVoucher = 500000m,
@@ -1198,6 +1242,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 85000000m,
                             UserFullname = "Isabel Rodriguez",
                             UserId = "US6"
@@ -1205,6 +1253,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I5",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C2",
                             CustomerName = "Jane Smith",
                             CustomerVoucher = 0m,
@@ -1212,6 +1262,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 1500000000m,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
@@ -1219,6 +1273,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I6",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C4",
                             CustomerName = "Bob Brown",
                             CustomerVoucher = 0m,
@@ -1226,6 +1282,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 2700000000m,
                             UserFullname = "Isabel Rodriguez",
                             UserId = "US6"
@@ -1233,6 +1293,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I7",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
                             CustomerVoucher = 0m,
@@ -1240,6 +1302,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 960000000m,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
@@ -1247,6 +1313,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I8",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C1",
                             CustomerName = "John Doe",
                             CustomerVoucher = 0m,
@@ -1254,6 +1322,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 1100000000m,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
@@ -1261,6 +1333,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I9",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
                             CustomerVoucher = 0m,
@@ -1268,6 +1342,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 800000000m,
                             UserFullname = "Emma Young",
                             UserId = "US8"
@@ -1275,6 +1353,8 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I10",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C2",
                             CustomerName = "Jane Smith",
                             CustomerVoucher = 0m,
@@ -1282,6 +1362,10 @@ namespace JewelSystemBE.Migrations
                             InvoiceDate = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 2100000000m,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
@@ -1289,13 +1373,19 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I11",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C5",
                             CustomerName = "Emily Wilson",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 2700000000m,
-                            InvoiceDate = new DateTime(2023, 10, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 3000000000m,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
@@ -1303,13 +1393,19 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I12",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C4",
                             CustomerName = "Bob Brown",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 1500000000m,
-                            InvoiceDate = new DateTime(2023, 11, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 1500000000m,
                             UserFullname = "James Martinez",
                             UserId = "US3"
@@ -1317,13 +1413,19 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I13",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 2400000000m,
-                            InvoiceDate = new DateTime(2023, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 2400000000m,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
@@ -1331,13 +1433,19 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I14",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C5",
                             CustomerName = "Emily Wilson",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 810000000m,
-                            InvoiceDate = new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 900000000m,
                             UserFullname = "Isabel Rodriguez",
                             UserId = "US6"
@@ -1345,13 +1453,19 @@ namespace JewelSystemBE.Migrations
                         new
                         {
                             InvoiceId = "I15",
+                            CashierFullname = "Theodore Garcia",
+                            CashierId = "US5",
                             CustomerId = "C1",
                             CustomerName = "John Doe",
                             CustomerVoucher = 0m,
                             EndTotalPrice = 1200000000m,
-                            InvoiceDate = new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            InvoiceDate = new DateTime(2024, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
+                            ManagerFullname = "Olivia Miller",
+                            ManagerId = "US2",
+                            StallId = "ST01",
+                            StallName = "Stall A",
                             TotalPrice = 1200000000m,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
@@ -2599,35 +2713,35 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "6bd19672-6a06-47bf-85dc-29fb27031084",
+                            StallItemId = "ae996ef2-bdfd-4f0d-967c-bff25284a1dc",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "fc3bcb78-7a27-4fa0-a5b9-b529727984eb",
+                            StallItemId = "fc27c631-d19e-4df9-acbe-653f8fb761a4",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "a8f21b99-74f9-4bfb-b8ff-86da24aa039c",
+                            StallItemId = "53510273-6d64-4dc2-b6e0-1793f7e9a33f",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "2e7160a3-82ac-4f7a-93c0-91a0d849cb4d",
+                            StallItemId = "4a82df7d-3020-45da-84b2-095641ce2c6d",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
                         },
                         new
                         {
-                            StallItemId = "3e476202-1b8a-470d-b8b1-7c476edd0d3b",
+                            StallItemId = "fff1e9c2-34d0-46a6-b6c1-058e5e58cab5",
                             ProductId = "Some Product Id",
                             ProductName = "Some Product Name",
                             quantity = 0
@@ -2669,7 +2783,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US1",
                             Email = "liam@gmail.com",
                             Fullname = "Liam Williams",
-                            Password = "$2a$11$V1Q7hJNVNcryhyzNW0TCNe/QNaanhYLOdUHT7Q1nVSUlgUJFhTPvK",
+                            Password = "$2a$11$6vtGA1Xl0wk1735LJ9h/QuanpOZXynUfxAtwRI0ga.THyQkU/kd/m",
                             Role = "Admin",
                             Username = "user1"
                         },
@@ -2678,7 +2792,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US2",
                             Email = "olivia@gmail.com",
                             Fullname = "Olivia Miller",
-                            Password = "$2a$11$l8kje79yWPmKpsdxWKzG8e/hWlKkuJjz.SivoTzWoYLfPZpZNKYe2",
+                            Password = "$2a$11$fTsEeQHb2ajbCk6Ivyw.Bu/Jkb3n5x0Mc6aOltnrhxVZxBn/uecKG",
                             Role = "Manager",
                             Username = "user2"
                         },
@@ -2687,7 +2801,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US3",
                             Email = "james@gmail.com",
                             Fullname = "James Martinez",
-                            Password = "$2a$11$3bAm5AyOZk.r/zpYacEOJOPnOX6wuRTazAl2CGF.z0yOwIjWSb0O6",
+                            Password = "$2a$11$qrglP8M6If4fzw8asS9GS.mJvQPWKeOFlRCkds7gLk4pUMbvBezZ2",
                             Role = "Sale",
                             Username = "user3"
                         },
@@ -2696,7 +2810,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US4",
                             Email = "matao@gmail.com",
                             Fullname = "Mateo Martinez",
-                            Password = "$2a$11$xMdQ91n5E87kMGRHYH0EMuVU4dyNXCEz9t5rSen/K3ibNi76SOJkq",
+                            Password = "$2a$11$pJqLz8Y3scHtuVLPUaxxKucvPwqfzW2bimc4I0j6/C5fs6Q1Bonqm",
                             Role = "Sale",
                             Username = "user4"
                         },
@@ -2705,7 +2819,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US5",
                             Email = "theodore@gmail.com",
                             Fullname = "Theodore Garcia",
-                            Password = "$2a$11$qMhF5LymbSOHLnsPAwQfset6k2MKSmSDIvVO1D9j9wsOCbTvq3Y4O",
+                            Password = "$2a$11$2iXZTaGUnl6db.rzsFZjguIKNWim0ajbmF2Ae1IibsI1eF0JowAWi",
                             Role = "Cashier",
                             Username = "user5"
                         },
@@ -2714,7 +2828,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US6",
                             Email = "isabel@gmail.com",
                             Fullname = "Isabel Rodriguez",
-                            Password = "$2a$11$V3s79vWChxm0N.C9b76z8OXjTbJhG0kl3gZ8XKNfoCddh5.SnTQNq",
+                            Password = "$2a$11$zr0E7x7XJcoJ8uCCYQfXYeUHvZP7gJ77mShL1WTSU5LPLitVMlS2O",
                             Role = "Sale",
                             Username = "user6"
                         },
@@ -2723,7 +2837,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US7",
                             Email = "luna@gmail.com",
                             Fullname = "Luna Taylor",
-                            Password = "$2a$11$dEDLQwp3nsmkztX58WjSE.MDQRiBcmy99WSli/cc28BtR4OVoNyUK",
+                            Password = "$2a$11$cxejYJeBX9pqWhw8RMTsN.AcENFzQMxfItSPFlJYDdzmjQ7kcOUZO",
                             Role = "Sale",
                             Username = "user7"
                         },
@@ -2732,7 +2846,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US8",
                             Email = "emma@gmail.com",
                             Fullname = "Emma Young",
-                            Password = "$2a$11$fahgY/rCXKbZnmJYd9XnUu85pDw8NUTBh1Rq2vdl009WZ6SisBLfy",
+                            Password = "$2a$11$ZGCOKranAihlL57KUqyy5.XSzpHDS27.cpGLnbe2Hh18XL6plJR0q",
                             Role = "Sale",
                             Username = "user8"
                         });

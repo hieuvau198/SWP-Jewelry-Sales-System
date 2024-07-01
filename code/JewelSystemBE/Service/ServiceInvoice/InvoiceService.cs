@@ -80,15 +80,69 @@ namespace JewelSystemBE.Service.ServiceInvoice
             if (updatedInvoice != null)
             {
                 if (invoice.InvoiceType != null)
-                { updatedInvoice.InvoiceType = invoice.InvoiceType; }
+                { 
+                    updatedInvoice.InvoiceType = invoice.InvoiceType; 
+                }
+
                 if (invoice.CustomerId != null)
-                { updatedInvoice.CustomerId = invoice.CustomerId; }
+                { 
+                    updatedInvoice.CustomerId = invoice.CustomerId; 
+                }
+
+                if (invoice.CustomerName != null)
+                {
+                    updatedInvoice.CustomerName = invoice.CustomerName;
+                }
+
                 if (invoice.UserId != null)
-                { updatedInvoice.UserId = invoice.UserId; }
+                { 
+                    updatedInvoice.UserId = invoice.UserId; 
+                }
+
+                if (invoice.UserFullname != null)
+                {
+                    updatedInvoice.UserFullname = invoice.UserFullname;
+                }
+
+                if (invoice.ManagerId != null)
+                {
+                    updatedInvoice.ManagerId = invoice.ManagerId;
+                }
+
+                if (invoice.ManagerFullname != null)
+                {
+                    updatedInvoice.ManagerFullname = invoice.ManagerFullname;
+                }
+
+                if (invoice.CashierId != null)
+                {
+                    updatedInvoice.CashierId = invoice.CashierId;
+                }
+
+                if (invoice.CashierFullname != null)
+                {
+                    updatedInvoice.CashierFullname = invoice.CashierFullname;
+                }
+
+                if (invoice.StallId != null)
+                {
+                    updatedInvoice.StallId = invoice.StallId;
+                }
+
+                if (invoice.StallName != null)
+                {
+                    updatedInvoice.StallName = invoice.StallName;
+                }
+
                 if (invoice.InvoiceDate != null)
-                { updatedInvoice.InvoiceDate = invoice.InvoiceDate; }
+                { 
+                    updatedInvoice.InvoiceDate = invoice.InvoiceDate; 
+                }
                 if (invoice.CustomerVoucher != null)
-                { updatedInvoice.CustomerVoucher = invoice.CustomerVoucher; }
+                { 
+                    updatedInvoice.CustomerVoucher = invoice.CustomerVoucher; 
+                }
+
                 if (invoice.InvoiceStatus != null)
                 { 
                     updatedInvoice.InvoiceStatus = invoice.InvoiceStatus; 
@@ -97,10 +151,16 @@ namespace JewelSystemBE.Service.ServiceInvoice
                         UpdateProductQuantity(updatedInvoice.InvoiceId, updatedInvoice.InvoiceType);
                     }
                 }
+
                 if (invoice.TotalPrice != null)
-                { updatedInvoice.TotalPrice = invoice.TotalPrice; }
+                { 
+                    updatedInvoice.TotalPrice = invoice.TotalPrice; 
+                }
+
                 if (invoice.EndTotalPrice != null)
-                { updatedInvoice.EndTotalPrice = invoice.EndTotalPrice; }
+                { 
+                    updatedInvoice.EndTotalPrice = invoice.EndTotalPrice; 
+                }
                 
                 
                 _jewelDbContext.Invoices.Update(updatedInvoice);

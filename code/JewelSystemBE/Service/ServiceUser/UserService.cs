@@ -98,10 +98,5 @@ namespace JewelSystemBE.Service.ServiceUser
             }
             return false;
         }
-
-        public bool ExistUser(string userId)
-        {
-            return _jewelDbContext.Users.Any(u => u.UserId == userId);
-        }
     }
 }
