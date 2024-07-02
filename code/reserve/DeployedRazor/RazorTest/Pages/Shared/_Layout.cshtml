@@ -5,99 +5,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-</head>
 
-
-
-<nav class="sidebar">
-    @if (_VerifyAuth.VerifyAuth(Context, "Manager"))
-    {
-        <a asp-page="/ProductCRUD/ProductDetail">Manage Products</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
-        <a asp-page="/GemCRUD/GemDetail">Manage Gems</a>
-        <a asp-page="/UserCRUD/UserDetail">Manage Staffs</a>
-        <a asp-page="/ProductCRUD/ProductDetail">Manage Stalls</a>
-    }
-
-    @if (_VerifyAuth.VerifyAuth(Context, "Admin"))
-    {
-        <a href="/Dashboard/Revenue">Dashboard</a>
-        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
-        <a asp-page="/CustomerCRUD/CustomerDetail">Customers</a>
-        <a asp-page="/DiscountCRUD/DiscountDetail">Discounts</a>
-        <a asp-page="/UserCRUD/UserDetail">Employees</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
-    }
-
-    @if (_VerifyAuth.VerifyAuth(Context, "Cashier"))
-    {
-        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
-
-    }
-
-    @if (_VerifyAuth.VerifyAuth(Context, "Sale"))
-    {
-        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
-        <a asp-page="/Sale/SaleHomePage">Order</a>
-        <a asp-page="/Buy/Processing">Buy-Back</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
-    }
-</nav>
 
 <body>
-    <header class="header-container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="login-logout-container">
-                @if (Accessor.HttpContext.Session.GetObject<bool>("_AuthState") != null
-                && Accessor.HttpContext.Session.GetObject<bool>("_AuthState"))
-                {
-                    var user = Accessor.HttpContext.Session.GetObject<User>("_UserObject");
-                    if (user != null)
-                    {
-                        <span class="navbar-text user-role">Hello, @user.Role</span>
-                    }
+   
 
-                    <a class="nav-link login-logout" asp-page="/Authentication/LogoutPage">Logout</a>
-                }
-                else
-                {
-                    <a class="nav-link login-logout" asp-page="/Authentication/LoginPage">Login</a>
-                }
-            </div>
-            <div class="container">
-                <div class="navbar-brand-container">
-                    <a asp-page="/Index">
-                        <img src="~/ProductImages/7.jpg" alt="Logo" class="logo-img" />
-                    </a>
-                </div>
-                <div class="nav-links">
-                    <a class="nav-link" href="/Index">Home</a>
-                    
-                    <a class="nav-link" href="/GoldDetail">Gold Price</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
+    <div >
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    @* Optional footer *@
-    <footer class="footer">
-        <div class="container">
-            <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-            <p class="text-center">© 2024 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
+    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
