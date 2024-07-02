@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\",
+  "WorkspaceRootPath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor0207\\razortest\\pages\\goldcrud\\golddetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\reserve\\deployedrazor\\razortest\\pages\\goldcrud\\golddetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\goldcrud\\golddetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor0207\\razortest\\pages\\0207\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\reserve\\deployedrazor\\razortest\\pages\\0207\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\0207\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor0207\\razortest\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\reserve\\deployedrazor\\razortest\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razor0207\\razortest\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\hoanv\\onedrive\\documents\\github\\swp-jewelry-sales-system\\code\\reserve\\deployedrazor\\razortest\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -26,30 +26,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\Pages\\0207\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\Pages\\0207\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\0207\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\Pages\\0207\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\Pages\\0207\\Index.cshtml",
               "RelativeToolTip": "Pages\\0207\\Index.cshtml",
               "ViewState": "AQIAAHwBAAAAAAAAAAAAABAEAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T04:17:49.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T04:17:49.789Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "GoldDetail.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\Pages\\GoldCRUD\\GoldDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\Pages\\GoldCRUD\\GoldDetail.cshtml",
               "RelativeDocumentMoniker": "Pages\\GoldCRUD\\GoldDetail.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\Pages\\GoldCRUD\\GoldDetail.cshtml",
+              "ToolTip": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\Pages\\GoldCRUD\\GoldDetail.cshtml",
               "RelativeToolTip": "Pages\\GoldCRUD\\GoldDetail.cshtml",
-              "ViewState": "AQIAACwAAAAAAAAAAAAuwKABAAAuAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAuwEMAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-02T04:16:30.334Z",
               "EditorCaption": ""
@@ -58,31 +61,25 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-02T04:13:00.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2024-07-02T04:13:00.514Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\Pages\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\Razor0207\\RazorTest\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-01T16:34:59.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-01T16:34:59.484Z"
             }
           ]
         }
