@@ -3,464 +3,471 @@
 @using RazorTest.Utilities
 @model RazorTest.Pages.IndexModel
 @{
-    ViewData["Title"] = "Jewelry Sales System";
+    ViewData["Title"] = "HVJewel";
 }
 
+
+
+   
+
+    
+ 
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>@ViewData["Title"]</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Oswald";
-        }
-
-        body {
-            font-family: "Open Sans", sans-serif;
-        }
-
-        .w3-container p {
-            font-family: 'Playfair Display', serif;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        
-
-        /* Toggle button Styles */
-        .toggle-btn {
-            font-size: 10px;
-            padding: 10px;
-            cursor: pointer;
-            position: absolute;
-            top: 100px;
-            left: 10px;
-            z-index: 1001;
-            background-color: #F5F5F5;
-            border: 1px solid #8B4513;
-            border-radius: 5px;
-            color: #8B4513;
-            display: block;
-        }
-
-        .link-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-            .link-table th, .link-table td {
-                border: 1px solid #ddd;
-                padding: 12px;
-                text-align: left;
-            }
-
-            .link-table th {
-                background-color: #f8f9fa;
-            }
-
-            .link-table a {
-                color: #007bff;
-                text-decoration: none;
-            }
-
-                .link-table a:hover {
-                    text-decoration: underline;
-                }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .header-title {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-        }
-
-            .header-title h1 {
-                font-size: 50px;
-                margin: 0;
-            }
-
-            .header-title p {
-                font-size: 20px;
-                margin: 5px 0 0;
-            }
-
-        .main-content {
-            padding: 20px;
-            /*  margin-left: 270px; */ /* Adjust to avoid overlap with sidebar */
-        }
-
-        .product, .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-            .product img, .cart-item img {
-                width: 50px;
-                height: 50px;
-                margin-right: 10px;
-            }
-
-        .cart-total {
-            font-size: 1.2em;
-            font-weight: bold;
-            text-align: right;
-            padding: 10px;
-            border-top: 1px solid #ddd;
-        }
-
-        .subscribe-modal .w3-modal-content {
-            padding: 32px;
-        }
-
-        .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-            .button:hover {
-                background-color: #0056b3;
-            }
-
-        .form-container {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: white;
-        }
-
-            .form-container h3 {
-                margin-bottom: 20px;
-            }
-
-        /* CSS for product list */
-        .product {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Căn giữa các phần tử */
-            text-align: center; /* Căn giữa text */
-        }
-
-        .product-list {
-            border: 1px solid #ddd;
-            background-color: white;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-
-            .product-list h3 {
-                border-bottom: 1px solid #ddd;
-                padding-bottom: 10px;
-                margin-bottom: 10px;
-            }
-
-        .product .product-image-wrapper {
-            width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
-            max-width: 300px; /* Đặt kích thước tối đa của ảnh */
-            margin-bottom: 20px; /* Khoảng cách giữa ảnh và tên sản phẩm */
-        }
-
-        .product .product-name {
-            margin-top: 15px; /* Khoảng cách giữa ảnh và tên sản phẩm */
-            margin-bottom: 30px;
-        }
-
-        .product .product-image {
-            width: 200px; /* Đảm bảo ảnh lấp đầy không gian */
-            height: auto; /* Đảm bảo tỷ lệ hình ảnh không bị méo */
-            max-width: 300px; /* Đặt kích thước tối đa của ảnh */
-        }
-        /* CSS for carousel images */
-        .carousel-img {
-            width: 100%;
-            height: 500px; /* Set a fixed height for all images */
-            object-fit: cover; /* Ensure images cover the area without distortion */
-        }
-
-    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="~/assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" />
 </head>
-<body class="w3-light-grey w3-display-container">
-    @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager") || Model.VerifyAuth("Cashier") || Model.VerifyAuth("Sale"))
-    {
-        <!-- Toggle button for sidebar
-
-            <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-        -->
-        
-
-        <!-- Sidebar/menu -->
-        <nav class="sidebar">
-            @if (Model.VerifyAuth("Manager"))
-            {
-                <a asp-page="/pproduct/ProductDetail">Manage Products</a>
-                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-                <a asp-page="/pgemstone/Detail">Manage Gems</a>
-                <a asp-page="/puser/UserDetail">Manage Staffs</a>
-                <a asp-page="/pproduct/ProductDetail">Manage Stalls</a>
-            }
-
-            @if (Model.VerifyAuth("Admin"))
-            {
-                <a href="/Dashboard/Revenue">Dashboard</a>
-                <a asp-page="/pproduct/ProductDetail">Products</a>
-                <a asp-page="/pcustomer/CustomerDetail">Customers</a>
-                <a asp-page="/pdiscount/DiscountDetail">Discounts</a>
-                <a asp-page="/puser/UserDetail">Employees</a>
-                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-            }
-
-            @if (Model.VerifyAuth("Cashier"))
-            {
-                <a asp-page="/pproduct/ProductDetail">Products</a>
-                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-                
-            }
-
-            @if (Model.VerifyAuth("Sale"))
-            {
-                <a asp-page="/pproduct/ProductDetail">Products</a>
-                <a asp-page="/Sale/SaleHomePage">Order</a>
-                <a asp-page="/Buy/Processing">Buy-Back</a>
-                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-            }
-        </nav>
-    }
-    <!-- Main Container -->
-    <div class="w3-content  w3-display-container" style="max-width:1600px">
-
-        <!-- Header -->
-        <header class="header-title w3-center w3-padding-48 w3-white">
-            <h1>Jewelry Store</h1>
-            <p>Your Ultimate Destination for Exquisite Jewelry</p>
-        </header>
-
-        <!-- Image header with carousel -->
-        
-        
-        @*
-        <div class="w3-content w3-display-container" style="max-width:1600px;">
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/5.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/11.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/12.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/13.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/14.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/15.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <div class="w3-display-container mySlides">
-        <img src="~/ProductImages/16.jpg" class="carousel-img">
-        <div class="w3-display-left w3-padding-large">
-        <h1 class="w3-text-white">Luxury Redefined</h1>
-        <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>Discover Our Collection</b></h1>
-        </div>
-        </div>
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-        </div>
-        *@
-        <!-- Main Content Grid -->
-        <div class="w3-container w3-row w3-padding w3-border main-content">
-
-            <div class="row">
-                <!-- Blog entries / Main section -->
-                <div class="col-lg-8 col-md-12">
-                    <div class="card mb-4">
-                        <img src="~/ProductImages/KimCuongg.jpg" alt="Diamond" class="card-img-top" style="width: 150px;">
-                        <div class="card-body">
-                            <h3 class="card-title"><b>Our Latest Collection</b></h3>
-                            <h5 class="card-subtitle mb-2 text-muted">New Arrivals, <span class="w3-opacity">June 2024</span></h5>
-                            <p class="card-text">
-                                At our esteemed establishment, we proudly present an unparalleled collection of the most exquisite diamonds and fine jewelry, meticulously curated to captivate and enchant.
-                                Our unwavering dedication to excellence ensures that each piece radiates exceptional quality, embodying the pinnacle of craftsmanship and elegance.
-                                With a steadfast commitment to providing an extraordinary customer experience, we strive to exceed expectations, offering personalized service that is as unique and remarkable as the treasures we offer.
-                                Join us in celebrating the timeless beauty and splendor of our exclusive collection, where luxury meets legacy and every moment sparkles with brilliance.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Sidebar / Info section -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="card mb-4">
-                        <img src="/ProductImages/diamond_earrings.jpg" alt="About" class="card-img-top" style="width: 225px;">
-                        <div class="card-body">
-                            <h4 class="card-title"><b>About Us</b></h4>
-                            <p class="card-text">
-                                Experience luxury with our diamond collection. Each piece combines timeless elegance and modern sophistication, perfect for any occasion.
-                                Our diamonds shine with unmatched brilliance, making every moment unforgettable.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+                <a class="sidebar-brand brand-logo"><img src="~/assets/images/logo.png" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo-mini"><img src="~/assets/images/logo.png" alt="logo" /></a>
             </div>
-        </div>
-
-        <!--Product List-->
-        <div class="w3-container w3-card-4 w3-margin w3-white product-list">
-            <div class="container">
-                <h2>Product List</h2>
-            </div>
-            <div class="w3-row-padding">
-                @if (Model.PaginatedProducts != null)
-                {
-                    @foreach (var product in Model.PaginatedProducts)
-                    {
-                        <div class="w3-col l4 m6 s12 w3-margin-bottom" style="margin-bottom: 30px;">
-                            <div class="product">
-                                <div class="product-image-wrapper">
-                                    <img src="/ProductImages/@product.ProductImages" class="product-image" style="width: 100%; height: 180px; object-fit: cover;" />
-                                </div>
-                                <div class="product-name">@product.ProductName</div>
+            <ul class="nav">
+                <li class="nav-item profile">
+                    <div class="profile-desc">
+                        <div class="profile-pic">
+                            <div class="count-indicator">
+                                <img class="img-xs rounded-circle " src="~/assets/images/faces/US9.png" alt="">
+                                <span class="count bg-success"></span>
+                            </div>
+                            <div class="profile-name">
+                                <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
+                                <span>Gold Memberx</span>
                             </div>
                         </div>
-                    }
-                }
+                        <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                            <a href="#" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-settings text-primary"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-onepassword  text-info"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject ellipsis mb-1 text-small">Change Password</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <div class="preview-icon bg-dark rounded-circle">
+                                        <i class="mdi mdi-calendar-today text-success"></i>
+                                    </div>
+                                </div>
+                                <div class="preview-item-content">
+                                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item nav-category">
+                    <span class="nav-link">Navigation</span>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="index.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-speedometer"></i>
+                        </span>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-laptop"></i>
+                        </span>
+                        <span class="menu-title">Basic UI Elements</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="pages/forms/basic_elements.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-playlist-play"></i>
+                        </span>
+                        <span class="menu-title">Form Elements</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="pages/tables/basic-table.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-table-large"></i>
+                        </span>
+                        <span class="menu-title">Tables</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="pages/charts/chartjs.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-chart-bar"></i>
+                        </span>
+                        <span class="menu-title">Charts</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="pages/icons/mdi.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-contacts"></i>
+                        </span>
+                        <span class="menu-title">Icons</span>
+                    </a>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                        </span>
+                        <span class="menu-title">User Pages</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="auth">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-file-document-box"></i>
+                        </span>
+                        <span class="menu-title">Documentation</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_navbar.html -->
+            <nav class="navbar p-0 fixed-top d-flex flex-row">
+                <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+                    <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/images/logo-mini.svg" alt="logo" /></a>
+                </div>
+                <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                    <ul class="navbar-nav w-100">
+                        <li class="nav-item w-100">
+                            <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                                <input type="text" class="form-control" placeholder="Search products">
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item dropdown d-none d-lg-block">
+                            <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Project</a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
+                                <h6 class="p-3 mb-0">Projects</h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-file-outline text-primary"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Software Development</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-web text-info"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">UI Development</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-layers text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Software Testing</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <p class="p-3 mb-0 text-center">See all projects</p>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-settings d-none d-lg-block">
+                            <a class="nav-link" href="#">
+                                <i class="mdi mdi-view-grid"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown border-left">
+                            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-email"></i>
+                                <span class="count bg-success"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                                <h6 class="p-3 mb-0">Messages</h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <img src="~/assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
+                                        <p class="text-muted mb-0"> 1 Minutes ago </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <img src="~/assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
+                                        <p class="text-muted mb-0"> 15 Minutes ago </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <img src="~/assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
+                                        <p class="text-muted mb-0"> 18 Minutes ago </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <p class="p-3 mb-0 text-center">4 new messages</p>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown border-left">
+                            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+                                <i class="mdi mdi-bell"></i>
+                                <span class="count bg-danger"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                                <h6 class="p-3 mb-0">Notifications</h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-calendar text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Event today</p>
+                                        <p class="text-muted ellipsis mb-0"> Just a reminder that you have an event today </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-settings text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Settings</p>
+                                        <p class="text-muted ellipsis mb-0"> Update dashboard </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-link-variant text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Launch Admin</p>
+                                        <p class="text-muted ellipsis mb-0"> New admin wow! </p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <p class="p-3 mb-0 text-center">See all notifications</p>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+                                <div class="navbar-profile">
+                                    <img class="img-xs rounded-circle" src="~/assets/images/faces/US9.png" alt="">
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
+                                <h6 class="p-3 mb-0">Profile</h6>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-settings text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Settings</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-logout text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Log out</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <p class="p-3 mb-0 text-center">Advanced settings</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                        <span class="mdi mdi-format-line-spacing"></span>
+                    </button>
+                </div>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
                 
+                <!-- content-wrapper begins -->
+
+                <div class="content-wrapper">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- EDIT HERE ONLY -->
+                            @if (Model.VerifyAuth("Admin")
+                            || Model.VerifyAuth("Manager")
+                            || Model.VerifyAuth("Cashier")
+                            || Model.VerifyAuth("Sale"))
+                            {
+                                
+                                <a asp-page="/Authentication/LogoutPage">Logout</a>
+                                <br />
+                                <a asp-page="/Sale/SaleHomePage">Order</a>
+                                <br />
+                                <a asp-page="/Buy/Processing">Buy</a>
+                                <br />
+                                <a asp-page="/Dashboard/Revenue">Dashboard</a>
+                                <br />
+                                <a asp-page="/pcustomer/CustomerDetail">Customer</a>
+                                <br />
+                                <a asp-page="/pdiscount/DiscountDetail">Discount</a>
+                                <br />
+                                <a asp-page="/pgemstone/Detail">Gemstone</a>
+                                <br />
+                                <a asp-page="/pgold/GoldDetail">Gold</a>
+                                <br />
+                                <a asp-page="/pinvoice/InvoiceDetail">Invoice</a>
+                                <br />
+                                <a asp-page="/pproduct/ProductDetail">Product</a>
+                                <br />
+                                <a asp-page="/puser/UserDetail">User</a>
+                                <br />
+                                <a asp-page="/pWarranty/WarrantyDetail">Warranty</a>
+                                <br />
+                            }
+                            else
+                            {
+                                <a asp-page="/Authentication/LoginPage">Login</a>
+                            }
+
+
+
+                            <!-- EDIT HERE END -->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+                    </div>
+                </footer>
+                <!-- partial -->
             </div>
+            <!-- main-panel ends -->
         </div>
-
-        <hr>
-        <!-- Pagination-->
-        <div class="w3-center">
-            @if (Model.PaginatedProducts != null)
-            {
-                @if (Model.PaginatedProducts.HasPreviousPage)
-                {
-                    <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex - 1)" class="w3-button" style="background-color: #B8860B; color: white;">&laquo; Previous</a>
-                }
-                @for (int i = 1; i <= Model.PaginatedProducts.TotalPages; i++)
-                {
-                    <a asp-page="./Index" asp-route-pageIndex="@i" class="w3-button @(i == Model.PaginatedProducts.PageIndex ? "w3-grey" : "")" style="@(i == Model.PaginatedProducts.PageIndex ? "" : "background-color: #B8860B; color: white;")">@i</a>
-                }
-                @if (Model.PaginatedProducts.HasNextPage)
-                {
-                    <a asp-page="./Index" asp-route-pageIndex="@(Model.PaginatedProducts.PageIndex + 1)" class="w3-button" style="background-color: #B8860B; color: white;">Next &raquo;</a>
-                }
-            }
-            
-        </div>
-        <br>
-
-        <!-- Footer -->
-@*         <footer class="footer w3-container w3-padding-32 w3-margin-top">
-            <a href="#" class="w3-button"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        </footer> *@
-
-        <script>
-            // Toggle the visibility of comments
-            function myFunction(id) {
-                var x = document.getEleSmentById(id);
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-            }
-
-            // Like function
-            function likeFunction(x) {
-                x.style.fontWeight = "bold";
-                x.innerHTML = "✓ Liked";
-            }
-
-            function toggleSidebar() {
-                var sidebar = document.querySelector('.sidebar');
-                sidebar.style.left = sidebar.style.left === '0px' ? '-205px' : '0px';
-            }
-
-            function toggleSubMenu() {
-                var submenu = document.querySelector('.submenu');
-                submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
-            }
-
-            var slideIndex = 0;
-            showDivs(slideIndex);
-
-            function plusDivs(n) {
-                showDivs(slideIndex += n);
-            }
-
-            function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                if (n >= x.length) { slideIndex = 0 }
-                if (n < 0) { slideIndex = x.length - 1 }
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                x[slideIndex].style.display = "block";
-            }
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex > x.length) { slideIndex = 1 }
-                x[slideIndex - 1].style.display = "block";
-                setTimeout(carousel, 3000); // Change image every 3 seconds
-            }
-            carousel();
-        </script>
+        <!-- page-body-wrapper ends -->
     </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="~/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="~/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="~/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="~/assets/js/off-canvas.js"></script>
+    <script src="~/assets/js/hoverable-collapse.js"></script>
+    <script src="~/assets/js/misc.js"></script>
+    <script src="~/assets/js/settings.js"></script>
+    <script src="~/assets/js/todolist.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
 </body>
 </html>
+
+
 
