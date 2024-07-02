@@ -16,7 +16,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Product</title>
+    <title>Product List</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -398,7 +398,7 @@
                                 }
                             </select>
 
-                            <label>pgemstone</label>
+                            <label>Gemstone</label>
                             <select name="filterGem">
                                 @foreach (var option in gemOptions)
                                 {
@@ -449,7 +449,7 @@
                                             <th>Quantity</th>
                                             <th>Type</th>
                                             <th>Warranty (Months)</th>
-                                            <th>pgemstone</th>
+                                            <th>Gemstone</th>
                                             <th>Gem Weight (cts)</th>
                                             <th>Gold Material</th>
                                             <th>Gold Weight (cts)</th>
@@ -504,8 +504,6 @@
                                 </table>
                             </div>
                             <!-- EDIT HERE END -->
-
-
 
                             <div class="card-footer text-center">
                                 @if (Model.Products.HasPreviousPage)
