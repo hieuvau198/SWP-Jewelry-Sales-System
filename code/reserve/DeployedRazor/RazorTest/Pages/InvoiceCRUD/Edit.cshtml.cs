@@ -89,5 +89,20 @@ namespace RazorTest.Pages.InvoiceCRUD
             _logger.LogInformation("Successfully updated invoice");
             return RedirectToPage("./InvoiceDetail");
         }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
     }
 }

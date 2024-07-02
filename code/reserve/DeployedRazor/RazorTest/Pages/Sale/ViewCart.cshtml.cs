@@ -133,6 +133,7 @@ namespace RazorTest.Pages.Sale
 
             return RedirectToPage(new { currentPage = CurrentPage });
         }
+        
         public async Task<IActionResult> OnPostEditProduct(string productId, int quantity)
         {
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
@@ -198,13 +199,13 @@ namespace RazorTest.Pages.Sale
             return RedirectToPage(new { currentPage = CurrentPage });
         }
 
-
         public async Task<IActionResult> OnPostSelectDiscount(string productId)
         {
             
             HttpContext.Session.SetString(SessionKeySaleDiscountProductId, productId);
             return RedirectToPage("/Sale/SelectDiscountPage");
         }
+        
         public async Task<IActionResult> OnPostCheckout()
         {
             // Get some vars
@@ -281,6 +282,7 @@ namespace RazorTest.Pages.Sale
 
             return RedirectToPage("/Sale/CheckOutPage");
         }
+        
         public double GetDiscountRateInCart(string productId)
         {
             List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
@@ -300,7 +302,21 @@ namespace RazorTest.Pages.Sale
             }
 
         }
-        
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
 
     }
 }

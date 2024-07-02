@@ -4,12 +4,52 @@
 @inject IHttpContextAccessor Accessor
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
+
+
+
+<nav class="sidebar">
+    @if (_VerifyAuth.VerifyAuth(Context, "Manager"))
+    {
+        <a asp-page="/ProductCRUD/ProductDetail">Manage Products</a>
+        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+        <a asp-page="/GemCRUD/GemDetail">Manage Gems</a>
+        <a asp-page="/UserCRUD/UserDetail">Manage Staffs</a>
+        <a asp-page="/ProductCRUD/ProductDetail">Manage Stalls</a>
+    }
+
+    @if (_VerifyAuth.VerifyAuth(Context, "Admin"))
+    {
+        <a href="/Dashboard/Revenue">Dashboard</a>
+        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+        <a asp-page="/CustomerCRUD/CustomerDetail">Customers</a>
+        <a asp-page="/DiscountCRUD/DiscountDetail">Discounts</a>
+        <a asp-page="/UserCRUD/UserDetail">Employees</a>
+        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+    }
+
+    @if (_VerifyAuth.VerifyAuth(Context, "Cashier"))
+    {
+        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+
+    }
+
+    @if (_VerifyAuth.VerifyAuth(Context, "Sale"))
+    {
+        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+        <a asp-page="/Sale/SaleHomePage">Order</a>
+        <a asp-page="/Buy/Processing">Buy-Back</a>
+        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+    }
+</nav>
+
 <body>
     <header class="header-container">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -38,15 +78,7 @@
                 </div>
                 <div class="nav-links">
                     <a class="nav-link" href="/Index">Home</a>
-                    @* @{
-                        bool isAuthenticated = Context.Session.GetObject<bool>("_AuthState");
-                        var user = Context.Session.GetObject<User>("_UserObject");
-
-                        if (isAuthenticated && user != null && user.Role == "Admin")
-                        {
-                            <a class="nav-link" href="/ProductCRUD/ProductDetail">Products</a>
-                        }
-                    } *@
+                    
                     <a class="nav-link" href="/GoldDetail">Gold Price</a>
                 </div>
             </div>

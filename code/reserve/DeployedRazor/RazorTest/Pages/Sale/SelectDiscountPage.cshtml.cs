@@ -8,6 +8,9 @@ namespace RazorTest.Pages.Sale
 {
     public class SelectDiscountPageModel : PageModel
     {
+        public const string SessionKeyAuthState = "_AuthState";
+        public const string SessionKeyUserObject = "_UserObject";
+
         public const string SessionKeySaleDiscountProductId = "_SaleDiscountProductId";
         public const string SessionKeyDiscountList = "_DiscountList";
         public const string SessionKeySaleDiscountSelectedId = "_SaleDiscountSelectedId";
@@ -125,6 +128,19 @@ namespace RazorTest.Pages.Sale
             return RedirectToPage();
         }
 
-
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
     }
 }

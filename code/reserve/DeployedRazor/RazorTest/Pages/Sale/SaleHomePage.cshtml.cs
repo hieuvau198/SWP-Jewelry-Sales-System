@@ -12,6 +12,7 @@ namespace RazorTest.Pages.Sale
 {
     public class SaleHomePageModel : PageModel
     {
+        public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeySaleProductList = "_SaleProductList";
         public const string SessionKeyCart = "_Cart";
         public const string SessionKeyUserId = "_UserId";
@@ -174,6 +175,21 @@ namespace RazorTest.Pages.Sale
                 return new JsonResult(new { success = true });
             }
             return RedirectToPage(new { currentPage = CurrentPage });
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

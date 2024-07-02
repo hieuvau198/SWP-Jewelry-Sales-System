@@ -8,7 +8,8 @@ namespace RazorTest.Pages.Sale
 {
     public class CheckOutPageModel : PageModel
     {
-        
+        public const string SessionKeyAuthState = "_AuthState";
+
         public const string SessionKeyCart = "_Cart";
 
         public const string SessionKeyCustomerObject = "_CustomerObject";
@@ -92,6 +93,21 @@ namespace RazorTest.Pages.Sale
 
 
             return RedirectToPage("/Index");
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

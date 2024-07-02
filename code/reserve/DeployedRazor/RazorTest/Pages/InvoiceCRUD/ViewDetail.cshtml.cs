@@ -11,6 +11,7 @@ namespace RazorTest.Pages.InvoiceCRUD
 
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
+
         public const string SessionKeyCustomerObject = "_CustomerObject";
         public const string SessionKeyInvoiceList = "_InvoiceList";
         public const string SessionKeyInvoiceItemList = "_InvoiceItemList";
@@ -27,7 +28,9 @@ namespace RazorTest.Pages.InvoiceCRUD
         }
 
         public Invoice ViewDetailInvoiceObject {  get; set; }
+
         public List<InvoiceItem> ViewDetailInvoiceItemList { get; set; }
+
         public async Task OnGetAsync()
         {
             ViewDetailInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyViewDetailInvoiceObject);
@@ -39,6 +42,21 @@ namespace RazorTest.Pages.InvoiceCRUD
                     x => (x.InvoiceId.Equals(ViewDetailInvoiceObject.InvoiceId))
                     ).ToList();
             }
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }
