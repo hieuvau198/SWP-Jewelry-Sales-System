@@ -62,7 +62,20 @@ namespace RazorTest.Pages.Sale
             if(invoiceItems != null && invoice != null)
             {
                 invoice.InvoiceId = invoiceId;
-                invoice.InvoiceDate = DateTime.Now;
+                //   invoice.InvoiceDate = DateTime.Now;
+                
+                // Get server time and time zone
+                DateTime serverTime = DateTime.Now;
+                TimeZoneInfo serverTimeZone = TimeZoneInfo.Local;
+                Console.WriteLine($"Server time: {serverTime}, Server time zone: {serverTimeZone.DisplayName}");
+
+                // Specify the time zone you want to use (e.g., SE Asia Standard Time)
+                TimeZoneInfo targetTimeZone = TimeZoneInfo.FindSystemTimeZoneById("SE Asia Standard Time");
+                DateTime localTime = TimeZoneInfo.ConvertTime(serverTime, targetTimeZone);
+                Console.WriteLine($"Converted local time: {localTime}, Target time zone: {targetTimeZone.DisplayName}");
+
+                invoice.InvoiceDate = localTime;
+
                 foreach (var invoiceItem in invoiceItems)
                 {
                     invoiceItem.InvoiceId = invoiceId;

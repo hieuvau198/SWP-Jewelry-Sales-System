@@ -1,0 +1,117 @@
+﻿@page
+@model RazorTest.Pages.puser.UserListModel
+@{
+    ViewData["Title"] = "User List";
+}
+
+<h2>User List</h2>
+
+<style>
+    /* Table styles */
+    .luxury-table-wrapper {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .luxury-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        .luxury-table th, .luxury-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .luxury-table th {
+            background-color: #black;
+        }
+
+    /* Action buttons */
+    .action-buttons {
+        white-space: nowrap;
+    }
+
+        .action-buttons a {
+            margin-right: 10px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+    .edit-button {
+        background-color: #b8860b;
+        border-color: #b8860b;
+        color: white;
+    }
+
+    .delete-button {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+    .create-button {
+        background-color: #b8860b;
+        border-color: #b8860b;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>User Id</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.UserId</td>
+                    <td><strong>@user.Username</strong></td>
+                    <td>@user.Password</td>
+                    <td>@user.Fullname</td>
+                    <td>@user.Email</td>
+                    <td>@user.Role</td>
+                    <td class="action-buttons">
+                        <a asp-page="./Edit" asp-route-id="@user.UserId" class="edit-button">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@user.UserId" class="delete-button">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pagination">
+    @if (Model.Users.HasPreviousPage)
+    {
+        <a asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex - 1)">&laquo; Previous</a>
+    }
+    @for (int i = 1; i <= Model.Users.TotalPages; i++)
+    {
+        <a asp-page="./UserDetail" asp-route-currentPage="@i" class="@(i == Model.Users.PageIndex ? "active" : "")">@i</a>
+    }
+    @if (Model.Users.HasNextPage)
+    {
+        <a asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex + 1)">Next &raquo;</a>
+    }
+</div>
+
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New User</a>
+<a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>

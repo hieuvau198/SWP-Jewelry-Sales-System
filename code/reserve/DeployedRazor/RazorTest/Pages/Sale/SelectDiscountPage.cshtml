@@ -37,36 +37,36 @@
 <nav class="sidebar">
     @if (Model.VerifyAuth("Manager"))
     {
-        <a asp-page="/ProductCRUD/ProductDetail">Manage Products</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
-        <a asp-page="/GemCRUD/GemDetail">Manage Gems</a>
-        <a asp-page="/UserCRUD/UserDetail">Manage Staffs</a>
-        <a asp-page="/ProductCRUD/ProductDetail">Manage Stalls</a>
+        <a asp-page="/pproduct/ProductDetail">Manage Products</a>
+        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
+        <a asp-page="/pgemstone/Detail">Manage Gems</a>
+        <a asp-page="/puser/UserDetail">Manage Staffs</a>
+        <a asp-page="/pproduct/ProductDetail">Manage Stalls</a>
     }
 
     @if (Model.VerifyAuth("Admin"))
     {
         <a href="/Dashboard/Revenue">Dashboard</a>
-        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
-        <a asp-page="/CustomerCRUD/CustomerDetail">Customers</a>
-        <a asp-page="/DiscountCRUD/DiscountDetail">Discounts</a>
-        <a asp-page="/UserCRUD/UserDetail">Employees</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+        <a asp-page="/pproduct/ProductDetail">Products</a>
+        <a asp-page="/pcustomer/CustomerDetail">Customers</a>
+        <a asp-page="/pdiscount/DiscountDetail">Discounts</a>
+        <a asp-page="/puser/UserDetail">Employees</a>
+        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
     }
 
     @if (Model.VerifyAuth("Cashier"))
     {
-        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+        <a asp-page="/pproduct/ProductDetail">Products</a>
+        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
 
     }
 
     @if (Model.VerifyAuth("Sale"))
     {
-        <a asp-page="/ProductCRUD/ProductDetail">Products</a>
+        <a asp-page="/pproduct/ProductDetail">Products</a>
         <a asp-page="/Sale/SaleHomePage">Order</a>
         <a asp-page="/Buy/Processing">Buy-Back</a>
-        <a asp-page="/InvoiceCRUD/InvoiceDetail">Order History</a>
+        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
     }
 </nav>
 

@@ -1,0 +1,100 @@
+﻿@page
+@model RazorTest.Pages.pwarranty.WarrantyListModel
+@{
+    ViewData["Title"] = "Warranty List";
+}
+
+<h2>Warranty List</h2>
+
+<style>
+    /* Table styles */
+    .luxury-table-wrapper {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .luxury-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+        .luxury-table th, .luxury-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .luxury-table th {
+            background-color: #black;
+        }
+
+    /* Action buttons */
+    .action-buttons {
+        white-space: nowrap;
+    }
+
+        .action-buttons a {
+            margin-right: 10px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+    .edit-button {
+        background-color: #b8860b;
+        border-color: #b8860b;
+        color: white;
+    }
+
+    .delete-button {
+        background-color: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+
+    .create-button {
+        background-color: #b8860b;
+        border-color: #b8860b;
+        color: white;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+</style>
+
+<div class="luxury-table-wrapper">
+    <table class="luxury-table">
+        <thead>
+            <tr>
+                <th>Warranty Id</th>
+                <th>Product Id</th>
+                <th>Product Name</th>
+                <th>Start Date</th>
+                <th>Expire Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var warranty in Model.Warranties)
+            {
+                <tr>
+                    <td>@warranty.WarrantyId</td>
+                    <td><strong>@warranty.ProductId</strong></td>
+                    <td>@warranty.ProductName</td>
+                    <td>@warranty.StartDate.ToShortDateString()</td>
+                    <td>@warranty.ExpireDate.ToShortDateString()</td>
+                    <td class="action-buttons">
+                        <a asp-page="./Edit" asp-route-id="@warranty.WarrantyId" class="edit-button">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@warranty.WarrantyId" class="delete-button">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a asp-page="./Create" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Create New Warranty</a>
+<a asp-page="/Index" class="btn btn-secondary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 200px; text-align: center; margin: 10px auto;">Back to List</a>

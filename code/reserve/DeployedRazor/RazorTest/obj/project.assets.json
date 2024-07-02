@@ -7843,11 +7843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\RazorTest.csproj",
+      "projectUniqueName": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\RazorTest.csproj",
       "projectName": "RazorTest",
-      "projectPath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\RazorTest.csproj",
+      "projectPath": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\RazorTest.csproj",
       "packagesPath": "C:\\Users\\hoanv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hoanv\\OneDrive\\Documents\\GitHub\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\obj\\",
+      "outputPath": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hoanv\\AppData\\Roaming\\NuGet\\NuGet.Config",

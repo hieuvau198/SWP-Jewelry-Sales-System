@@ -1,0 +1,52 @@
+﻿@page
+@model RazorTest.Pages.pgold.IndexModel
+@{
+    ViewData["Title"] = "Gold List";
+}
+
+<h2>Gold</h2>
+
+<style>
+    /* Table styles */
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Ensures borders between cells are merged */
+        margin-top: 20px; /* Adds spacing above the table */
+    }
+
+    th, td {
+        border: 1px solid black; /* Adds border to cells and header cells */
+        padding: 8px; /* Adds space inside cells */
+        text-align: left; /* Aligns text to the left inside cells */
+    }
+
+    th {
+        background-color: #f9f9f9; /* Light grey background for header cells */
+    }
+</style>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Gold Id</th>
+            <th>Gold Name</th>
+            <th>Gold Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody border="1">
+        @foreach (var gold in Model.Golds)
+        {
+            <tr>
+                <td>@gold.GoldId</td>
+                <td><strong>@gold.GoldName</strong></td>
+                <td>@gold.SellPrice</td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@gold.GoldId">Edit</a> |
+                    <a asp-page="Delete" asp-route-id="@gold.GoldId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-page="./Create">Create New Gold</a>

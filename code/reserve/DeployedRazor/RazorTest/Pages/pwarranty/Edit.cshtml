@@ -1,0 +1,131 @@
+﻿@page
+@model RazorTest.Pages.pwarranty.EditModel
+
+@{
+    ViewData["Title"] = "Edit Warranty";
+}
+
+<!-- Custom styles -->
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Poppins', sans-serif;
+        color: #b8860b; /* Set the text color */
+    }
+
+    .create-container {
+        margin-top: 5rem;
+    }
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 1200px; /* Increased width */
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .card-header {
+        background-color: #fff;
+        border-bottom: none;
+        padding: 1.5rem 1.5rem 0;
+    }
+
+        .card-header h3 {
+            margin-bottom: 0;
+            color: #b8860b;
+            font-weight: 600;
+        }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .form-group label {
+        font-weight: 600;
+        color: #b8860b; /* Set the label text color */
+    }
+
+    .form-control {
+        color: #b8860b; /* Set the input text color */
+    }
+
+    .btn-primary {
+        background-color: #b8860b;
+        border-color: #b8860b;
+    }
+
+        .btn-primary:hover {
+            background-color: #b8860b;
+            border-color: #b8860b;
+        }
+
+    .card-footer {
+        background-color: #fff;
+        border-top: none;
+        padding: 1rem 1.5rem;
+    }
+
+        .card-footer a {
+            background-color: #b8860b; /* Yellow background */
+            color: #ffffff; /* White text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+            .card-footer a:hover {
+                background-color: #b8860b; /* Darker shade of yellow on hover */
+                color: #ffffff; /* Maintain white text color on hover */
+                text-decoration: none;
+            }
+</style>
+
+<div class="create-container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Edit Warranty</h3>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Warranty.WarrantyId" />
+                <div class="form-group">
+                    <label asp-for="Warranty.ProductId" class="control-label"></label>
+                    <input asp-for="Warranty.ProductId" class="form-control" />
+                    <span asp-validation-for="Warranty.ProductId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Warranty.ProductName" class="control-label"></label>
+                    <input asp-for="Warranty.ProductName" class="form-control" />
+                    <span asp-validation-for="Warranty.ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Warranty.StartDate" class="control-label"></label>
+                    <input asp-for="Warranty.StartDate" class="form-control" />
+                    <span asp-validation-for="Warranty.StartDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Warranty.ExpireDate" class="control-label"></label>
+                    <input asp-for="Warranty.ExpireDate" class="form-control" />
+                    <span asp-validation-for="Warranty.ExpireDate" class="text-danger"></span>
+                </div>
+                <div class="form-group text-center">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-page="./WarrantyDetail" class="btn btn-secondary">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
