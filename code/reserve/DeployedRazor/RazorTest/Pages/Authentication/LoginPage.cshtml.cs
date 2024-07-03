@@ -38,9 +38,8 @@ namespace RazorTest.Pages.Authentication
                     Password = Password
                 };
                 User user = await _apiService.PostAsJsonAndDeserializeAsync<User>(UrlLogin, loginDto);
-                if (user != null)
+                if (user != null && user.Role != null)
                 {
-                    
                     HttpContext.Session.SetObject(SessionKeyUserObject, user);
                     HttpContext.Session.SetObject(SessionKeyAuthState, true);
 
@@ -49,9 +48,9 @@ namespace RazorTest.Pages.Authentication
 
                     return RedirectToPage("/Index");
                 }
-                HttpContext.Session.SetObject(SessionKeyAuthState, false);
 
-                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                HttpContext.Session.SetObject(SessionKeyAuthState, false);
+                ModelState.AddModelError(string.Empty, "Invalid username or password.");
             }
 
             return Page();

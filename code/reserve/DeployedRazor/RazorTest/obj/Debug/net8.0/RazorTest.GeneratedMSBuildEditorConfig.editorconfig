@@ -17,299 +17,299 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RazorTest
 build_property.RootNamespace = RazorTest
-build_property.ProjectDir = C:\Users\LENOVO\Desktop\Razor3\RazorTest\
+build_property.ProjectDir = D:\Asp dot net\DeployedRazor\RazorTest\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\LENOVO\Desktop\Razor3\RazorTest
+build_property.MSBuildProjectDirectory = D:\Asp dot net\DeployedRazor\RazorTest
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/0207/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/0207/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcMDIwN1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Authentication/LoginPage.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Authentication/LoginPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cTG9naW5QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Authentication/LogoutPage.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Authentication/LogoutPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cTG9nb3V0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Authentication/Register.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Authentication/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Authentication/RegisterSuccess.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Authentication/RegisterSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb25cUmVnaXN0ZXJTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Buy/BuyBack.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Buy/BuyBack.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnV5XEJ1eUJhY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Buy/Confirm.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Buy/Confirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnV5XENvbmZpcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Buy/Processing.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Buy/Processing.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQnV5XFByb2Nlc3NpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Dashboard/Revenue.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Dashboard/Revenue.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXFJldmVudWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Error.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/GoldDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/GoldDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/GoldPriceDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/GoldPriceDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR29sZFByaWNlRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/JewelDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/JewelDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSmV3ZWxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pcustomer/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pcustomer/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGN1c3RvbWVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pcustomer/CustomerDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pcustomer/CustomerDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGN1c3RvbWVyXEN1c3RvbWVyRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pcustomer/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pcustomer/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGN1c3RvbWVyXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pcustomer/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pcustomer/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGN1c3RvbWVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pcustomer/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pcustomer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGN1c3RvbWVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pdiscount/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pdiscount/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGRpc2NvdW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pdiscount/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pdiscount/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGRpc2NvdW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pdiscount/DiscountDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pdiscount/DiscountDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGRpc2NvdW50XERpc2NvdW50RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pdiscount/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pdiscount/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGRpc2NvdW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pdiscount/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pdiscount/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGRpc2NvdW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgemstone/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgemstone/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdlbXN0b25lXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgemstone/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgemstone/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdlbXN0b25lXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgemstone/Detail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgemstone/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdlbXN0b25lXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgemstone/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgemstone/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdlbXN0b25lXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgemstone/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgemstone/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdlbXN0b25lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgold/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgold/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdvbGRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgold/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgold/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdvbGRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgold/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgold/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdvbGRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgold/GoldDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgold/GoldDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdvbGRcR29sZERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pgold/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pgold/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGdvbGRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoiceitem/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoiceitem/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VpdGVtXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoiceitem/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoiceitem/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VpdGVtXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoiceitem/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoiceitem/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VpdGVtXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoiceitem/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoiceitem/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VpdGVtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoiceitem/InvoiceItemDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoiceitem/InvoiceItemDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VpdGVtXEludm9pY2VJdGVtRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoice/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoice/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoice/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoice/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoice/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoice/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoice/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoice/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoice/InvoiceDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoice/InvoiceDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VcSW52b2ljZURldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pinvoice/ViewDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pinvoice/ViewDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccGludm9pY2VcVmlld0RldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pproduct/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pproduct/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHByb2R1Y3RcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pproduct/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pproduct/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHByb2R1Y3RcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pproduct/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pproduct/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHByb2R1Y3RcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pproduct/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pproduct/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHByb2R1Y3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pproduct/ProductDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pproduct/ProductDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHByb2R1Y3RcUHJvZHVjdERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Privacy.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/puser/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/puser/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHVzZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/puser/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/puser/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHVzZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/puser/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/puser/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHVzZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/puser/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/puser/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHVzZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/puser/UserDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/puser/UserDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHVzZXJcVXNlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pwarranty/Create.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pwarranty/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHdhcnJhbnR5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pwarranty/Delete.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pwarranty/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHdhcnJhbnR5XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pwarranty/Edit.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pwarranty/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHdhcnJhbnR5XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pwarranty/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pwarranty/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHdhcnJhbnR5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/pwarranty/WarrantyDetail.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/pwarranty/WarrantyDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNccHdhcnJhbnR5XFdhcnJhbnR5RGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Sale/CheckOutPage.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Sale/CheckOutPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxDaGVja091dFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Sale/CreateCustomer.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Sale/CreateCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxDcmVhdGVDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Sale/SaleHomePage.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Sale/SaleHomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTYWxlSG9tZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Sale/SelectDiscountPage.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Sale/SelectDiscountPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxTZWxlY3REaXNjb3VudFBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Sale/ViewCart.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Sale/ViewCart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2FsZVxWaWV3Q2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Template/Index.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Template/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVtcGxhdGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Template/test.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Template/test.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVtcGxhdGVcdGVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/_ViewImports.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/_ViewStart.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/LENOVO/Desktop/Razor3/RazorTest/Pages/Shared/_Layout.cshtml]
+[D:/Asp dot net/DeployedRazor/RazorTest/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mvqunuzbmx
