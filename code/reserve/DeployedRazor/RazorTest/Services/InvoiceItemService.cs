@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<InvoiceItem>> GetInvoiceItemsAsync()
         {
-            return await _apiService.GetAsync<List<InvoiceItem>>("https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem");
+            return await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem");
         }
 
         public async Task<InvoiceItem> GetInvoiceItemByIdAsync(string invoiceItemId)
         {
-            return await _apiService.GetAsync<InvoiceItem>($"https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem/{invoiceItemId}");
+            return await _apiService.GetAsync<InvoiceItem>($"http://localhost:5071/api/invoiceitem/{invoiceItemId}");
         }
 
         public async Task<HttpResponseMessage> CreateInvoiceItemAsync(InvoiceItem invoiceItem)
         {
-            return await _apiService.PostAsJsonAsync("https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem", invoiceItem);
+            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/invoiceitem", invoiceItem);
         }
 
         public async Task<HttpResponseMessage> UpdateInvoiceItemAsync(InvoiceItem invoiceItem)
         {
-            var url = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem";
+            var url = "http://localhost:5071/api/invoiceitem";
             var json = JsonConvert.SerializeObject(invoiceItem, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteInvoiceItemAsync(string invoiceItemId)
         {
-            return await _apiService.DeleteAsync($"https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem?invoiceItemId={invoiceItemId}");
+            return await _apiService.DeleteAsync($"http://localhost:5071/api/invoiceitem?invoiceItemId={invoiceItemId}");
         }
 
     }

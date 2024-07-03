@@ -26,9 +26,9 @@ namespace RazorTest.Pages.Buy
 
         public const string SessionKeyMessage = "_Message";
 
-        public const string UrlInvoice = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoice";
-        public const string UrlInvoiceItem = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem";
-        public const string UrlCustomer = "https://jewelsystembe20240701213216.azurewebsites.net/api/customer";
+        public const string UrlInvoice = "http://localhost:5071/api/invoice";
+        public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem";
+        public const string UrlCustomer = "http://localhost:5071/api/customer";
 
         private readonly ApiService _apiService;
 

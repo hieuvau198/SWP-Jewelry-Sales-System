@@ -4,98 +4,80 @@
     ViewData["Title"] = "Login";
 }
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RazorTest</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background: url('@Url.Content("~/ProductImages/20.jpg")') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Poppins', sans-serif;
-            color: #8B4513;
-        }
-
-        .login-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .login-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            max-width: 500px;
-            width: 300%;
-        }
-
-            .login-card h3 {
-                margin-bottom: 1.5rem;
-                color: #8B4513;
-                font-weight: 600;
-                text-align: center;
-            }
-
-        .form-group label {
-            font-weight: 600;
-            color: #8B4513;
-        }
-
-        .form-control {
-            color: #8B4513;
-        }
-
-        .btn-primary {
-            background-color: #8B4513;
-            border-color: #8B4513;
-        }
-
-            .btn-primary:hover {
-                background-color: #6e370d;
-                border-color: #6e370d;
-            }
-
-        .login-card-footer {
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-            .login-card-footer a {
-                color: #8B4513;
-                text-decoration: none;
-            }
-
-                .login-card-footer a:hover {
-                    text-decoration: underline;
-                }
-    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Corona Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" />
 </head>
 <body>
-    <div class="container login-container">
-        <div class="login-card">
-            <h3>Login</h3>
-            <form method="post">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper">
+            <div class="row w-100 m-0">
+                <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+                    <div class="card col-lg-4 mx-auto">
+                        <div class="card-body px-5 py-5">
+                            <h3 class="card-title text-left mb-3">Login</h3>
+                            <form method="post">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control p_input" id="username" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control p_input" id="password" name="password" required>
+                                </div>
+                                <div class="form-group d-flex align-items-center justify-content-between">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input"> Remember me
+                                        </label>
+                                    </div>
+                                    <a href="#" class="forgot-pass">Forgot password</a>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                                </div>
+                                
+                                <p class="sign-up">Don't have an Account?<a href="/Authentication/Register"> Sign Up</a></p>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
-            </form>
-            <div class="login-card-footer">
-                <a href="/Register">Don't have an account? Register</a>
+                <!-- content-wrapper ends -->
             </div>
+            <!-- row ends -->
         </div>
+        <!-- page-body-wrapper ends -->
     </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/hoverable-collapse.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <script src="../../assets/js/settings.js"></script>
+    <script src="../../assets/js/todolist.js"></script>
+    <!-- endinject -->
 </body>
 </html>

@@ -24,7 +24,7 @@ namespace RazorTest.Pages.pdiscount
  
         public async Task OnGetAsync(int currentPage = 1)
         {
-            var discounts = await _apiService.GetAsync<List<Discount>>("https://jewelsystembe20240701213216.azurewebsites.net/api/discount");
+            var discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount");
 
             if (discounts != null)
             {

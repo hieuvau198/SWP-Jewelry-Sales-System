@@ -18,8 +18,8 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
         public const string SessionKeyProductList = "_ProductList";
 
-        public const string UrlGetDiscounts = "https://jewelsystembe20240701213216.azurewebsites.net/api/discount\r\n";
-        public const string UrlGetProducts = "https://jewelsystembe20240701213216.azurewebsites.net/api/product\r\n";
+        public const string UrlGetDiscounts = "http://localhost:5071/api/discount\r\n";
+        public const string UrlGetProducts = "http://localhost:5071/api/product\r\n";
 
         private readonly ApiService _apiService;
         public SelectDiscountPageModel(ApiService apiService)

@@ -20,7 +20,7 @@ namespace RazorTest.Pages.pwarranty
 
         public async Task OnGetAsync()
         {
-            var warranties = await _apiService.GetAsync<List<Warranty>>("https://jewelsystembe20240701213216.azurewebsites.net/api/warranty");
+            var warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty");
 
             if (warranties != null)
             {

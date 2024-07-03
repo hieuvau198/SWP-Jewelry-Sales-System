@@ -20,7 +20,7 @@ namespace RazorTest.Pages
 
         public async Task OnGetAsync()
         {
-            var jewels = await _apiService.GetAsync<List<Jewel>>("https://jewelsystembe20240701213216.azurewebsites.net/api/jewel");
+            var jewels = await _apiService.GetAsync<List<Jewel>>("http://localhost:5071/api/jewel");
 
             if (jewels != null)
             {

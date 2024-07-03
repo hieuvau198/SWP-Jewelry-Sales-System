@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<Invoice>> GetInvoicesAsync()
         {
-            return await _apiService.GetAsync<List<Invoice>>("https://jewelsystembe20240701213216.azurewebsites.net/api/invoice");
+            return await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
         }
 
         public async Task<Invoice> GetInvoiceByIdAsync(string invoiceId)
         {
-            return await _apiService.GetAsync<Invoice>($"https://jewelsystembe20240701213216.azurewebsites.net/api/invoice/{invoiceId}");
+            return await _apiService.GetAsync<Invoice>($"http://localhost:5071/api/invoice/{invoiceId}");
         }
 
         public async Task<HttpResponseMessage> CreateInvoiceAsync(Invoice invoice)
         {
-            return await _apiService.PostAsJsonAsync("https://jewelsystembe20240701213216.azurewebsites.net/api/invoice", invoice);
+            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/invoice", invoice);
         }
 
         public async Task<HttpResponseMessage> UpdateInvoiceAsync(Invoice invoice)
         {
-            var url = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoice";
+            var url = "http://localhost:5071/api/invoice";
             var json = JsonConvert.SerializeObject(invoice, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteInvoiceAsync(string invoiceId)
         {
-            return await _apiService.DeleteAsync($"https://jewelsystembe20240701213216.azurewebsites.net/api/invoice?invoiceId={invoiceId}");
+            return await _apiService.DeleteAsync($"http://localhost:5071/api/invoice?invoiceId={invoiceId}");
         }
 
     }

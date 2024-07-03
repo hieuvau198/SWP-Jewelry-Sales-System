@@ -7,10 +7,10 @@ namespace RazorTest.Pages.Template
 {
     public class testModel : PageModel
     {
-        public const string UrlTest = "https://jewelsystembe20240701213216.azurewebsites.net/api/discount\r\n";
-        public const string UrlTest1 = "https://jewelsystembe20240701213216.azurewebsites.net/api/discount\r\n";
-        public const string UrlStallEmployee = "https://jewelsystembe20240701213216.azurewebsites.net/api/stallemployee\r\n";
-        public const string UrlStall = "https://jewelsystembe20240701213216.azurewebsites.net/api/stall\r\n";
+        public const string UrlTest = "http://localhost:5071/api/discount\r\n";
+        public const string UrlTest1 = "hvjewel.southeastasia.cloudapp.azure.com/api/discount\r\n";
+        public const string UrlStallEmployee = "http://localhost:5071/api/stallemployee\r\n";
+        public const string UrlStall = "http://localhost:5071/api/stall\r\n";
         private readonly ApiService _apiService;
         public testModel(ApiService apiService)
         {
@@ -22,7 +22,7 @@ namespace RazorTest.Pages.Template
 
         public async Task OnGet()
         {
-            Discounts = await _apiService.GetAsync<List<Discount>>(UrlTest);
+            Discounts = await _apiService.GetAsync<List<Discount>>(UrlTest1);
             
         }
     }

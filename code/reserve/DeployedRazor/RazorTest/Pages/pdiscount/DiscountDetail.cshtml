@@ -10,7 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Discount</title>
+    <title>Corona Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -405,33 +405,32 @@
                                             </tr>
                                         }
                                     </tbody>
-                                </table>
                             </div>
+                            
+                            </table>
                         </div>
                         <!-- EDIT HERE END -->
-                        <div class="card-footer text-center">
-                            @if (Model.Discounts.HasPreviousPage)
-                            {
-                                <a class="btn btn-primary" asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex - 1)">&laquo; Previous</a>
-                            }
-                            @for (int i = 1; i <= Model.Discounts.TotalPages; i++)
-                            {
-                                <a class="btn btn-primary" asp-page="./DiscountDetail" asp-route-currentPage="@i" class="@(i == Model.Discounts.PageIndex ? "active" : "")">@i</a>
-                            }
-                            @if (Model.Discounts.HasNextPage)
-                            {
-                                <a class="btn btn-primary" asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex + 1)">Next &raquo;</a>
-                            }
-                        </div>
+                        <a asp-page="./Create">Create New Gold</a>
+                        <a asp-page="/Index">Back to List</a>
 
-                        <div class="card-footer text-center">
-                            <a class="btn btn-inverse-secondary btn-fw" asp-page="./Create">Create New</a>
-                            <a class="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back</a>
-                        </div>
 
                     </div>
                 </div>
-            </div>            
+            </div>
+            <div class="pagination">
+                @if (Model.Discounts.HasPreviousPage)
+                {
+                    <a asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex - 1)">&laquo; Previous</a>
+                }
+                @for (int i = 1; i <= Model.Discounts.TotalPages; i++)
+                {
+                    <a asp-page="./DiscountDetail" asp-route-currentPage="@i" class="@(i == Model.Discounts.PageIndex ? "active" : "")">@i</a>
+                }
+                @if (Model.Discounts.HasNextPage)
+                {
+                    <a asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex + 1)">Next &raquo;</a>
+                }
+            </div>
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
             <footer class="footer">

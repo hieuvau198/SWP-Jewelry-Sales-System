@@ -21,9 +21,9 @@ namespace RazorTest.Pages.Buy
         public const string SessionKeyBuyCustomerSearch = "_BuyCustomerSearch";
         public const string SessionKeyBuyInvoiceSearch = "_BuyInvoiceSearch";
 
-        public const string UrlInvoice = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoice\r\n";
-        public const string UrlInvoiceItem = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem\r\n";
-        public const string UrlProduct = "https://jewelsystembe20240701213216.azurewebsites.net/api/product";
+        public const string UrlInvoice = "http://localhost:5071/api/invoice\r\n";
+        public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem\r\n";
+        public const string UrlProduct = "http://localhost:5071/api/product";
 
         private readonly ApiService _apiService;
         public ConfirmModel(ApiService apiService)

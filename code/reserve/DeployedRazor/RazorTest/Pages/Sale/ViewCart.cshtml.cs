@@ -28,9 +28,9 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
 
-        public const string UrlUpdatePrice = "https://jewelsystembe20240701213216.azurewebsites.net/api/product/UpdatePrice\r\n";
-        public const string UrlUpdatePrices = "https://jewelsystembe20240701213216.azurewebsites.net/api/product/UpdatePrices\r\n";
-        public const string UrlGetCustomers = "https://jewelsystembe20240701213216.azurewebsites.net/api/customer\r\n";
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string UrlUpdatePrices = "http://localhost:5071/api/product/UpdatePrices\r\n";
+        public const string UrlGetCustomers = "http://localhost:5071/api/customer\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<CartModel> _logger;

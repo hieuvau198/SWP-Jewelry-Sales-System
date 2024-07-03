@@ -361,6 +361,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\auth\\register-bg.jpg"
     },
     {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\wwwroot\\assets\\images\\background.png",
+      "PackagePath": "staticwebassets\\assets\\images\\background.png"
+    },
+    {
       "Id": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\wwwroot\\assets\\images\\carousel\\banner_1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\carousel\\banner_1.jpg"
     },

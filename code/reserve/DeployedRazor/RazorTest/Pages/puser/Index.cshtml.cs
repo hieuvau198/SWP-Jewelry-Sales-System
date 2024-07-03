@@ -20,7 +20,7 @@ namespace RazorTest.Pages.puser
 
         public async Task OnGetAsync()
         {
-            var users = await _apiService.GetAsync<List<User>>("https://jewelsystembe20240701213216.azurewebsites.net/api/user");
+            var users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
 
             if (users != null)
             {

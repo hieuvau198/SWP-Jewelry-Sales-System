@@ -20,7 +20,7 @@ namespace RazorTest.Pages.pcustomer
 
         public async Task OnGetAsync()
         {
-            var customers = await _apiService.GetAsync<List<Customer>>("https://jewelsystembe20240701213216.azurewebsites.net/api/customer");
+            var customers = await _apiService.GetAsync<List<Customer>>("http://localhost:5071/api/customer");
 
             if (customers != null)
             {

@@ -52,7 +52,7 @@ namespace RazorTest.Pages.pproduct
                 }
 
 
-            var products = await _apiService.GetAsync<List<Product>>("https://jewelsystembe20240701213216.azurewebsites.net/api/product");
+            var products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
             
             // Filter products based on string filterType, filterGem, filterGold
                 if(!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))

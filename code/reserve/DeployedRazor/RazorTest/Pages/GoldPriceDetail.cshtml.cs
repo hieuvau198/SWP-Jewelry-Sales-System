@@ -20,7 +20,7 @@ using RazorTest.Models;
 
 //        public async Task OnGetAsync()
 //        {
-//            var golds = await _apiService.GetAsync<List<GoldPrice>>("https://jewelsystembe20240701213216.azurewebsites.net/api/gold");
+//            var golds = await _apiService.GetAsync<List<GoldPrice>>("http://localhost:5071/api/gold");
 
 //            if (golds != null)
 //            {

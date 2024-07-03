@@ -433,27 +433,26 @@
                                     </tbody>
                                 </table>
                             </div>
+
                             <!-- EDIT HERE END -->
-                        </div>
+                            <a asp-page="./Create">Create New Invoice</a>
+                            <a asp-page="/Index">Back to List</a>
 
-                        <div class="card-footer text-center">
-                            @if (Model.Invoices.HasPreviousPage)
-                            {
-                                <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
-                            }
-                            @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
-                            {
-                                <a asp-page="./InvoiceDetail" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
-                            }
-                            @if (Model.Invoices.HasNextPage)
-                            {
-                                <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
-                            }
-                        </div>
 
-                        <div class="card-footer text-center">
-                            <a class="btn btn-inverse-secondary btn-fw" asp-page="./Create">Create New Invoice</a>
-                            <aclass ="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back to List</aclass>
+                            <div class="pagination">
+                                @if (Model.Invoices.HasPreviousPage)
+                                {
+                                    <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+                                }
+                                @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
+                                {
+                                    <a asp-page="./InvoiceDetail" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
+                                }
+                                @if (Model.Invoices.HasNextPage)
+                                {
+                                    <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

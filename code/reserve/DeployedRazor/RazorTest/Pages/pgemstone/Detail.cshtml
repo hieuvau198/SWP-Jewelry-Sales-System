@@ -409,26 +409,23 @@
                                 </table>
                             </div>
                             <!-- EDIT HERE END -->
+                            <a asp-page="./Create">Create New Gold</a>
+                            <a asp-page="/Index">Back to List</a>
 
-                        </div>
-                        <div class="card-footer text-center">
-                            @if (Model.Gems.HasPreviousPage)
-                            {
-                                <a class="btn btn-primary" asp-page="./Detail" asp-route-currentPage="@(Model.Gems.PageIndex - 1)">&laquo; Previous</a>
-                            }
-                            @for (int i = 1; i <= Model.Gems.TotalPages; i++)
-                            {
-                                <a class="btn btn-primary" asp-page="./Detail" asp-route-currentPage="@i" class="@(i == Model.Gems.PageIndex ? "active" : "")">@i</a>
-                            }
-                            @if (Model.Gems.HasNextPage)
-                            {
-                                <a class="btn btn-primary" asp-page="./Detail" asp-route-currentPage="@(Model.Gems.PageIndex + 1)">Next &raquo;</a>
-                            }
-                        </div>
-
-                        <div class="card-footer text-center">
-                            <a class="btn btn-inverse-secondary btn-fw" asp-page="./Create">Create new</a>
-                            <a class="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back</a>
+                            <div class="pagination">
+                                @if (Model.Gems.HasPreviousPage)
+                                {
+                                    <a asp-page="./Detail" asp-route-currentPage="@(Model.Gems.PageIndex - 1)">&laquo; Previous</a>
+                                }
+                                @for (int i = 1; i <= Model.Gems.TotalPages; i++)
+                                {
+                                    <a asp-page="./Detail" asp-route-currentPage="@i" class="@(i == Model.Gems.PageIndex ? "active" : "")">@i</a>
+                                }
+                                @if (Model.Gems.HasNextPage)
+                                {
+                                    <a asp-page="./Detail" asp-route-currentPage="@(Model.Gems.PageIndex + 1)">Next &raquo;</a>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

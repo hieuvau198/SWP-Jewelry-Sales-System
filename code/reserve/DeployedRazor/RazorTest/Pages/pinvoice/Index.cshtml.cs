@@ -24,7 +24,7 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task OnGetAsync()
         {
-            var invoices = await _apiService.GetAsync<List<Invoice>>("https://jewelsystembe20240701213216.azurewebsites.net/api/invoice");
+            var invoices = await _apiService.GetAsync<List<Invoice>>("http://localhost:5071/api/invoice");
 
             if (invoices != null)
             {

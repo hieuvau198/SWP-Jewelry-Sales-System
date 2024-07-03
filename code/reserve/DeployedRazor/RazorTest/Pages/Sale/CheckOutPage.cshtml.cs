@@ -26,8 +26,8 @@ namespace RazorTest.Pages.Sale
 
         public const string SessionKeyUserObject = "_UserObject";
 
-        public const string UrlInvoice = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoice\r\n";
-        public const string UrlInvoiceItem = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem\r\n";
+        public const string UrlInvoice = "http://localhost:5071/api/invoice\r\n";
+        public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem\r\n";
 
         private readonly ApiService _apiService;
         public CheckOutPageModel(ApiService apiService)

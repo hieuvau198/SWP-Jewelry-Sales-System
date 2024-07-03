@@ -25,8 +25,8 @@ namespace RazorTest.Pages.Buy
             public const string SessionKeyProductList = "_ProductList";
 
         //declare url
-            public const string UrlInvoiceItem = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem";
-            public const string UrlProduct = "https://jewelsystembe20240701213216.azurewebsites.net/api/product";
+            public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem";
+            public const string UrlProduct = "http://localhost:5071/api/product";
 
         private readonly ApiService _apiService;
 

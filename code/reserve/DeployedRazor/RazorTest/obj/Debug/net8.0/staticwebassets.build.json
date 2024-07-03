@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OXW0oy8+lneAWMuEV/wZejpCpCmOQDPnjN6V4y2sJr0=",
+  "Hash": "sXpax+SQi2/tq2Vo2SiLdFC7tqa4lFLJJV3JdICGkZM=",
   "Source": "RazorTest",
   "BasePath": "_content/RazorTest",
   "Mode": "Default",
@@ -737,6 +737,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\auth\\register-bg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\wwwroot\\assets\\images\\background.png",
+      "SourceId": "RazorTest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\wwwroot\\",
+      "BasePath": "_content/RazorTest",
+      "RelativePath": "assets/images/background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\background.png"
     },
     {
       "Identity": "C:\\Users\\LENOVO\\Desktop\\Razor3\\RazorTest\\wwwroot\\assets\\images\\carousel\\banner_1.jpg",

@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<Gold>> GetGoldsAsync()
         {
-            return await _apiService.GetAsync<List<Gold>>("https://jewelsystembe20240701213216.azurewebsites.net/api/gold");
+            return await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold");
         }
 
         public async Task<Gold> GetGoldByIdAsync(string goldId)
         {
-            return await _apiService.GetAsync<Gold>($"https://jewelsystembe20240701213216.azurewebsites.net/api/gold/{goldId}");
+            return await _apiService.GetAsync<Gold>($"http://localhost:5071/api/gold/{goldId}");
         }
 
         public async Task<HttpResponseMessage> CreateGoldAsync(Gold gold)
         {
-            return await _apiService.PostAsJsonAsync("https://jewelsystembe20240701213216.azurewebsites.net/api/gold", gold);
+            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/gold", gold);
         }
 
         public async Task<HttpResponseMessage> UpdateGoldAsync(Gold gold)
         {
-            var url = "https://jewelsystembe20240701213216.azurewebsites.net/api/gold";
+            var url = "http://localhost:5071/api/gold";
             var json = JsonConvert.SerializeObject(gold, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteGoldAsync(string goldId)
         {
-            return await _apiService.DeleteAsync($"https://jewelsystembe20240701213216.azurewebsites.net/api/gold?goldId={goldId}");
+            return await _apiService.DeleteAsync($"http://localhost:5071/api/gold?goldId={goldId}");
         }
 
     }

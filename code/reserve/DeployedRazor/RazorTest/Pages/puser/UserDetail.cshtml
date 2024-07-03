@@ -380,9 +380,6 @@
 
                                     <thead>
                                         <tr>
-                                            <th>User Id</th>
-                                            <th>User Name</th>
-                                            <th>Password</th>
                                             <th>Full Name</th>
                                             <th>Email</th>
                                             <th>Role</th>
@@ -393,9 +390,6 @@
                                         @foreach (var user in Model.Users)
                                         {
                                             <tr>
-                                                <td>@user.UserId</td>
-                                                <td><strong>@user.Username</strong></td>
-                                                <td>@user.Password</td>
                                                 <td>@user.Fullname</td>
                                                 <td>@user.Email</td>
                                                 <td>@user.Role</td>
@@ -423,10 +417,9 @@
                                     <a class="btn btn-primary" asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
-
                             <div class="card-footer text-center">
-                                <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Create New Project</a>
-                                <a asp-page="/Index" class="btn btn-inverse-secondary btn-fw">Back to List</a>
+                                <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Add New User</a>
+                                <a asp-page="/Index" class="btn btn-inverse-secondary btn-fw">Back to Home</a>
                             </div>
 
                         </div>

@@ -12,7 +12,7 @@ namespace RazorTest.Pages.Authentication
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyAuthState = "_AuthState";
 
-        public const string UrlLogin = "https://jewelsystembe20240701213216.azurewebsites.net/api/auth/login\r\n";
+        public const string UrlLogin = "http://localhost:5071/api/auth/login\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;

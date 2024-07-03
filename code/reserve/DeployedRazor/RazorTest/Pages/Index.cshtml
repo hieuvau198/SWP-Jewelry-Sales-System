@@ -388,43 +388,71 @@
                     <div class="card">
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
-                            @if (Model.VerifyAuth("Admin")
-                            || Model.VerifyAuth("Manager")
-                            || Model.VerifyAuth("Cashier")
-                            || Model.VerifyAuth("Sale"))
+                            @if (Model.VerifyAuth("Manager"))
                             {
-                                
-                                <a asp-page="/Authentication/LogoutPage">Logout</a>
+                                <a asp-page="/pproduct/ProductDetail">Product</a>
                                 <br />
-                                <a asp-page="/Sale/SaleHomePage">Order</a>
+                                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
                                 <br />
-                                <a asp-page="/Buy/Processing">Buy</a>
+                                <a asp-page="/pgemstone/Detail">Gemstone</a>
                                 <br />
-                                <a asp-page="/Dashboard/Revenue">Dashboard</a>
+                                <a asp-page="/puser/UserDetail">User</a>
+                                <br />
+                                <a asp-page="/pproduct/ProductDetail">Manage Stalls</a>
+                                <br />
+                            }
+
+                            @if (Model.VerifyAuth("Admin"))
+                            {
+                                <a href="/Dashboard/Revenue">Dashboard</a>
+                                <br />
+                                <a asp-page="/pproduct/ProductDetail">Product</a>
                                 <br />
                                 <a asp-page="/pcustomer/CustomerDetail">Customer</a>
                                 <br />
                                 <a asp-page="/pdiscount/DiscountDetail">Discount</a>
                                 <br />
-                                <a asp-page="/pgemstone/Detail">Gemstone</a>
-                                <br />
-                                <a asp-page="/pgold/GoldDetail">Gold</a>
-                                <br />
-                                <a asp-page="/pinvoice/InvoiceDetail">Invoice</a>
-                                <br />
-                                <a asp-page="/pproduct/ProductDetail">Product</a>
-                                <br />
                                 <a asp-page="/puser/UserDetail">User</a>
                                 <br />
-                                <a asp-page="/pWarranty/WarrantyDetail">Warranty</a>
+                                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
                                 <br />
+                            }
+
+                            @if (Model.VerifyAuth("Cashier"))
+                            {
+                                <a asp-page="/pproduct/ProductDetail">Product</a>
+                                <br />
+                                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
+                                <br />
+
+                            }
+
+                            @if (Model.VerifyAuth("Sale"))
+                            {
+                                <a asp-page="/pproduct/ProductDetail">Product</a>
+                                <br />
+                                <a asp-page="/Sale/SaleHomePage">Order</a>
+                                <br />
+                                <a asp-page="/Buy/Processing">Buy</a>
+                                <br />
+                                <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
+                                <br />
+                            }
+
+                            @if (Model.HttpContext.Session.GetObject<bool>("_AuthState") != null
+                            && Model.HttpContext.Session.GetObject<bool>("_AuthState"))
+                            {
+                                var user = Model.HttpContext.Session.GetObject<User>("_UserObject");
+                                if (user != null)
+                                {
+                                    <span>Hello, @user.Role</span>
+                                }
+                                <a asp-page="/Authentication/LogoutPage">Logout</a>
                             }
                             else
                             {
                                 <a asp-page="/Authentication/LoginPage">Login</a>
                             }
-
-
 
                             <!-- EDIT HERE END -->
 
@@ -468,6 +496,8 @@
     <!-- End custom js for this page -->
 </body>
 </html>
+
+
 
 
 

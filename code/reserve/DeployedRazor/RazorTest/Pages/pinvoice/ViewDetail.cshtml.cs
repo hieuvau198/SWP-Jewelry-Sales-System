@@ -17,8 +17,8 @@ namespace RazorTest.Pages.pinvoice
         public const string SessionKeyInvoiceItemList = "_InvoiceItemList";
         public const string SessionKeyViewDetailInvoiceObject = "_InvoiceViewDetail";
 
-        public const string UrlInvoice = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoice";
-        public const string UrlInvoiceItem = "https://jewelsystembe20240701213216.azurewebsites.net/api/invoiceitem";
+        public const string UrlInvoice = "http://localhost:5071/api/invoice";
+        public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem";
 
         private readonly ApiService _apiService;
 

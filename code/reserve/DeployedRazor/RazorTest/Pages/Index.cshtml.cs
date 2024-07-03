@@ -40,7 +40,7 @@ namespace RazorTest.Pages
             
 
             const int pageSize = 9; // Number of products per page
-            Products = await _apiService.GetAsync<List<Product>>("https://jewelsystembe20240701213216.azurewebsites.net/api/product");
+            Products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
 
             if (Products != null)
             {
