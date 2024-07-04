@@ -90,65 +90,80 @@
         <div class="card-body">
             <form method="post">
                 <input type="hidden" asp-for="Product.ProductId" />
+
                 <div class="form-group">
                     <label asp-for="Product.ProductCode"></label>
                     <input asp-for="Product.ProductCode" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.ProductName"></label>
                     <input asp-for="Product.ProductName" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.ProductImages"></label>
                     <input asp-for="Product.ProductImages" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.ProductQuantity"></label>
                     <input asp-for="Product.ProductQuantity" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.ProductType"></label>
                     <input asp-for="Product.ProductType" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.ProductWeight"></label>
                     <input asp-for="Product.ProductWeight" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.ProductWarranty"></label>
                     <input asp-for="Product.ProductWarranty" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.MarkupRate"></label>
                     <input asp-for="Product.MarkupRate" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.GemId" class="control-label"></label>
                     <input asp-for="Product.GemId" class="form-control" />
                     <span asp-validation-for="Product.GemId" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.GemWeight"></label>
                     <input asp-for="Product.GemWeight" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.GoldId" class="control-label"></label>
                     <input asp-for="Product.GoldId" class="form-control" />
                     <span asp-validation-for="Product.GoldId" class="text-danger"></span>
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.GoldWeight"></label>
                     <input asp-for="Product.GoldWeight" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.LaborCost"></label>
                     <input asp-for="Product.LaborCost" class="form-control" />
                 </div>
+
                 <div class="form-group">
                     <label asp-for="Product.CreatedAt"></label>
                     <input asp-for="Product.CreatedAt" class="form-control" type="datetime-local" />
                 </div>
-                <div class="form-group text-center">
+
+                <div class="form-group ">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
@@ -156,8 +171,9 @@
     </div>
 </div>
 
-<div class="text-center mt-3">
-    <a asp-page="./ProductDetail" class="btn btn-secondary">Back to List</a>
+<div class="card-body text-center">
+    <a class="btn btn-inverse-secondary btn-fw" asp-page="./Create">Create New</a>
+    <a class="btn btn-inverse-secondary btn-fw" asp-page="./ProductDetail">Back to List</a>
 </div>
 
 @section Scripts {

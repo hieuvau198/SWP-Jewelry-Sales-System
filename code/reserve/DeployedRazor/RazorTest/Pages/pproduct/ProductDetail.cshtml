@@ -489,8 +489,8 @@
                                                 <td class="action-buttons">
                                                     @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
                                                     {
-                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
-                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" >Edit</a>
+                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger">Delete</a>
 
                                                     }
                                                     else if (Model.VerifyAuth("Sale") || Model.VerifyAuth("Cashier"))
@@ -505,7 +505,7 @@
                             </div>
                             <!-- EDIT HERE END -->
 
-                            <div class="card-footer text-center">
+                            <div class="card-body text-center">
                                 @if (Model.Products.HasPreviousPage)
                                 {
                                     <a class="btn btn-primary" asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex - 1)">&laquo; Previous</a>
@@ -519,9 +519,9 @@
                                     <a class="btn btn-primary" asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
-                            <div class="card-footer text-center">
-                                <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Create New Project</a>
-                                <a asp-page="/Index" class="btn btn-inverse-secondary btn-fw">Back to List</a>
+                            <div class="card-body text-center">
+                                <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Create New</a>
+                                <a asp-page="/Index" class="btn btn-inverse-secondary btn-fw">Back</a>
                             </div>
 
                         </div>
