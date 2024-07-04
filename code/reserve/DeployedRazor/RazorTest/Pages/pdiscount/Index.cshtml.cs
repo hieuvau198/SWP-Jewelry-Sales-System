@@ -3,6 +3,7 @@ using RazorTest.Services;
 using RazorTest.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace RazorTest.Pages.pdiscount
 {
@@ -17,9 +18,24 @@ namespace RazorTest.Pages.pdiscount
 
         public List<Discount> Discounts { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Sale",
+                    "Cashier",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+
+            return Page();
         }
     }
 }

@@ -9,10 +9,15 @@ namespace RazorTest.Pages.pcustomer
 {
     public class EditModel : PageModel
     {
+        public const string SessionKeyAuthState = "_AuthState";
+        public const string SessionKeyUserObject = "_UserObject";
+
         private readonly CustomerService _customerService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(CustomerService apiService, ILogger<EditModel> logger, CustomerService customerService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, CustomerService customerService)
         {
+            _apiService = apiService;
             _customerService = customerService;
             _logger = logger;
         }
@@ -22,6 +27,20 @@ namespace RazorTest.Pages.pcustomer
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify user
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Sale",
+                "Cashier",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // Process results
             if (id == null)
             {
                 _logger.LogError("ID is null");

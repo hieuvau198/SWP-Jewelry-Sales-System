@@ -40,10 +40,25 @@ namespace RazorTest.Pages.Buy
         public List<InvoiceItem> BuyInvoiceItemList { get; set; }
         public List<InvoiceItem> InvoiceItemList { get; set; }
 
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
-            //Get Data
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Sale",
+                "Cashier"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // Get Data
             BuyInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyInvoiceObject);
+            if(BuyInvoiceObject == null)
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
             BuyCustomerObject = HttpContext.Session.GetObject<Customer>(SessionKeyBuyCustomerObject);
 
             InvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeyInvoiceItemList);
@@ -54,6 +69,7 @@ namespace RazorTest.Pages.Buy
             }
 
             BuyInvoiceItemList = new List<InvoiceItem>();
+            
             foreach(InvoiceItem item in InvoiceItemList)
             {
                 if(item.InvoiceId.Equals(BuyInvoiceObject.InvoiceId))
@@ -62,7 +78,7 @@ namespace RazorTest.Pages.Buy
                 }
             }
             
-
+            return Page();
         }
 
         public async Task<IActionResult> OnPostBuyItem(string invoiceItemId)

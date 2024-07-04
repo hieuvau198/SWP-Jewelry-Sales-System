@@ -9,24 +9,39 @@ namespace RazorTest.Pages.pgemstone
     public class CreateModel : PageModel
     {
         private readonly GemService _gemService;
+        private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(GemService gemService, ILogger<CreateModel> logger)
+        public CreateModel(GemService gemService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _gemService = gemService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public Gem Gem { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                    {
+                        "Manager",
+                        "Admin"
+                    };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             // Initialize the Gem with a new ID
             Gem = new Gem
             {
                 GemId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

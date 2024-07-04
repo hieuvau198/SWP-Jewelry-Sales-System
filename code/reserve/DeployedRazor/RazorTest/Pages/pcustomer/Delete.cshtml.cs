@@ -10,9 +10,12 @@ namespace RazorTest.Pages.pcustomer
     {
         private readonly CustomerService _customerService;
 
-        public DeleteModel(CustomerService customerService)
+        private readonly ApiService _apiService;
+
+        public DeleteModel(CustomerService customerService, ApiService apiService)
         {
             _customerService = customerService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -20,6 +23,18 @@ namespace RazorTest.Pages.pcustomer
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify user
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // Get data
             Customer = await _customerService.GetCustomerByIdAsync(id);
             if (Customer == null)
             {

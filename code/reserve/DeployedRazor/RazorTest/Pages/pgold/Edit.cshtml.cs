@@ -10,10 +10,12 @@ namespace RazorTest.Pages.pgold
     public class EditModel : PageModel
     {
         private readonly GoldService _goldService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(GemService apiService, ILogger<EditModel> logger, GoldService goldService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, GoldService goldService)
         {
             _goldService = goldService;
+            _apiService = apiService;
             _logger = logger;
         }
 
@@ -22,6 +24,16 @@ namespace RazorTest.Pages.pgold
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                        {
+                            "Admin"
+                        };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             if (id == null)
             {
                 _logger.LogError("ID is null");

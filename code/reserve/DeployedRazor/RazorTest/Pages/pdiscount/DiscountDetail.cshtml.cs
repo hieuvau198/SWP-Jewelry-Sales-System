@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -22,14 +23,30 @@ namespace RazorTest.Pages.pdiscount
 
         private const int PageSize = 10;
  
-        public async Task OnGetAsync(int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
-            var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+            // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Sale",
+                    "Cashier",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            if (discounts != null)
-            {
-                Discounts = PaginatedList<Discount>.Create(discounts.AsQueryable(), currentPage, 10);
-            }
+            // Get data
+                var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+
+                if (discounts != null)
+                {
+                    Discounts = PaginatedList<Discount>.Create(discounts.AsQueryable(), currentPage, 10);
+                }
+
+            return Page();
         }
     }
 }

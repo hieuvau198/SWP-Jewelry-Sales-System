@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -13,10 +14,12 @@ namespace RazorTest.Pages.Dashboard
     public class RevenueModel : PageModel
     {
         private readonly InvoiceService _invoiceService;
+        private readonly ApiService _apiService;
 
-        public RevenueModel(InvoiceService invoiceService)
+        public RevenueModel(InvoiceService invoiceService, ApiService apiService)
         {
             _invoiceService = invoiceService;
+            _apiService = apiService;
         }
 
         public string MonthlySalesJson { get; set; }
@@ -29,8 +32,15 @@ namespace RazorTest.Pages.Dashboard
         public int TotalInvoices { get; set; }
         public string BestStaff { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify user
+            if (!_apiService.VerifyAuth(HttpContext, "Admin"))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // Get data
             var invoices = await _invoiceService.GetInvoicesAsync();
 
             var monthlySales = invoices
@@ -95,6 +105,8 @@ namespace RazorTest.Pages.Dashboard
             BestStaffMonthlyJson = JsonSerializer.Serialize(bestStaffMonthly);
             ViewData["YearlySalesCount"] = yearlySalesCount;
             ViewData["YearlyPurchasesCount"] = yearlyPurchasesCount;
+
+            return Page();
         }
 
     }

@@ -9,10 +9,11 @@ namespace RazorTest.Pages.pdiscount
     public class DeleteModel : PageModel
     {
         private readonly DiscountService _discountService;
-
-        public DeleteModel(DiscountService discountService)
+        private readonly ApiService _apiService;
+        public DeleteModel(DiscountService discountService, ApiService apiService)
         {
             _discountService = discountService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -20,11 +21,24 @@ namespace RazorTest.Pages.pdiscount
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+            // Get data
             Discount = await _discountService.GetDiscountByIdAsync(id);
             if (Discount == null)
             {
                 return NotFound();
             }
+
             return Page();
         }
 

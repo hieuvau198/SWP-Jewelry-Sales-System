@@ -9,10 +9,11 @@ namespace RazorTest.Pages.pgold
     public class DeleteModel : PageModel
     {
         private readonly GoldService _goldService;
-
-        public DeleteModel(GoldService goldService)
+        private readonly ApiService _apiService;
+        public DeleteModel(GoldService goldService, ApiService apiService)
         {
             _goldService = goldService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -20,6 +21,16 @@ namespace RazorTest.Pages.pgold
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                        {
+                            "Admin"
+                        };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             Gold = await _goldService.GetGoldByIdAsync(id);
             if (Gold == null)
             {

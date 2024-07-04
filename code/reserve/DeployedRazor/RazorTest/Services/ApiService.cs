@@ -4,15 +4,51 @@ using RazorTest.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using Microsoft.IdentityModel.Tokens;
+using RazorTest.Utilities;
 
 namespace RazorTest.Services
 {
     public class ApiService
     {
+        // Session key
+            public const string SessionKeyUserObject = "_UserObject";
+            public const string SessionKeyAuthState = "_AuthState";
+
         private readonly HttpClient _httpClient;
         public ApiService(HttpClient httpClient)
         {
             _httpClient = httpClient;
+        }
+
+        public bool VerifyAuth(HttpContext httpContext, string role)
+        {
+            bool result = false;
+            bool isAuthenticated = httpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = httpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+            if (isAuthenticated && user != null && user.Role != null && user.Role == role)
+            {
+                result = true;
+            }
+
+            return result;
+        }
+
+        public bool VerifyAuth(HttpContext httpContext, List<string> roles)
+        {
+            bool result = false;
+            bool isAuthenticated = httpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = httpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+            foreach (string role in roles)
+            {
+                if (isAuthenticated && user != null && user.Role != null && user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            
+            return result;
         }
 
         public async Task<T> GetAsync<T>(string url)
@@ -54,6 +90,7 @@ namespace RazorTest.Services
                 return default(T);
             }
         }
+
         public async Task<T> PostAsJsonAndDeserializeAsync<T>(string url, T data)
         {
             var response = await _httpClient.PostAsJsonAsync(url, data);
@@ -65,8 +102,6 @@ namespace RazorTest.Services
             var result = await response.Content.ReadFromJsonAsync<T>();
             return result;
         }
-
-        // Add other methods for POST, PUT, DELETE as needed
 
         public async Task<HttpResponseMessage> PostAsJsonAsync<T>(string url, T data)
         {

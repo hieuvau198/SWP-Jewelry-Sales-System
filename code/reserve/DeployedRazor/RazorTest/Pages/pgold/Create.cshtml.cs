@@ -9,24 +9,38 @@ namespace RazorTest.Pages.pgold
     public class CreateModel : PageModel
     {
         private readonly GoldService _goldService;
+        private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(GoldService goldService, ILogger<CreateModel> logger)
+        public CreateModel(GoldService goldService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _goldService = goldService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public Gold Gold { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+                    {
+                        "Admin"
+                    };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             // Initialize the Gold with a new ID
             Gold = new Gold
             {
                 GoldId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

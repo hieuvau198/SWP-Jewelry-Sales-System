@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -23,8 +24,21 @@ namespace RazorTest.Pages.pgemstone
 
         private const int PageSize = 15;
 
-        public async Task OnGetAsync(int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                    {
+                        "Manager",
+                        "Cashier",
+                        "Sale",
+                        "Admin"
+                    };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
 
             if (gems != null)
@@ -32,6 +46,8 @@ namespace RazorTest.Pages.pgemstone
                 Gems = PaginatedList<Gem>.Create(gems.AsQueryable(), currentPage, 15);
 
             }
+
+            return Page();
         }
     }
 }

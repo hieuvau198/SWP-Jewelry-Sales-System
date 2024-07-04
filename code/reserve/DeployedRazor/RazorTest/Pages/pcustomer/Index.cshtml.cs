@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
 using System.Collections.Generic;
@@ -18,14 +19,30 @@ namespace RazorTest.Pages.pcustomer
 
         public List<Customer> Customers { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify user
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Sale",
+                "Cashier",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // get data
             var customers = await _apiService.GetAsync<List<Customer>>("https://hvjewel.azurewebsites.net/api/customer");
 
             if (customers != null)
             {
                 Customers = customers.OrderBy(c => c.CustomerId).ToList();
             }
+
+            return Page();
         }
     }
 }

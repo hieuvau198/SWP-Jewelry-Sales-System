@@ -8,11 +8,13 @@ namespace RazorTest.Pages.pdiscount
 {
     public class CreateModel : PageModel
     {
+        private readonly ApiService _apiService;
         private readonly DiscountService _discountService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(DiscountService discountService, ILogger<CreateModel> logger)
+        public CreateModel(ApiService apiService, DiscountService discountService, ILogger<CreateModel> logger)
         {
+            _apiService = apiService;
             _discountService = discountService;
             _logger = logger;
         }
@@ -20,13 +22,26 @@ namespace RazorTest.Pages.pdiscount
         [BindProperty]
         public Discount Discount { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             // Initialize the Discount with a new ID
             Discount = new Discount
             {
                 DiscountId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

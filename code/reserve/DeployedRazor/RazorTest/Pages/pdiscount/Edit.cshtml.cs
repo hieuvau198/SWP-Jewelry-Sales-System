@@ -10,10 +10,12 @@ namespace RazorTest.Pages.pdiscount
     public class EditModel : PageModel
     {
         private readonly DiscountService _discountService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(DiscountService apiService, ILogger<EditModel> logger, DiscountService discountService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, DiscountService discountService)
         {
             _discountService = discountService;
+            _apiService = apiService;
             _logger = logger;   
         }
 
@@ -22,6 +24,17 @@ namespace RazorTest.Pages.pdiscount
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+                List<string> roles = new List<string>
+            {
+                "Manager",
+                "Admin"
+            };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
             if (id == null)
             {
                 _logger.LogError("ID is null");
