@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<InvoiceItem>> GetInvoiceItemsAsync()
         {
-            return await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem");
+            return await _apiService.GetAsync<List<InvoiceItem>>("https://hvjewel.azurewebsites.net/api/invoiceitem");
         }
 
         public async Task<InvoiceItem> GetInvoiceItemByIdAsync(string invoiceItemId)
         {
-            return await _apiService.GetAsync<InvoiceItem>($"http://localhost:5071/api/invoiceitem/{invoiceItemId}");
+            return await _apiService.GetAsync<InvoiceItem>($"https://hvjewel.azurewebsites.net/api/invoiceitem/{invoiceItemId}");
         }
 
         public async Task<HttpResponseMessage> CreateInvoiceItemAsync(InvoiceItem invoiceItem)
         {
-            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/invoiceitem", invoiceItem);
+            return await _apiService.PostAsJsonAsync("https://hvjewel.azurewebsites.net/api/invoiceitem", invoiceItem);
         }
 
         public async Task<HttpResponseMessage> UpdateInvoiceItemAsync(InvoiceItem invoiceItem)
         {
-            var url = "http://localhost:5071/api/invoiceitem";
+            var url = "https://hvjewel.azurewebsites.net/api/invoiceitem";
             var json = JsonConvert.SerializeObject(invoiceItem, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteInvoiceItemAsync(string invoiceItemId)
         {
-            return await _apiService.DeleteAsync($"http://localhost:5071/api/invoiceitem?invoiceItemId={invoiceItemId}");
+            return await _apiService.DeleteAsync($"https://hvjewel.azurewebsites.net/api/invoiceitem?invoiceItemId={invoiceItemId}");
         }
 
     }

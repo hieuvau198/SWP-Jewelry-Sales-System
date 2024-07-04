@@ -17,7 +17,7 @@ namespace RazorTest.Pages.pinvoice
         public const string SessionKeyInvoiceList = "_InvoiceList";
         public const string SessionKeyViewDetailInvoiceObject = "_InvoiceViewDetail";
 
-        public const string UrlInvoice = "http://localhost:5071/api/invoice";
+        public const string UrlInvoice = "https://hvjewel.azurewebsites.net/api/invoice";
 
         private readonly ApiService _apiService;
 

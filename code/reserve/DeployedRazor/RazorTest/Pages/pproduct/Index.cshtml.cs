@@ -17,7 +17,7 @@ namespace RazorTest.Pages.pproduct
 
         public async Task OnGetAsync()
         {
-            var products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            var products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
         }
     }
 }

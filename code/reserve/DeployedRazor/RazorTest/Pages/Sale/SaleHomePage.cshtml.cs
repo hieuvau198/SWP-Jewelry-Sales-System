@@ -22,8 +22,8 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeySaleInvoiceObject = "_SaleInvoiceObject";
         public const string SessionKeyDiscountList = "_DiscountList";
 
-        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
-        public const string UrlGetDiscounts = "http://localhost:5071/api/discount\r\n";
+        public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
+        public const string UrlGetDiscounts = "https://hvjewel.azurewebsites.net/api/discount\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
@@ -56,7 +56,7 @@ namespace RazorTest.Pages.Sale
             List<Product> allProducts = HttpContext.Session.GetObject<List<Product>>(SessionKeySaleProductList);
             if(allProducts == null  || allProducts.Count == 0 )
             {
-                allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+                allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
             }
 
             // S?p x?p danh sách s?n ph?m theo Product Code

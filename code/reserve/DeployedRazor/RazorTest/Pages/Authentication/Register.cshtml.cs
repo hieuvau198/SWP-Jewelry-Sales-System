@@ -11,7 +11,7 @@ namespace RazorTest.Pages.Authentication
 
         private readonly ApiService _apiService;
 
-        public const string UrlUser = "http://localhost:5071/api/user";
+        public const string UrlUser = "https://hvjewel.azurewebsites.net/api/user";
         
 
         public RegisterModel(ApiService apiService)

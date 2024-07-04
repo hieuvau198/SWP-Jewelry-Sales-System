@@ -20,7 +20,7 @@ namespace RazorTest.Pages.pgold
 
         public async Task OnGetAsync()
         {
-            var golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold");
+            var golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold");
 
             if (golds != null)
             {

@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<Warranty>> GetWarrantysAsync()
         {
-            return await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty");
+            return await _apiService.GetAsync<List<Warranty>>("https://hvjewel.azurewebsites.net/api/warranty");
         }
 
         public async Task<Warranty> GetWarrantyByIdAsync(string warrantyId)
         {
-            return await _apiService.GetAsync<Warranty>($"http://localhost:5071/api/warranty/{warrantyId}");
+            return await _apiService.GetAsync<Warranty>($"https://hvjewel.azurewebsites.net/api/warranty/{warrantyId}");
         }
 
         public async Task<HttpResponseMessage> CreateWarrantyAsync(Warranty warranty)
         {
-            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/warranty", warranty);
+            return await _apiService.PostAsJsonAsync("https://hvjewel.azurewebsites.net/api/warranty", warranty);
         }
 
         public async Task<HttpResponseMessage> UpdateWarrantyAsync(Warranty warranty)
         {
-            var url = "http://localhost:5071/api/warranty";
+            var url = "https://hvjewel.azurewebsites.net/api/warranty";
             var json = JsonConvert.SerializeObject(warranty, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteWarrantyAsync(string warrantyId)
         {
-            return await _apiService.DeleteAsync($"http://localhost:5071/api/warranty/{warrantyId}");
+            return await _apiService.DeleteAsync($"https://hvjewel.azurewebsites.net/api/warranty/{warrantyId}");
         }
 
     }

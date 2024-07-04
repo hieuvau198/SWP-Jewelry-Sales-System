@@ -25,7 +25,7 @@ namespace RazorTest.Pages.pgemstone
 
         public async Task OnGetAsync(int currentPage = 1)
         {
-            var gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem");
+            var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
 
             if (gems != null)
             {

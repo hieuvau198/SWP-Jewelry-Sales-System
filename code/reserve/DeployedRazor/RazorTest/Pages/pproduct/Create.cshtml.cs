@@ -39,8 +39,8 @@ namespace RazorTest.Pages.pproduct
                 BuyPrice = 0,
                 TotalPrice = 0
             };
-            Gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem") ?? new List<Gem>();
-            Golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold") ?? new List<Gold>();
+            Gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem") ?? new List<Gem>();
+            Golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold") ?? new List<Gold>();
         }
 
         public async Task<IActionResult> OnPostAsync()

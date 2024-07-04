@@ -26,9 +26,9 @@ namespace RazorTest.Pages.Buy
 
         public const string SessionKeyMessage = "_Message";
 
-        public const string UrlInvoice = "http://localhost:5071/api/invoice";
-        public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem";
-        public const string UrlCustomer = "http://localhost:5071/api/customer";
+        public const string UrlInvoice = "https://hvjewel.azurewebsites.net/api/invoice";
+        public const string UrlInvoiceItem = "https://hvjewel.azurewebsites.net/api/invoiceitem";
+        public const string UrlCustomer = "https://hvjewel.azurewebsites.net/api/customer";
 
         private readonly ApiService _apiService;
 

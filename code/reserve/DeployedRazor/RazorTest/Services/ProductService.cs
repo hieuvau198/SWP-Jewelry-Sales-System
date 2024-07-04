@@ -18,13 +18,13 @@ namespace RazorTest.Services
 
         public async Task<List<Product>> GetProductsAsync()
         {
-            List <Product> results = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
+            List <Product> results = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
             return results;
         }
 
         public async Task<Product> GetProductByIdAsync(string productId)
         {
-            return await _apiService.GetAsync<Product>($"http://localhost:5071/api/product/{productId}");
+            return await _apiService.GetAsync<Product>($"https://hvjewel.azurewebsites.net/api/product/{productId}");
         }
 
         public async Task<HttpResponseMessage> CreateProductAsync(Product product)
@@ -36,7 +36,7 @@ namespace RazorTest.Services
             });
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await _apiService.PostAsync("http://localhost:5071/api/product", content);
+            var response = await _apiService.PostAsync("https://hvjewel.azurewebsites.net/api/product", content);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -56,7 +56,7 @@ namespace RazorTest.Services
             });
 
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await _apiService.PutAsync("http://localhost:5071/api/product", content);
+            var response = await _apiService.PutAsync("https://hvjewel.azurewebsites.net/api/product", content);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -68,7 +68,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteProductAsync(string productId)
         {
-            var response = await _apiService.DeleteAsync($"http://localhost:5071/api/product/{productId}");
+            var response = await _apiService.DeleteAsync($"https://hvjewel.azurewebsites.net/api/product/{productId}");
 
             if (!response.IsSuccessStatusCode)
             {

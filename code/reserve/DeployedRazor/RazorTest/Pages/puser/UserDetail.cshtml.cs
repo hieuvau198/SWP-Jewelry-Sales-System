@@ -24,7 +24,7 @@ namespace RazorTest.Pages.puser
         public const int PageSize = 6;
         public async Task OnGetAsync(int currentPage = 1)
         {
-            var users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
+            var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
             users = users.OrderByDescending(x => x.UserId).ToList();
 
             if (users != null)

@@ -1,29 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\",
+  "WorkspaceRootPath": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\swp391\\fe\\deployedrazor\\razortest\\pages\\pcustomer\\customerdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\customerdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\swp391\\fe\\deployedrazor\\razortest\\pages\\pcustomer\\customerdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\customerdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\swp391\\fe\\deployedrazor\\razortest\\pages\\pcustomer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\swp391\\fe\\deployedrazor\\razortest\\pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\dashboard\\revenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\authentication\\loginpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\pages\\authentication\\loginpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\loginpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\authentication\\loginpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\pages\\authentication\\loginpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\loginpage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\template\\test.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\pages\\template\\test.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\template\\test.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\userdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\pages\\puser\\userdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\userdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,24 +58,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoginPage.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Authentication\\LoginPage.cshtml",
-              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml",
-              "RelativeToolTip": "Pages\\Authentication\\LoginPage.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAAADoAAAAmAAAA",
+              "DocumentIndex": 0,
+              "Title": "CustomerDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBsAAABpAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T02:45:15.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerDetail.cshtml",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\CustomerDetail.cshtml",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml",
+              "RelativeToolTip": "Pages\\pcustomer\\CustomerDetail.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T08:40:40.662Z",
+              "WhenOpened": "2024-07-04T02:45:10.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Create.cshtml",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pcustomer\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T02:45:09.062Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Revenue.cshtml",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Dashboard\\Revenue.cshtml",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Dashboard\\Revenue.cshtml",
+              "RelativeToolTip": "Pages\\Dashboard\\Revenue.cshtml",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T02:40:46.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginPage.cshtml",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Authentication\\LoginPage.cshtml",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml",
+              "RelativeToolTip": "Pages\\Authentication\\LoginPage.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAADoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T08:40:40.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "LoginPage.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml.cs",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Authentication\\LoginPage.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml.cs",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Authentication\\LoginPage.cshtml.cs",
               "RelativeToolTip": "Pages\\Authentication\\LoginPage.cshtml.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAQwCwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -68,53 +135,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "style.css",
-              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css",
               "RelativeDocumentMoniker": "wwwroot\\assets\\css\\style.css",
-              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css",
               "RelativeToolTip": "wwwroot\\assets\\css\\style.css",
               "ViewState": "AQIAAJ1SAAAAAAAAAAAAALVSAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-03T09:22:41.333Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAswCUAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-03T08:14:56.682Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T09:22:41.333Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "test.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Template\\test.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Template\\test.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Template\\test.cshtml.cs",
-              "RelativeToolTip": "Pages\\Template\\test.cshtml.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBgAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T07:49:04.125Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAswCUAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T08:14:56.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
+              "Title": "test.cshtml.cs",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Template\\test.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Template\\test.cshtml.cs",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\Template\\test.cshtml.cs",
+              "RelativeToolTip": "Pages\\Template\\test.cshtml.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBgAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T07:49:04.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "UserDetail.cshtml.cs",
-              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\puser\\UserDetail.cshtml.cs",
-              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml.cs",
+              "ToolTip": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml.cs",
               "RelativeToolTip": "Pages\\puser\\UserDetail.cshtml.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T06:56:04.923Z"
+              "WhenOpened": "2024-07-03T06:56:04.923Z",
+              "EditorCaption": ""
             }
           ]
         }
