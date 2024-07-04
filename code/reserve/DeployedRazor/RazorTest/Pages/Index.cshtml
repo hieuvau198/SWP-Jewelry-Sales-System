@@ -28,27 +28,30 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="~/assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="~/assets/images/favicon.png" />
 </head>
 <body>
 
     <!-- Header with Login/Logout links -->
-    <header class="header">
-        @if (Model.HttpContext.Session.GetObject<bool>("_AuthState") != null
-        && Model.HttpContext.Session.GetObject<bool>("_AuthState"))
-        {
-            var user = Model.HttpContext.Session.GetObject<User>("_UserObject");
-            if (user != null)
-            {
-                <span class="
-">Hello, @user.Role</span>
-            }
-            <a asp-page="/Authentication/LogoutPage" class="auth-link">Logout</a>
-        }
-        else
-        {
-            <a asp-page="/Authentication/LoginPage" class="auth-link">Login</a>
-        }
+    <header class="header card-header container">
+        <div class="row">
+            <div class=""style="align-items: end">
+                @if (Model.HttpContext.Session.GetObject<bool>("_AuthState") != null
+                && Model.HttpContext.Session.GetObject<bool>("_AuthState"))
+                {
+                    var user = Model.HttpContext.Session.GetObject<User>("_UserObject");
+                    if (user != null)
+                    {
+                        <span class="
+                  ">Hello, @user.Role</span>
+                    }
+                    <a asp-page="/Authentication/LogoutPage" class="btn btn-success auth-link">Logout</a>
+                }
+                else
+                {
+                    <a asp-page="/Authentication/LoginPage" class="btn btn-success auth-link">Login</a>
+                }
+            </div>
+        </div>
     </header>
 
     <!-- Product List -->
