@@ -384,35 +384,40 @@
                                     <div class="card-body">
                                         <form method="post">
                                             <input type="hidden" asp-for="Customer.CustomerId" />
+
                                             <div class="form-group">
                                                 <label asp-for="Customer.CustomerName" class="control-label"></label>
                                                 <input asp-for="Customer.CustomerName" class="form-control" />
                                                 <span asp-validation-for="Customer.CustomerName" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label asp-for="Customer.CustomerRank" class="control-label"></label>
                                                 <input asp-for="Customer.CustomerRank" class="form-control" />
                                                 <span asp-validation-for="Customer.CustomerRank" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label asp-for="Customer.CustomerPoint" class="control-label"></label>
                                                 <input asp-for="Customer.CustomerPoint" class="form-control" />
                                                 <span asp-validation-for="Customer.CustomerPoint" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label asp-for="Customer.AttendDate" class="control-label"></label>
                                                 <input asp-for="Customer.AttendDate" class="form-control" />
                                                 <span asp-validation-for="Customer.AttendDate" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary">Save</button>
+                                                <button type="submit" class="btn btn-inverse-success btn-fw">Save</button>
                                             </div>
                                         </form>
                                     </div>
                                 </table>
                             </div>
                             <!-- EDIT HERE END -->
-                            <a asp-page="/pcustomer/CustomerDetail">Back to List</a>
+                            <a class="btn btn-inverse-secondary btn-fw text-center" asp-page="/pcustomer/CustomerDetail">Back to List</a>
                         </div>
                     </div>
                 </div>

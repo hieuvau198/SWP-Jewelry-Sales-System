@@ -378,7 +378,7 @@
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
                             <div class="table-responsive">
-                                <table class="table table-hover">
+                                <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
                                             <th>Customer Id</th>
@@ -399,8 +399,8 @@
                                                 <td>@customer.CustomerPoint</td>
                                                 <td>@customer.AttendDate.ToShortDateString()</td>
                                                 <td>
-                                                    <a asp-page="Edit" asp-route-id="@customer.CustomerId" class="btn btn-primary" style="background-color: #b8860b; border-color: #b8860b;">Edit</a>
-                                                    <a asp-page="Delete" asp-route-id="@customer.CustomerId" class="btn btn-danger" style="background-color: #dc3545; border-color: #dc3545;">Delete</a>
+                                                    <a asp-page="Edit" asp-route-id="@customer.CustomerId" class="btn btn-inverse-success btn-fw">Edit</a>
+                                                    <a asp-page="Delete" asp-route-id="@customer.CustomerId" class="btn btn-inverse-danger btn-fw">Delete</a>
                                                 </td>
                                             </tr>
                                         }
@@ -409,22 +409,25 @@
                                 </table>
                             </div>
                             <!-- EDIT HERE END -->
-                            <a asp-page="./Create">Create New Customer</a>
-                            <a asp-page="/Index">Back to List</a>
-
-                            <div class="pagination">
+                                                       
+                            <div class="card-body text-center">
                                 @if (Model.Customers.HasPreviousPage)
                                 {
-                                    <a asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-primary" asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Customers.TotalPages; i++)
                                 {
-                                    <a asp-page="./CustomerDetail" asp-route-currentPage="@i" class="@(i == Model.Customers.PageIndex ? "active" : "")">@i</a>
+                                    <a class="btn btn-primary" asp-page="./CustomerDetail" asp-route-currentPage="@i" class="@(i == Model.Customers.PageIndex ? "active" : "")">@i</a>
                                 }
                                 @if (Model.Customers.HasNextPage)
                                 {
-                                    <a asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary" asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex + 1)">Next &raquo;</a>
                                 }
+                            </div>
+
+                            <div class="card-body text-center">
+                                <a class="btn btn-inverse-secondary btn-fw" asp-page="./Create">Create New Customer</a>
+                                <a class="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back</a>
                             </div>
                         </div>
                     </div>

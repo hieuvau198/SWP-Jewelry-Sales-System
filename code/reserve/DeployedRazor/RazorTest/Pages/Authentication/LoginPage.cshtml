@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../../assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+
 </head>
 <body>
     <div class="container-scroller">
@@ -52,18 +53,20 @@
                                     <input type="text" class="form-control p_input" id="username" name="username" asp-for="Username" required>
                                     <span asp-validation-for="Username" class="text-danger"></span>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control p_input" id="password" name="password" asp-for="Password" required>
                                     <span asp-validation-for="Password" class="text-danger"></span>
-                                </div>
-                                <div class="form-group d-flex align-items-center justify-content-between">
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input"> Remember me
-                                        </label>
+
+                                    <div class="form-group d-flex align-items-center justify-content-between">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="checkbox" class="form-check-input" id="showPassword"> Show password
+                                            </label>
+                                        </div>
+                                        <a href="#" class="forgot-pass">Forgot password</a>
                                     </div>
-                                    <a href="#" class="forgot-pass">Forgot password</a>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
@@ -93,5 +96,12 @@
     <script src="../../assets/js/settings.js"></script>
     <script src="../../assets/js/todolist.js"></script>
     <!-- endinject -->
+    <script>
+        document.getElementById('showPassword').addEventListener('change', function (e) {
+            const password = document.getElementById('password');
+            const type = this.checked ? 'text' : 'password';
+            password.setAttribute('type', type);
+        });
+    </script>
 </body>
 </html>

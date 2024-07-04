@@ -379,7 +379,7 @@
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
                             <div class="table-responsive">
-                                <table class="table table-hover">
+                                <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
                                             <th>Invoice Type</th>
@@ -406,24 +406,24 @@
                                                 <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>
                                                 <td>@invoice.InvoiceStatus</td>
                                                 @* <td class="action-buttons">
-                                                    @if (invoice.InvoiceStatus.Equals("Pending") && Model.VerifyAuth("Manager"))
-                                                    {
-                                                        <div class="align-items-center">
-                                                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Approve</a>
-                                                            <br />
-                                                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Disapprove</a>
-                                                        </div>
-                                                    }
-                                                    else if (Model.VerifyAuth("Sale"))
-                                                    {
-                                                        <span>Need Manager Role To Access</span>
-                                                    }
-                                                    else if (invoice.InvoiceStatus.Equals("Processing Payment") && Model.VerifyAuth("Cashier"))
-                                                    {
-                                                        <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Confirm Payment</a>
-                                                        <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Cancel Order</a>
-                                                    }
-                                                </td> *@
+                                            @if (invoice.InvoiceStatus.Equals("Pending") && Model.VerifyAuth("Manager"))
+                                            {
+                                            <div class="align-items-center">
+                                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Approve</a>
+                                            <br />
+                                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Disapprove</a>
+                                            </div>
+                                            }
+                                            else if (Model.VerifyAuth("Sale"))
+                                            {
+                                            <span>Need Manager Role To Access</span>
+                                            }
+                                            else if (invoice.InvoiceStatus.Equals("Processing Payment") && Model.VerifyAuth("Cashier"))
+                                            {
+                                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Confirm Payment</a>
+                                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Cancel Order</a>
+                                            }
+                                            </td> *@
                                                 <td>
                                                     <form method="post" asp-page-handler="ViewDetail">
                                                         <input type="hidden" name="invoiceId" value="@invoice.InvoiceId" />
@@ -437,23 +437,23 @@
                             </div>
 
                             <!-- EDIT HERE END -->
-                            <a asp-page="./Create">Create New Invoice</a>
-                            <a asp-page="/Index">Back to List</a>
-
-
-                            <div class="pagination">
+                            <div class="card-body text-center">
                                 @if (Model.Invoices.HasPreviousPage)
                                 {
-                                    <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-primary" asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
                                 {
-                                    <a asp-page="./InvoiceDetail" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
+                                    <a class="btn btn-primary" asp-page="./InvoiceDetail" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
                                 }
                                 @if (Model.Invoices.HasNextPage)
                                 {
-                                    <a asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary" asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
                                 }
+                            </div>
+
+                            <div class="card-body text-center">
+                                <a class="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back</a>
                             </div>
                         </div>
                     </div>

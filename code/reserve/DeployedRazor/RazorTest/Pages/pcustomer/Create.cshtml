@@ -388,28 +388,34 @@
                                                 <input asp-for="Customer.CustomerName" class="form-control" id="customerName" required>
                                                 <span asp-validation-for="Customer.CustomerName" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="customerRank">Customer Rank</label>
                                                 <input asp-for="Customer.CustomerRank" class="form-control" id="customerRank">
                                                 <span asp-validation-for="Customer.CustomerRank" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="customerPoint">Customer Points</label>
                                                 <input asp-for="Customer.CustomerPoint" class="form-control" id="customerPoint">
                                                 <span asp-validation-for="Customer.CustomerPoint" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="attendDate">Attend Date</label>
                                                 <input asp-for="Customer.AttendDate" class="form-control" id="attendDate">
                                                 <span asp-validation-for="Customer.AttendDate" class="text-danger"></span>
                                             </div>
-                                            <button type="submit" class="btn btn-primary btn-block">Create</button>
+
+                                            <div class="card-body text-center">
+                                                <button type="submit" class="btn btn-inverse-success btn-fw">Create</button>
+                                                <a asp-page="./CustomerDetail" class="btn btn-inverse-danger btn-fw">Cancel</a>
+                                            </div>
                                         </form>
                                     </div>
                                 </table>
                             </div>
                             <!-- EDIT HERE END -->
-                            <a asp-page="/pcustomer/CustomerDetail">Back to List</a>
                         </div>
                     </div>
                 </div>
