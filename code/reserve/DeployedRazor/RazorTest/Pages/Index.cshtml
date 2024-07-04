@@ -34,7 +34,7 @@
     <!-- Header with Login/Logout links -->
     <header class="header card-header container">
         <div class="row">
-            <div class=""style="align-items: end">
+            <div class="" >
                 @if (Model.HttpContext.Session.GetObject<bool>("_AuthState") != null
                 && Model.HttpContext.Session.GetObject<bool>("_AuthState"))
                 {
@@ -42,13 +42,14 @@
                     if (user != null)
                     {
                         <span class="
-                  ">Hello, @user.Role</span>
+">Hello, @user.Role</span>
                     }
-                    <a asp-page="/Authentication/LogoutPage" class="btn btn-success auth-link">Logout</a>
+                    <a asp-page="/Authentication/LogoutPage" class="btn btn-success auth-link align-items-end">Logout</a>
                 }
                 else
                 {
-                    <a asp-page="/Authentication/LoginPage" class="btn btn-success auth-link">Login</a>
+                    <a asp-page="/Authentication/LoginPage" class="btn btn-success auth-link align-items-end">Login</a>
+
                 }
             </div>
         </div>
@@ -560,8 +561,3 @@
     }
 </body>
 </html>
-
-
-
-
-

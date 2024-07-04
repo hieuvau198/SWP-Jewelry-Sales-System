@@ -3813,12 +3813,24 @@
       "PackagePath": "staticwebassets\\assets\\vendors\\typeahead.js\\typeahead.bundle.min.js"
     },
     {
+      "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\chain.png",
+      "PackagePath": "staticwebassets\\chain.png"
+    },
+    {
       "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\diamond.png",
+      "PackagePath": "staticwebassets\\diamond.png"
+    },
+    {
       "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\jewelry.png",
+      "PackagePath": "staticwebassets\\jewelry.png"
     },
     {
       "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\js\\site.js",
@@ -4051,6 +4063,10 @@
     {
       "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\SWP391\\FE\\DeployedRazor\\RazorTest\\wwwroot\\necklace.png",
+      "PackagePath": "staticwebassets\\necklace.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RazorTest.Microsoft.AspNetCore.StaticWebAssets.props",

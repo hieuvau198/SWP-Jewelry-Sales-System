@@ -390,7 +390,6 @@
                                             <th>Original Price (VND)</th>
                                             <th>Total Price (VND)</th>
                                             <th>Status</th>
-                                            <th>Actions</th>
                                             <th>View</th>
                                         </tr>
                                     </thead>
@@ -406,11 +405,14 @@
                                                 <td>@String.Format("{0:N0}", invoice.TotalPrice)</td>
                                                 <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>
                                                 <td>@invoice.InvoiceStatus</td>
-                                                <td class="action-buttons">
+                                                @* <td class="action-buttons">
                                                     @if (invoice.InvoiceStatus.Equals("Pending") && Model.VerifyAuth("Manager"))
                                                     {
-                                                        <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-primary">Approve</a>
-                                                        <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-danger">Disapprove</a>
+                                                        <div class="align-items-center">
+                                                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Approve</a>
+                                                            <br />
+                                                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Disapprove</a>
+                                                        </div>
                                                     }
                                                     else if (Model.VerifyAuth("Sale"))
                                                     {
@@ -418,14 +420,14 @@
                                                     }
                                                     else if (invoice.InvoiceStatus.Equals("Processing Payment") && Model.VerifyAuth("Cashier"))
                                                     {
-                                                        <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-primary">Confirm Payment</a>
-                                                        <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-danger">Cancel Order</a>
+                                                        <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Confirm Payment</a>
+                                                        <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Cancel Order</a>
                                                     }
-                                                </td>
+                                                </td> *@
                                                 <td>
                                                     <form method="post" asp-page-handler="ViewDetail">
                                                         <input type="hidden" name="invoiceId" value="@invoice.InvoiceId" />
-                                                        <button type="submit">Detail</button>
+                                                        <button class="btn btn-inverse-warning btn-fw" type="submit">Detail</button>
                                                     </form>
                                                 </td>
                                             </tr>

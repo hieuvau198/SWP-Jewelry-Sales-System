@@ -408,11 +408,29 @@
                                                 <td>@Model.ViewDetailInvoiceObject.InvoiceStatus</td>
                                             </tr>
                                         </tbody>
+
                                     }
                                 </table>
+
+                                
+
                             </div>
                             <!-- EDIT HERE END -->
-                            <a asp-page="/pinvoice/InvoiceDetail">Back to List</a>
+                            <div class="card-body text-center">
+                                <div class="card-body">
+                                    <a asp-page="./Edit" class="btn btn-inverse-success btn-fw">Approve</a>
+                                    <br />
+                                    <a asp-page="./Delete" class="btn btn-inverse-danger btn-fw">Disapprove</a>
+                                </div>
+
+                                <div class="card-body">
+                                    <a asp-page="./Edit" class="btn btn-inverse-success btn-fw">Confirm Payment</a>
+                                    <br />
+                                    <a asp-page="./Delete" class="btn btn-inverse-danger btn-fw">Cancel Order</a>
+                                </div>
+                            </div>
+
+                            <a asp-page="/pinvoice/InvoiceDetail">Back</a>
 
 
                         </div>
