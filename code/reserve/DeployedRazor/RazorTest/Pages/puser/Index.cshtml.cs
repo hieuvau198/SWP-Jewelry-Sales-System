@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
 using System.Collections.Generic;
@@ -18,14 +19,26 @@ namespace RazorTest.Pages.puser
 
         public List<User> Users { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
 
             if (users != null)
             {
                 Users = users.OrderBy(u => u.UserId).ToList();
             }
+
+            return Page();
         }
     }
 }

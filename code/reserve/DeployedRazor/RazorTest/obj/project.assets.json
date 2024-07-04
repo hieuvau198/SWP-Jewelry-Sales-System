@@ -7843,11 +7843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\RazorTest.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\RazorTest.csproj",
       "projectName": "RazorTest",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\RazorTest.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\RazorTest.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
 using RazorTest.Utilities;
@@ -22,14 +23,29 @@ namespace RazorTest.Pages.pinvoice
         public List<Invoice> Invoices { get; set; }
         public User User { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Sale",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             var invoices = await _apiService.GetAsync<List<Invoice>>("https://hvjewel.azurewebsites.net/api/invoice");
 
             if (invoices != null)
             {
                 Invoices = invoices.OrderBy(c => c.InvoiceDate).ToList();
             }
+
+            return Page();
         }
         public bool VerifyAuth(string role)
         {

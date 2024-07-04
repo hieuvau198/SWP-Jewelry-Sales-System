@@ -42,40 +42,47 @@ namespace RazorTest.Pages.Buy
 
         public async Task<IActionResult> OnGet()
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Sale",
-                "Cashier"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
-
-            // Get Data
-            BuyInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyInvoiceObject);
-            if(BuyInvoiceObject == null)
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
-            BuyCustomerObject = HttpContext.Session.GetObject<Customer>(SessionKeyBuyCustomerObject);
-
-            InvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeyInvoiceItemList);
-            if(InvoiceItemList.IsNullOrEmpty())
-            {
-                InvoiceItemList = await _apiService.GetAsync<List<InvoiceItem>>(UrlInvoiceItem);
-                HttpContext.Session.SetObject(SessionKeyInvoiceItemList, InvoiceItemList);
-            }
-
-            BuyInvoiceItemList = new List<InvoiceItem>();
-            
-            foreach(InvoiceItem item in InvoiceItemList)
-            {
-                if(item.InvoiceId.Equals(BuyInvoiceObject.InvoiceId))
+                // Verify auth
+                List<string> roles = new List<string>
                 {
-                    BuyInvoiceItemList.Add(item);
+                    "Sale",
+                    "Cashier",
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
                 }
+
+                // Get Data
+                BuyInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyInvoiceObject);
+                if (BuyInvoiceObject == null)
+                {
+                    return RedirectToPage("/Error");
+                }
+                BuyCustomerObject = HttpContext.Session.GetObject<Customer>(SessionKeyBuyCustomerObject);
+
+                InvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeyInvoiceItemList);
+                if (InvoiceItemList.IsNullOrEmpty())
+                {
+                    InvoiceItemList = await _apiService.GetAsync<List<InvoiceItem>>(UrlInvoiceItem);
+                    HttpContext.Session.SetObject(SessionKeyInvoiceItemList, InvoiceItemList);
+                }
+
+                BuyInvoiceItemList = new List<InvoiceItem>();
+
+                foreach (InvoiceItem item in InvoiceItemList)
+                {
+                    if (item.InvoiceId.Equals(BuyInvoiceObject.InvoiceId))
+                    {
+                        BuyInvoiceItemList.Add(item);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
             }
             
             return Page();

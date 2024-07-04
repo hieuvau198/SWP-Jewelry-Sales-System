@@ -14,10 +14,12 @@ namespace RazorTest.Pages.pinvoice
         public const string SessionKeyAuthState = "_AuthState";
 
         private readonly InvoiceService _invoiceService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(InvoiceService apiService, ILogger<EditModel> logger, InvoiceService invoiceService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, InvoiceService invoiceService)
         {
             _invoiceService = invoiceService;
+            _apiService = apiService;
             _logger = logger;
         }
 
@@ -26,6 +28,19 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // Get data
             if (id == null)
             {
                 _logger.LogError("ID is null");
@@ -39,6 +54,7 @@ namespace RazorTest.Pages.pinvoice
                 _logger.LogError($"Invoice not found for ID {id}");
                 return NotFound();
             }
+
             return Page();
         }
 

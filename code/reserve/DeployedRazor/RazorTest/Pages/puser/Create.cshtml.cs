@@ -9,24 +9,38 @@ namespace RazorTest.Pages.puser
     public class CreateModel : PageModel
     {
         private readonly UserService _userService;
+        private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(UserService userService, ILogger<CreateModel> logger)
+        public CreateModel(UserService userService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _userService = userService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public User User { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             // Initialize the Create with a new ID
             User = new User
             {
                 UserId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

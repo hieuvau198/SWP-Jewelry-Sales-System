@@ -10,10 +10,12 @@ namespace RazorTest.Pages.pinvoiceitem
     public class EditModel : PageModel
     {
         private readonly InvoiceItemService _invoiceItemService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(InvoiceItemService apiService, ILogger<EditModel> logger, InvoiceItemService invoiceItemService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, InvoiceItemService invoiceItemService)
         {
             _invoiceItemService = invoiceItemService;
+            _apiService = apiService;
             _logger = logger;
         }
 
@@ -22,6 +24,16 @@ namespace RazorTest.Pages.pinvoiceitem
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             if (id == null)
             {
                 _logger.LogError("ID is null");

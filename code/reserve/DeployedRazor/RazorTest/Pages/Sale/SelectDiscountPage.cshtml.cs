@@ -35,8 +35,18 @@ namespace RazorTest.Pages.Sale
         public Discount SelectedDiscount { get; set; }
         public string TestMessage { get; set; }
 
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             ProductId = HttpContext.Session.GetString(SessionKeySaleDiscountProductId) ?? "Fail";
             ProductList = HttpContext.Session.GetObject<List<Product>>(SessionKeyProductList);
             if(ProductList == null)
@@ -118,7 +128,7 @@ namespace RazorTest.Pages.Sale
                 }
 
 
-
+            return Page();
 
         }
 

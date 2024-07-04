@@ -9,10 +9,12 @@ namespace RazorTest.Pages.pwarranty
     public class DeleteModel : PageModel
     {
         private readonly WarrantyService _warrantyService;
+        private readonly ApiService _apiService;
 
-        public DeleteModel(WarrantyService warrantyService)
+        public DeleteModel(WarrantyService warrantyService, ApiService apiService)
         {
             _warrantyService = warrantyService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -20,6 +22,16 @@ namespace RazorTest.Pages.pwarranty
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             Warranty = await _warrantyService.GetWarrantyByIdAsync(id);
             if (Warranty == null)
             {

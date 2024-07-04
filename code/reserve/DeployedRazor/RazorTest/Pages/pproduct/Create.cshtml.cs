@@ -29,18 +29,37 @@ namespace RazorTest.Pages.pproduct
         [BindProperty]
         public List<Gold> Golds { get; set; }
 
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
-            // Initialize the Gold with a new ID
-            Product = new Product
+            try
             {
-                ProductId = Guid.NewGuid().ToString(),
-                UnitPrice = 0,
-                BuyPrice = 0,
-                TotalPrice = 0
+                // Verify auth
+                List<string> roles = new List<string>
+            {
+                "Admin"
             };
-            Gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem") ?? new List<Gem>();
-            Golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold") ?? new List<Gold>();
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+                // Initialize the Gold with a new ID
+                Product = new Product
+                {
+                    ProductId = Guid.NewGuid().ToString(),
+                    UnitPrice = 0,
+                    BuyPrice = 0,
+                    TotalPrice = 0
+                };
+                Gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem") ?? new List<Gem>();
+                Golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold") ?? new List<Gold>();
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

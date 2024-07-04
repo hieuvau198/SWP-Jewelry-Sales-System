@@ -31,8 +31,22 @@ namespace RazorTest.Pages.pinvoice
 
         public List<InvoiceItem> ViewDetailInvoiceItemList { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Sale",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            // Get data
             ViewDetailInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyViewDetailInvoiceObject);
             if(ViewDetailInvoiceObject != null)
             {
@@ -42,6 +56,8 @@ namespace RazorTest.Pages.pinvoice
                     x => (x.InvoiceId.Equals(ViewDetailInvoiceObject.InvoiceId))
                     ).ToList();
             }
+
+            return Page();
         }
 
         public bool VerifyAuth(string role)

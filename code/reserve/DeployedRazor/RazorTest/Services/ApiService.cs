@@ -11,8 +11,8 @@ namespace RazorTest.Services
     public class ApiService
     {
         // Session key
-            public const string SessionKeyUserObject = "_UserObject";
-            public const string SessionKeyAuthState = "_AuthState";
+            private const string SessionKeyUserObject = "_UserObject";
+            private const string SessionKeyAuthState = "_AuthState";
 
         private readonly HttpClient _httpClient;
         public ApiService(HttpClient httpClient)
@@ -50,6 +50,7 @@ namespace RazorTest.Services
             
             return result;
         }
+        
 
         public async Task<T> GetAsync<T>(string url)
         {

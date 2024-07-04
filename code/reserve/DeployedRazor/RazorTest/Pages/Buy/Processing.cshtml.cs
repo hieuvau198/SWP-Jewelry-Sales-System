@@ -52,35 +52,58 @@ namespace RazorTest.Pages.Buy
 
         public PaginatedList<Invoice> PaginatedBuyInvoiceList { get; set; }
 
-        public async Task OnGet(int pageIndex = 1, int pageSize = 6)
+        public async Task<IActionResult> OnGet(int pageIndex = 1, int pageSize = 6)
         {
-            //Get Data For Invoice on each Redirection
+            try
+            {
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Sale",
+                    "Cashier",
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+                //Get Data For Invoice on each Redirection
                 InvoiceList = HttpContext.Session.GetObject<List<Invoice>>(SessionKeyInvoiceList)
-                    ?? await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
+                        ?? await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
                 BuyInvoiceList = HttpContext.Session.GetObject<List<Invoice>>(SessionKeyBuyInvoiceList);
-                BuyInvoiceObject = HttpContext.Session.GetObject<Invoice> (SessionKeyBuyInvoiceObject);
-                BuyInvoiceSearch = HttpContext.Session.GetString(SessionKeyBuyInvoiceSearch) 
+                BuyInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyInvoiceObject);
+                BuyInvoiceSearch = HttpContext.Session.GetString(SessionKeyBuyInvoiceSearch)
                     ?? "";
 
-            //Get Data For Customer on each Redirection
+                //Get Data For Customer on each Redirection
                 CustomerList = HttpContext.Session.GetObject<List<Customer>>(SessionKeyCustomerList)
                 ?? await _apiService.GetAsync<List<Customer>>(UrlCustomer);
                 BuyCustomerObject = HttpContext.Session.GetObject<Customer>(SessionKeyBuyCustomerObject);
-                BuyCustomerSearch = HttpContext.Session.GetString(SessionKeyBuyCustomerSearch) 
+                BuyCustomerSearch = HttpContext.Session.GetString(SessionKeyBuyCustomerSearch)
                     ?? "";
 
-            //Get Data For InvoiceItem on each Redirection
+                //Get Data For InvoiceItem on each Redirection
                 InvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeyInvoiceItemList);
                 BuyInvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeyBuyInvoiceItemList);
 
-            //Test Message
+                //Test Message
                 Message = HttpContext.Session.GetString(SessionKeyMessage) ?? "Not Yet";
 
-            // Paginate the filtered list if BuyInvoiceList is not null
-            if (BuyInvoiceList != null)
-            {
-                PaginatedBuyInvoiceList = PaginatedList<Invoice>.Create(BuyInvoiceList.AsQueryable(), pageIndex, pageSize);
+                // Paginate the filtered list if BuyInvoiceList is not null
+                if (BuyInvoiceList != null)
+                {
+                    PaginatedBuyInvoiceList = PaginatedList<Invoice>.Create(BuyInvoiceList.AsQueryable(), pageIndex, pageSize);
+                }else
+                {
+                    return RedirectToPage("/Error");
+                }
             }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostSearch(string buyInvoiceSearch, string buyCustomerSearch, int pageIndex = 1, int pageSize = 6)

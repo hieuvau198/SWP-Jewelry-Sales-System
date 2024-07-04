@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -22,8 +23,18 @@ namespace RazorTest.Pages.puser
         public PaginatedList<User> Users { get; set; }
 
         public const int PageSize = 6;
-        public async Task OnGetAsync(int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
             users = users.OrderByDescending(x => x.UserId).ToList();
 
@@ -32,6 +43,8 @@ namespace RazorTest.Pages.puser
                 Users = PaginatedList<User>.Create(users.AsQueryable(), currentPage, 6);
 
             }
+
+            return Page();
         }
     }
 }

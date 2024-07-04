@@ -10,10 +10,12 @@ namespace RazorTest.Pages.pproduct
     public class EditModel : PageModel
     {
         private readonly ProductService _productService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(ProductService apiService, ILogger<EditModel> logger, ProductService productService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, ProductService productService)
         {
             _productService = productService;
+            _apiService = apiService;
             _logger = logger;
         }
 
@@ -22,19 +24,38 @@ namespace RazorTest.Pages.pproduct
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
-            if (id == null)
+            try
             {
-                _logger.LogError("ID is null");
-                return NotFound();
-            }
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            Product = await _productService.GetProductByIdAsync(id);
+                if (id == null)
+                {
+                    _logger.LogError("ID is null");
+                    return NotFound();
+                }
 
-            if (Product == null)
+                Product = await _productService.GetProductByIdAsync(id);
+
+                if (Product == null)
+                {
+                    _logger.LogError($"Discount not found for ID {id}");
+                    return NotFound();
+                }
+
+            } catch (Exception ex)
             {
-                _logger.LogError($"Discount not found for ID {id}");
-                return NotFound();
+                return RedirectToPage("/Error");
             }
+            
+            
             return Page();
         }
 

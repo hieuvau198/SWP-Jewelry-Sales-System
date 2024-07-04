@@ -9,24 +9,38 @@ namespace RazorTest.Pages.pwarranty
     public class CreateModel : PageModel
     {
         private readonly WarrantyService _warrantyService;
+        private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(WarrantyService warrantyService, ILogger<CreateModel> logger)
+        public CreateModel(WarrantyService warrantyService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _warrantyService = warrantyService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public Warranty Warranty { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             // Initialize the Discount with a new ID
             Warranty = new Warranty
             {
                 WarrantyId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

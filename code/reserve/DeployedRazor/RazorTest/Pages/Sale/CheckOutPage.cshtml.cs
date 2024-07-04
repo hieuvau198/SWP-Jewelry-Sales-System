@@ -41,8 +41,20 @@ namespace RazorTest.Pages.Sale
         public List<InvoiceItem> InvoiceItems { get; set; }
         public Invoice Invoice { get; set; }
 
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Sale",
+                "Cashier",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart);
             Customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject) ?? new Customer { CustomerName = "Anonymous"};
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
@@ -50,7 +62,7 @@ namespace RazorTest.Pages.Sale
             SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList);
             Invoice = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
 
-            
+            return Page();
         }
 
         public async Task<IActionResult> OnPostConfirm()

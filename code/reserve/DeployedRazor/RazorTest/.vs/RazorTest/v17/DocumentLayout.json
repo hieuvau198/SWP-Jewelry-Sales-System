@@ -1,70 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\authentication\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\buy\\buyback.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\buyback.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\buy\\processing.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\processing.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\buy\\confirm.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\confirm.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\authentication\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\authentication\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgold\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgold\\golddetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\golddetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\pproduct\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgold\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgold\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\pproduct\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\productdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgold\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\pproduct\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgemstone\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\pproduct\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgemstone\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\pages\\pproduct\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgemstone\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgemstone\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pgemstone\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pdiscount\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pdiscount\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pdiscount\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pdiscount\\discountdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\discountdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\razornew\\razortest\\pages\\pdiscount\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2310 0407\\razortest\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,210 +67,151 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgold\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgold\\Index.cshtml.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAmwCQAAAAaAAAA",
+              "Title": "Processing.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Buy\\Processing.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Buy\\Processing.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Buy\\Processing.cshtml.cs",
+              "RelativeToolTip": "Pages\\Buy\\Processing.cshtml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAUwJoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T09:00:18.478Z",
+              "WhenOpened": "2024-07-04T23:34:11.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GoldDetail.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\GoldDetail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgold\\GoldDetail.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\GoldDetail.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgold\\GoldDetail.cshtml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAmwBwAAAAjAAAA",
+              "Title": "Confirm.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Buy\\Confirm.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Buy\\Confirm.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Buy\\Confirm.cshtml.cs",
+              "RelativeToolTip": "Pages\\Buy\\Confirm.cshtml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwDAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:59:31.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgold\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Edit.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgold\\Edit.cshtml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:57:26.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgold\\Delete.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Delete.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgold\\Delete.cshtml.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAmwBoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:57:18.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgold\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgold\\Create.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgold\\Create.cshtml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:56:21.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Index.cshtml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAiwCYAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:53:11.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Detail.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Detail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Detail.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Detail.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Detail.cshtml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAmwCEAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:52:02.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Edit.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Edit.cshtml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:50:25.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Delete.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Delete.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Delete.cshtml.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwBwAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:50:14.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pgemstone\\Create.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Create.cshtml.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:50:01.872Z",
+              "WhenOpened": "2024-07-04T23:31:25.749Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BuyBack.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Buy\\BuyBack.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Buy\\BuyBack.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Buy\\BuyBack.cshtml.cs",
+              "RelativeToolTip": "Pages\\Buy\\BuyBack.cshtml.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAIA7wDMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T23:27:43.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\wwwroot\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\css\\style.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\wwwroot\\assets\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\assets\\css\\style.css",
+              "ViewState": "AQIAAPFOAAAAAAAAAAAUwOlOAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-04T21:21:21.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\Authentication\\AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Authentication\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Pages\\Authentication\\AccessDenied.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\Authentication\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Authentication\\AccessDenied.cshtml",
               "RelativeToolTip": "Pages\\Authentication\\AccessDenied.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAWAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAqwB4AAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-04T08:46:38.934Z",
+              "WhenOpened": "2024-07-04T21:14:26.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DiscountDetail.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\DiscountDetail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pdiscount\\DiscountDetail.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\DiscountDetail.cshtml.cs",
-              "RelativeToolTip": "Pages\\pdiscount\\DiscountDetail.cshtml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAmwCoAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "ProductDetail.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\ProductDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\ProductDetail.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\ProductDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pproduct\\ProductDetail.cshtml.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAqwEYAAAB3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:40:27.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pdiscount\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\pdiscount\\Index.cshtml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAiwB0AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:35:16.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Edit.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pdiscount\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Edit.cshtml.cs",
-              "RelativeToolTip": "Pages\\pdiscount\\Edit.cshtml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:35:12.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pdiscount\\Delete.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Delete.cshtml.cs",
-              "RelativeToolTip": "Pages\\pdiscount\\Delete.cshtml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAmwCIAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:35:04.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T21:05:27.169Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pdiscount\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\RazorNew\\RazorTest\\Pages\\pdiscount\\Create.cshtml.cs",
-              "RelativeToolTip": "Pages\\pdiscount\\Create.cshtml.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCMAAAARAAAA",
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Services\\ApiService.cs",
+              "RelativeDocumentMoniker": "Services\\ApiService.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Services\\ApiService.cs",
+              "RelativeToolTip": "Services\\ApiService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAxwBYAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T08:34:57.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T20:54:14.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Error.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\Error.cshtml",
+              "RelativeToolTip": "Pages\\Error.cshtml",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T20:32:03.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\pproduct\\Create.cshtml.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAswCoAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T20:17:35.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\pproduct\\Delete.cshtml.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAtwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T20:16:54.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\ProductDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\ProductDetail.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\ProductDetail.cshtml",
+              "RelativeToolTip": "Pages\\pproduct\\ProductDetail.cshtml",
+              "ViewState": "AQIAAPUBAAAAAAAAAAAAAAQCAAB1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-04T20:14:39.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\Pages\\pproduct\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\pproduct\\Edit.cshtml.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAmwBEAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T20:13:51.606Z"
             }
           ]
         }

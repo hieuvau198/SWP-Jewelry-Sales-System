@@ -35,14 +35,35 @@ namespace RazorTest.Pages.Buy
         public Product BuyProductObject { get; set; }
         public Invoice BuyConfirmInvoiceObject { get; set; }
         public InvoiceItem BuyConfirmInvoiceItemObject { get; set; }
-        public async Task OnGet()
+        public async Task<IActionResult> OnGet()
         {
-            BuyInvoiceItemObject = HttpContext.Session.GetObject<InvoiceItem>(SessionKeyBuyInvoiceItemObject);
-            BuyProductObject = HttpContext.Session.GetObject<Product>(SessionKeyBuyProductObject);
+            
+            
+            try
+            {
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Sale",
+                    "Cashier",
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            BuyConfirmInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyConfirmInvoiceObject);
-            BuyConfirmInvoiceItemObject = HttpContext.Session.GetObject<InvoiceItem>(SessionKeyBuyConfirmInvoiceItemObject);
+                BuyInvoiceItemObject = HttpContext.Session.GetObject<InvoiceItem>(SessionKeyBuyInvoiceItemObject);
+                BuyProductObject = HttpContext.Session.GetObject<Product>(SessionKeyBuyProductObject);
 
+                BuyConfirmInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyConfirmInvoiceObject);
+                BuyConfirmInvoiceItemObject = HttpContext.Session.GetObject<InvoiceItem>(SessionKeyBuyConfirmInvoiceItemObject);
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostConfirmBuying()

@@ -13,24 +13,38 @@ namespace RazorTest.Pages.pinvoice
         public const string SessionKeyUserObject = "_UserObject";
 
         private readonly InvoiceService _invoiceService;
+        private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(InvoiceService invoiceService, ILogger<CreateModel> logger)
+        public CreateModel(InvoiceService invoiceService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _invoiceService = invoiceService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public Invoice Invoice { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             // Initialize the Invoice with a new ID
             Invoice = new Invoice
             {
                 InvoiceId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

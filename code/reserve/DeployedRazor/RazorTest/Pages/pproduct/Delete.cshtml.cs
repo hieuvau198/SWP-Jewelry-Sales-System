@@ -9,10 +9,12 @@ namespace RazorTest.Pages.pproduct
     public class DeleteModel : PageModel
     {
         private readonly ProductService _productService;
+        private readonly ApiService _apiService;
 
-        public DeleteModel(ProductService productService)
+        public DeleteModel(ProductService productService, ApiService apiService)
         {
             _productService = productService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -20,6 +22,16 @@ namespace RazorTest.Pages.pproduct
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             Product = await _productService.GetProductByIdAsync(id);
             if (Product == null)
             {

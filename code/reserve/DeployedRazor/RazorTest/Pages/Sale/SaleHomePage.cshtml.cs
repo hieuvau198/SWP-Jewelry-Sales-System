@@ -42,9 +42,19 @@ namespace RazorTest.Pages.Sale
 
         public const int PageSize = 9; // Number of products per page
 
-        public async Task OnGetAsync(int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
-            if(HttpContext.Session.GetObject<User>(SessionKeyUserObject)==null )
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
+            if (HttpContext.Session.GetObject<User>(SessionKeyUserObject)==null )
             {
                 HttpContext.Session.SetString(SessionKeyMessage, "Not Authen");
                 RedirectToPage("/Index");
@@ -59,7 +69,7 @@ namespace RazorTest.Pages.Sale
                 allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
             }
 
-            // S?p x?p danh sách s?n ph?m theo Product Code
+            // Make order for results
             allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
 
             
@@ -73,7 +83,8 @@ namespace RazorTest.Pages.Sale
 
             // Store products in session to fetch them during post request
             HttpContext.Session.SetObject("Products", allProducts);
-            HttpContext.Session.SetString(SessionKeyUserId, "Fuck");
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAddToCart(string productId)

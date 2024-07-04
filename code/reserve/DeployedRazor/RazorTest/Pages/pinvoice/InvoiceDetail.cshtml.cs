@@ -33,8 +33,21 @@ namespace RazorTest.Pages.pinvoice
 
         private const int PageSize = 10;
 
-        public async Task OnGetAsync(int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Sale",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
             if (invoices != null)
             {
@@ -42,6 +55,7 @@ namespace RazorTest.Pages.pinvoice
                 Invoices = PaginatedList<Invoice>.Create(invoices.AsQueryable(), currentPage, 10);
             }
 
+            return Page();
         }
 
         public async Task<IActionResult> OnPostViewDetail(string invoiceId)

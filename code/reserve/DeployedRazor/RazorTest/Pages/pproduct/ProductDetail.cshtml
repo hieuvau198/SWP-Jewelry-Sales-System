@@ -39,8 +39,12 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo"><img src="~/assets/images/logo2.jpg" alt="logo" /></a>
-                <a class="sidebar-brand brand-logo-mini"><img src="~/assets/images/logo-mini.jpg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo">
+                    <img src="~/assets/images/logo.svg" alt="logo" style="width: 60px; height: 60px;" />
+                </a>
+                <a class="sidebar-brand brand-logo-mini">
+                    <img src="~/assets/images/logo-mini.svg" alt="logo" style="width: 35px; height: 35px;" />
+                </a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">
@@ -382,7 +386,6 @@
 
                             <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
                             <label>Type</label>
-
                             <select name="filterType">
                                 @foreach (var option in typeOptions)
                                 {
@@ -443,19 +446,14 @@
                                     <thead>
                                         <tr>
 
-                                            <th>Code</th>
-                                            <th>Name</th>
+                                            
                                             <th>Portrait</th>
-                                            <th>Quantity</th>
+                                            <th>Name</th>
                                             <th>Type</th>
-                                            <th>Warranty (Months)</th>
                                             <th>Gemstone</th>
-                                            <th>Gem Weight (cts)</th>
                                             <th>Gold Material</th>
-                                            <th>Gold Weight (cts)</th>
                                             <th>Buy Price (VND)</th>
                                             <th>Sell Price (VND)</th>
-                                            <th>Publish</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
@@ -464,8 +462,7 @@
                                         {
                                             <tr>
 
-                                                <td>@product.ProductCode</td>
-                                                <td>@product.ProductName</td>
+                                                
                                                 <td>
                                                     @if (product.ProductImages.Length > 50)
                                                     {
@@ -476,16 +473,12 @@
                                                         <img src="/ProductImages/@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
                                                     }
                                                 </td>
-                                                <td>@product.ProductQuantity</td>
+                                                <td>@product.ProductName.Substring(0, 10)</td>
                                                 <td>@product.ProductType</td>
-                                                <td>@product.ProductWarranty</td>
                                                 <td>@product.GemName</td>
-                                                <td>@product.GemWeight</td>
                                                 <td>@product.GoldName</td>
-                                                <td>@product.GoldWeight</td>
                                                 <td>@String.Format("{0:N0}", product.BuyPrice)</td>
                                                 <td>@String.Format("{0:N0}", product.UnitPrice)</td>
-                                                <td>@product.CreatedAt.ToShortDateString()</td>
                                                 <td class="action-buttons">
                                                     @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
                                                     {
@@ -521,7 +514,7 @@
                             </div>
                             <div class="card-body text-center">
                                 <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Create New</a>
-                                <a asp-page="/Index" class="btn btn-inverse-secondary btn-fw">Back</a>
+                                <a href="javascript:history.back()" class="btn btn-inverse-secondary btn-fw">Back</a>
                             </div>
 
                         </div>

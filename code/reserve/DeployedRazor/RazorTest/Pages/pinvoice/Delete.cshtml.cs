@@ -13,10 +13,12 @@ namespace RazorTest.Pages.pinvoice
         public const string SessionKeyUserObject = "_UserObject";
 
         private readonly InvoiceService _invoiceService;
+        private readonly ApiService _apiService;
 
-        public DeleteModel(InvoiceService invoiceService)
+        public DeleteModel(InvoiceService invoiceService, ApiService apiService)
         {
             _invoiceService = invoiceService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -24,11 +26,24 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             Invoice = await _invoiceService.GetInvoiceByIdAsync(id);
             if (Invoice == null)
             {
                 return NotFound();
             }
+
             return Page();
         }
 

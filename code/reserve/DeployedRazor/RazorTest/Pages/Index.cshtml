@@ -42,7 +42,7 @@
                     if (user != null)
                     {
                         <span class="
-">Hello, @user.Role</span>
+">Hi, @user.Fullname</span>
                     }
                     <a asp-page="/Authentication/LogoutPage" class="btn btn-success auth-link align-items-end">Logout</a>
                 }
@@ -108,8 +108,12 @@
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                    <a class="sidebar-brand brand-logo"><img src="~/assets/images/logo.png" alt="logo" /></a>
-                    <a class="sidebar-brand brand-logo-mini"><img src="~/assets/images/logo.png" alt="logo" /></a>
+                    <a class="sidebar-brand brand-logo">
+                        <img src="~/assets/images/logo.svg" alt="logo" style="width: 60px; height: 60px;" />
+                    </a>
+                    <a class="sidebar-brand brand-logo-mini">
+                        <img src="~/assets/images/logo-mini.svg" alt="logo" style="width: 35px; height: 35px;" />
+                    </a>
                 </div>
                 <ul class="nav">
                     <li class="nav-item profile">
@@ -165,7 +169,7 @@
                         <span class="nav-link">Navigation</span>
                     </li>
                     <li class="nav-item menu-items">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" asp-page="/Index">
                             <span class="menu-icon">
                                 <i class="mdi mdi-speedometer"></i>
                             </span>
@@ -253,7 +257,7 @@
                 <!-- partial:partials/_navbar.html -->
                 <nav class="navbar p-0 fixed-top d-flex flex-row">
                     <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="~/assets/images/logo-mini.svg" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo-mini" asp-page="/Index"><img src="~/assets/images/logo-mini.svg" alt="logo" /></a>
                     </div>
                     <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
                         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">

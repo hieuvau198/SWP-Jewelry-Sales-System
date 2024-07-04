@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -34,11 +35,26 @@ namespace RazorTest.Pages.pproduct
         
 
         private const int PageSize = 10;
-        public async Task OnGetAsync(string searchTerm, string filterType, string filterGem, string filterGold, int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterType, string filterGem, string filterGold, int currentPage = 1)
         {
-            // Set some vars
+            try
+            {
+                // Verify auth
+                List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Sale",
+                "Admin"
+            };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+                // Set some vars
                 SearchTerm = searchTerm;
-                if(!string.IsNullOrEmpty(filterType))
+                if (!string.IsNullOrEmpty(filterType))
                 {
                     FilterType = filterType;
                 }
@@ -52,12 +68,12 @@ namespace RazorTest.Pages.pproduct
                 }
 
 
-            var products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
-            
-            // Filter products based on string filterType, filterGem, filterGold
-                if(!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))
+                var products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+
+                // Filter products based on string filterType, filterGem, filterGold
+                if (!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))
                 {
-                    products = products.Where(p => 
+                    products = products.Where(p =>
                         (p.ProductType != null && p.ProductType.Contains(filterType))).ToList();
                 }
                 if (!string.IsNullOrEmpty(filterGem) && !filterGem.Equals("All"))
@@ -70,27 +86,34 @@ namespace RazorTest.Pages.pproduct
                     products = products.Where(p =>
                         (p.GoldName != null && p.GoldName.Contains(filterGold))).ToList();
                 }
-            // Search products based on string searchTerm
-            if (!string.IsNullOrEmpty(searchTerm))
+                // Search products based on string searchTerm
+                if (!string.IsNullOrEmpty(searchTerm))
+                {
+                    products = products.Where(p =>
+                        (p.ProductCode != null && p.ProductCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (p.ProductName != null && p.ProductName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (p.ProductQuantity.ToString().Contains(searchTerm)) ||
+                        (p.ProductType != null && p.ProductType.Contains(searchTerm)) ||
+                        (p.ProductWarranty.ToString().Contains(searchTerm)) ||
+                        (p.GemName != null && p.GemName.Contains(searchTerm)) ||
+                        (p.GemWeight.ToString().Contains(searchTerm)) ||
+                        (p.GoldName != null && p.GoldName.Contains(searchTerm)) ||
+                        (p.GoldWeight.ToString().Contains(searchTerm)) ||
+                        (p.BuyPrice.ToString().Contains(searchTerm)) ||
+                        (p.UnitPrice.ToString().Contains(searchTerm))).ToList();
+                }
+
+                if (products != null)
+                {
+                    Products = PaginatedList<Product>.Create(products.AsQueryable(), currentPage, 10);
+                }
+            }
+            catch (Exception ex)
             {
-                products = products.Where(p =>
-                    (p.ProductCode != null && p.ProductCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
-                    (p.ProductName != null && p.ProductName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
-                    (p.ProductQuantity.ToString().Contains(searchTerm)) ||
-                    (p.ProductType != null && p.ProductType.Contains(searchTerm)) ||
-                    (p.ProductWarranty.ToString().Contains(searchTerm)) ||
-                    (p.GemName != null && p.GemName.Contains(searchTerm)) ||
-                    (p.GemWeight.ToString().Contains(searchTerm)) ||
-                    (p.GoldName != null && p.GoldName.Contains(searchTerm)) ||
-                    (p.GoldWeight.ToString().Contains(searchTerm)) ||
-                    (p.BuyPrice.ToString().Contains(searchTerm)) ||
-                    (p.UnitPrice.ToString().Contains(searchTerm))).ToList();
+                return RedirectToPage("/Error");
             }
 
-            if (products != null)
-            {
-                Products = PaginatedList<Product>.Create(products.AsQueryable(), currentPage, 10);
-            }
+            return Page();
         }
         public bool VerifyAuth(string role)
         {

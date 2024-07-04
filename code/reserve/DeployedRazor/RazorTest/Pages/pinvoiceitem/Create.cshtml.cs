@@ -9,24 +9,38 @@ namespace RazorTest.Pages.pinvoiceitem
     public class CreateModel : PageModel
     {
         private readonly InvoiceItemService _invoiceItemService;
+        private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
 
-        public CreateModel(InvoiceItemService invoiceItemService, ILogger<CreateModel> logger)
+        public CreateModel(InvoiceItemService invoiceItemService, ILogger<CreateModel> logger, ApiService apiService)
         {
             _invoiceItemService = invoiceItemService;
             _logger = logger;
+            _apiService = apiService;
         }
 
         [BindProperty]
         public InvoiceItem InvoiceItem { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             // Initialize the InvoiceItem with a new ID
             InvoiceItem = new InvoiceItem
             {
                 InvoiceItemId = Guid.NewGuid().ToString()
             };
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync()

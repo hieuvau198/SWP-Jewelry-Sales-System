@@ -9,15 +9,31 @@ namespace RazorTest.Pages.pproduct
     {
         private readonly ApiService _apiService;
 
+
         public IndexModel(ApiService apiService)
         {
             _apiService = apiService;
         }
         public List<Product> Products { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Manager",
+                "Cashier",
+                "Sale",
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             var products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+
+            return Page();
         }
     }
 }

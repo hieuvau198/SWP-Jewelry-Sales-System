@@ -53,8 +53,18 @@ namespace RazorTest.Pages.Sale
 
         public const int PageSize = 6; // Number of products per page
 
-        public async Task OnGetAsync(int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
             
             if(HttpContext.Session.GetString(SessionKeyCustomerId)==null)
@@ -112,6 +122,8 @@ namespace RazorTest.Pages.Sale
 
             // Update the Cart property to hold only the paginated items
             Cart = paginatedCart;
+
+            return Page();
         }
 
         public IActionResult OnPostDelete(string productId)

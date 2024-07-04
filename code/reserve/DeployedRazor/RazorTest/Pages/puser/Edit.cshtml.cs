@@ -10,8 +10,9 @@ namespace RazorTest.Pages.puser
     public class EditModel : PageModel
     {
         private readonly UserService _userService;
+        private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
-        public EditModel(UserService apiService, ILogger<EditModel> logger, UserService userService)
+        public EditModel(ApiService apiService, ILogger<EditModel> logger, UserService userService)
         {
             _userService = userService;
             _logger = logger;
@@ -22,6 +23,16 @@ namespace RazorTest.Pages.puser
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             if (id == null)
             {
                 _logger.LogError("ID is null");

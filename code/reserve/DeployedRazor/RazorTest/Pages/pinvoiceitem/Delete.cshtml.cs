@@ -9,10 +9,12 @@ namespace RazorTest.Pages.pinvoiceitem
     public class DeleteModel : PageModel
     {
         private readonly InvoiceItemService _invoiceItemService;
+        private readonly ApiService _apiService;
 
-        public DeleteModel(InvoiceItemService invoiceItemService)
+        public DeleteModel(InvoiceItemService invoiceItemService, ApiService apiService)
         {
             _invoiceItemService = invoiceItemService;
+            _apiService = apiService;
         }
 
         [BindProperty]
@@ -20,6 +22,16 @@ namespace RazorTest.Pages.pinvoiceitem
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
+            // Verify auth
+            List<string> roles = new List<string>
+            {
+                "Admin"
+            };
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
+
             InvoiceItem = await _invoiceItemService.GetInvoiceItemByIdAsync(id);
             if (InvoiceItem == null)
             {
