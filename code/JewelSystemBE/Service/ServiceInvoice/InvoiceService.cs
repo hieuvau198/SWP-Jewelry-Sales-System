@@ -2,6 +2,8 @@
 using JewelSystemBE.Model;
 using JewelSystemBE.Service.ServiceInvoiceItem;
 using JewelSystemBE.Service.ServiceProduct;
+using JewelSystemBE.Service.ServiceWarranty;
+using Microsoft.IdentityModel.Tokens;
 using System.Collections.Generic;
 
 namespace JewelSystemBE.Service.ServiceInvoice
@@ -11,12 +13,14 @@ namespace JewelSystemBE.Service.ServiceInvoice
         private readonly JewelDbContext _jewelDbContext;
         private readonly IInvoiceItemService _invoiceItemService;
         private readonly IProductService _productService;
+        private readonly IWarrantyService _warrantyService;
 
-        public InvoiceService(JewelDbContext jewelDbContext, IInvoiceItemService invoiceItemService, IProductService productService)
+        public InvoiceService(JewelDbContext jewelDbContext, IInvoiceItemService invoiceItemService, IProductService productService, IWarrantyService warrantyService)
         {
             _jewelDbContext = jewelDbContext;
             _invoiceItemService = invoiceItemService;
             _productService = productService;
+            _warrantyService = warrantyService;
         }
 
         public Invoice AddInvoice(Invoice invoice)
@@ -149,6 +153,10 @@ namespace JewelSystemBE.Service.ServiceInvoice
                     if(updatedInvoice.InvoiceStatus.Equals("Complete"))
                     {
                         UpdateProductQuantity(updatedInvoice.InvoiceId, updatedInvoice.InvoiceType);
+                        if (updatedInvoice.InvoiceType.Equals("Sale"))
+                        {
+                            CreateWarranties(invoice.InvoiceId);
+                        }
                     }
                 }
 
@@ -161,6 +169,7 @@ namespace JewelSystemBE.Service.ServiceInvoice
                 { 
                     updatedInvoice.EndTotalPrice = invoice.EndTotalPrice; 
                 }
+                
                 
                 
                 _jewelDbContext.Invoices.Update(updatedInvoice);
@@ -213,6 +222,29 @@ namespace JewelSystemBE.Service.ServiceInvoice
             }
         }
 
-
+        private void CreateWarranties(string invoiceId)
+        {
+            List<InvoiceItem> invoiceItems = _jewelDbContext.InvoiceItems.Where(x => (x.InvoiceId == invoiceId)).ToList();
+            if (!invoiceItems.IsNullOrEmpty())
+            {
+                List<Product> products = _jewelDbContext.Products.ToList();
+                foreach(InvoiceItem item in invoiceItems)
+                {
+                    Product product = products.Find(x => x.ProductId == item.ProductId);
+                    if(product != null)
+                    {
+                        Warranty warranty = new Warranty
+                        {
+                            WarrantyId = "Temp",
+                            ProductId = product.ProductId,
+                            ProductName = product.ProductName,
+                            StartDate = DateTime.Now,
+                            ExpireDate = DateTime.Now.AddMonths(product.ProductWarranty)
+                        };
+                        _warrantyService.AddWarranty(warranty);
+                    }
+                }
+            }
+        }
     }
 }

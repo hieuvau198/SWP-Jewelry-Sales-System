@@ -56,6 +56,7 @@ builder.Services.AddTransient<IInvoiceItemService, InvoiceItemService>();
 builder.Services.AddTransient<IStallItemService, StallItemService>();
 builder.Services.AddTransient<IStallService, StallService>();
 builder.Services.AddTransient<IStallEmployeeService, StallEmployeeService>();
+builder.Services.AddScoped<DataGenerating>();
 
 
 // Configure JWT authentication, it imports jwtbearer, token, text, model

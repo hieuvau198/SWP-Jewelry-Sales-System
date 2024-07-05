@@ -25,6 +25,22 @@ namespace JewelSystemBE.Service.ServiceWarranty
             }
             try
             {
+                string newId = "";
+                List<Warranty> warranties = _jewelDbContext.Warranties.ToList();
+                if(warranties == null)
+                {
+                    newId = "W1";
+                }
+                else
+                {
+                    int maxId = warranties
+                    .Select(w => int.Parse(w.WarrantyId.Substring(1)))
+                    .DefaultIfEmpty(1)
+                    .Max();
+                    newId = $"W{maxId + 1}";
+                }
+                
+                warranty.WarrantyId = newId;
                 _jewelDbContext.Warranties.Add(warranty);
                 _jewelDbContext.SaveChanges();
                 return warranty;

@@ -13,7 +13,7 @@ namespace JewelSystemBE.Model
         public string GoldName { get; set; } = "Some Gold";
         public string GoldCode { get; set; } = "Some Gold Code";
         [Required]
-        public string Unit { get; set; } = "VND/Chỉ";
+        public string Unit { get; set; } = "Mace";
         [Required]
         public double SellPrice { get; set; } = 0.0;
         [Required]

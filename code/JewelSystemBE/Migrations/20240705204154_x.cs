@@ -281,22 +281,22 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallEmployeeId", "EmployeeFullname", "EmployeeId", "Role", "StallId", "StallName" },
                 values: new object[,]
                 {
-                    { "1e8152c8-7746-441b-b247-c5eac4ac4a7a", "Isabel Rodriguez", "US6", "Sale", "ST05", "Stall E" },
-                    { "25e23bca-32d1-4e2f-b5a6-b70154397974", "Mateo Martinez", "US4", "Sale", "ST03", "Stall C" },
-                    { "34f7cc63-433d-4c05-9b83-bb373b4a0c2e", "Ella Clark", "US17", "Sale", "ST03", "Stall C" },
-                    { "36eb3f10-1e4c-4602-99db-056b406db3ea", "James Martinez", "US3", "Sale", "ST01", "Stall A" },
-                    { "4f980645-f1d3-42d4-b9f6-6fc90cbc21fe", "Sophia Wilson", "US10", "Cashier", "ST02", "Stall B" },
-                    { "7b6c4030-807b-4a0e-b148-816f6df43b66", "Ava Davis", "US9", "Cashier", "ST01", "Stall A" },
-                    { "8b1563b7-027d-47d0-b004-5e5c55b69518", "Theodore Garcia", "US5", "Cashier", "ST04", "Stall D" },
-                    { "9012bd92-1ec8-4e6f-9988-aff466345e3d", "Harper Thomas", "US14", "Sale", "ST04", "Stall D" },
-                    { "9fa8f888-bb35-4896-9755-d6f52b4db27e", "Evelyn White", "US15", "Sale", "ST02", "Stall B" },
-                    { "ab04ca02-354e-4c15-bfce-92786d0ace21", "Mia Anderson", "US13", "Sale", "ST02", "Stall B" },
-                    { "b281a17c-56cb-4a0a-b44e-9cf04fdc74c9", "Luna Taylor", "US7", "Sale", "ST01", "Stall A" },
-                    { "b29e0f68-225e-40f3-a5a8-a5f2360ea479", "Emma Young", "US8", "Sale", "ST02", "Stall B" },
-                    { "d28f4998-25e5-4ab2-a4f7-a7441515dc23", "Amelia Jones", "US12", "Cashier", "ST05", "Stall E" },
-                    { "d8b64c96-f27a-4098-867e-d00dc02c58d7", "Avery Lewis", "US18", "Sale", "ST01", "Stall A" },
-                    { "f109fcf4-6edd-4633-ac6e-56d83c971e92", "Abigail Harris", "US16", "Sale", "ST02", "Stall B" },
-                    { "f6c595f1-0147-412b-8b02-3a31bdd4842a", "Charlotte Brown", "US11", "Cashier", "ST03", "Stall C" }
+                    { "09813f36-cd89-44a1-bc52-710ef310dd62", "Amelia Jones", "US12", "Cashier", "ST05", "Stall E" },
+                    { "1896cf26-a11f-448d-9785-4024b6f5c660", "Harper Thomas", "US14", "Sale", "ST04", "Stall D" },
+                    { "23dd796e-e10d-4dfd-9cac-180e66f0247e", "Charlotte Brown", "US11", "Cashier", "ST03", "Stall C" },
+                    { "2e6420f2-0515-4385-899f-8c406aa16bf7", "Ava Davis", "US9", "Cashier", "ST01", "Stall A" },
+                    { "5e4919a4-1073-4669-b1cb-de4f594d48fb", "Sophia Wilson", "US10", "Cashier", "ST02", "Stall B" },
+                    { "8b5434c5-4b8f-4daa-a28b-01e9b78e164f", "Luna Taylor", "US7", "Sale", "ST01", "Stall A" },
+                    { "90e72826-d8cf-4b7c-a655-1d3cedc7f52e", "Theodore Garcia", "US5", "Cashier", "ST04", "Stall D" },
+                    { "aabe9a13-01b3-4e96-8c2f-4987dd979a20", "Avery Lewis", "US18", "Sale", "ST01", "Stall A" },
+                    { "abbf8e13-4243-4401-81f1-a4b53abffcbc", "Abigail Harris", "US16", "Sale", "ST02", "Stall B" },
+                    { "bb04b2ba-5924-465f-aeaa-34d3758992ee", "Isabel Rodriguez", "US6", "Sale", "ST05", "Stall E" },
+                    { "c1ea7850-f2a3-4492-84e2-87a19c65b870", "Mateo Martinez", "US4", "Sale", "ST03", "Stall C" },
+                    { "c6bf7c21-4044-43c6-acfd-994edfefd180", "Emma Young", "US8", "Sale", "ST02", "Stall B" },
+                    { "c8b709ac-27d4-4c59-8cc9-9b4864543c8e", "James Martinez", "US3", "Sale", "ST01", "Stall A" },
+                    { "d7eda638-ad90-4475-87f1-9eb2d38bd92d", "Ella Clark", "US17", "Sale", "ST03", "Stall C" },
+                    { "e5f4f61a-971e-43fb-aa8c-ad70d9569e33", "Mia Anderson", "US13", "Sale", "ST02", "Stall B" },
+                    { "f682a03b-936e-4e83-a56d-61974917e64c", "Evelyn White", "US15", "Sale", "ST02", "Stall B" }
                 });
 
             migrationBuilder.InsertData(
@@ -304,11 +304,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallItemId", "ProductId", "ProductName", "quantity" },
                 values: new object[,]
                 {
-                    { "3ef12ba0-98b7-449e-83da-6af2532e5862", "Some Product Id", "Some Product Name", 0 },
-                    { "c3df31b5-2dc5-4919-8f42-e853d1f51dbd", "Some Product Id", "Some Product Name", 0 },
-                    { "cc949c92-345d-4acf-bfdd-1501dd6604e6", "Some Product Id", "Some Product Name", 0 },
-                    { "e8f5bc5f-fa20-41fe-9231-e93e96ef4f72", "Some Product Id", "Some Product Name", 0 },
-                    { "f874381f-4074-4c65-a2af-c9795f46c3ae", "Some Product Id", "Some Product Name", 0 }
+                    { "26c49b56-4de7-4174-8e16-7036eaea5389", "Some Product Id", "Some Product Name", 0 },
+                    { "3b87ef81-79f8-4c62-bc3a-36c858dfbc85", "Some Product Id", "Some Product Name", 0 },
+                    { "8eabc85e-89e3-4b3c-9e27-61ea51ae7280", "Some Product Id", "Some Product Name", 0 },
+                    { "a326a83f-4a2f-4a75-8f4e-ff6ae472ea2b", "Some Product Id", "Some Product Name", 0 },
+                    { "b80dca2f-660e-402d-ba9e-2e8c995a1be4", "Some Product Id", "Some Product Name", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -316,11 +316,11 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "StallId", "StaffName", "StallDescription", "StallName", "StallType", "UserId" },
                 values: new object[,]
                 {
-                    { "ST01", "Olivia Miller", "Not yet", "Stall A", "Ring", "US2" },
-                    { "ST02", "Olivia Miller", "Not Yet", "Stall B", "Bracelet", "US2" },
-                    { "ST03", "Olivia Miller", "Not Yet", "Stall C", "Necklace", "US2" },
-                    { "ST04", "Olivia Miller", "Not Yet", "Stall D", "Earring", "US2" },
-                    { "ST05", "Olivia Miller", "Not Yet", "Stall E", "Anklet", "US2" }
+                    { "ST01", "Olivia Miller", "Opening", "Stall A", "Ring", "US2" },
+                    { "ST02", "Olivia Miller", "Opening", "Stall B", "Bracelet", "US2" },
+                    { "ST03", "Olivia Miller", "Opening", "Stall C", "Necklace", "US2" },
+                    { "ST04", "Olivia Miller", "Opening", "Stall D", "Earring", "US2" },
+                    { "ST05", "Olivia Miller", "Maintenance", "Stall E", "Anklet", "US2" }
                 });
 
             migrationBuilder.InsertData(
@@ -430,10 +430,10 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "gold_id", "BuyPrice", "Date", "GoldCode", "gold_name", "SellPrice", "Unit" },
                 values: new object[,]
                 {
-                    { "vang10k", 0.0, new DateTime(2024, 7, 3, 13, 53, 36, 428, DateTimeKind.Local).AddTicks(3640), "Vàng nữ trang 41,7%", "10K", 0.0, "VND/Chỉ" },
-                    { "vang14k", 0.0, new DateTime(2024, 7, 3, 13, 53, 36, 428, DateTimeKind.Local).AddTicks(3636), "Vàng nữ trang 58,3%", "14K", 0.0, "VND/Chỉ" },
-                    { "vang18k", 0.0, new DateTime(2024, 7, 3, 13, 53, 36, 428, DateTimeKind.Local).AddTicks(3621), "Vàng nữ trang 75%", "18K", 0.0, "VND/Chỉ" },
-                    { "vang24k", 0.0, new DateTime(2024, 7, 3, 13, 53, 36, 428, DateTimeKind.Local).AddTicks(3594), "Vàng nữ trang 99,99%", "24K", 0.0, "VND/Chỉ" }
+                    { "vang10k", 0.0, new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4271), "Vàng nữ trang 41,7%", "10K", 0.0, "Mace" },
+                    { "vang14k", 0.0, new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4270), "Vàng nữ trang 58,3%", "14K", 0.0, "Mace" },
+                    { "vang18k", 0.0, new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4268), "Vàng nữ trang 75%", "18K", 0.0, "Mace" },
+                    { "vang24k", 0.0, new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4251), "Vàng nữ trang 99,99%", "24K", 0.0, "Mace" }
                 });
 
             migrationBuilder.InsertData(
@@ -535,7 +535,7 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "invoice_item_id", "discount_id", "end_total_price", "invoice_id", "ProductId", "product_name", "quantity", "StallId", "StallName", "total_price", "unit_price", "warranty_id" },
                 values: new object[,]
                 {
-                    { "II23", "No Discount", 40000000.0, "I11", "P023", "Turquoise Cabochon", 1, "Some Stall Id", "Some Stall Name", 40000000.0, 40000000.0, "W23" },
+                    { "II23", "No Discount", 40000000.0, "I11", "P021", "Turquoise Cabochon", 1, "Some Stall Id", "Some Stall Name", 40000000.0, 40000000.0, "W23" },
                     { "II24", "No Discount", 1500000000.0, "I12", "P016", "Diamond Ring", 1, "Some Stall Id", "Some Stall Name", 1500000000.0, 1500000000.0, "Not Applied" },
                     { "II26", "No Discount", 2400000000.0, "I13", "P013", "Opal Necklace", 1, "Some Stall Id", "Some Stall Name", 2400000000.0, 2400000000.0, "Not Applied" },
                     { "II28", "No Discount", 900000000.0, "I14", "P011", "Sapphire Ring", 1, "Some Stall Id", "Some Stall Name", 900000000.0, 900000000.0, "Not Applied" },
@@ -589,27 +589,67 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "product_id", "BuyPrice", "created_at", "gem_id", "GemName", "GemWeight", "gold_id", "GoldName", "gold_weight", "labor_cost", "markup_rate", "product_code", "product_images", "product_name", "product_quantity", "product_type", "product_warranty", "product_weight", "TotalPrice", "UnitPrice" },
                 values: new object[,]
                 {
-                    { "P001", 0.0, new DateTime(2023, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE001", "Natural Mozambique Ruby", 0.0, "vang24k", "24K", 45.0, 2000000.0, 1.2, "NEGE00124K", "P001.png", "Ruby Necklace NE-R1-24K", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
-                    { "P002", 0.0, new DateTime(2023, 7, 17, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE012", "Burmese Sapphire", 0.0, "vang14k", "14K", 15.0, 1500000.0, 1.1499999999999999, "NES214K", "P002.png", "Sapphire Necklace NE-S2-14K", 15, "Necklace", 12, 20.0, 0.0, 0.0 },
-                    { "P003", 0.0, new DateTime(2023, 9, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE033", "Brazilian Emerald", 0.0, "vang18k", "18K", 13.0, 1800000.0, 1.25, "NEEME03318K", "P003.png", "Emerald Earrings NE-EME033-18K", 25, "Earrings", 24, 18.0, 0.0, 0.0 },
-                    { "P004", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE041", "Round Brilliant Diamond", 0.0, "vang24k", "24K", 20.0, 2500000.0, 1.3, "NEDIA04124K", "P004.png", "Diamond Ring NE-DIA041-24K", 30, "Ring", 36, 25.0, 0.0, 0.0 },
-                    { "P005", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE005", "Mozambique Ruby", 0.0, "vang10k", "10K", 25.0, 2200000.0, 1.1000000000000001, "NERUB00510K", "P005.png", "Ruby Bracelet NE-RUB005-10K", 20, "Bracelet", 12, 30.0, 0.0, 0.0 },
-                    { "P006", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE046", "Asscher Cut Diamond", 0.0, "vang24k", "24K", 40.0, 3000000.0, 1.3500000000000001, "NEEMA04618K", "P006.png", "Diamond Necklace NE-EMA046-24K", 10, "Necklace", 24, 45.0, 0.0, 0.0 },
-                    { "P007", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE013", "Madagascar Sapphire", 0.0, "vang24k", "24K", 17.0, 2000000.0, 1.2, "NESAP01324K", "P007.png", "Sapphire Ring NE-SAP013-24K", 12, "Ring", 18, 22.0, 0.0, 0.0 },
-                    { "P008", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE034", "Afghan Emerald", 0.0, "vang14k", "14K", 14.0, 1700000.0, 1.1499999999999999, "NEEME03414K", "P008.png", "Emerald Necklace NE-EME034-14K", 20, "Necklace", 12, 18.5, 0.0, 0.0 },
-                    { "P009", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE043", "Emerald Cut Diamond", 0.0, "vang24k", "24K", 22.0, 2300000.0, 1.25, "NEDIA04318K", "P009.png", "Diamond Earrings NE-DIA043-24K", 18, "Earrings", 24, 27.0, 0.0, 0.0 },
-                    { "P010", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE003", "Thai Ruby", 0.0, "vang10k", "10K", 16.0, 1600000.0, 1.1000000000000001, "NERUB00310K", "P010.png", "Ruby Ring NE-RUB003-10K", 15, "Ring", 12, 20.0, 0.0, 0.0 },
-                    { "P011", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE014", "Australian Sapphire", 0.0, "vang18k", "18K", 25.0, 2100000.0, 1.22, "NESAP01418K", "P011.png", "Sapphire Bracelet NE-SAP014-18K", 22, "Bracelet", 18, 30.0, 0.0, 0.0 },
-                    { "P012", 0.0, new DateTime(2023, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE031", "Colombian Emerald", 0.0, "vang24k", "24K", 35.0, 2700000.0, 1.3, "NEEME03124K", "P012.png", "Emerald Necklace NE-EME031-24K", 10, "Necklace", 24, 40.0, 0.0, 0.0 },
-                    { "P013", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE004", "India Ruby", 0.0, "vang14k", "14K", 16.0, 1800000.0, 1.1799999999999999, "NERUB00414K", "P013.png", "Ruby Earrings NE-RUB004-14K", 14, "Earrings", 12, 20.0, 0.0, 0.0 },
-                    { "P014", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE015", "Kashmir Sapphire", 0.0, "vang18k", "18K", 37.0, 2800000.0, 1.3500000000000001, "NESAP01518K", "P014.png", "Sapphire Necklace NE-SAP015-18K", 8, "Necklace", 24, 42.0, 0.0, 0.0 },
-                    { "P015", 0.0, new DateTime(2022, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE044", "Oval Diamond", 0.0, "vang24k", "24K", 20.0, 2400000.0, 1.28, "NEDIA04414K", "P015.png", "Diamond Necklace NE-DIA044-24K", 16, "Necklace", 18, 24.0, 0.0, 0.0 },
-                    { "P016", 0.0, new DateTime(2022, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE035", "Russian Emerald", 0.0, "vang10k", "10K", 25.0, 1900000.0, 1.22, "NEEME03510K", "P016.png", "Emerald Bracelet NE-EME035-10K", 18, "Bracelet", 12, 30.0, 0.0, 0.0 },
-                    { "P017", 0.0, new DateTime(2021, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE045", "Cushion Cut Diamond", 0.0, "vang24k", "24K", 30.0, 2900000.0, 1.3, "NEDIA04524K", "P017.png", "Diamond Bracelet NE-DIA045-24K", 12, "Bracelet", 36, 35.0, 0.0, 0.0 },
-                    { "P018", 0.0, new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE032", "Zambian Emerald", 0.0, "vang18k", "18K", 17.0, 2300000.0, 1.25, "NEEME03218K", "P018.png", "Emerald Ring NE-EME032-18K", 15, "Ring", 24, 22.0, 0.0, 0.0 },
-                    { "P019", 0.0, new DateTime(2022, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE002", "Burmese Ruby", 0.0, "vang14k", "14K", 40.0, 2700000.0, 1.28, "NERUB00214K", "P019.png", "Ruby Necklace NE-RUB002-14K", 10, "Necklace", 24, 45.0, 0.0, 0.0 },
-                    { "P020", 0.0, new DateTime(2016, 10, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE011", "Natural Ceylon Sapphire", 0.0, "vang10k", "10K", 16.0, 1600000.0, 1.1499999999999999, "NESAP01110K", "P020.png", "Sapphire Earrings NE-SAP011-10K", 20, "Earrings", 18, 20.0, 0.0, 0.0 },
-                    { "P021", 0.0, new DateTime(2019, 5, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE041", "Round Brilliant Diamond", 0.0, "vang24k", "24K", 18.0, 2000000.0, 1.2, "NEEMA04114K", "P021.png", "Diamond Earrings NE-EMA041-24K", 18, "Earrings", 24, 22.0, 0.0, 0.0 }
+                    { "P001", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE001", "Natural Mozambique Ruby", 0.0, "vang24k", "24K", 45.0, 2000000.0, 1.2, "NEGE00124K", "P001.png", "Ruby Necklace NE-R1-24K", 10, "Necklace", 12, 50.0, 0.0, 0.0 },
+                    { "P002", 0.0, new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE012", "Burmese Sapphire", 0.0, "vang14k", "14K", 15.0, 1500000.0, 1.1499999999999999, "NES214K", "P002.png", "Sapphire Necklace NE-S2-14K", 15, "Necklace", 12, 20.0, 0.0, 0.0 },
+                    { "P003", 0.0, new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE033", "Brazilian Emerald", 0.0, "vang18k", "18K", 13.0, 1800000.0, 1.25, "NEEME03318K", "P003.png", "Emerald Earrings NE-EME033-18K", 25, "Earrings", 24, 18.0, 0.0, 0.0 },
+                    { "P004", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE041", "Round Brilliant Diamond", 0.0, "vang24k", "24K", 20.0, 2500000.0, 1.3, "NEDIA04124K", "P004.png", "Diamond Ring NE-DIA041-24K", 30, "Ring", 36, 25.0, 0.0, 0.0 },
+                    { "P005", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE005", "Mozambique Ruby", 0.0, "vang10k", "10K", 25.0, 2200000.0, 1.1000000000000001, "NERUB00510K", "P005.png", "Ruby Bracelet NE-RUB005-10K", 20, "Bracelet", 12, 30.0, 0.0, 0.0 },
+                    { "P006", 0.0, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE046", "Asscher Cut Diamond", 0.0, "vang24k", "24K", 40.0, 3000000.0, 1.3500000000000001, "NEEMA04618K", "P006.png", "Diamond Necklace NE-EMA046-24K", 10, "Necklace", 24, 45.0, 0.0, 0.0 },
+                    { "P007", 0.0, new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE013", "Madagascar Sapphire", 0.0, "vang24k", "24K", 17.0, 2000000.0, 1.2, "NESAP01324K", "P007.png", "Sapphire Ring NE-SAP013-24K", 12, "Ring", 18, 22.0, 0.0, 0.0 },
+                    { "P008", 0.0, new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE034", "Afghan Emerald", 0.0, "vang14k", "14K", 14.0, 1700000.0, 1.1499999999999999, "NEEME03414K", "P008.png", "Emerald Necklace NE-EME034-14K", 20, "Necklace", 12, 18.5, 0.0, 0.0 },
+                    { "P009", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE043", "Emerald Cut Diamond", 0.0, "vang24k", "24K", 22.0, 2300000.0, 1.25, "NEDIA04318K", "P009.png", "Diamond Earrings NE-DIA043-24K", 18, "Earrings", 24, 27.0, 0.0, 0.0 },
+                    { "P010", 0.0, new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE003", "Thai Ruby", 0.0, "vang10k", "10K", 16.0, 1600000.0, 1.1000000000000001, "NERUB00310K", "P010.png", "Ruby Ring NE-RUB003-10K", 15, "Ring", 12, 20.0, 0.0, 0.0 },
+                    { "P011", 0.0, new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE014", "Australian Sapphire", 0.0, "vang18k", "18K", 25.0, 2100000.0, 1.22, "NESAP01418K", "P011.png", "Sapphire Bracelet NE-SAP014-18K", 22, "Bracelet", 18, 30.0, 0.0, 0.0 },
+                    { "P012", 0.0, new DateTime(2024, 1, 28, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE031", "Colombian Emerald", 0.0, "vang24k", "24K", 35.0, 2700000.0, 1.3, "NEEME03124K", "P012.png", "Emerald Necklace NE-EME031-24K", 10, "Necklace", 24, 40.0, 0.0, 0.0 },
+                    { "P013", 0.0, new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE004", "India Ruby", 0.0, "vang14k", "14K", 16.0, 1800000.0, 1.1799999999999999, "NERUB00414K", "P013.png", "Ruby Earrings NE-RUB004-14K", 14, "Earrings", 12, 20.0, 0.0, 0.0 },
+                    { "P014", 0.0, new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE015", "Kashmir Sapphire", 0.0, "vang18k", "18K", 37.0, 2800000.0, 1.3500000000000001, "NESAP01518K", "P014.png", "Sapphire Necklace NE-SAP015-18K", 8, "Necklace", 24, 42.0, 0.0, 0.0 },
+                    { "P015", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE044", "Oval Diamond", 0.0, "vang24k", "24K", 20.0, 2400000.0, 1.28, "NEDIA04414K", "P015.png", "Diamond Necklace NE-DIA044-24K", 16, "Necklace", 18, 24.0, 0.0, 0.0 },
+                    { "P016", 0.0, new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE035", "Russian Emerald", 0.0, "vang10k", "10K", 25.0, 1900000.0, 1.22, "NEEME03510K", "P016.png", "Emerald Bracelet NE-EME035-10K", 18, "Bracelet", 12, 30.0, 0.0, 0.0 },
+                    { "P017", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE045", "Cushion Cut Diamond", 0.0, "vang24k", "24K", 30.0, 2900000.0, 1.3, "NEDIA04524K", "P017.png", "Diamond Bracelet NE-DIA045-24K", 12, "Bracelet", 36, 35.0, 0.0, 0.0 },
+                    { "P018", 0.0, new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE032", "Zambian Emerald", 0.0, "vang18k", "18K", 17.0, 2300000.0, 1.25, "NEEME03218K", "P018.png", "Emerald Ring NE-EME032-18K", 15, "Ring", 24, 22.0, 0.0, 0.0 },
+                    { "P019", 0.0, new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE002", "Burmese Ruby", 0.0, "vang14k", "14K", 40.0, 2700000.0, 1.28, "NERUB00214K", "P019.png", "Ruby Necklace NE-RUB002-14K", 10, "Necklace", 24, 45.0, 0.0, 0.0 },
+                    { "P020", 0.0, new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE011", "Natural Ceylon Sapphire", 0.0, "vang10k", "10K", 16.0, 1600000.0, 1.1499999999999999, "NESAP01110K", "P020.png", "Sapphire Earrings NE-SAP011-10K", 20, "Earrings", 18, 20.0, 0.0, 0.0 },
+                    { "P021", 0.0, new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE041", "Round Brilliant Diamond", 0.0, "vang24k", "24K", 18.0, 2000000.0, 1.2, "NEEMA04114K", "P021.png", "Diamond Earrings NE-EMA041-24K", 18, "Earrings", 24, 22.0, 0.0, 0.0 },
+                    { "P022", 0.0, new DateTime(2024, 1, 13, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE049", "Pear Shaped Diamond", 1.3999999999999999, "vang24k", "24K", 3.0427947598991731, 12218864.894510968, 1.8840143924302741, "", "P022.png", "Pear Shaped Diamond Earrings", 12, "Earrings", 28, 4.8072378361217076, 0.0, 0.0 },
+                    { "P023", 0.0, new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE035", "Russian Emerald", 1.5, "vang18k", "18K", 3.397609558032495, 43235443.701126061, 1.5856625094225101, "674204419049", "P023.png", "Russian Emerald Ring", 15, "Ring", 35, 5.1487517928266318, 0.0, 0.0 },
+                    { "P024", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE011", "Natural Ceylon Sapphire", 1.02, "vang10k", "10K", 3.7031008537293699, 20255374.450385179, 1.045675402349213, "862178701237", "P024.png", "Natural Ceylon Sapphire Earrings", 17, "Earrings", 18, 5.8259561300838563, 0.0, 0.0 },
+                    { "P025", 0.0, new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE042", "Princess Cut Diamond", 1.5, "vang10k", "10K", 3.4438763345857621, 6533141.6216132352, 2.9724477477624149, "428617280256", "P025.png", "Princess Cut Diamond Bracelet", 14, "Bracelet", 43, 5.285126368972044, 0.0, 0.0 },
+                    { "P026", 0.0, new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE048", "Radiant Cut Diamond", 1.1000000000000001, "vang24k", "24K", 8.5476521351442916, 8586437.9996748939, 1.7085622340187063, "670169156688", "P026.png", "Radiant Cut Diamond Earrings", 16, "Earrings", 16, 10.762794066397113, 0.0, 0.0 },
+                    { "P027", 0.0, new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE031", "Colombian Emerald", 1.2, "vang10k", "10K", 3.2498160752384582, 1375258.8754988282, 1.59993305674788, "829988629120", "P027.png", "Colombian Emerald Earrings", 14, "Earrings", 19, 6.6180361329643729, 0.0, 0.0 },
+                    { "P028", 0.0, new DateTime(2024, 1, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE020", "Padparadscha Sapphire", 1.0, "vang14k", "14K", 3.0781166668032323, 37289462.666079007, 2.6080432203782928, "633028312781", "P028.png", "Padparadscha Sapphire Ring", 7, "Ring", 20, 4.7494802867916093, 0.0, 0.0 },
+                    { "P029", 0.0, new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE030", "Garnet Cabochon", 3.0, "vang14k", "14K", 4.4987673409191018, 44583675.937731139, 1.0150129584628296, "730263125687", "P029.png", "Garnet Cabochon Necklace", 14, "Necklace", 25, 7.5145527391032436, 0.0, 0.0 },
+                    { "P030", 0.0, new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE039", "Brazilian Emerald", 2.7000000000000002, "vang18k", "18K", 2.711575205296207, 2445534.0691606943, 1.1401401775578925, "901788122324", "P030.png", "Brazilian Emerald Necklace", 12, "Necklace", 15, 5.9787788892494573, 0.0, 0.0 },
+                    { "P031", 0.0, new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE036", "Synthetic Emerald", 3.0, "vang14k", "14K", 3.4989526307700163, 23573781.627794143, 2.7326722773575503, "870534791152", "P031.png", "Synthetic Emerald Bracelet", 12, "Bracelet", 46, 7.8996141108280602, 0.0, 0.0 },
+                    { "P032", 0.0, new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE049", "Pear Shaped Diamond", 1.3999999999999999, "vang10k", "10K", 7.8549700069851989, 30841391.562616978, 2.6984438757492146, "816946302009", "P032.png", "Pear Shaped Diamond Ring", 22, "Ring", 41, 9.3918793622172121, 0.0, 0.0 },
+                    { "P033", 0.0, new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE033", "Brazilian Emerald", 1.8, "vang10k", "10K", 1.5895821041883988, 11699620.78143068, 1.004876605607548, "610464781825", "P033.png", "Brazilian Emerald Ring", 21, "Ring", 21, 5.0317236418602027, 0.0, 0.0 },
+                    { "P034", 0.0, new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE048", "Radiant Cut Diamond", 1.1000000000000001, "vang18k", "18K", 9.4084747676317875, 4180201.6651579402, 2.6536883297093854, "762407690611", "P034.png", "Radiant Cut Diamond Bracelet", 8, "Bracelet", 22, 11.992138786457193, 0.0, 0.0 },
+                    { "P035", 0.0, new DateTime(2024, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE044", "Oval Diamond", 1.2, "vang24k", "24K", 2.0726233200024078, 3572618.9548964691, 1.6047853756229071, "231569490190", "P035.png", "Oval Diamond Necklace", 16, "Necklace", 35, 6.176482890493749, 0.0, 0.0 },
+                    { "P036", 0.0, new DateTime(2024, 1, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE039", "Brazilian Emerald", 2.7000000000000002, "vang10k", "10K", 8.9107279938249917, 39438265.041138254, 2.8969498751521985, "630624866041", "P036.png", "Brazilian Emerald Bracelet", 18, "Bracelet", 47, 14.04223322239628, 0.0, 0.0 },
+                    { "P037", 0.0, new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE021", "Moonstone Cabochon", 3.5, "vang10k", "10K", 7.6742829061817046, 19100700.2069338, 1.9103063365760704, "427057894494", "P037.png", "Moonstone Cabochon Bracelet", 13, "Bracelet", 39, 13.136524250093027, 0.0, 0.0 },
+                    { "P038", 0.0, new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE017", "Thai Sapphire", 1.8, "vang24k", "24K", 1.4517318691161973, 25417389.084952321, 1.1076850835844394, "719461390533", "P038.png", "Thai Sapphire Necklace", 23, "Necklace", 29, 5.5597362550141352, 0.0, 0.0 },
+                    { "P039", 0.0, new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE006", "Heated Natural Ruby", 0.34000000000000002, "vang24k", "24K", 3.6069865725694159, 26270393.562470425, 2.6640068376294783, "186487133888", "P039.png", "Heated Natural Ruby Ring", 24, "Ring", 18, 6.5136482136814644, 0.0, 0.0 },
+                    { "P040", 0.0, new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE011", "Natural Ceylon Sapphire", 1.02, "vang14k", "14K", 9.166335198076375, 18924204.050375704, 2.1763476154150325, "794088504470", "P040.png", "Natural Ceylon Sapphire Bracelet", 18, "Bracelet", 43, 11.748285931737238, 0.0, 0.0 },
+                    { "P041", 0.0, new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE022", "Opal Cabochon", 2.1000000000000001, "vang24k", "24K", 1.4518589504348511, 39783324.086961329, 1.3533459210371506, "660680543120", "P041.png", "Opal Cabochon Bracelet", 12, "Bracelet", 29, 5.7188124212483702, 0.0, 0.0 },
+                    { "P042", 0.0, new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE039", "Brazilian Emerald", 2.7000000000000002, "vang18k", "18K", 1.2742085596804833, 31800804.722350467, 1.4945676533281764, "366177263281", "P042.png", "Brazilian Emerald Earrings", 21, "Earrings", 19, 4.1300382053166604, 0.0, 0.0 },
+                    { "P043", 0.0, new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE011", "Natural Ceylon Sapphire", 1.02, "vang18k", "18K", 4.7931436554959843, 21576589.514455389, 1.0517502056142054, "164695297436", "P043.png", "Natural Ceylon Sapphire Bracelet", 10, "Bracelet", 32, 5.822323224641309, 0.0, 0.0 },
+                    { "P044", 0.0, new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE041", "Round Brilliant Diamond", 1.0, "vang18k", "18K", 5.9144301009109927, 45688334.095289342, 2.7528004545662834, "466485346360", "P044.png", "Round Brilliant Diamond Necklace", 11, "Necklace", 15, 7.8327010529136505, 0.0, 0.0 },
+                    { "P045", 0.0, new DateTime(2024, 1, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE031", "Colombian Emerald", 1.2, "vang14k", "14K", 5.1279976492402408, 3652522.4423296447, 1.8176659611941688, "383869345739", "P045.png", "Colombian Emerald Ring", 7, "Ring", 41, 6.8532138136079892, 0.0, 0.0 },
+                    { "P046", 0.0, new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE030", "Garnet Cabochon", 3.0, "vang18k", "18K", 6.5481548907944758, 7315325.6225724174, 2.6778426540134204, "231003630530", "P046.png", "Garnet Cabochon Ring", 6, "Ring", 38, 12.430393848269079, 0.0, 0.0 },
+                    { "P047", 0.0, new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE013", "Madagascar Sapphire", 1.5, "vang24k", "24K", 9.1350717759652618, 36773026.531728342, 2.1308457513069903, "949651291774", "P047.png", "Madagascar Sapphire Bracelet", 18, "Bracelet", 30, 10.638862761839402, 0.0, 0.0 },
+                    { "P048", 0.0, new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE004", "India Ruby", 5.9100000000000001, "vang10k", "10K", 5.7112920563087908, 40130088.610135965, 2.9139016693393902, "197592618896", "P048.png", "India Ruby Necklace", 17, "Necklace", 31, 13.988171237491485, 0.0, 0.0 },
+                    { "P049", 0.0, new DateTime(2024, 1, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE019", "Ethiopian Sapphire", 1.3, "vang18k", "18K", 6.9667322552426816, 27063957.402623728, 1.8406804973503976, "467794567861", "P049.png", "Ethiopian Sapphire Bracelet", 9, "Bracelet", 19, 8.3853743925279467, 0.0, 0.0 },
+                    { "P050", 0.0, new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE014", "Australian Sapphire", 3.2000000000000002, "vang18k", "18K", 4.8415670016816001, 37693764.75196147, 1.1524591313630836, "838026328454", "P050.png", "Australian Sapphire Ring", 10, "Ring", 25, 8.5443841468456903, 0.0, 0.0 },
+                    { "P051", 0.0, new DateTime(2024, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE050", "Heart Shaped Diamond", 1.0, "vang24k", "24K", 1.3370469090329491, 44783583.40441224, 2.818804308589629, "596836381399", "P051.png", "Heart Shaped Diamond Necklace", 12, "Necklace", 22, 2.6356106557152472, 0.0, 0.0 },
+                    { "P052", 0.0, new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE041", "Round Brilliant Diamond", 1.0, "vang18k", "18K", 1.7854832402627365, 18740482.320073944, 1.5343275103208867, "512360707805", "P052.png", "Round Brilliant Diamond Earrings", 20, "Earrings", 45, 5.7760728245347757, 0.0, 0.0 },
+                    { "P053", 0.0, new DateTime(2024, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE043", "Emerald Cut Diamond", 2.0, "vang24k", "24K", 1.6261364372426415, 38467110.619900107, 2.5737571486008322, "170516697530", "P053.png", "Emerald Cut Diamond Ring", 10, "Ring", 17, 3.7898083446080011, 0.0, 0.0 },
+                    { "P054", 0.0, new DateTime(2024, 1, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE021", "Moonstone Cabochon", 3.5, "vang10k", "10K", 9.9355026202953312, 20285142.942025773, 1.7603008491551091, "814881347466", "P054.png", "Moonstone Cabochon Earrings", 8, "Earrings", 15, 15.754298331285687, 0.0, 0.0 },
+                    { "P055", 0.0, new DateTime(2024, 1, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE018", "Montana Sapphire", 0.71999999999999997, "vang10k", "10K", 8.6920669221133693, 22229931.668697417, 2.2033386258169805, "890509691739", "P055.png", "Montana Sapphire Necklace", 12, "Necklace", 27, 11.427962360843086, 0.0, 0.0 },
+                    { "P056", 0.0, new DateTime(2024, 1, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE044", "Oval Diamond", 1.2, "vang10k", "10K", 7.6271642229012775, 13235448.229500482, 1.010838790324708, "529134568958", "P056.png", "Oval Diamond Ring", 11, "Ring", 16, 9.2405207215731355, 0.0, 0.0 },
+                    { "P057", 0.0, new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE040", "Ethiopian Emerald", 1.3, "vang24k", "24K", 5.0236620676589121, 2290639.5334139392, 1.568168533711181, "171920122186", "P057.png", "Ethiopian Emerald Bracelet", 22, "Bracelet", 14, 6.6410874291153021, 0.0, 0.0 },
+                    { "P058", 0.0, new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE014", "Australian Sapphire", 3.2000000000000002, "vang24k", "24K", 2.1373953928147498, 35214561.045897558, 2.9760848672967848, "849475227946", "P058.png", "Australian Sapphire Earrings", 12, "Earrings", 16, 6.19172427226904, 0.0, 0.0 },
+                    { "P059", 0.0, new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE024", "Labradorite Cabochon", 5.0, "vang18k", "18K", 8.9547116847561803, 21302530.900030572, 1.8241638887332949, "383905492512", "P059.png", "Labradorite Cabochon Bracelet", 10, "Bracelet", 23, 14.430716366025056, 0.0, 0.0 },
+                    { "P060", 0.0, new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE049", "Pear Shaped Diamond", 1.3999999999999999, "vang24k", "24K", 2.9613493454250701, 13184353.139635505, 1.4415493190934421, "875404298027", "P060.png", "Pear Shaped Diamond Necklace", 11, "Necklace", 30, 4.5761415534657655, 0.0, 0.0 },
+                    { "P061", 0.0, new DateTime(2024, 1, 27, 0, 0, 0, 0, DateTimeKind.Unspecified), "GE001", "Natural Mozambique Ruby", 0.97999999999999998, "vang18k", "18K", 5.0964341658111598, 28780291.704716213, 2.5408466176827234, "474280836261", "P061.png", "Natural Mozambique Ruby Ring", 23, "Ring", 16, 7.5435725625713692, 0.0, 0.0 }
                 });
 
             migrationBuilder.InsertData(
@@ -617,24 +657,24 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "UserId", "Email", "Fullname", "Password", "Role", "Username" },
                 values: new object[,]
                 {
-                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$SstD9TBMkK63xcr.PE0b9eedBo8Flbaf58HfO35JaSR5Jd2YI/3je", "Admin", "user1" },
-                    { "US10", "sophia@gmail.com", "Sophia Wilson", "$2a$11$ZlUZJ3Esu/nni5MrSqtEI.u0JiSlEOlOfvUEk.aLPl7loQIVsUskG", "Cashier", "user10" },
-                    { "US11", "charlotte@gmail.com", "Charlotte Brown", "$2a$11$gZK512mCI1fd5er6/qcV9uVZGjEUM6ylgi75RiTVZOFh8TJ.PPjWG", "Cashier", "user11" },
-                    { "US12", "amelia@gmail.com", "Amelia Jones", "$2a$11$4PFJDHVP6CKxhcS56jDOUOdPFhkT/bbcarGCEFK/vEMc9hid8atlC", "Cashier", "user12" },
-                    { "US13", "mia@gmail.com", "Mia Anderson", "$2a$11$pbUSHX6RwXj6RVefdzJZiuVG4zNlvJcXYeZwBsoh.CZ3pg8SosvbO", "Sale", "user13" },
-                    { "US14", "harper@gmail.com", "Harper Thomas", "$2a$11$pSSirec5cDEGDMgYRlsgXu.4HwOoJzAqePh.vmxP4gHdDnAqVCH9K", "Sale", "user14" },
-                    { "US15", "evelyn@gmail.com", "Evelyn White", "$2a$11$lfmMtiRXOAI3gA3uwTnVa.WyiyPobSfzEAyHh0NtWexWNGOQj5RRO", "Sale", "user15" },
-                    { "US16", "abigail@gmail.com", "Abigail Harris", "$2a$11$q7ywXO4SxEn3L5wPiPOVSOEIP4YffWFmlIWMv9QTON/FioOaVNRV6", "Sale", "user16" },
-                    { "US17", "ella@gmail.com", "Ella Clark", "$2a$11$w3BFEqkQQ6q8IjGUdV.Z4exTn2m9RMXx5.UC/Xbmvea5JdjuT2T26", "Sale", "user17" },
-                    { "US18", "avery@gmail.com", "Avery Lewis", "$2a$11$yJO9lYL7cc0a4d/SOy8IJuL85sNQzAYtmkrxXLgVO6XKz3QrzLyTS", "Sale", "user18" },
-                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$iMxtMncUYVs7XiLVMzwCpOt2h7k2ENMBIxo9U4nj/lmb2TBZlOVOO", "Manager", "user2" },
-                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$CkZnmZgn/gDCArJuZS.acOfH/kCJbJlrnWZt8BJD4F271f5D7CzTO", "Sale", "user3" },
-                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$uYddhEOjxoJ6pnaqklI97uTgAMM5Lpm8jT7rDg9SvI.XOwEikt5j.", "Sale", "user4" },
-                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$XTXT7CzThYSKvbqqGlIOD.FDYBfm9uigO1JxWhIpbyH15cDKyJ3dO", "Cashier", "user5" },
-                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$lIt5DkWH3XORAYAh984qSO5Qq6p2bP8UoVidcm3iXuUM6SQEFc5dK", "Sale", "user6" },
-                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$vgXQYccJKyoIlu.uDTeEjumgjZmVnlOIHut7GwrnDHLQpBhD.5cbe", "Sale", "user7" },
-                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$jKZ5apUd3jE7eDzGNHv2hOzJGQmqCTxWYW3HSPGelFtBEmVpim5aK", "Sale", "user8" },
-                    { "US9", "ava@gmail.com", "Ava Davis", "$2a$11$J.deAOAQ73eIE4.JEMrXvebr/uvAxFImbRlftlEEWnE0bO59GtqkK", "Cashier", "user9" }
+                    { "US1", "liam@gmail.com", "Liam Williams", "$2a$11$gtAFqvyydQVggc26AjHS2Oa7N80nQZroy3SSqBkq7v5JUYWUtvB/y", "Admin", "user1" },
+                    { "US10", "sophia@gmail.com", "Sophia Wilson", "$2a$11$21Ce0lfaRj028fHC3Rpmeuz7wHzYTjfrzN15GBr.rL87wZrIEhZyO", "Cashier", "user10" },
+                    { "US11", "charlotte@gmail.com", "Charlotte Brown", "$2a$11$CP7sT0khBU43kwmXDm4hQeF.F9M0W4aPzVcmgJPwrbeMCSWds4x6C", "Cashier", "user11" },
+                    { "US12", "amelia@gmail.com", "Amelia Jones", "$2a$11$.ff.0gvoQKwLVv4IvlcYBu4zOVqO4W2xUGBAywjUsP2wj8ujYuGbK", "Cashier", "user12" },
+                    { "US13", "mia@gmail.com", "Mia Anderson", "$2a$11$WRqDI8tpQ1Ng7Ah0yEbUWeL5Qd/u9GAM8Nw8nvELKyOfKgdo8HzSS", "Sale", "user13" },
+                    { "US14", "harper@gmail.com", "Harper Thomas", "$2a$11$bkXuOw79vJv2t2kGMzbh0OazQGdu70hRQdy9vQEp6i8vzlw8/DC96", "Sale", "user14" },
+                    { "US15", "evelyn@gmail.com", "Evelyn White", "$2a$11$hh0g8HSJ5QCk4X/HpZ/iP.9EZtpAincSs6at3B0eMVToVdd/jYxF.", "Sale", "user15" },
+                    { "US16", "abigail@gmail.com", "Abigail Harris", "$2a$11$XOHyTWJDVXuqU9agzmiwHurvj/k5kfz3qvwocWj8527txVkY32YrG", "Sale", "user16" },
+                    { "US17", "ella@gmail.com", "Ella Clark", "$2a$11$UPhWSqajA/BXwf1Daizwhebr5OjoDmRwBjtLmS6gV8JGk9YxkFX1G", "Sale", "user17" },
+                    { "US18", "avery@gmail.com", "Avery Lewis", "$2a$11$602Ktkr1S4.dM7hzQ97lce62pcQvif6f1J./EQaaeEkRVZy/nfwjW", "Sale", "user18" },
+                    { "US2", "olivia@gmail.com", "Olivia Miller", "$2a$11$gKIwqkzCZilPrz6YJNM3nOztsWilCCbtDeTKRpt.6RoQNPr/djuk.", "Manager", "user2" },
+                    { "US3", "james@gmail.com", "James Martinez", "$2a$11$HIksj/XPphQt6ToqjrAtNOH9qkNk1DRO0vXhsORlZ9F5q8vThYq6W", "Sale", "user3" },
+                    { "US4", "matao@gmail.com", "Mateo Martinez", "$2a$11$z.1DJz0YV7qCc1GaJvnL7OFsZDpoDM95fdHkDnhG7AKqQ/QSm5CXC", "Sale", "user4" },
+                    { "US5", "theodore@gmail.com", "Theodore Garcia", "$2a$11$UgeVUlCr4oYGh2w9dMqovuMGuGgTh4paQo8c4F/2TuyH2il369jb2", "Cashier", "user5" },
+                    { "US6", "isabel@gmail.com", "Isabel Rodriguez", "$2a$11$ylxK9Mh.7sA6ZDCTLaacEeteyuwehRXii//D8HdP1yonr7MhzePrO", "Sale", "user6" },
+                    { "US7", "luna@gmail.com", "Luna Taylor", "$2a$11$pkniwvNiwniQWmzI7ELB3ODXMi6o6jnzZSnzEqqHXj9cOc4Oe4hJO", "Sale", "user7" },
+                    { "US8", "emma@gmail.com", "Emma Young", "$2a$11$1XMMoCGj3HxSqA3Q7UThGeDWYBl2ePjz5ebDMIUgXnoVb8J6FY9Q6", "Sale", "user8" },
+                    { "US9", "ava@gmail.com", "Ava Davis", "$2a$11$EAgYVzsmJYamkZ7IiNE7ceTl128CmHmD/jXcvSva2k/rrNvsrZBq2", "Cashier", "user9" }
                 });
 
             migrationBuilder.InsertData(
@@ -642,10 +682,29 @@ namespace JewelSystemBE.Migrations
                 columns: new[] { "warranty_id", "expire_date", "product_id", "product_name", "start_date" },
                 values: new object[,]
                 {
-                    { "W1", new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P002", "Product A", new DateTime(2023, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "W2", new DateTime(2024, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", "Product B", new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "W3", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { "W4", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", "Product C", new DateTime(2023, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { "W1", new DateTime(2025, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P015", "Diamond Necklace NE-DIA044-24K", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W10", new DateTime(2026, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P021", "Diamond Earrings NE-EMA041-24K", new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W11", new DateTime(2025, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P016", "Emerald Bracelet NE-EME035-10K", new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W12", new DateTime(2025, 11, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "P011", "Sapphire Bracelet NE-SAP014-18K", new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W13", new DateTime(2026, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "P018", "Emerald Ring NE-EME032-18K", new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W14", new DateTime(2025, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P013", "Ruby Earrings NE-RUB004-14K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W15", new DateTime(2026, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P014", "Sapphire Necklace NE-SAP015-18K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W16", new DateTime(2025, 9, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "P015", "Diamond Necklace NE-DIA044-24K", new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W17", new DateTime(2026, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "P019", "Ruby Necklace NE-RUB002-14K", new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W18", new DateTime(2027, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "P017", "Diamond Bracelet NE-DIA045-24K", new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W19", new DateTime(2026, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), "P012", "Emerald Necklace NE-EME031-24K", new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W2", new DateTime(2026, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P021", "Diamond Earrings NE-EMA041-24K", new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W20", new DateTime(2025, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "P011", "Sapphire Bracelet NE-SAP014-18K", new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W21", new DateTime(2025, 8, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "P020", "Sapphire Earrings NE-SAP011-10K", new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W22", new DateTime(2026, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P014", "Sapphire Necklace NE-SAP015-18K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W23", new DateTime(2026, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P021", "Diamond Earrings NE-EMA041-24K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W3", new DateTime(2025, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "P005", "Ruby Bracelet NE-RUB005-10K", new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W4", new DateTime(2025, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "P010", "Ruby Ring NE-RUB003-10K", new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W5", new DateTime(2026, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P003", "Emerald Earrings NE-EME033-18K", new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W6", new DateTime(2026, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P018", "Emerald Ring NE-EME032-18K", new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W7", new DateTime(2025, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P011", "Sapphire Bracelet NE-SAP014-18K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W8", new DateTime(2025, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P020", "Sapphire Earrings NE-SAP011-10K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { "W9", new DateTime(2026, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), "P003", "Emerald Earrings NE-EME033-18K", new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
         }
 

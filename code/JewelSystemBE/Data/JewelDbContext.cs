@@ -589,6 +589,7 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.CreatedAt).HasColumnName("created_at").HasDefaultValueSql("GETDATE()");
 
                 entity.HasData(
+                //P001
                 new Product
                 {
                     ProductId = "P001",
@@ -606,9 +607,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 45.0,
                     LaborCost = 2000000,
-                    CreatedAt = new DateTime(2023, 5, 10),
-                    
+                    CreatedAt = new DateTime(2024, 1, 10),
                 },
+                //P002
                 new Product
                 {
                     ProductId = "P002",
@@ -626,8 +627,9 @@ namespace JewelSystemBE.Data
                     GoldName = "14K",
                     GoldWeight = 15.0,
                     LaborCost = 1500000,
-                    CreatedAt = new DateTime(2023, 7, 17),
+                    CreatedAt = new DateTime(2024, 1, 15),
                 },
+                //P003
                 new Product
                 {
                     ProductId = "P003",
@@ -645,8 +647,9 @@ namespace JewelSystemBE.Data
                     GoldName = "18K",
                     GoldWeight = 13.0,
                     LaborCost = 1800000,
-                    CreatedAt = new DateTime(2023, 9, 9),
+                    CreatedAt = new DateTime(2024, 1, 9),
                 },
+                //P004
                 new Product
                 {
                     ProductId = "P004",
@@ -664,8 +667,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 20.0,
                     LaborCost = 2500000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 10),
                 },
+                //P005
                 new Product
                 {
                     ProductId = "P005",
@@ -683,8 +687,9 @@ namespace JewelSystemBE.Data
                     GoldName = "10K",
                     GoldWeight = 25.0,
                     LaborCost = 2200000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 10),
                 },
+                //P006
                 new Product
                 {
                     ProductId = "P006",
@@ -702,8 +707,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 40.0,
                     LaborCost = 3000000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 1),
                 },
+                //P007
                 new Product
                 {
                     ProductId = "P007",
@@ -721,8 +727,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 17.0,
                     LaborCost = 2000000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 3),
                 },
+                //P008
                 new Product
                 {
                     ProductId = "P008",
@@ -740,8 +747,9 @@ namespace JewelSystemBE.Data
                     GoldName = "14K",
                     GoldWeight = 14.0,
                     LaborCost = 1700000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 8),
                 },
+                //P009
                 new Product
                 {
                     ProductId = "P009",
@@ -759,8 +767,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 22.0,
                     LaborCost = 2300000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 10),
                 },
+                //P010
                 new Product
                 {
                     ProductId = "P010",
@@ -778,8 +787,9 @@ namespace JewelSystemBE.Data
                     GoldName = "10K",
                     GoldWeight = 16.0,
                     LaborCost = 1600000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 19),
                 },
+                //P011
                 new Product
                 {
                     ProductId = "P011",
@@ -797,8 +807,9 @@ namespace JewelSystemBE.Data
                     GoldName = "18K",
                     GoldWeight = 25.0,
                     LaborCost = 2100000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 22),
                 },
+                //P012
                 new Product
                 {
                     ProductId = "P012",
@@ -816,8 +827,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 35.0,
                     LaborCost = 2700000,
-                    CreatedAt = new DateTime(2023, 3, 9),
+                    CreatedAt = new DateTime(2024, 1, 28),
                 },
+                //P013
                 new Product
                 {
                     ProductId = "P013",
@@ -835,8 +847,9 @@ namespace JewelSystemBE.Data
                     GoldName = "14K",
                     GoldWeight = 16.0,
                     LaborCost = 1800000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 11),
                 },
+                //P014
                 new Product
                 {
                     ProductId = "P014",
@@ -854,8 +867,9 @@ namespace JewelSystemBE.Data
                     GoldName = "18K",
                     GoldWeight = 37.0,
                     LaborCost = 2800000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 5),
                 },
+                //P015
                 new Product
                 {
                     ProductId = "P015",
@@ -873,8 +887,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 20.0,
                     LaborCost = 2400000,
-                    CreatedAt = new DateTime(2022, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 10),
                 },
+                //P016
                 new Product
                 {
                     ProductId = "P016",
@@ -892,8 +907,9 @@ namespace JewelSystemBE.Data
                     GoldName = "10K",
                     GoldWeight = 25.0,
                     LaborCost = 1900000,
-                    CreatedAt = new DateTime(2022, 5, 5),
+                    CreatedAt = new DateTime(2024, 1, 5),
                 },
+                //P017
                 new Product
                 {
                     ProductId = "P017",
@@ -911,8 +927,9 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 30.0,
                     LaborCost = 2900000,
-                    CreatedAt = new DateTime(2021, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 10),
                 },
+                //P018
                 new Product
                 {
                     ProductId = "P018",
@@ -930,8 +947,9 @@ namespace JewelSystemBE.Data
                     GoldName = "18K",
                     GoldWeight = 17.0,
                     LaborCost = 2300000,
-                    CreatedAt = new DateTime(2024, 2, 2),
+                    CreatedAt = new DateTime(2024, 1, 2),
                 },
+                //P019
                 new Product
                 {
                     ProductId = "P019",
@@ -949,8 +967,9 @@ namespace JewelSystemBE.Data
                     GoldName = "14K",
                     GoldWeight = 40.0,
                     LaborCost = 2700000,
-                    CreatedAt = new DateTime(2022, 1, 5),
+                    CreatedAt = new DateTime(2024, 1, 5),
                 },
+                //P020
                 new Product
                 {
                     ProductId = "P020",
@@ -968,8 +987,9 @@ namespace JewelSystemBE.Data
                     GoldName = "10K",
                     GoldWeight = 16.0,
                     LaborCost = 1600000,
-                    CreatedAt = new DateTime(2016, 10, 9),
+                    CreatedAt = new DateTime(2024, 1, 9),
                 },
+                //P021
                 new Product
                 {
                     ProductId = "P021",
@@ -987,10 +1007,780 @@ namespace JewelSystemBE.Data
                     GoldName = "24K",
                     GoldWeight = 18.0,
                     LaborCost = 2000000,
-                    CreatedAt = new DateTime(2019, 5, 10),
+                    CreatedAt = new DateTime(2024, 1, 16),
+                },
+
+                // Data generated automatically - 40 seeds
+                new Product
+                {
+                    ProductId = "P022",
+                    ProductCode = "",
+                    ProductName = "Pear Shaped Diamond Earrings",
+                    ProductImages = "P022.png",
+                    ProductQuantity = 12,
+                    ProductType = "Earrings",
+                    ProductWeight = 4.807237836121708,
+                    ProductWarranty = 28,
+                    MarkupRate = 1.8840143924302741,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 3.042794759899173,
+                    GemId = "GE049",
+                    GemName = "Pear Shaped Diamond",
+                    GemWeight = 1.4,
+                    LaborCost = 12218864.894510968,
+                    CreatedAt = new DateTime(2024, 1, 13)
+                }, new Product
+                {
+                    ProductId = "P023",
+                    ProductCode = "674204419049",
+                    ProductName = "Russian Emerald Ring",
+                    ProductImages = "P023.png",
+                    ProductQuantity = 15,
+                    ProductType = "Ring",
+                    ProductWeight = 5.148751792826632,
+                    ProductWarranty = 35,
+                    MarkupRate = 1.58566250942251,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 3.397609558032495,
+                    GemId = "GE035",
+                    GemName = "Russian Emerald",
+                    GemWeight = 1.5,
+                    LaborCost = 43235443.70112606,
+                    CreatedAt = new DateTime(2024, 1, 20)
+                }, new Product
+                {
+                    ProductId = "P024",
+                    ProductCode = "862178701237",
+                    ProductName = "Natural Ceylon Sapphire Earrings",
+                    ProductImages = "P024.png",
+                    ProductQuantity = 17,
+                    ProductType = "Earrings",
+                    ProductWeight = 5.825956130083856,
+                    ProductWarranty = 18,
+                    MarkupRate = 1.045675402349213,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 3.70310085372937,
+                    GemId = "GE011",
+                    GemName = "Natural Ceylon Sapphire",
+                    GemWeight = 1.02,
+                    LaborCost = 20255374.45038518,
+                    CreatedAt = new DateTime(2024, 1, 10)
+                }, new Product
+                {
+                    ProductId = "P025",
+                    ProductCode = "428617280256",
+                    ProductName = "Princess Cut Diamond Bracelet",
+                    ProductImages = "P025.png",
+                    ProductQuantity = 14,
+                    ProductType = "Bracelet",
+                    ProductWeight = 5.285126368972044,
+                    ProductWarranty = 43,
+                    MarkupRate = 2.972447747762415,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 3.443876334585762,
+                    GemId = "GE042",
+                    GemName = "Princess Cut Diamond",
+                    GemWeight = 1.5,
+                    LaborCost = 6533141.621613235,
+                    CreatedAt = new DateTime(2024, 1, 8)
+                }, 
+                new Product
+                {
+                    ProductId = "P026",
+                    ProductCode = "670169156688",
+                    ProductName = "Radiant Cut Diamond Earrings",
+                    ProductImages = "P026.png",
+                    ProductQuantity = 16,
+                    ProductType = "Earrings",
+                    ProductWeight = 10.762794066397113,
+                    ProductWarranty = 16,
+                    MarkupRate = 1.7085622340187063,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 8.547652135144292,
+                    GemId = "GE048",
+                    GemName = "Radiant Cut Diamond",
+                    GemWeight = 1.1,
+                    LaborCost = 8586437.999674894,
+                    CreatedAt = new DateTime(2024, 1, 3)
+                }, new Product
+                {
+                    ProductId = "P027",
+                    ProductCode = "829988629120",
+                    ProductName = "Colombian Emerald Earrings",
+                    ProductImages = "P027.png",
+                    ProductQuantity = 14,
+                    ProductType = "Earrings",
+                    ProductWeight = 6.618036132964373,
+                    ProductWarranty = 19,
+                    MarkupRate = 1.59993305674788,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 3.249816075238458,
+                    GemId = "GE031",
+                    GemName = "Colombian Emerald",
+                    GemWeight = 1.2,
+                    LaborCost = 1375258.8754988282,
+                    CreatedAt = new DateTime(2024, 1, 22)
+                }, new Product
+                {
+                    ProductId = "P028",
+                    ProductCode = "633028312781",
+                    ProductName = "Padparadscha Sapphire Ring",
+                    ProductImages = "P028.png",
+                    ProductQuantity = 7,
+                    ProductType = "Ring",
+                    ProductWeight = 4.749480286791609,
+                    ProductWarranty = 20,
+                    MarkupRate = 2.608043220378293,
+                    GoldId = "vang14k",
+                    GoldName = "14K",
+                    GoldWeight = 3.0781166668032323,
+                    GemId = "GE020",
+                    GemName = "Padparadscha Sapphire",
+                    GemWeight = 1,
+                    LaborCost = 37289462.66607901,
+                    CreatedAt = new DateTime(2024, 1, 29)
+                }, new Product
+                {
+                    ProductId = "P029",
+                    ProductCode = "730263125687",
+                    ProductName = "Garnet Cabochon Necklace",
+                    ProductImages = "P029.png",
+                    ProductQuantity = 14,
+                    ProductType = "Necklace",
+                    ProductWeight = 7.514552739103244,
+                    ProductWarranty = 25,
+                    MarkupRate = 1.0150129584628296,
+                    GoldId = "vang14k",
+                    GoldName = "14K",
+                    GoldWeight = 4.498767340919102,
+                    GemId = "GE030",
+                    GemName = "Garnet Cabochon",
+                    GemWeight = 3,
+                    LaborCost = 44583675.93773114,
+                    CreatedAt = new DateTime(2024, 1, 11)
+                }, 
+                new Product
+                {
+                    ProductId = "P030",
+                    ProductCode = "901788122324",
+                    ProductName = "Brazilian Emerald Necklace",
+                    ProductImages = "P030.png",
+                    ProductQuantity = 12,
+                    ProductType = "Necklace",
+                    ProductWeight = 5.978778889249457,
+                    ProductWarranty = 15,
+                    MarkupRate = 1.1401401775578925,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 2.711575205296207,
+                    GemId = "GE039",
+                    GemName = "Brazilian Emerald",
+                    GemWeight = 2.7,
+                    LaborCost = 2445534.0691606943,
+                    CreatedAt = new DateTime(2024, 1, 26)
+                }, new Product
+                {
+                    ProductId = "P031",
+                    ProductCode = "870534791152",
+                    ProductName = "Synthetic Emerald Bracelet",
+                    ProductImages = "P031.png",
+                    ProductQuantity = 12,
+                    ProductType = "Bracelet",
+                    ProductWeight = 7.89961411082806,
+                    ProductWarranty = 46,
+                    MarkupRate = 2.7326722773575503,
+                    GoldId = "vang14k",
+                    GoldName = "14K",
+                    GoldWeight = 3.4989526307700163,
+                    GemId = "GE036",
+                    GemName = "Synthetic Emerald",
+                    GemWeight = 3,
+                    LaborCost = 23573781.627794143,
+                    CreatedAt = new DateTime(2024, 1, 8)
+                }, new Product
+                {
+                    ProductId = "P032",
+                    ProductCode = "816946302009",
+                    ProductName = "Pear Shaped Diamond Ring",
+                    ProductImages = "P032.png",
+                    ProductQuantity = 22,
+                    ProductType = "Ring",
+                    ProductWeight = 9.391879362217212,
+                    ProductWarranty = 41,
+                    MarkupRate = 2.6984438757492146,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 7.854970006985199,
+                    GemId = "GE049",
+                    GemName = "Pear Shaped Diamond",
+                    GemWeight = 1.4,
+                    LaborCost = 30841391.562616978,
+                    CreatedAt = new DateTime(2024, 1, 11)
+                }, new Product
+                {
+                    ProductId = "P033",
+                    ProductCode = "610464781825",
+                    ProductName = "Brazilian Emerald Ring",
+                    ProductImages = "P033.png",
+                    ProductQuantity = 21,
+                    ProductType = "Ring",
+                    ProductWeight = 5.031723641860203,
+                    ProductWarranty = 21,
+                    MarkupRate = 1.004876605607548,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 1.5895821041883988,
+                    GemId = "GE033",
+                    GemName = "Brazilian Emerald",
+                    GemWeight = 1.8,
+                    LaborCost = 11699620.78143068,
+                    CreatedAt = new DateTime(2024, 1, 26)
+                }, 
+                new Product
+                {
+                    ProductId = "P034",
+                    ProductCode = "762407690611",
+                    ProductName = "Radiant Cut Diamond Bracelet",
+                    ProductImages = "P034.png",
+                    ProductQuantity = 8,
+                    ProductType = "Bracelet",
+                    ProductWeight = 11.992138786457193,
+                    ProductWarranty = 22,
+                    MarkupRate = 2.6536883297093854,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 9.408474767631787,
+                    GemId = "GE048",
+                    GemName = "Radiant Cut Diamond",
+                    GemWeight = 1.1,
+                    LaborCost = 4180201.6651579402,
+                    CreatedAt = new DateTime(2024, 1, 16)
+                }, new Product
+                {
+                    ProductId = "P035",
+                    ProductCode = "231569490190",
+                    ProductName = "Oval Diamond Necklace",
+                    ProductImages = "P035.png",
+                    ProductQuantity = 16,
+                    ProductType = "Necklace",
+                    ProductWeight = 6.176482890493749,
+                    ProductWarranty = 35,
+                    MarkupRate = 1.6047853756229071,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 2.072623320002408,
+                    GemId = "GE044",
+                    GemName = "Oval Diamond",
+                    GemWeight = 1.2,
+                    LaborCost = 3572618.954896469,
+                    CreatedAt = new DateTime(2024, 1, 23)
+                }, new Product
+                {
+                    ProductId = "P036",
+                    ProductCode = "630624866041",
+                    ProductName = "Brazilian Emerald Bracelet",
+                    ProductImages = "P036.png",
+                    ProductQuantity = 18,
+                    ProductType = "Bracelet",
+                    ProductWeight = 14.04223322239628,
+                    ProductWarranty = 47,
+                    MarkupRate = 2.8969498751521985,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 8.910727993824992,
+                    GemId = "GE039",
+                    GemName = "Brazilian Emerald",
+                    GemWeight = 2.7,
+                    LaborCost = 39438265.041138254,
+                    CreatedAt = new DateTime(2024, 1, 30)
+                }, new Product
+                {
+                    ProductId = "P037",
+                    ProductCode = "427057894494",
+                    ProductName = "Moonstone Cabochon Bracelet",
+                    ProductImages = "P037.png",
+                    ProductQuantity = 13,
+                    ProductType = "Bracelet",
+                    ProductWeight = 13.136524250093027,
+                    ProductWarranty = 39,
+                    MarkupRate = 1.9103063365760704,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 7.674282906181705,
+                    GemId = "GE021",
+                    GemName = "Moonstone Cabochon",
+                    GemWeight = 3.5,
+                    LaborCost = 19100700.2069338,
+                    CreatedAt = new DateTime(2024, 1, 20)
+                }, 
+                new Product
+                {
+                    ProductId = "P038",
+                    ProductCode = "719461390533",
+                    ProductName = "Thai Sapphire Necklace",
+                    ProductImages = "P038.png",
+                    ProductQuantity = 23,
+                    ProductType = "Necklace",
+                    ProductWeight = 5.559736255014135,
+                    ProductWarranty = 29,
+                    MarkupRate = 1.1076850835844394,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 1.4517318691161973,
+                    GemId = "GE017",
+                    GemName = "Thai Sapphire",
+                    GemWeight = 1.8,
+                    LaborCost = 25417389.08495232,
+                    CreatedAt = new DateTime(2024, 1, 10)
+                }, new Product
+                {
+                    ProductId = "P039",
+                    ProductCode = "186487133888",
+                    ProductName = "Heated Natural Ruby Ring",
+                    ProductImages = "P039.png",
+                    ProductQuantity = 24,
+                    ProductType = "Ring",
+                    ProductWeight = 6.513648213681464,
+                    ProductWarranty = 18,
+                    MarkupRate = 2.6640068376294783,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 3.606986572569416,
+                    GemId = "GE006",
+                    GemName = "Heated Natural Ruby",
+                    GemWeight = 0.34,
+                    LaborCost = 26270393.562470425,
+                    CreatedAt = new DateTime(2024, 1, 26)
+                }, new Product
+                {
+                    ProductId = "P040",
+                    ProductCode = "794088504470",
+                    ProductName = "Natural Ceylon Sapphire Bracelet",
+                    ProductImages = "P040.png",
+                    ProductQuantity = 18,
+                    ProductType = "Bracelet",
+                    ProductWeight = 11.748285931737238,
+                    ProductWarranty = 43,
+                    MarkupRate = 2.1763476154150325,
+                    GoldId = "vang14k",
+                    GoldName = "14K",
+                    GoldWeight = 9.166335198076375,
+                    GemId = "GE011",
+                    GemName = "Natural Ceylon Sapphire",
+                    GemWeight = 1.02,
+                    LaborCost = 18924204.050375704,
+                    CreatedAt = new DateTime(2024, 1, 19)
+                }, new Product
+                {
+                    ProductId = "P041",
+                    ProductCode = "660680543120",
+                    ProductName = "Opal Cabochon Bracelet",
+                    ProductImages = "P041.png",
+                    ProductQuantity = 12,
+                    ProductType = "Bracelet",
+                    ProductWeight = 5.71881242124837,
+                    ProductWarranty = 29,
+                    MarkupRate = 1.3533459210371506,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 1.4518589504348511,
+                    GemId = "GE022",
+                    GemName = "Opal Cabochon",
+                    GemWeight = 2.1,
+                    LaborCost = 39783324.08696133,
+                    CreatedAt = new DateTime(2024, 1, 15)
+                }, 
+                new Product
+                {
+                    ProductId = "P042",
+                    ProductCode = "366177263281",
+                    ProductName = "Brazilian Emerald Earrings",
+                    ProductImages = "P042.png",
+                    ProductQuantity = 21,
+                    ProductType = "Earrings",
+                    ProductWeight = 4.13003820531666,
+                    ProductWarranty = 19,
+                    MarkupRate = 1.4945676533281764,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 1.2742085596804833,
+                    GemId = "GE039",
+                    GemName = "Brazilian Emerald",
+                    GemWeight = 2.7,
+                    LaborCost = 31800804.722350467,
+                    CreatedAt = new DateTime(2024, 1, 2)
+                }, new Product
+                {
+                    ProductId = "P043",
+                    ProductCode = "164695297436",
+                    ProductName = "Natural Ceylon Sapphire Bracelet",
+                    ProductImages = "P043.png",
+                    ProductQuantity = 10,
+                    ProductType = "Bracelet",
+                    ProductWeight = 5.822323224641309,
+                    ProductWarranty = 32,
+                    MarkupRate = 1.0517502056142054,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 4.793143655495984,
+                    GemId = "GE011",
+                    GemName = "Natural Ceylon Sapphire",
+                    GemWeight = 1.02,
+                    LaborCost = 21576589.51445539,
+                    CreatedAt = new DateTime(2024, 1, 27)
+                }, new Product
+                {
+                    ProductId = "P044",
+                    ProductCode = "466485346360",
+                    ProductName = "Round Brilliant Diamond Necklace",
+                    ProductImages = "P044.png",
+                    ProductQuantity = 11,
+                    ProductType = "Necklace",
+                    ProductWeight = 7.8327010529136505,
+                    ProductWarranty = 15,
+                    MarkupRate = 2.7528004545662834,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 5.914430100910993,
+                    GemId = "GE041",
+                    GemName = "Round Brilliant Diamond",
+                    GemWeight = 1,
+                    LaborCost = 45688334.09528934,
+                    CreatedAt = new DateTime(2024, 1, 16)
+                }, new Product
+                {
+                    ProductId = "P045",
+                    ProductCode = "383869345739",
+                    ProductName = "Colombian Emerald Ring",
+                    ProductImages = "P045.png",
+                    ProductQuantity = 7,
+                    ProductType = "Ring",
+                    ProductWeight = 6.853213813607989,
+                    ProductWarranty = 41,
+                    MarkupRate = 1.8176659611941688,
+                    GoldId = "vang14k",
+                    GoldName = "14K",
+                    GoldWeight = 5.127997649240241,
+                    GemId = "GE031",
+                    GemName = "Colombian Emerald",
+                    GemWeight = 1.2,
+                    LaborCost = 3652522.4423296447,
+                    CreatedAt = new DateTime(2024, 1, 29)
+                },
+                new Product
+                {
+                    ProductId = "P046",
+                    ProductCode = "231003630530",
+                    ProductName = "Garnet Cabochon Ring",
+                    ProductImages = "P046.png",
+                    ProductQuantity = 6,
+                    ProductType = "Ring",
+                    ProductWeight = 12.430393848269079,
+                    ProductWarranty = 38,
+                    MarkupRate = 2.6778426540134204,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 6.548154890794476,
+                    GemId = "GE030",
+                    GemName = "Garnet Cabochon",
+                    GemWeight = 3,
+                    LaborCost = 7315325.622572417,
+                    CreatedAt = new DateTime(2024, 1, 27)
+                }, new Product
+                {
+                    ProductId = "P047",
+                    ProductCode = "949651291774",
+                    ProductName = "Madagascar Sapphire Bracelet",
+                    ProductImages = "P047.png",
+                    ProductQuantity = 18,
+                    ProductType = "Bracelet",
+                    ProductWeight = 10.638862761839402,
+                    ProductWarranty = 30,
+                    MarkupRate = 2.1308457513069903,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 9.135071775965262,
+                    GemId = "GE013",
+                    GemName = "Madagascar Sapphire",
+                    GemWeight = 1.5,
+                    LaborCost = 36773026.53172834,
+                    CreatedAt = new DateTime(2024, 1, 19)
+                }, new Product
+                {
+                    ProductId = "P048",
+                    ProductCode = "197592618896",
+                    ProductName = "India Ruby Necklace",
+                    ProductImages = "P048.png",
+                    ProductQuantity = 17,
+                    ProductType = "Necklace",
+                    ProductWeight = 13.988171237491485,
+                    ProductWarranty = 31,
+                    MarkupRate = 2.91390166933939,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 5.711292056308791,
+                    GemId = "GE004",
+                    GemName = "India Ruby",
+                    GemWeight = 5.91,
+                    LaborCost = 40130088.610135965,
+                    CreatedAt = new DateTime(2024, 1, 26)
+                }, new Product
+                {
+                    ProductId = "P049",
+                    ProductCode = "467794567861",
+                    ProductName = "Ethiopian Sapphire Bracelet",
+                    ProductImages = "P049.png",
+                    ProductQuantity = 9,
+                    ProductType = "Bracelet",
+                    ProductWeight = 8.385374392527947,
+                    ProductWarranty = 19,
+                    MarkupRate = 1.8406804973503976,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 6.966732255242682,
+                    GemId = "GE019",
+                    GemName = "Ethiopian Sapphire",
+                    GemWeight = 1.3,
+                    LaborCost = 27063957.402623728,
+                    CreatedAt = new DateTime(2024, 1, 30)
+                }, 
+                new Product
+                {
+                    ProductId = "P050",
+                    ProductCode = "838026328454",
+                    ProductName = "Australian Sapphire Ring",
+                    ProductImages = "P050.png",
+                    ProductQuantity = 10,
+                    ProductType = "Ring",
+                    ProductWeight = 8.54438414684569,
+                    ProductWarranty = 25,
+                    MarkupRate = 1.1524591313630836,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 4.8415670016816,
+                    GemId = "GE014",
+                    GemName = "Australian Sapphire",
+                    GemWeight = 3.2,
+                    LaborCost = 37693764.75196147,
+                    CreatedAt = new DateTime(2024, 1, 22)
+                }, new Product
+                {
+                    ProductId = "P051",
+                    ProductCode = "596836381399",
+                    ProductName = "Heart Shaped Diamond Necklace",
+                    ProductImages = "P051.png",
+                    ProductQuantity = 12,
+                    ProductType = "Necklace",
+                    ProductWeight = 2.635610655715247,
+                    ProductWarranty = 22,
+                    MarkupRate = 2.818804308589629,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 1.337046909032949,
+                    GemId = "GE050",
+                    GemName = "Heart Shaped Diamond",
+                    GemWeight = 1,
+                    LaborCost = 44783583.40441224,
+                    CreatedAt = new DateTime(2024, 1, 6)
+                }, new Product
+                {
+                    ProductId = "P052",
+                    ProductCode = "512360707805",
+                    ProductName = "Round Brilliant Diamond Earrings",
+                    ProductImages = "P052.png",
+                    ProductQuantity = 20,
+                    ProductType = "Earrings",
+                    ProductWeight = 5.776072824534776,
+                    ProductWarranty = 45,
+                    MarkupRate = 1.5343275103208867,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 1.7854832402627365,
+                    GemId = "GE041",
+                    GemName = "Round Brilliant Diamond",
+                    GemWeight = 1,
+                    LaborCost = 18740482.320073944,
+                    CreatedAt = new DateTime(2024, 1, 22)
+                }, new Product
+                {
+                    ProductId = "P053",
+                    ProductCode = "170516697530",
+                    ProductName = "Emerald Cut Diamond Ring",
+                    ProductImages = "P053.png",
+                    ProductQuantity = 10,
+                    ProductType = "Ring",
+                    ProductWeight = 3.789808344608001,
+                    ProductWarranty = 17,
+                    MarkupRate = 2.573757148600832,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 1.6261364372426415,
+                    GemId = "GE043",
+                    GemName = "Emerald Cut Diamond",
+                    GemWeight = 2,
+                    LaborCost = 38467110.61990011,
+                    CreatedAt = new DateTime(2024, 1, 8)
+                }, 
+                new Product
+                {
+                    ProductId = "P054",
+                    ProductCode = "814881347466",
+                    ProductName = "Moonstone Cabochon Earrings",
+                    ProductImages = "P054.png",
+                    ProductQuantity = 8,
+                    ProductType = "Earrings",
+                    ProductWeight = 15.754298331285687,
+                    ProductWarranty = 15,
+                    MarkupRate = 1.760300849155109,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 9.935502620295331,
+                    GemId = "GE021",
+                    GemName = "Moonstone Cabochon",
+                    GemWeight = 3.5,
+                    LaborCost = 20285142.942025773,
+                    CreatedAt = new DateTime(2024, 1, 30)
+                }, new Product
+                {
+                    ProductId = "P055",
+                    ProductCode = "890509691739",
+                    ProductName = "Montana Sapphire Necklace",
+                    ProductImages = "P055.png",
+                    ProductQuantity = 12,
+                    ProductType = "Necklace",
+                    ProductWeight = 11.427962360843086,
+                    ProductWarranty = 27,
+                    MarkupRate = 2.2033386258169805,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 8.69206692211337,
+                    GemId = "GE018",
+                    GemName = "Montana Sapphire",
+                    GemWeight = 0.72,
+                    LaborCost = 22229931.668697417,
+                    CreatedAt = new DateTime(2024, 1, 19)
+                }, new Product
+                {
+                    ProductId = "P056",
+                    ProductCode = "529134568958",
+                    ProductName = "Oval Diamond Ring",
+                    ProductImages = "P056.png",
+                    ProductQuantity = 11,
+                    ProductType = "Ring",
+                    ProductWeight = 9.240520721573136,
+                    ProductWarranty = 16,
+                    MarkupRate = 1.010838790324708,
+                    GoldId = "vang10k",
+                    GoldName = "10K",
+                    GoldWeight = 7.6271642229012775,
+                    GemId = "GE044",
+                    GemName = "Oval Diamond",
+                    GemWeight = 1.2,
+                    LaborCost = 13235448.229500482,
+                    CreatedAt = new DateTime(2024, 1, 23)
+                }, new Product
+                {
+                    ProductId = "P057",
+                    ProductCode = "171920122186",
+                    ProductName = "Ethiopian Emerald Bracelet",
+                    ProductImages = "P057.png",
+                    ProductQuantity = 22,
+                    ProductType = "Bracelet",
+                    ProductWeight = 6.641087429115302,
+                    ProductWarranty = 14,
+                    MarkupRate = 1.568168533711181,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 5.023662067658912,
+                    GemId = "GE040",
+                    GemName = "Ethiopian Emerald",
+                    GemWeight = 1.3,
+                    LaborCost = 2290639.533413939,
+                    CreatedAt = new DateTime(2024, 1, 27)
+                }, 
+                new Product
+                {
+                    ProductId = "P058",
+                    ProductCode = "849475227946",
+                    ProductName = "Australian Sapphire Earrings",
+                    ProductImages = "P058.png",
+                    ProductQuantity = 12,
+                    ProductType = "Earrings",
+                    ProductWeight = 6.19172427226904,
+                    ProductWarranty = 16,
+                    MarkupRate = 2.976084867296785,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 2.1373953928147498,
+                    GemId = "GE014",
+                    GemName = "Australian Sapphire",
+                    GemWeight = 3.2,
+                    LaborCost = 35214561.04589756,
+                    CreatedAt = new DateTime(2024, 1, 12)
+                }, new Product
+                {
+                    ProductId = "P059",
+                    ProductCode = "383905492512",
+                    ProductName = "Labradorite Cabochon Bracelet",
+                    ProductImages = "P059.png",
+                    ProductQuantity = 10,
+                    ProductType = "Bracelet",
+                    ProductWeight = 14.430716366025056,
+                    ProductWarranty = 23,
+                    MarkupRate = 1.824163888733295,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 8.95471168475618,
+                    GemId = "GE024",
+                    GemName = "Labradorite Cabochon",
+                    GemWeight = 5,
+                    LaborCost = 21302530.900030572,
+                    CreatedAt = new DateTime(2024, 1, 1)
+                }, new Product
+                {
+                    ProductId = "P060",
+                    ProductCode = "875404298027",
+                    ProductName = "Pear Shaped Diamond Necklace",
+                    ProductImages = "P060.png",
+                    ProductQuantity = 11,
+                    ProductType = "Necklace",
+                    ProductWeight = 4.5761415534657655,
+                    ProductWarranty = 30,
+                    MarkupRate = 1.441549319093442,
+                    GoldId = "vang24k",
+                    GoldName = "24K",
+                    GoldWeight = 2.96134934542507,
+                    GemId = "GE049",
+                    GemName = "Pear Shaped Diamond",
+                    GemWeight = 1.4,
+                    LaborCost = 13184353.139635505,
+                    CreatedAt = new DateTime(2024, 1, 2)
+                }, new Product
+                {
+                    ProductId = "P061",
+                    ProductCode = "474280836261",
+                    ProductName = "Natural Mozambique Ruby Ring",
+                    ProductImages = "P061.png",
+                    ProductQuantity = 23,
+                    ProductType = "Ring",
+                    ProductWeight = 7.543572562571369,
+                    ProductWarranty = 16,
+                    MarkupRate = 2.5408466176827234,
+                    GoldId = "vang18k",
+                    GoldName = "18K",
+                    GoldWeight = 5.09643416581116,
+                    GemId = "GE001",
+                    GemName = "Natural Mozambique Ruby",
+                    GemWeight = 0.98,
+                    LaborCost = 28780291.704716213,
+                    CreatedAt = new DateTime(2024, 1, 27)
                 }
-
-
                 );
 
             });
@@ -1323,30 +2113,202 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.ExpireDate).HasColumnName("expire_date").IsRequired().HasColumnType("date");
 
                 entity.HasData(
-                    new Warranty { 
-                        WarrantyId = "W1", 
-                        ProductId = "P002", 
-                        ProductName = "Product A", 
-                        StartDate = new DateTime(2023, 1, 1), 
-                        ExpireDate = new DateTime(2024, 1, 1) },
-                    new Warranty { 
-                        WarrantyId = "W2", 
-                        ProductId = "P2", 
-                        ProductName = "Product B", 
-                        StartDate = new DateTime(2023, 2, 1), 
-                        ExpireDate = new DateTime(2024, 2, 1) },
-                    new Warranty { 
-                        WarrantyId = "W3", 
-                        ProductId = "P3", 
-                        ProductName = "Product C", 
-                        StartDate = new DateTime(2023, 3, 1), 
-                        ExpireDate = new DateTime(2024, 3, 1) },
-                    new Warranty { 
-                        WarrantyId = "W4", 
-                        ProductId = "P3", 
-                        ProductName = "Product C", 
-                        StartDate = new DateTime(2023, 3, 1), 
-                        ExpireDate = new DateTime(2024, 3, 1) }
+                    // I1 - II1 II2 - W1 W2
+                    new Warranty
+                    {
+                        WarrantyId = "W1",
+                        ProductId = "P015",
+                        ProductName = "Diamond Necklace NE-DIA044-24K",
+                        StartDate = new DateTime(2024, 3, 1),
+                        ExpireDate = new DateTime(2025, 9, 1) // StartDate plus ProductWarranty (18 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W2",
+                        ProductId = "P021",
+                        ProductName = "Diamond Earrings NE-EMA041-24K",
+                        StartDate = new DateTime(2024, 3, 1),
+                        ExpireDate = new DateTime(2026, 3, 1) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I2 - II3 II4 - W3 W4
+                    new Warranty
+                    {
+                        WarrantyId = "W3",
+                        ProductId = "P005",
+                        ProductName = "Ruby Bracelet NE-RUB005-10K",
+                        StartDate = new DateTime(2024, 4, 4),
+                        ExpireDate = new DateTime(2025, 4, 4) // StartDate plus ProductWarranty (12 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W4",
+                        ProductId = "P010",
+                        ProductName = "Ruby Ring NE-RUB003-10K",
+                        StartDate = new DateTime(2024, 4, 4),
+                        ExpireDate = new DateTime(2025, 4, 4) // StartDate plus ProductWarranty (12 months)
+                    },
+                    // I3 - II5 II6 - W5 W6
+                    new Warranty
+                    {
+                        WarrantyId = "W5",
+                        ProductId = "P003",
+                        ProductName = "Emerald Earrings NE-EME033-18K",
+                        StartDate = new DateTime(2024, 5, 5),
+                        ExpireDate = new DateTime(2026, 5, 5) // StartDate plus ProductWarranty (24 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W6",
+                        ProductId = "P018",
+                        ProductName = "Emerald Ring NE-EME032-18K",
+                        StartDate = new DateTime(2024, 5, 5),
+                        ExpireDate = new DateTime(2026, 5, 5) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I4 - II7 II8 II9 - W7 W8 W9
+                    new Warranty
+                    {
+                        WarrantyId = "W7",
+                        ProductId = "P011",
+                        ProductName = "Sapphire Bracelet NE-SAP014-18K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2025, 12, 5) // StartDate plus ProductWarranty (18 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W8",
+                        ProductId = "P020",
+                        ProductName = "Sapphire Earrings NE-SAP011-10K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2025, 12, 5) // StartDate plus ProductWarranty (18 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W9",
+                        ProductId = "P003",
+                        ProductName = "Emerald Earrings NE-EME033-18K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2026, 6, 5) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I5 - II10 II11 - W10 W11
+                    new Warranty
+                    {
+                        WarrantyId = "W10",
+                        ProductId = "P021",
+                        ProductName = "Diamond Earrings NE-EMA041-24K",
+                        StartDate = new DateTime(2024, 4, 5),
+                        ExpireDate = new DateTime(2026, 4, 5) // StartDate plus ProductWarranty (24 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W11",
+                        ProductId = "P016",
+                        ProductName = "Emerald Bracelet NE-EME035-10K",
+                        StartDate = new DateTime(2024, 4, 5),
+                        ExpireDate = new DateTime(2025, 4, 5) // StartDate plus ProductWarranty (12 months)
+                    },
+                    // I6 - II12 II13 - W12 W13
+                    new Warranty
+                    {
+                        WarrantyId = "W12",
+                        ProductId = "P011",
+                        ProductName = "Sapphire Bracelet NE-SAP014-18K",
+                        StartDate = new DateTime(2024, 5, 3),
+                        ExpireDate = new DateTime(2025, 11, 3) // StartDate plus ProductWarranty (18 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W13",
+                        ProductId = "P018",
+                        ProductName = "Emerald Ring NE-EME032-18K",
+                        StartDate = new DateTime(2024, 5, 3),
+                        ExpireDate = new DateTime(2026, 5, 3) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I7 - II14 II15 - W14 W15
+                    new Warranty
+                    {
+                        WarrantyId = "W14",
+                        ProductId = "P013",
+                        ProductName = "Ruby Earrings NE-RUB004-14K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2025, 6, 5) // StartDate plus ProductWarranty (12 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W15",
+                        ProductId = "P014",
+                        ProductName = "Sapphire Necklace NE-SAP015-18K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2026, 6, 5) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I8 - II16 II17 - W16 W17
+                    new Warranty
+                    {
+                        WarrantyId = "W16",
+                        ProductId = "P015",
+                        ProductName = "Diamond Necklace NE-DIA044-24K",
+                        StartDate = new DateTime(2024, 3, 3),
+                        ExpireDate = new DateTime(2025, 9, 3) // StartDate plus ProductWarranty (18 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W17",
+                        ProductId = "P019",
+                        ProductName = "Ruby Necklace NE-RUB002-14K",
+                        StartDate = new DateTime(2024, 3, 3),
+                        ExpireDate = new DateTime(2026, 3, 3) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I9 - II18 II19 - W18 W19
+                    new Warranty
+                    {
+                        WarrantyId = "W18",
+                        ProductId = "P017",
+                        ProductName = "Diamond Bracelet NE-DIA045-24K",
+                        StartDate = new DateTime(2024, 3, 3),
+                        ExpireDate = new DateTime(2027, 3, 3) // StartDate plus ProductWarranty (36 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W19",
+                        ProductId = "P012",
+                        ProductName = "Emerald Necklace NE-EME031-24K",
+                        StartDate = new DateTime(2024, 3, 3),
+                        ExpireDate = new DateTime(2026, 3, 3) // StartDate plus ProductWarranty (24 months)
+                    },
+                    // I10 - II20 II21 - W20 W21
+                    new Warranty
+                    {
+                        WarrantyId = "W20",
+                        ProductId = "P011",
+                        ProductName = "Sapphire Bracelet NE-SAP014-18K",
+
+                        StartDate = new DateTime(2024, 2, 2),
+                        ExpireDate = new DateTime(2025, 8, 2) // StartDate plus ProductWarranty (18 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W21",
+                        ProductId = "P020",
+                        ProductName = "Sapphire Earrings NE-SAP011-10K",
+                        StartDate = new DateTime(2024, 2, 2),
+                        ExpireDate = new DateTime(2025, 8, 2) // StartDate plus ProductWarranty (18 months)
+                    },
+                    // I11 - II22 II23 - W22 W23
+                    new Warranty
+                    {
+                        WarrantyId = "W22",
+                        ProductId = "P014",
+                        ProductName = "Sapphire Necklace NE-SAP015-18K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2026, 6, 5) // StartDate plus ProductWarranty (24 months)
+                    },
+                    new Warranty
+                    {
+                        WarrantyId = "W23",
+                        ProductId = "P021",
+                        ProductName = "Diamond Earrings NE-EMA041-24K",
+                        StartDate = new DateTime(2024, 6, 5),
+                        ExpireDate = new DateTime(2026, 6, 5) // StartDate plus ProductWarranty (24 months)
+                    }
                 );
             });
 
@@ -1716,7 +2678,7 @@ namespace JewelSystemBE.Data
                 entity.Property(e => e.WarrantyId).HasColumnName("warranty_id");
 
                 entity.HasData(
-                    // Invoice I1
+                    // Invoice I1 - II1 II2
                     new InvoiceItem
                     {
                         InvoiceItemId = "II1",
@@ -1745,7 +2707,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 165120000,
                         WarrantyId = "W2",
                     },
-                    //Invoice I2
+                    //Invoice I2 - II3 II4
                     new InvoiceItem
                     {
                         InvoiceItemId = "II3",
@@ -1774,7 +2736,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 144000000,
                         WarrantyId = "W4",
                     },
-                    //Invoice I3
+                    //Invoice I3 - II5 II6
                     new InvoiceItem
                     {
                         InvoiceItemId = "II5",
@@ -1803,7 +2765,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 100000000,
                         WarrantyId = "W6",
                     },
-                    //Invoice I4
+                    //Invoice I4 - II7 II8 II9
                     new InvoiceItem
                     {
                         InvoiceItemId = "II7",
@@ -1846,7 +2808,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 8000000,
                         WarrantyId = "W9",
                     },
-                    //Invoice I5
+                    //Invoice I5 - II10 II11
                     new InvoiceItem
                     {
                         InvoiceItemId = "II10",
@@ -1875,7 +2837,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 800000000,
                         WarrantyId = "W11",
                     },
-                    //Invoice I6
+                    //Invoice I6 - II12 II13
                     new InvoiceItem
                     {
                         InvoiceItemId = "II12",
@@ -1904,7 +2866,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 600000000,
                         WarrantyId = "W13",
                     },
-                    //Invoice I7
+                    //Invoice I7 - II14 II15
                     new InvoiceItem
                     {
                         InvoiceItemId = "II14",
@@ -1933,7 +2895,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 288000000,
                         WarrantyId = "W15",
                     },
-                    //Invoice I8
+                    //Invoice I8 - II16 II17
                     new InvoiceItem
                     {
                         InvoiceItemId = "II16",
@@ -1962,7 +2924,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 1200000000,
                         WarrantyId = "W17",
                     },
-                    //Invoice I9
+                    //Invoice I9 - II18 II19
                     new InvoiceItem
                     {
                         InvoiceItemId = "II18",
@@ -1991,7 +2953,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 500000000,
                         WarrantyId = "W19",
                     },
-                    //Invoice I10
+                    //Invoice I10 - II20 II21
                     new InvoiceItem
                     {
                         InvoiceItemId = "II20",
@@ -2020,7 +2982,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 600000000,
                         WarrantyId = "W21",
                     },
-                    //Invoice I11
+                    //Invoice I11 - II22 II23
                     new InvoiceItem
                     {
                         InvoiceItemId = "II22",
@@ -2039,7 +3001,7 @@ namespace JewelSystemBE.Data
                     {
                         InvoiceItemId = "II23",
                         InvoiceId = "I11",
-                        ProductId = "P023",
+                        ProductId = "P021",
                         ProductName = "Turquoise Cabochon",
                         Quantity = 1,
                         UnitPrice = 40000000,
@@ -2049,7 +3011,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 40000000,
                         WarrantyId = "W23",
                     },
-                    //Invoice I12 - BUY
+                    //Invoice I12 - II24 - BUY
                     new InvoiceItem
                     {
                         InvoiceItemId = "II24",
@@ -2064,7 +3026,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 1500000000,
                         WarrantyId = "Not Applied",
                     },
-                    //Invoice I13 - BUY
+                    //Invoice I13 - II26 - BUY
                     new InvoiceItem
                     {
                         InvoiceItemId = "II26",
@@ -2079,7 +3041,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 2400000000,
                         WarrantyId = "Not Applied",
                     },
-                    //Invoice I14 - BUY
+                    //Invoice I14 - II28 - BUY
                     new InvoiceItem
                     {
                         InvoiceItemId = "II28",
@@ -2094,7 +3056,7 @@ namespace JewelSystemBE.Data
                         EndTotalPrice = 900000000,
                         WarrantyId = "Not Applied",
                     },
-                    //Invoice I15 - BUY
+                    //Invoice I15 - II29 - BUY
                     new InvoiceItem
                     {
                         InvoiceItemId = "II29",
@@ -2120,7 +3082,7 @@ namespace JewelSystemBE.Data
                         StallId = "ST01",
                         UserId = "US2",
                         StaffName = "Olivia Miller",
-                        StallDescription = "Not yet",
+                        StallDescription = "Opening",
                         StallName = "Stall A",
                         StallType = "Ring"
                     },
@@ -2129,7 +3091,7 @@ namespace JewelSystemBE.Data
                         StallId = "ST02",
                         UserId = "US2",
                         StaffName = "Olivia Miller",
-                        StallDescription = "Not Yet",
+                        StallDescription = "Opening",
                         StallName = "Stall B",
                         StallType = "Bracelet"
                     },
@@ -2138,7 +3100,7 @@ namespace JewelSystemBE.Data
                         StallId = "ST03",
                         UserId = "US2",
                         StaffName = "Olivia Miller",
-                        StallDescription = "Not Yet",
+                        StallDescription = "Opening",
                         StallName = "Stall C",
                         StallType = "Necklace"
                     },
@@ -2147,7 +3109,7 @@ namespace JewelSystemBE.Data
                         StallId = "ST04",
                         UserId = "US2",
                         StaffName = "Olivia Miller",
-                        StallDescription = "Not Yet",
+                        StallDescription = "Opening",
                         StallName = "Stall D",
                         StallType = "Earring"
                     },
@@ -2156,7 +3118,7 @@ namespace JewelSystemBE.Data
                         StallId = "ST05",
                         UserId = "US2",
                         StaffName = "Olivia Miller",
-                        StallDescription = "Not Yet",
+                        StallDescription = "Maintenance",
                         StallName = "Stall E",
                         StallType = "Anklet"
                     }

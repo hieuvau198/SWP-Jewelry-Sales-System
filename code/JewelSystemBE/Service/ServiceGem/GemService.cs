@@ -71,6 +71,9 @@ namespace JewelSystemBE.Service.ServiceGem
                 updatedGem.GemPrice = gem.GemPrice;
                 updatedGem.GemName = gem.GemName;
                 updatedGem.BuyPrice = gem.BuyPrice;
+                updatedGem.GemCode = gem.GemCode;
+                updatedGem.GemWeight = gem.GemWeight;
+                updatedGem.Unit = gem.Unit;
 
 
                 _jewelDbContext.Gems.Update(updatedGem);
