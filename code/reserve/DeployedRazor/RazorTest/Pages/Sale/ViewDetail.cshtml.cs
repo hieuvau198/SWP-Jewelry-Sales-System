@@ -1,4 +1,4 @@
-﻿using RazorTest.Models;
+using RazorTest.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc;
 using RazorTest.Services;
@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis;
 
 namespace RazorTest.Pages.Sale
 {
-    public class SaleHomePageModel : PageModel
+    public class ViewDetailModel : PageModel
     {
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeySaleProductList = "_SaleProductList";
@@ -21,15 +21,16 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
         public const string SessionKeySaleInvoiceObject = "_SaleInvoiceObject";
         public const string SessionKeyDiscountList = "_DiscountList";
-        public const string SessionKeySelectedProduct = "_ViewDetailProduct"; // Thêm session key cho sản phẩm đã chọn
+        public const string SessionKeyViewDetailProductObject = "_ViewDetailProductObject";
 
         public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
         public const string UrlGetDiscounts = "https://hvjewel.azurewebsites.net/api/discount\r\n";
+        public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
 
-        public SaleHomePageModel(ApiService apiService, ILogger<SaleHomePageModel> logger)
+        public ViewDetailModel(ApiService apiService, ILogger<SaleHomePageModel> logger)
         {
             _apiService = apiService;
             _logger = logger;
@@ -42,6 +43,8 @@ namespace RazorTest.Pages.Sale
         public Invoice InvoiceObject { get; set; }
 
         public const int PageSize = 9; // Number of products per page
+
+        public Product ViewProductDetail { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
@@ -57,17 +60,21 @@ namespace RazorTest.Pages.Sale
                 return RedirectToPage("/Authentication/AccessDenied");
             }
 
-            if (HttpContext.Session.GetObject<User>(SessionKeyUserObject)==null )
+            // Get data
+            ViewProductDetail = HttpContext.Session.GetObject<Product>(SaleHomePageModel.SessionKeySelectedProduct);
+
+            if (HttpContext.Session.GetObject<User>(SessionKeyUserObject) == null)
             {
                 HttpContext.Session.SetString(SessionKeyMessage, "Not Authen");
                 RedirectToPage("/Index");
-            }else
+            }
+            else
             {
                 HttpContext.Session.SetString(SessionKeyMessage, "Is authen");
             }
 
             List<Product> allProducts = HttpContext.Session.GetObject<List<Product>>(SessionKeySaleProductList);
-            if(allProducts == null  || allProducts.Count == 0 )
+            if (allProducts == null || allProducts.Count == 0)
             {
                 allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
             }
@@ -75,14 +82,14 @@ namespace RazorTest.Pages.Sale
             // Make order for results
             allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
 
-            
+
 
             // Calculate pagination details
             CurrentPage = currentPage;
             TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
 
             Products = allProducts.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
-            
+
 
             // Store products in session to fetch them during post request
             HttpContext.Session.SetObject("Products", allProducts);
@@ -101,87 +108,87 @@ namespace RazorTest.Pages.Sale
             if (product != null && !cart.Exists(x => x.ProductId == productId))
             {
                 //Set some vars
-                    double discountRate = 0;
-                    string discountId = "No Discount";
-                    double totalPrice = 0;
-                    double endPrice = 0;
-                    int quantity = 1;
-                    string warrantyId = "No Warranty";
-                
+                double discountRate = 0;
+                string discountId = "No Discount";
+                double totalPrice = 0;
+                double endPrice = 0;
+                int quantity = 1;
+                string warrantyId = "No Warranty";
+
 
                 // Find Best Discount
-                    List<Discount> Discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeyDiscountList);
-                    if (Discounts == null)
+                List<Discount> Discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeyDiscountList);
+                if (Discounts == null)
+                {
+                    Discounts = await _apiService.GetAsync<List<Discount>>(UrlGetDiscounts);
+                    List<Discount> temp = new List<Discount>();
+                    foreach (Discount discount in Discounts)
                     {
-                        Discounts = await _apiService.GetAsync<List<Discount>>(UrlGetDiscounts);
-                        List<Discount> temp = new List<Discount>();
-                        foreach (Discount discount in Discounts)
+                        if (discount.ProductType.Equals("All")
+                            || discount.ProductId.Equals(productId)
+                            || (discount.ProductType.Equals(product.ProductType)
+                                && discount.ProductId.Equals("All"))
+                            )
                         {
-                            if (discount.ProductType.Equals("All")
-                                || discount.ProductId.Equals(productId)
-                                || (discount.ProductType.Equals(product.ProductType) 
-                                    && discount.ProductId.Equals("All"))
-                                )
-                            {
                             DateTime currentTime = DateTime.Now;
                             if (discount.PublicDate < currentTime
                             && discount.ExpireDate > currentTime)
                             {
                                 temp.Add(discount);
                             }
-                            
-                            }
+
                         }
-                        Discounts = temp;
                     }
-                
-                    foreach (Discount discount in Discounts)
+                    Discounts = temp;
+                }
+
+                foreach (Discount discount in Discounts)
+                {
+                    if (discount.DiscountRate > discountRate)
                     {
-                        if(discount.DiscountRate > discountRate)
-                        {
-                            discountRate = discount.DiscountRate;
-                            discountId = discount.DiscountId;
-                        }
+                        discountRate = discount.DiscountRate;
+                        discountId = discount.DiscountId;
                     }
-                    
+                }
+
                 // Set product quantity and price
-                    product.ProductQuantity = quantity;
-                    product.TotalPrice = product.UnitPrice;
-                    totalPrice = product.TotalPrice;
-                    endPrice = product.UnitPrice * (1-discountRate);
-                    
+                product.ProductQuantity = quantity;
+                product.TotalPrice = product.UnitPrice;
+                totalPrice = product.TotalPrice;
+                endPrice = product.UnitPrice * (1 - discountRate);
+
                 // Add the updated product to cart
-                    cart.Add(product);
+                cart.Add(product);
 
                 // Save the updated cart back to the session
-                    HttpContext.Session.SetObject(SessionKeyCart, cart);
+                HttpContext.Session.SetObject(SessionKeyCart, cart);
 
                 // Set Invoice Item for this current product
 
-                    List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
-                    if (invoiceItems == null)
+                List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+                if (invoiceItems == null)
+                {
+                    invoiceItems = new List<InvoiceItem>();
+                }
+                if (invoiceItems.Find(x => x.ProductId == productId) == null)
+                {
+                    InvoiceItem invoiceItem = new InvoiceItem
                     {
-                        invoiceItems = new List<InvoiceItem>();
-                    }
-                    if (invoiceItems.Find(x => x.ProductId == productId) == null)
-                    {
-                        InvoiceItem invoiceItem = new InvoiceItem
-                        {
-                            InvoiceItemId = Guid.NewGuid().ToString(),
-                            InvoiceId = "Test",
-                            ProductId = product.ProductId,
-                            ProductName = product.ProductName,
-                            Quantity = product.ProductQuantity,
-                            UnitPrice = product.UnitPrice,
-                            DiscountId = discountId,
-                            DiscountRate = discountRate,
-                            TotalPrice = totalPrice,
-                            EndTotalPrice = endPrice,
-                            WarrantyId = warrantyId
-                        };
-                        invoiceItems.Add(invoiceItem);
-                    }
-                    HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, invoiceItems);
+                        InvoiceItemId = Guid.NewGuid().ToString(),
+                        InvoiceId = "Test",
+                        ProductId = product.ProductId,
+                        ProductName = product.ProductName,
+                        Quantity = product.ProductQuantity,
+                        UnitPrice = product.UnitPrice,
+                        DiscountId = discountId,
+                        DiscountRate = discountRate,
+                        TotalPrice = totalPrice,
+                        EndTotalPrice = endPrice,
+                        WarrantyId = warrantyId
+                    };
+                    invoiceItems.Add(invoiceItem);
+                }
+                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, invoiceItems);
 
             }
             if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
@@ -189,22 +196,6 @@ namespace RazorTest.Pages.Sale
                 return new JsonResult(new { success = true });
             }
             return RedirectToPage(new { currentPage = CurrentPage });
-        }
-
-        public async Task<IActionResult> OnPostViewDetail(string productId)
-        {
-            List<Product> products = HttpContext.Session.GetObject<List<Product>>("Products") ?? new List<Product>();
-
-            if (productId != null && products != null)
-            {
-                Product product = products.Find(x => x.ProductId == productId);
-                HttpContext.Session.SetObject(SessionKeySelectedProduct, product);
-            }
-            else
-            {
-                return RedirectToPage();
-            }
-            return RedirectToPage("./ViewDetail");
         }
 
 

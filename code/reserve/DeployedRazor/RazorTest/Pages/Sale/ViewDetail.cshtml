@@ -1,6 +1,6 @@
 ﻿@page "{currentPage:int?}"
 @using RazorTest.Models
-@model RazorTest.Pages.Sale.SaleHomePageModel
+@model RazorTest.Pages.Sale.ViewDetailModel
 @{
 }
 
@@ -376,7 +376,7 @@
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
                             <div class="table-responsive">
-                                <table class="table table-hover text-center">
+                                <table class="table table-hover">
                                     <thead>
                                         <tr>
                                             <th>Code</th>
@@ -385,48 +385,33 @@
                                             <th>Inventory</th>
                                             <th>Type</th>
                                             <th>Warranty</th>
-                                            <th>pgemstone</th>
+                                            <th>Gemstone</th>
                                             <th>Gem Weight (cts)</th>
                                             <th>Gold Name</th>
                                             <th>Gold Weight (cts)</th>
                                             <th>Price Cost (VND)</th>
                                             <th>Publish</th>
-                                            <th>View</th>
-                                            <th>Actions</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        @foreach (Product product in Model.Products)
-                                        {
+                                    @if (Model.ViewProductDetail != null)
+                                    {
+                                        <tbody>
                                             <tr>
-                                                <td>@product.ProductCode</td>
-                                                <td>@product.ProductName</td>
-                                                <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
-                                                <td>@product.ProductQuantity</td>
-                                                <td>@product.ProductType</td>
-                                                <td>@product.ProductWarranty</td>
-                                                <td>@product.GemName</td>
-                                                <td>@String.Format("{0:F2}", product.GemWeight)</td>
-                                                <td>@product.GoldName</td>
-                                                <td>@String.Format("{0:F2}", product.GoldWeight)</td>
-                                                <td>@String.Format("{0:N0}", product.UnitPrice)</td>
-                                                <td>@product.CreatedAt.ToShortDateString()</td>
-                                                <td>
-                                                    <form method="post" asp-page-handler="ViewDetail">
-                                                        <input type="hidden" name="productId" value="@product.ProductId" />
-                                                        <button class="btn btn-outline-warning btn-fw" type="submit">Detail</button>
-                                                    </form>
-                                                </td>
-                                                <td>
-                                                    <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
-                                                        <input type="hidden" name="productId" value="@product.ProductId" />
-                                                        <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                                                        <input type="submit" value="Add to Cart" class="btn btn-outline-success btn-fw" />
-                                                    </form>
-                                                </td>
+                                                <td>@Model.ViewProductDetail.ProductCode</td>
+                                                <td>@Model.ViewProductDetail.ProductName</td>
+                                                <td><img src="/ProductImages/@Model.ViewProductDetail.ProductImages" width="100px" /></td>
+                                                <td>@Model.ViewProductDetail.ProductQuantity</td>
+                                                <td>@Model.ViewProductDetail.ProductType</td>
+                                                <td>@Model.ViewProductDetail.ProductWarranty</td>
+                                                <td>@Model.ViewProductDetail.GemName</td>
+                                                <td>@String.Format("{0:F2}", Model.ViewProductDetail.GemWeight)</td>
+                                                <td>@Model.ViewProductDetail.GoldName</td>
+                                                <td>@String.Format("{0:F2}", Model.ViewProductDetail.GoldWeight)</td>
+                                                <td>@String.Format("{0:N0}", Model.ViewProductDetail.UnitPrice)</td>
+                                                <td>@Model.ViewProductDetail.CreatedAt.ToShortDateString()</td>
                                             </tr>
-                                        }
-                                    </tbody>
+                                        </tbody>
+                                    }
                                 </table>
                             </div>
                             <!-- EDIT HERE END -->
