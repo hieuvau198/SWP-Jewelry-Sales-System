@@ -47,7 +47,9 @@ namespace RazorTest.Pages.Sale
             // Verify auth
             List<string> roles = new List<string>
             {
-                "Admin"
+                "Admin",
+                "Cashier",
+                "Sale"
             };
             if (!_apiService.VerifyAuth(HttpContext, roles))
             {

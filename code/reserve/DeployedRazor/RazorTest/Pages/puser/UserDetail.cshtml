@@ -10,7 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User List</title>
+    <title>User</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -394,8 +394,8 @@
                                                 <td>@user.Email</td>
                                                 <td>@user.Role</td>
                                                 <td class="action-buttons">
-                                                    <a asp-page="./Edit" asp-route-id="@user.UserId" class="btn btn-inverse-warning btn-fw">Edit</a>
-                                                    <a asp-page="./Delete" asp-route-id="@user.UserId" class="btn btn-inverse-danger btn-fw">Delete</a>
+                                                    <a asp-page="./Edit" asp-route-id="@user.UserId" class="btn btn-outline-warning btn-fw">Edit</a>
+                                                    <a asp-page="./Delete" asp-route-id="@user.UserId" class="btn btn-outline-danger btn-fw">Delete</a>
                                                 </td>
                                             </tr>
                                         }
@@ -406,7 +406,7 @@
                             <div class="card-footer text-center">
                                 @if (Model.Users.HasPreviousPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Users.TotalPages; i++)
                                 {
@@ -414,12 +414,12 @@
                                 }
                                 @if (Model.Users.HasNextPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./UserDetail" asp-route-currentPage="@(Model.Users.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
                             <div class="card-footer text-center">
-                                <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Add New User</a>
-                                <a asp-page="/Index" class="btn btn-inverse-secondary btn-fw">Back to Home</a>
+                                <a asp-page="./Create" class="btn btn-outline-secondary btn-fw">Add New User</a>
+                                <a asp-page="/Index" class="btn btn-outline-secondary btn-fw">Back</a>
                             </div>
 
                         </div>

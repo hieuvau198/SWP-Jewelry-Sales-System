@@ -16,7 +16,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Product List</title>
+    <title>Product</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -482,8 +482,8 @@
                                                 <td class="action-buttons">
                                                     @if (Model.VerifyAuth("Admin") || Model.VerifyAuth("Manager"))
                                                     {
-                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-primary" >Edit</a>
-                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-danger">Delete</a>
+                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-outline-warning btn-fw">Edit</a>
+                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-outline-danger btn-fw">Delete</a>
 
                                                     }
                                                     else if (Model.VerifyAuth("Sale") || Model.VerifyAuth("Cashier"))
@@ -501,7 +501,7 @@
                             <div class="card-body text-center">
                                 @if (Model.Products.HasPreviousPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Products.TotalPages; i++)
                                 {
@@ -509,12 +509,12 @@
                                 }
                                 @if (Model.Products.HasNextPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./ProductDetail" asp-route-currentPage="@(Model.Products.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
                             <div class="card-body text-center">
-                                <a asp-page="./Create" class="btn btn-inverse-secondary btn-fw">Create New</a>
-                                <a href="javascript:history.back()" class="btn btn-inverse-secondary btn-fw">Back</a>
+                                <a asp-page="./Create" class="btn btn-outline-light btn-fw">Create New</a>
+                                <a href="javascript:history.back()" class="btn btn-outline-light btn-fw">Back</a>
                             </div>
 
                         </div>

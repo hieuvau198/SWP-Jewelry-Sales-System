@@ -10,7 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>User List</title>
+    <title>Product</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -378,6 +378,9 @@
                 <div class="content-wrapper">
                     <div class="card">
                         <div class="card-body">
+                            <div class="card-header text-center">
+                                <h1>Edit Product</h1>
+                            </div>
                             <!-- EDIT HERE ONLY -->
                             <form method="post">
                                 <input type="hidden" asp-for="Product.ProductId" />
@@ -455,13 +458,13 @@
                                 </div>
 
                                 <div class="form-group ">
-                                    <button type="submit" class="btn btn-inverse-success btn-fw">Save</button>
+                                    <button type="submit" class="btn btn-outline-success btn-fw">Save</button>
                                 </div>                                
                             </form>
                             <!-- EDIT HERE END -->
 
                             <div class="card-body text-center">
-                                <a class="btn btn-inverse-secondary btn-fw" asp-page="./ProductDetail">Back</a>
+                                <a class="btn btn-outline-secondary btn-fw" asp-page="./ProductDetail">Back</a>
                             </div>
 
                         </div>

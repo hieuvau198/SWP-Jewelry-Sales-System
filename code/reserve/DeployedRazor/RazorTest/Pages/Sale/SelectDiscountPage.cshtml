@@ -9,7 +9,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Create Customer</title>
+    <title>Select Discount</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -410,7 +410,7 @@
                                                     <td>
                                                         <form method="post" asp-page-handler="SelectDiscount">
                                                             <input type="hidden" name="discountId" value="@discount.DiscountId" />
-                                                            <button type="submit" class="btn btn-inverse-success btn-fw">Select</button>
+                                                            <button type="submit" class="btn btn-outline-success btn-fw">Select</button>
                                                         </form>
                                                     </td>
                                                 </tr>
@@ -420,7 +420,7 @@
                                 </table>
                             </div>
                             <div class="card-body text-center">
-                                <a asp-page="./ViewCart" class="btn btn-inverse-success btn-fw">Save</a>
+                                <a asp-page="./ViewCart" class="btn btn-outline-secondary btn-fw">Back</a>
                             </div>
                             <!-- EDIT HERE END -->
                         </div>

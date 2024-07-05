@@ -395,43 +395,52 @@
                                                 <input asp-for="Invoice.CustomerId" class="form-control" id="customerId">
                                                 <span asp-validation-for="Invoice.CustomerId" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="userId">User ID</label>
                                                 <input asp-for="Invoice.UserId" class="form-control" id="userId">
                                                 <span asp-validation-for="Invoice.UserId" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="invoiceDate">Invoice Date</label>
                                                 <input asp-for="Invoice.InvoiceDate" class="form-control" id="invoiceDate">
                                                 <span asp-validation-for="Invoice.InvoiceDate" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="customerVoucher">Customer Voucher</label>
                                                 <input asp-for="Invoice.CustomerVoucher" class="form-control" id="customerVoucher">
                                                 <span asp-validation-for="Invoice.CustomerVoucher" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="totalPrice">Total Price</label>
                                                 <input asp-for="Invoice.TotalPrice" class="form-control" id="totalPrice">
                                                 <span asp-validation-for="Invoice.TotalPrice" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="endTotalPrice">End Total Price</label>
                                                 <input asp-for="Invoice.EndTotalPrice" class="form-control" id="endTotalPrice">
                                                 <span asp-validation-for="Invoice.EndTotalPrice" class="text-danger"></span>
                                             </div>
+
                                             <div class="form-group">
                                                 <label for="invoiceStatus">Invoice Status</label>
                                                 <input asp-for="Invoice.InvoiceStatus" class="form-control" id="invoiceStatus">
                                                 <span asp-validation-for="Invoice.InvoiceStatus" class="text-danger"></span>
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-block">Create</button>
+                                            <div class="card-body text-center">
+                                                <button type="submit" class="btn btn-outline-light btn-fw">Create</button>
+                                                <a asp-page="./InvoiceDetail" class="btn btn-outline-danger btn-fw">Cancel</a>
+                                            </div>
                                         </form>
                                     </div>
                             </div>
                         </div>
                         <!-- EDIT HERE END -->
-                        <a asp-page="/pinvoice/InvoiceDetail">Back to List</a>
                     </div>
                 </div>
             </div>

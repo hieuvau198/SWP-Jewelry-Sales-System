@@ -399,8 +399,8 @@
                                                 <td>@customer.CustomerPoint</td>
                                                 <td>@customer.AttendDate.ToShortDateString()</td>
                                                 <td>
-                                                    <a asp-page="Edit" asp-route-id="@customer.CustomerId" class="btn btn-inverse-success btn-fw">Edit</a>
-                                                    <a asp-page="Delete" asp-route-id="@customer.CustomerId" class="btn btn-inverse-danger btn-fw">Delete</a>
+                                                    <a asp-page="Edit" asp-route-id="@customer.CustomerId" class="btn btn-outline-warning btn-fw">Edit</a>
+                                                    <a asp-page="Delete" asp-route-id="@customer.CustomerId" class="btn btn-outline-danger btn-fw">Delete</a>
                                                 </td>
                                             </tr>
                                         }
@@ -413,7 +413,7 @@
                             <div class="card-body text-center">
                                 @if (Model.Customers.HasPreviousPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Customers.TotalPages; i++)
                                 {
@@ -421,13 +421,13 @@
                                 }
                                 @if (Model.Customers.HasNextPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./CustomerDetail" asp-route-currentPage="@(Model.Customers.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
 
                             <div class="card-body text-center">
-                                <a class="btn btn-inverse-secondary btn-fw" asp-page="./Create">Create New Customer</a>
-                                <a class="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back</a>
+                                <a class="btn btn-outline-light btn-fw" asp-page="./Create">Create New Customer</a>
+                                <a class="btn btn-outline-secondary btn-fw" asp-page="/Index">Back</a>
                             </div>
                         </div>
                     </div>

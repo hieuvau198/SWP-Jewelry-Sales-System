@@ -427,7 +427,7 @@
                                                 <td>
                                                     <form method="post" asp-page-handler="ViewDetail">
                                                         <input type="hidden" name="invoiceId" value="@invoice.InvoiceId" />
-                                                        <button class="btn btn-inverse-warning btn-fw" type="submit">Detail</button>
+                                                        <button class="btn btn-outline-warning btn-fw" type="submit">Detail</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -440,7 +440,7 @@
                             <div class="card-body text-center">
                                 @if (Model.Invoices.HasPreviousPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
                                 {
@@ -448,12 +448,12 @@
                                 }
                                 @if (Model.Invoices.HasNextPage)
                                 {
-                                    <a class="btn btn-primary" asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./InvoiceDetail" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
 
                             <div class="card-body text-center">
-                                <a class="btn btn-inverse-secondary btn-fw" asp-page="/Index">Back</a>
+                                <a class="btn btn-outline-secondary btn-fw" asp-page="/Index">Back</a>
                             </div>
                         </div>
                     </div>
