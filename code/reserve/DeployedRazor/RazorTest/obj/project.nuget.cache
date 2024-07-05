@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wtN5Zgx/r7M=",
+  "dgSpecHash": "MDg5sMqX+Fk=",
   "success": true,
-  "projectFilePath": "D:\\workspace\\github\\swp\\SWP-Jewelry-Sales-System\\code\\reserve\\DeployedRazor\\RazorTest\\RazorTest.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\RazorTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
