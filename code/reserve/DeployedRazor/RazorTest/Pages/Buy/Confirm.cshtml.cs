@@ -37,8 +37,8 @@ namespace RazorTest.Pages.Buy
         public InvoiceItem BuyConfirmInvoiceItemObject { get; set; }
         public async Task<IActionResult> OnGet()
         {
-            
-            
+
+
             try
             {
                 // Verify auth
@@ -57,6 +57,14 @@ namespace RazorTest.Pages.Buy
 
                 BuyConfirmInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyConfirmInvoiceObject);
                 BuyConfirmInvoiceItemObject = HttpContext.Session.GetObject<InvoiceItem>(SessionKeyBuyConfirmInvoiceItemObject);
+
+                if (BuyInvoiceItemObject == null
+                    || BuyProductObject == null
+                    || BuyConfirmInvoiceObject == null
+                    || BuyConfirmInvoiceItemObject == null)
+                {
+                    return RedirectToPage("/Error");
+                }
             }
             catch (Exception ex)
             {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\RazorTest.csproj": {}
+    "C:\\Users\\LENOVO\\Desktop\\1022 0507\\RazorTest\\RazorTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\RazorTest.csproj": {
+    "C:\\Users\\LENOVO\\Desktop\\1022 0507\\RazorTest\\RazorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\RazorTest.csproj",
+        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\1022 0507\\RazorTest\\RazorTest.csproj",
         "projectName": "RazorTest",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\RazorTest.csproj",
+        "projectPath": "C:\\Users\\LENOVO\\Desktop\\1022 0507\\RazorTest\\RazorTest.csproj",
         "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\2310 0407\\RazorTest\\obj\\",
+        "outputPath": "C:\\Users\\LENOVO\\Desktop\\1022 0507\\RazorTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

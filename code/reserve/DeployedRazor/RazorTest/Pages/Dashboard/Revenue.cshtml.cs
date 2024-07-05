@@ -44,6 +44,10 @@ namespace RazorTest.Pages.Dashboard
 
                 // Get data
                 var invoices = await _invoiceService.GetInvoicesAsync();
+                if(invoices == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
 
                 var monthlySales = invoices
                     .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
@@ -111,7 +115,7 @@ namespace RazorTest.Pages.Dashboard
             catch (Exception ex)
             {
                 return RedirectToPage("/Error");
-            }            
+            }
 
             return Page();
         }

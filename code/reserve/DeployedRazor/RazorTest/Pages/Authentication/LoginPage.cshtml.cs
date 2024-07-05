@@ -30,27 +30,48 @@ namespace RazorTest.Pages.Authentication
 
         public async Task<IActionResult> OnPost()
         {
-            if (ModelState.IsValid)
+            try
             {
-                User loginDto = new User
+                // Verify access
+                List<string> roles = new List<string>
                 {
-                    Username = Username,
-                    Password = Password
+                    "Admin",
+                    "Manager",
+                    "Sale",
+                    "Cashier"
                 };
-                User user = await _apiService.PostAsJsonAndDeserializeAsync<User>(UrlLogin, loginDto);
-                if (user != null && user.Role != null)
+                if (_apiService.VerifyAuth(HttpContext, roles))
                 {
-                    HttpContext.Session.SetObject(SessionKeyUserObject, user);
-                    HttpContext.Session.SetObject(SessionKeyAuthState, true);
-
-                    // Set the ViewData["Username"] with the logged-in username
-                    ViewData["Username"] = user.Username;
-
                     return RedirectToPage("/Index");
                 }
 
-                HttpContext.Session.SetObject(SessionKeyAuthState, false);
-                ModelState.AddModelError(string.Empty, "Invalid username or password.");
+                // Process data
+                if (ModelState.IsValid)
+                {
+                    User loginDto = new User
+                    {
+                        Username = Username,
+                        Password = Password
+                    };
+                    User user = await _apiService.PostAsJsonAndDeserializeAsync<User>(UrlLogin, loginDto);
+                    if (user != null && user.Role != null)
+                    {
+                        HttpContext.Session.SetObject(SessionKeyUserObject, user);
+                        HttpContext.Session.SetObject(SessionKeyAuthState, true);
+
+                        // Set the ViewData["Username"] with the logged-in username
+                        ViewData["Username"] = user.Username;
+
+                        return RedirectToPage("/Index");
+                    }
+
+                    HttpContext.Session.SetObject(SessionKeyAuthState, false);
+                    ModelState.AddModelError(string.Empty, "Invalid username or password.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
             }
 
             return Page();

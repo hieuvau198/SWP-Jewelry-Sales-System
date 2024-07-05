@@ -19,34 +19,51 @@ namespace RazorTest.Pages.Authentication
             _apiService = apiService;
         }
 
-
-
-
         public void OnGet()
         {
         }
 
         public async Task<IActionResult> OnPostRegister(string username, string password, string email, string fullname)
         {
-            List<User> users = await _apiService.GetAsync<List<User>>(UrlUser);
-            if(!users.IsNullOrEmpty())
+            try
             {
-                User user = users.Find(x => x.Username == username) ?? users.Find(x => x.Email == email);
-                if(user != null)
+                // Verify access
+                List<string> roles = new List<string>
                 {
-                    return Page();
+                    "Admin",
+                    "Manager",
+                    "Sale",
+                    "Cashier"
+                };
+                if (_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/NotFound");
                 }
+
+                List<User> users = await _apiService.GetAsync<List<User>>(UrlUser);
+                if (!users.IsNullOrEmpty())
+                {
+                    User user = users.Find(x => x.Username == username) ?? users.Find(x => x.Email == email);
+                    if (user != null)
+                    {
+                        return Page();
+                    }
+                }
+                User registerUser = new User
+                {
+                    UserId = username,
+                    Username = username,
+                    Password = password,
+                    Email = email,
+                    Role = "Unconfirmed",
+                    Fullname = fullname
+                };
+                _apiService.PostAsJsonAsync<User>(UrlUser, registerUser);
             }
-            User registerUser = new User
+            catch (Exception ex)
             {
-                UserId = username,
-                Username = username,
-                Password = password,
-                Email = email,
-                Role = "Unconfirmed",
-                Fullname = fullname
-            };
-            _apiService.PostAsJsonAsync<User>(UrlUser, registerUser);
+                return RedirectToPage("/Error");
+            }
 
             return RedirectToPage("/Authentication/RegisterSuccess");
         }
