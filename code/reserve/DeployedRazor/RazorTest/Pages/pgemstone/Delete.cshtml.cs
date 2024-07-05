@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pgemstone
 {
     public class DeleteModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly GemService _gemService;
         private readonly ApiService _apiService;
 
@@ -16,6 +18,7 @@ namespace RazorTest.Pages.pgemstone
             _gemService = gemService;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Gem Gem { get; set; }
@@ -32,7 +35,8 @@ namespace RazorTest.Pages.pgemstone
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             Gem = await _gemService.GetGemByIdAsync(id);
             if (Gem == null)
             {

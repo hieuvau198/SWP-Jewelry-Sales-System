@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
@@ -22,14 +23,29 @@ namespace RazorTest.Pages
 
         public List<Gold> Golds { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
-            var golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold");
-
-            if (golds != null)
+            try
             {
-                Golds = golds.OrderBy(b => b.GoldId).ToList();
+                var golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold");
+
+                if (golds != null)
+                {
+                    Golds = golds.OrderBy(b => b.GoldId).ToList();
+                }
+                else
+                {
+                    RedirectToPage("/NotFound");
+                }
             }
+            catch (Exception ex)
+            {
+                RedirectToPage("/Error");
+            }
+            
+            
+
+            return Page();
         }
 
         public bool VerifyAuth(string role)

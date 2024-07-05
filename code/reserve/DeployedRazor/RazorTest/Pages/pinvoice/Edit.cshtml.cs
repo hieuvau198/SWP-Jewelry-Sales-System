@@ -22,6 +22,7 @@ namespace RazorTest.Pages.pinvoice
             _apiService = apiService;
             _logger = logger;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Invoice Invoice { get; set; }
@@ -39,7 +40,8 @@ namespace RazorTest.Pages.pinvoice
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Get data
             if (id == null)
             {

@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pdiscount
 {
     public class EditModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly DiscountService _discountService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -18,6 +20,7 @@ namespace RazorTest.Pages.pdiscount
             _apiService = apiService;
             _logger = logger;   
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Discount Discount { get; set; }
@@ -34,7 +37,8 @@ namespace RazorTest.Pages.pdiscount
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             if (id == null)
             {
                 _logger.LogError("ID is null");

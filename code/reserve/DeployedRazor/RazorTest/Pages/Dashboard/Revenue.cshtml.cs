@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,6 +14,8 @@ namespace RazorTest.Pages.Dashboard
 {
     public class RevenueModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
+        
         private readonly InvoiceService _invoiceService;
         private readonly ApiService _apiService;
 
@@ -21,6 +24,7 @@ namespace RazorTest.Pages.Dashboard
             _invoiceService = invoiceService;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         public string MonthlySalesJson { get; set; }
         public string MonthlyPurchasesJson { get; set; }
@@ -43,6 +47,8 @@ namespace RazorTest.Pages.Dashboard
                 }
 
                 // Get data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
                 var invoices = await _invoiceService.GetInvoicesAsync();
                 if(invoices == null)
                 {

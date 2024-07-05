@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pwarranty
 {
     public class EditModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly WarrantyService _warrantyService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -18,6 +20,8 @@ namespace RazorTest.Pages.pwarranty
             _apiService = apiService;
             _logger = logger;
         }
+        public User User { get; set; }
+
         [BindProperty]
         public Warranty Warranty { get; set; }
         public async Task<IActionResult> OnGetAsync(string id)
@@ -32,6 +36,8 @@ namespace RazorTest.Pages.pwarranty
                 return RedirectToPage("/Authentication/AccessDenied");
             }
 
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             if (id == null)
             {
                 _logger.LogError("ID is null");

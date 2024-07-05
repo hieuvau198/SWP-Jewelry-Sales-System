@@ -52,6 +52,8 @@ namespace RazorTest.Pages.pproduct
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
 
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
                 // Set some vars
                 SearchTerm = searchTerm;
                 if (!string.IsNullOrEmpty(filterType))

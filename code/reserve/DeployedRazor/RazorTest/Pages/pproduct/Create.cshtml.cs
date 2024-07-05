@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pproduct
 {
     public class CreateModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ProductService _productService;
         private readonly ILogger<CreateModel> _logger;
         private readonly ApiService _apiService;
@@ -19,6 +21,7 @@ namespace RazorTest.Pages.pproduct
             _logger = logger;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Product Product { get; set; }
@@ -43,6 +46,8 @@ namespace RazorTest.Pages.pproduct
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
 
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
                 // Initialize the Gold with a new ID
                 Product = new Product
                 {

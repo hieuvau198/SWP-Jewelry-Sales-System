@@ -8,6 +8,9 @@ namespace RazorTest.Pages.Buy
 {
     public class ConfirmModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
+
+
         public const string SessionKeyBuyInvoiceItemObject = "_BuyInvoiceItemObject";
         public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
         public const string SessionKeyBuyProductObject = "_BuyProductObject";
@@ -31,6 +34,8 @@ namespace RazorTest.Pages.Buy
             _apiService = apiService;
         }
 
+        public User User { get; set; }
+
         public InvoiceItem BuyInvoiceItemObject { get; set; }
         public Product BuyProductObject { get; set; }
         public Invoice BuyConfirmInvoiceObject { get; set; }
@@ -51,6 +56,9 @@ namespace RazorTest.Pages.Buy
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
+
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
                 BuyInvoiceItemObject = HttpContext.Session.GetObject<InvoiceItem>(SessionKeyBuyInvoiceItemObject);
                 BuyProductObject = HttpContext.Session.GetObject<Product>(SessionKeyBuyProductObject);

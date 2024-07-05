@@ -20,7 +20,7 @@ namespace RazorTest.Pages
         {
             _apiService = apiService;
         }
-
+        public User User { get; set; }
         public List<Discount> Discounts { get; set; }
         public List<Customer> Customers { get; set; }
         public List<Gem> Gems { get; set; }
@@ -37,7 +37,8 @@ namespace RazorTest.Pages
 
         public async Task OnGetAsync(int? pageIndex)
         {
-            
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             const int pageSize = 9; // Number of products per page
             Products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");

@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.puser
 {
     public class CreateModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly UserService _userService;
         private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
@@ -20,7 +22,9 @@ namespace RazorTest.Pages.puser
         }
 
         [BindProperty]
+        public User Usern { get; set; }
         public User User { get; set; }
+
 
         public IActionResult OnGet()
         {
@@ -33,9 +37,10 @@ namespace RazorTest.Pages.puser
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Initialize the Create with a new ID
-            User = new User
+            Usern = new User
             {
                 UserId = Guid.NewGuid().ToString()
             };
@@ -60,12 +65,12 @@ namespace RazorTest.Pages.puser
             }
 
             // Check if UserId is still empty and generate it
-            if (string.IsNullOrEmpty(User.UserId))
+            if (string.IsNullOrEmpty(Usern.UserId))
             {
-                User.UserId = Guid.NewGuid().ToString();
+                Usern.UserId = Guid.NewGuid().ToString();
             }
 
-            var response = await _userService.CreateUserAsync(User);
+            var response = await _userService.CreateUserAsync(Usern);
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToPage("/puser/UserDetail");

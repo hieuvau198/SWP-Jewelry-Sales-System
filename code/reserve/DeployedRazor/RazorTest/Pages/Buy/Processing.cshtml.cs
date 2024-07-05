@@ -11,7 +11,8 @@ namespace RazorTest.Pages.Buy
 {
     public class ProcessingModel : PageModel
     {
-        
+        public const string SessionKeyUserObject = "_UserObject";
+
         public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
         public const string SessionKeyBuyCustomerObject = "_BuyCustomerObject";
 
@@ -36,6 +37,8 @@ namespace RazorTest.Pages.Buy
         {
             _apiService = apiService;
         }
+
+        public User User { get; set; }
 
         public List<Invoice> InvoiceList { get; set; }
         public List<Invoice> BuyInvoiceList { get; set; }
@@ -67,6 +70,9 @@ namespace RazorTest.Pages.Buy
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
 
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
                 //Get Data For Invoice on each Redirection
                 InvoiceList = HttpContext.Session.GetObject<List<Invoice>>(SessionKeyInvoiceList)
                         ?? await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
@@ -93,9 +99,6 @@ namespace RazorTest.Pages.Buy
                 if (BuyInvoiceList != null)
                 {
                     PaginatedBuyInvoiceList = PaginatedList<Invoice>.Create(BuyInvoiceList.AsQueryable(), pageIndex, pageSize);
-                }else
-                {
-                    return RedirectToPage("/Error");
                 }
             }
             catch (Exception ex)

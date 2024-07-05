@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pinvoiceitem
 {
     public class CreateModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly InvoiceItemService _invoiceItemService;
         private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
@@ -18,6 +20,7 @@ namespace RazorTest.Pages.pinvoiceitem
             _logger = logger;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public InvoiceItem InvoiceItem { get; set; }
@@ -33,7 +36,8 @@ namespace RazorTest.Pages.pinvoiceitem
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Initialize the InvoiceItem with a new ID
             InvoiceItem = new InvoiceItem
             {

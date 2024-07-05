@@ -11,14 +11,16 @@ namespace RazorTest.Pages.pdiscount
 {
     public class DiscountListModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
 
         public DiscountListModel(ApiService apiService)
         {
             _apiService = apiService;
         }
+        public User User { get; set; }
 
-       // public List<Discount> Discounts { get; set; }
+        // public List<Discount> Discounts { get; set; }
         public PaginatedList<Discount> Discounts { get; set; }
 
         private const int PageSize = 10;
@@ -39,7 +41,9 @@ namespace RazorTest.Pages.pdiscount
                 }
 
             // Get data
-                var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
 
                 if (discounts != null)
                 {

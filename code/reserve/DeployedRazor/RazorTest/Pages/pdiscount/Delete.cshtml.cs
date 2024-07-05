@@ -2,12 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pdiscount
 {
     public class DeleteModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
+        
         private readonly DiscountService _discountService;
         private readonly ApiService _apiService;
         public DeleteModel(DiscountService discountService, ApiService apiService)
@@ -15,6 +18,8 @@ namespace RazorTest.Pages.pdiscount
             _discountService = discountService;
             _apiService = apiService;
         }
+
+        public User User { get; set; }
 
         [BindProperty]
         public Discount Discount { get; set; }
@@ -31,7 +36,8 @@ namespace RazorTest.Pages.pdiscount
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Get data
             Discount = await _discountService.GetDiscountByIdAsync(id);
             if (Discount == null)

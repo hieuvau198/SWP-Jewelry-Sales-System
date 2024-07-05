@@ -23,6 +23,7 @@ namespace RazorTest.Pages.Sale
             _logger = logger;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Customer Customer { get; set; }
@@ -41,6 +42,8 @@ namespace RazorTest.Pages.Sale
                 return RedirectToPage("/Authentication/AccessDenied");
             }
 
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Initialize the Customer with a new ID
             Customer = new Customer
             {

@@ -11,12 +11,16 @@ namespace RazorTest.Pages.pcustomer
 {
     public class CustomerListModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
+
         private readonly ApiService _apiService;
 
         public CustomerListModel(ApiService apiService)
         {
             _apiService = apiService;
         }
+
+        public User User { get; set; }
 
         // public List<Customer> Customers { get; set; }
 
@@ -40,6 +44,8 @@ namespace RazorTest.Pages.pcustomer
             }
 
             // get data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
             var customers = await _apiService.GetAsync<List<Customer>>("https://hvjewel.azurewebsites.net/api/customer");
 
             // Separate pages

@@ -11,14 +11,16 @@ namespace RazorTest.Pages.pgemstone
 {
     public class GemListModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
 
         public GemListModel(ApiService apiService)
         {
             _apiService = apiService;
         }
+        public User User { get; set; }
 
-  //      public List<Gem> Gems { get; set; }
+        //      public List<Gem> Gems { get; set; }
 
         public PaginatedList<Gem> Gems { get; set; }
 
@@ -38,7 +40,8 @@ namespace RazorTest.Pages.pgemstone
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
 
             if (gems != null)

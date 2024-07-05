@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.puser
 {
     public class EditModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly UserService _userService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -17,9 +19,10 @@ namespace RazorTest.Pages.puser
             _userService = userService;
             _logger = logger;
         }
+        public User User { get; set; }
 
         [BindProperty]
-        public User User { get; set; }
+        public User Usern { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
@@ -32,6 +35,8 @@ namespace RazorTest.Pages.puser
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             if (id == null)
             {
@@ -39,9 +44,9 @@ namespace RazorTest.Pages.puser
                 return NotFound();
             }
 
-            User = await _userService.GetUserByIdAsync(id);
+            Usern = await _userService.GetUserByIdAsync(id);
 
-            if (User == null)
+            if (Usern == null)
             {
                 _logger.LogError($"User not found for ID {id}");
                 return NotFound();
@@ -66,9 +71,9 @@ namespace RazorTest.Pages.puser
             }
 
             _logger.LogInformation($"Updating user with ID {User.UserId}");
-            _logger.LogInformation($"User details: {JsonConvert.SerializeObject(User)}");
+            _logger.LogInformation($"User details: {JsonConvert.SerializeObject(Usern)}");
 
-            var response = await _userService.UpdateUserAsync(User);
+            var response = await _userService.UpdateUserAsync(Usern);
 
             if (!response.IsSuccessStatusCode)
             {

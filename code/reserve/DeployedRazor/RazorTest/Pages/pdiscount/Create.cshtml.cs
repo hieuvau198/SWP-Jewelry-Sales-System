@@ -2,12 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pdiscount
 {
     public class CreateModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
+        
         private readonly ApiService _apiService;
         private readonly DiscountService _discountService;
         private readonly ILogger<CreateModel> _logger;
@@ -18,6 +21,9 @@ namespace RazorTest.Pages.pdiscount
             _discountService = discountService;
             _logger = logger;
         }
+
+        public User User { get; set; }
+
 
         [BindProperty]
         public Discount Discount { get; set; }
@@ -34,6 +40,9 @@ namespace RazorTest.Pages.pdiscount
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
+
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             // Initialize the Discount with a new ID
             Discount = new Discount

@@ -35,6 +35,7 @@ namespace RazorTest.Pages.Buy
             _apiService = apiService;
         }
 
+        public User User { get; set; }
         public Invoice BuyInvoiceObject { get; set; }
         public Customer BuyCustomerObject { get; set; }
         public List<InvoiceItem> BuyInvoiceItemList { get; set; }
@@ -56,6 +57,8 @@ namespace RazorTest.Pages.Buy
                 }
 
                 // Get Data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
                 BuyInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyBuyInvoiceObject);
                 if (BuyInvoiceObject == null)
                 {

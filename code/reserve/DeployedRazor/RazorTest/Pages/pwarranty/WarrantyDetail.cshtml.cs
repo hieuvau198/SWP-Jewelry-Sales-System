@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,12 +11,14 @@ namespace RazorTest.Pages.pwarranty
 {
     public class WarrantyListModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
 
         public WarrantyListModel(ApiService apiService)
         {
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         public List<Warranty> Warranties { get; set; }
 
@@ -33,6 +36,8 @@ namespace RazorTest.Pages.pwarranty
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             var warranties = await _apiService.GetAsync<List<Warranty>>("https://hvjewel.azurewebsites.net/api/warranty");
 

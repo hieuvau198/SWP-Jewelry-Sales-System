@@ -47,7 +47,8 @@ namespace RazorTest.Pages.pinvoice
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
             if (invoices != null)
             {

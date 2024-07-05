@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pwarranty
 {
     public class CreateModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly WarrantyService _warrantyService;
         private readonly ApiService _apiService;
         private readonly ILogger<CreateModel> _logger;
@@ -18,6 +20,7 @@ namespace RazorTest.Pages.pwarranty
             _logger = logger;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Warranty Warranty { get; set; }
@@ -33,7 +36,8 @@ namespace RazorTest.Pages.pwarranty
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Initialize the Discount with a new ID
             Warranty = new Warranty
             {

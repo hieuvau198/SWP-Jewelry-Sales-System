@@ -11,14 +11,16 @@ namespace RazorTest.Pages.puser
 {
     public class UserListModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly ApiService _apiService;
 
         public UserListModel(ApiService apiService)
         {
             _apiService = apiService;
         }
+        public User User { get; set; }
 
-      //  public List<User> Users { get; set; }
+        //  public List<User> Users { get; set; }
 
         public PaginatedList<User> Users { get; set; }
 
@@ -34,6 +36,8 @@ namespace RazorTest.Pages.puser
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
             users = users.OrderByDescending(x => x.UserId).ToList();

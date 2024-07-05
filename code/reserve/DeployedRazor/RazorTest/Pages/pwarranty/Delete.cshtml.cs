@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pwarranty
 {
     public class DeleteModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly WarrantyService _warrantyService;
         private readonly ApiService _apiService;
 
@@ -16,6 +18,7 @@ namespace RazorTest.Pages.pwarranty
             _warrantyService = warrantyService;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Warranty Warranty { get; set; }
@@ -32,6 +35,8 @@ namespace RazorTest.Pages.pwarranty
                 return RedirectToPage("/Authentication/AccessDenied");
             }
 
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             Warranty = await _warrantyService.GetWarrantyByIdAsync(id);
             if (Warranty == null)
             {

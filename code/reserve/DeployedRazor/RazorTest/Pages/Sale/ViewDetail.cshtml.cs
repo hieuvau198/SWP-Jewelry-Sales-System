@@ -35,6 +35,7 @@ namespace RazorTest.Pages.Sale
             _apiService = apiService;
             _logger = logger;
         }
+        public User User { get; set; }
 
         public List<Product> Products { get; set; } = new List<Product>();
 
@@ -60,7 +61,9 @@ namespace RazorTest.Pages.Sale
                 return RedirectToPage("/Authentication/AccessDenied");
             }
 
-            // Get data
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
             ViewProductDetail = HttpContext.Session.GetObject<Product>(SaleHomePageModel.SessionKeySelectedProduct);
 
             if (HttpContext.Session.GetObject<User>(SessionKeyUserObject) == null)

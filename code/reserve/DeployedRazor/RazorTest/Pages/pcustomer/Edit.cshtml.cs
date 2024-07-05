@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pcustomer
@@ -22,6 +23,8 @@ namespace RazorTest.Pages.pcustomer
             _logger = logger;
         }
 
+        public User User { get; set; }
+
         [BindProperty]
         public Customer Customer { get; set; }
 
@@ -39,6 +42,9 @@ namespace RazorTest.Pages.pcustomer
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
+
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             // Process results
             if (id == null)

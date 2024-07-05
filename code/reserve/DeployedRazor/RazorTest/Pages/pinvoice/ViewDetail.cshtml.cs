@@ -27,6 +27,8 @@ namespace RazorTest.Pages.pinvoice
             _apiService = apiService;
         }
 
+        public User User { get; set; }
+
         public Invoice ViewDetailInvoiceObject {  get; set; }
 
         public List<InvoiceItem> ViewDetailInvoiceItemList { get; set; }
@@ -45,7 +47,8 @@ namespace RazorTest.Pages.pinvoice
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             // Get data
             ViewDetailInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeyViewDetailInvoiceObject);
             if(ViewDetailInvoiceObject != null)

@@ -2,12 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorTest.Models;
 using RazorTest.Services;
+using RazorTest.Utilities;
 using System.Threading.Tasks;
 
 namespace RazorTest.Pages.pgold
 {
     public class DeleteModel : PageModel
     {
+        public const string SessionKeyUserObject = "_UserObject";
         private readonly GoldService _goldService;
         private readonly ApiService _apiService;
         public DeleteModel(GoldService goldService, ApiService apiService)
@@ -15,6 +17,7 @@ namespace RazorTest.Pages.pgold
             _goldService = goldService;
             _apiService = apiService;
         }
+        public User User { get; set; }
 
         [BindProperty]
         public Gold Gold { get; set; }
@@ -30,7 +33,8 @@ namespace RazorTest.Pages.pgold
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             Gold = await _goldService.GetGoldByIdAsync(id);
             if (Gold == null)
             {

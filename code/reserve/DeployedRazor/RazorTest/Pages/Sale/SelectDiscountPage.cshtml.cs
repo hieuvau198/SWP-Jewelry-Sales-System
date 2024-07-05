@@ -26,6 +26,8 @@ namespace RazorTest.Pages.Sale
         {
             _apiService = apiService; 
         }
+        public User User { get; set; }
+
         public string ProductId {  get; set; } 
         public List<Discount> Discounts {  get; set; }
         public List<Discount> SelectedDiscounts { get; set; }
@@ -48,6 +50,9 @@ namespace RazorTest.Pages.Sale
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
+
+            // Process data
+            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             ProductId = HttpContext.Session.GetString(SessionKeySaleDiscountProductId) ?? "Fail";
             ProductList = HttpContext.Session.GetObject<List<Product>>(SessionKeyProductList);
