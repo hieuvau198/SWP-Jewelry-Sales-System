@@ -10,7 +10,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>Discount</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
@@ -376,7 +376,7 @@
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
                             <div class="table-responsive">
-                                <table class="table table-hover">
+                                <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
                                             <th>Discount Id</th>
@@ -399,38 +399,40 @@
                                                 <td>@discount.PublicDate.ToShortDateString()</td>
                                                 <td>@discount.ExpireDate.ToShortDateString()</td>
                                                 <td>
-                                                    <a asp-page="./Edit" asp-route-id="@discount.DiscountId" class="btn btn-primary" >Edit</a>
-                                                    <a asp-page="./Delete" asp-route-id="@discount.DiscountId" class="btn btn-danger">Delete</a>
+                                                    <a asp-page="./Edit" asp-route-id="@discount.DiscountId" class="btn btn-outline-warning btn-fw">Edit</a>
+                                                    <a asp-page="./Delete" asp-route-id="@discount.DiscountId" class="btn btn-outline-danger btn-fw">Delete</a>
                                                 </td>
                                             </tr>
                                         }
                                     </tbody>
                             </div>
-                            
+
                             </table>
                         </div>
+                        <div class="card-body text-center">
+                            @if (Model.Discounts.HasPreviousPage)
+                            {
+                                <a class="btn btn-primary btn-fw" asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex - 1)">&laquo; Previous</a>
+                            }
+                            @for (int i = 1; i <= Model.Discounts.TotalPages; i++)
+                            {
+                                <a class="btn btn-primary" asp-page="./DiscountDetail" asp-route-currentPage="@i" class="@(i == Model.Discounts.PageIndex ? "active" : "")">@i</a>
+                            }
+                            @if (Model.Discounts.HasNextPage)
+                            {
+                                <a class="btn btn-primary btn-fw" asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex + 1)">Next &raquo;</a>
+                            }
+                        </div>
                         <!-- EDIT HERE END -->
-                        <a asp-page="./Create">Create New Gold</a>
-                        <a asp-page="/Index">Back to List</a>
-
+                        <div class="card-body text-center">
+                            <a class="btn btn-outline-light btn-fw" asp-page="./Create">Create New</a>
+                            <a class="btn btn-outline-secondary btn-fw" asp-page="/Index">Back </a>
+                        </div>
 
                     </div>
                 </div>
             </div>
-            <div class="pagination">
-                @if (Model.Discounts.HasPreviousPage)
-                {
-                    <a asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex - 1)">&laquo; Previous</a>
-                }
-                @for (int i = 1; i <= Model.Discounts.TotalPages; i++)
-                {
-                    <a asp-page="./DiscountDetail" asp-route-currentPage="@i" class="@(i == Model.Discounts.PageIndex ? "active" : "")">@i</a>
-                }
-                @if (Model.Discounts.HasNextPage)
-                {
-                    <a asp-page="./DiscountDetail" asp-route-currentPage="@(Model.Discounts.PageIndex + 1)">Next &raquo;</a>
-                }
-            </div>
+
             <!-- content-wrapper ends -->
             <!-- partial:partials/_footer.html -->
             <footer class="footer">
