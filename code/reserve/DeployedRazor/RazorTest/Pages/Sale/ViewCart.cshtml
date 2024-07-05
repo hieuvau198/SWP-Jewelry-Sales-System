@@ -379,6 +379,9 @@
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
                             <div class="table-responsive">
+                                <div class="card-header text-center">
+                                    <h2 class="mb-0">Card</h2>
+                                </div>
                                 <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
@@ -421,7 +424,7 @@
 
                                                         <form method="post" asp-page-handler="SelectDiscount">
                                                             <input type="hidden" name="productId" value="@product.ProductId" />
-                                                            <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
+                                                            <button type="submit" class="btn btn-outline-warning btn-fw">More</button>
                                                         </form>
                                                     </td>
                                                 }
@@ -430,7 +433,7 @@
                                                     <td>
                                                         <form method="post" asp-page-handler="SelectDiscount">
                                                             <input type="hidden" name="productId" value="@product.ProductId" />
-                                                            <button type="submit" class="btn-primary" style="background-color: #b8860b; border-color: #b8860b; display: block; width: 100px; text-align: center; margin: 10px auto;">More</button>
+                                                            <button type="submit" class="btn btn-outline-warning btn-fw">More</button>
                                                         </form>
                                                     </td>
                                                 }
@@ -460,7 +463,7 @@
                                                 <td>
                                                     <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to remove this product?');">
                                                         <input type="hidden" name="productId" value="@product.ProductId" />
-                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                        <button type="submit" class="btn btn-outline-danger btn-fw">Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -483,32 +486,93 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="pagination">
+
+                            <div class="card-body text-center">
                                 @if (Model.CurrentPage > 1)
                                 {
-                                    <a asp-page="./ViewCart" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./ViewCart" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
                                 }
                                 @for (var i = 1; i <= Model.TotalPages; i++)
                                 {
                                     if (i == Model.CurrentPage)
                                     {
-                                        <a class="active" href="#">@i</a>
+                                        <a class="active btn btn-primary" href="#">@i</a>
                                     }
                                     else
                                     {
-                                        <a asp-page="./ViewCart" asp-route-currentPage="@i">@i</a>
+                                        <a class="btn btn-primary" asp-page="./ViewCart" asp-route-currentPage="@i">@i</a>
                                     }
                                 }
                                 @if (Model.CurrentPage < Model.TotalPages)
                                 {
-                                    <a asp-page="./ViewCart" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
+                                    <a class="btn btn-primary btn-fw" asp-page="./ViewCart" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
                                 }
                             </div>
+
+                            <!-- Display customer details if identified -->
+                            <div class="table-responsive">
+                                <table class="table table-hover text-center ">
+                                    <div class="container">
+                                        <h2>Customer</h2>
+                                    </div>
+                                    <form method="post" asp-page-handler="AddCustomer">
+                                        <input type="hidden" name="customerId" />
+                                        <div class="title">Search Phone Contact</div>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Search" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
+                                            <div class="input-group-append">
+                                                <button class="btn btn-sm btn-outline-primary" type="submit">Search</button>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        @if (Model.Customer != null && !Model.Customer.CustomerName.Equals("Not Identified"))
+                                        {
+                                            <div class="table-responsive">
+                                                <table class="table table-hover text-center">
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <td>@Model.Customer.CustomerName</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Attend Date</th>
+                                                        <td>@Model.Customer.AttendDate</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Rank</th>
+                                                        <td>@Model.Customer.CustomerRank</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Points</th>
+                                                        <td>@Model.Customer.CustomerPoint</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        }
+                                    </form>
+
+                                    <!-- Display message when customer is not found -->
+                                    @if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
+                                    {
+                                        <div class="alert alert-warning" role="alert">
+                                            @TempData["Message"]
+                                        </div>
+                                    }
+                                </table>
+                                <form method="get" action="/Sale/CreateCustomer">
+                                    <input type="hidden" name="Create" value="/Sale/CreateCustomer" />
+                                    <button type="submit" class="btn btn-outline-warning btn-fw" >Add New Customer</button>
+                                </form>
+                            </div>
+                            
                             <div class="card-body text-center">
+                                <form method="post" asp-page-handler="Checkout">
+                                    <button type="submit" class="btn btn-outline-behance btn-fw">Checkout</button>
+                                </form><br/>
                                 <a asp-page="./SaleHomePage" class="btn btn-outline-secondary btn-fw">Back</a>
                             </div>
                             <!-- EDIT HERE END -->
                         </div>
+                        
                     </div>
                 </div>
                 <!-- content-wrapper ends -->
@@ -548,72 +612,4 @@
     <!-- End custom js for this page -->
 </body>
 </html>
-<div class="container">
-</div>
-<div class="luxury-table-wrapper">
-    <table class="luxury-table">
-        
-    </table>
-</div>
 
-
-
-
-
-<div class="container">
-    <h2>Customer</h2>
-</div>
-<form method="post" asp-page-handler="AddCustomer">
-    <input type="hidden" name="customerId" />
-    <div class="title">Search Phone Contact</div>
-    <div class="search-container">
-        <input type="text" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
-        <button type="submit">Search</button>
-    </div>
-    <br />
-    @if (Model.Customer != null && !Model.Customer.CustomerName.Equals("Not Identified"))
-    {
-        <div class="luxury-table-wrapper">
-            <table class="luxury-table">
-                <tr>
-                    <th>Name</th>
-                    <td>@Model.Customer.CustomerName</td>
-                </tr>
-                <tr>
-                    <th>Attend Date</th>
-                    <td>@Model.Customer.AttendDate</td>
-                </tr>
-                <tr>
-                    <th>Rank</th>
-                    <td>@Model.Customer.CustomerRank</td>
-                </tr>
-                <tr>
-                    <th>Points</th>
-                    <td>@Model.Customer.CustomerPoint</td>
-                </tr>
-            </table>
-        </div>
-    }
-</form>
-
-<!-- Display message when customer is not found -->
-@if (!string.IsNullOrEmpty(TempData["Message"]?.ToString()))
-{
-    <div class="alert alert-warning" role="alert">
-        @TempData["Message"]
-    </div>
-}
-
-<!-- Display customer details if identified -->
-
-
-<form method="get" action="/Sale/CreateCustomer">
-    <input type="hidden" name="Create" value="/Sale/CreateCustomer" />
-    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Add New Customer</button>
-</form>
-
-
-
-<form method="post" asp-page-handler="Checkout" style="text-align: center;">
-    <button type="submit" class="btn-pink" style="background-color: #b8860b; color: white;">Checkout</button>
-</form>
