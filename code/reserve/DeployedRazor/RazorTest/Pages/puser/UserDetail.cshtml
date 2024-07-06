@@ -46,7 +46,14 @@
                             </div>
                             <div class="profile-name">
                                 <h5 class="mb-0 font-weight-normal">@Model.User.Fullname</h5>
-                                @if(Model.User.Role.Equals("Sale")){<span>Retail Assistant</span>}else{<span>@Model.User.Role</span>}
+                                @if (Model.User.Role.Equals("Sale"))
+                                {
+                                    <span>Retail Assistant</span>
+                                }
+                                else
+                                {
+                                    <span>@Model.User.Role</span>
+                                }
                             </div>
                         </div>
                         <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -406,28 +413,28 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                                 <h6 class="p-3 mb-0">Setting</h6>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">
-    <div class="preview-thumbnail">
-        <div class="preview-icon bg-dark rounded-circle">
-            <i class="mdi mdi-settings text-success"></i>
-        </div>
-    </div>
-    <div class="preview-item-content" >
-        <p class="preview-subject mb-1" >Profile</p>
-    </div>
-</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-settings text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Profile</p>
+                                    </div>
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item" asp-page="/Authentication/LogoutPage">
-    <div class="preview-thumbnail">
-        <div class="preview-icon bg-dark rounded-circle">
-            <i class="mdi mdi-logout text-danger"></i>
-        </div>
-    </div>
-    <div class="preview-item-content">
-        <p class="preview-subject mb-1" >Log out</p>
-    </div>
-</a>
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-logout text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Log out</p>
+                                    </div>
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">    <div class="preview-thumbnail">        <div class="preview-icon bg-dark rounded-circle">            <i class="mdi mdi-settings text-success"></i>        </div>    </div>    <div class="preview-item-content">        <p class="preview-subject mb-1">Advance</p>    </div></a>
                             </div>
@@ -444,6 +451,24 @@
                 <div class="content-wrapper">
                     <div class="card">
                         <div class="card-body">
+
+                            <!-- SEARCH AND FILTER FORM -->
+                            <form method="get">
+                                <div style="text-align: center; margin-bottom: 20px;">
+                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                    <label>Role</label>
+                                    <select name="filterRole">
+                                        <option value="All" selected>All</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Manager">Manager</option>
+                                        <option value="Sale">Sale</option>
+                                        <option value="Cashier">Cashier</option>
+                                    </select>
+                                    <button type="submit">Search</button>
+                                </div>
+                            </form>
+                            <!-- SEARCH AND FILTER FORM END -->
+
                             <!-- EDIT HERE ONLY -->
                             <div class="table-responsive text-center">
                                 <table class="table table-hover">
@@ -464,8 +489,8 @@
                                                 <td>@user.Email</td>
                                                 <td>@user.Role</td>
                                                 <td class="action-buttons">
-                                                    <a asp-page="./Edit" asp-route-id="@user.UserId" class="btn btn-outline-warning btn-fw">Edit</a>
-                                                    <a asp-page="./Delete" asp-route-id="@user.UserId" class="btn btn-outline-danger btn-fw">Delete</a>
+                                                    <a asp-page="./Edit" asp-route-id="@user.UserId" class="btn btn-warning btn-fw">Edit</a>
+                                                    <a asp-page="./Delete" asp-route-id="@user.UserId" class="btn btn-danger btn-fw">Delete</a>
                                                 </td>
                                             </tr>
                                         }
@@ -488,8 +513,8 @@
                                 }
                             </div>
                             <div class="card-footer text-center">
-                                <a asp-page="./Create" class="btn btn-outline-secondary btn-fw">Add New User</a>
-                                <a asp-page="/Index" class="btn btn-outline-secondary btn-fw">Back</a>
+                                <a asp-page="./Create" class="btn btn-secondary btn-fw">Add New User</a>
+                                <a asp-page="/Index" class="btn btn-secondary btn-fw">Back</a>
                             </div>
 
                         </div>

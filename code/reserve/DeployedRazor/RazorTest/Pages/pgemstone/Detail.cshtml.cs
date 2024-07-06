@@ -27,7 +27,10 @@ namespace RazorTest.Pages.pgemstone
 
         private const int PageSize = 15;
 
-        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
+        public string SearchTerm { get; set; }
+        public string FilterUnit { get; set; } = "All";
+
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterUnit, int currentPage = 1)
         {
             // Verify auth
                 List<string> roles = new List<string>
@@ -45,10 +48,30 @@ namespace RazorTest.Pages.pgemstone
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
 
+            // Set search and filter parameters
+            SearchTerm = searchTerm;
+            FilterUnit = !string.IsNullOrEmpty(filterUnit) ? filterUnit : "All";
+
+            // Filter gems based on unit
+            if (!string.IsNullOrEmpty(filterUnit) && !filterUnit.Equals("All"))
+            {
+                gems = gems.Where(g => g.Unit != null && g.Unit.Contains(filterUnit)).ToList();
+            }
+
+            // Search gems based on searchTerm
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                gems = gems.Where(g =>
+                    (g.GemName != null && g.GemName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (g.GemCode != null && g.GemCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (g.Unit != null && g.Unit.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                ).ToList();
+            }
+
+            // Separate pages
             if (gems != null)
             {
-                Gems = PaginatedList<Gem>.Create(gems.AsQueryable(), currentPage, 15);
-
+                Gems = PaginatedList<Gem>.Create(gems.AsQueryable(), currentPage, PageSize);
             }
 
             return Page();

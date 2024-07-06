@@ -26,7 +26,11 @@ namespace RazorTest.Pages.puser
         public PaginatedList<User> Users { get; set; }
 
         public const int PageSize = 6;
-        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
+
+        public string SearchTerm { get; set; }
+        public string FilterRole { get; set; } = "All";
+
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterRole, int currentPage = 1)
         {
             // Verify auth
             List<string> roles = new List<string>
@@ -43,15 +47,33 @@ namespace RazorTest.Pages.puser
             var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
             users = users.OrderByDescending(x => x.UserId).ToList();
 
+            // Set search and filter parameters
+            SearchTerm = searchTerm;
+            FilterRole = !string.IsNullOrEmpty(filterRole) ? filterRole : "All";
+
+            // Filter users based on role
+            if (!string.IsNullOrEmpty(filterRole) && !filterRole.Equals("All"))
+            {
+                users = users.Where(u => u.Role != null && u.Role.Contains(filterRole)).ToList();
+            }
+
+            // Search users based on searchTerm
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                users = users.Where(u =>
+                    (u.Fullname != null && u.Fullname.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (u.Email != null && u.Email.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (u.Role != null && u.Role.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                ).ToList();
+            }
+
+            // Separate pages
             if (users != null)
             {
-                Users = PaginatedList<User>.Create(users.AsQueryable(), currentPage, 6);
-
+                Users = PaginatedList<User>.Create(users.AsQueryable(), currentPage, PageSize);
             }
 
             return Page();
-
-
         }
         public bool VerifyAuth(string role)
         {
