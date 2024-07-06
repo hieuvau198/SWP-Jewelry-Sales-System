@@ -15,7 +15,7 @@ namespace RazorTest.Pages.Dashboard
     public class RevenueModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
-        
+
         private readonly InvoiceService _invoiceService;
         private readonly ApiService _apiService;
 
@@ -35,6 +35,16 @@ namespace RazorTest.Pages.Dashboard
         public double TotalPurchases { get; set; }
         public int TotalInvoices { get; set; }
         public string BestStaff { get; set; }
+        public string BestSalesMonth { get; set; }
+        public string BestPurchasesMonth { get; set; }
+        public double BestSalesOfMonth { get; set; }
+        public double BestPurchasesOfMonth { get; set; }
+        public int TotalPendingInvoices { get; set; }
+        public int TotalCompleteInvoices { get; set; }
+        public int TotalInvoiceByStaff { get; set; }
+        public double HighestSalesAmount { get; set; }
+        public string BestStaffName { get; set; }
+
 
         public async Task<IActionResult> OnGetAsync()
         {
@@ -50,7 +60,7 @@ namespace RazorTest.Pages.Dashboard
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
                 var invoices = await _invoiceService.GetInvoicesAsync();
-                if(invoices == null)
+                if (invoices == null)
                 {
                     return RedirectToPage("/NotFound");
                 }
@@ -105,11 +115,21 @@ namespace RazorTest.Pages.Dashboard
 
                 var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
                 var yearlyPurchasesCount = invoices.Count(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase));
-
+                var totalPendingInvoices = invoices.Count(i => i.InvoiceStatus.Equals("Pending", StringComparison.OrdinalIgnoreCase));
+                var totalCompleteInvoices = invoices.Count(i => i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase));
+                var totalInvoiceByStaff = invoices.Count(i => i.UserFullname.Equals(BestStaff, StringComparison.OrdinalIgnoreCase));
+                var bestStaffName = topStaffSales.FirstOrDefault()?.staffName ?? "N/A";
+                var highestSalesAmount = topStaffSales.FirstOrDefault()?.totalSales ?? 0;
+                
                 TotalSales = monthlySales.Sum(s => s.total);
                 TotalPurchases = monthlyPurchases.Sum(p => p.total);
                 TotalInvoices = invoices.Count;
                 BestStaff = topStaffSales.FirstOrDefault()?.staffName ?? "N/A";
+                TotalPendingInvoices = totalPendingInvoices;
+                TotalCompleteInvoices = totalCompleteInvoices;                
+                BestStaffName = bestStaffName;
+                HighestSalesAmount = highestSalesAmount;
+                TotalInvoiceByStaff = invoices.Count(i => i.UserFullname.Equals(BestStaffName, StringComparison.OrdinalIgnoreCase));
 
                 MonthlySalesJson = JsonSerializer.Serialize(monthlySales);
                 MonthlyPurchasesJson = JsonSerializer.Serialize(monthlyPurchases);
@@ -117,6 +137,10 @@ namespace RazorTest.Pages.Dashboard
                 BestStaffMonthlyJson = JsonSerializer.Serialize(bestStaffMonthly);
                 ViewData["YearlySalesCount"] = yearlySalesCount;
                 ViewData["YearlyPurchasesCount"] = yearlyPurchasesCount;
+                ViewData["TotalPendingInvoices"] = totalPendingInvoices;
+                ViewData["totalCompleteInvoices"] = totalCompleteInvoices;
+                ViewData["BestStaffName"] = bestStaffName;
+                ViewData["HighestSalesAmount"] = highestSalesAmount;
             }
             catch (Exception ex)
             {

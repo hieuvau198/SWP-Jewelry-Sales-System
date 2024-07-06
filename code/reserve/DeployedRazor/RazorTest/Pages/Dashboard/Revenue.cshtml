@@ -32,8 +32,12 @@
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo"><img src="~/assets/images/logo.svg" alt="logo" style="width: 60px; height: 60px;" /></a>
-                <a class="sidebar-brand brand-logo-mini"><img src="~/assets/images/logo-mini.jpg" alt="logo" /></a>
+                <a class="sidebar-brand brand-logo">
+                    <img src="~/assets/images/logo.svg" alt="logo" style="width: 60px; height: 60px;" />
+                </a>
+                <a class="sidebar-brand brand-logo-mini">
+                    <img src="~/assets/images/logo-mini.svg" alt="logo" style="width: 35px; height: 35px;" />
+                </a>
             </div>
             <ul class="nav">
                 <li class="nav-item profile">
@@ -45,7 +49,14 @@
                             </div>
                             <div class="profile-name">
                                 <h5 class="mb-0 font-weight-normal">@Model.User.Fullname</h5>
-                                @if(Model.User.Role.Equals("Sale")){<span>Retail Assistant</span>}else{<span>@Model.User.Role</span>}
+                                @if (Model.User.Role.Equals("Sale"))
+                                {
+                                    <span>Retail Assistant</span>
+                                }
+                                else
+                                {
+                                    <span>@Model.User.Role</span>
+                                }
                             </div>
                         </div>
                         <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -335,28 +346,28 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                                 <h6 class="p-3 mb-0">Setting</h6>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">
-    <div class="preview-thumbnail">
-        <div class="preview-icon bg-dark rounded-circle">
-            <i class="mdi mdi-settings text-success"></i>
-        </div>
-    </div>
-    <div class="preview-item-content" >
-        <p class="preview-subject mb-1" >Profile</p>
-    </div>
-</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-settings text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Profile</p>
+                                    </div>
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item" asp-page="/Authentication/LogoutPage">
-    <div class="preview-thumbnail">
-        <div class="preview-icon bg-dark rounded-circle">
-            <i class="mdi mdi-logout text-danger"></i>
-        </div>
-    </div>
-    <div class="preview-item-content">
-        <p class="preview-subject mb-1" >Log out</p>
-    </div>
-</a>
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-logout text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Log out</p>
+                                    </div>
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">    <div class="preview-thumbnail">        <div class="preview-icon bg-dark rounded-circle">            <i class="mdi mdi-settings text-success"></i>        </div>    </div>    <div class="preview-item-content">        <p class="preview-subject mb-1">Advance</p>    </div></a>
                             </div>
@@ -371,150 +382,158 @@
             <div class="main-panel">
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
-                    <div class="container">
-                        <!-- EDIT HERE ONLY -->
-                        <div class="row">
-                            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h3 class="mb-0">$12.34</h3>
-                                                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                                                </div>
+                    <!-- EDIT HERE ONLY -->
+                    <div class="row">
+
+                        <div class="col-sm-4 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 id="card-title-1">Incvoice</h5>
+                                    <div class="row">
+                                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                                <h3 id="card-value-1" class="mb-0">@Model.TotalInvoices</h3>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="icon icon-box-success ">
-                                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
-                                                </div>
-                                            </div>
+                                            <h6 id="card-desc-1" class="text-muted font-weight-normal">Total Invoices</h6>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Potential growth</h6>
+                                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                                            <i id="card-icon-1" class="icon-lg mdi mdi-file-multiple text-primary ml-auto"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h3 class="mb-0">$17.34</h3>
-                                                    <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
-                                                </div>
+                        </div>
+                        <div class="col-sm-4 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 id="card-title-2">Sales</h5>
+                                    <div class="row">
+                                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                                <h3 id="card-value-2" class="mb-0">@String.Format("{0:N0}", @Model.TotalSales)</h3>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="icon icon-box-success">
-                                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
-                                                </div>
-                                            </div>
+                                            <h6 id="card-desc-2" class="text-muted font-weight-normal">Total Sales has been Sell</h6>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Revenue current</h6>
+                                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                                            <i id="card-icon-2" class="icon-lg mdi mdi-cart-outline text-success ml-auto"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h3 class="mb-0">$12.34</h3>
-                                                    <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                                                </div>
+                        </div>
+                        <div class="col-sm-4 grid-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 id="card-title-3">Buy</h5>
+                                    <div class="row">
+                                        <div class="col-8 col-sm-12 col-xl-8 my-auto">
+                                            <div class="d-flex d-sm-block d-md-flex align-items-center">
+                                                <h3 id="card-value-3" class="mb-0">@String.Format("{0:N0}", @Model.TotalPurchases)</h3>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="icon icon-box-danger">
-                                                    <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                                                </div>
-                                            </div>
+                                            <h6 id="card-desc-3" class="text-muted font-weight-normal">Total Sales has been Buy</h6>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Daily Income</h6>
+                                        <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
+                                            <i id="card-icon-3" class="icon-lg mdi mdi-file-restore text-danger ml-auto"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center align-self-start">
-                                                    <h3 class="mb-0">$31.53</h3>
-                                                    <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                        </div>
+
+                        <!-- Charts Section -->
+                        <div class="col-8 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-bs-toggle="tab" href="#chart1">Total Sale And Buy</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#chart4">Top Staffs</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-bs-toggle="tab" href="#chart5">Best Staffs of Month</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane container active" id="chart1">
+                                            <div class="text-center">
+                                                <h4 class="card-title">Total Sale and Buy per Month</h4>
+                                                <canvas id="myChart1"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane container fade" id="chart4">
+                                            <div class="text-center">
+                                                <h4 class="card-title">Top Employees by Sales</h4>
+                                                <canvas id="myChart4"></canvas>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane container fade" id="chart5">
+                                            <div class="text-center">
+                                                <h4 class="card-title">Best Staff of the Month with Total Sales</h4>
+                                                <canvas id="myChart5"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-body ">
+
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#chart2">Total Invoice</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#chart3">Sale & Buy</a>
+                                            </li>
+                                        </ul>
+                                        <!--Chart Pie-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane container active" id="chart2">
+                                                <div class="text-center">
+                                                    <h5 class="card-title">Total Invoice</h5>
+                                                    <canvas id="myChart2" class="transaction-chart"></canvas>                                                    
                                                 </div>
                                             </div>
-                                            <div class="col-3">
-                                                <div class="icon icon-box-success ">
-                                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                            <div class="tab-pane container fade" id="chart3">
+                                                <div class="text-center">
+                                                    <h5 class="card-title">Total Sale and Buy This year</h5>
+                                                    <canvas id="myChart3" class="transaction-chart"></canvas>
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="text-muted font-weight-normal">Expense current</h6>
+                                        <!--Card-info-->
+                                        <div id="card-info-1" class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                                            <div class="text-md-center text-xl-left">
+                                                <h6 id="info-title-1" class="mb-1">Invoice Pending</h6>
+                                                <p id="info-desc-1" class="text-muted mb-0">Total Invoice Pending</p>
+                                            </div>
+                                            <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                                                <h6 id="info-value-1" class="font-weight-bold mb-0">@Model.TotalPendingInvoices</h6>
+                                            </div>
+                                        </div>
+
+                                        <div id="card-info-2" class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
+                                            <div class="text-md-center text-xl-left">
+                                                <h6 id="info-title-2" class="mb-1">Invoice Complete</h6>
+                                                <p id="info-desc-2" class="text-muted mb-0">Total Invoice Complete</p>
+                                            </div>
+                                            <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+                                                <h6 id="info-value-2" class="font-weight-bold mb-0">@Model.TotalCompleteInvoices</h6>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Charts Section -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <ul class="nav nav-tabs">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-bs-toggle="tab" href="#chart1">Chart 1</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#chart2">Chart 2</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#chart3">Chart 3</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#chart4">Chart 4</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#chart5">Chart 5</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- Tab panes -->
-                                    <div class="card-body">
-                                        <div class="tab-content">
-                                            <div class="tab-pane container active" id="chart1">
-                                                <div class="card-body">
-                                                    <canvas id="myChart1"></canvas>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane container fade" id="chart2">
-                                                <div class="card-body">
-                                                    <canvas id="myChart2"></canvas>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane container fade" id="chart3">
-                                                <div class="card-body">
-                                                    <canvas id="myChart3"></canvas>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane container fade" id="chart4">
-                                                <div class="card-body">
-                                                    <canvas id="myChart4"></canvas>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane container fade" id="chart5">
-                                                <div class="card-body">
-                                                    <canvas id="myChart5"></canvas>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <!-- EDIT HERE END -->
                 </div>
 
@@ -557,6 +576,70 @@
 </body>
 </html>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const chart1Tab = document.querySelector('a[href="#chart1"]');
+        const chart2Tab = document.querySelector('a[href="#chart2"]');
+        const chart3Tab = document.querySelector('a[href="#chart3"]');
+        const chart4Tab = document.querySelector('a[href="#chart4"]');
+        const chart5Tab = document.querySelector('a[href="#chart5"]');
+
+        chart1Tab.addEventListener('shown.bs.tab', function () {
+            document.getElementById('card-title-1').textContent = 'Incvoice';
+            document.getElementById('card-desc-1').textContent = 'Total Invoices';
+            document.getElementById('card-value-1').textContent = '@Model.TotalInvoices';
+            document.getElementById('card-icon-1').className = 'icon-lg mdi mdi-file-multiple text-primary ml-auto';
+
+            document.getElementById('card-title-2').textContent = 'Sales';
+            document.getElementById('card-desc-2').textContent = 'Total Sales has been Sell';
+            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalSales)';
+            document.getElementById('card-icon-2').className = 'icon-lg mdi mdi-cart-outline text-success ml-auto';
+
+            document.getElementById('card-title-3').textContent = 'Buy';
+            document.getElementById('card-desc-3').textContent = 'Total Sales has been Buy';
+            document.getElementById('card-value-3').textContent = '@String.Format("{0:N0}", @Model.TotalPurchases)';
+            document.getElementById('card-icon-3').className = 'icon-lg mdi mdi-file-restore text-danger ml-auto';
+        });
+
+
+        chart2Tab.addEventListener('shown.bs.tab', function () {
+            document.getElementById('info-title-1').textContent = 'Invoice Pending';
+            document.getElementById('info-desc-1').textContent = 'Total Invoice Pending';
+            document.getElementById('info-value-1').textContent = '@Model.TotalPendingInvoices';
+
+            document.getElementById('info-title-2').textContent = 'Invoice Complete';
+            document.getElementById('info-desc-2').textContent = 'Total Invoice Complete';
+            document.getElementById('info-value-2').textContent = '@Model.TotalCompleteInvoices';
+        });
+
+        chart3Tab.addEventListener('shown.bs.tab', function () {
+            document.getElementById('info-title-1').textContent = 'Sale';
+            document.getElementById('info-desc-1').textContent = 'Total Sale';
+            document.getElementById('info-value-1').textContent = '@String.Format("{0:N0}", @Model.TotalSales)';
+
+            document.getElementById('info-title-2').textContent = 'Buy';
+            document.getElementById('info-desc-2').textContent = 'Total Purchase';
+            document.getElementById('info-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalPurchases)';
+        });
+
+        chart4Tab.addEventListener('shown.bs.tab', function () {
+            document.getElementById('card-title-1').textContent = 'Best Staff';
+            document.getElementById('card-desc-1').textContent = 'Staff Name';
+            document.getElementById('card-value-1').textContent = '@Model.BestStaff';
+            document.getElementById('card-icon-1').className = 'icon-lg mdi mdi-account-box text-primary ml-auto';
+
+            document.getElementById('card-title-2').textContent = 'Total Sale';
+            document.getElementById('card-desc-2').textContent = 'Total Sale by @Model.BestStaffName';
+            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.HighestSalesAmount)';
+            document.getElementById('card-icon-2').className = 'icon-lg mdi mdi-currency-usd text-success ml-auto';
+
+            document.getElementById('card-title-3').textContent = 'Total Invoice';
+            document.getElementById('card-desc-3').textContent = 'Total Invoice create By @Model.BestStaffName';
+            document.getElementById('card-value-3').textContent = '@Model.TotalInvoiceByStaff';
+            document.getElementById('card-icon-3').className = 'icon-lg mdi mdi-file-multiple text-primary ml-auto';
+        });
+    });
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -611,7 +694,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Total Sale and Buy per Month',
+                        // text: 'Total Sale and Buy per Month',
                         font: {
                             size: 25
                         }
@@ -625,7 +708,7 @@
         new Chart(ctx2, {
             type: 'doughnut',
             data: {
-                labels: ['Total Sales', 'Total Purchases'],
+                labels: ['Sales', 'Buy'],
                 datasets: [{
                     data: [yearlySalesCount, yearlyPurchasesCount],
                     backgroundColor: ['rgba(54, 162, 235, 2.5)', 'rgba(255, 99, 132, 2.5)'],
@@ -645,9 +728,19 @@
                     },
                     title: {
                         display: true,
-                        text: 'Total Invoice',
+                        // text: 'Total Invoice',
                         font: {
                             size: 25
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const index = context.dataIndex;
+                                const label = context.chart.data.labels[index];
+                                const value = context.raw;
+                                return `${label}: ${value}`;
+                            }
                         }
                     }
                 }
@@ -659,7 +752,7 @@
         new Chart(ctx3, {
             type: 'pie',
             data: {
-                labels: ['Total Sales', 'Total Purchases'],
+                labels: ['Sale', 'Buy'],
                 datasets: [{
                     data: [totalSales, totalPurchases],
                     backgroundColor: ['rgba(54, 162, 235, 2.5)', 'rgba(255, 99, 132, 2.5)'],
@@ -679,9 +772,23 @@
                     },
                     title: {
                         display: true,
-                        text: 'Total Sales and Purchases per Year',
+                        // text: 'Total Sales and Purchases per Year',
                         font: {
                             size: 25
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                const index = context.dataIndex;
+                                const label = context.chart.data.labels[index];
+                                const value = context.raw;
+                                const formattedValue = new Intl.NumberFormat('en-US', {
+                                    minimumFractionDigits: 0,
+                                    maximumFractionDigits: 0
+                                }).format(value);
+                                return `${label}: ${formattedValue}`;
+                            }
                         }
                     }
                 }
@@ -712,7 +819,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Top Employees by Sales',
+                        // text: 'Top Employees by Sales',
                         font: {
                             size: 25
                         }
@@ -745,7 +852,7 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'Best Staff of the Month with Total Sales',
+                        // text: 'Best Staff of the Month with Total Sales',
                         font: {
                             size: 25
                         }
