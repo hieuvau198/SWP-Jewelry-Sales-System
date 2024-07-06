@@ -56,7 +56,7 @@ namespace RazorTest.Pages.pgemstone
                 }
 
                 // Set search and filter parameters
-                SearchTerm = searchTerm;
+                SearchTerm = searchTerm ?? string.Empty;
                 FilterUnit = !string.IsNullOrEmpty(filterUnit) ? filterUnit : "All";
 
                 // Filter gems based on unit
@@ -75,10 +75,12 @@ namespace RazorTest.Pages.pgemstone
                     ).ToList();
                 }
 
+                List<Gem> gems2 = gems.ToList();
+
                 // Separate pages
-                if (gems != null)
+                if (gems2 != null)
                 {
-                    Gems = PaginatedList<Gem>.Create(gems.AsQueryable(), currentPage, PageSize);
+                    Gems = PaginatedList<Gem>.Create(gems2.AsQueryable(), currentPage, PageSize);
                 }
                 
             }

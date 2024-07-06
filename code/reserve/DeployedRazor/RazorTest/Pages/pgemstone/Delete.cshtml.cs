@@ -51,7 +51,7 @@ namespace RazorTest.Pages.pgemstone
             var response = await _gemService.DeleteGemAsync(Gem.GemId);
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToPage("/pgemstone/Detail");
+                return RedirectToPage("/pgemstone/Index");
             }
 
             ModelState.AddModelError(string.Empty, "An error occurred while deleting the gem.");
