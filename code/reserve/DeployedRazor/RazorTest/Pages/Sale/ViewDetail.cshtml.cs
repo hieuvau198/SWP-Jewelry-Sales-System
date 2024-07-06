@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using RazorTest.Utilities;
 using Microsoft.Data.SqlClient;
 using Microsoft.CodeAnalysis;
+using Microsoft.IdentityModel.Tokens;
 
 namespace RazorTest.Pages.Sale
 {
@@ -49,53 +50,47 @@ namespace RazorTest.Pages.Sale
 
         public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Admin",
-                "Cashier",
-                "Sale"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Admin",
+                    "Cashier",
+                    "Sale"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+                ViewProductDetail = HttpContext.Session.GetObject<Product>(SaleHomePageModel.SessionKeySelectedProduct);
+
+                List<Product> allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+                if (allProducts.IsNullOrEmpty() || ViewProductDetail == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
+
+                // Make order for results
+                allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
+
+                // Calculate pagination details
+                CurrentPage = currentPage;
+                TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
+
+                Products = allProducts.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+
+                // Store products in session to fetch them during post request
+                HttpContext.Session.SetObject("Products", allProducts);
             }
-
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-
-            ViewProductDetail = HttpContext.Session.GetObject<Product>(SaleHomePageModel.SessionKeySelectedProduct);
-
-            if (HttpContext.Session.GetObject<User>(SessionKeyUserObject) == null)
+            catch (Exception ex)
             {
-                HttpContext.Session.SetString(SessionKeyMessage, "Not Authen");
-                RedirectToPage("/Index");
+                return RedirectToPage("/Error");
             }
-            else
-            {
-                HttpContext.Session.SetString(SessionKeyMessage, "Is authen");
-            }
-
-            List<Product> allProducts = HttpContext.Session.GetObject<List<Product>>(SessionKeySaleProductList);
-            if (allProducts == null || allProducts.Count == 0)
-            {
-                allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
-            }
-
-            // Make order for results
-            allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
-
-
-
-            // Calculate pagination details
-            CurrentPage = currentPage;
-            TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
-
-            Products = allProducts.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
-
-
-            // Store products in session to fetch them during post request
-            HttpContext.Session.SetObject("Products", allProducts);
 
             return Page();
         }

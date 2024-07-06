@@ -55,47 +55,50 @@ namespace RazorTest.Pages.Sale
 
         public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Admin",
-                "Sale",
-                "Cashier"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
+                // Verify auth
 
-            Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
-            
-            if(HttpContext.Session.GetString(SessionKeyCustomerId)==null)
-            {
-                Customer = new Customer();
-                Customer.CustomerName = "Not Identified";
-            }
-            else
-            {
-                Customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject);
-            }
+                List<string> roles = new List<string>
+                {
+                    "Admin",
+                    "Sale",
+                    "Cashier"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            if(User == null)
-            {
+                // Process data
+
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            }
-            //Get Sale Invoice Item List
+
+                Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart) ?? new List<Product>();
+
+                if (HttpContext.Session.GetString(SessionKeyCustomerId) == null)
+                {
+                    Customer = new Customer();
+                    Customer.CustomerName = "Not Identified";
+                }
+                else
+                {
+                    Customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject);
+                }
+                
+                //Get Sale Invoice Item List
                 SaleInvoiceItemList = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList) ?? new List<InvoiceItem>();
 
-            //Get Invoice Object
+                //Get Invoice Object
                 SaleInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
-                if(SaleInvoiceObject==null)
+                if (SaleInvoiceObject == null)
                 {
                     SaleInvoiceObject = new Invoice
                     {
                         TotalPrice = 0,
                         EndTotalPrice = 0,
                     };
-                
+
                 }
                 SaleInvoiceObject.TotalPrice = 0;
                 SaleInvoiceObject.EndTotalPrice = 0;
@@ -105,25 +108,30 @@ namespace RazorTest.Pages.Sale
                     SaleInvoiceObject.EndTotalPrice += item.EndTotalPrice;
                 }
                 HttpContext.Session.SetObject(SessionKeySaleInvoiceObject, SaleInvoiceObject);
-            // Calculate pagination details
-            CurrentPage = currentPage;
-            TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
+                // Calculate pagination details
+                CurrentPage = currentPage;
+                TotalPages = (int)System.Math.Ceiling(Cart.Count / (double)PageSize);
 
-            // Ensure current page is within valid range
-            if (CurrentPage < 1)
-            {
-                CurrentPage = 1;
+                // Ensure current page is within valid range
+                if (CurrentPage < 1)
+                {
+                    CurrentPage = 1;
+                }
+                else if (CurrentPage > TotalPages)
+                {
+                    CurrentPage = TotalPages;
+                }
+
+                // Get the products for the current page
+                var paginatedCart = Cart.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
+
+                // Update the Cart property to hold only the paginated items
+                Cart = paginatedCart;
             }
-            else if (CurrentPage > TotalPages)
+            catch (Exception ex)
             {
-                CurrentPage = TotalPages;
+                return RedirectToPage("/Error");
             }
-
-            // Get the products for the current page
-            var paginatedCart = Cart.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
-
-            // Update the Cart property to hold only the paginated items
-            Cart = paginatedCart;
 
             return Page();
         }

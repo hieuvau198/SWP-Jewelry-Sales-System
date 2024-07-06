@@ -25,14 +25,16 @@ namespace RazorTest.Pages.pgemstone
 
         public PaginatedList<Gem> Gems { get; set; }
 
-        private const int PageSize = 15;
+        private const int PageSize = 10;
 
         public string SearchTerm { get; set; }
         public string FilterUnit { get; set; } = "All";
 
         public async Task<IActionResult> OnGetAsync(string searchTerm, string filterUnit, int currentPage = 1)
         {
-            // Verify auth
+            try
+            {
+                // Verify auth
                 List<string> roles = new List<string>
                     {
                         "Manager",
@@ -44,34 +46,45 @@ namespace RazorTest.Pages.pgemstone
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            // Set search and filter parameters
-            SearchTerm = searchTerm;
-            FilterUnit = !string.IsNullOrEmpty(filterUnit) ? filterUnit : "All";
+                var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
+                if (gems == null)
+                {
+                    return RedirectToPage("/Error");
+                }
 
-            // Filter gems based on unit
-            if (!string.IsNullOrEmpty(filterUnit) && !filterUnit.Equals("All"))
-            {
-                gems = gems.Where(g => g.Unit != null && g.Unit.Contains(filterUnit)).ToList();
+                // Set search and filter parameters
+                SearchTerm = searchTerm;
+                FilterUnit = !string.IsNullOrEmpty(filterUnit) ? filterUnit : "All";
+
+                // Filter gems based on unit
+                if (!string.IsNullOrEmpty(filterUnit) && !filterUnit.Equals("All"))
+                {
+                    gems = gems.Where(g => g.Unit != null && g.Unit.Contains(filterUnit)).ToList();
+                }
+
+                // Search gems based on searchTerm
+                if (!string.IsNullOrEmpty(searchTerm))
+                {
+                    gems = gems.Where(g =>
+                        (g.GemName != null && g.GemName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (g.GemCode != null && g.GemCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (g.Unit != null && g.Unit.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                    ).ToList();
+                }
+
+                // Separate pages
+                if (gems != null)
+                {
+                    Gems = PaginatedList<Gem>.Create(gems.AsQueryable(), currentPage, PageSize);
+                }
+                
             }
-
-            // Search gems based on searchTerm
-            if (!string.IsNullOrEmpty(searchTerm))
+            catch (Exception ex)
             {
-                gems = gems.Where(g =>
-                    (g.GemName != null && g.GemName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
-                    (g.GemCode != null && g.GemCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
-                    (g.Unit != null && g.Unit.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
-                ).ToList();
-            }
-
-            // Separate pages
-            if (gems != null)
-            {
-                Gems = PaginatedList<Gem>.Create(gems.AsQueryable(), currentPage, PageSize);
+                return RedirectToPage("/Error");
             }
 
             return Page();

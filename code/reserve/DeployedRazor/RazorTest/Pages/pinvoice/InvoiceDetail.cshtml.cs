@@ -35,25 +35,39 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Manager",
-                "Cashier",
-                "Sale",
-                "Admin"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
+
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Cashier",
+                    "Sale",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+                List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
+                if (invoices != null)
+                {
+                    invoices = invoices.OrderByDescending(x => x.InvoiceDate).ToList();
+                    Invoices = PaginatedList<Invoice>.Create(invoices.AsQueryable(), currentPage, 10);
+                }
+                else
+                {
+                    return RedirectToPage("/NotFound");
+                }
             }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
-            if (invoices != null)
+            catch (Exception ex)
             {
-                invoices = invoices.OrderByDescending(x => x.InvoiceDate).ToList();
-                Invoices = PaginatedList<Invoice>.Create(invoices.AsQueryable(), currentPage, 10);
+                return RedirectToPage("/Error");
             }
 
             return Page();

@@ -35,25 +35,50 @@ namespace RazorTest.Pages
         public List<Login> Logins { get; set; }
         public List<GoldPrice> GoldPrices { get; set; }
 
-        public async Task OnGetAsync(int? pageIndex)
+        public async Task<IActionResult> OnGetAsync(int? pageIndex)
         {
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-
-            const int pageSize = 9; // Number of products per page
-            Products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
-
-            if (Products != null)
+            try
             {
-                Products = Products.OrderBy(p => p.ProductCode).ToList();
-                PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Admin",
+                    "Manager",
+                    "Cashier",
+                    "Sale"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/LoginPage");
+                }
+
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    const int pageSize = 9; // Number of products per page
+                    Products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+
+                    if (Products != null)
+                    {
+                        Products = Products.OrderBy(p => p.ProductCode).ToList();
+                        PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
+                    }
+                    else
+                    {
+                        Products = new List<Product>();
+                        Products = Products.OrderBy(p => p.ProductCode).ToList();
+                        PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Products = new List<Product>();
-                Products = Products.OrderBy(p => p.ProductCode).ToList();
-                PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
+                return RedirectToPage("/Error");
             }
+
+            return Page();
         }
 
         public bool VerifyAuth(string role)

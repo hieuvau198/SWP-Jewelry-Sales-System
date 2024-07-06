@@ -39,33 +39,42 @@ namespace RazorTest.Pages.Sale
 
         public async Task<IActionResult> OnGet()
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
+            {
+                // Verify auth
+                List<string> roles = new List<string>
             {
                 "Admin",
                 "Sale",
                 "Cashier"
             };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            ProductId = HttpContext.Session.GetString(SessionKeySaleDiscountProductId) ?? "Fail";
-            ProductList = HttpContext.Session.GetObject<List<Product>>(SessionKeyProductList);
-            if(ProductList == null)
-            {
+                ProductId = HttpContext.Session.GetString(SessionKeySaleDiscountProductId);
+                if(ProductId == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
+
                 ProductList = await _apiService.GetAsync<List<Product>>(UrlGetProducts);
+                if (ProductList == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
+
                 HttpContext.Session.SetObject(SessionKeyProductList, ProductList);
-            }
-            SelectedProduct = ProductList.Find(x  => x.ProductId == ProductId);
 
-            // Set basic data to the page
+                SelectedProduct = ProductList.Find(x => x.ProductId == ProductId);
 
-                if(SelectedProduct != null)
+                // Set basic data to the page
+
+                if (SelectedProduct != null)
                 {
                     Discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeyDiscountList);
                     if (Discounts == null)
@@ -94,11 +103,11 @@ namespace RazorTest.Pages.Sale
                     SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
 
                     InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
-                    if(InvoiceItems != null)
+                    if (InvoiceItems != null)
                     {
                         InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == SelectedProduct.ProductId);
 
-                        if(invoiceItem != null)
+                        if (invoiceItem != null)
                         {
                             SelectedDiscount = Discounts.Find(x => x.DiscountId == invoiceItem.DiscountId);
                         }
@@ -106,34 +115,43 @@ namespace RazorTest.Pages.Sale
 
                     // Update data if user selected discount
 
-                        string selectDiscountId = HttpContext.Session.GetString(SessionKeySaleDiscountSelectedId);
-                    
-                        if (!string.IsNullOrEmpty(selectDiscountId) && InvoiceItems != null)
-                            {
-                                Discount discount = Discounts.Find(x => x.DiscountId == selectDiscountId);
-                                InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == ProductId);
-                                Discount discountRemove = SelectedDiscounts.Find(x => x.DiscountId == selectDiscountId);
-                                if (discountRemove != null)
-                                {
-                                    SelectedDiscounts.Remove(discountRemove);
-                                }
-                                discount.ProductId = selectDiscountId;
-                                SelectedDiscounts.Add(discount);
-                                SelectedDiscount = discount;
+                    string selectDiscountId = HttpContext.Session.GetString(SessionKeySaleDiscountSelectedId);
 
-                                InvoiceItems.Remove(invoiceItem);
-                                invoiceItem.DiscountId = discount.DiscountId;
-                                invoiceItem.DiscountRate = discount.DiscountRate;
-                                invoiceItem.EndTotalPrice = invoiceItem.TotalPrice * (1 - discount.DiscountRate);
-                                InvoiceItems.Add(invoiceItem);
+                    if (!string.IsNullOrEmpty(selectDiscountId) && InvoiceItems != null)
+                    {
+                        Discount discount = Discounts.Find(x => x.DiscountId == selectDiscountId);
+                        InvoiceItem invoiceItem = InvoiceItems.Find(x => x.ProductId == ProductId);
+                        Discount discountRemove = SelectedDiscounts.Find(x => x.DiscountId == selectDiscountId);
+                        if (discountRemove != null)
+                        {
+                            SelectedDiscounts.Remove(discountRemove);
+                        }
+                        discount.ProductId = selectDiscountId;
+                        SelectedDiscounts.Add(discount);
+                        SelectedDiscount = discount;
 
-                                HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, InvoiceItems);
-                                HttpContext.Session.SetObject(SessionKeySaleDiscountSelectedList, InvoiceItems);
-                                HttpContext.Session.Remove(SessionKeySaleDiscountSelectedId);
-                            }
+                        InvoiceItems.Remove(invoiceItem);
+                        invoiceItem.DiscountId = discount.DiscountId;
+                        invoiceItem.DiscountRate = discount.DiscountRate;
+                        invoiceItem.EndTotalPrice = invoiceItem.TotalPrice * (1 - discount.DiscountRate);
+                        InvoiceItems.Add(invoiceItem);
+
+                        HttpContext.Session.SetObject(SessionKeySaleInvoiceItemList, InvoiceItems);
+                        HttpContext.Session.SetObject(SessionKeySaleDiscountSelectedList, InvoiceItems);
+                        HttpContext.Session.Remove(SessionKeySaleDiscountSelectedId);
+                    }
 
                 }
+                else
+                {
+                    return RedirectToPage("/NotFound");
+                }
 
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
 
             return Page();
 

@@ -29,22 +29,30 @@ namespace RazorTest.Pages.pinvoice
 
         public IActionResult OnGet()
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Admin"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+                // Initialize the Invoice with a new ID
+                Invoice = new Invoice
+                {
+                    InvoiceId = Guid.NewGuid().ToString()
+                };
             }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            // Initialize the Invoice with a new ID
-            Invoice = new Invoice
+            catch (Exception ex)
             {
-                InvoiceId = Guid.NewGuid().ToString()
-            };
+                return RedirectToPage("/Error");
+            }
 
             return Page();
         }

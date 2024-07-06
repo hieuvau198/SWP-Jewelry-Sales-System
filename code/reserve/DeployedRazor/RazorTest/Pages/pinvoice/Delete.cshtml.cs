@@ -27,24 +27,35 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Manager",
-                "Cashier",
-                "Admin"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Cashier",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
+                Invoice = await _invoiceService.GetInvoiceByIdAsync(id);
+                if (Invoice == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
             }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            Invoice = await _invoiceService.GetInvoiceByIdAsync(id);
-            if (Invoice == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                return RedirectToPage("/Error");
             }
+
+
 
             return Page();
         }

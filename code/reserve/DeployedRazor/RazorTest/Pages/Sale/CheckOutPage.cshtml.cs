@@ -43,24 +43,36 @@ namespace RazorTest.Pages.Sale
 
         public async Task<IActionResult> OnGet()
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Sale",
-                "Cashier",
-                "Admin"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Sale",
+                    "Cashier",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart);
-            Customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject) ?? new Customer { CustomerName = "Anonymous"};
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
-            SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList);
-            Invoice = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
+                Cart = HttpContext.Session.GetObject<List<Product>>(SessionKeyCart);
+                Customer = HttpContext.Session.GetObject<Customer>(SessionKeyCustomerObject) ?? new Customer { CustomerName = "Anonymous" };
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+                InvoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
+                SelectedDiscounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList);
+                Invoice = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
+
+                if(Cart == null || InvoiceItems == null || Invoice == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
 
             return Page();
         }

@@ -29,33 +29,40 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Manager",
-                "Cashier",
-                "Admin"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            // Get data
-            if (id == null)
-            {
-                _logger.LogError("ID is null");
-                return NotFound();
-            }
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Cashier",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            Invoice = await _invoiceService.GetInvoiceByIdAsync(id);
+                if (id == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
 
-            if (Invoice == null)
-            {
-                _logger.LogError($"Invoice not found for ID {id}");
-                return NotFound();
+                Invoice = await _invoiceService.GetInvoiceByIdAsync(id);
+
+                if (Invoice == null)
+                {
+                    return RedirectToPage("/NotFound");
+                }
             }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
+            
+            
 
             return Page();
         }

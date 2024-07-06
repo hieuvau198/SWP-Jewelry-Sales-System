@@ -30,26 +30,33 @@ namespace RazorTest.Pages.Sale
 
         public IActionResult OnGet()
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Admin",
-                "Cashier",
-                "Sale"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Admin",
+                    "Cashier",
+                    "Sale"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
 
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            // Initialize the Customer with a new ID
-            Customer = new Customer
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+                // Initialize the Customer with a new ID
+                Customer = new Customer
+                {
+                    CustomerId = Guid.NewGuid().ToString(),
+                    AttendDate = DateTime.Now,
+                };
+            }
+            catch (Exception ex)
             {
-                CustomerId = Guid.NewGuid().ToString(),
-                AttendDate = DateTime.Now,
-            };
+                return RedirectToPage("/Error");
+            }
 
             return Page();
         }

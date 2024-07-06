@@ -25,25 +25,36 @@ namespace RazorTest.Pages.pinvoice
 
         public async Task<IActionResult> OnGetAsync()
         {
-            // Verify auth
-            List<string> roles = new List<string>
+            try
             {
-                "Manager",
-                "Cashier",
-                "Sale",
-                "Admin"
-            };
-            if (!_apiService.VerifyAuth(HttpContext, roles))
-            {
-                return RedirectToPage("/Authentication/AccessDenied");
-            }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            var invoices = await _apiService.GetAsync<List<Invoice>>("https://hvjewel.azurewebsites.net/api/invoice");
+                // Verify auth
+                List<string> roles = new List<string>
+                {
+                    "Manager",
+                    "Cashier",
+                    "Sale",
+                    "Admin"
+                };
+                if (!_apiService.VerifyAuth(HttpContext, roles))
+                {
+                    return RedirectToPage("/Authentication/AccessDenied");
+                }
+                // Process data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+                var invoices = await _apiService.GetAsync<List<Invoice>>("https://hvjewel.azurewebsites.net/api/invoice");
 
-            if (invoices != null)
+                if (invoices != null)
+                {
+                    Invoices = invoices.OrderBy(c => c.InvoiceDate).ToList();
+                }
+                else
+                {
+                    return RedirectToPage("/NotFound");
+                }
+            }
+            catch (Exception ex)
             {
-                Invoices = invoices.OrderBy(c => c.InvoiceDate).ToList();
+                return RedirectToPage("/Error");
             }
 
             return Page();

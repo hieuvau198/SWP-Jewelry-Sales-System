@@ -119,7 +119,7 @@
                         </a>
                     </li>
                     <li class="nav-item menu-items">
-                        <a class="nav-link" asp-page="/pgemstone/Detail">
+                        <a class="nav-link" href="~/pgemstone/Detail">
                             <span class="menu-icon">
                                 <i class="mdi mdi-diamond-stone"></i>
                             </span>
@@ -135,12 +135,14 @@
                         </a>
                     </li>
                     <li class="nav-item menu-items">
-                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+
+                        <a class="nav-link" asp-page="/Authentication/AccessDenied">
                             <span class="menu-icon">
                                 <i class="mdi mdi-store"></i>
                             </span>
                             <span class="menu-title">Manage Stalls</span>
                         </a>
+
                     </li>
                 }
 
@@ -450,67 +452,69 @@
             </nav>
             <!-- partial -->
             <div class="main-panel">
-                <div>
-                    <form method="get">
-                        <div style="text-align: center; margin-bottom: 20px;">
-
-                            <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
-                            <label>Type</label>
-                            <select name="filterType">
-                                @foreach (var option in typeOptions)
-                                {
-                                    if (option.Equals(Model.FilterType))
-                                    {
-                                        <option value="@option" selected>@option</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@option">@option</option>
-                                    }
-
-                                }
-                            </select>
-
-                            <label>Gemstone</label>
-                            <select name="filterGem">
-                                @foreach (var option in gemOptions)
-                                {
-                                    if (option.Equals(Model.FilterGem))
-                                    {
-                                        <option value="@option" selected>@option</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@option">@option</option>
-                                    }
-
-                                }
-                            </select>
-
-                            <label>Gold</label>
-                            <select name="filterGold">
-                                @foreach (var option in goldOptions)
-                                {
-                                    if (option.Equals(Model.FilterGold))
-                                    {
-                                        <option value="@option" selected>@option</option>
-                                    }
-                                    else
-                                    {
-                                        <option value="@option">@option</option>
-                                    }
-
-                                }
-                            </select>
-                            <button type="submit">Search</button>
-                        </div>
-                    </form>
-                </div>
+                
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
                     <div class="card">
+                        
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
+                            <div>
+                                <form method="get">
+                                    <div style="text-align: center; margin-bottom: 20px;">
+
+                                        <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                        <label>Type</label>
+                                        <select name="filterType">
+                                            @foreach (var option in typeOptions)
+                                            {
+                                                if (option.Equals(Model.FilterType))
+                                                {
+                                                    <option value="@option" selected>@option</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@option">@option</option>
+                                                }
+
+                                            }
+                                        </select>
+
+                                        <label>Gemstone</label>
+                                        <select name="filterGem">
+                                            @foreach (var option in gemOptions)
+                                            {
+                                                if (option.Equals(Model.FilterGem))
+                                                {
+                                                    <option value="@option" selected>@option</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@option">@option</option>
+                                                }
+
+                                            }
+                                        </select>
+
+                                        <label>Gold</label>
+                                        <select name="filterGold">
+                                            @foreach (var option in goldOptions)
+                                            {
+                                                if (option.Equals(Model.FilterGold))
+                                                {
+                                                    <option value="@option" selected>@option</option>
+                                                }
+                                                else
+                                                {
+                                                    <option value="@option">@option</option>
+                                                }
+
+                                            }
+                                        </select>
+                                        <button type="submit">Search</button>
+                                    </div>
+                                </form>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-hover ">
                                     <thead>

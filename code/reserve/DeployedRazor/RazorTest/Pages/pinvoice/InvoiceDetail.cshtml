@@ -135,7 +135,7 @@
                         </a>
                     </li>
                     <li class="nav-item menu-items">
-                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                        <a class="nav-link" asp-page="/Authentication/AccessDenied">
                             <span class="menu-icon">
                                 <i class="mdi mdi-store"></i>
                             </span>
@@ -469,13 +469,9 @@
                                 <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
-                                            <th>Invoice Type</th>
-                                            <th>Customer Name</th>
-                                            <th>Employee</th>
-                                            <th>Invoice Date</th>
-                                            <th>Customer Voucher</th>
-                                            <th>Original Price (VND)</th>
-                                            <th>Total Price (VND)</th>
+                                            <th>Make Request</th>
+                                            <th>Date</th>
+                                            <th>Total (VND)</th>
                                             <th>Status</th>
                                             <th>View</th>
                                         </tr>
@@ -484,33 +480,27 @@
                                         @foreach (var invoice in Model.Invoices)
                                         {
                                             <tr>
-                                                <td><strong>@invoice.InvoiceType</strong></td>
-                                                <td>@invoice.CustomerName</td>
-                                                <td>@invoice.UserFullname</td>
-                                                <td>@invoice.InvoiceDate.ToString("MM/dd/yyyy HH:mm:ss")</td>
-                                                <td>@invoice.CustomerVoucher</td>
-                                                <td>@String.Format("{0:N0}", invoice.TotalPrice)</td>
+                                                <td><strong>@invoice.UserFullname</strong></td>
+                                                <td>@invoice.InvoiceDate.ToString("M/d HH:mm:ss")</td>
                                                 <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>
-                                                <td>@invoice.InvoiceStatus</td>
-                                                @* <td class="action-buttons">
-                                            @if (invoice.InvoiceStatus.Equals("Pending") && Model.VerifyAuth("Manager"))
-                                            {
-                                            <div class="align-items-center">
-                                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Approve</a>
-                                            <br />
-                                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Disapprove</a>
-                                            </div>
-                                            }
-                                            else if (Model.VerifyAuth("Sale"))
-                                            {
-                                            <span>Need Manager Role To Access</span>
-                                            }
-                                            else if (invoice.InvoiceStatus.Equals("Processing Payment") && Model.VerifyAuth("Cashier"))
-                                            {
-                                            <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-success btn-fw">Confirm Payment</a>
-                                            <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId" class="btn btn-inverse-danger btn-fw">Cancel Order</a>
-                                            }
-                                            </td> *@
+                                                <td>
+                                                    @if (invoice.InvoiceStatus.Equals("Complete"))
+                                                    {
+                                                        <i class="mdi mdi-check-circle"></i>
+                                                    }
+                                                    else if (invoice.InvoiceStatus.Equals("Manager Disapproved") || invoice.InvoiceStatus.Equals("Admin Disapproved") || invoice.InvoiceStatus.Equals("Canceled") || invoice.InvoiceStatus.Equals("Admin Canceled"))
+                                                    {
+                                                        <i class="mdi mdi-close-circle"></i>
+                                                    }
+                                                    else if (invoice.InvoiceStatus.Equals("Processing Payment"))
+                                                    {
+                                                        <i class="mdi mdi-currency-usd"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    }
+                                                </td>
                                                 <td>
                                                     <form method="post" asp-page-handler="ViewDetail">
                                                         <input type="hidden" name="invoiceId" value="@invoice.InvoiceId" />

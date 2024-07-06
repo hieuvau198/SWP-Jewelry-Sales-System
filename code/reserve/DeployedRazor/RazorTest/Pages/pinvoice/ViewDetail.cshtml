@@ -126,7 +126,7 @@
                         </a>
                     </li>
                     <li class="nav-item menu-items">
-                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                        <a class="nav-link" asp-page="/Authentication/AccessDenied">
                             <span class="menu-icon">
                                 <i class="mdi mdi-store"></i>
                             </span>
@@ -446,59 +446,158 @@
                     <div class="card">
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Type</th>
-                                            <th>Customer</th>
-                                            <th>Employee</th>
-                                            <th>Manager Confirmation</th>
-                                            <th>Payment Confirmation</th>
-                                            <th>Date</th>
-                                            <th>Voucher</th>
-                                            <th>Subtotal (VND)</th>
-                                            <th>Total (VND)</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    @if (Model.ViewDetailInvoiceObject != null)
-                                    {
-                                        <tbody>
-                                            <tr>
-                                                <td><strong>@Model.ViewDetailInvoiceObject.InvoiceType</strong></td>
-                                                <td>@Model.ViewDetailInvoiceObject.CustomerName</td>
-                                                <td>@Model.ViewDetailInvoiceObject.UserFullname</td>
-                                                <td>@Model.ViewDetailInvoiceObject.ManagerFullname</td>
-                                                <td>@Model.ViewDetailInvoiceObject.CashierFullname</td>
-                                                <td>@Model.ViewDetailInvoiceObject.InvoiceDate.ToString("MM/dd/yyyy HH:mm:ss")</td>
-                                                <td>@Model.ViewDetailInvoiceObject.CustomerVoucher</td>
-                                                <td>@String.Format("{0:N0}", Model.ViewDetailInvoiceObject.TotalPrice)</td>
-                                                <td>@String.Format("{0:N0}", Model.ViewDetailInvoiceObject.EndTotalPrice)</td>
-                                                <td>@Model.ViewDetailInvoiceObject.InvoiceStatus</td>
-                                            </tr>
-                                        </tbody>
 
-                                    }
-                                </table>
+                            <h4 class="card-title">Order Detail</h4>
+                            <p class="card-description"> Make Request: @Model.ViewDetailInvoiceObject.UserFullname</p>
+                            <div class="forms-sample">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Type</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.InvoiceType" readonly>
+                                    </div>
 
-                                
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Customer</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.CustomerName" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Retail Assistant</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.UserFullname" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Manager Confirmation</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.ManagerFullname" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Payment Confirmation</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.CashierFullname" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Stall</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.StallName" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.InvoiceDate.ToString("HH:mm:ss MM/dd/yyyy")" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Voucher</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@(Model.ViewDetailInvoiceObject.CustomerVoucher.ToString("#,##0")) VND" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Subtotal</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@(Model.ViewDetailInvoiceObject.TotalPrice.ToString("#,##0")) VND" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Discount</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@((Model.ViewDetailInvoiceObject.EndTotalPrice - Model.ViewDetailInvoiceObject.TotalPrice).ToString("#,##0")) VND" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Total</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@(Model.ViewDetailInvoiceObject.EndTotalPrice.ToString("#,##0")) VND" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Status</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" value="@Model.ViewDetailInvoiceObject.InvoiceStatus" readonly>
+                                    </div>
 
+                                </div>
                             </div>
+
+                            
                             <!-- EDIT HERE END -->
                             <div class="card-body text-center">
-                                <div class="card-body">
-                                    <a asp-page="./Edit" class="btn btn-outline-success btn-fw">Approve</a>
-                                    <a asp-page="./Delete" class="btn btn-outline-danger btn-fw">Disapprove</a>
-                                </div>
-                                 
-                                <div class="card-body">
-                                    <a asp-page="./Edit" class="btn btn-outline-success btn-fw">Confirm Payment</a>
-                                    <a asp-page="./Delete" class="btn btn-outline-danger btn-fw">Cancel Order</a>
+                                @if(Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Complete"))
+                                {
+                                    <div class="card-body">
+                                        <button class="btn btn-primary btn-lg btn-block justify-content-center d-flex align-items-center">
+                                            <i class="mdi mdi-check-circle"></i>
+                                            <span>Order Completed</span>
+                                        </button>
+                                    </div>
+                                }
+                                else if(Model.User.Role.Equals("Manager") && Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Pending"))
+                                {
+                                    <div class="card-body">
+                                        <form method="post" asp-page-handler="Approve">
+                                            <input type="hidden" name="invoiceId" value="@Model.ViewDetailInvoiceObject.InvoiceId"/>
+                                            <button class="btn btn-primary btn-lg btn-block justify-content-center d-flex align-items-center">
+                                                <i class="mdi mdi-checkbox-marked-outline"></i> Approve
+                                            </button>
+                                        </form>
+                                        <form method="post" asp-page-handler="Disapprove">
+                                            <input type="hidden" name="invoiceId" value="@Model.ViewDetailInvoiceObject.InvoiceId" />
+                                            <button class="btn btn-dark btn-lg btn-block justify-content-center d-flex align-items-center">
+                                                <i class="mdi mdi-close-box-outline"></i> Disapprove
+                                            </button>
+                                        </form>
+                                    </div>
+                                }
+                                else if (Model.User.Role.Equals("Cashier") && Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Processing Payment"))
+                                {
+                                    <div class="card-body">
+                                        <form method="post" asp-page-handler="ConfirmPayment">
+                                            <input type="hidden" name="invoiceId" value="@Model.ViewDetailInvoiceObject.InvoiceId" />
+                                            <button class="btn btn-primary btn-lg btn-block justify-content-center d-flex align-items-center">
+                                                <i class="mdi mdi-checkbox-marked-outline"></i> Confirm Payment
+                                            </button>
+                                        </form>
+                                        <form method="post" asp-page-handler="CancelOrder">
+                                            <input type="hidden" name="invoiceId" value="@Model.ViewDetailInvoiceObject.InvoiceId" />
+                                            <button class="btn btn-dark btn-lg btn-block justify-content-center d-flex align-items-center">
+                                                <i class="mdi mdi-close-box-outline"></i> Cancel Order
+                                            </button>
+                                        </form>
+                                    </div>
+                                }
+                                else if (Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Manager Disapproved") || Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Admin Disapproved") || Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Canceled") || Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Admin Canceled"))
+                                {
+                                    <div class="card-body">
+                                        <button class="btn btn-primary btn-lg btn-block justify-content-center d-flex align-items-center">
+                                            <i class="mdi mdi-close-circle"></i>
+                                            <span>Order Canceled or Disapproved</span>
+                                        </button>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="card-body">
+                                        <button class="btn btn-primary btn-lg btn-block justify-content-center d-flex align-items-center">
+                                            <i class="mdi mdi-dots-horizontal"></i>
+                                            <span>@Model.ViewDetailInvoiceObject.InvoiceStatus</span>
+                                        </button>
+                                    </div>
+                                }
+                                <div>
+                                    <a asp-page="./InvoiceDetail" class="btn btn-primary btn-rounded btn-fw justify-content-center d-inline-flex align-items-center">
+                                        <i class="mdi mdi-backburger"></i> Back
+                                    </a>
                                 </div>
                             </div>
 
-                            <a class="btn btn-outline-light btn-fw" asp-page="./InvoiceDetail">Back</a>
+                            
 
                         </div>
                     </div>

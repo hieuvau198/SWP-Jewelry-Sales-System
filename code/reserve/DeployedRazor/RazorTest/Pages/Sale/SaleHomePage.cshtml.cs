@@ -51,11 +51,11 @@ namespace RazorTest.Pages.Sale
             {
                 // Verify auth
                 List<string> roles = new List<string>
-            {
-                "Admin",
-                "Cashier",
-                "Sale"
-            };
+                {
+                    "Admin",
+                    "Cashier",
+                    "Sale"
+                };
                 if (!_apiService.VerifyAuth(HttpContext, roles))
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
@@ -64,21 +64,8 @@ namespace RazorTest.Pages.Sale
                 // Process data
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-                if (HttpContext.Session.GetObject<User>(SessionKeyUserObject) == null)
-                {
-                    HttpContext.Session.SetString(SessionKeyMessage, "Not Authen");
-                    RedirectToPage("/Index");
-                }
-                else
-                {
-                    HttpContext.Session.SetString(SessionKeyMessage, "Is authen");
-                }
-
-                List<Product> allProducts = HttpContext.Session.GetObject<List<Product>>(SessionKeySaleProductList);
-                if (allProducts == null || allProducts.Count == 0)
-                {
-                    allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
-                }
+                List<Product> allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+                
                 if(allProducts.IsNullOrEmpty())
                 {
                     return RedirectToPage("/NotFound");
@@ -86,14 +73,11 @@ namespace RazorTest.Pages.Sale
                 // Make order for results
                 allProducts = allProducts.OrderBy(p => p.ProductCode).ToList();
 
-
-
                 // Calculate pagination details
                 CurrentPage = currentPage;
                 TotalPages = (int)System.Math.Ceiling(allProducts.Count / (double)PageSize);
 
                 Products = allProducts.Skip((CurrentPage - 1) * PageSize).Take(PageSize).ToList();
-
 
                 // Store products in session to fetch them during post request
                 HttpContext.Session.SetObject("Products", allProducts);
@@ -102,7 +86,6 @@ namespace RazorTest.Pages.Sale
             {
                 return RedirectToPage("/Error");
             }
-            
 
             return Page();
         }
