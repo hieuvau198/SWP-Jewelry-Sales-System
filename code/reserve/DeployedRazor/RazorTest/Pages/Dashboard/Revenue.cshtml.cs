@@ -30,7 +30,6 @@ namespace RazorTest.Pages.Dashboard
         public string MonthlyPurchasesJson { get; set; }
         public string TopStaffSalesJson { get; set; }
         public string BestStaffMonthlyJson { get; set; }
-
         public double TotalSales { get; set; }
         public double TotalPurchases { get; set; }
         public int TotalInvoices { get; set; }
@@ -44,6 +43,10 @@ namespace RazorTest.Pages.Dashboard
         public int TotalInvoiceByStaff { get; set; }
         public double HighestSalesAmount { get; set; }
         public string BestStaffName { get; set; }
+        public string BestStaffThisMonth { get; set; }
+        public int TotalInvoicesByBestStaffThisMonth { get; set; }
+        public double TotalSalesByBestStaffThisMonth { get; set; }
+        public string CurrentMonthYear { get; set; }
 
 
         public async Task<IActionResult> OnGetAsync()
@@ -66,7 +69,8 @@ namespace RazorTest.Pages.Dashboard
                 }
 
                 var monthlySales = invoices
-                    .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                    .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase) &&
+                                i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
                     .OrderBy(g => g.InvoiceDate)
                     .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month })
                     .Select(g => new
@@ -77,7 +81,8 @@ namespace RazorTest.Pages.Dashboard
                     .ToList();
 
                 var monthlyPurchases = invoices
-                    .Where(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase))
+                    .Where(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase) &&
+                                i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
                     .OrderBy(g => g.InvoiceDate)
                     .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month })
                     .Select(g => new
@@ -88,7 +93,8 @@ namespace RazorTest.Pages.Dashboard
                     .ToList();
 
                 var topStaffSales = invoices
-                  .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                  .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase) &&
+                              i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
                   .OrderBy(g => g.InvoiceDate)
                   .GroupBy(i => i.UserFullname)
                   .Select(g => new
@@ -100,7 +106,8 @@ namespace RazorTest.Pages.Dashboard
                   .ToList();
 
                 var bestStaffMonthly = invoices
-                    .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase))
+                    .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase) &&
+                                i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
                     .OrderBy(g => g.InvoiceDate)
                     .GroupBy(i => new { i.InvoiceDate.Year, i.InvoiceDate.Month, i.UserFullname })
                     .Select(g => new
@@ -113,11 +120,45 @@ namespace RazorTest.Pages.Dashboard
                     .Select(g => g.OrderByDescending(s => s.totalSales).FirstOrDefault())
                     .ToList();
 
-                var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));
+                TotalInvoiceByStaff = invoices.Where(i => i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
+                                              .Count(i => i.UserFullname.Equals(BestStaff, StringComparison.OrdinalIgnoreCase));
+
+                // Get current month and year
+                var currentMonth = DateTime.Now.Month;
+                var currentYear = DateTime.Now.Year;
+
+                // Get the best staff for the current month
+                var bestStaffThisMonth = invoices
+                    .Where(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase) &&
+                                i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase) &&
+                                i.InvoiceDate.Month == currentMonth &&
+                                i.InvoiceDate.Year == currentYear)
+                    .GroupBy(i => i.UserFullname)
+                    .Select(g => new
+                    {
+                        staffName = g.Key,
+                        totalSales = g.Sum(i => i.EndTotalPrice)
+                    })
+                    .OrderByDescending(s => s.totalSales)
+                    .FirstOrDefault();
+
+                if (bestStaffThisMonth != null)
+                {
+                    BestStaffThisMonth = bestStaffThisMonth.staffName;
+                    TotalInvoicesByBestStaffThisMonth = invoices
+                        .Count(i => i.UserFullname.Equals(BestStaffThisMonth, StringComparison.OrdinalIgnoreCase) &&
+                                    i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase) &&
+                                    i.InvoiceDate.Month == currentMonth &&
+                                    i.InvoiceDate.Year == currentYear);
+                    TotalSalesByBestStaffThisMonth = bestStaffThisMonth.totalSales; 
+                }
+
+                var yearlySalesCount = invoices.Count(i => i.InvoiceType.Equals("Sale", StringComparison.OrdinalIgnoreCase));                                                                    
                 var yearlyPurchasesCount = invoices.Count(i => i.InvoiceType.Equals("Buy", StringComparison.OrdinalIgnoreCase));
                 var totalPendingInvoices = invoices.Count(i => i.InvoiceStatus.Equals("Pending", StringComparison.OrdinalIgnoreCase));
                 var totalCompleteInvoices = invoices.Count(i => i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase));
-                var totalInvoiceByStaff = invoices.Count(i => i.UserFullname.Equals(BestStaff, StringComparison.OrdinalIgnoreCase));
+                var totalInvoiceByStaff = invoices.Where(i => i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
+                                                  .Count(i => i.UserFullname.Equals(BestStaff, StringComparison.OrdinalIgnoreCase));
                 var bestStaffName = topStaffSales.FirstOrDefault()?.staffName ?? "N/A";
                 var highestSalesAmount = topStaffSales.FirstOrDefault()?.totalSales ?? 0;
                 
@@ -129,18 +170,24 @@ namespace RazorTest.Pages.Dashboard
                 TotalCompleteInvoices = totalCompleteInvoices;                
                 BestStaffName = bestStaffName;
                 HighestSalesAmount = highestSalesAmount;
-                TotalInvoiceByStaff = invoices.Count(i => i.UserFullname.Equals(BestStaffName, StringComparison.OrdinalIgnoreCase));
+                TotalInvoiceByStaff = invoices.Where(i => i.InvoiceStatus.Equals("Complete", StringComparison.OrdinalIgnoreCase))
+                                              .Count(i => i.UserFullname.Equals(BestStaffName, StringComparison.OrdinalIgnoreCase));
+                CurrentMonthYear = $"{currentMonth}-{currentYear}";
 
                 MonthlySalesJson = JsonSerializer.Serialize(monthlySales);
                 MonthlyPurchasesJson = JsonSerializer.Serialize(monthlyPurchases);
                 TopStaffSalesJson = JsonSerializer.Serialize(topStaffSales);
                 BestStaffMonthlyJson = JsonSerializer.Serialize(bestStaffMonthly);
+                                
                 ViewData["YearlySalesCount"] = yearlySalesCount;
                 ViewData["YearlyPurchasesCount"] = yearlyPurchasesCount;
                 ViewData["TotalPendingInvoices"] = totalPendingInvoices;
                 ViewData["totalCompleteInvoices"] = totalCompleteInvoices;
                 ViewData["BestStaffName"] = bestStaffName;
                 ViewData["HighestSalesAmount"] = highestSalesAmount;
+                ViewData["BestStaffThisMonth"] = BestStaffThisMonth;
+                ViewData["TotalInvoicesByBestStaffThisMonth"] = TotalInvoicesByBestStaffThisMonth;
+                ViewData["CurrentMonthYear"] = CurrentMonthYear;
             }
             catch (Exception ex)
             {

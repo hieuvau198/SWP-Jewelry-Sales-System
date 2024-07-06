@@ -406,16 +406,16 @@
                         <div class="col-sm-4 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 id="card-title-2">Sales</h5>
+                                    <h5 id="card-title-2">Sales(VND)</h5>
                                     <div class="row">
                                         <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                             <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                                <h3 id="card-value-2" class="mb-0">@String.Format("{0:N0}", @Model.TotalSales)</h3>
+                                                <h3 id="card-value-2" class="mb-0">@String.Format("{0:N0}", @Model.TotalSales)Đ</h3>
                                             </div>
                                             <h6 id="card-desc-2" class="text-muted font-weight-normal">Total Sales has been Sell</h6>
                                         </div>
                                         <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                            <i id="card-icon-2" class="icon-lg mdi mdi-cart-outline text-success ml-auto"></i>
+                                            <i id="card-icon-2" class="icon-lg mdi mdi-basket-unfill text-success ml-auto"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -424,16 +424,16 @@
                         <div class="col-sm-4 grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 id="card-title-3">Buy</h5>
+                                    <h5 id="card-title-3">Buy(VND)</h5>
                                     <div class="row">
                                         <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                             <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                                <h3 id="card-value-3" class="mb-0">@String.Format("{0:N0}", @Model.TotalPurchases)</h3>
+                                                <h3 id="card-value-3" class="mb-0">@String.Format("{0:N0}", @Model.TotalPurchases)Đ</h3>
                                             </div>
                                             <h6 id="card-desc-3" class="text-muted font-weight-normal">Total Sales has been Buy</h6>
                                         </div>
                                         <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                                            <i id="card-icon-3" class="icon-lg mdi mdi-file-restore text-danger ml-auto"></i>
+                                            <i id="card-icon-3" class="icon-lg mdi mdi-basket-fill text-danger ml-auto"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -442,8 +442,9 @@
 
                         <!-- Charts Section -->
                         <div class="col-8 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body text-center">
+                            
+                            <div class="card">                                
+                                <div class="card-body text-center">                                    
                                     <ul class="nav nav-tabs">
                                         <li class="nav-item">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#chart1">Total Sale And Buy</a>
@@ -590,15 +591,15 @@
             document.getElementById('card-value-1').textContent = '@Model.TotalInvoices';
             document.getElementById('card-icon-1').className = 'icon-lg mdi mdi-file-multiple text-primary ml-auto';
 
-            document.getElementById('card-title-2').textContent = 'Sales';
+            document.getElementById('card-title-2').textContent = 'Sales(VND)';
             document.getElementById('card-desc-2').textContent = 'Total Sales has been Sell';
-            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalSales)';
-            document.getElementById('card-icon-2').className = 'icon-lg mdi mdi-cart-outline text-success ml-auto';
+            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalSales)Đ';
+            document.getElementById('card-icon-2').className = 'icon-lg mdi mdi-basket-unfill text-success ml-auto';
 
-            document.getElementById('card-title-3').textContent = 'Buy';
+            document.getElementById('card-title-3').textContent = 'Buy(VND)';
             document.getElementById('card-desc-3').textContent = 'Total Sales has been Buy';
-            document.getElementById('card-value-3').textContent = '@String.Format("{0:N0}", @Model.TotalPurchases)';
-            document.getElementById('card-icon-3').className = 'icon-lg mdi mdi-file-restore text-danger ml-auto';
+            document.getElementById('card-value-3').textContent = '@String.Format("{0:N0}", @Model.TotalPurchases)Đ';
+            document.getElementById('card-icon-3').className = 'icon-lg mdi mdi-basket-fill text-danger ml-auto';
         });
 
 
@@ -613,29 +614,46 @@
         });
 
         chart3Tab.addEventListener('shown.bs.tab', function () {
-            document.getElementById('info-title-1').textContent = 'Sale';
+            document.getElementById('info-title-1').textContent = 'Sale(VND)';
             document.getElementById('info-desc-1').textContent = 'Total Sale';
-            document.getElementById('info-value-1').textContent = '@String.Format("{0:N0}", @Model.TotalSales)';
+            document.getElementById('info-value-1').textContent = '@String.Format("{0:N0}", @Model.TotalSales)Đ';
 
-            document.getElementById('info-title-2').textContent = 'Buy';
+            document.getElementById('info-title-2').textContent = 'Buy(VND)';
             document.getElementById('info-desc-2').textContent = 'Total Purchase';
-            document.getElementById('info-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalPurchases)';
+            document.getElementById('info-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalPurchases)Đ';
         });
 
         chart4Tab.addEventListener('shown.bs.tab', function () {
             document.getElementById('card-title-1').textContent = 'Best Staff';
             document.getElementById('card-desc-1').textContent = 'Staff Name';
             document.getElementById('card-value-1').textContent = '@Model.BestStaff';
-            document.getElementById('card-icon-1').className = 'icon-lg mdi mdi-account-box text-primary ml-auto';
+            document.getElementById('card-icon-1').className = 'icon-lg mdi mdi-account-box text-info ml-auto';
 
-            document.getElementById('card-title-2').textContent = 'Total Sale';
+            document.getElementById('card-title-2').textContent = 'Total Sale(VND)';
             document.getElementById('card-desc-2').textContent = 'Total Sale by @Model.BestStaffName';
-            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.HighestSalesAmount)';
+            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.HighestSalesAmount)Đ';
             document.getElementById('card-icon-2').className = 'icon-lg mdi mdi-currency-usd text-success ml-auto';
 
             document.getElementById('card-title-3').textContent = 'Total Invoice';
             document.getElementById('card-desc-3').textContent = 'Total Invoice create By @Model.BestStaffName';
             document.getElementById('card-value-3').textContent = '@Model.TotalInvoiceByStaff';
+            document.getElementById('card-icon-3').className = 'icon-lg mdi mdi-file-multiple text-primary ml-auto';
+        });
+
+        chart5Tab.addEventListener('shown.bs.tab', function () {
+            document.getElementById('card-title-1').textContent = 'Best Staff Of @Model.CurrentMonthYear';
+            document.getElementById('card-desc-1').textContent = 'Staff Name';
+            document.getElementById('card-value-1').textContent = '@Model.BestStaffThisMonth';
+            document.getElementById('card-icon-1').className = 'icon-lg mdi mdi-account-box text-info ml-auto';
+
+            document.getElementById('card-title-2').textContent = 'Total Sale(VND)';
+            document.getElementById('card-desc-2').textContent = 'Total Sale by @Model.BestStaffThisMonth at @Model.CurrentMonthYear';
+            document.getElementById('card-value-2').textContent = '@String.Format("{0:N0}", @Model.TotalSalesByBestStaffThisMonth)Đ';
+            document.getElementById('card-icon-2').className = 'icon-lg mdi mdi-currency-usd text-success ml-auto';
+
+            document.getElementById('card-title-3').textContent = 'Total Invoice';
+            document.getElementById('card-desc-3').textContent = 'Total Invoice create By @Model.BestStaffThisMonth at @Model.CurrentMonthYear';
+            document.getElementById('card-value-3').textContent = '@Model.TotalInvoicesByBestStaffThisMonth';
             document.getElementById('card-icon-3').className = 'icon-lg mdi mdi-file-multiple text-primary ml-auto';
         });
     });
