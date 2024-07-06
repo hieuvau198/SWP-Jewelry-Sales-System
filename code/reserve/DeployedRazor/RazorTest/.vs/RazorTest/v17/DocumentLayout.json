@@ -1,22 +1,254 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\",
+  "WorkspaceRootPath": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\0347 0607\\razortest\\pages\\pinvoice\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\buy\\processing.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\processing.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\0347 0607\\razortest\\pages\\pinvoice\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\0347 0607\\razortest\\pages\\buy\\buyback.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\buy\\buyback.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\buyback.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\0347 0607\\razortest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\buy\\buyback.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\buyback.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\buy\\confirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\confirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\buy\\confirm.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\confirm.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\buy\\processing.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\buy\\processing.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\customerdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\customerdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\customerdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\customerdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pcustomer\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pcustomer\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pdiscount\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pdiscount\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pdiscount\\discountdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\discountdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pdiscount\\discountdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\discountdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pdiscount\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pdiscount\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pdiscount\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgemstone\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgold\\golddetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\golddetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pgold\\golddetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgold\\golddetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoice\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoice\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoice\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoice\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\invoicedetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoice\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoice\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\invoiceitemdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\invoiceitemdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pinvoiceitem\\invoiceitemdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pinvoiceitem\\invoiceitemdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pproduct\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pproduct\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pproduct\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pproduct\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\pproduct\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pproduct\\productdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\userdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\userdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\puser\\userdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\puser\\userdetail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\sale\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\sale\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\sale\\createcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\createcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\sale\\checkoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\checkoutpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\selectdiscountpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\sale\\salehomepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\salehomepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|d:\\asp dot net\\deployedrazor\\razortest\\wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:wwwroot\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,61 +258,817 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\pinvoice\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Pages\\pinvoice\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\pinvoice\\Edit.cshtml",
-              "RelativeToolTip": "Pages\\pinvoice\\Edit.cshtml",
-              "ViewState": "AQIAAEwBAAAAAAAAAAAAAFEBAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-05T22:18:41.783Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Confirm.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Confirm.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Buy\\Confirm.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Confirm.cshtml",
+              "RelativeToolTip": "Pages\\Buy\\Confirm.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAqwNsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T10:01:36.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Confirm.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Confirm.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Buy\\Confirm.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Confirm.cshtml.cs",
+              "RelativeToolTip": "Pages\\Buy\\Confirm.cshtml.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAADwv5AAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:01:19.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Processing.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Processing.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Buy\\Processing.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Processing.cshtml",
+              "RelativeToolTip": "Pages\\Buy\\Processing.cshtml",
+              "ViewState": "AQIAALYBAAAAAAAAAAAowNABAACEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T10:01:05.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Processing.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Processing.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Buy\\Processing.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\Processing.cshtml.cs",
+              "RelativeToolTip": "Pages\\Buy\\Processing.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T10:00:42.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pcustomer\\Create.cshtml",
+              "ViewState": "AQIAANgAAAAAAAAAAAAqwPMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T10:00:14.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Create.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\pcustomer\\Create.cshtml.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:59:58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BuyBack.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\BuyBack.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Buy\\BuyBack.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\BuyBack.cshtml.cs",
+              "RelativeToolTip": "Pages\\Buy\\BuyBack.cshtml.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswL4AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:33:12.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BuyBack.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\BuyBack.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Buy\\BuyBack.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Buy\\BuyBack.cshtml",
+              "RelativeToolTip": "Pages\\Buy\\BuyBack.cshtml",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAcwLUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-05T21:43:28.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CustomerDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\CustomerDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml",
+              "RelativeToolTip": "Pages\\pcustomer\\CustomerDetail.cshtml",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAqwPQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:59:44.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pcustomer\\CustomerDetail.cshtml.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAiwEgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:59:34.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Delete.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\pcustomer\\Delete.cshtml",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAqwPMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:59:23.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Delete.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\pcustomer\\Delete.cshtml.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAkwE4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:59:11.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\pcustomer\\Edit.cshtml",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAqwPMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:58:52.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pcustomer\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pcustomer\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\pcustomer\\Edit.cshtml.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAmwGUAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:58:31.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pdiscount\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pdiscount\\Create.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAqwN8AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:58:16.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pdiscount\\Create.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\pdiscount\\Create.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:57:58.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DiscountDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\DiscountDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pdiscount\\DiscountDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\DiscountDetail.cshtml",
+              "RelativeToolTip": "Pages\\pdiscount\\DiscountDetail.cshtml",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAqwPIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:57:34.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DiscountDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\DiscountDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pdiscount\\DiscountDetail.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\DiscountDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pdiscount\\DiscountDetail.cshtml.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:57:20.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pdiscount\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\pdiscount\\Edit.cshtml.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAqwGYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:56:52.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pdiscount\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pdiscount\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\pdiscount\\Edit.cshtml",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAqwNwAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:56:34.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Create.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\pgemstone\\Create.cshtml.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAUwAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:55:56.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pgemstone\\Create.cshtml",
+              "ViewState": "AQIAAL0AAAAAAAAAAAAcwNsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:55:46.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Delete.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\pgemstone\\Delete.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:55:35.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Delete.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\pgemstone\\Delete.cshtml",
+              "ViewState": "AQIAAL0AAAAAAAAAAAAcwNoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:55:26.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Detail.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Detail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Detail.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Detail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pgemstone\\Detail.cshtml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAADwv0QAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:55:13.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Detail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Detail.cshtml",
+              "RelativeToolTip": "Pages\\pgemstone\\Detail.cshtml",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAcwNoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:55:03.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\pgemstone\\Edit.cshtml.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAkwGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:54:52.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pgemstone\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgemstone\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\pgemstone\\Edit.cshtml",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAcwPMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:54:41.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GoldDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgold\\GoldDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pgold\\GoldDetail.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgold\\GoldDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pgold\\GoldDetail.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:51:31.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "GoldDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgold\\GoldDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pgold\\GoldDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pgold\\GoldDetail.cshtml",
+              "RelativeToolTip": "Pages\\pgold\\GoldDetail.cshtml",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAcwP8AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:51:21.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoice\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pinvoice\\Create.cshtml",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAcwPEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:50:58.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoice\\Delete.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\pinvoice\\Delete.cshtml",
+              "ViewState": "AQIAAMMAAAAAAAAAAAAcwPUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:50:40.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ViewDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\ViewDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoice\\ViewDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\ViewDetail.cshtml",
+              "RelativeToolTip": "Pages\\pinvoice\\ViewDetail.cshtml",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAcwPMAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:49:35.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\Create.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\Create.cshtml.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAowGAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:49:05.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\Create.cshtml",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAcwMwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:48:43.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\Delete.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Delete.cshtml.cs",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\Delete.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:48:23.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\Delete.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Delete.cshtml",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\Delete.cshtml",
+              "ViewState": "AQIAANUAAAAAAAAAAAAcwPIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:48:03.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\Edit.cshtml.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAowGYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:47:45.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "InvoiceDetail.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\pinvoice\\InvoiceDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\InvoiceDetail.cshtml",
               "RelativeDocumentMoniker": "Pages\\pinvoice\\InvoiceDetail.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\pinvoice\\InvoiceDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\InvoiceDetail.cshtml",
               "RelativeToolTip": "Pages\\pinvoice\\InvoiceDetail.cshtml",
-              "ViewState": "AQIAAGEBAAAAAAAAAAAqwHgBAAAuAAAA",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAcwPwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-05T21:54:21.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BuyBack.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\Buy\\BuyBack.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Buy\\BuyBack.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\Buy\\BuyBack.cshtml",
-              "RelativeToolTip": "Pages\\Buy\\BuyBack.cshtml",
-              "ViewState": "AQIAAFoBAAAAAAAAAAAawGYBAABDAAAA",
+              "DocumentIndex": 32,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoice\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoice\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\pinvoice\\Edit.cshtml",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAcwPwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-05T21:43:28.596Z"
+              "WhenOpened": "2024-07-05T22:18:41.783Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0347 0607\\RazorTest\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AQIAALcBAAAAAAAAAAAqwMgBAAAaAAAA",
+              "DocumentIndex": 40,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\Edit.cshtml",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAcwPMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-05T21:34:24.137Z"
+              "WhenOpened": "2024-07-06T09:47:35.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "InvoiceItemDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:47:16.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "InvoiceItemDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml",
+              "RelativeToolTip": "Pages\\pinvoiceitem\\InvoiceItemDetail.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAcwPIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:47:03.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Create.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\pproduct\\Create.cshtml.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAADwv4YAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:44:11.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Create.cshtml",
+              "RelativeToolTip": "Pages\\pproduct\\Create.cshtml",
+              "ViewState": "AQIAAM0AAAAAAAAAAAAcwPYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:44:01.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\pproduct\\Edit.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:43:45.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\pproduct\\Edit.cshtml",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAcwPYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:43:31.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ProductDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\ProductDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\pproduct\\ProductDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\pproduct\\ProductDetail.cshtml",
+              "RelativeToolTip": "Pages\\pproduct\\ProductDetail.cshtml",
+              "ViewState": "AQIAAMoAAAAAAAAAAAAcwOoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:43:10.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\puser\\Create.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Create.cshtml.cs",
+              "RelativeToolTip": "Pages\\puser\\Create.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:42:55.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Create.cshtml",
+              "RelativeDocumentMoniker": "Pages\\puser\\Create.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Create.cshtml",
+              "RelativeToolTip": "Pages\\puser\\Create.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAcwPIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:42:33.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\puser\\Edit.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Edit.cshtml.cs",
+              "RelativeToolTip": "Pages\\puser\\Edit.cshtml.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAowGEAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:41:40.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Pages\\puser\\Edit.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\Edit.cshtml",
+              "RelativeToolTip": "Pages\\puser\\Edit.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAcwNsAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:41:25.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "UserDetail.cshtml.cs",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\puser\\UserDetail.cshtml.cs",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml.cs",
+              "RelativeToolTip": "Pages\\puser\\UserDetail.cshtml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwA8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-06T09:40:27.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UserDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\puser\\UserDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\puser\\UserDetail.cshtml",
+              "RelativeToolTip": "Pages\\puser\\UserDetail.cshtml",
+              "ViewState": "AQIAAMAAAAAAAAAAAAAcwN8AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:40:16.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "CheckOutPage.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Sale\\CheckOutPage.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml",
+              "RelativeToolTip": "Pages\\Sale\\CheckOutPage.cshtml",
+              "ViewState": "AQIAAL8AAAAAAAAAAAAcwPEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:38:02.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "CreateCustomer.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\CreateCustomer.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Sale\\CreateCustomer.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\CreateCustomer.cshtml",
+              "RelativeToolTip": "Pages\\Sale\\CreateCustomer.cshtml",
+              "ViewState": "AQIAAEYBAAAAAAAAAAAAAPEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:37:39.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ViewCart.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\ViewCart.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Sale\\ViewCart.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\ViewCart.cshtml",
+              "RelativeToolTip": "Pages\\Sale\\ViewCart.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAF8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:37:00.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SelectDiscountPage.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Sale\\SelectDiscountPage.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\SelectDiscountPage.cshtml",
+              "RelativeToolTip": "Pages\\Sale\\SelectDiscountPage.cshtml",
+              "ViewState": "AQIAANQAAAAAAAAAAAAcwN8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T09:36:37.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "SaleHomePage.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Sale\\SaleHomePage.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml",
+              "RelativeToolTip": "Pages\\Sale\\SaleHomePage.cshtml",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAcwPkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T08:26:23.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ViewDetail.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\ViewDetail.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Sale\\ViewDetail.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Sale\\ViewDetail.cshtml",
+              "RelativeToolTip": "Pages\\Sale\\ViewDetail.cshtml",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAAPkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-06T08:13:28.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css",
+              "RelativeDocumentMoniker": "wwwroot\\assets\\css\\style.css",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\wwwroot\\assets\\css\\style.css",
+              "RelativeToolTip": "wwwroot\\assets\\css\\style.css",
+              "ViewState": "AQIAAAAmAAAAAAAAAAAwwCsmAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-06T08:32:41.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "D:\\Asp dot net\\DeployedRazor\\RazorTest\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AQIAADsBAAAAAAAAAAAAAEgBAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-05T21:34:24.137Z",
+              "EditorCaption": ""
             }
           ]
         }

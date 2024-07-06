@@ -11,6 +11,7 @@ namespace RazorTest.Pages.pgemstone
     public class EditModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly GemService _gemService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -85,6 +86,21 @@ namespace RazorTest.Pages.pgemstone
 
             _logger.LogInformation("Successfully updated gem");
             return RedirectToPage("./Detail");
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

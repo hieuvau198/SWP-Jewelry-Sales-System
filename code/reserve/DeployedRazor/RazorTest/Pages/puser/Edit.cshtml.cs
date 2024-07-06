@@ -11,6 +11,7 @@ namespace RazorTest.Pages.puser
     public class EditModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly UserService _userService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -84,6 +85,20 @@ namespace RazorTest.Pages.puser
 
             _logger.LogInformation("Successfully updated user");
             return RedirectToPage("./UserDetail");
+        }
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

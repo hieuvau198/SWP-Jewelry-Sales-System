@@ -11,6 +11,7 @@ namespace RazorTest.Pages.pproduct
     public class EditModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly ProductService _productService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -95,6 +96,21 @@ namespace RazorTest.Pages.pproduct
 
             _logger.LogInformation("Successfully updated Product");
             return RedirectToPage("./ProductDetail", new { id = Product.ProductId });
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

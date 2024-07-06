@@ -46,7 +46,14 @@
                             </div>
                             <div class="profile-name">
                                 <h5 class="mb-0 font-weight-normal">@Model.User.Fullname</h5>
-                                @if(Model.User.Role.Equals("Sale")){<span>Retail Assistant</span>}else{<span>@Model.User.Role</span>}
+                                @if (Model.User.Role.Equals("Sale"))
+                                {
+                                    <span>Retail Assistant</span>
+                                }
+                                else
+                                {
+                                    <span>@Model.User.Role</span>
+                                }
                             </div>
                         </div>
                         <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -89,88 +96,158 @@
                 <li class="nav-item nav-category">
                     <span class="nav-link">Navigation</span>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="index.html">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-speedometer"></i>
-                        </span>
-                        <span class="menu-title">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-laptop"></i>
-                        </span>
-                        <span class="menu-title">Basic UI Elements</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="ui-basic">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="pages/forms/basic_elements.html">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-playlist-play"></i>
-                        </span>
-                        <span class="menu-title">Form Elements</span>
-                    </a>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="pages/tables/basic-table.html">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-table-large"></i>
-                        </span>
-                        <span class="menu-title">Tables</span>
-                    </a>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="pages/charts/chartjs.html">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-chart-bar"></i>
-                        </span>
-                        <span class="menu-title">Charts</span>
-                    </a>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="pages/icons/mdi.html">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-contacts"></i>
-                        </span>
-                        <span class="menu-title">Icons</span>
-                    </a>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-security"></i>
-                        </span>
-                        <span class="menu-title">User Pages</span>
-                        <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="auth">
-                        <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" href="http://www.bootstrapdash.com/demo/corona-free/jquery/documentation/documentation.html">
-                        <span class="menu-icon">
-                            <i class="mdi mdi-file-document-box"></i>
-                        </span>
-                        <span class="menu-title">Documentation</span>
-                    </a>
-                </li>
+
+                @if (Model.VerifyAuth("Manager"))
+                {
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-package-variant-closed"></i>
+                            </span>
+                            <span class="menu-title">Product</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pinvoice/InvoiceDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-history"></i>
+                            </span>
+                            <span class="menu-title">Order History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pgemstone/Detail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-diamond-stone"></i>
+                            </span>
+                            <span class="menu-title">Gemstone</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/puser/UserDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-account"></i>
+                            </span>
+                            <span class="menu-title">User</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-store"></i>
+                            </span>
+                            <span class="menu-title">Manage Stalls</span>
+                        </a>
+                    </li>
+                }
+
+                @if (Model.VerifyAuth("Admin"))
+                {
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" href="/Dashboard/Revenue">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-speedometer"></i>
+                            </span>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-package-variant-closed"></i>
+                            </span>
+                            <span class="menu-title">Product</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pcustomer/CustomerDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-account-box"></i>
+                            </span>
+                            <span class="menu-title">Customer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pdiscount/DiscountDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-tag"></i>
+                            </span>
+                            <span class="menu-title">Discount</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/puser/UserDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-account"></i>
+                            </span>
+                            <span class="menu-title">User</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pinvoice/InvoiceDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-history"></i>
+                            </span>
+                            <span class="menu-title">Order History</span>
+                        </a>
+                    </li>
+                }
+
+                @if (Model.VerifyAuth("Cashier"))
+                {
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-package-variant-closed"></i>
+                            </span>
+                            <span class="menu-title">Product</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pinvoice/InvoiceDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-history"></i>
+                            </span>
+                            <span class="menu-title">Order History</span>
+                        </a>
+                    </li>
+                }
+
+                @if (Model.VerifyAuth("Sale"))
+                {
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pproduct/ProductDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-package-variant-closed"></i>
+                            </span>
+                            <span class="menu-title">Product</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/Sale/SaleHomePage">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-cart"></i>
+                            </span>
+                            <span class="menu-title">Order</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/Buy/Processing">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-cart-arrow-down"></i>
+                            </span>
+                            <span class="menu-title">Buy</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pinvoice/InvoiceDetail">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-history"></i>
+                            </span>
+                            <span class="menu-title">Order History</span>
+                        </a>
+                    </li>
+                }
             </ul>
         </nav>
         <!-- partial -->
@@ -336,28 +413,28 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                                 <h6 class="p-3 mb-0">Setting</h6>
-<div class="dropdown-divider"></div>
-<a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">
-    <div class="preview-thumbnail">
-        <div class="preview-icon bg-dark rounded-circle">
-            <i class="mdi mdi-settings text-success"></i>
-        </div>
-    </div>
-    <div class="preview-item-content" >
-        <p class="preview-subject mb-1" >Profile</p>
-    </div>
-</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-settings text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Profile</p>
+                                    </div>
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item" asp-page="/Authentication/LogoutPage">
-    <div class="preview-thumbnail">
-        <div class="preview-icon bg-dark rounded-circle">
-            <i class="mdi mdi-logout text-danger"></i>
-        </div>
-    </div>
-    <div class="preview-item-content">
-        <p class="preview-subject mb-1" >Log out</p>
-    </div>
-</a>
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon bg-dark rounded-circle">
+                                            <i class="mdi mdi-logout text-danger"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Log out</p>
+                                    </div>
+                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item preview-item" asp-page="/Authentication/Accessdenied">    <div class="preview-thumbnail">        <div class="preview-icon bg-dark rounded-circle">            <i class="mdi mdi-settings text-success"></i>        </div>    </div>    <div class="preview-item-content">        <p class="preview-subject mb-1">Advance</p>    </div></a>
                             </div>
@@ -375,67 +452,80 @@
                     <div class="card">
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>Code</th>
-                                            <th>Name</th>
-                                            <th>Portrait</th>
-                                            <th>Inventory</th>
-                                            <th>Type</th>
-                                            <th>Warranty</th>
-                                            <th>Gemstone</th>
-                                            <th>Gem Weight (cts)</th>
-                                            <th>Gold Name</th>
-                                            <th>Gold Weight (cts)</th>
-                                            <th>Price Cost (VND)</th>
-                                            <th>Publish</th>
-                                        </tr>
-                                    </thead>
-                                    @if (Model.ViewProductDetail != null)
-                                    {
-                                        <tbody>
-                                            <tr>
-                                                <td>@Model.ViewProductDetail.ProductCode</td>
-                                                <td>@Model.ViewProductDetail.ProductName</td>
-                                                <td><img src="/ProductImages/@Model.ViewProductDetail.ProductImages" width="100px" /></td>
-                                                <td>@Model.ViewProductDetail.ProductQuantity</td>
-                                                <td>@Model.ViewProductDetail.ProductType</td>
-                                                <td>@Model.ViewProductDetail.ProductWarranty</td>
-                                                <td>@Model.ViewProductDetail.GemName</td>
-                                                <td>@String.Format("{0:F2}", Model.ViewProductDetail.GemWeight)</td>
-                                                <td>@Model.ViewProductDetail.GoldName</td>
-                                                <td>@String.Format("{0:F2}", Model.ViewProductDetail.GoldWeight)</td>
-                                                <td>@String.Format("{0:N0}", Model.ViewProductDetail.UnitPrice)</td>
-                                                <td>@Model.ViewProductDetail.CreatedAt.ToShortDateString()</td>
-                                            </tr>
-                                        </tbody>
-                                    }
-                                </table>
+                            <div class="container mt-4">
+                                <div class="row">
+                                    <div class="col-md-4 text-center">
+                                        <img src="/ProductImages/@Model.ViewProductDetail.ProductImages" width="300px" height="300px" alt="Product Image" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Code</th>
+                                                        <th>Name</th>
+                                                        <th>Inventory</th>
+                                                        <th>Type</th>
+                                                        <th>Warranty</th>
+                                                        <th>Gemstone</th>
+                                                        <th>Gem Weight (cts)</th>
+                                                        <th>Gold Name</th>
+                                                        <th>Gold Weight (cts)</th>
+                                                        <th>Price Cost (VND)</th>
+                                                        <th>Publish</th>
+                                                    </tr>
+                                                </thead>
+                                                @if (Model.ViewProductDetail != null)
+                                                {
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>@Model.ViewProductDetail.ProductCode</td>
+                                                            <td>@Model.ViewProductDetail.ProductName</td>
+                                                            <td>@Model.ViewProductDetail.ProductQuantity</td>
+                                                            <td>@Model.ViewProductDetail.ProductType</td>
+                                                            <td>@Model.ViewProductDetail.ProductWarranty</td>
+                                                            <td>@Model.ViewProductDetail.GemName</td>
+                                                            <td>@String.Format("{0:F2}", Model.ViewProductDetail.GemWeight)</td>
+                                                            <td>@Model.ViewProductDetail.GoldName</td>
+                                                            <td>@String.Format("{0:F2}", Model.ViewProductDetail.GoldWeight)</td>
+                                                            <td>@String.Format("{0:N0}", Model.ViewProductDetail.UnitPrice)</td>
+                                                            <td>@Model.ViewProductDetail.CreatedAt.ToShortDateString()</td>
+                                                        </tr>
+                                                    </tbody>
+                                                }
+                                            </table>
+                                        </div> 
+                                        <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form mt-5 d-flex align-items-center">
+                                            <input type="hidden" name="productId" value="@Model.ViewProductDetail.ProductId" />
+                                            <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+                                            <input type="submit" value="Add to Cart" class="btn btn-outline-success btn-fw" />
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
+
                             <!-- EDIT HERE END -->
-                            <div class="card-body text-center">
-                                @if (Model.CurrentPage > 1)
-                                {
-                                    <a class="btn btn-primary btn-fw" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
-                                }
-                                @for (var i = 1; i <= Model.TotalPages; i++)
-                                {
-                                    if (i == Model.CurrentPage)
-                                    {
-                                        <a class="btn btn-primary" class="active" href="#">@i</a>
-                                    }
-                                    else
-                                    {
-                                        <a class="btn btn-primary" asp-page="./SaleHomePage" asp-route-currentPage="@i">@i</a>
-                                    }
-                                }
-                                @if (Model.CurrentPage < Model.TotalPages)
-                                {
-                                    <a class="btn btn-primary btn-fw" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
-                                }
-                            </div>
+                            @* <div class="card-body text-center">
+                            @if (Model.CurrentPage > 1)
+                            {
+                            <a class="btn btn-primary btn-fw" asp-page="./ViewDetail" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
+                            }
+                            @for (var i = 1; i <= Model.TotalPages; i++)
+                            {
+                            if (i == Model.CurrentPage)
+                            {
+                            <a class="btn btn-primary" class="active" href="#">@i</a>
+                            }
+                            else
+                            {
+                            <a class="btn btn-primary" asp-page="./ViewDetail" asp-route-currentPage="@i">@i</a>
+                            }
+                            }
+                            @if (Model.CurrentPage < Model.TotalPages)
+                            {
+                            <a class="btn btn-primary btn-fw" asp-page="./ViewDetail" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
+                            }
+                            </div> *@
 
                             <div class="card-body text-center">
                                 <a asp-page="./ViewCart" class="btn btn-outline-light btn-fw">Go to Cart</a>

@@ -11,6 +11,7 @@ namespace RazorTest.Pages.pdiscount
     public class EditModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly DiscountService _discountService;
         private readonly ApiService _apiService;
         private readonly ILogger<EditModel> _logger;
@@ -18,7 +19,7 @@ namespace RazorTest.Pages.pdiscount
         {
             _discountService = discountService;
             _apiService = apiService;
-            _logger = logger;   
+            _logger = logger;
         }
         public User User { get; set; }
 
@@ -28,15 +29,15 @@ namespace RazorTest.Pages.pdiscount
         public async Task<IActionResult> OnGetAsync(string id)
         {
             // Verify auth
-                List<string> roles = new List<string>
+            List<string> roles = new List<string>
             {
                 "Manager",
                 "Admin"
             };
-                if (!_apiService.VerifyAuth(HttpContext, roles))
-                {
-                    return RedirectToPage("/Authentication/AccessDenied");
-                }
+            if (!_apiService.VerifyAuth(HttpContext, roles))
+            {
+                return RedirectToPage("/Authentication/AccessDenied");
+            }
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
             if (id == null)
@@ -86,5 +87,19 @@ namespace RazorTest.Pages.pdiscount
             _logger.LogInformation("Successfully updated discount");
             return RedirectToPage("./DiscountDetail");
         }
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
     }
-    }
+}

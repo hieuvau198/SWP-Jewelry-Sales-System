@@ -9,7 +9,7 @@ namespace RazorTest.Pages.Buy
     public class ConfirmModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
-
+        public const string SessionKeyAuthState = "_AuthState";
 
         public const string SessionKeyBuyInvoiceItemObject = "_BuyInvoiceItemObject";
         public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
@@ -129,5 +129,19 @@ namespace RazorTest.Pages.Buy
             return RedirectToPage("/Buy/Processing");
         }
 
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
     }
 }

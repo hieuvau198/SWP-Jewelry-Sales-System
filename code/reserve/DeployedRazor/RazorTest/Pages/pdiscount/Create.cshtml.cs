@@ -10,7 +10,7 @@ namespace RazorTest.Pages.pdiscount
     public class CreateModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
-        
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly ApiService _apiService;
         private readonly DiscountService _discountService;
         private readonly ILogger<CreateModel> _logger;
@@ -84,6 +84,21 @@ namespace RazorTest.Pages.pdiscount
             ModelState.AddModelError(string.Empty, "An error occurred while creating the discount.");
             _logger.LogError($"Failed to create discount. Status Code: {response.StatusCode}");
             return Page();
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }

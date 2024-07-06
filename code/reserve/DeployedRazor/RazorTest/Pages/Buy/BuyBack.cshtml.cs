@@ -10,23 +10,24 @@ namespace RazorTest.Pages.Buy
     public class BuyBackModel : PageModel
     {
         //declare session var - type Object
-            public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
-            public const string SessionKeyBuyCustomerObject = "_BuyCustomerObject";
-            public const string SessionKeyBuyInvoiceItemlist = "_BuyInvoiceItemList";
-            public const string SessionKeyBuyInvoiceItemObject = "_BuyInvoiceItemObject";
-            public const string SessionKeyBuyProductObject = "_BuyProductObject";
-            public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyBuyInvoiceObject = "_BuyInvoiceObject";
+        public const string SessionKeyBuyCustomerObject = "_BuyCustomerObject";
+        public const string SessionKeyBuyInvoiceItemlist = "_BuyInvoiceItemList";
+        public const string SessionKeyBuyInvoiceItemObject = "_BuyInvoiceItemObject";
+        public const string SessionKeyBuyProductObject = "_BuyProductObject";
+        public const string SessionKeyUserObject = "_UserObject";
 
-            public const string SessionKeyBuyConfirmInvoiceObject = "_BuyConfirmInvoiceObject";
-            public const string SessionKeyBuyConfirmInvoiceItemObject = "_BuyConfirmInvoiceItemObject";
+        public const string SessionKeyBuyConfirmInvoiceObject = "_BuyConfirmInvoiceObject";
+        public const string SessionKeyBuyConfirmInvoiceItemObject = "_BuyConfirmInvoiceItemObject";
 
+        public const string SessionKeyAuthState = "_AuthState";
         //declare session var = type List
-            public const string SessionKeyInvoiceItemList = "_InvoiceItemList";
-            public const string SessionKeyProductList = "_ProductList";
+        public const string SessionKeyInvoiceItemList = "_InvoiceItemList";
+        public const string SessionKeyProductList = "_ProductList";
 
         //declare url
-            public const string UrlInvoiceItem = "https://hvjewel.azurewebsites.net/api/invoiceitem";
-            public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
+        public const string UrlInvoiceItem = "https://hvjewel.azurewebsites.net/api/invoiceitem";
+        public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
 
         private readonly ApiService _apiService;
 
@@ -87,7 +88,7 @@ namespace RazorTest.Pages.Buy
             {
                 return RedirectToPage("/Error");
             }
-            
+
             return Page();
         }
 
@@ -106,19 +107,19 @@ namespace RazorTest.Pages.Buy
             {
                 HttpContext.Session.SetObject(SessionKeyBuyInvoiceItemObject, invoiceItem);
                 List<Product> products = HttpContext.Session.GetObject<List<Product>>(SessionKeyProductList);
-                if(products.IsNullOrEmpty())
+                if (products.IsNullOrEmpty())
                 {
                     products = await _apiService.GetAsync<List<Product>>(UrlProduct);
                     HttpContext.Session.SetObject(SessionKeyProductList, products);
                 }
                 Product product = products.Find(x => x.ProductId == invoiceItem.ProductId);
-                if(product != null)
+                if (product != null)
                 {
                     product.ProductQuantity = 1;
                     HttpContext.Session.SetObject(SessionKeyBuyProductObject, product);
                 }
 
-                    
+
                 if (user != null)
                 {
                     userId = user.UserId;
@@ -129,18 +130,18 @@ namespace RazorTest.Pages.Buy
                     userId = "";
                     userFullname = "";
                 }
-                if(BuyCustomerObject != null)
+                if (BuyCustomerObject != null)
                 {
                     customerId = BuyCustomerObject.CustomerId;
                     customerName = BuyCustomerObject.CustomerName;
                 }
-                else 
+                else
                 {
                     customerId = "";
                     customerName = "";
                 }
-                
-                
+
+
                 InvoiceItem resultInvoiceItem = new InvoiceItem
                 {
                     InvoiceItemId = "",
@@ -183,7 +184,20 @@ namespace RazorTest.Pages.Buy
             return RedirectToPage("/Buy/Confirm");
         }
 
-
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
+        }
 
     }
 }

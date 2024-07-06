@@ -10,7 +10,7 @@ namespace RazorTest.Pages.pcustomer
     public class CreateModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
-        
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly CustomerService _customerService;
         private readonly ILogger<CreateModel> _logger;
         private readonly ApiService _apiService;
@@ -86,6 +86,21 @@ namespace RazorTest.Pages.pcustomer
             ModelState.AddModelError(string.Empty, "An error occurred while creating the customer.");
             _logger.LogError($"Failed to create customer. Status Code: {response.StatusCode}");
             return Page();
+        }
+
+        public bool VerifyAuth(string role)
+        {
+            bool result = false;
+            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
+            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+            if (isAuthenticated && user != null)
+            {
+                if (user.Role == role)
+                {
+                    result = true;
+                }
+            }
+            return result;
         }
     }
 }
