@@ -484,7 +484,7 @@
                                                     <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
                                                         <input type="hidden" name="productId" value="@product.ProductId" />
                                                         <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                                                        <input type="submit" value="Add to Cart" class="btn btn-outline-success btn-fw" />
+                                                        <input type="submit" value="Add to Cart" class="btn btn-success btn-fw" />
                                                     </form>
                                                 </td>
                                             </tr>
@@ -516,8 +516,8 @@
                             </div>
 
                             <div class="card-body text-center">
-                                <a asp-page="./ViewCart" class="btn btn-outline-light btn-fw">Go to Cart</a>
-                                <a href="javascript:history.back()" class="btn btn-outline-secondary btn-fw">Back</a>
+                                <a asp-page="./ViewCart" class="btn btn-light btn-fw">Go to Cart</a>
+                                <a href="javascript:history.back()" class="btn btn-secondary btn-fw">Back</a>
                             </div>
 
                         </div>
