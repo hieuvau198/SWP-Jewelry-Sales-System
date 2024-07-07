@@ -11,6 +11,8 @@ namespace RazorTest.Pages.pdiscount
     public class IndexModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
+
         private readonly ApiService _apiService;
 
         public IndexModel(ApiService apiService)
@@ -19,11 +21,20 @@ namespace RazorTest.Pages.pdiscount
         }
         public User User { get; set; }
 
-        public List<Discount> Discounts { get; set; }
+        // public List<Discount> Discounts { get; set; }
+        public PaginatedList<Discount> Discounts { get; set; }
 
-        public async Task<IActionResult> OnGetAsync()
+        private const int PageSize = 10;
+
+        public string SearchTerm { get; set; }
+        public string FilterOrderType { get; set; } = "All";
+        public string FilterProductType { get; set; } = "All";
+
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterOrderType, string filterProductType, int currentPage = 1)
         {
-            // Verify auth
+            try
+            {
+                // Verify auth
                 List<string> roles = new List<string>
                 {
                     "Manager",
@@ -35,9 +46,49 @@ namespace RazorTest.Pages.pdiscount
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
-            // Process data
-            User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+
+                // Get data
+                User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+                var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+
+                // Set search and filter parameters
+                SearchTerm = searchTerm;
+                FilterOrderType = !string.IsNullOrEmpty(filterOrderType) ? filterOrderType : "All";
+                FilterProductType = !string.IsNullOrEmpty(filterProductType) ? filterProductType : "All";
+
+                // Filter discounts based on order type and product type
+                if (!string.IsNullOrEmpty(filterOrderType) && !filterOrderType.Equals("All"))
+                {
+                    discounts = discounts.Where(d => d.OrderType != null && d.OrderType.Contains(filterOrderType)).ToList();
+                }
+                if (!string.IsNullOrEmpty(filterProductType) && !filterProductType.Equals("All"))
+                {
+                    discounts = discounts.Where(d => d.ProductType != null && d.ProductType.Contains(filterProductType)).ToList();
+                }
+
+                // Search discounts based on searchTerm
+                if (!string.IsNullOrEmpty(searchTerm))
+                {
+                    discounts = discounts.Where(d =>
+                        (d.DiscountId.ToString().Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (d.DiscountName != null && d.DiscountName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (d.OrderType != null && d.OrderType.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (d.ProductType != null && d.ProductType.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (d.PublicDate.ToString().Contains(searchTerm)) ||
+                        (d.ExpireDate.ToString().Contains(searchTerm))
+                    ).ToList();
+                }
+
+                // Separate pages
+                if (discounts != null)
+                {
+                    Discounts = PaginatedList<Discount>.Create(discounts.AsQueryable(), currentPage, PageSize);
+                }
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
 
             return Page();
         }

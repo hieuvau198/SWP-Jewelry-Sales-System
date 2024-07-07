@@ -1,160 +1,113 @@
 ﻿@page
 @model RazorTest.Pages.pinvoice.IndexModel
 @{
-    ViewData["Title"] = "Invoice List";
 }
 
-<h2 style="text-align: center;">Invoice List</h2>
 
-<style>
-    .invoice-table-wrapper {
-        display: flex;
-        justify-content: center;
-        margin: 20px auto;
-        max-width: 90%;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->
+            <div class="main-panel">
+                <!-- content-wrapper begins -->
+                <div class="content-wrapper">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- EDIT HERE ONLY -->
+                            <div class="table-responsive">
+                                <table class="table table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Make Request</th>
+                                            <th>Date</th>
+                                            <th>Total (VND)</th>
+                                            <th>Status</th>
+                                            <th>View</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var invoice in Model.Invoices)
+                                        {
+                                            <tr>
+                                                <td><strong>@invoice.UserFullname</strong></td>
+                                                <td>@invoice.InvoiceDate.ToString("M/d HH:mm:ss")</td>
+                                                <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>
+                                                <td>
+                                                    @if (invoice.InvoiceStatus.Equals("Complete"))
+                                                    {
+                                                        <i class="mdi mdi-check-circle"></i>
+                                                    }
+                                                    else if (invoice.InvoiceStatus.Equals("Manager Disapproved") || invoice.InvoiceStatus.Equals("Admin Disapproved") || invoice.InvoiceStatus.Equals("Canceled") || invoice.InvoiceStatus.Equals("Admin Canceled"))
+                                                    {
+                                                        <i class="mdi mdi-close-circle"></i>
+                                                    }
+                                                    else if (invoice.InvoiceStatus.Equals("Processing Payment"))
+                                                    {
+                                                        <i class="mdi mdi-currency-usd"></i>
+                                                    }
+                                                    else
+                                                    {
+                                                        <i class="mdi mdi-dots-horizontal"></i>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <form method="post" asp-page-handler="ViewDetail">
+                                                        <input type="hidden" name="invoiceId" value="@invoice.InvoiceId" />
+                                                        <button class="btn btn-outline-warning btn-fw" type="submit">Detail</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
 
-    .invoice-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        font-size: 1em;
-        font-family: 'Arial', sans-serif;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    }
+                            <!-- EDIT HERE END -->
+                            <div class="card-body text-center">
+                                @if (Model.Invoices.HasPreviousPage)
+                                {
+                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+                                }
+                                @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
+                                {
+                                    <a class="btn btn-primary" asp-page="./Index" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
+                                }
+                                @if (Model.Invoices.HasNextPage)
+                                {
+                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+                                }
+                            </div>
 
-        .invoice-table th, .invoice-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
+                            <div class="card-body text-center">
+                                <a class="btn btn-outline-secondary btn-fw" asp-page="/Index">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        .invoice-table th {
-            background-color: #4c4c4c; /* Dark gray background for header */
-            color: #ffffff;
-            font-weight: bold;
-        }
+                <!-- content-wrapper ends -->
+                <!-- partial: Shared/_Footer.cshtml -->
+                @await Html.PartialAsync("Shared/_Footer")
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>
 
-        .invoice-table td {
-            background-color: #ffffff; /* White background for cells */
-            color: #333333; /* Dark gray text for cells */
-        }
-
-        .invoice-table tbody tr:nth-of-type(odd) {
-            background-color: #f2f2f2; /* Light gray background for odd rows */
-        }
-
-        .invoice-table tbody tr:nth-of-type(even) {
-            background-color: #ffffff; /* White background for even rows */
-        }
-
-        .invoice-table tbody tr:hover {
-            background-color: #e2e2e2; /* Light gray background for hover effect */
-        }
-
-        .invoice-table a {
-            color: #007bff; /* Blue color for links */
-            text-decoration: none;
-        }
-
-            .invoice-table a:hover {
-                text-decoration: underline;
-            }
-
-    .btn-create {
-        display: inline-block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #007bff; /* Blue background for the button */
-        color: #ffffff; /* White text for the button */
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-    }
-
-        .btn-create:hover {
-            background-color: #0056b3; /* Darker blue for hover effect */
-        }
-
-    .action-buttons a {
-        margin-right: 10px;
-    }
-</style>
-
-
-<nav class="sidebar">
-    @if (Model.VerifyAuth("Manager"))
-    {
-        <a asp-page="/pproduct/ProductDetail">Manage Products</a>
-        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-        <a asp-page="/pgemstone/Index">Manage Gems</a>
-        <a asp-page="/puser/UserDetail">Manage Staffs</a>
-        <a asp-page="/pproduct/ProductDetail">Manage Stalls</a>
-    }
-
-    @if (Model.VerifyAuth("Admin"))
-    {
-        <a href="/Dashboard/Revenue">Dashboard</a>
-        <a asp-page="/pproduct/ProductDetail">Products</a>
-        <a asp-page="/pcustomer/CustomerDetail">Customers</a>
-        <a asp-page="/pdiscount/DiscountDetail">Discounts</a>
-        <a asp-page="/puser/UserDetail">Employees</a>
-        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-    }
-
-    @if (Model.VerifyAuth("Cashier"))
-    {
-        <a asp-page="/pproduct/ProductDetail">Products</a>
-        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-
-    }
-
-    @if (Model.VerifyAuth("Sale"))
-    {
-        <a asp-page="/pproduct/ProductDetail">Products</a>
-        <a asp-page="/Sale/SaleHomePage">Order</a>
-        <a asp-page="/Buy/Processing">Buy-Back</a>
-        <a asp-page="/pinvoice/InvoiceDetail">Order History</a>
-    }
-</nav>
-
-<div class="invoice-table-wrapper">
-    <table class="invoice-table">
-        <thead>
-            <tr>
-                <th>Invoice Type</th>
-                <th>Customer Id</th>
-                <th>User Id</th>
-                <th>Invoice Date</th>
-                <th>Customer Voucher</th>
-                <th>Total Price</th>
-                <th>End Total Price</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var invoice in Model.Invoices)
-            {
-                <tr>
-                    <td><strong>@invoice.InvoiceType</strong></td>
-                    <td>@invoice.CustomerId</td>
-                    <td>@invoice.UserId</td>
-                    <td>@invoice.InvoiceDate.ToShortDateString()</td>
-                    <td>@invoice.CustomerVoucher</td>
-                    <td>@String.Format("{0:N0} VND", invoice.TotalPrice)</td>
-                    <td>@invoice.EndTotalPrice</td>
-                    <td>@invoice.InvoiceStatus</td>
-                    <td class="action-buttons">
-                        <a asp-page="./Edit" asp-route-id="@invoice.InvoiceId">Approve</a>
-                        <a asp-page="./Delete" asp-route-id="@invoice.InvoiceId">Disapprove</a>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
-
-<a class="btn-create" asp-page="./Create">Create New Invoice</a>

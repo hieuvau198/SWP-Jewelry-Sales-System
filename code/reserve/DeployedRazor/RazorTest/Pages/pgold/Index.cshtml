@@ -1,32 +1,71 @@
 ﻿@page
 @model RazorTest.Pages.pgold.IndexModel
 @{
-    ViewData["Title"] = "Gold List";
 }
 
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Gold Id</th>
-            <th>Gold Name</th>
-            <th>Gold Price</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody border="1">
-        @foreach (var gold in Model.Golds)
-        {
-            <tr>
-                <td>@gold.GoldId</td>
-                <td><strong>@gold.GoldName</strong></td>
-                <td>@gold.SellPrice</td>
-                <td>
-                    <a asp-page="Edit" asp-route-id="@gold.GoldId">Edit</a> |
-                    <a asp-page="Delete" asp-route-id="@gold.GoldId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<a asp-page="./Create">Create New Gold</a>
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->>
+            <!-- content-wrapper begins -->
+            <div class="content-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- EDIT HERE ONLY -->
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Buy Price</th>
+                                        <th>Sell Price</th>
+                                        <th>Time</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var gold in Model.Golds)
+                                    {
+                                        <tr>
+                                            <td><strong>@gold.GoldName</strong></td>
+                                            <td>@gold.BuyPrice.ToString("#,##0")</td>
+                                            <td>@gold.SellPrice</td>
+                                            <td>@gold.Date</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- EDIT HERE END -->
+                        <div class="card-body text-center">
+                            <a class="btn btn-outline-secondary btn-fw" asp-page="/Index">Back to List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- content-wrapper ends -->
+            <!-- partial: Shared/_Footer.cshtml -->
+            @await Html.PartialAsync("Shared/_Footer")
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+    <!-- container-scroller -->
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>
+

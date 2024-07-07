@@ -13,6 +13,7 @@ namespace RazorTest.Pages.pcustomer
     {
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyAuthState = "_AuthState";
+
         private readonly ApiService _apiService;
 
         public CustomerListModel(ApiService apiService)

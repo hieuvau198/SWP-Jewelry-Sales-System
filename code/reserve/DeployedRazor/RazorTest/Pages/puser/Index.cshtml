@@ -1,58 +1,105 @@
 ﻿@page
 @model RazorTest.Pages.puser.IndexModel
-@{
-    ViewData["Title"] = "User List";
-}
 
-<h2>User</h2>
 
-<style>
-    /* Table styles */
-    table {
-        width: 100%;
-        border-collapse: collapse; /* Ensures borders between cells are merged */
-        margin-top: 20px; /* Adds spacing above the table */
-    }
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->
+            <div class="main-panel">
+                <!-- content-wrapper begins -->
+                <div class="content-wrapper">
+                    <div class="card">
+                        <div class="card-body">
 
-    th, td {
-        border: 1px solid black; /* Adds border to cells and header cells */
-        padding: 8px; /* Adds space inside cells */
-        text-align: left; /* Aligns text to the left inside cells */
-    }
+                            <!-- SEARCH AND FILTER FORM -->
+                            <form method="get">
+                                <div style="text-align: center; margin-bottom: 20px;">
+                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                    <label>Role</label>
+                                    <select name="filterRole">
+                                        <option value="All" selected>All</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Manager">Manager</option>
+                                        <option value="Sale">Sale</option>
+                                        <option value="Cashier">Cashier</option>
+                                    </select>
+                                    <button type="submit">Search</button>
+                                </div>
+                            </form>
+                            <!-- SEARCH AND FILTER FORM END -->
+                            <!-- EDIT HERE ONLY -->
+                            <div class="table-responsive text-center">
+                                <table class="table table-hover">
 
-    th {
-        background-color: #f9f9f9; /* Light grey background for header cells */
-    }
-</style>
+                                    <thead>
+                                        <tr>
+                                            <th>Full Name</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var user in Model.Users)
+                                        {
+                                            <tr>
+                                                <td>@user.Fullname</td>
+                                                <td>@user.Email</td>
+                                                <td>@user.Role</td>
+                                                <td class="action-buttons">
+                                                    <a asp-page="./Edit" asp-route-id="@user.UserId" class="btn btn-warning btn-fw">Edit</a>
+                                                    <a asp-page="./Delete" asp-route-id="@user.UserId" class="btn btn-danger btn-fw">Delete</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- EDIT HERE END -->
+                            <div class="card-footer text-center">
+                                @if (Model.Users.HasPreviousPage)
+                                {
+                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Users.PageIndex - 1)">&laquo; Previous</a>
+                                }
+                                @for (int i = 1; i <= Model.Users.TotalPages; i++)
+                                {
+                                    <a class="btn btn-primary" asp-page="./Index" asp-route-currentPage="@i" class="@(i == Model.Users.PageIndex ? "active" : "")">@i</a>
+                                }
+                                @if (Model.Users.HasNextPage)
+                                {
+                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Users.PageIndex + 1)">Next &raquo;</a>
+                                }
+                            </div>
+                            <div class="card-footer text-center">
+                                <a asp-page="./Create" class="btn btn-secondary btn-fw">Add New User</a>
+                                <a asp-page="/Index" class="btn btn-secondary btn-fw">Back</a>
+                            </div>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>User Id</th>
-            <th>User Name</th>
-            <th>Password</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody border="1">
-        @foreach (var user in Model.Users)
-        {
-            <tr>
-                <td>@user.UserId</td>
-                <td><strong>@user.Username</strong></td>
-                <td>@user.Password</td>
-                <td>@user.Fullname</td>
-                <td>@user.Email</td>
-                <td>@user.Role</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@user.UserId">Edit</a>
-                    <a asp-page="./Delete" asp-route-id="@user.UserId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<a asp-page="./Create">Create New User</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial: Shared/_Footer.cshtml -->
+                @await Html.PartialAsync("Shared/_Footer")
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>

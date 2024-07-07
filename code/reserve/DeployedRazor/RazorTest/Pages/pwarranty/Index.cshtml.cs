@@ -27,18 +27,18 @@ namespace RazorTest.Pages.pwarranty
             // Verify auth
             List<string> roles = new List<string>
             {
-                "Admin",
                 "Sale",
                 "Cashier",
-                "Manager"
+                "Manager",
+                "Admin"
             };
             if (!_apiService.VerifyAuth(HttpContext, roles))
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
+
             var warranties = await _apiService.GetAsync<List<Warranty>>("https://hvjewel.azurewebsites.net/api/warranty");
 
             if (warranties != null)

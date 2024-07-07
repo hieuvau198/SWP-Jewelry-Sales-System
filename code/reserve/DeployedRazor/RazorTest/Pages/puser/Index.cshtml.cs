@@ -21,9 +21,16 @@ namespace RazorTest.Pages.puser
         }
         public User User { get; set; }
 
-        public List<User> Users { get; set; }
+        //  public List<User> Users { get; set; }
 
-        public async Task<IActionResult> OnGetAsync()
+        public PaginatedList<User> Users { get; set; }
+
+        public const int PageSize = 6;
+
+        public string SearchTerm { get; set; }
+        public string FilterRole { get; set; } = "All";
+
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterRole, int currentPage = 1)
         {
             // Verify auth
             List<string> roles = new List<string>
@@ -34,15 +41,36 @@ namespace RazorTest.Pages.puser
             {
                 return RedirectToPage("/Authentication/AccessDenied");
             }
-
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
             var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
+            users = users.OrderByDescending(x => x.UserId).ToList();
 
+            // Set search and filter parameters
+            SearchTerm = searchTerm;
+            FilterRole = !string.IsNullOrEmpty(filterRole) ? filterRole : "All";
+
+            // Filter users based on role
+            if (!string.IsNullOrEmpty(filterRole) && !filterRole.Equals("All"))
+            {
+                users = users.Where(u => u.Role != null && u.Role.Contains(filterRole)).ToList();
+            }
+
+            // Search users based on searchTerm
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                users = users.Where(u =>
+                    (u.Fullname != null && u.Fullname.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (u.Email != null && u.Email.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                    (u.Role != null && u.Role.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                ).ToList();
+            }
+
+            // Separate pages
             if (users != null)
             {
-                Users = users.OrderBy(u => u.UserId).ToList();
+                Users = PaginatedList<User>.Create(users.AsQueryable(), currentPage, PageSize);
             }
 
             return Page();

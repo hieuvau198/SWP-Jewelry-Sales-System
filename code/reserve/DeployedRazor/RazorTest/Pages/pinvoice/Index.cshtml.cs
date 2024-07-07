@@ -13,20 +13,29 @@ namespace RazorTest.Pages.pinvoice
     {
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyCustomerObject = "_CustomerObject";
+        public const string SessionKeyInvoiceList = "_InvoiceList";
+        public const string SessionKeyViewDetailInvoiceObject = "_InvoiceViewDetail";
+
+        public const string UrlInvoice = "https://hvjewel.azurewebsites.net/api/invoice";
+
         private readonly ApiService _apiService;
 
         public IndexModel(ApiService apiService)
         {
             _apiService = apiService;
         }
-
-        public List<Invoice> Invoices { get; set; }
         public User User { get; set; }
 
-        public async Task<IActionResult> OnGetAsync()
+        public PaginatedList<Invoice> Invoices { get; set; }
+
+        private const int PageSize = 10;
+
+        public async Task<IActionResult> OnGetAsync(int currentPage = 1)
         {
             try
             {
+
                 // Verify auth
                 List<string> roles = new List<string>
                 {
@@ -39,13 +48,15 @@ namespace RazorTest.Pages.pinvoice
                 {
                     return RedirectToPage("/Authentication/AccessDenied");
                 }
+
                 // Process data
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-                var invoices = await _apiService.GetAsync<List<Invoice>>("https://hvjewel.azurewebsites.net/api/invoice");
 
+                List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
                 if (invoices != null)
                 {
-                    Invoices = invoices.OrderBy(c => c.InvoiceDate).ToList();
+                    invoices = invoices.OrderByDescending(x => x.InvoiceDate).ToList();
+                    Invoices = PaginatedList<Invoice>.Create(invoices.AsQueryable(), currentPage, 10);
                 }
                 else
                 {
@@ -58,16 +69,6 @@ namespace RazorTest.Pages.pinvoice
             }
 
             return Page();
-        }
-        public bool VerifyAuth(string role)
-        {
-            bool result = false;
-            if (HttpContext.Session.GetObject<bool>(SessionKeyAuthState)
-                && HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals(role))
-            {
-                result = true;
-            }
-            return result;
         }
     }
 }

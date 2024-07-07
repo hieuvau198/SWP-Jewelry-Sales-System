@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2315 0607\\razortest\\pages\\pgemstone\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2315 0607\\razortest\\pages\\pgemstone\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2315 0607\\razortest\\pages\\pgemstone\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\2315 0607\\razortest\\pages\\pgemstone\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\pgemstone\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\2247 0707\\RazorTest\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,60 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Edit.cshtml",
-              "RelativeToolTip": "Pages\\pgemstone\\Edit.cshtml",
-              "ViewState": "AQIAAGsAAAAAAAAAAAASwHYAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-06T19:42:08.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Detail.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Detail.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Detail.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Detail.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Detail.cshtml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAgwCAAAABuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T19:20:59.701Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Index.cshtml.cs",
-              "RelativeToolTip": "Pages\\pgemstone\\Index.cshtml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAkwB0AAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-06T19:15:59.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\pgemstone\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\2315 0607\\RazorTest\\Pages\\pgemstone\\Index.cshtml",
-              "RelativeToolTip": "Pages\\pgemstone\\Index.cshtml",
-              "ViewState": "AQIAAOEBAAAAAAAAAAAkwBQCAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-06T19:14:37.402Z",
-              "EditorCaption": ""
             }
           ]
         }

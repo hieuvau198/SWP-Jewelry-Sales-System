@@ -1,58 +1,120 @@
 ﻿@page
 @model RazorTest.Pages.pdiscount.IndexModel
 @{
-    ViewData["Title"] = "Discount List";
 }
 
-<h2>Discounts</h2>
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->
+            <div class="main-panel">
+                <!-- content-wrapper begins -->
+                <div class="content-wrapper">
+                    <div class="card">
+                        <div class="card-body">
 
-<style>
-    /* Table styles */
-    table {
-        width: 100%;
-        border-collapse: collapse; /* Ensures borders between cells are merged */
-        margin-top: 20px; /* Adds spacing above the table */
-    }
+                            <!-- SEARCH AND FILTER FORM -->
+                            <form method="get">
+                                <div style="text-align: center; margin-bottom: 20px;">
+                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                    <label>Order Type</label>
+                                    @*  <select name="filterOrderType">
+                                    <option value="All" selected>All</option>
+                                    <option value="Sale">Sale</option>
+                                    <option value="Buy">Buy</option>
+                                    </select> *@
+                                    <label>Product Type</label>
+                                    <select name="filterProductType">
+                                        <option value="All" selected>All</option>
+                                        <option value="Ring">Ring</option>
+                                        <option value="Necklace">Necklace</option>
+                                        <option value="Bracelet">Bracelet</option>
+                                        <option value="Earrings">Earrings</option>
+                                    </select>
+                                    <button type="submit">Search</button>
+                                </div>
+                            </form>
+                            <!-- SEARCH AND FILTER FORM END -->
+                            <!-- EDIT HERE ONLY -->
+                            <div class="table-responsive">
+                                <table class="table table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Discount Id</th>
+                                            <th>Discount Name</th>
+                                            <th>Order Type</th>
+                                            <th>Product Type</th>
+                                            <th>Public Date</th>
+                                            <th>Expire Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var discount in Model.Discounts)
+                                        {
+                                            <tr>
+                                                <td>@discount.DiscountId</td>
+                                                <td><strong>@discount.DiscountName</strong></td>
+                                                <td>@discount.OrderType</td>
+                                                <td>@discount.ProductType</td>
+                                                <td>@discount.PublicDate.ToShortDateString()</td>
+                                                <td>@discount.ExpireDate.ToShortDateString()</td>
+                                                <td>
+                                                    <a asp-page="./Edit" asp-route-id="@discount.DiscountId" class="btn btn-warning btn-fw">Edit</a>
+                                                    <a asp-page="./Delete" asp-route-id="@discount.DiscountId" class="btn btn-danger btn-fw">Delete</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                            </div>
 
-    th, td {
-        border: 1px solid black; /* Adds border to cells and header cells */
-        padding: 8px; /* Adds space inside cells */
-        text-align: left; /* Aligns text to the left inside cells */
-    }
+                            </table>
+                        </div>
+                        <div class="card-body text-center">
+                            @if (Model.Discounts.HasPreviousPage)
+                            {
+                                <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Discounts.PageIndex - 1)">&laquo; Previous</a>
+                            }
+                            @for (int i = 1; i <= Model.Discounts.TotalPages; i++)
+                            {
+                                <a class="btn btn-primary" asp-page="./Index" asp-route-currentPage="@i" class="@(i == Model.Discounts.PageIndex ? "active" : "")">@i</a>
+                            }
+                            @if (Model.Discounts.HasNextPage)
+                            {
+                                <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Discounts.PageIndex + 1)">Next &raquo;</a>
+                            }
+                        </div>
+                        <!-- EDIT HERE END -->
+                        <div class="card-body text-center">
+                            <a class="btn btn-light btn-fw" asp-page="./Create">Create New</a>
+                            <a class="btn btn-secondary btn-fw" asp-page="/Index">Back </a>
+                        </div>
 
-    th {
-        background-color: #f9f9f9; /* Light grey background for header cells */
-    }
-</style>
+                    </div>
+                </div>
+            </div>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Discount Id</th>
-            <th>Discount Name</th>
-            <th>Order Type</th>
-            <th>Product Type</th>
-            <th>Public Date</th>
-            <th>Expire Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var discount in Model.Discounts)
-        {
-            <tr>
-                <td>@discount.DiscountId</td>
-                <td><strong>@discount.DiscountName</strong></td>
-                <td>@discount.OrderType</td>
-                <td>@discount.ProductType</td>
-                <td>@discount.PublicDate.ToShortDateString()</td>
-                <td>@discount.ExpireDate.ToShortDateString()</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@discount.DiscountId">Edit</a>
-                    <a asp-page="./Delete" asp-route-id="@discount.DiscountId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<a asp-page="./Create">Create New Discount</a>
+            <!-- content-wrapper ends -->
+            <!-- partial: Shared/_Footer.cshtml -->
+            @await Html.PartialAsync("Shared/_Footer")
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+    <!-- container-scroller -->
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>

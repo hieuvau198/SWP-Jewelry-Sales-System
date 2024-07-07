@@ -117,15 +117,6 @@ namespace RazorTest.Pages.pproduct
 
             return Page();
         }
-        public bool VerifyAuth(string role)
-        {
-            bool result = false;
-            if (HttpContext.Session.GetObject<bool>(SessionKeyAuthState)
-                && HttpContext.Session.GetObject<User>(SessionKeyUserObject).Role.Equals(role))
-            {
-                result = true;
-            }
-            return result;
-        }
+        
     }
 }

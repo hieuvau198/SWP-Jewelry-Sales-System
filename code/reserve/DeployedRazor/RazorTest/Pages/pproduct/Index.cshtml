@@ -2,71 +2,175 @@
 @model RazorTest.Pages.pproduct.IndexModel
 @{
 }
-<h2>Product</h2>
 
-<style>
-    /* Table styles */
-    table {
-        width: 100%;
-        border-collapse: collapse; /* Ensures borders between cells are merged */
-        margin-top: 20px; /* Adds spacing above the table */
-    }
+@{
+    var typeOptions = new List<string> { "All", "Ring", "Necklace", "Bracelet", "Earrings" };
+    var gemOptions = new List<string> { "All", "Ruby", "Sapphire", "Emerald", "Cabochon", "Diamond" };
+    var goldOptions = new List<string> { "All", "24K", "18K", "14K", "10K" };
+}
 
-    th, td {
-        border: 1px solid black; /* Adds border to cells and header cells */
-        padding: 8px; /* Adds space inside cells */
-        text-align: left; /* Aligns text to the left inside cells */
-    }
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->
+            <div class="main-panel">
+                <!-- content-wrapper begins -->
+                <div class="content-wrapper">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- EDIT HERE ONLY -->
 
-    th {
-        background-color: #f9f9f9; /* Light grey background for header cells */
-    }
-</style>
+                            <form method="get">
+                                <div style="text-align: center; margin-bottom: 20px;">
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Product Id</th>
-            <th>Product Code</th>
-            <th>Product Name</th>
-            <th>Product Images</th>
-            <th>Product Quantity</th>
-            <th>Product Type</th>
-            <th>Product Weight</th>
-            <th>Product Warranty</th>
-            <th>Gem Id</th>
-            <th>Gem Weight</th>
-            <th>Gold Id</th>
-            <th>Gold Weight</th>
-            <th>Labor Cost</th>
-            <th>Create At</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody border="1">
-        @foreach (var product in Model.Products)
-        {
-            <tr>
-                <td><strong>@product.ProductId</strong></td>
-                <td>@product.ProductCode</td>
-                <td>@product.ProductName</td>
-                <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
-                <td>@product.ProductQuantity</td>
-                <td>@product.ProductType</td>
-                <td>@product.ProductWeight</td>
-                <td>@product.ProductWarranty</td>
-                <td>@product.GemId</td>
-                <td>@product.GemWeight</td>
-                <td>@product.GoldId</td>
-                <td>@product.GoldWeight</td>
-                <td>@product.LaborCost</td>
-                <td>@product.CreatedAt.ToShortDateString()</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@product.ProductId">Edit</a> |
-                    <a asp-page="./Delete" asp-route-id="@product.ProductId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<a asp-page="./Create">Create New Product</a>
+                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                    <label>Type</label>
+                                    <select name="filterType">
+                                        @foreach (var option in typeOptions)
+                                        {
+                                            if (option.Equals(Model.FilterType))
+                                            {
+                                                <option value="@option" selected>@option</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@option">@option</option>
+                                            }
+
+                                        }
+                                    </select>
+
+                                    <label>Gemstone</label>
+                                    <select name="filterGem">
+                                        @foreach (var option in gemOptions)
+                                        {
+                                            if (option.Equals(Model.FilterGem))
+                                            {
+                                                <option value="@option" selected>@option</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@option">@option</option>
+                                            }
+
+                                        }
+                                    </select>
+
+                                    <label>Gold</label>
+                                    <select name="filterGold">
+                                        @foreach (var option in goldOptions)
+                                        {
+                                            if (option.Equals(Model.FilterGold))
+                                            {
+                                                <option value="@option" selected>@option</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@option">@option</option>
+                                            }
+
+                                        }
+                                    </select>
+                                    <button type="submit">Search</button>
+                                </div>
+                            </form>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover text-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Portrait</th>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Buy Price</th>
+                                            <th>Sell Price</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var product in Model.Products)
+                                        {
+                                            <tr>
+
+
+                                                <td>
+                                                    @if (product.ProductImages.Length > 50)
+                                                    {
+                                                        <img src="data:image/jpeg;base64,@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="/ProductImages/@product.ProductImages" class="product-image" style="max-width: 100px; max-height: 100px;" />
+                                                    }
+                                                </td>
+                                                <td>@product.ProductName.Substring(0, 10)</td>
+                                                <td>@product.ProductType</td>
+                                                <td>@String.Format("{0:N0}", product.BuyPrice) đ</td>
+                                                <td>@String.Format("{0:N0}", product.UnitPrice) đ</td>
+                                                <td class="action-buttons">
+                                                    @if (Model.User.Role.Equals("Admin") || Model.User.Role.Equals("Manager"))
+                                                    {
+                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-outline-warning btn-fw">Edit</a>
+                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-outline-danger btn-fw">Delete</a>
+
+                                                    }
+                                                    else if (Model.User.Role.Equals("Sale") || Model.User.Role.Equals("Cashier"))
+                                                    {
+                                                        <span>Need Access Role</span>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- EDIT HERE END -->
+
+                            <div class="card-body text-center">
+                                @if (Model.Products.HasPreviousPage)
+                                {
+                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Products.PageIndex - 1)">&laquo; Previous</a>
+                                }
+                                @for (int i = 1; i <= Model.Products.TotalPages; i++)
+                                {
+                                    <a class="btn btn-primary" asp-page="./Index" asp-route-currentPage="@i" class="@(i == Model.Products.PageIndex ? "active" : "")">@i</a>
+                                }
+                                @if (Model.Products.HasNextPage)
+                                {
+                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Products.PageIndex + 1)">Next &raquo;</a>
+                                }
+                            </div>
+                            <div class="card-body text-center">
+                                <a asp-page="./Create" class="btn btn-outline-light btn-fw">Create New</a>
+                                <a href="javascript:history.back()" class="btn btn-outline-light btn-fw">Back</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial: Shared/_Footer.cshtml -->
+                @await Html.PartialAsync("Shared/_Footer")
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>
+
