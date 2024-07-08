@@ -5,6 +5,7 @@
 }
 
 @{
+    var orderOptions = new List<string> { "None", "By Name", "Lastest", "Oldest", "Low to High", "High to low"};
     var typeOptions = new List<string> { "All", "Ring", "Necklace", "Bracelet", "Earrings" };
     var gemOptions = new List<string> { "All", "Ruby", "Sapphire", "Emerald", "Cabochon", "Diamond" };
     var goldOptions = new List<string> { "All", "24K", "18K", "14K", "10K" };
@@ -29,84 +30,135 @@
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
                     <div class="card">
-                        <div class="card-body" style="position: relative;">
+                        <div class="card-body text-center" style="position: relative;">
                             <!-- EDIT HERE ONLY -->
+
                             <!-- Search and Filter -->
                             <form method="get">
-                                <div style="text-align: center; margin-bottom: 20px;">
-                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
-                                    
-                                    <label>Type</label>
-                                    <select name="filterType">
-                                        @foreach (var option in typeOptions)
-                                        {
-                                            if (option.Equals(Model.FilterType))
-                                            {
-                                                <option value="@option" selected>@option</option>
-                                            }
-                                            else
-                                            {
-                                                <option value="@option">@option</option>
-                                            }
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div style="margin-bottom: 20px; text-align:left">
+                                            <select name="filterOrder" class="btn btn-primary">
+                                                @foreach (var option in orderOptions)
+                                                {
+                                                    if (option.Equals(Model.FilterOrder))
+                                                    {
+                                                        <option  value="@option" selected>
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@option">
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
 
-                                        }
-                                    </select>
+                                                }
+                                            </select>
+                                            
+                                            <select name="filterType" class="btn btn-primary">
+                                                @foreach (var option in typeOptions)
+                                                {
+                                                    if (option.Equals(Model.FilterType))
+                                                    {
+                                                        <option value="@option" selected>
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@option">
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
 
-                                    <label>Gemstone</label>
-                                    <select name="filterGem">
-                                        @foreach (var option in gemOptions)
-                                        {
-                                            if (option.Equals(Model.FilterGem))
-                                            {
-                                                <option value="@option" selected>@option</option>
-                                            }
-                                            else
-                                            {
-                                                <option value="@option">@option</option>
-                                            }
+                                                }
+                                            </select>
 
-                                        }
-                                    </select>
+                                            <select name="filterGem" class="btn btn-primary">
+                                                @foreach (var option in gemOptions)
+                                                {
+                                                    if (option.Equals(Model.FilterGem))
+                                                    {
+                                                        <option value="@option" selected>
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@option">
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
 
-                                    <label>Gold</label>
-                                    <select name="filterGold">
-                                        @foreach (var option in goldOptions)
-                                        {
-                                            if (option.Equals(Model.FilterGold))
-                                            {
-                                                <option value="@option" selected>@option</option>
-                                            }
-                                            else
-                                            {
-                                                <option value="@option">@option</option>
-                                            }
+                                                }
+                                            </select>
 
-                                        }
-                                    </select>
-                                    <button type="submit">Search</button>
+                                            <select name="filterGold" class="btn btn-primary">
+                                                @foreach (var option in goldOptions)
+                                                {
+                                                    if (option.Equals(Model.FilterGold))
+                                                    {
+                                                        <option value="@option" selected>
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option value="@option">
+                                                            <span class="btn btn-primary">@option</span>
+                                                        </option>
+                                                    }
+
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div style="margin-bottom: 20px;">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" class="form-control" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <span>Search</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                             <!-- Search and Filter Ends-->
                             <!-- Scan Barcode-->
-                            <div style="text-align: center;">
-                                <button onclick="startBarcodeScanner()">Scan</button>
-                                <div id="videoContainer" style="display:none;position: absolute;">
-                                    <video id="video" style="width: 35%; height: 35%;" controls></video>
+                            <div class="row">
+                                <div class="col-md-8">
                                 </div>
-                                <a asp-page="/Sale/SaleHomePage">Cancel Scan</a>
+                                <div class="col-md-4">
+                                    
+                                    <button onclick="startBarcodeScanner()" class="btn btn-primary">
+                                        <span>Scan</span>
+                                    </button>
+                                    <div id="videoContainer" style="display:none;position: absolute;">
+                                        <video id="video" style="width: 100%; height: 100%;" controls></video>
+                                    </div>
+                                   
+                                </div>
                             </div>
-                            
                             <!-- Scan Barcode Ends-->
-
+                            
+                            <!-- Product List -->
                             <div class="table-responsive">
                                 <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
                                             <th>Portrait</th>
                                             <th class="text-left">Name</th>
-                                            <th>Price (VND)</th>
-                                            <th>View</th>
-                                            <th>Actions</th>
+                                            <th>Price</th>
+                                            <th>Add</th>
+                                            <th>Detail</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -115,18 +167,29 @@
                                             <tr>
                                                 <td><img src="/ProductImages/@product.ProductImages" width="100px" /></td>
                                                 <td class="text-left">@product.ProductName</td>
-                                                <td>@String.Format("{0:N0}", product.UnitPrice)</td>
+                                                <td>@String.Format("{0:N0}", product.UnitPrice) đ</td>
                                                 <td>
-                                                    <form method="post" asp-page-handler="ViewDetail">
+                                                    <form method="post" asp-page-handler="AddToCart">
                                                         <input type="hidden" name="productId" value="@product.ProductId" />
-                                                        <button class="btn btn-outline-warning btn-fw" type="submit">Detail</button>
+                                                        <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+                                                        <button type="submit" class="btn-primary">
+                                                            <span class="menu-icon">
+                                                                <i class="mdi mdi-cart"></i>
+                                                            </span>
+                                                        </button>
                                                     </form>
                                                 </td>
                                                 <td>
-                                                    <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form">
+                                                    <form method="post" asp-page-handler="ViewDetail">
                                                         <input type="hidden" name="productId" value="@product.ProductId" />
-                                                        <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                                                        <input type="submit" value="Add to Cart" class="btn btn-success btn-fw" />
+                                                        <button class="btn-inverse-warning btn-fw" type="submit">
+                                                            <span class="menu-icon">
+                                                                <i class="mdi mdi-information"></i>
+                                                            </span>
+                                                            <span>
+                                                                View
+                                                            </span>
+                                                        </button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -134,8 +197,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- EDIT HERE END -->
-                            <div class="card-body text-center">
+                            <div>
                                 @if (Model.CurrentPage > 1)
                                 {
                                     <a class="btn btn-primary btn-fw" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
@@ -156,12 +218,14 @@
                                     <a class="btn btn-primary btn-fw" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
                                 }
                             </div>
+                            <!-- Product List Ends -->
 
-                            <div class="card-body text-center">
+                            <div style="margin-top:10px;">
                                 <a asp-page="./ViewCart" class="btn btn-light btn-fw">Go to Cart</a>
                                 <a href="javascript:history.back()" class="btn btn-secondary btn-fw">Back</a>
                             </div>
 
+                            <!-- EDIT HERE END -->
                         </div>
                     </div>
                 </div>

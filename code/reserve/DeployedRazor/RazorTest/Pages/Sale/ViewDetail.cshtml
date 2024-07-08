@@ -24,81 +24,114 @@
                     <div class="card">
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
-                            <div class="container mt-4">
+                            <div class="container">
                                 <div class="row">
-                                    <div class="col-md-4 text-center">
-                                        <img src="/ProductImages/@Model.ViewProductDetail.ProductImages" width="300px" height="300px" alt="Product Image" />
+                                    <div class="col-xl-8">
+
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@Model.ViewProductDetail.ProductName" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Type</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@Model.ViewProductDetail.ProductType" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Warranty</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@Model.ViewProductDetail.ProductWarranty" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gemstone</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@Model.ViewProductDetail.GemName" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gemstone Weight</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@(Model.ViewProductDetail.GemWeight) cts" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gold Material</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@Model.ViewProductDetail.GoldName" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gold Weight</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@(Model.ViewProductDetail.GoldWeight) cts" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Current Price</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@(Model.ViewProductDetail.UnitPrice) đ" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="forms-sample">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Publish Date</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" value="@Model.ViewProductDetail.CreatedAt" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+
+
+
+
+
                                     </div>
-                                    <div class="col-md-8">
-                                        <div class="table-responsive">
-                                            <table class="table table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Code</th>
-                                                        <th>Name</th>
-                                                        <th>Inventory</th>
-                                                        <th>Type</th>
-                                                        <th>Warranty</th>
-                                                        <th>Gemstone</th>
-                                                        <th>Gem Weight (cts)</th>
-                                                        <th>Gold Name</th>
-                                                        <th>Gold Weight (cts)</th>
-                                                        <th>Price Cost (VND)</th>
-                                                        <th>Publish</th>
-                                                    </tr>
-                                                </thead>
-                                                @if (Model.ViewProductDetail != null)
-                                                {
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>@Model.ViewProductDetail.ProductCode</td>
-                                                            <td>@Model.ViewProductDetail.ProductName</td>
-                                                            <td>@Model.ViewProductDetail.ProductQuantity</td>
-                                                            <td>@Model.ViewProductDetail.ProductType</td>
-                                                            <td>@Model.ViewProductDetail.ProductWarranty</td>
-                                                            <td>@Model.ViewProductDetail.GemName</td>
-                                                            <td>@String.Format("{0:F2}", Model.ViewProductDetail.GemWeight)</td>
-                                                            <td>@Model.ViewProductDetail.GoldName</td>
-                                                            <td>@String.Format("{0:F2}", Model.ViewProductDetail.GoldWeight)</td>
-                                                            <td>@String.Format("{0:N0}", Model.ViewProductDetail.UnitPrice)</td>
-                                                            <td>@Model.ViewProductDetail.CreatedAt.ToShortDateString()</td>
-                                                        </tr>
-                                                    </tbody>
-                                                }
-                                            </table>
-                                        </div> 
-                                        <form method="post" asp-page-handler="AddToCart" class="add-to-cart-form mt-5 d-flex align-items-center">
-                                            <input type="hidden" name="productId" value="@Model.ViewProductDetail.ProductId" />
-                                            <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
-                                            <input type="submit" value="Add to Cart" class="btn btn-success btn-fw" />
-                                        </form>
+                                    <div class="col-xl-4">
+                                        <div class="card-body text-center">
+                                            <img src="/ProductImages/@Model.ViewProductDetail.ProductImages" alt="Product Image" style="width: 100%; height: 70%;" />
+                                            <div class="forms-sample" style="padding: 10px 20px;">
+                                                <form method="post" asp-page-handler="AddToCart" >
+                                                    <input type="hidden" name="productId" value="@Model.ViewProductDetail.ProductId" />
+                                                    <input type="hidden" name="currentPage" value="@Model.CurrentPage" />
+                                                    <button type="submit" class="btn btn-primary" >
+                                                        <span>
+                                                            Add To Cart
+                                                        </span>
+                                                        <span class="menu-icon">
+                                                            <i class="mdi mdi-cart"></i>
+                                                        </span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
+                                    
                                 </div>
+                                
                             </div>
-
-                            <!-- EDIT HERE END -->
-                            @* <div class="card-body text-center">
-                            @if (Model.CurrentPage > 1)
-                            {
-                            <a class="btn btn-primary btn-fw" asp-page="./ViewDetail" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
-                            }
-                            @for (var i = 1; i <= Model.TotalPages; i++)
-                            {
-                            if (i == Model.CurrentPage)
-                            {
-                            <a class="btn btn-primary" class="active" href="#">@i</a>
-                            }
-                            else
-                            {
-                            <a class="btn btn-primary" asp-page="./ViewDetail" asp-route-currentPage="@i">@i</a>
-                            }
-                            }
-                            @if (Model.CurrentPage < Model.TotalPages)
-                            {
-                            <a class="btn btn-primary btn-fw" asp-page="./ViewDetail" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
-                            }
-                            </div> *@
-
                             <div class="card-body text-center">
                                 <a asp-page="./ViewCart" class="btn btn-light btn-fw">Go to Cart</a>
                                 <a href="javascript:history.back()" class="btn btn-secondary btn-fw">Back</a>

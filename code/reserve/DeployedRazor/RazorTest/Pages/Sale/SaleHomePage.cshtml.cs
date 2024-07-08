@@ -26,6 +26,7 @@ namespace RazorTest.Pages.Sale
 
         public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
         public const string UrlGetDiscounts = "https://hvjewel.azurewebsites.net/api/discount\r\n";
+        public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
@@ -45,11 +46,12 @@ namespace RazorTest.Pages.Sale
 
         public const int PageSize = 9; // Number of products per page
         public string SearchTerm { get; set; }
+        public string FilterOrder { get; set; } = "None";
         public string FilterType { get; set; } = "All";
         public string FilterGem { get; set; } = "All";
         public string FilterGold { get; set; } = "All";
 
-        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterType, string filterGem, string filterGold, int currentPage = 1)
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterOrder, string filterType, string filterGem, string filterGold, int currentPage = 1)
         {
             try
             {
@@ -68,26 +70,33 @@ namespace RazorTest.Pages.Sale
                 // Process data
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-                List<Product> products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+                List<Product> products = await _apiService.GetAsync<List<Product>>(UrlProduct);
 
                 // Process Search and Filter
-                SearchTerm = searchTerm;
-                if (!string.IsNullOrEmpty(filterType))
                 {
-                    FilterType = filterType;
-                }
-                if (!string.IsNullOrEmpty(filterGem))
-                {
-                    FilterGem = filterGem;
-                }
-                if (!string.IsNullOrEmpty(filterGold))
-                {
-                    FilterGold = filterGold;
-                }
+                    SearchTerm = searchTerm;
 
-                if (products.IsNullOrEmpty())
-                {
-                    return RedirectToPage("/NotFound");
+                    if (!string.IsNullOrEmpty(filterOrder))
+                    {
+                        FilterOrder = filterOrder;
+                    }
+                    if (!string.IsNullOrEmpty(filterType))
+                    {
+                        FilterType = filterType;
+                    }
+                    if (!string.IsNullOrEmpty(filterGem))
+                    {
+                        FilterGem = filterGem;
+                    }
+                    if (!string.IsNullOrEmpty(filterGold))
+                    {
+                        FilterGold = filterGold;
+                    }
+
+                    if (products.IsNullOrEmpty())
+                    {
+                        return RedirectToPage("/NotFound");
+                    }
                 }
 
                 // Filter products based on string filterType, filterGem, filterGold
@@ -124,7 +133,32 @@ namespace RazorTest.Pages.Sale
                 }
 
                 // Make order for results
-                products = products.OrderBy(p => p.ProductCode).ToList();
+                if (!string.IsNullOrEmpty(FilterOrder) && !FilterOrder.Equals("None"))
+                {
+                    if(FilterOrder.Equals("By Name"))
+                    {
+                        products = products.OrderBy(p => p.ProductName).ToList();
+                    }else if(FilterOrder.Equals("Lastest"))
+                    {
+                        products = products.OrderByDescending(p => p.CreatedAt).ToList();
+                    }
+                    else if (FilterOrder.Equals("Oldest"))
+                    {
+                        products = products.OrderBy(p => p.CreatedAt).ToList();
+                    }
+                    else if (FilterOrder.Equals("Low to High"))
+                    {
+                        products = products.OrderBy(p => p.UnitPrice).ToList();
+                    }
+                    else if (FilterOrder.Equals("High to low"))
+                    {
+                        products = products.OrderByDescending(p => p.UnitPrice).ToList();
+                    }
+                }
+                else
+                {
+                    products = products.OrderBy(p => p.ProductCode).ToList();
+                }
 
                 // Calculate pagination details
                 CurrentPage = currentPage;

@@ -70,5 +70,21 @@ namespace RazorTest.Pages.pinvoice
 
             return Page();
         }
+
+        public async Task<IActionResult> OnPostViewDetail(string invoiceId)
+        {
+            List<Invoice> invoices = await _apiService.GetAsync<List<Invoice>>(UrlInvoice);
+
+            if (invoiceId != null && invoices != null)
+            {
+                Invoice invoice = invoices.Find(x => x.InvoiceId == invoiceId);
+                HttpContext.Session.SetObject(SessionKeyViewDetailInvoiceObject, invoice);
+            }
+            else
+            {
+                return RedirectToPage();
+            }
+            return RedirectToPage("./ViewDetail");
+        }
     }
 }
