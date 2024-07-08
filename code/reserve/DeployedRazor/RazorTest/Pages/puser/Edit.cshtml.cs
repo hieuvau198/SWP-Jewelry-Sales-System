@@ -18,6 +18,7 @@ namespace RazorTest.Pages.puser
         public EditModel(ApiService apiService, ILogger<EditModel> logger, UserService userService)
         {
             _userService = userService;
+            _apiService = apiService;
             _logger = logger;
         }
         public User User { get; set; }

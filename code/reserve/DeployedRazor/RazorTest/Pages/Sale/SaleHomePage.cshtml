@@ -4,11 +4,18 @@
 @{
 }
 
+@{
+    var typeOptions = new List<string> { "All", "Ring", "Necklace", "Bracelet", "Earrings" };
+    var gemOptions = new List<string> { "All", "Ruby", "Sapphire", "Emerald", "Cabochon", "Diamond" };
+    var goldOptions = new List<string> { "All", "24K", "18K", "14K", "10K" };
+}
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- partial: Shared/_Head.cshtml -->
 @await Html.PartialAsync("Shared/_Head")
 <!-- partial -->
+
 <body>
     <div class="container-scroller">
         <!-- partial: Shared/_Sidebar.cshtml -->
@@ -22,8 +29,75 @@
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" style="position: relative;">
                             <!-- EDIT HERE ONLY -->
+                            <!-- Search and Filter -->
+                            <form method="get">
+                                <div style="text-align: center; margin-bottom: 20px;">
+                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                    
+                                    <label>Type</label>
+                                    <select name="filterType">
+                                        @foreach (var option in typeOptions)
+                                        {
+                                            if (option.Equals(Model.FilterType))
+                                            {
+                                                <option value="@option" selected>@option</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@option">@option</option>
+                                            }
+
+                                        }
+                                    </select>
+
+                                    <label>Gemstone</label>
+                                    <select name="filterGem">
+                                        @foreach (var option in gemOptions)
+                                        {
+                                            if (option.Equals(Model.FilterGem))
+                                            {
+                                                <option value="@option" selected>@option</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@option">@option</option>
+                                            }
+
+                                        }
+                                    </select>
+
+                                    <label>Gold</label>
+                                    <select name="filterGold">
+                                        @foreach (var option in goldOptions)
+                                        {
+                                            if (option.Equals(Model.FilterGold))
+                                            {
+                                                <option value="@option" selected>@option</option>
+                                            }
+                                            else
+                                            {
+                                                <option value="@option">@option</option>
+                                            }
+
+                                        }
+                                    </select>
+                                    <button type="submit">Search</button>
+                                </div>
+                            </form>
+                            <!-- Search and Filter Ends-->
+                            <!-- Scan Barcode-->
+                            <div style="text-align: center;">
+                                <button onclick="startBarcodeScanner()">Scan</button>
+                                <div id="videoContainer" style="display:none;position: absolute;">
+                                    <video id="video" style="width: 35%; height: 35%;" controls></video>
+                                </div>
+                                <a asp-page="/Sale/SaleHomePage">Cancel Scan</a>
+                            </div>
+                            
+                            <!-- Scan Barcode Ends-->
+
                             <div class="table-responsive">
                                 <table class="table table-hover text-center">
                                     <thead>
@@ -103,6 +177,53 @@
     <!-- partial: Shared/_Source.cshtml -->
     @await Html.PartialAsync("Shared/_Source")
     <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script>
+        function startBarcodeScanner() {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                    var videoElement = document.getElementById('video');
+                    videoContainer.style.display = 'block';
+                    videoElement.srcObject = stream;
+                    videoElement.play();
+
+                    Quagga.init({
+                        inputStream: {
+                            name: "Live",
+                            type: "LiveStream",
+                            target: videoElement,
+                            constraints: {
+                                
+                                facingMode: "environment"
+                            }
+                        },
+                        decoder: {
+                            readers: ["code_128_reader", "ean_reader", "ean_8_reader", "code_39_reader"]
+                        }
+                    }, function (err) {
+                        if (err) {
+                            return;
+                        }
+                        Quagga.start();
+                    });
+
+                    Quagga.onDetected(function (data) {
+                        // Set the searchTerm value (modify as needed)
+                        var searchTerm = data.codeResult.code;
+
+                        Quagga.stop();
+                        stream.getTracks().forEach(track => track.stop());
+
+                        window.location.href = '/Sale/SaleHomePage?handler=OnGetAsync&searchTerm=' + encodeURIComponent(searchTerm);
+                    });
+                })
+                .catch(function (error) {
+                    alert('Please allow camera access to use the barcode scanner.');
+                });
+        }
+        
+    </script>
+    
 </body>
 </html>
 
