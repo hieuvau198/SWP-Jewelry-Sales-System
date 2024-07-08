@@ -31,6 +31,7 @@ namespace RazorTest.Pages.Sale
         public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
         public const string UrlUpdatePrices = "https://hvjewel.azurewebsites.net/api/product/UpdatePrices\r\n";
         public const string UrlGetCustomers = "https://hvjewel.azurewebsites.net/api/customer\r\n";
+        public const string UrlStallEmployees = "https://hvjewel.azurewebsites.net/api/stallemployee\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<CartModel> _logger;
@@ -239,6 +240,7 @@ namespace RazorTest.Pages.Sale
                 List<InvoiceItem> invoiceItems = HttpContext.Session.GetObject<List<InvoiceItem>>(SessionKeySaleInvoiceItemList);
                 List<Discount> discounts = HttpContext.Session.GetObject<List<Discount>>(SessionKeySaleDiscountSelectedList) ?? new List<Discount>();
                 SaleInvoiceObject = HttpContext.Session.GetObject<Invoice>(SessionKeySaleInvoiceObject);
+                List<StallEmployee> stallEmployees = await _apiService.GetAsync<List<StallEmployee>>(UrlStallEmployees);
 
             // Set some vars
 
@@ -271,6 +273,12 @@ namespace RazorTest.Pages.Sale
             {
                 userId = user.UserId;
                 userFullname = user.Fullname;
+                StallEmployee stallEmployee = stallEmployees.Find(x => x.EmployeeId == userId);
+                if(stallEmployee != null)
+                {
+                    stallId = stallEmployee.StallId;
+                    stallName = stallEmployee.StallName;
+                }
             }
 
             if(savedInvoice==null)

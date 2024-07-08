@@ -23,15 +23,26 @@
             <div class="main-panel">
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
-                    <div class="card">
-                        <div class="card-body">
-                            <!-- EDIT HERE ONLY -->
-                            <div class="row">
-                                <div class="col-xl-9">
+                    <div class="row">
+                        <div class="col-xl-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
                                     <!-- Cart Info -->
                                     <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <td></td>
+                                                    <td>Name</td>
+                                                    <td>Quantity</td>
+                                                    <td>Price</td>
+                                                    <td>Discount</td>
+                                                    <td>Subtotal</td>
+                                                    <td></td>
+                                                    <td>Total</td>
+                                                    <td></td>
+                                                </tr>
+                                            </thead>
                                             <tbody>
                                                 @foreach (var product in Model.Cart)
                                                 {
@@ -42,21 +53,12 @@
                                                         <td>
                                                             <form method="post" asp-page-handler="EditProduct">
                                                                 <input type="hidden" name="productId" value="@product.ProductId" />
-                                                                <input type="number" name="quantity" value="@product.ProductQuantity" style="width:50px;"/>
+                                                                <input type="number" name="quantity" value="@product.ProductQuantity" style="width:50px;" />
                                                             </form>
                                                         </td>
-                                                        <td>
-                                                            <table >
-                                                                <tr>
-                                                                    <td>@product.UnitPrice.ToString("#,##0") đ</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>@product.UnitPrice.ToString("#,##0") đ</td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
 
-                                                        
+                                                        <td>@product.UnitPrice.ToString("#,##0") đ</td>
+
 
                                                         @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
                                                         {
@@ -83,14 +85,6 @@
                                                             </td>
                                                         }
 
-                                                        @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
-                                                        {
-                                                            <td>@((Model.GetDiscountRateInCart(product.ProductId) * product.UnitPrice * -1).ToString("#,##0")) đ</td>
-                                                        }
-                                                        else
-                                                        {
-                                                            <td></td>
-                                                        }
 
                                                         <td>@product.TotalPrice.ToString("#,##0") đ</td>
                                                         @if (Model.GetDiscountRateInCart(product.ProductId) > 0)
@@ -107,13 +101,14 @@
                                                         <td>
                                                             <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Are you sure you want to remove this product?');">
                                                                 <input type="hidden" name="productId" value="@product.ProductId" />
-                                                                <button type="submit" class="btn btn-outline-danger btn-fw">Remove</button>
+                                                                <button type="submit" class="btn-danger">
+                                                                    <i class="mdi mdi-delete-forever"></i>
+                                                                </button>
                                                             </form>
                                                         </td>
                                                     </tr>
                                                 }
                                                 <tr>
-                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -130,70 +125,97 @@
                                     </div>
                                     <!-- Cart Info Ends -->
                                 </div>
-                                <div class="col-xl-3">
-                                    <!-- Customer Info -->
-                                    <div class="table-responsive">
-                                        <div class="card-header text-center">
-                                            <h2 class="mb-0">Customer</h2>
-                                            <form method="post" asp-page-handler="AddCustomer">
-                                                <input type="hidden" name="customerId" />
-                                                <div class="title">Search Phone Contact</div>
-                                                <div class="input-group">
-                                                    <input type="text" placeholder="Search" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
-                                                    <div class="input-group-append">
-                                                        <button class="btn btn-sm btn-outline-primary" type="submit">Search</button>
-                                                    </div>
-                                                </div>
-                                                <br />
-
-                                            </form>
+                            </div>
+                        </div>
+                        <!-- Customer Info -->
+                        <div class="col-xl-8 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Customer</h4>
+                                    @if (Model.Customer != null && !Model.Customer.CustomerName.Equals("Not Identified"))
+                                    {
+                                        <div class="table-responsive">
+                                            <table class="table table-hover text-center">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <td>@Model.Customer.CustomerName</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Attend Date</th>
+                                                    <td>@Model.Customer.AttendDate</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Rank</th>
+                                                    <td>@Model.Customer.CustomerRank</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Points</th>
+                                                    <td>@Model.Customer.CustomerPoint</td>
+                                                </tr>
+                                            </table>
                                         </div>
-                                        <table class="table table-hover text-center">
-                                            @if (Model.Customer != null && !Model.Customer.CustomerName.Equals("Not Identified"))
-                                            {
-                                                <div class="table-responsive">
-                                                    <table class="table table-hover text-center">
-                                                        <tr>
-                                                            <th>Name</th>
-                                                            <td>@Model.Customer.CustomerName</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Attend Date</th>
-                                                            <td>@Model.Customer.AttendDate</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Rank</th>
-                                                            <td>@Model.Customer.CustomerRank</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Points</th>
-                                                            <td>@Model.Customer.CustomerPoint</td>
-                                                        </tr>
-                                                    </table>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Add Customer</h4>
+                                    <form method="post" asp-page-handler="AddCustomer">
+                                            <input type="hidden" name="customerId" />
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Phone Number" name="searchCustomer" value=@Accessor.HttpContext.Session.GetString("_SearchCustomer") />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-sm btn-outline-primary" type="submit">Search</button>
                                                 </div>
-                                            }
-                                        </table>
+                                            </div>
+                                            <br />
+
+                                        </form>
+                                    
+                                    @if (Model.Customer!=null && Model.Customer.CustomerName.Equals("Not Identified"))
+                                    {
                                         <form method="get" action="/Sale/CreateCustomer" class="text-center">
                                             <input type="hidden" name="Create" value="/Sale/CreateCustomer" />
-                                            <button type="submit" class="btn btn-warning btn-fw">Add New Customer</button>
+                                            <button type="submit" class="btn btn-inverse-secondary btn-fw">Add New Customer</button>
                                         </form>
-                                    </div>
-                                    <!-- Customer Info Ends -->
+                                    }
                                 </div>
                             </div>
                             
-                            
-                            <!-- Actions -->
-                            <div class="card-body text-center">
-                                <form method="post" asp-page-handler="Checkout">
-                                    <button type="submit" class="btn btn-behance btn-fw">Checkout</button>
-                                </form><br />
-                                <a asp-page="./SaleHomePage" class="btn btn-secondary btn-fw">Back</a>
-                            </div>
-                            <!-- Actions End -->
-                            <!-- EDIT HERE END -->
                         </div>
+                        <div class="col-xl-8 grid-margin stretch-card">
 
+                        </div>
+                        <div class="col-xl-4 grid-margin stretch-card">
+                        </div>
+                        <div class="col-xl-6">
+                            <form method="get" action="/Sale/SaleHomePage" style="text-align: left;">
+                                <input type="hidden" name="Back" value="/Sale/SaleHomePage" />
+                                <button type="submit" class="btn btn-secondary btn-fw">Back</button>
+                            </form>
+                        </div>
+                        <div class="col-xl-6">
+                            <form method="post" asp-page-handler="Checkout" style="text-align: right;">
+                                <button type="submit" class="btn btn-warning btn-fw">
+                                    <span>
+                                        Checkout
+                                    </span>
+                                    <span class="menu-icon">
+                                        <i class="mdi mdi-check-all"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Customer Info Ends -->
+                        <!-- Actions -->
+                        @* <div class="card-body text-center">
+                            <form method="post" asp-page-handler="Checkout">
+                                <button type="submit" class="btn btn-behance btn-fw">Checkout</button>
+                            </form><br />
+                            <a asp-page="./SaleHomePage" class="btn btn-secondary btn-fw">Back</a>
+                        </div> *@
                     </div>
                 </div>
                 <!-- content-wrapper ends -->

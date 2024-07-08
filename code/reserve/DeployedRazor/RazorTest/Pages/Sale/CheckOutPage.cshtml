@@ -20,60 +20,60 @@
             <div class="main-panel">
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
-                    <div class="card">
-                        <div class="card-body">
-                            <!-- EDIT HERE ONLY -->
-                            <div class="table-responsive">
+                    <div class="row">
+                        <div class="col-xl-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        @if (Model.InvoiceItems != null)
+                                            {
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Product Name</th>
+                                                            <th>Unit Price</th>
+                                                            <th>Quantity</th>
+                                                            <th>Discount</th>
+                                                            <th>Discount Total</th>
+                                                            <th>Subtotal</th>
+                                                            <th>Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach (var item in Model.InvoiceItems)
+                                                        {
+                                                            <tr>
+                                                                <td>@item.ProductName</td>
+                                                                <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
+                                                                <td>@item.Quantity</td>
+                                                                <td>@(item.DiscountRate * 100)%</td>
 
-                                <div class="card-header text-center">
-                                    <h2 class="mb-0">Check Out Order</h2>
-                                </div>
+                                                                <td>@String.Format("{0:N0}", (item.EndTotalPrice - item.TotalPrice))</td>
+                                                                <td>@String.Format("{0:N0}", item.TotalPrice)</td>
+                                                                <td>@String.Format("{0:N0}", item.EndTotalPrice)</td>
+                                                            </tr>
+                                                        }
+                                                    </tbody>
+                                                </table>
+                                            }
+                                        
 
-                                <div class="card-body text-center">
-                                    <div class="card-body">
-                                        <h3 class="mb-0">Order</h3>
+                                        
                                     </div>
-                                    @if (Model.InvoiceItems != null)
-                                    {
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>Product Name</th>
-                                                    <th>Unit Price</th>
-                                                    <th>Quantity</th>
-                                                    <th>Discount</th>
-                                                    <th>Discount Total</th>
-                                                    <th>Subtotal</th>
-                                                    <th>Total</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach (var item in Model.InvoiceItems)
-                                                {
-                                                    <tr>
-                                                        <td>@item.ProductName</td>
-                                                        <td>@String.Format("{0:N0} VND", item.UnitPrice)</td>
-                                                        <td>@item.Quantity</td>
-                                                        <td>@(item.DiscountRate * 100)%</td>
-
-                                                        <td>@String.Format("{0:N0}", (item.EndTotalPrice - item.TotalPrice))</td>
-                                                        <td>@String.Format("{0:N0}", item.TotalPrice)</td>
-                                                        <td>@String.Format("{0:N0}", item.EndTotalPrice)</td>
-                                                    </tr>
-                                                }
-                                            </tbody>
-                                        </table>
-                                    }
                                 </div>
-
+                            </div>
+                        </div>
+                        <div class="col-xl-12 grid-margin stretch-card">
+                            <div class="card">
                                 <div class="card-body text-center">
-                                    <div class="card-body">
-                                        <h3 class="mb-0">Invoice</h3>
-                                    </div>
                                     @if (Model.Invoice != null)
                                     {
                                         <table class="table table-hover">
                                             <tbody>
+                                                <tr>
+                                                    <th>Department:</th>
+                                                    <td>@Model.Invoice.StallName</td>
+                                                </tr>
                                                 <tr>
                                                     <th>Invoice Type:</th>
                                                     <td>@Model.Invoice.InvoiceType</td>
@@ -111,16 +111,35 @@
                                         </table>
                                     }
                                 </div>
-                                <div class="">
-                                    <form method="post" asp-page-handler="Confirm" style="text-align: center;">
-                                        <button type="submit" class="btn btn-success btn-fw">Confirm</button>
-                                    </form>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <form method="get" action="/Sale/ViewCart" style="text-align: left;">
+                                <input type="hidden" name="Back" value="/Sale/ViewCart" />
+                                <button type="submit" class="btn btn-secondary btn-fw">Back</button>
+                            </form>
+                        </div>
+                        <div class="col-xl-6">
+                            <form method="post" asp-page-handler="Confirm" style="text-align: right;">
+                                <button type="submit" class="btn btn-warning btn-fw">
+                                    <span>
+                                        Confirm
+                                    </span>
+                                    <span class="menu-icon">
+                                        <i class="mdi mdi-check-all"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
 
-                                    <form method="get" action="/Sale/ViewCart" style="text-align: center;">
-                                        <input type="hidden" name="Back" value="/Sale/ViewCart" />
-                                        <button type="submit" class="btn btn-danger btn-fw">Back</button>
-                                    </form>
-                                </div>
+                    </div>
+                    <div>
+                        <div>
+                            <!-- EDIT HERE ONLY -->
+                            <div>
+                                
+
+                                
                             </div>
                             <!-- EDIT HERE END -->
                         </div>
