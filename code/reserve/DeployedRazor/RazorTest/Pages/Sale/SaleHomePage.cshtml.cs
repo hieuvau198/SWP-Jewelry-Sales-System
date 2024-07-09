@@ -22,7 +22,12 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeySaleInvoiceItemList = "_SaleInvoiceItemList";
         public const string SessionKeySaleInvoiceObject = "_SaleInvoiceObject";
         public const string SessionKeyDiscountList = "_DiscountList";
-        public const string SessionKeySelectedProduct = "_ViewDetailProduct"; // Thêm session key cho sản phẩm đã chọn
+        public const string SessionKeySelectedProduct = "_ViewDetailProduct";
+
+        public const string SessionKeyFilterOrder = "_FilterOrder";
+        public const string SessionKeyFilterType = "_FilterType";
+        public const string SessionKeyFilterGem = "_FilterGem";
+        public const string SessionKeyFilterGold = "_FilterGold";
 
         public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
         public const string UrlGetDiscounts = "https://hvjewel.azurewebsites.net/api/discount\r\n";
@@ -44,7 +49,7 @@ namespace RazorTest.Pages.Sale
         public int TotalPages { get; set; }
         public Invoice InvoiceObject { get; set; }
 
-        public const int PageSize = 9; // Number of products per page
+        public const int PageSize = 6; // Number of products per page
         public string SearchTerm { get; set; }
         public string FilterOrder { get; set; } = "None";
         public string FilterType { get; set; } = "All";
@@ -79,18 +84,38 @@ namespace RazorTest.Pages.Sale
                     if (!string.IsNullOrEmpty(filterOrder))
                     {
                         FilterOrder = filterOrder;
+                        HttpContext.Session.SetString(SessionKeyFilterOrder, filterOrder);
+                    }
+                    else
+                    {
+                        FilterOrder = HttpContext.Session.GetString(SessionKeyFilterOrder) ?? "None";
                     }
                     if (!string.IsNullOrEmpty(filterType))
                     {
                         FilterType = filterType;
+                        HttpContext.Session.SetString(SessionKeyFilterType, filterType);
+                    }
+                    else
+                    {
+                        FilterType = HttpContext.Session.GetString(SessionKeyFilterType) ?? "All";
                     }
                     if (!string.IsNullOrEmpty(filterGem))
                     {
                         FilterGem = filterGem;
+                        HttpContext.Session.SetString(SessionKeyFilterGem, filterGem);
+                    }
+                    else
+                    {
+                        FilterGem = HttpContext.Session.GetString(SessionKeyFilterGem) ?? "All";
                     }
                     if (!string.IsNullOrEmpty(filterGold))
                     {
                         FilterGold = filterGold;
+                        HttpContext.Session.SetString(SessionKeyFilterGold, filterGold);
+                    }
+                    else
+                    {
+                        FilterGold = HttpContext.Session.GetString(SessionKeyFilterGold) ?? "All";
                     }
 
                     if (products.IsNullOrEmpty())
@@ -100,20 +125,20 @@ namespace RazorTest.Pages.Sale
                 }
 
                 // Filter products based on string filterType, filterGem, filterGold
-                if (!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))
+                if (!FilterType.Equals("All"))
                 {
                     products = products.Where(p =>
-                        (p.ProductType != null && p.ProductType.Contains(filterType))).ToList();
+                        (p.ProductType != null && p.ProductType.Contains(FilterType))).ToList();
                 }
-                if (!string.IsNullOrEmpty(filterGem) && !filterGem.Equals("All"))
+                if (!FilterGem.Equals("All"))
                 {
                     products = products.Where(p =>
-                        (p.GemName != null && p.GemName.Contains(filterGem))).ToList();
+                        (p.GemName != null && p.GemName.Contains(FilterGem))).ToList();
                 }
-                if (!string.IsNullOrEmpty(filterGold) && !filterGold.Equals("All"))
+                if (!FilterGold.Equals("All"))
                 {
                     products = products.Where(p =>
-                        (p.GoldName != null && p.GoldName.Contains(filterGold))).ToList();
+                        (p.GoldName != null && p.GoldName.Contains(FilterGold))).ToList();
                 }
                 // Search products based on string searchTerm
                 if (!string.IsNullOrEmpty(searchTerm))

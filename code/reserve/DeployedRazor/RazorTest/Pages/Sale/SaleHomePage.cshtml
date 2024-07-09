@@ -30,126 +30,101 @@
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
                     <div class="row">
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-body text-center" style="position: relative;">
-                                    <!-- EDIT HERE ONLY -->
-                                    <!-- Search and Filter -->
+                        <!-- Filter list -->
+                        <div class="col-xl-4 grid-margin stretch-card" >
+                            <div class="card" style="background-color:black;">
+                                <div class="card-body">
+                                    <div class="template-demo">
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> @Model.FilterOrder </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton1">
+                                                @foreach (var item in orderOptions)
+                                                {
+                                                    <form method="get">
+                                                        <input type="hidden" name="filterOrder" value="@item" />
+                                                        <button type="submit" class="btn btn-outline-secondary btn-fw">@item</button>
+                                                    </form>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> @Model.FilterType </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton1">
+                                                @foreach (var item in typeOptions)
+                                                {
+                                                    <form method="get">
+                                                        <input type="hidden" name="filterType" value="@item" />
+                                                        <button type="submit" class="btn btn-outline-secondary btn-fw">@item</button>
+                                                    </form>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> @Model.FilterGem </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton1">
+                                                @foreach (var item in gemOptions)
+                                                {
+                                                    <form method="get">
+                                                        <input type="hidden" name="filterGem" value="@item" />
+                                                        <button type="submit" class="btn btn-outline-secondary btn-fw">@item</button>
+                                                    </form>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> @Model.FilterGold </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuOutlineButton1">
+                                                @foreach (var item in goldOptions)
+                                                {
+                                                    <form method="get">
+                                                        <input type="hidden" name="filterGold" value="@item" />
+                                                        <button type="submit" class="btn btn-outline-secondary btn-fw">@item</button>
+                                                    </form>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Scan Barcode -->
+                        <div class="col-xl-4 grid-margin stretch-card">
+                            <div class="card" style="background-color:black;">
+                                <div class="card-body text-center">
+                                    <div style="position: relative; vertical-align:top;">
+                                        <button onclick="startBarcodeScanner()" class="btn btn-dark btn-lg btn-block">
+                                            <i class="mdi mdi-barcode-scan btn-icon-prepend mdi-36px"></i>
+                                        </button>
+                                        <div id="videoContainer" style="display:none;position: absolute; z-index: 10;">
+                                            <video id="video" style="width: 100%; height: 100%;" controls></video>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Search Box -->
+                        <div class="col-xl-4 grid-margin stretch-card" >
+                            <div class="card" style="background-color:black;">
+                                <div class="card-body">
                                     <form method="get">
                                         <div class="row">
-                                            <div class="col-md-8">
-                                                <div style="margin-bottom: 20px; text-align:left">
-                                                    <select name="filterOrder" class="btn btn-primary">
-                                                        @foreach (var option in orderOptions)
-                                                        {
-                                                            if (option.Equals(Model.FilterOrder))
-                                                            {
-                                                                <option value="@option" selected>
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-                                                            else
-                                                            {
-                                                                <option value="@option">
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-
-                                                        }
-                                                    </select>
-
-                                                    <select name="filterType" class="btn btn-primary">
-                                                        @foreach (var option in typeOptions)
-                                                        {
-                                                            if (option.Equals(Model.FilterType))
-                                                            {
-                                                                <option value="@option" selected>
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-                                                            else
-                                                            {
-                                                                <option value="@option">
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-
-                                                        }
-                                                    </select>
-
-                                                    <select name="filterGem" class="btn btn-primary">
-                                                        @foreach (var option in gemOptions)
-                                                        {
-                                                            if (option.Equals(Model.FilterGem))
-                                                            {
-                                                                <option value="@option" selected>
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-                                                            else
-                                                            {
-                                                                <option value="@option">
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-
-                                                        }
-                                                    </select>
-
-                                                    <select name="filterGold" class="btn btn-primary">
-                                                        @foreach (var option in goldOptions)
-                                                        {
-                                                            if (option.Equals(Model.FilterGold))
-                                                            {
-                                                                <option value="@option" selected>
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-                                                            else
-                                                            {
-                                                                <option value="@option">
-                                                                    <span class="btn btn-primary">@option</span>
-                                                                </option>
-                                                            }
-
-                                                        }
-                                                    </select>
-                                                </div>
+                                            <div class="col-xl-8" style="vertical-align:middle;">
+                                                <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" class="form-control" />
                                             </div>
-                                            <div class="col-md-4">
-                                                <div style="margin-bottom: 20px;">
-                                                    <div class="row">
-                                                        <div class="col-md-8">
-                                                            <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" class="form-control" />
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <button type="submit" class="btn btn-primary">
-                                                                <span>Search</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="col-xl-4" style="vertical-align:middle;">
+                                                <button type="submit" class="btn btn-primary">
+                                                    <span>Search</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </form>
-                                    <!-- Search and Filter Ends-->
-                                    <!-- Scan Barcode-->
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                        </div>
-                                        <div class="col-md-4">
-
-                                            <button onclick="startBarcodeScanner()" class="btn btn-primary">
-                                                <span>Scan</span>
-                                            </button>
-                                            <div id="videoContainer" style="display:none;position: absolute;">
-                                                <video id="video" style="width: 100%; height: 100%;" controls></video>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <!-- Scan Barcode Ends-->
-                                    <!-- Product List -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-hover text-center">
                                             <thead>
@@ -197,35 +172,40 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-center">
                                         @if (Model.CurrentPage > 1)
                                         {
-                                            <a class="btn btn-primary btn-fw" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
+                                            <a class="btn btn-secondary" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage - 1)">&laquo; Prev</a>
                                         }
                                         @for (var i = 1; i <= Model.TotalPages; i++)
                                         {
                                             if (i == Model.CurrentPage)
                                             {
-                                                <a class="btn btn-primary" class="active" href="#">@i</a>
+                                                <a class="btn btn-secondary" class="active" href="#">@i</a>
                                             }
                                             else
                                             {
-                                                <a class="btn btn-primary" asp-page="./SaleHomePage" asp-route-currentPage="@i">@i</a>
+                                                <a class="btn btn-secondary" asp-page="./SaleHomePage" asp-route-currentPage="@i">@i</a>
                                             }
                                         }
                                         @if (Model.CurrentPage < Model.TotalPages)
                                         {
-                                            <a class="btn btn-primary btn-fw" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
+                                            <a class="btn btn-secondary" asp-page="./SaleHomePage" asp-route-currentPage="@(Model.CurrentPage + 1)">Next &raquo;</a>
                                         }
                                     </div>
-                                    <!-- Product List Ends -->
-                                    <!-- EDIT HERE END -->
                                 </div>
-
                             </div>
+                            
                         </div>
-                        <div class="col-xl-6">
-                            <a href="javascript:history.back()" class="btn btn-secondary btn-fw" style="text-align: left;">Back</a>
+                        <div class="col-xl-6" style="text-align: left;">
+                            <a href="javascript:history.back()" class="btn btn-secondary btn-fw">Back</a>
 
                         </div>
                         <div class="col-xl-6" style="text-align: right;">
@@ -327,4 +307,5 @@
             });
         });
     </script>
+    
 }

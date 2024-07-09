@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\0355 0807\\razortest\\pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\salehomepage.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|c:\\users\\lenovo\\desktop\\0355 0807\\razortest\\pages\\sale\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF44E02A-EBD1-4F79-AE3E-33400061A484}|RazorTest.csproj|solutionrelative:pages\\sale\\viewdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -30,15 +34,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 208,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SaleHomePage.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Sale\\SaleHomePage.cshtml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml.cs",
+              "RelativeToolTip": "Pages\\Sale\\SaleHomePage.cshtml.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAiwI8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-09T04:36:22.42Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CheckOutPage.cshtml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\CheckOutPage.cshtml",
               "RelativeDocumentMoniker": "Pages\\Sale\\CheckOutPage.cshtml",
@@ -46,12 +63,11 @@
               "RelativeToolTip": "Pages\\Sale\\CheckOutPage.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAAAAwHgAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-08T22:08:31.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T22:08:31.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ViewCart.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\ViewCart.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Sale\\ViewCart.cshtml.cs",
@@ -59,12 +75,11 @@
               "RelativeToolTip": "Pages\\Sale\\ViewCart.cshtml.cs",
               "ViewState": "AQIAACkBAAAAAAAAAAAAwBcBAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T22:01:22.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T22:01:22.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ViewDetail.cshtml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\ViewDetail.cshtml",
               "RelativeDocumentMoniker": "Pages\\Sale\\ViewDetail.cshtml",
@@ -72,8 +87,7 @@
               "RelativeToolTip": "Pages\\Sale\\ViewDetail.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAHwAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-08T21:54:20.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T21:54:20.946Z"
             },
             {
               "$type": "Document",
@@ -83,7 +97,7 @@
               "RelativeDocumentMoniker": "Pages\\Sale\\SaleHomePage.cshtml",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\SaleHomePage.cshtml",
               "RelativeToolTip": "Pages\\Sale\\SaleHomePage.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAOYAAABIAAAA",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAIwHoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-08T21:52:27.547Z",
               "EditorCaption": ""
@@ -96,7 +110,7 @@
               "RelativeDocumentMoniker": "Pages\\Sale\\ViewCart.cshtml",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\Pages\\Sale\\ViewCart.cshtml",
               "RelativeToolTip": "Pages\\Sale\\ViewCart.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAwMcAAABnAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAIAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-08T21:01:16.712Z",
               "EditorCaption": ""
