@@ -1,5 +1,5 @@
 ﻿@page
-@model RazorTest.Pages.IndexModel
+@model RazorTest.Pages.pwarranty.IndexModel
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,20 +28,17 @@
                                             <th>Product Name</th>
                                             <th>Start Date</th>
                                             <th>Expire Date</th>
-                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach (var warranty in Model.Warranties)
+                                        
+                                        @foreach (var warranty in @Model.Warranties)
                                         {
                                             <tr>
                                                 <td>@warranty.ProductName</td>
                                                 <td>@warranty.StartDate.ToShortDateString()</td>
                                                 <td>@warranty.ExpireDate.ToShortDateString()</td>
-                                                <td class="action-buttons">
-                                                    <a asp-page="./Edit" asp-route-id="@warranty.WarrantyId" class="btn btn-warning btn-fw">Edit</a>
-                                                    <a asp-page="./Delete" asp-route-id="@warranty.WarrantyId" class="btn btn-danger btn-fw">Delete</a>
-                                                </td>
+                                                
                                             </tr>
                                         }
                                     </tbody>

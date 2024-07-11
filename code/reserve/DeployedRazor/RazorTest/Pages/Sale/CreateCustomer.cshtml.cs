@@ -47,10 +47,11 @@ namespace RazorTest.Pages.Sale
                 // Process data
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
                 // Initialize the Customer with a new ID
+                DateTime dateTime = DateTime.Now;
                 Customer = new Customer
                 {
                     CustomerId = Guid.NewGuid().ToString(),
-                    AttendDate = DateTime.Now,
+                    AttendDate = dateTime,
                 };
             }
             catch (Exception ex)

@@ -19,73 +19,84 @@
             <div class="main-panel">
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
-                    <div class="card">
-                        <div class="card-body">
-                            <!-- EDIT HERE ONLY -->
-                            <div class="table-responsive">
-                                <div class="text-center">
-                                    <h2>Item Buy-Back</h2>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <!-- EDIT HERE ONLY -->
+                                    <div>
+                                        <div class="text-center">
+                                            <h2 style="margin-bottom:50px;">Checkout</h2>
+                                        </div>
+                                        @if (Model.BuyConfirmInvoiceItemObject != null)
+                                        {
+                                            <div class="forms-sample">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Product Name</label>
+                                                    <div class="col-sm-9">
+                                                        <input style="width:100%;" type="text" class="form-control" value="@Model.BuyConfirmInvoiceItemObject.ProductName" readonly>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Quantity</label>
+                                                    <div class="col-sm-9">
+                                                        <input style="width:100%;" type="text" class="form-control" value="@Model.BuyConfirmInvoiceItemObject.Quantity" readonly>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <label class="col-sm-3 col-form-label">Price</label>
+                                                    <div class="col-sm-9">
+                                                        <input style="width:100%;" type="text" class="form-control" value="@(Model.BuyConfirmInvoiceItemObject.UnitPrice.ToString("#,##0")) VND" readonly>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                        }
+                                        @if (Model.BuyConfirmInvoiceObject != null)
+                                        {
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Order Request By</label>
+                                                <div class="col-sm-9">
+                                                    <input style="width:100%;" type="text" class="form-control" value="@Model.BuyConfirmInvoiceObject.UserFullname" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Customer</label>
+                                                <div class="col-sm-9">
+                                                    <input style="width:100%;" type="text" class="form-control" value="@Model.BuyConfirmInvoiceObject.CustomerName" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Total</label>
+                                                <div class="col-sm-9">
+                                                    <input style="width:100%;" type="text" class="form-control" value="@(Model.BuyConfirmInvoiceObject.EndTotalPrice.ToString("#,##0")) VND" readonly>
+                                                </div>
+                                            </div>
+                                        }
+
+
+                                        <form method="post" asp-page-handler="ConfirmBuying" class="text-center">
+                                            <button style="margin:10px;" type="submit" class="btn btn-outline-warning btn-fw">Request Order</button>
+                                        </form>
+                                    </div>
+
+                                    <div class=" text-center">
+                                        <a  style="margin:10px;" asp-page="./BuyBack" class="btn btn-outline-secondary btn-fw">Back</a>
+                                    </div>
+                                    <!-- EDIT HERE END -->
                                 </div>
-                                @if (Model.BuyConfirmInvoiceItemObject != null)
-                                {
-                                    <table class="table table-hover text-center">
-                                        <tr>
-                                            <th>ID</th>
-                                            <td>@Model.BuyConfirmInvoiceItemObject.InvoiceItemId</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Product Name</th>
-                                            <td>@Model.BuyConfirmInvoiceItemObject.ProductName</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Quantity</th>
-                                            <td>@Model.BuyConfirmInvoiceItemObject.Quantity</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Price</th>
-                                            <td>@Model.BuyConfirmInvoiceItemObject.UnitPrice</td>
-                                        </tr>
-                                    </table>
-                                }
 
-
-                                <div class="text-center">
-                                    <h2>Buying State</h2>
-                                </div>
-
-                                @if (Model.BuyConfirmInvoiceObject != null)
-                                {
-                                    <table class="table table-hover text-center">
-                                        <tr>
-                                            <th>Invoice ID</th>
-                                            <td>@Model.BuyConfirmInvoiceObject.InvoiceId</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Employee</th>
-                                            <td>@Model.BuyConfirmInvoiceObject.UserFullname</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Customer</th>
-                                            <td>@Model.BuyConfirmInvoiceObject.CustomerName</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Price</th>
-                                            <td>@Model.BuyConfirmInvoiceObject.EndTotalPrice</td>
-                                        </tr>
-                                    </table>
-                                }
-                                <form method="post" asp-page-handler="ConfirmBuying" class="text-center">
-                                    <button type="submit" class="btn btn-outline-warning btn-fw">Create Buying Order</button>
-                                </form>
                             </div>
-
-                            <div class="card-body text-center">
-                                <a asp-page="./BuyBack" class="btn btn-outline-secondary btn-fw">Back</a>
-                            </div> 
-                            <!-- EDIT HERE END -->
                         </div>
-
                     </div>
+                    
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial: Shared/_Footer.cshtml -->

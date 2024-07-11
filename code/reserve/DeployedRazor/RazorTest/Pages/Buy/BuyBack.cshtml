@@ -23,47 +23,57 @@
                     <div class="card">
                         <div class="card-body">
                             <!-- EDIT HERE ONLY -->
-                            <div class="table-responsive">
-                                <div class="text-center">
-                                    <h2>Details</h2>
-                                </div>
-                                @if (Model.BuyInvoiceObject != null)
-                                {
-                                    <table class="table table-hover text-center">
-                                        <tr>
-                                            <th>Invoice Id:</th>
-                                            <td>@Model.BuyInvoiceObject.InvoiceId</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Customer:</th>
-                                            <td>@Model.BuyInvoiceObject.CustomerName</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Sale Staff:</th>
-                                            <td>@Model.BuyInvoiceObject.UserFullname</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Total Price:</th>
-                                            <td>@String.Format("{0:N0} VND", Model.BuyInvoiceObject.EndTotalPrice)</td>
-                                        </tr>
-                                        <tr>
-                                            <th>Date</th>
-                                            <td>@Model.BuyInvoiceObject.InvoiceDate</td>
-                                        </tr>
-                                    </table>
-
-                                    <div class="text-center">
-                                        <h2>Items</h2>
+                            @if (Model.BuyInvoiceObject != null)
+                            {
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Invoice Id</label>
+                                    <div class="col-sm-9">
+                                        <input style="width:100%;" type="text" class="form-control" value="@Model.BuyInvoiceObject.InvoiceId" readonly>
                                     </div>
 
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Customer</label>
+                                    <div class="col-sm-9">
+                                        <input style="width:100%;" type="text" class="form-control" value="@Model.BuyInvoiceObject.CustomerName" readonly>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Sale Staff</label>
+                                    <div class="col-sm-9">
+                                        <input style="width:100%;" type="text" class="form-control" value="@Model.BuyInvoiceObject.UserFullname" readonly>
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Total</label>
+                                    <div class="col-sm-9">
+                                        <input style="width:100%;" type="text" class="form-control" value="@String.Format("{0:N0} VND", Model.BuyInvoiceObject.EndTotalPrice)" readonly>
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Date</label>
+                                    <div class="col-sm-9">
+                                        <input style="width:100%;" type="text" class="form-control" value="@Model.BuyInvoiceObject.InvoiceDate" readonly>
+                                    </div>
+
+                                </div>
+                                <div class="text-center">
+                                    <h2>Purchased Products</h2>
+                                </div>
+                                <div class="row">
                                     <table class="table table-hover text-center">
                                         <thead>
                                             <tr>
-                                                <th>Product Name</th>
-                                                <th>Quantity</th>
-                                                <th>Original Unit Price</th>
-                                                <th>Sell Price</th>
-                                                <th>Action</th>
+                                                <th class="col-xl-2">Product Name</th>
+                                                <th class="col-xl-1">Quantity</th>
+                                                <th class="col-xl-2">Original Unit Price</th>
+                                                <th class="col-xl-3">Sell Price</th>
+                                                <th class="col-xl-2">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -84,14 +94,11 @@
                                             }
                                         </tbody>
                                     </table>
-                                }
-                                else
-                                {
-                                    <p class="text-center text-danger">Invoice not found.</p>
-                                }
-                            </div>
+                                </div>
+                            }
+                            
 
-                            <div class="text-center">
+                            <div style="margin:15px;" class="text-center">
                                 <a asp-page="./Processing" class="btn btn-outline-secondary btn-fw">Back</a>
                             </div>
                             <!-- EDIT HERE END -->

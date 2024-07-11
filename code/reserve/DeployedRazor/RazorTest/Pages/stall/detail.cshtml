@@ -1,0 +1,183 @@
+﻿@page
+@model RazorTest.Pages.stall.detailModel
+
+@{
+    var roleOptions = new List<string> { "Manager", "Sale", "Cashier"};
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->
+            <div class="main-panel">
+                <!-- content-wrapper begins -->
+                <div class="content-wrapper">
+                    <div class="row">
+                        <!-- Stall Employees-->
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <h6 class="text-center">Department Staffs</h6>
+                                        
+                                        <table class="table table-hover text-center">
+                                            <tbody>
+                                                @foreach(var employee in Model.DetailStallEmployees)
+                                                {
+                                                    
+                                                        
+                                                        
+                                                    <tr>
+                                                        <form method="post" asp-page-handler="EditEmployee" class="text-center">
+                                                        <input type="hidden" name="stallEmployeeId" value="@employee.StallEmployeeId" />
+                                                        <td class="col-md-6 text-left">@employee.EmployeeFullname</td>
+                                                        <td class="col-md-2">
+                                                            <select name="role" class="btn btn-inverse-primary" style="width:100%;">
+                                                                    @foreach (var role in roleOptions)
+                                                                    {
+                                                                        if (role == employee.Role)
+                                                                        {
+                                                                        <option selected>
+                                                                                @role
+                                                                        </option>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                        <option>
+                                                                                @role
+                                                                        </option>
+                                                                        }
+                                                                    }
+                                                            </select>
+                                                        </td>
+                                                        <td class="col-md-2">
+
+                                                            <select name="stallName" class="btn btn-inverse-primary">
+                                                                    @foreach (var stall in Model.Stalls)
+                                                                    {
+                                                                        if (stall.StallId == Model.Stall.StallId)
+                                                                        {
+                                                                        <option selected>
+                                                                                @stall.StallName
+                                                                        </option>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                        <option>
+                                                                                @stall.StallName
+                                                                        </option>
+                                                                        }
+                                                                    }
+                                                            </select>
+
+                                                        </td>
+                                                        <td class="col-md-2">
+                                                            <button class="btn btn-inverse-primary">
+                                                                <i class="mdi mdi-content-save-settings"></i>
+                                                                <span>Save</span>
+                                                            </button>
+                                                        </td>
+                                                        </form>
+                                                    </tr>
+                                                    
+                                                }
+                                            </tbody>
+                                        </table>
+                                        
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Stall Info -->
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>@Model.Stall.StallName</h4>
+                                    <img src="/assets/images/stall/@(Model.Stall.StallId).jpg" style="width:100%; height:200px" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Stall Items-->
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <h6 class="text-center">Department Inventory</h6>
+                                        <table class="table table-hover text-center">
+                                            <tbody>
+                                                @foreach (var item in Model.DetailStallItems)
+                                                {
+                                                    <tr>
+                                                        <form method="post" asp-page-handler="EditItem">
+                                                        <input type="hidden" name="stallItemId" value="@item.StallItemId"/>
+                                                        <td class="col-md-6 text-left">@item.ProductName</td>
+                                                        <td class="col-md-2">
+                                                            <input class="btn btn-inverse-primary" type="number" name="quantity" value="@item.quantity" style="width:100%;"/>
+                                                        </td>
+                                                        <td class="col-md-2">
+                                                            <select name="stallName" class="btn btn-inverse-primary">
+                                                                    @foreach(var stall in Model.Stalls)
+                                                                    {
+                                                                        if(stall.StallId.Equals(item.StallId))
+                                                                        {
+                                                                            <option selected>
+                                                                                @stall.StallName
+                                                                            </option>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <option>
+                                                                                @stall.StallName
+                                                                            </option>
+                                                                        }
+                                                                    }
+                                                                </select>
+                                                        </td>
+                                                        <td class="col-md-2">
+                                                            <button class="btn btn-inverse-primary">
+                                                                <i class="mdi mdi-content-save-settings"></i>
+                                                                <span>Save</span>
+                                                            </button>
+                                                        </td>
+                                                        </form>
+                                                        
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- content-wrapper ends -->
+                <!-- partial: Shared/_Footer.cshtml -->
+                @await Html.PartialAsync("Shared/_Footer")
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>
+

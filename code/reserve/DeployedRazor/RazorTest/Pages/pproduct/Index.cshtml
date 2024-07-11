@@ -33,9 +33,8 @@
                             <form method="get">
                                 <div style="text-align: center; margin-bottom: 20px;">
 
-                                    <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
-                                    <label>Type</label>
-                                    <select name="filterType">
+                                    <input class="btn btn-inverse-secondary" type="text" name="searchTerm" placeholder="Search Info" value="@Model.SearchTerm" style="padding: 5px; width: 200px;" />
+                                    <select class="btn btn-primary" name="filterType">
                                         @foreach (var option in typeOptions)
                                         {
                                             if (option.Equals(Model.FilterType))
@@ -50,8 +49,7 @@
                                         }
                                     </select>
 
-                                    <label>Gemstone</label>
-                                    <select name="filterGem">
+                                    <select class="btn btn-primary" name="filterGem">
                                         @foreach (var option in gemOptions)
                                         {
                                             if (option.Equals(Model.FilterGem))
@@ -66,8 +64,7 @@
                                         }
                                     </select>
 
-                                    <label>Gold</label>
-                                    <select name="filterGold">
+                                    <select class="btn btn-primary" name="filterGold">
                                         @foreach (var option in goldOptions)
                                         {
                                             if (option.Equals(Model.FilterGold))
@@ -81,7 +78,7 @@
 
                                         }
                                     </select>
-                                    <button type="submit">Search</button>
+                                    <button class="btn btn-primary" type="submit">Search</button>
                                 </div>
                             </form>
                             <!-- Search and Filter Ends-->
@@ -120,8 +117,8 @@
                                                 <td class="action-buttons">
                                                     @if (Model.User.Role.Equals("Admin") || Model.User.Role.Equals("Manager"))
                                                     {
-                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-outline-warning btn-fw">Edit</a>
-                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-outline-danger btn-fw">Delete</a>
+                                                        <a asp-page="./Edit" asp-route-id="@product.ProductId" class="btn btn-outline-warning">Edit</a>
+                                                        <a asp-page="./Delete" asp-route-id="@product.ProductId" class="btn btn-outline-danger">Delete</a>
 
                                                     }
                                                     else if (Model.User.Role.Equals("Sale") || Model.User.Role.Equals("Cashier"))

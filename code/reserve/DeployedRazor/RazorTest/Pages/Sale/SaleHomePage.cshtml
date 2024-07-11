@@ -108,20 +108,21 @@
                             <div class="card" style="background-color:black;">
                                 <div class="card-body">
                                     <form method="get">
-                                        <div class="row">
-                                            <div class="col-xl-8" style="vertical-align:middle;">
+                                        
+                                            <div style="vertical-align:middle;">
                                                 <input type="text" name="searchTerm" placeholder="Search" value="@Model.SearchTerm" class="form-control" />
                                             </div>
-                                            <div class="col-xl-4" style="vertical-align:middle;">
-                                                <button type="submit" class="btn btn-primary">
+                                            <div  class="text-center" style="margin:10px;">
+                                                <button type="submit" class="btn btn-outline-secondary">
                                                     <span>Search</span>
                                                 </button>
                                             </div>
-                                        </div>
+                                        
                                     </form>
                                 </div>
                             </div>
                         </div>
+                        <!-- Product List -->
                         <div class="col-xl-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
@@ -176,6 +177,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Page index -->
                         <div class="col-xl-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
@@ -204,12 +206,13 @@
                             </div>
                             
                         </div>
+                        <!-- Button -->
                         <div class="col-xl-6" style="text-align: left;">
                             <a href="javascript:history.back()" class="btn btn-secondary btn-fw">Back</a>
 
                         </div>
                         <div class="col-xl-6" style="text-align: right;">
-                            <a asp-page="./ViewCart" class="btn btn-success btn-fw" style="text-align: right;">
+                            <a asp-page="./ViewCart" class="btn btn-warning btn-fw" style="text-align: right;">
                                 <span>Go to Cart</span>
                                 <span class="menu-icon">
                                     <i class="mdi mdi-cart"></i>

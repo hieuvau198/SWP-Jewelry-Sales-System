@@ -1,10 +1,10 @@
 ﻿       <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo">
+        <a asp-page="/Index" class="sidebar-brand brand-logo">
                     <img src="~/assets/images/logo.svg" alt="logo" style="width: 60px; height: 60px;" />
                 </a>
-                <a class="sidebar-brand brand-logo-mini">
+        <a asp-page="/Index" class="sidebar-brand brand-logo-mini">
                     <img src="~/assets/images/logo-mini.svg" alt="logo" style="width: 35px; height: 35px;" />
                 </a>
             </div>
@@ -13,8 +13,11 @@
                     <div class="profile-desc">
                         <div class="profile-pic">
                             <div class="count-indicator">
-                                <img class="img-xs rounded-circle " src="~/assets/images/faces/@(Model.User.UserId).png" alt="">
-                                <span class="count bg-success"></span>
+                                <a asp-page="/profile">
+                            <img class="img-xs rounded-circle " src="~/assets/images/faces/@(Model.User.UserId).png" alt="">
+                            <span class="count bg-success"></span>
+                                </a>
+                                
                             </div>
                             <div class="profile-name">
                                 <h5 class="mb-0 font-weight-normal">@Model.User.Fullname</h5>
@@ -96,6 +99,14 @@
                         </a>
                     </li>
                     <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/pwarranty/Index">
+                            <span class="menu-icon">
+                            <i class="mdi mdi-security"></i>
+                            </span>
+                            <span class="menu-title">Warranty History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
                         <a class="nav-link" asp-page="/puser/Index">
                             <span class="menu-icon">
                                 <i class="mdi mdi-account"></i>
@@ -103,16 +114,7 @@
                             <span class="menu-title">User</span>
                         </a>
                     </li>
-                    <li class="nav-item menu-items">
-
-                        <a class="nav-link" asp-page="/Authentication/AccessDenied">
-                            <span class="menu-icon">
-                                <i class="mdi mdi-store"></i>
-                            </span>
-                            <span class="menu-title">Manage Stalls</span>
-                        </a>
-
-                    </li>
+                    
                 }
 
                 @if (Model.User.Role.Equals("Admin"))
@@ -147,6 +149,14 @@
                                 <i class="mdi mdi-tag"></i>
                             </span>
                             <span class="menu-title">Discount</span>
+                        </a>
+                    </li>
+                    <li class="nav-item menu-items">
+                        <a class="nav-link" asp-page="/stall/Index">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-store"></i>
+                            </span>
+                            <span class="menu-title">Department</span>
                         </a>
                     </li>
                     <li class="nav-item menu-items">

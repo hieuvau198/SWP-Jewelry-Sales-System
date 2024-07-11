@@ -16,37 +16,34 @@ namespace RazorTest.Pages
         public const string SessionKeyUserObject = "_UserObject";
 
         private readonly ApiService _apiService;
+
         public IndexModel(ApiService apiService)
         {
             _apiService = apiService;
         }
         public User User { get; set; }
-        public List<Discount> Discounts { get; set; }
-        public List<Customer> Customers { get; set; }
-        public List<Gem> Gems { get; set; }
-        public List<Gold> Golds { get; set; }
-        public List<Invoice> Invoices { get; set; }
-        public List<InvoiceItem> InvoiceItems { get; set; }
-        public List<Jewel> Jewels { get; set; }
-        public List<Product> Products { get; set; }
-        public PaginatedList<Product> PaginatedProducts { get; set; } // Đối tượng phân trang
-        public List<User> Users { get; set; }
-        public List<Warranty> Warranties { get; set; }
-        public List<Login> Logins { get; set; }
-        public List<GoldPrice> GoldPrices { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? pageIndex)
+        public PaginatedList<Product> Products { get; set; }
+
+        public string SearchTerm { get; set; }
+        public string FilterType { get; set; } = "All";
+        public string FilterGem { get; set; } = "All";
+        public string FilterGold { get; set; } = "All";
+
+
+        private const int PageSize = 10;
+        public async Task<IActionResult> OnGetAsync(string searchTerm, string filterType, string filterGem, string filterGold, int currentPage = 1)
         {
             try
             {
                 // Verify auth
                 List<string> roles = new List<string>
-                {
-                    "Admin",
-                    "Manager",
-                    "Cashier",
-                    "Sale"
-                };
+            {
+                "Manager",
+                "Cashier",
+                "Sale",
+                "Admin"
+            };
                 if (!_apiService.VerifyAuth(HttpContext, roles))
                 {
                     return RedirectToPage("/Authentication/LoginPage");
@@ -54,23 +51,60 @@ namespace RazorTest.Pages
 
                 // Process data
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-
-                if (!_apiService.VerifyAuth(HttpContext, roles))
+                // Set some vars
+                SearchTerm = searchTerm;
+                if (!string.IsNullOrEmpty(filterType))
                 {
-                    const int pageSize = 9; // Number of products per page
-                    Products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+                    FilterType = filterType;
+                }
+                if (!string.IsNullOrEmpty(filterGem))
+                {
+                    FilterGem = filterGem;
+                }
+                if (!string.IsNullOrEmpty(filterGold))
+                {
+                    FilterGold = filterGold;
+                }
 
-                    if (Products != null)
-                    {
-                        Products = Products.OrderBy(p => p.ProductCode).ToList();
-                        PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
-                    }
-                    else
-                    {
-                        Products = new List<Product>();
-                        Products = Products.OrderBy(p => p.ProductCode).ToList();
-                        PaginatedProducts = PaginatedList<Product>.Create(Products.AsQueryable(), pageIndex ?? 1, pageSize);
-                    }
+
+                var products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+
+                // Filter products based on string filterType, filterGem, filterGold
+                if (!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))
+                {
+                    products = products.Where(p =>
+                        (p.ProductType != null && p.ProductType.Contains(filterType))).ToList();
+                }
+                if (!string.IsNullOrEmpty(filterGem) && !filterGem.Equals("All"))
+                {
+                    products = products.Where(p =>
+                        (p.GemName != null && p.GemName.Contains(filterGem))).ToList();
+                }
+                if (!string.IsNullOrEmpty(filterGold) && !filterGold.Equals("All"))
+                {
+                    products = products.Where(p =>
+                        (p.GoldName != null && p.GoldName.Contains(filterGold))).ToList();
+                }
+                // Search products based on string searchTerm
+                if (!string.IsNullOrEmpty(searchTerm))
+                {
+                    products = products.Where(p =>
+                        (p.ProductCode != null && p.ProductCode.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (p.ProductName != null && p.ProductName.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)) ||
+                        (p.ProductQuantity.ToString().Contains(searchTerm)) ||
+                        (p.ProductType != null && p.ProductType.Contains(searchTerm)) ||
+                        (p.ProductWarranty.ToString().Contains(searchTerm)) ||
+                        (p.GemName != null && p.GemName.Contains(searchTerm)) ||
+                        (p.GemWeight.ToString().Contains(searchTerm)) ||
+                        (p.GoldName != null && p.GoldName.Contains(searchTerm)) ||
+                        (p.GoldWeight.ToString().Contains(searchTerm)) ||
+                        (p.BuyPrice.ToString().Contains(searchTerm)) ||
+                        (p.UnitPrice.ToString().Contains(searchTerm))).ToList();
+                }
+
+                if (products != null)
+                {
+                    Products = PaginatedList<Product>.Create(products.AsQueryable(), currentPage, 10);
                 }
             }
             catch (Exception ex)
@@ -79,21 +113,6 @@ namespace RazorTest.Pages
             }
 
             return Page();
-        }
-
-        public bool VerifyAuth(string role)
-        {
-            bool result = false;
-            bool isAuthenticated = HttpContext.Session.GetObject<bool>(SessionKeyAuthState);
-            User user = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            if (isAuthenticated && user != null)
-            {
-                if(user.Role == role)
-                {
-                    result = true;
-                }
-            }
-            return result;
         }
     }
 }

@@ -1,0 +1,77 @@
+﻿@page
+@model RazorTest.Pages.profileModel
+@{
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- partial: Shared/_Head.cshtml -->
+@await Html.PartialAsync("Shared/_Head")
+<!-- partial -->
+<body>
+
+    <div class="container-scroller">
+        <!-- partial: Shared/_Sidebar.cshtml -->
+        @await Html.PartialAsync("Shared/_Sidebar")
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial: Shared/_Navbar.cshtml -->
+            @await Html.PartialAsync("Shared/_Navbar")
+            <!-- partial -->
+            <div class="main-panel">
+
+                <!-- content-wrapper begins -->
+
+                <div class="content-wrapper">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Profile</h4>
+                                    <p class="card-description">@Model.User.Fullname</p>
+                                    <div class="forms-sample">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Full Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" value="@Model.User.Fullname" readonly>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">Role</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" value="@Model.User.Role" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src="/assets/images/faces/@(Model.User.UserId).png" style="width:100%; height:100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- content-wrapper ends -->
+                <!-- partial:partials/_footer.html -->
+                <!-- partial: Shared/_Footer.cshtml -->
+                @await Html.PartialAsync("Shared/_Footer")
+                <!-- partial -->
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- partial: Shared/_Source.cshtml -->
+    @await Html.PartialAsync("Shared/_Source")
+    <!-- partial -->
+</body>
+</html>

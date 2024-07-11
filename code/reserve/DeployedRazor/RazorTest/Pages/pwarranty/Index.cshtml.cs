@@ -12,6 +12,7 @@ namespace RazorTest.Pages.pwarranty
     public class IndexModel : PageModel
     {
         public const string SessionKeyUserObject = "_UserObject";
+        public const string SessionKeyAuthState = "_AuthState";
         private readonly ApiService _apiService;
 
         public IndexModel(ApiService apiService)
@@ -45,7 +46,11 @@ namespace RazorTest.Pages.pwarranty
             {
                 Warranties = warranties.OrderBy(w => w.WarrantyId).ToList();
             }
-
+            else
+            {
+                return RedirectToPage("/Error");
+            }
+            
             return Page();
         }
     }

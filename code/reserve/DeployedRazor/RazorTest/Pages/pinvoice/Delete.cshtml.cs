@@ -32,8 +32,6 @@ namespace RazorTest.Pages.pinvoice
                 // Verify auth
                 List<string> roles = new List<string>
                 {
-                    "Manager",
-                    "Cashier",
                     "Admin"
                 };
                 if (!_apiService.VerifyAuth(HttpContext, roles))

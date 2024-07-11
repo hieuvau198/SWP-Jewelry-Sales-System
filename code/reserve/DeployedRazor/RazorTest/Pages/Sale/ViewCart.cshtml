@@ -24,10 +24,12 @@
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
                     <div class="row">
+                        <!-- Cart Items -->
                         <div class="col-xl-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
                                     <!-- Cart Info -->
+                                    <h4 class="card-title">Cart Information</h4>
                                     <div class="table-responsive">
                                         <table class="table table-bordered">
                                             <thead>
@@ -53,7 +55,7 @@
                                                         <td>
                                                             <form method="post" asp-page-handler="EditProduct">
                                                                 <input type="hidden" name="productId" value="@product.ProductId" />
-                                                                <input type="number" name="quantity" value="@product.ProductQuantity" style="width:50px;" />
+                                                                <input class="btn btn-inverse-primary" type="number" name="quantity" value="@product.ProductQuantity" style="width:50px;" />
                                                             </form>
                                                         </td>
 

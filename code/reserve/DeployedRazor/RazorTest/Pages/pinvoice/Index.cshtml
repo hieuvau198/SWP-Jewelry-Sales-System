@@ -23,24 +23,24 @@
                 <div class="content-wrapper">
                     <div class="card">
                         <div class="card-body">
-                            <!-- EDIT HERE ONLY -->
+                            <!-- List -->
                             <div class="table-responsive">
                                 <table class="table table-hover text-center">
                                     <thead>
                                         <tr>
-                                            <th>Make Request</th>
+                                            <th class="text-left">Make Request</th>
                                             <th>Date</th>
                                             <th>Total (VND)</th>
                                             <th>Status</th>
-                                            <th>View</th>
+                                            <th>Detail</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var invoice in Model.Invoices)
                                         {
                                             <tr>
-                                                <td><strong>@invoice.UserFullname</strong></td>
-                                                <td>@invoice.InvoiceDate.ToString("M/d HH:mm:ss")</td>
+                                                <td class="text-left"><strong>@invoice.UserFullname</strong></td>
+                                                <td >@invoice.InvoiceDate.ToString("M/d HH:mm:ss")</td>
                                                 <td>@String.Format("{0:N0}", invoice.EndTotalPrice)</td>
                                                 <td>
                                                     @if (invoice.InvoiceStatus.Equals("Complete"))
@@ -63,7 +63,14 @@
                                                 <td>
                                                     <form method="post" asp-page-handler="ViewDetail">
                                                         <input type="hidden" name="invoiceId" value="@invoice.InvoiceId" />
-                                                        <button class="btn btn-outline-warning btn-fw" type="submit">Detail</button>
+                                                        <button class="btn-inverse-warning btn-fw" type="submit">
+                                                            <span class="menu-icon">
+                                                                <i class="mdi mdi-information"></i>
+                                                            </span>
+                                                            <span>
+                                                                View
+                                                            </span>
+                                                        </button>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -71,25 +78,24 @@
                                     </tbody>
                                 </table>
                             </div>
-
-                            <!-- EDIT HERE END -->
+                            <!-- Page Index -->
                             <div class="card-body text-center">
                                 @if (Model.Invoices.HasPreviousPage)
                                 {
-                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
+                                    <a class="btn btn-secondary" asp-page="./Index" asp-route-currentPage="@(Model.Invoices.PageIndex - 1)">&laquo; Previous</a>
                                 }
                                 @for (int i = 1; i <= Model.Invoices.TotalPages; i++)
                                 {
-                                    <a class="btn btn-primary" asp-page="./Index" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
+                                    <a class="btn btn-secondary" asp-page="./Index" asp-route-currentPage="@i" class="@(i == Model.Invoices.PageIndex ? "active" : "")">@i</a>
                                 }
                                 @if (Model.Invoices.HasNextPage)
                                 {
-                                    <a class="btn btn-primary btn-fw" asp-page="./Index" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
+                                    <a class="btn btn-secondary" asp-page="./Index" asp-route-currentPage="@(Model.Invoices.PageIndex + 1)">Next &raquo;</a>
                                 }
                             </div>
-
+                            <!-- Action -->
                             <div class="card-body text-center">
-                                <a class="btn btn-outline-secondary btn-fw" asp-page="/Index">Back</a>
+                                <a class="btn btn-secondary btn-fw" asp-page="/Index">Back</a>
                             </div>
                         </div>
                     </div>

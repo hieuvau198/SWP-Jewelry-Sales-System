@@ -553,6 +553,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\auth\\background.jpg"
     },
     {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\auth\\backgroundTemp.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\auth\\backgroundTemp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\auth\\backgroundTemp2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\auth\\backgroundTemp2.jpg"
+    },
+    {
       "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\auth\\lockscreen-bg.jpg"
     },
@@ -1191,6 +1199,22 @@
     {
       "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\sprites\\yellow.png",
       "PackagePath": "staticwebassets\\assets\\images\\sprites\\yellow.png"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\stall\\ST01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\stall\\ST01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\stall\\ST02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\stall\\ST02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\stall\\ST03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\stall\\ST03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\images\\stall\\ST04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\stall\\ST04.jpg"
     },
     {
       "Id": "C:\\Users\\LENOVO\\Desktop\\0355 0807\\RazorTest\\wwwroot\\assets\\js\\ace.js",
