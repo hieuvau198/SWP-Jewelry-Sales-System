@@ -12,7 +12,7 @@ namespace JewelRepository.RepositoryGold
             _goldDao = goldDao;
         }
 
-        public bool AddGold(Gold gold)
+        public Gold AddGold(Gold gold)
         {
             return _goldDao.AddGold(gold);
         }
@@ -32,7 +32,7 @@ namespace JewelRepository.RepositoryGold
             return _goldDao.GetGold(goldId);
         }
 
-        public List<Gold> GetGolds()
+        public Task<List<Gold>> GetGolds()
         {
             return _goldDao.GetGolds();
         }

@@ -13,9 +13,9 @@ namespace RazorTest.Pages.stall
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyStallObject = "_StallObject";
 
-        public const string UrlStall = "https://hvjewel.azurewebsites.net/api/stall";
-        public const string UrlStallEmployee = "https://hvjewel.azurewebsites.net/api/stallemployee";
-        public const string UrlStallItem = "https://hvjewel.azurewebsites.net/api/stallitem";
+        public const string UrlStall = "http://localhost:5071/api/stall";
+        public const string UrlStallEmployee = "http://localhost:5071/api/stallemployee";
+        public const string UrlStallItem = "http://localhost:5071/api/stallitem";
 
         private readonly ApiService _apiService;
         public IndexModel(ApiService apiService)

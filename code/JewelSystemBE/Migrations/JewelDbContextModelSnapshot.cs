@@ -69,34 +69,29 @@ namespace JewelSystemBE.Migrations
             modelBuilder.Entity("JewelSystemBE.Model.Customer", b =>
                 {
                     b.Property<string>("CustomerId")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("customer_id");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("AttendDate")
-                        .HasColumnType("date")
-                        .HasColumnName("attend_date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CustomerName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("customer_name");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CustomerPhone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CustomerPoint")
-                        .HasColumnType("int")
-                        .HasColumnName("customer_point");
+                        .HasColumnType("int");
 
                     b.Property<string>("CustomerRank")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("customer_rank");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CustomerId");
 
-                    b.ToTable("customer", (string)null);
+                    b.ToTable("Customers");
 
                     b.HasData(
                         new
@@ -149,8 +144,7 @@ namespace JewelSystemBE.Migrations
             modelBuilder.Entity("JewelSystemBE.Model.Discount", b =>
                 {
                     b.Property<string>("DiscountId")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DiscountName")
                         .IsRequired()
@@ -182,7 +176,7 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("DiscountId");
 
-                    b.ToTable("discount", (string)null);
+                    b.ToTable("Discounts");
 
                     b.HasData(
                         new
@@ -477,8 +471,7 @@ namespace JewelSystemBE.Migrations
                 {
                     b.Property<string>("GemId")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("gem_id");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<double>("BuyPrice")
                         .HasColumnType("float");
@@ -490,12 +483,10 @@ namespace JewelSystemBE.Migrations
                     b.Property<string>("GemName")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
-                        .HasColumnName("gem_name");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<double>("GemPrice")
-                        .HasColumnType("float")
-                        .HasColumnName("gem_price");
+                        .HasColumnType("float");
 
                     b.Property<double>("GemWeight")
                         .HasColumnType("float");
@@ -506,7 +497,7 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("GemId");
 
-                    b.ToTable("gem", (string)null);
+                    b.ToTable("Gems");
 
                     b.HasData(
                         new
@@ -1015,8 +1006,7 @@ namespace JewelSystemBE.Migrations
                 {
                     b.Property<string>("GoldId")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("gold_id");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<double>("BuyPrice")
                         .HasColumnType("float");
@@ -1031,8 +1021,7 @@ namespace JewelSystemBE.Migrations
                     b.Property<string>("GoldName")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
-                        .HasColumnName("gold_name");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<double>("SellPrice")
                         .HasColumnType("float");
@@ -1043,14 +1032,14 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("GoldId");
 
-                    b.ToTable("gold", (string)null);
+                    b.ToTable("Golds");
 
                     b.HasData(
                         new
                         {
                             GoldId = "vang24k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4251),
+                            Date = new DateTime(2024, 7, 12, 15, 34, 28, 489, DateTimeKind.Local).AddTicks(8255),
                             GoldCode = "Vàng nữ trang 99,99%",
                             GoldName = "24K",
                             SellPrice = 0.0,
@@ -1060,7 +1049,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang18k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4268),
+                            Date = new DateTime(2024, 7, 12, 15, 34, 28, 489, DateTimeKind.Local).AddTicks(8276),
                             GoldCode = "Vàng nữ trang 75%",
                             GoldName = "18K",
                             SellPrice = 0.0,
@@ -1070,7 +1059,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang14k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4270),
+                            Date = new DateTime(2024, 7, 12, 15, 34, 28, 489, DateTimeKind.Local).AddTicks(8279),
                             GoldCode = "Vàng nữ trang 58,3%",
                             GoldName = "14K",
                             SellPrice = 0.0,
@@ -1080,7 +1069,7 @@ namespace JewelSystemBE.Migrations
                         {
                             GoldId = "vang10k",
                             BuyPrice = 0.0,
-                            Date = new DateTime(2024, 7, 6, 3, 41, 54, 374, DateTimeKind.Local).AddTicks(4271),
+                            Date = new DateTime(2024, 7, 12, 15, 34, 28, 489, DateTimeKind.Local).AddTicks(8281),
                             GoldCode = "Vàng nữ trang 41,7%",
                             GoldName = "10K",
                             SellPrice = 0.0,
@@ -1091,8 +1080,7 @@ namespace JewelSystemBE.Migrations
             modelBuilder.Entity("JewelSystemBE.Model.Invoice", b =>
                 {
                     b.Property<string>("InvoiceId")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("invoice_id");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CashierFullname")
                         .IsRequired()
@@ -1104,24 +1092,20 @@ namespace JewelSystemBE.Migrations
 
                     b.Property<string>("CustomerId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("customer_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CustomerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("CustomerVoucher")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("customer_voucher");
+                    b.Property<double>("CustomerVoucher")
+                        .HasColumnType("float");
 
-                    b.Property<decimal>("EndTotalPrice")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("end_total_price");
+                    b.Property<double>("EndTotalPrice")
+                        .HasColumnType("float");
 
                     b.Property<DateTime>("InvoiceDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("invoice_date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("InvoiceStatus")
                         .IsRequired()
@@ -1130,8 +1114,7 @@ namespace JewelSystemBE.Migrations
                     b.Property<string>("InvoiceType")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("invoice_type");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ManagerFullname")
                         .IsRequired()
@@ -1149,9 +1132,8 @@ namespace JewelSystemBE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("total_price");
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("float");
 
                     b.Property<string>("UserFullname")
                         .IsRequired()
@@ -1159,12 +1141,11 @@ namespace JewelSystemBE.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("user_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("InvoiceId");
 
-                    b.ToTable("invoice", (string)null);
+                    b.ToTable("Invoices");
 
                     b.HasData(
                         new
@@ -1174,8 +1155,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C1",
                             CustomerName = "John Doe",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 798576000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 798576000.0,
                             InvoiceDate = new DateTime(2024, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1183,7 +1164,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 882348000m,
+                            TotalPrice = 882348000.0,
                             UserFullname = "James Martinez",
                             UserId = "US3"
                         },
@@ -1194,8 +1175,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C2",
                             CustomerName = "Jane Smith",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 192000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 192000000.0,
                             InvoiceDate = new DateTime(2024, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1203,7 +1184,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 240000000m,
+                            TotalPrice = 240000000.0,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
                         },
@@ -1214,8 +1195,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
-                            CustomerVoucher = 1000000m,
-                            EndTotalPrice = 209000000m,
+                            CustomerVoucher = 1000000.0,
+                            EndTotalPrice = 209000000.0,
                             InvoiceDate = new DateTime(2024, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Pending",
                             InvoiceType = "Sale",
@@ -1223,7 +1204,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 225000000m,
+                            TotalPrice = 225000000.0,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
                         },
@@ -1234,8 +1215,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C5",
                             CustomerName = "Emily Wilson",
-                            CustomerVoucher = 500000m,
-                            EndTotalPrice = 84500000m,
+                            CustomerVoucher = 500000.0,
+                            EndTotalPrice = 84500000.0,
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1243,7 +1224,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 85000000m,
+                            TotalPrice = 85000000.0,
                             UserFullname = "Isabel Rodriguez",
                             UserId = "US6"
                         },
@@ -1254,8 +1235,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C2",
                             CustomerName = "Jane Smith",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 1200000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 1200000000.0,
                             InvoiceDate = new DateTime(2024, 4, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1263,7 +1244,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 1500000000m,
+                            TotalPrice = 1500000000.0,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
                         },
@@ -1274,8 +1255,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C4",
                             CustomerName = "Bob Brown",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 2430000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 2430000000.0,
                             InvoiceDate = new DateTime(2024, 5, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1283,7 +1264,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 2700000000m,
+                            TotalPrice = 2700000000.0,
                             UserFullname = "Isabel Rodriguez",
                             UserId = "US6"
                         },
@@ -1294,8 +1275,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 864000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 864000000.0,
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1303,7 +1284,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 960000000m,
+                            TotalPrice = 960000000.0,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
                         },
@@ -1314,8 +1295,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C1",
                             CustomerName = "John Doe",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 990000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 990000000.0,
                             InvoiceDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1323,7 +1304,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 1100000000m,
+                            TotalPrice = 1100000000.0,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
                         },
@@ -1334,8 +1315,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 720000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 720000000.0,
                             InvoiceDate = new DateTime(2024, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1343,7 +1324,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 800000000m,
+                            TotalPrice = 800000000.0,
                             UserFullname = "Emma Young",
                             UserId = "US8"
                         },
@@ -1354,8 +1335,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C2",
                             CustomerName = "Jane Smith",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 1890000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 1890000000.0,
                             InvoiceDate = new DateTime(2024, 2, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1363,7 +1344,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 2100000000m,
+                            TotalPrice = 2100000000.0,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
                         },
@@ -1374,8 +1355,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C5",
                             CustomerName = "Emily Wilson",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 2700000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 2700000000.0,
                             InvoiceDate = new DateTime(2024, 6, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Sale",
@@ -1383,7 +1364,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 3000000000m,
+                            TotalPrice = 3000000000.0,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
                         },
@@ -1394,8 +1375,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C4",
                             CustomerName = "Bob Brown",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 1500000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 1500000000.0,
                             InvoiceDate = new DateTime(2024, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
@@ -1403,7 +1384,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 1500000000m,
+                            TotalPrice = 1500000000.0,
                             UserFullname = "James Martinez",
                             UserId = "US3"
                         },
@@ -1414,8 +1395,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C3",
                             CustomerName = "Alice Johnson",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 2400000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 2400000000.0,
                             InvoiceDate = new DateTime(2024, 4, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
@@ -1423,7 +1404,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 2400000000m,
+                            TotalPrice = 2400000000.0,
                             UserFullname = "Mateo Martinez",
                             UserId = "US4"
                         },
@@ -1434,8 +1415,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C5",
                             CustomerName = "Emily Wilson",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 810000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 810000000.0,
                             InvoiceDate = new DateTime(2024, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
@@ -1443,7 +1424,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 900000000m,
+                            TotalPrice = 900000000.0,
                             UserFullname = "Isabel Rodriguez",
                             UserId = "US6"
                         },
@@ -1454,8 +1435,8 @@ namespace JewelSystemBE.Migrations
                             CashierId = "US5",
                             CustomerId = "C1",
                             CustomerName = "John Doe",
-                            CustomerVoucher = 0m,
-                            EndTotalPrice = 1200000000m,
+                            CustomerVoucher = 0.0,
+                            EndTotalPrice = 1200000000.0,
                             InvoiceDate = new DateTime(2024, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             InvoiceStatus = "Complete",
                             InvoiceType = "Buy",
@@ -1463,7 +1444,7 @@ namespace JewelSystemBE.Migrations
                             ManagerId = "US2",
                             StallId = "ST01",
                             StallName = "Stall A",
-                            TotalPrice = 1200000000m,
+                            TotalPrice = 1200000000.0,
                             UserFullname = "Luna Taylor",
                             UserId = "US7"
                         });
@@ -1472,30 +1453,21 @@ namespace JewelSystemBE.Migrations
             modelBuilder.Entity("JewelSystemBE.Model.InvoiceItem", b =>
                 {
                     b.Property<string>("InvoiceItemId")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("invoice_item_id");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DiscountId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("discount_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("DiscountRate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(0.0)
-                        .HasColumnName("discount_rate");
+                        .HasColumnType("float");
 
                     b.Property<double>("EndTotalPrice")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(0.0)
-                        .HasColumnName("end_total_price");
+                        .HasColumnType("float");
 
                     b.Property<string>("InvoiceId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("invoice_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductId")
                         .IsRequired()
@@ -1503,13 +1475,10 @@ namespace JewelSystemBE.Migrations
 
                     b.Property<string>("ProductName")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("product_name");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Quantity")
-                        .HasColumnType("int")
-                        .HasColumnName("quantity");
+                        .HasColumnType("int");
 
                     b.Property<string>("StallId")
                         .IsRequired()
@@ -1520,25 +1489,18 @@ namespace JewelSystemBE.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("TotalPrice")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(0.0)
-                        .HasColumnName("total_price");
+                        .HasColumnType("float");
 
                     b.Property<double>("UnitPrice")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(0.0)
-                        .HasColumnName("unit_price");
+                        .HasColumnType("float");
 
                     b.Property<string>("WarrantyId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("warranty_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("InvoiceItemId");
 
-                    b.ToTable("invoice_item", (string)null);
+                    b.ToTable("InvoiceItems");
 
                     b.HasData(
                         new
@@ -1984,9 +1946,7 @@ namespace JewelSystemBE.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<bool>("IsComplete")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -1994,7 +1954,7 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("jewel", (string)null);
+                    b.ToTable("Jewels");
 
                     b.HasData(
                         new
@@ -2032,22 +1992,17 @@ namespace JewelSystemBE.Migrations
             modelBuilder.Entity("JewelSystemBE.Model.Product", b =>
                 {
                     b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("product_id");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<double>("BuyPrice")
                         .HasColumnType("float");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasColumnName("created_at")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("GemId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("gem_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GemName")
                         .IsRequired()
@@ -2058,61 +2013,48 @@ namespace JewelSystemBE.Migrations
 
                     b.Property<string>("GoldId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("gold_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GoldName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("GoldWeight")
-                        .HasColumnType("float")
-                        .HasColumnName("gold_weight");
+                        .HasColumnType("float");
 
                     b.Property<double>("LaborCost")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(0.0)
-                        .HasColumnName("labor_cost");
+                        .HasColumnType("float");
 
                     b.Property<double>("MarkupRate")
-                        .HasColumnType("float")
-                        .HasColumnName("markup_rate");
+                        .HasColumnType("float");
 
                     b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("product_code");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ProductImages")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("product_images");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("product_name");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("ProductQuantity")
-                        .HasColumnType("int")
-                        .HasColumnName("product_quantity");
+                        .HasColumnType("int");
 
                     b.Property<string>("ProductType")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("product_type");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("ProductWarranty")
-                        .HasColumnType("int")
-                        .HasColumnName("product_warranty");
+                        .HasColumnType("int");
 
                     b.Property<double>("ProductWeight")
-                        .HasColumnType("float")
-                        .HasColumnName("product_weight");
+                        .HasColumnType("float");
 
                     b.Property<double>("TotalPrice")
                         .HasColumnType("float");
@@ -2122,7 +2064,7 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.ToTable("product", (string)null);
+                    b.ToTable("Products");
 
                     b.HasData(
                         new
@@ -3527,6 +3469,903 @@ namespace JewelSystemBE.Migrations
                             ProductWeight = 7.5435725625713692,
                             TotalPrice = 0.0,
                             UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P062",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE031",
+                            GemName = "Colombian Emerald",
+                            GemWeight = 1.2,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 2.1833268375472161,
+                            LaborCost = 22541225.68969354,
+                            MarkupRate = 2.6526516000486389,
+                            ProductCode = "997655504675",
+                            ProductImages = "P062.png",
+                            ProductName = "Colombian Emerald Necklace",
+                            ProductQuantity = 22,
+                            ProductType = "Necklace",
+                            ProductWarranty = 13,
+                            ProductWeight = 6.2762189716804055,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P063",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE031",
+                            GemName = "Colombian Emerald",
+                            GemWeight = 1.2,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 7.8690873654790092,
+                            LaborCost = 4803614.9889506493,
+                            MarkupRate = 1.4783200469191291,
+                            ProductCode = "132820434702",
+                            ProductImages = "P063.png",
+                            ProductName = "Colombian Emerald Bracelet",
+                            ProductQuantity = 24,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 14,
+                            ProductWeight = 9.3747581691066024,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P064",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE035",
+                            GemName = "Russian Emerald",
+                            GemWeight = 1.5,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 1.9503276588997664,
+                            LaborCost = 11322111.743710199,
+                            MarkupRate = 2.9648315748663912,
+                            ProductCode = "223652976341",
+                            ProductImages = "P064.png",
+                            ProductName = "Russian Emerald Necklace",
+                            ProductQuantity = 14,
+                            ProductType = "Necklace",
+                            ProductWarranty = 27,
+                            ProductWeight = 5.3915833885971871,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P065",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE022",
+                            GemName = "Opal Cabochon",
+                            GemWeight = 2.1000000000000001,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 7.3328638769437671,
+                            LaborCost = 48052995.225846723,
+                            MarkupRate = 2.0854551419359146,
+                            ProductCode = "134535776319",
+                            ProductImages = "P065.png",
+                            ProductName = "Opal Cabochon Bracelet",
+                            ProductQuantity = 14,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 47,
+                            ProductWeight = 9.7483448449973622,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P066",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE026",
+                            GemName = "Cat's Eye Chrysoberyl Cabochon",
+                            GemWeight = 2.5,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 8.0880597241821484,
+                            LaborCost = 4178216.465776931,
+                            MarkupRate = 1.0561345131368729,
+                            ProductCode = "282821916462",
+                            ProductImages = "P066.png",
+                            ProductName = "Cat's Eye Chrysoberyl Cabochon Earrings",
+                            ProductQuantity = 15,
+                            ProductType = "Earrings",
+                            ProductWarranty = 32,
+                            ProductWeight = 12.495811598649325,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P067",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE028",
+                            GemName = "Lapis Lazuli Cabochon",
+                            GemWeight = 7.5,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 3.2511990910559962,
+                            LaborCost = 45521277.525136769,
+                            MarkupRate = 2.1148330811040097,
+                            ProductCode = "736198789615",
+                            ProductImages = "P067.png",
+                            ProductName = "Lapis Lazuli Cabochon Ring",
+                            ProductQuantity = 5,
+                            ProductType = "Ring",
+                            ProductWarranty = 16,
+                            ProductWeight = 10.94677041286857,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P068",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE017",
+                            GemName = "Thai Sapphire",
+                            GemWeight = 1.8,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 9.0160205280884096,
+                            LaborCost = 49663585.427000947,
+                            MarkupRate = 1.4553703825497204,
+                            ProductCode = "652141365560",
+                            ProductImages = "P068.png",
+                            ProductName = "Thai Sapphire Earrings",
+                            ProductQuantity = 23,
+                            ProductType = "Earrings",
+                            ProductWarranty = 42,
+                            ProductWeight = 13.642886882573031,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P069",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE031",
+                            GemName = "Colombian Emerald",
+                            GemWeight = 1.2,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 7.0020717493306472,
+                            LaborCost = 2958963.6531875115,
+                            MarkupRate = 2.0070032319070266,
+                            ProductCode = "869018111056",
+                            ProductImages = "P069.png",
+                            ProductName = "Colombian Emerald Ring",
+                            ProductQuantity = 20,
+                            ProductType = "Ring",
+                            ProductWarranty = 23,
+                            ProductWeight = 9.3955396669381415,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P070",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE011",
+                            GemName = "Natural Ceylon Sapphire",
+                            GemWeight = 1.02,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 2.7790679761061821,
+                            LaborCost = 13212584.193749525,
+                            MarkupRate = 2.1474341245059181,
+                            ProductCode = "360314486545",
+                            ProductImages = "P070.png",
+                            ProductName = "Natural Ceylon Sapphire Bracelet",
+                            ProductQuantity = 12,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 14,
+                            ProductWeight = 5.1939316845560599,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P071",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE028",
+                            GemName = "Lapis Lazuli Cabochon",
+                            GemWeight = 7.5,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 4.7503978016786474,
+                            LaborCost = 35179269.036827415,
+                            MarkupRate = 1.5106439551370094,
+                            ProductCode = "973237878653",
+                            ProductImages = "P071.png",
+                            ProductName = "Lapis Lazuli Cabochon Earrings",
+                            ProductQuantity = 17,
+                            ProductType = "Earrings",
+                            ProductWarranty = 32,
+                            ProductWeight = 12.861498155646276,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P072",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE001",
+                            GemName = "Natural Mozambique Ruby",
+                            GemWeight = 0.97999999999999998,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 5.6046179311436344,
+                            LaborCost = 7925490.2645036774,
+                            MarkupRate = 1.4292663110662522,
+                            ProductCode = "416465740045",
+                            ProductImages = "P072.png",
+                            ProductName = "Natural Mozambique Ruby Necklace",
+                            ProductQuantity = 13,
+                            ProductType = "Necklace",
+                            ProductWarranty = 28,
+                            ProductWeight = 8.8939635934102323,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P073",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE034",
+                            GemName = "Afghan Emerald",
+                            GemWeight = 2.2000000000000002,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 5.7121034800410904,
+                            LaborCost = 28689999.243368484,
+                            MarkupRate = 1.7249882691674601,
+                            ProductCode = "905642139964",
+                            ProductImages = "P073.png",
+                            ProductName = "Afghan Emerald Necklace",
+                            ProductQuantity = 20,
+                            ProductType = "Necklace",
+                            ProductWarranty = 43,
+                            ProductWeight = 8.7256562246592573,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P074",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE031",
+                            GemName = "Colombian Emerald",
+                            GemWeight = 1.2,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 7.8017670967492414,
+                            LaborCost = 33418437.651721679,
+                            MarkupRate = 1.0262643392773481,
+                            ProductCode = "518675440124",
+                            ProductImages = "P074.png",
+                            ProductName = "Colombian Emerald Ring",
+                            ProductQuantity = 5,
+                            ProductType = "Ring",
+                            ProductWarranty = 20,
+                            ProductWeight = 11.115736636314629,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P075",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE027",
+                            GemName = "Jade Cabochon",
+                            GemWeight = 6.7999999999999998,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 9.5105342119102119,
+                            LaborCost = 19873671.941997729,
+                            MarkupRate = 2.7746569220624755,
+                            ProductCode = "883107591713",
+                            ProductImages = "P075.png",
+                            ProductName = "Jade Cabochon Earrings",
+                            ProductQuantity = 7,
+                            ProductType = "Earrings",
+                            ProductWarranty = 38,
+                            ProductWeight = 17.327096643258589,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P076",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE027",
+                            GemName = "Jade Cabochon",
+                            GemWeight = 6.7999999999999998,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 5.0850553137715719,
+                            LaborCost = 16554494.020607131,
+                            MarkupRate = 1.711876058221355,
+                            ProductCode = "285490561092",
+                            ProductImages = "P076.png",
+                            ProductName = "Jade Cabochon Necklace",
+                            ProductQuantity = 13,
+                            ProductType = "Necklace",
+                            ProductWarranty = 27,
+                            ProductWeight = 12.189626989427303,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P077",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE006",
+                            GemName = "Heated Natural Ruby",
+                            GemWeight = 0.34000000000000002,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 4.8220018319153937,
+                            LaborCost = 9726902.5970138386,
+                            MarkupRate = 2.5867224320072006,
+                            ProductCode = "810850684545",
+                            ProductImages = "P077.png",
+                            ProductName = "Heated Natural Ruby Necklace",
+                            ProductQuantity = 10,
+                            ProductType = "Necklace",
+                            ProductWarranty = 30,
+                            ProductWeight = 6.0616339539171662,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P078",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE016",
+                            GemName = "Heated Natural Sapphire",
+                            GemWeight = 2.1000000000000001,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 8.3681424148649342,
+                            LaborCost = 40912458.290988036,
+                            MarkupRate = 1.5921443127414832,
+                            ProductCode = "123256896894",
+                            ProductImages = "P078.png",
+                            ProductName = "Heated Natural Sapphire Necklace",
+                            ProductQuantity = 12,
+                            ProductType = "Necklace",
+                            ProductWarranty = 31,
+                            ProductWeight = 11.121893409395742,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P079",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE019",
+                            GemName = "Ethiopian Sapphire",
+                            GemWeight = 1.3,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 6.0560348589837201,
+                            LaborCost = 4194023.0041391337,
+                            MarkupRate = 1.001408411053442,
+                            ProductCode = "387439802850",
+                            ProductImages = "P079.png",
+                            ProductName = "Ethiopian Sapphire Necklace",
+                            ProductQuantity = 13,
+                            ProductType = "Necklace",
+                            ProductWarranty = 12,
+                            ProductWeight = 10.061922050371816,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P080",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE005",
+                            GemName = "Mozambique Ruby",
+                            GemWeight = 0.33000000000000002,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 1.470998773475916,
+                            LaborCost = 10721397.801540006,
+                            MarkupRate = 1.1317351319358644,
+                            ProductCode = "255717953045",
+                            ProductImages = "P080.png",
+                            ProductName = "Mozambique Ruby Bracelet",
+                            ProductQuantity = 9,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 21,
+                            ProductWeight = 1.8268978794962705,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P081",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE038",
+                            GemName = "Colombian Emerald",
+                            GemWeight = 0.90000000000000002,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 6.1122190563446885,
+                            LaborCost = 45645441.276931733,
+                            MarkupRate = 1.5788510456637512,
+                            ProductCode = "739592453907",
+                            ProductImages = "P081.png",
+                            ProductName = "Colombian Emerald Bracelet",
+                            ProductQuantity = 14,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 38,
+                            ProductWeight = 8.345755921584324,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P082",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE008",
+                            GemName = "Mozambique Ruby (Heated)",
+                            GemWeight = 0.48999999999999999,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 8.3685855562191893,
+                            LaborCost = 14180127.36439872,
+                            MarkupRate = 2.1139432088655075,
+                            ProductCode = "554417345981",
+                            ProductImages = "P082.png",
+                            ProductName = "Mozambique Ruby (Heated) Bracelet",
+                            ProductQuantity = 17,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 33,
+                            ProductWeight = 9.8541619627186723,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P083",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE014",
+                            GemName = "Australian Sapphire",
+                            GemWeight = 3.2000000000000002,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 1.8754761710121342,
+                            LaborCost = 31622697.745569754,
+                            MarkupRate = 2.3430281274260949,
+                            ProductCode = "378892611670",
+                            ProductImages = "P083.png",
+                            ProductName = "Australian Sapphire Necklace",
+                            ProductQuantity = 22,
+                            ProductType = "Necklace",
+                            ProductWarranty = 18,
+                            ProductWeight = 7.2884837215129572,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P084",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE021",
+                            GemName = "Moonstone Cabochon",
+                            GemWeight = 3.5,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 9.3623495242815196,
+                            LaborCost = 16563472.75871514,
+                            MarkupRate = 1.0399685928834637,
+                            ProductCode = "895541535083",
+                            ProductImages = "P084.png",
+                            ProductName = "Moonstone Cabochon Ring",
+                            ProductQuantity = 17,
+                            ProductType = "Ring",
+                            ProductWarranty = 37,
+                            ProductWeight = 14.231060675176391,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P085",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE033",
+                            GemName = "Brazilian Emerald",
+                            GemWeight = 1.8,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 7.8841570298546673,
+                            LaborCost = 27675466.14092264,
+                            MarkupRate = 2.1938325138235886,
+                            ProductCode = "683840289612",
+                            ProductImages = "P085.png",
+                            ProductName = "Brazilian Emerald Necklace",
+                            ProductQuantity = 10,
+                            ProductType = "Necklace",
+                            ProductWarranty = 22,
+                            ProductWeight = 11.310927651708962,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P086",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE032",
+                            GemName = "Zambian Emerald",
+                            GemWeight = 2.5,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 2.7482666505600251,
+                            LaborCost = 15154325.736343848,
+                            MarkupRate = 1.6851489741219896,
+                            ProductCode = "855506970606",
+                            ProductImages = "P086.png",
+                            ProductName = "Zambian Emerald Ring",
+                            ProductQuantity = 8,
+                            ProductType = "Ring",
+                            ProductWarranty = 15,
+                            ProductWeight = 8.0031120785753149,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P087",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE035",
+                            GemName = "Russian Emerald",
+                            GemWeight = 1.5,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 1.4853638811329359,
+                            LaborCost = 42822876.531945735,
+                            MarkupRate = 1.9282511939714539,
+                            ProductCode = "698883680113",
+                            ProductImages = "P087.png",
+                            ProductName = "Russian Emerald Ring",
+                            ProductQuantity = 24,
+                            ProductType = "Ring",
+                            ProductWarranty = 33,
+                            ProductWeight = 4.9611045887676823,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P088",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE025",
+                            GemName = "Star Sapphire Cabochon",
+                            GemWeight = 3.2000000000000002,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 2.2413237529785395,
+                            LaborCost = 3063576.5542223216,
+                            MarkupRate = 2.2545791946922975,
+                            ProductCode = "537897479809",
+                            ProductImages = "P088.png",
+                            ProductName = "Star Sapphire Cabochon Necklace",
+                            ProductQuantity = 16,
+                            ProductType = "Necklace",
+                            ProductWarranty = 17,
+                            ProductWeight = 8.1617748979889591,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P089",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE005",
+                            GemName = "Mozambique Ruby",
+                            GemWeight = 0.33000000000000002,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 4.5173023710675118,
+                            LaborCost = 20354729.054825481,
+                            MarkupRate = 2.833644193886045,
+                            ProductCode = "157125451128",
+                            ProductImages = "P089.png",
+                            ProductName = "Mozambique Ruby Necklace",
+                            ProductQuantity = 11,
+                            ProductType = "Necklace",
+                            ProductWarranty = 14,
+                            ProductWeight = 7.7083585135297916,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P090",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE046",
+                            GemName = "Asscher Cut Diamond",
+                            GemWeight = 1.3,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 2.0689658540162821,
+                            LaborCost = 25064114.060412843,
+                            MarkupRate = 1.5813632694189736,
+                            ProductCode = "300830776654",
+                            ProductImages = "P090.png",
+                            ProductName = "Asscher Cut Diamond Necklace",
+                            ProductQuantity = 24,
+                            ProductType = "Necklace",
+                            ProductWarranty = 38,
+                            ProductWeight = 6.3100550604794536,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P091",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE022",
+                            GemName = "Opal Cabochon",
+                            GemWeight = 2.1000000000000001,
+                            GoldId = "vang10k",
+                            GoldName = "10K",
+                            GoldWeight = 2.3224759493616145,
+                            LaborCost = 34825371.455560803,
+                            MarkupRate = 2.2396282540551438,
+                            ProductCode = "773834750665",
+                            ProductImages = "P091.png",
+                            ProductName = "Opal Cabochon Bracelet",
+                            ProductQuantity = 7,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 20,
+                            ProductWeight = 5.2230354313027005,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P092",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE009",
+                            GemName = "Mozambique Ruby",
+                            GemWeight = 0.48999999999999999,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 3.5622533490032104,
+                            LaborCost = 8578941.7910587341,
+                            MarkupRate = 2.382340498189611,
+                            ProductCode = "298516339018",
+                            ProductImages = "P092.png",
+                            ProductName = "Mozambique Ruby Ring",
+                            ProductQuantity = 9,
+                            ProductType = "Ring",
+                            ProductWarranty = 27,
+                            ProductWeight = 5.6941004842404901,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P093",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE040",
+                            GemName = "Ethiopian Emerald",
+                            GemWeight = 1.3,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 2.6806493651067336,
+                            LaborCost = 42270085.522961698,
+                            MarkupRate = 1.2731079633387989,
+                            ProductCode = "792674934158",
+                            ProductImages = "P093.png",
+                            ProductName = "Ethiopian Emerald Bracelet",
+                            ProductQuantity = 5,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 35,
+                            ProductWeight = 5.4234697813875847,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P094",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE044",
+                            GemName = "Oval Diamond",
+                            GemWeight = 1.2,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 9.2253807240819956,
+                            LaborCost = 38039309.398583248,
+                            MarkupRate = 1.7553388224754771,
+                            ProductCode = "775223714850",
+                            ProductImages = "P094.png",
+                            ProductName = "Oval Diamond Bracelet",
+                            ProductQuantity = 10,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 33,
+                            ProductWeight = 12.530601570954346,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P095",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE030",
+                            GemName = "Garnet Cabochon",
+                            GemWeight = 3.0,
+                            GoldId = "vang24k",
+                            GoldName = "24K",
+                            GoldWeight = 4.2444716481162743,
+                            LaborCost = 43984746.533329844,
+                            MarkupRate = 2.0936609871436485,
+                            ProductCode = "289398842985",
+                            ProductImages = "P095.png",
+                            ProductName = "Garnet Cabochon Ring",
+                            ProductQuantity = 20,
+                            ProductType = "Ring",
+                            ProductWarranty = 38,
+                            ProductWeight = 7.9596724849241971,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P096",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE021",
+                            GemName = "Moonstone Cabochon",
+                            GemWeight = 3.5,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 4.5387696389747232,
+                            LaborCost = 34699113.981977336,
+                            MarkupRate = 2.0783819312115486,
+                            ProductCode = "346196169746",
+                            ProductImages = "P096.png",
+                            ProductName = "Moonstone Cabochon Bracelet",
+                            ProductQuantity = 24,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 12,
+                            ProductWeight = 9.6147137013852149,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P097",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE030",
+                            GemName = "Garnet Cabochon",
+                            GemWeight = 3.0,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 1.8079704872461873,
+                            LaborCost = 6343166.36201734,
+                            MarkupRate = 2.0305332291768714,
+                            ProductCode = "729722262028",
+                            ProductImages = "P097.png",
+                            ProductName = "Garnet Cabochon Necklace",
+                            ProductQuantity = 7,
+                            ProductType = "Necklace",
+                            ProductWarranty = 22,
+                            ProductWeight = 5.4744477214319165,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P098",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE038",
+                            GemName = "Colombian Emerald",
+                            GemWeight = 0.90000000000000002,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 9.5980533515403028,
+                            LaborCost = 35858379.55481039,
+                            MarkupRate = 2.5880326005739667,
+                            ProductCode = "894208493653",
+                            ProductImages = "P098.png",
+                            ProductName = "Colombian Emerald Bracelet",
+                            ProductQuantity = 22,
+                            ProductType = "Bracelet",
+                            ProductWarranty = 18,
+                            ProductWeight = 11.881774016516705,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P099",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE028",
+                            GemName = "Lapis Lazuli Cabochon",
+                            GemWeight = 7.5,
+                            GoldId = "vang18k",
+                            GoldName = "18K",
+                            GoldWeight = 8.8995553242924714,
+                            LaborCost = 18372770.988842566,
+                            MarkupRate = 2.2003199138665521,
+                            ProductCode = "975718722237",
+                            ProductImages = "P099.png",
+                            ProductName = "Lapis Lazuli Cabochon Ring",
+                            ProductQuantity = 22,
+                            ProductType = "Ring",
+                            ProductWarranty = 45,
+                            ProductWeight = 17.005635105397129,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
+                        },
+                        new
+                        {
+                            ProductId = "P100",
+                            BuyPrice = 0.0,
+                            CreatedAt = new DateTime(2024, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GemId = "GE007",
+                            GemName = "Mozambique Ruby",
+                            GemWeight = 0.35999999999999999,
+                            GoldId = "vang14k",
+                            GoldName = "14K",
+                            GoldWeight = 1.0876427465645859,
+                            LaborCost = 26908960.946195457,
+                            MarkupRate = 1.6931379646437632,
+                            ProductCode = "186329661165",
+                            ProductImages = "P100.png",
+                            ProductName = "Mozambique Ruby Earrings",
+                            ProductQuantity = 6,
+                            ProductType = "Earrings",
+                            ProductWarranty = 29,
+                            ProductWeight = 1.8772857207332527,
+                            TotalPrice = 0.0,
+                            UnitPrice = 0.0
                         });
                 });
 
@@ -3565,8 +4404,8 @@ namespace JewelSystemBE.Migrations
                             StallId = "ST01",
                             StaffName = "Olivia Miller",
                             StallDescription = "Opening",
-                            StallName = "Stall A",
-                            StallType = "Ring",
+                            StallName = "Sky Treasure",
+                            StallType = "Diversity",
                             UserId = "US2"
                         },
                         new
@@ -3574,8 +4413,8 @@ namespace JewelSystemBE.Migrations
                             StallId = "ST02",
                             StaffName = "Olivia Miller",
                             StallDescription = "Opening",
-                            StallName = "Stall B",
-                            StallType = "Bracelet",
+                            StallName = "Delights",
+                            StallType = "Diversity",
                             UserId = "US2"
                         },
                         new
@@ -3583,26 +4422,17 @@ namespace JewelSystemBE.Migrations
                             StallId = "ST03",
                             StaffName = "Olivia Miller",
                             StallDescription = "Opening",
-                            StallName = "Stall C",
-                            StallType = "Necklace",
+                            StallName = "The Vintage",
+                            StallType = "Diversity",
                             UserId = "US2"
                         },
                         new
                         {
                             StallId = "ST04",
                             StaffName = "Olivia Miller",
-                            StallDescription = "Opening",
-                            StallName = "Stall D",
-                            StallType = "Earring",
-                            UserId = "US2"
-                        },
-                        new
-                        {
-                            StallId = "ST05",
-                            StaffName = "Olivia Miller",
                             StallDescription = "Maintenance",
-                            StallName = "Stall E",
-                            StallType = "Anklet",
+                            StallName = "The Charm",
+                            StallType = "Diversity",
                             UserId = "US2"
                         });
                 });
@@ -3639,147 +4469,147 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallEmployeeId = "c8b709ac-27d4-4c59-8cc9-9b4864543c8e",
-                            EmployeeFullname = "James Martinez",
-                            EmployeeId = "US3",
-                            Role = "Sale",
-                            StallId = "ST01",
-                            StallName = "Stall A"
-                        },
-                        new
-                        {
-                            StallEmployeeId = "8b5434c5-4b8f-4daa-a28b-01e9b78e164f",
+                            StallEmployeeId = "SE007",
                             EmployeeFullname = "Luna Taylor",
-                            EmployeeId = "US7",
-                            Role = "Sale",
-                            StallId = "ST01",
-                            StallName = "Stall A"
-                        },
-                        new
-                        {
-                            StallEmployeeId = "2e6420f2-0515-4385-899f-8c406aa16bf7",
-                            EmployeeFullname = "Ava Davis",
-                            EmployeeId = "US9",
+                            EmployeeId = "US07",
                             Role = "Cashier",
                             StallId = "ST01",
-                            StallName = "Stall A"
+                            StallName = "Sky Treasure"
                         },
                         new
                         {
-                            StallEmployeeId = "aabe9a13-01b3-4e96-8c2f-4987dd979a20",
-                            EmployeeFullname = "Avery Lewis",
-                            EmployeeId = "US18",
+                            StallEmployeeId = "SE008",
+                            EmployeeFullname = "Emma Young",
+                            EmployeeId = "US08",
                             Role = "Sale",
                             StallId = "ST01",
-                            StallName = "Stall A"
+                            StallName = "Sky Treasure"
                         },
                         new
                         {
-                            StallEmployeeId = "e5f4f61a-971e-43fb-aa8c-ad70d9569e33",
+                            StallEmployeeId = "SE009",
+                            EmployeeFullname = "Ava Davis",
+                            EmployeeId = "US09",
+                            Role = "Sale",
+                            StallId = "ST01",
+                            StallName = "Sky Treasure"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "SE0010",
+                            EmployeeFullname = "Sophia Wilson",
+                            EmployeeId = "US10",
+                            Role = "Sale",
+                            StallId = "ST01",
+                            StallName = "Sky Treasure"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "SE011",
+                            EmployeeFullname = "Charlotte Brown",
+                            EmployeeId = "US11",
+                            Role = "Cashier",
+                            StallId = "ST02",
+                            StallName = "Delights"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "SE012",
+                            EmployeeFullname = "Amelia Jones",
+                            EmployeeId = "US12",
+                            Role = "Sale",
+                            StallId = "ST02",
+                            StallName = "Delights"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "SE013",
                             EmployeeFullname = "Mia Anderson",
                             EmployeeId = "US13",
                             Role = "Sale",
                             StallId = "ST02",
-                            StallName = "Stall B"
+                            StallName = "Delights"
                         },
                         new
                         {
-                            StallEmployeeId = "5e4919a4-1073-4669-b1cb-de4f594d48fb",
-                            EmployeeFullname = "Sophia Wilson",
-                            EmployeeId = "US10",
-                            Role = "Cashier",
-                            StallId = "ST02",
-                            StallName = "Stall B"
-                        },
-                        new
-                        {
-                            StallEmployeeId = "c6bf7c21-4044-43c6-acfd-994edfefd180",
-                            EmployeeFullname = "Emma Young",
-                            EmployeeId = "US8",
+                            StallEmployeeId = "SE014",
+                            EmployeeFullname = "Harper Thomas",
+                            EmployeeId = "US14",
                             Role = "Sale",
                             StallId = "ST02",
-                            StallName = "Stall B"
+                            StallName = "Delights"
                         },
                         new
                         {
-                            StallEmployeeId = "f682a03b-936e-4e83-a56d-61974917e64c",
+                            StallEmployeeId = "SE015",
                             EmployeeFullname = "Evelyn White",
                             EmployeeId = "US15",
-                            Role = "Sale",
-                            StallId = "ST02",
-                            StallName = "Stall B"
+                            Role = "Cashier",
+                            StallId = "ST03",
+                            StallName = "The Vintage"
                         },
                         new
                         {
-                            StallEmployeeId = "abbf8e13-4243-4401-81f1-a4b53abffcbc",
+                            StallEmployeeId = "SE016",
                             EmployeeFullname = "Abigail Harris",
                             EmployeeId = "US16",
                             Role = "Sale",
-                            StallId = "ST02",
-                            StallName = "Stall B"
-                        },
-                        new
-                        {
-                            StallEmployeeId = "c1ea7850-f2a3-4492-84e2-87a19c65b870",
-                            EmployeeFullname = "Mateo Martinez",
-                            EmployeeId = "US4",
-                            Role = "Sale",
                             StallId = "ST03",
-                            StallName = "Stall C"
+                            StallName = "The Vintage"
                         },
                         new
                         {
-                            StallEmployeeId = "23dd796e-e10d-4dfd-9cac-180e66f0247e",
-                            EmployeeFullname = "Charlotte Brown",
-                            EmployeeId = "US11",
-                            Role = "Cashier",
-                            StallId = "ST03",
-                            StallName = "Stall C"
-                        },
-                        new
-                        {
-                            StallEmployeeId = "d7eda638-ad90-4475-87f1-9eb2d38bd92d",
+                            StallEmployeeId = "SE017",
                             EmployeeFullname = "Ella Clark",
                             EmployeeId = "US17",
                             Role = "Sale",
                             StallId = "ST03",
-                            StallName = "Stall C"
+                            StallName = "The Vintage"
                         },
                         new
                         {
-                            StallEmployeeId = "1896cf26-a11f-448d-9785-4024b6f5c660",
-                            EmployeeFullname = "Harper Thomas",
-                            EmployeeId = "US14",
+                            StallEmployeeId = "SE018",
+                            EmployeeFullname = "Avery Lewis",
+                            EmployeeId = "US18",
                             Role = "Sale",
-                            StallId = "ST04",
-                            StallName = "Stall D"
+                            StallId = "ST03",
+                            StallName = "The Vintage"
                         },
                         new
                         {
-                            StallEmployeeId = "90e72826-d8cf-4b7c-a655-1d3cedc7f52e",
-                            EmployeeFullname = "Theodore Garcia",
-                            EmployeeId = "US5",
+                            StallEmployeeId = "SE019",
+                            EmployeeFullname = "Julius Caesar",
+                            EmployeeId = "US19",
                             Role = "Cashier",
                             StallId = "ST04",
-                            StallName = "Stall D"
+                            StallName = "The Charm"
                         },
                         new
                         {
-                            StallEmployeeId = "bb04b2ba-5924-465f-aeaa-34d3758992ee",
-                            EmployeeFullname = "Isabel Rodriguez",
-                            EmployeeId = "US6",
+                            StallEmployeeId = "SE020",
+                            EmployeeFullname = "Charles De Quin",
+                            EmployeeId = "US20",
                             Role = "Sale",
-                            StallId = "ST05",
-                            StallName = "Stall E"
+                            StallId = "ST04",
+                            StallName = "The Charm"
                         },
                         new
                         {
-                            StallEmployeeId = "09813f36-cd89-44a1-bc52-710ef310dd62",
-                            EmployeeFullname = "Amelia Jones",
-                            EmployeeId = "US12",
-                            Role = "Cashier",
-                            StallId = "ST05",
-                            StallName = "Stall E"
+                            StallEmployeeId = "SE021",
+                            EmployeeFullname = "Victoria Sylvanas",
+                            EmployeeId = "US21",
+                            Role = "Sale",
+                            StallId = "ST04",
+                            StallName = "The Charm"
+                        },
+                        new
+                        {
+                            StallEmployeeId = "SE022",
+                            EmployeeFullname = "Albert Brown",
+                            EmployeeId = "US22",
+                            Role = "Sale",
+                            StallId = "ST04",
+                            StallName = "The Charm"
                         });
                 });
 
@@ -3796,6 +4626,10 @@ namespace JewelSystemBE.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("StallId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("quantity")
                         .HasColumnType("int");
 
@@ -3806,38 +4640,803 @@ namespace JewelSystemBE.Migrations
                     b.HasData(
                         new
                         {
-                            StallItemId = "a326a83f-4a2f-4a75-8f4e-ff6ae472ea2b",
-                            ProductId = "Some Product Id",
-                            ProductName = "Some Product Name",
-                            quantity = 0
+                            StallItemId = "SI001",
+                            ProductId = "P001",
+                            ProductName = "Ruby Necklace NE-R1-24K",
+                            StallId = "ST01",
+                            quantity = 10
                         },
                         new
                         {
-                            StallItemId = "8eabc85e-89e3-4b3c-9e27-61ea51ae7280",
-                            ProductId = "Some Product Id",
-                            ProductName = "Some Product Name",
-                            quantity = 0
+                            StallItemId = "SI002",
+                            ProductId = "P002",
+                            ProductName = "Sapphire Necklace NE-S2-14K",
+                            StallId = "ST01",
+                            quantity = 15
                         },
                         new
                         {
-                            StallItemId = "26c49b56-4de7-4174-8e16-7036eaea5389",
-                            ProductId = "Some Product Id",
-                            ProductName = "Some Product Name",
-                            quantity = 0
+                            StallItemId = "SI003",
+                            ProductId = "P003",
+                            ProductName = "Emerald Earrings NE-EME033-18K",
+                            StallId = "ST01",
+                            quantity = 25
                         },
                         new
                         {
-                            StallItemId = "3b87ef81-79f8-4c62-bc3a-36c858dfbc85",
-                            ProductId = "Some Product Id",
-                            ProductName = "Some Product Name",
-                            quantity = 0
+                            StallItemId = "SI004",
+                            ProductId = "P004",
+                            ProductName = "Diamond Ring NE-DIA041-24K",
+                            StallId = "ST01",
+                            quantity = 30
                         },
                         new
                         {
-                            StallItemId = "b80dca2f-660e-402d-ba9e-2e8c995a1be4",
-                            ProductId = "Some Product Id",
-                            ProductName = "Some Product Name",
-                            quantity = 0
+                            StallItemId = "SI005",
+                            ProductId = "P005",
+                            ProductName = "Ruby Bracelet NE-RUB005-10K",
+                            StallId = "ST01",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI006",
+                            ProductId = "P006",
+                            ProductName = "Diamond Necklace NE-EMA046-24K",
+                            StallId = "ST01",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI007",
+                            ProductId = "P007",
+                            ProductName = "Sapphire Ring NE-SAP013-24K",
+                            StallId = "ST01",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI008",
+                            ProductId = "P008",
+                            ProductName = "Emerald Necklace NE-EME034-14K",
+                            StallId = "ST01",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI009",
+                            ProductId = "P009",
+                            ProductName = "Diamond Earrings NE-DIA043-24K",
+                            StallId = "ST01",
+                            quantity = 18
+                        },
+                        new
+                        {
+                            StallItemId = "SI0010",
+                            ProductId = "P010",
+                            ProductName = "Ruby Ring NE-RUB003-10K",
+                            StallId = "ST01",
+                            quantity = 15
+                        },
+                        new
+                        {
+                            StallItemId = "SI011",
+                            ProductId = "P100",
+                            ProductName = "Mozambique Ruby Earrings",
+                            StallId = "ST01",
+                            quantity = 6
+                        },
+                        new
+                        {
+                            StallItemId = "SI012",
+                            ProductId = "P011",
+                            ProductName = "Sapphire Bracelet NE-SAP014-18K",
+                            StallId = "ST01",
+                            quantity = 22
+                        },
+                        new
+                        {
+                            StallItemId = "SI013",
+                            ProductId = "P012",
+                            ProductName = "Emerald Necklace NE-EME031-24K",
+                            StallId = "ST01",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI014",
+                            ProductId = "P013",
+                            ProductName = "Ruby Earrings NE-RUB004-14K",
+                            StallId = "ST01",
+                            quantity = 14
+                        },
+                        new
+                        {
+                            StallItemId = "SI015",
+                            ProductId = "P014",
+                            ProductName = "Sapphire Necklace NE-SAP015-18K",
+                            StallId = "ST01",
+                            quantity = 8
+                        },
+                        new
+                        {
+                            StallItemId = "SI016",
+                            ProductId = "P015",
+                            ProductName = "Diamond Necklace NE-DIA044-24K",
+                            StallId = "ST01",
+                            quantity = 16
+                        },
+                        new
+                        {
+                            StallItemId = "SI017",
+                            ProductId = "P016",
+                            ProductName = "Emerald Bracelet NE-EME035-10K",
+                            StallId = "ST01",
+                            quantity = 18
+                        },
+                        new
+                        {
+                            StallItemId = "SI018",
+                            ProductId = "P017",
+                            ProductName = "Diamond Bracelet NE-DIA045-24K",
+                            StallId = "ST01",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI019",
+                            ProductId = "P018",
+                            ProductName = "Emerald Ring NE-EME032-18K",
+                            StallId = "ST01",
+                            quantity = 15
+                        },
+                        new
+                        {
+                            StallItemId = "SI020",
+                            ProductId = "P019",
+                            ProductName = "Ruby Necklace NE-RUB002-14K",
+                            StallId = "ST01",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI021",
+                            ProductId = "P020",
+                            ProductName = "Sapphire Earrings NE-SAP011-10K",
+                            StallId = "ST01",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI022",
+                            ProductId = "P021",
+                            ProductName = "Diamond Earrings NE-EMA041-24K",
+                            StallId = "ST01",
+                            quantity = 18
+                        },
+                        new
+                        {
+                            StallItemId = "SI023",
+                            ProductId = "P022",
+                            ProductName = "Pear Shaped Diamond Earrings",
+                            StallId = "ST01",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI024",
+                            ProductId = "P023",
+                            ProductName = "Russian Emerald Ring",
+                            StallId = "ST01",
+                            quantity = 15
+                        },
+                        new
+                        {
+                            StallItemId = "SI025",
+                            ProductId = "P024",
+                            ProductName = "Natural Ceylon Sapphire Earrings",
+                            StallId = "ST01",
+                            quantity = 16
+                        },
+                        new
+                        {
+                            StallItemId = "SI026",
+                            ProductId = "P025",
+                            ProductName = "Princess Cut Diamond Bracelet",
+                            StallId = "ST02",
+                            quantity = 14
+                        },
+                        new
+                        {
+                            StallItemId = "SI027",
+                            ProductId = "P026",
+                            ProductName = "Radiant Cut Diamond Earrings",
+                            StallId = "ST02",
+                            quantity = 16
+                        },
+                        new
+                        {
+                            StallItemId = "SI028",
+                            ProductId = "P027",
+                            ProductName = "Colombian Emerald Earrings",
+                            StallId = "ST02",
+                            quantity = 13
+                        },
+                        new
+                        {
+                            StallItemId = "SI029",
+                            ProductId = "P028",
+                            ProductName = "Padparadscha Sapphire Ring",
+                            StallId = "ST02",
+                            quantity = 7
+                        },
+                        new
+                        {
+                            StallItemId = "SI030",
+                            ProductId = "P029",
+                            ProductName = "Garnet Cabochon Necklace",
+                            StallId = "ST02",
+                            quantity = 14
+                        },
+                        new
+                        {
+                            StallItemId = "SI031",
+                            ProductId = "P030",
+                            ProductName = "Brazilian Emerald Necklace",
+                            StallId = "ST02",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI032",
+                            ProductId = "P031",
+                            ProductName = "Synthetic Emerald Bracelet",
+                            StallId = "ST02",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI033",
+                            ProductId = "P032",
+                            ProductName = "Pear Shaped Diamond Ring",
+                            StallId = "ST02",
+                            quantity = 22
+                        },
+                        new
+                        {
+                            StallItemId = "SI034",
+                            ProductId = "P033",
+                            ProductName = "Brazilian Emerald Ring",
+                            StallId = "ST02",
+                            quantity = 21
+                        },
+                        new
+                        {
+                            StallItemId = "SI035",
+                            ProductId = "P034",
+                            ProductName = "Radiant Cut Diamond Bracelet",
+                            StallId = "ST02",
+                            quantity = 8
+                        },
+                        new
+                        {
+                            StallItemId = "SI036",
+                            ProductId = "P035",
+                            ProductName = "Oval Diamond Necklace",
+                            StallId = "ST02",
+                            quantity = 16
+                        },
+                        new
+                        {
+                            StallItemId = "SI037",
+                            ProductId = "P036",
+                            ProductName = "Brazilian Emerald Bracelet",
+                            StallId = "ST02",
+                            quantity = 18
+                        },
+                        new
+                        {
+                            StallItemId = "SI038",
+                            ProductId = "P037",
+                            ProductName = "Moonstone Cabochon Bracelet",
+                            StallId = "ST02",
+                            quantity = 13
+                        },
+                        new
+                        {
+                            StallItemId = "SI039",
+                            ProductId = "P038",
+                            ProductName = "Thai Sapphire Necklace",
+                            StallId = "ST02",
+                            quantity = 23
+                        },
+                        new
+                        {
+                            StallItemId = "SI040",
+                            ProductId = "P039",
+                            ProductName = "Heated Natural Ruby Ring",
+                            StallId = "ST02",
+                            quantity = 24
+                        },
+                        new
+                        {
+                            StallItemId = "SI041",
+                            ProductId = "P040",
+                            ProductName = "Natural Ceylon Sapphire Bracelet",
+                            StallId = "ST02",
+                            quantity = 18
+                        },
+                        new
+                        {
+                            StallItemId = "SI042",
+                            ProductId = "P041",
+                            ProductName = "Opal Cabochon Bracelet",
+                            StallId = "ST02",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI043",
+                            ProductId = "P042",
+                            ProductName = "Brazilian Emerald Earrings",
+                            StallId = "ST02",
+                            quantity = 21
+                        },
+                        new
+                        {
+                            StallItemId = "SI044",
+                            ProductId = "P043",
+                            ProductName = "Natural Ceylon Sapphire Bracelet",
+                            StallId = "ST02",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI045",
+                            ProductId = "P044",
+                            ProductName = "Round Brilliant Diamond Necklace",
+                            StallId = "ST02",
+                            quantity = 11
+                        },
+                        new
+                        {
+                            StallItemId = "SI046",
+                            ProductId = "P045",
+                            ProductName = "Colombian Emerald Ring",
+                            StallId = "ST02",
+                            quantity = 7
+                        },
+                        new
+                        {
+                            StallItemId = "SI047",
+                            ProductId = "P046",
+                            ProductName = "Garnet Cabochon Ring",
+                            StallId = "ST02",
+                            quantity = 6
+                        },
+                        new
+                        {
+                            StallItemId = "SI048",
+                            ProductId = "P047",
+                            ProductName = "Madagascar Sapphire Bracelet",
+                            StallId = "ST02",
+                            quantity = 18
+                        },
+                        new
+                        {
+                            StallItemId = "SI049",
+                            ProductId = "P048",
+                            ProductName = "India Ruby Necklace",
+                            StallId = "ST02",
+                            quantity = 17
+                        },
+                        new
+                        {
+                            StallItemId = "SI050",
+                            ProductId = "P049",
+                            ProductName = "Ethiopian Sapphire Bracelet",
+                            StallId = "ST02",
+                            quantity = 9
+                        },
+                        new
+                        {
+                            StallItemId = "SI051",
+                            ProductId = "P050",
+                            ProductName = "Australian Sapphire Ring",
+                            StallId = "ST03",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI052",
+                            ProductId = "P051",
+                            ProductName = "Heart Shaped Diamond Necklace",
+                            StallId = "ST03",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI053",
+                            ProductId = "P052",
+                            ProductName = "Round Brilliant Diamond Earrings",
+                            StallId = "ST03",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI054",
+                            ProductId = "P053",
+                            ProductName = "Emerald Cut Diamond Ring",
+                            StallId = "ST03",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI055",
+                            ProductId = "P054",
+                            ProductName = "Moonstone Cabochon Earrings",
+                            StallId = "ST03",
+                            quantity = 8
+                        },
+                        new
+                        {
+                            StallItemId = "SI056",
+                            ProductId = "P055",
+                            ProductName = "Montana Sapphire Necklace",
+                            StallId = "ST03",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI057",
+                            ProductId = "P056",
+                            ProductName = "Oval Diamond Ring",
+                            StallId = "ST03",
+                            quantity = 11
+                        },
+                        new
+                        {
+                            StallItemId = "SI058",
+                            ProductId = "P057",
+                            ProductName = "Ethiopian Emerald Bracelet",
+                            StallId = "ST03",
+                            quantity = 22
+                        },
+                        new
+                        {
+                            StallItemId = "SI059",
+                            ProductId = "P058",
+                            ProductName = "Australian Sapphire Earrings",
+                            StallId = "ST03",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI060",
+                            ProductId = "P059",
+                            ProductName = "Labradorite Cabochon Bracelet",
+                            StallId = "ST03",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI061",
+                            ProductId = "P060",
+                            ProductName = "Pear Shaped Diamond Necklace",
+                            StallId = "ST03",
+                            quantity = 11
+                        },
+                        new
+                        {
+                            StallItemId = "SI062",
+                            ProductId = "P061",
+                            ProductName = "Natural Mozambique Ruby Ring",
+                            StallId = "ST03",
+                            quantity = 23
+                        },
+                        new
+                        {
+                            StallItemId = "SI063",
+                            ProductId = "P062",
+                            ProductName = "Colombian Emerald Necklace",
+                            StallId = "ST03",
+                            quantity = 22
+                        },
+                        new
+                        {
+                            StallItemId = "SI064",
+                            ProductId = "P063",
+                            ProductName = "Colombian Emerald Bracelet",
+                            StallId = "ST03",
+                            quantity = 24
+                        },
+                        new
+                        {
+                            StallItemId = "SI065",
+                            ProductId = "P064",
+                            ProductName = "Russian Emerald Necklace",
+                            StallId = "ST03",
+                            quantity = 14
+                        },
+                        new
+                        {
+                            StallItemId = "SI066",
+                            ProductId = "P065",
+                            ProductName = "Opal Cabochon Bracelet",
+                            StallId = "ST03",
+                            quantity = 14
+                        },
+                        new
+                        {
+                            StallItemId = "SI067",
+                            ProductId = "P066",
+                            ProductName = "Cat's Eye Chrysoberyl Cabochon Earrings",
+                            StallId = "ST03",
+                            quantity = 15
+                        },
+                        new
+                        {
+                            StallItemId = "SI068",
+                            ProductId = "P067",
+                            ProductName = "Lapis Lazuli Cabochon Ring",
+                            StallId = "ST03",
+                            quantity = 5
+                        },
+                        new
+                        {
+                            StallItemId = "SI069",
+                            ProductId = "P068",
+                            ProductName = "Thai Sapphire Earrings",
+                            StallId = "ST03",
+                            quantity = 23
+                        },
+                        new
+                        {
+                            StallItemId = "SI070",
+                            ProductId = "P069",
+                            ProductName = "Colombian Emerald Ring",
+                            StallId = "ST03",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI071",
+                            ProductId = "P070",
+                            ProductName = "Natural Ceylon Sapphire Bracelet",
+                            StallId = "ST03",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI072",
+                            ProductId = "P071",
+                            ProductName = "Lapis Lazuli Cabochon Earrings",
+                            StallId = "ST03",
+                            quantity = 17
+                        },
+                        new
+                        {
+                            StallItemId = "SI073",
+                            ProductId = "P072",
+                            ProductName = "Natural Mozambique Ruby Necklace",
+                            StallId = "ST03",
+                            quantity = 13
+                        },
+                        new
+                        {
+                            StallItemId = "SI074",
+                            ProductId = "P073",
+                            ProductName = "Afghan Emerald Necklace",
+                            StallId = "ST03",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI075",
+                            ProductId = "P074",
+                            ProductName = "Colombian Emerald Ring",
+                            StallId = "ST03",
+                            quantity = 5
+                        },
+                        new
+                        {
+                            StallItemId = "SI076",
+                            ProductId = "P075",
+                            ProductName = "Jade Cabochon Earrings",
+                            StallId = "ST04",
+                            quantity = 7
+                        },
+                        new
+                        {
+                            StallItemId = "SI077",
+                            ProductId = "P076",
+                            ProductName = "Jade Cabochon Necklace",
+                            StallId = "ST04",
+                            quantity = 13
+                        },
+                        new
+                        {
+                            StallItemId = "SI078",
+                            ProductId = "P077",
+                            ProductName = "Heated Natural Ruby Necklace",
+                            StallId = "ST04",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI079",
+                            ProductId = "P078",
+                            ProductName = "Heated Natural Sapphire Necklace",
+                            StallId = "ST04",
+                            quantity = 12
+                        },
+                        new
+                        {
+                            StallItemId = "SI080",
+                            ProductId = "P079",
+                            ProductName = "Ethiopian Sapphire Necklace",
+                            StallId = "ST04",
+                            quantity = 13
+                        },
+                        new
+                        {
+                            StallItemId = "SI081",
+                            ProductId = "P080",
+                            ProductName = "Mozambique Ruby Bracelet",
+                            StallId = "ST04",
+                            quantity = 9
+                        },
+                        new
+                        {
+                            StallItemId = "SI082",
+                            ProductId = "P081",
+                            ProductName = "Colombian Emerald Bracelet",
+                            StallId = "ST04",
+                            quantity = 14
+                        },
+                        new
+                        {
+                            StallItemId = "SI083",
+                            ProductId = "P082",
+                            ProductName = "Mozambique Ruby (Heated) Bracelet",
+                            StallId = "ST04",
+                            quantity = 17
+                        },
+                        new
+                        {
+                            StallItemId = "SI084",
+                            ProductId = "P083",
+                            ProductName = "Australian Sapphire Necklace",
+                            StallId = "ST04",
+                            quantity = 22
+                        },
+                        new
+                        {
+                            StallItemId = "SI085",
+                            ProductId = "P084",
+                            ProductName = "Moonstone Cabochon Ring",
+                            StallId = "ST04",
+                            quantity = 17
+                        },
+                        new
+                        {
+                            StallItemId = "SI086",
+                            ProductId = "P085",
+                            ProductName = "Brazilian Emerald Necklace",
+                            StallId = "ST04",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI087",
+                            ProductId = "P086",
+                            ProductName = "Zambian Emerald Ring",
+                            StallId = "ST04",
+                            quantity = 8
+                        },
+                        new
+                        {
+                            StallItemId = "SI088",
+                            ProductId = "P087",
+                            ProductName = "Russian Emerald Ring",
+                            StallId = "ST04",
+                            quantity = 24
+                        },
+                        new
+                        {
+                            StallItemId = "SI089",
+                            ProductId = "P088",
+                            ProductName = "Star Sapphire Cabochon Necklace",
+                            StallId = "ST04",
+                            quantity = 16
+                        },
+                        new
+                        {
+                            StallItemId = "SI090",
+                            ProductId = "P089",
+                            ProductName = "Mozambique Ruby Necklace",
+                            StallId = "ST04",
+                            quantity = 11
+                        },
+                        new
+                        {
+                            StallItemId = "SI091",
+                            ProductId = "P090",
+                            ProductName = "Asscher Cut Diamond Necklace",
+                            StallId = "ST04",
+                            quantity = 24
+                        },
+                        new
+                        {
+                            StallItemId = "SI092",
+                            ProductId = "P091",
+                            ProductName = "Opal Cabochon Bracelet",
+                            StallId = "ST04",
+                            quantity = 7
+                        },
+                        new
+                        {
+                            StallItemId = "SI093",
+                            ProductId = "P092",
+                            ProductName = "Mozambique Ruby Ring",
+                            StallId = "ST04",
+                            quantity = 9
+                        },
+                        new
+                        {
+                            StallItemId = "SI094",
+                            ProductId = "P093",
+                            ProductName = "Ethiopian Emerald Bracelet",
+                            StallId = "ST04",
+                            quantity = 5
+                        },
+                        new
+                        {
+                            StallItemId = "SI095",
+                            ProductId = "P094",
+                            ProductName = "Oval Diamond Bracelet",
+                            StallId = "ST04",
+                            quantity = 10
+                        },
+                        new
+                        {
+                            StallItemId = "SI096",
+                            ProductId = "P095",
+                            ProductName = "Garnet Cabochon Ring",
+                            StallId = "ST04",
+                            quantity = 20
+                        },
+                        new
+                        {
+                            StallItemId = "SI097",
+                            ProductId = "P096",
+                            ProductName = "Moonstone Cabochon Bracelet",
+                            StallId = "ST04",
+                            quantity = 24
+                        },
+                        new
+                        {
+                            StallItemId = "SI098",
+                            ProductId = "P097",
+                            ProductName = "Garnet Cabochon Necklace",
+                            StallId = "ST04",
+                            quantity = 7
+                        },
+                        new
+                        {
+                            StallItemId = "SI099",
+                            ProductId = "P098",
+                            ProductName = "Colombian Emerald Bracelet",
+                            StallId = "ST04",
+                            quantity = 22
+                        },
+                        new
+                        {
+                            StallItemId = "SI100",
+                            ProductId = "P099",
+                            ProductName = "Lapis Lazuli Cabochon Ring",
+                            StallId = "ST04",
+                            quantity = 22
                         });
                 });
 
@@ -3868,88 +5467,88 @@ namespace JewelSystemBE.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("user", (string)null);
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
-                            UserId = "US1",
+                            UserId = "US01",
                             Email = "liam@gmail.com",
                             Fullname = "Liam Williams",
-                            Password = "$2a$11$gtAFqvyydQVggc26AjHS2Oa7N80nQZroy3SSqBkq7v5JUYWUtvB/y",
+                            Password = "$2a$11$v/XJ4Ps3lsiSAlZpi.T4wuD0DxZ3cHLn0cdQOPNlyFtqlMGw8k1T2",
                             Role = "Admin",
                             Username = "user1"
                         },
                         new
                         {
-                            UserId = "US2",
+                            UserId = "US02",
                             Email = "olivia@gmail.com",
                             Fullname = "Olivia Miller",
-                            Password = "$2a$11$gKIwqkzCZilPrz6YJNM3nOztsWilCCbtDeTKRpt.6RoQNPr/djuk.",
-                            Role = "Manager",
+                            Password = "$2a$11$mRRvXKGSTRm24n9UAG0lEusg8SAkhDBF1dsp.0eyPPWIk..7NVSLC",
+                            Role = "Admin",
                             Username = "user2"
                         },
                         new
                         {
-                            UserId = "US3",
+                            UserId = "US03",
                             Email = "james@gmail.com",
                             Fullname = "James Martinez",
-                            Password = "$2a$11$HIksj/XPphQt6ToqjrAtNOH9qkNk1DRO0vXhsORlZ9F5q8vThYq6W",
-                            Role = "Sale",
+                            Password = "$2a$11$k9WEU0g9.XsXUXO1Rk4EqeafEneiU.qSqv1kJ4YmH4KHrFk.GsUO2",
+                            Role = "Manager",
                             Username = "user3"
                         },
                         new
                         {
-                            UserId = "US4",
+                            UserId = "US04",
                             Email = "matao@gmail.com",
                             Fullname = "Mateo Martinez",
-                            Password = "$2a$11$z.1DJz0YV7qCc1GaJvnL7OFsZDpoDM95fdHkDnhG7AKqQ/QSm5CXC",
-                            Role = "Sale",
+                            Password = "$2a$11$GVN2QejAKB6rhB/Aob0pKu9G9GBX2FmLWCgJcoSThcuM4YJV3dZoC",
+                            Role = "Manager",
                             Username = "user4"
                         },
                         new
                         {
-                            UserId = "US5",
+                            UserId = "US05",
                             Email = "theodore@gmail.com",
                             Fullname = "Theodore Garcia",
-                            Password = "$2a$11$UgeVUlCr4oYGh2w9dMqovuMGuGgTh4paQo8c4F/2TuyH2il369jb2",
-                            Role = "Cashier",
+                            Password = "$2a$11$FvfFLBB1/XhfsJk0JclVuutxpPRdr3Xn5ebqQV3jBPHZcULy28Fw6",
+                            Role = "Manager",
                             Username = "user5"
                         },
                         new
                         {
-                            UserId = "US6",
+                            UserId = "US06",
                             Email = "isabel@gmail.com",
                             Fullname = "Isabel Rodriguez",
-                            Password = "$2a$11$ylxK9Mh.7sA6ZDCTLaacEeteyuwehRXii//D8HdP1yonr7MhzePrO",
-                            Role = "Sale",
+                            Password = "$2a$11$kQA1EZRws.bW88KVADHADeAaEKR6FfJbF.dv5dvEHnLILleNQ51xC",
+                            Role = "Manager",
                             Username = "user6"
                         },
                         new
                         {
-                            UserId = "US7",
+                            UserId = "US07",
                             Email = "luna@gmail.com",
                             Fullname = "Luna Taylor",
-                            Password = "$2a$11$pkniwvNiwniQWmzI7ELB3ODXMi6o6jnzZSnzEqqHXj9cOc4Oe4hJO",
-                            Role = "Sale",
+                            Password = "$2a$11$70Ml2QKZ2zo7Ki4KBzVHEuzTCktXYt1enHOcTi.EEiiMofUytRri2",
+                            Role = "Cashier",
                             Username = "user7"
                         },
                         new
                         {
-                            UserId = "US8",
+                            UserId = "US08",
                             Email = "emma@gmail.com",
                             Fullname = "Emma Young",
-                            Password = "$2a$11$1XMMoCGj3HxSqA3Q7UThGeDWYBl2ePjz5ebDMIUgXnoVb8J6FY9Q6",
+                            Password = "$2a$11$n/fpCThW5vcCWDp.nnSo7egzr4FBfFuEDBdigpw3ByFsTuyczrBcK",
                             Role = "Sale",
                             Username = "user8"
                         },
                         new
                         {
-                            UserId = "US9",
+                            UserId = "US09",
                             Email = "ava@gmail.com",
                             Fullname = "Ava Davis",
-                            Password = "$2a$11$EAgYVzsmJYamkZ7IiNE7ceTl128CmHmD/jXcvSva2k/rrNvsrZBq2",
-                            Role = "Cashier",
+                            Password = "$2a$11$Ilx9TloXL4Ezv5VY.PBAEuo0lbBPmBjTE/z6O5vrTLA660fw9AL6y",
+                            Role = "Sale",
                             Username = "user9"
                         },
                         new
@@ -3957,8 +5556,8 @@ namespace JewelSystemBE.Migrations
                             UserId = "US10",
                             Email = "sophia@gmail.com",
                             Fullname = "Sophia Wilson",
-                            Password = "$2a$11$21Ce0lfaRj028fHC3Rpmeuz7wHzYTjfrzN15GBr.rL87wZrIEhZyO",
-                            Role = "Cashier",
+                            Password = "$2a$11$mFqi2QV8Hgk9nGZO6nuJBOdjKhGmzxp618K/84vTrU5rXcNAdrvCa",
+                            Role = "Sale",
                             Username = "user10"
                         },
                         new
@@ -3966,7 +5565,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US11",
                             Email = "charlotte@gmail.com",
                             Fullname = "Charlotte Brown",
-                            Password = "$2a$11$CP7sT0khBU43kwmXDm4hQeF.F9M0W4aPzVcmgJPwrbeMCSWds4x6C",
+                            Password = "$2a$11$JrVUBZ/pG4RROMjvVULcPOBGZr7SH0F.PbKS8ibKcZMRFQy96WJNm",
                             Role = "Cashier",
                             Username = "user11"
                         },
@@ -3975,8 +5574,8 @@ namespace JewelSystemBE.Migrations
                             UserId = "US12",
                             Email = "amelia@gmail.com",
                             Fullname = "Amelia Jones",
-                            Password = "$2a$11$.ff.0gvoQKwLVv4IvlcYBu4zOVqO4W2xUGBAywjUsP2wj8ujYuGbK",
-                            Role = "Cashier",
+                            Password = "$2a$11$OxRUJphbBmTu5ReqheabiOqnR9uGk9ebrIC2Qsb90/XI7PQwkWdBC",
+                            Role = "Sale",
                             Username = "user12"
                         },
                         new
@@ -3984,7 +5583,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US13",
                             Email = "mia@gmail.com",
                             Fullname = "Mia Anderson",
-                            Password = "$2a$11$WRqDI8tpQ1Ng7Ah0yEbUWeL5Qd/u9GAM8Nw8nvELKyOfKgdo8HzSS",
+                            Password = "$2a$11$206MXQA4dLfS/SMJNNUOOuckCOl6gFteqbFcefIuy/JPlKuv.YiBi",
                             Role = "Sale",
                             Username = "user13"
                         },
@@ -3993,7 +5592,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US14",
                             Email = "harper@gmail.com",
                             Fullname = "Harper Thomas",
-                            Password = "$2a$11$bkXuOw79vJv2t2kGMzbh0OazQGdu70hRQdy9vQEp6i8vzlw8/DC96",
+                            Password = "$2a$11$OdcBW5/rBlJfC1eF.z6FYOE/z16dGIOtQSB7gQJ1tIeilB9rbJEpe",
                             Role = "Sale",
                             Username = "user14"
                         },
@@ -4002,8 +5601,8 @@ namespace JewelSystemBE.Migrations
                             UserId = "US15",
                             Email = "evelyn@gmail.com",
                             Fullname = "Evelyn White",
-                            Password = "$2a$11$hh0g8HSJ5QCk4X/HpZ/iP.9EZtpAincSs6at3B0eMVToVdd/jYxF.",
-                            Role = "Sale",
+                            Password = "$2a$11$l./UHlY1R6xw1GkqQiLcaOm/ptMwqoMIqQopAZVvwcg0j0M/zQfF2",
+                            Role = "Cashier",
                             Username = "user15"
                         },
                         new
@@ -4011,7 +5610,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US16",
                             Email = "abigail@gmail.com",
                             Fullname = "Abigail Harris",
-                            Password = "$2a$11$XOHyTWJDVXuqU9agzmiwHurvj/k5kfz3qvwocWj8527txVkY32YrG",
+                            Password = "$2a$11$yBpSsj81M/G6qnFKkHdXGOdLO4W1.VaPiOeVKFQrfVitoNhRQ7F1S",
                             Role = "Sale",
                             Username = "user16"
                         },
@@ -4020,7 +5619,7 @@ namespace JewelSystemBE.Migrations
                             UserId = "US17",
                             Email = "ella@gmail.com",
                             Fullname = "Ella Clark",
-                            Password = "$2a$11$UPhWSqajA/BXwf1Daizwhebr5OjoDmRwBjtLmS6gV8JGk9YxkFX1G",
+                            Password = "$2a$11$udU92eNjDgPj2tMKG//fWeXBtpOuxYM/xcLZGfKzFQ/ylcItCi/v6",
                             Role = "Sale",
                             Username = "user17"
                         },
@@ -4029,39 +5628,70 @@ namespace JewelSystemBE.Migrations
                             UserId = "US18",
                             Email = "avery@gmail.com",
                             Fullname = "Avery Lewis",
-                            Password = "$2a$11$602Ktkr1S4.dM7hzQ97lce62pcQvif6f1J./EQaaeEkRVZy/nfwjW",
+                            Password = "$2a$11$Tnd6RUiuKdDIbLRkdApPy.FYuPynMaU9fk0Co1MQiZc26WkA5Y12.",
                             Role = "Sale",
                             Username = "user18"
+                        },
+                        new
+                        {
+                            UserId = "US19",
+                            Email = "julius@gmail.com",
+                            Fullname = "Julius Caesar",
+                            Password = "$2a$11$yiHz5LhQxJqbaA1kVDCsP.kaIezY095Kvsm6l2CpfS76QNk52r71i",
+                            Role = "Cashier",
+                            Username = "user19"
+                        },
+                        new
+                        {
+                            UserId = "US20",
+                            Email = "charles@gmail.com",
+                            Fullname = "Charles De Quin",
+                            Password = "$2a$11$fzIF8iOI8LVpxZvAHdf8CuSKNIhHqbgNWt8lbpKYWBzFV8Wr/CiC2",
+                            Role = "Sale",
+                            Username = "user20"
+                        },
+                        new
+                        {
+                            UserId = "US21",
+                            Email = "sylvanas@gmail.com",
+                            Fullname = "Victoria Sylvanas",
+                            Password = "$2a$11$MhnDvErPqr4sc1BXvieut.lW5S0MetMlHebkYJKCJaO6nNepmAp3a",
+                            Role = "Sale",
+                            Username = "user21"
+                        },
+                        new
+                        {
+                            UserId = "US22",
+                            Email = "albert@gmail.com",
+                            Fullname = "Albert Brown",
+                            Password = "$2a$11$1/uKam5TBrvIvfqKhTOL2eChKZd0lvca0BHOCCO8c7jhvkO6tziBa",
+                            Role = "Sale",
+                            Username = "user22"
                         });
                 });
 
             modelBuilder.Entity("JewelSystemBE.Model.Warranty", b =>
                 {
                     b.Property<string>("WarrantyId")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("warranty_id");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("ExpireDate")
-                        .HasColumnType("date")
-                        .HasColumnName("expire_date");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ProductId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("product_id");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("product_name");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("date")
-                        .HasColumnName("start_date");
+                        .HasColumnType("datetime2");
 
                     b.HasKey("WarrantyId");
 
-                    b.ToTable("warranty", (string)null);
+                    b.ToTable("Warranties");
 
                     b.HasData(
                         new

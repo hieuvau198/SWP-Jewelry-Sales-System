@@ -167,10 +167,34 @@
                                         </button>
                                     </div>
                                 }
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="card">
+                                            <div class="card-body text-left">
+                                                <a asp-page="./InvoiceDetail" class="btn btn-primary btn-rounded btn-fw justify-content-center d-inline-flex align-items-center">
+                                                    <i class="mdi mdi-backburger"></i> Back
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="card">
+                                            <div class="card-body text-right">
+                                                @if(Model.ViewDetailInvoiceObject.InvoiceStatus.Equals("Complete"))
+                                                {
+                                                    <form method="post" asp-page-handler="PrintInvoice">
+                                                        <input type="hidden" name="invoiceId" value="@Model.ViewDetailInvoiceObject.InvoiceId" />
+                                                        <button type="submit" class="btn btn-primary btn-rounded btn-fw justify-content-center d-inline-flex align-items-center">
+                                                            Print Invoice
+                                                        </button>
+                                                    </form>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div>
-                                    <a asp-page="./InvoiceDetail" class="btn btn-primary btn-rounded btn-fw justify-content-center d-inline-flex align-items-center">
-                                        <i class="mdi mdi-backburger"></i> Back
-                                    </a>
+                                    
                                 </div>
                             </div>
 

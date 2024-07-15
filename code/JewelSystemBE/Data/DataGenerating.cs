@@ -16,8 +16,8 @@ namespace JewelSystemBE.Data
 
         public async Task<List<Product>> GetNewProducts()
         {
-            
-            
+
+
             List<Product> newproducts = new List<Product>();
 
             List<Product> products = _jewelDbContext.Products.ToList();
@@ -59,7 +59,7 @@ namespace JewelSystemBE.Data
             double laborCost = 0;
             DateTime dateTime = DateTime.Now;
 
-            for (int i = 0; i < 40; i++)
+            for (int i = 0; i < 39; i++)
             {
                 Random random = new Random();
 
@@ -75,13 +75,13 @@ namespace JewelSystemBE.Data
                 maxId++;
 
                 // Set productCode
-                while(productCodes.Find(x => x == productCode) != null)
+                while (productCodes.Find(x => x == productCode) != null)
                 {
                     string productCode1 = random.Next(100000, 999999).ToString();
                     string productCode2 = random.Next(100000, 999999).ToString();
                     productCode = $"{productCode1}{productCode2}";
                 }
-                    productCodes.Add(productCode);
+                productCodes.Add(productCode);
 
                 // Set productImage
                 productImage = $"{productId}.png";
@@ -153,7 +153,7 @@ namespace JewelSystemBE.Data
 
                 // Add new product to results
                 newproducts.Add(product);
-                
+
             }
 
             return newproducts;
@@ -190,6 +190,197 @@ namespace JewelSystemBE.Data
             }
 
             return productsString;
+        }
+
+        public async Task<List<StallItem>> GetNewStallItems()
+        {
+            List<StallItem> newStallItems = new List<StallItem>();
+
+            List<Product> products = _jewelDbContext.Products.ToList();
+
+            int maxId = 0;
+            string stallItemId = "";
+            string stallId = "";
+            string productId = "";
+            string productName = "";
+            int quantity = 0;
+
+            for (int i = 0; i < 100; i++)
+            {
+                // Set stallItemId
+
+                if (maxId < 10)
+                {
+                    stallItemId = $"SI00{maxId + 1}";
+                }
+                else if (maxId < 100)
+                {
+                    stallItemId = $"SI0{maxId + 1}";
+                }
+                else
+                {
+                    stallItemId = $"SI{maxId + 1}";
+                }
+                maxId++;
+
+                // Set stallId
+
+                if (maxId <= 25)
+                {
+                    stallId = "ST01";
+                }
+                else if (maxId <= 50)
+                {
+                    stallId = "ST02";
+                }
+                else if (maxId <= 75)
+                {
+                    stallId = "ST03";
+                }
+                else
+                {
+                    stallId = "ST04";
+                }
+
+                // Set productId, productName, quantity
+
+                Product product = products[i];
+
+                productId = product.ProductId;
+                productName = product.ProductName;
+                quantity = product.ProductQuantity;
+
+                // Add stallItem to list
+
+                StallItem stallItem = new StallItem
+                {
+                    StallItemId = stallItemId,
+                    StallId = stallId,
+                    ProductId = productId,
+                    ProductName = productName,
+                    quantity = quantity
+                };
+                newStallItems.Add(stallItem);
+            }
+
+            return newStallItems;
+        }
+
+        public async Task<string> GetNewStallItemsToString()
+        {
+            string stallItemsString = "";
+
+            List<StallItem> stallItems = await GetNewStallItems();
+
+            foreach (StallItem stallItem in stallItems)
+            {
+                stallItemsString += "new StallItem\n";
+                stallItemsString += "{\n";
+                stallItemsString += $"    StallItemId = \"{stallItem.StallItemId}\",\n";
+                stallItemsString += $"    StallId = \"{stallItem.StallId}\",\n";
+                stallItemsString += $"    ProductId = \"{stallItem.ProductId}\",\n";
+                stallItemsString += $"    ProductName = \"{stallItem.ProductName}\",\n";
+                stallItemsString += $"    quantity = {stallItem.quantity},\n";
+                stallItemsString += "},";
+            }
+
+            return stallItemsString;
+        }
+
+        public async Task<List<StallEmployee>> GetNewStallEmployees()
+        {
+            List<StallEmployee> newStallEmployees = new List<StallEmployee>();
+
+            List<User> users = _jewelDbContext.Users.OrderBy(x => x.UserId).ToList();
+
+            int maxId = 6;
+            string stallEmployeeId = "";
+            string stallId = "";
+            string stallName = "";
+            string employeeId = "";
+            string employeeFullname = "";
+            string role = "";
+
+            for (int i = 6; i < 22; i++)
+            {
+                // Set stallEmployeeId
+                if(maxId < 10)
+                {
+                    stallEmployeeId = $"SE00{maxId + 1}";
+                }
+                else
+                {
+                    stallEmployeeId = $"SE0{maxId + 1}";
+                }
+                
+
+                // Set stallId, stallName
+                if (maxId < 10)
+                {
+                    stallId = "ST01";
+                    stallName = "Sky Treasure";
+                }
+                else if(maxId < 14)
+                {
+                    stallId = "ST02";
+                    stallName = "Delights";
+                }
+                else if (maxId < 18)
+                {
+                    stallId = "ST03";
+                    stallName = "The Vintage";
+                }
+                else
+                {
+                    stallId = "ST04";
+                    stallName = "The Charm";
+                }
+
+                maxId++;
+
+                // Set employeeId, employeeFullname, role
+
+                User user = users[i];
+                employeeId = user.UserId;
+                employeeFullname = user.Fullname;
+                role = user.Role;
+
+                StallEmployee stallEmployee = new StallEmployee
+                {
+                    StallEmployeeId = stallEmployeeId,
+                    StallId = stallId,
+                    StallName = stallName,
+                    EmployeeId = employeeId,
+                    EmployeeFullname = employeeFullname,
+                    Role = role 
+                };
+
+                newStallEmployees.Add(stallEmployee);
+            }
+
+            return newStallEmployees;
+        }
+
+        public async Task<string> GetNewStallEmployeesToString()
+        {
+            string stallEmployeesString = "";
+
+            List<StallEmployee> stallEmployees = await GetNewStallEmployees();
+
+            foreach (StallEmployee stallEmployee in stallEmployees)
+            {
+                stallEmployeesString += "new StallEmployee\n";
+                stallEmployeesString += "{\n";
+                stallEmployeesString += $"    StallEmployeeId = \"{stallEmployee.StallEmployeeId}\",\n";
+                stallEmployeesString += $"    StallId = \"{stallEmployee.StallId}\",\n";
+                stallEmployeesString += $"    StallName = \"{stallEmployee.StallName}\",\n";
+                stallEmployeesString += $"    EmployeeId = \"{stallEmployee.EmployeeId}\",\n";
+                stallEmployeesString += $"    EmployeeFullname = \"{stallEmployee.EmployeeFullname}\",\n";
+                stallEmployeesString += $"    Role = \"{stallEmployee.Role}\",\n";
+                stallEmployeesString += "},";
+            }
+
+            return stallEmployeesString;
         }
     }
 }

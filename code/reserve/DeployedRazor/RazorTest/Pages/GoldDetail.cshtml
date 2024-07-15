@@ -25,7 +25,7 @@
                                                 <th>Buy (VND)</th>
                                                 <th>Sell (VND)</th>
                                                 <th>Unit</th>
-                                                <th>Update Time</th>
+                                                <th>Update Time (60s)</th>
 
                                             </tr>
                                         </thead>
@@ -34,8 +34,8 @@
                                             {
                                                 <tr>
                                                     <td><strong>@gold.GoldName</strong></td>
-                                                    <td>@String.Format("{0:N0}", gold.BuyPrice)</td>
-                                                    <td>@String.Format("{0:N0}", gold.SellPrice)</td>
+                                                    <td>@String.Format("{0:N0}", gold.BuyPrice) đ</td>
+                                                    <td>@String.Format("{0:N0}", gold.SellPrice) đ</td>
                                                     <td>@gold.Unit</td>
                                                     <td>@gold.Date</td>
                                                 </tr>
@@ -66,5 +66,13 @@
     <!-- partial -->
 </body>
 </html>
+
+<script>
+    // Refresh the page every 30 seconds
+    setTimeout(function () {
+        location.reload();
+    }, 15000); // 1000 milliseconds => 1 second
+</script>
+
 
 

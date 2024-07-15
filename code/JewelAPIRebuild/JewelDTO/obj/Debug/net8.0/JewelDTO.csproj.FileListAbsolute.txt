@@ -1,0 +1,12 @@
+D:\workspace\vs\rebuild\JewelDTO\bin\Debug\net8.0\JewelDTO.deps.json
+D:\workspace\vs\rebuild\JewelDTO\bin\Debug\net8.0\JewelDTO.dll
+D:\workspace\vs\rebuild\JewelDTO\bin\Debug\net8.0\JewelDTO.pdb
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.csproj.AssemblyReference.cache
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.AssemblyInfoInputs.cache
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.AssemblyInfo.cs
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.csproj.CoreCompileInputs.cache
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.dll
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\refint\JewelDTO.dll
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\JewelDTO.pdb
+D:\workspace\vs\rebuild\JewelDTO\obj\Debug\net8.0\ref\JewelDTO.dll

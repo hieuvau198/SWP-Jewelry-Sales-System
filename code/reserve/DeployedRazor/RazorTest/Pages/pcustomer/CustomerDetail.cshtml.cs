@@ -50,7 +50,7 @@ namespace RazorTest.Pages.pcustomer
             // get data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            var customers = await _apiService.GetAsync<List<Customer>>("https://hvjewel.azurewebsites.net/api/customer");
+            var customers = await _apiService.GetAsync<List<Customer>>("http://localhost:5071/api/customer");
 
 
             // Set search and filter parameters

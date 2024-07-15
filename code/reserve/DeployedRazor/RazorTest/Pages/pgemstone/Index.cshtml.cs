@@ -44,7 +44,7 @@ namespace RazorTest.Pages.pgemstone
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            var gems = await _apiService.GetAsync<List<Gem>>("https://hvjewel.azurewebsites.net/api/gem");
+            var gems = await _apiService.GetAsync<List<Gem>>("http://localhost:5071/api/gem");
             if(gems == null)
             {
                 return RedirectToPage("/Error");

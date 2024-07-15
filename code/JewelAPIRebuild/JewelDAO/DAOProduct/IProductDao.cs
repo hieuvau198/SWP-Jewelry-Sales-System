@@ -6,8 +6,10 @@ namespace JewelDAO.DAOProduct
     {
         List<Product> GetProducts();
         Product GetProduct(string productId);
-        bool AddProduct(Product product);
+        Product AddProduct(Product product);
         bool RemoveProduct(string productId);
         bool UpdateProduct(Product product);
+        List<Product> UpdatePrices(List<Product> products);
+        Product UpdatePrice(Product product);
     }
 }

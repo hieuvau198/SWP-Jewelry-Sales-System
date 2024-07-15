@@ -19,22 +19,22 @@ namespace RazorTest.Services
 
         public async Task<List<Discount>> GetDiscountsAsync()
         {
-            return await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+            return await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount");
         }
 
         public async Task<Discount> GetDiscountByIdAsync(string discountId)
         {
-            return await _apiService.GetAsync<Discount>($"https://hvjewel.azurewebsites.net/api/discount/{discountId}");
+            return await _apiService.GetAsync<Discount>($"http://localhost:5071/api/discount/{discountId}");
         }
 
         public async Task<HttpResponseMessage> CreateDiscountAsync(Discount discount)
         {
-            return await _apiService.PostAsJsonAsync("https://hvjewel.azurewebsites.net/api/discount", discount);
+            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/discount", discount);
         }
 
         public async Task<HttpResponseMessage> UpdateDiscountAsync(Discount discount)
         {
-            var url = "https://hvjewel.azurewebsites.net/api/discount";
+            var url = "http://localhost:5071/api/discount";
             var json = JsonConvert.SerializeObject(discount, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -57,7 +57,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteDiscountAsync(string discountId)
         {
-            return await _apiService.DeleteAsync($"https://hvjewel.azurewebsites.net/api/discount/{discountId}");
+            return await _apiService.DeleteAsync($"http://localhost:5071/api/discount/{discountId}");
         }
 
     }

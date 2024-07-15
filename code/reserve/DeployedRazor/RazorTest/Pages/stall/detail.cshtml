@@ -23,12 +23,21 @@
                 <!-- content-wrapper begins -->
                 <div class="content-wrapper">
                     <div class="row">
+                        <!-- Stall Info -->
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>@Model.Stall.StallName</h4>
+                                    <img src="/assets/images/stall/@(Model.Stall.StallId).jpg" style="width:100%; height:200px" />
+                                </div>
+                            </div>
+                        </div>
                         <!-- Stall Employees-->
                         <div class="col-xl-8">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <h6 class="text-center">Department Staffs</h6>
+                                        <h6 class="text-center">Available Staffs</h6>
                                         
                                         <table class="table table-hover text-center">
                                             <tbody>
@@ -42,23 +51,7 @@
                                                         <input type="hidden" name="stallEmployeeId" value="@employee.StallEmployeeId" />
                                                         <td class="col-md-6 text-left">@employee.EmployeeFullname</td>
                                                         <td class="col-md-2">
-                                                            <select name="role" class="btn btn-inverse-primary" style="width:100%;">
-                                                                    @foreach (var role in roleOptions)
-                                                                    {
-                                                                        if (role == employee.Role)
-                                                                        {
-                                                                        <option selected>
-                                                                                @role
-                                                                        </option>
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                        <option>
-                                                                                @role
-                                                                        </option>
-                                                                        }
-                                                                    }
-                                                            </select>
+                                                            @employee.Role
                                                         </td>
                                                         <td class="col-md-2">
 
@@ -100,21 +93,12 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Stall Info -->
-                        <div class="col-xl-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4>@Model.Stall.StallName</h4>
-                                    <img src="/assets/images/stall/@(Model.Stall.StallId).jpg" style="width:100%; height:200px" />
-                                </div>
-                            </div>
-                        </div>
                         <!-- Stall Items-->
-                        <div class="col-xl-8">
+                        <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <h6 class="text-center">Department Inventory</h6>
+                                        <h6 class="text-center">Inventory</h6>
                                         <table class="table table-hover text-center">
                                             <tbody>
                                                 @foreach (var item in Model.DetailStallItems)
@@ -122,8 +106,18 @@
                                                     <tr>
                                                         <form method="post" asp-page-handler="EditItem">
                                                         <input type="hidden" name="stallItemId" value="@item.StallItemId"/>
-                                                        <td class="col-md-6 text-left">@item.ProductName</td>
-                                                        <td class="col-md-2">
+                                                        <td class="col-md-5 text-left">@item.ProductName</td>
+                                                        <td class="col-md-3 text-right">
+                                                            @foreach(var product in Model.Products)
+                                                                {
+                                                                    if(product.ProductId.Equals(item.ProductId))
+                                                                    {
+                                                                    <p>@product.UnitPrice.ToString("#,##0")đ</p>
+                                                                    }
+                                                                    
+                                                                }
+                                                            </td>
+                                                        <td class="col-md-1">
                                                             <input class="btn btn-inverse-primary" type="number" name="quantity" value="@item.quantity" style="width:100%;"/>
                                                         </td>
                                                         <td class="col-md-2">
@@ -145,7 +139,7 @@
                                                                     }
                                                                 </select>
                                                         </td>
-                                                        <td class="col-md-2">
+                                                        <td class="col-md-1">
                                                             <button class="btn btn-inverse-primary">
                                                                 <i class="mdi mdi-content-save-settings"></i>
                                                                 <span>Save</span>

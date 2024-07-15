@@ -18,8 +18,8 @@ namespace RazorTest.Pages.pinvoice
         public const string SessionKeyInvoiceItemList = "_InvoiceItemList";
         public const string SessionKeyViewDetailInvoiceObject = "_InvoiceViewDetail";
 
-        public const string UrlInvoice = "https://hvjewel.azurewebsites.net/api/invoice";
-        public const string UrlInvoiceItem = "https://hvjewel.azurewebsites.net/api/invoiceitem";
+        public const string UrlInvoice = "http://localhost:5071/api/invoice";
+        public const string UrlInvoiceItem = "http://localhost:5071/api/invoiceitem";
 
         private readonly ApiService _apiService;
 
@@ -263,6 +263,15 @@ namespace RazorTest.Pages.pinvoice
             return RedirectToPage("/pinvoice/InvoiceDetail");
         }
 
+        // Print Invoice
+        public async Task<IActionResult> OnPostPrintInvoice(string invoiceId)
+        {
+            if(invoiceId == null)
+            {
+                return RedirectToPage("/Error");
+            }
+            return RedirectToPage("/pinvoice/Print");
+        }
         public bool VerifyAuth(string role)
         {
             bool result = false;

@@ -8,7 +8,7 @@ namespace JewelRepository.RepositoryUser
     {
         List<User> GetUsers();
         User GetUser(string userId);
-        Boolean AddUser(User user);
+        User AddUser(User user);
         Boolean RemoveUser(string userId);
         Boolean UpdateUser(User user);
     }

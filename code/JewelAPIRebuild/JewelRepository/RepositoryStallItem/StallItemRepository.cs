@@ -1,39 +1,41 @@
-﻿using JewelBO;
-using JewelDAO.DAOStallItem;
+﻿
 
+using JewelBO;
+using JewelDAO.DAOStallItem;
 
 namespace JewelRepository.RepositoryStallItem
 {
     public class StallItemRepository : IStallItemRepository
     {
-        private readonly IStallItemDao _stallitemDao;
-        public StallItemRepository(IStallItemDao stallItemDao) 
-        { 
-            _stallitemDao = stallItemDao;
+        private readonly IStallItemDao _stallItemDao;
+        public StallItemRepository(IStallItemDao stallItemDao)
+        {
+            _stallItemDao = stallItemDao;
         }
+
         public StallItem AddStallItem(StallItem stallItem)
         {
-            return _stallitemDao.AddStallItem(stallItem);
+            return _stallItemDao.AddStallItem(stallItem);
         }
 
         public StallItem GetStallItem(string stallItemId)
         {
-            return _stallitemDao.GetStallItem(stallItemId);
+            return _stallItemDao.GetStallItem(stallItemId);
         }
 
         public List<StallItem> GetStallItems()
         {
-            return _stallitemDao.GetStallItems();
+            return _stallItemDao.GetStallItems();
         }
 
         public bool RemoveStallItem(string stallItemId)
         {
-            return _stallitemDao.RemoveStallItem(stallItemId);
+            return _stallItemDao.RemoveStallItem(stallItemId);
         }
 
         public bool UpdateStallItem(StallItem stallItem)
         {
-            return _stallitemDao.UpdateStallItem(stallItem);    
+            return _stallItemDao.UpdateStallItem(stallItem);
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using JewelBO;
+﻿using JewelBO;
 using JewelService.ServiceGem;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +14,6 @@ namespace JewelAPI.Controllers
             _gemService = gemService;
         }
         [HttpGet]
-        
         public IActionResult Get()
         {
             return Ok(_gemService.GetGems());

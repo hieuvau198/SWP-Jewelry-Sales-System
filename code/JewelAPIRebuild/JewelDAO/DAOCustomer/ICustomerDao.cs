@@ -6,7 +6,7 @@ namespace JewelDAO.DAOCustomer
     {
         List<Customer> GetCustomers();
         Customer GetCustomer(string customerId);
-        bool AddCustomer(Customer customer);
+        Customer AddCustomer(Customer customer);
         bool RemoveCustomer(string customerId);
         bool UpdateCustomer(Customer customer);
     }

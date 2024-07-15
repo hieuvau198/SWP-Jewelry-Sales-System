@@ -47,7 +47,7 @@ namespace JewelSystemBE.Service.ServiceUser
 
         public List<User> GetUsers()
         {
-           List<User> results = _jewelDbContext.Users.OrderByDescending(x => x.Username).ToList();
+           List<User> results = _jewelDbContext.Users.OrderBy(x => x.UserId).ToList();
            if(!results.IsNullOrEmpty())
             {
                 foreach(var user in results)

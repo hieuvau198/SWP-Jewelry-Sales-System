@@ -1,7 +1,5 @@
 ﻿
-using BCrypt.Net;
 using JewelBO;
-using JewelDAL;
 using JewelRepository.RepositoryUser;
 
 namespace JewelService.ServiceUser
@@ -15,7 +13,7 @@ namespace JewelService.ServiceUser
             _userRepository = userRepository;
         }
 
-        public bool AddUser(User user)
+        public User AddUser(User user)
         {
             return _userRepository.AddUser(user);
         }

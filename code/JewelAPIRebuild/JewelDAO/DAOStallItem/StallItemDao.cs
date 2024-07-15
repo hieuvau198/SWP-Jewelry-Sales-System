@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 
 namespace JewelDAO.DAOStallItem
 {

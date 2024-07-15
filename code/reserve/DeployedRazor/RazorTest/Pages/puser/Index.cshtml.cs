@@ -44,7 +44,7 @@ namespace RazorTest.Pages.puser
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            var users = await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
+            var users = await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
             users = users.OrderByDescending(x => x.UserId).ToList();
 
             // Set search and filter parameters

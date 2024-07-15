@@ -18,7 +18,12 @@ namespace JewelSystemBE.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_productService.GetProducts());
+            var result = _productService.GetProducts();
+            if(result == null)
+            {
+                return NotFound(new { message = "Product not found." });
+            }
+            return Ok(result);
         }
 
         [HttpGet("{productId}")]

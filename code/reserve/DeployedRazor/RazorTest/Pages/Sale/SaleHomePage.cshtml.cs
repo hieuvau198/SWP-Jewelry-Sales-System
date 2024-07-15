@@ -29,9 +29,9 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyFilterGem = "_FilterGem";
         public const string SessionKeyFilterGold = "_FilterGold";
 
-        public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
-        public const string UrlGetDiscounts = "https://hvjewel.azurewebsites.net/api/discount\r\n";
-        public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string UrlGetDiscounts = "http://localhost:5071/api/discount\r\n";
+        public const string UrlProduct = "http://localhost:5071/api/product";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;

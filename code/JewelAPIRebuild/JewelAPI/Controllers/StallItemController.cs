@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using JewelSystemBE.Model;
-using JewelSystemBE.Service.ServiceStallItem;
+﻿using JewelBO;
+using JewelService.ServiceStallItem;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
-namespace JewelSystemBE.Controllers
+namespace JewelAPI.Controllers
 {
     [Route("api/stallitem")]
     [ApiController]

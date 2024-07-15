@@ -11,14 +11,14 @@ namespace JewelRepository.RepositoryAuth
         {
             _authDao = authDao;
         }
-        public bool AuthenticateUser(string username, string password)
+        public string AuthenticateUser(string username, string password)
         {
             return _authDao.AuthenticateUser(username, password);
         }
 
-        public string GenerateJwtToken(string username)
+        public string GenerateJwtToken(User user, string role)
         {
-            return _authDao.GenerateJwtToken(username);
+            return _authDao.GenerateJwtToken(user, role);
         }
 
         public User GetUserByUsername(string username)

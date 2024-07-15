@@ -12,7 +12,7 @@ namespace JewelRepository.RepositoryWarranty
         {
             this._warrantyDao = warrantyDao;
         }
-        public bool AddWarranty(Warranty warranty)
+        public Warranty AddWarranty(Warranty warranty)
         {
             return _warrantyDao.AddWarranty(warranty);
         }

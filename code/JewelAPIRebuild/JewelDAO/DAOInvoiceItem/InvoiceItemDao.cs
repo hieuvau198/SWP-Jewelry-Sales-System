@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 
 namespace JewelDAO.DAOInvoiceItem
 {
@@ -12,30 +11,31 @@ namespace JewelDAO.DAOInvoiceItem
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddInvoiceItem(InvoiceItem invoiceItem)
+        public InvoiceItem AddInvoiceItem(InvoiceItem invoiceItem)
         {
             if (invoiceItem == null)
             {
-                return false;
+                return null;
             }
             var existingInvoiceItem = _jewelDbContext.InvoiceItems.Find(invoiceItem.InvoiceItemId);
             if (existingInvoiceItem != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.InvoiceItems.Add(invoiceItem);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return invoiceItem;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding invoice item: {ex.Message}");
-                return false;
+                return null;
             }
         }
+
 
         public List<InvoiceItem> GetInvoiceItems()
         {
@@ -72,14 +72,43 @@ namespace JewelDAO.DAOInvoiceItem
             var updatedInvoiceItem = _jewelDbContext.InvoiceItems.Find(invoiceItem.InvoiceItemId);
             if (updatedInvoiceItem != null)
             {
-                updatedInvoiceItem.ProductName = invoiceItem.ProductName;
-                updatedInvoiceItem.Quantity = invoiceItem.Quantity;
-                updatedInvoiceItem.UnitPrice = invoiceItem.UnitPrice;
-                updatedInvoiceItem.DiscountId = invoiceItem.DiscountId;
-                updatedInvoiceItem.DiscountRate = invoiceItem.DiscountRate;
-                updatedInvoiceItem.TotalPrice = invoiceItem.TotalPrice;
-                updatedInvoiceItem.EndTotalPrice = invoiceItem.EndTotalPrice;
-                updatedInvoiceItem.WarrantyId = invoiceItem.WarrantyId;
+                if (invoiceItem.ProductId != null)
+                {
+                    updatedInvoiceItem.ProductId = invoiceItem.ProductId;
+                }
+                if (invoiceItem.ProductName != null)
+                {
+                    updatedInvoiceItem.ProductName = invoiceItem.ProductName;
+                }
+                if (invoiceItem.Quantity != null)
+                {
+                    updatedInvoiceItem.Quantity = invoiceItem.Quantity;
+                }
+                if (invoiceItem.UnitPrice != null)
+                {
+                    updatedInvoiceItem.UnitPrice = invoiceItem.UnitPrice;
+                }
+                if (invoiceItem.DiscountId != null)
+                {
+                    updatedInvoiceItem.DiscountId = invoiceItem.DiscountId;
+                }
+                if (invoiceItem.DiscountRate != null)
+                {
+                    updatedInvoiceItem.DiscountRate = invoiceItem.DiscountRate;
+                }
+                if (invoiceItem.TotalPrice != null)
+                {
+                    updatedInvoiceItem.TotalPrice = invoiceItem.TotalPrice;
+                }
+                if (invoiceItem.EndTotalPrice != null)
+                {
+                    updatedInvoiceItem.EndTotalPrice = invoiceItem.EndTotalPrice;
+                }
+                if (invoiceItem.WarrantyId != null)
+                {
+                    updatedInvoiceItem.WarrantyId = invoiceItem.WarrantyId;
+                }
+
                 _jewelDbContext.InvoiceItems.Update(updatedInvoiceItem);
                 _jewelDbContext.SaveChanges();
                 return true;

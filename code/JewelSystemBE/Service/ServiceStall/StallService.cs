@@ -38,7 +38,8 @@ namespace JewelSystemBE.Service.ServiceStall
 
         public List<Stall> GetStalls()
         {
-            return _jewelDbContext.Stalls.OrderByDescending(x => x.StallId).ToList();
+            List<Stall> stalls = _jewelDbContext.Stalls.OrderByDescending(x => x.StallId).ToList();
+            return stalls;
         }
 
         public bool RemoveStall(string stallId)

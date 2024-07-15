@@ -18,7 +18,12 @@ namespace JewelAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_productService.GetProducts());
+            var result = _productService.GetProducts();
+            if (result == null)
+            {
+                return NotFound(new { message = "Product not found." });
+            }
+            return Ok(result);
         }
 
         [HttpGet("{productId}")]
@@ -43,7 +48,7 @@ namespace JewelAPI.Controllers
         {
             return Ok(_productService.AddProduct(product));
         }
-
+        
         [HttpPut]
         public IActionResult Put(Product product)
         {

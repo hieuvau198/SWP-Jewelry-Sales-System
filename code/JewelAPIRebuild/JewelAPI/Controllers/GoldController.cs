@@ -13,12 +13,13 @@ namespace JewelAPI.Controllers
         {
             _goldService = goldService;
         }
-        
+
         [HttpGet]
-        
-        public IActionResult Get()
+
+        public async Task<ActionResult<List<Gold>>> Get()
         {
-            return Ok(_goldService.GetGolds());
+            var golds = await _goldService.GetGolds();
+            return Ok(golds);
         }
         [HttpGet("{goldid}")]
         public IActionResult Get(string goldid)

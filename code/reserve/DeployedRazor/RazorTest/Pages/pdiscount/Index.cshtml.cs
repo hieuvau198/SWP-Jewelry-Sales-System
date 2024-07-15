@@ -49,7 +49,7 @@ namespace RazorTest.Pages.pdiscount
 
                 // Get data
                 User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-                var discounts = await _apiService.GetAsync<List<Discount>>("https://hvjewel.azurewebsites.net/api/discount");
+                var discounts = await _apiService.GetAsync<List<Discount>>("http://localhost:5071/api/discount");
 
                 // Set search and filter parameters
                 SearchTerm = searchTerm;

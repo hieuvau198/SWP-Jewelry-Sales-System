@@ -13,6 +13,12 @@ namespace JewelAPI.Controllers
         {
             _userService = userService;
         }
+        [HttpGet("/role")]
+        public IActionResult GetRoles()
+        {
+            List<string> roles = new List<string> { "Admin"};
+            return Ok(roles);
+        }
         [HttpGet]
         public IActionResult Get()
         {
@@ -37,6 +43,7 @@ namespace JewelAPI.Controllers
         [HttpPost]
         public IActionResult Post(User user)
         {
+            user.UserId = Guid.NewGuid().ToString();
             return Ok(_userService.AddUser(user));
         }
         [HttpPut]

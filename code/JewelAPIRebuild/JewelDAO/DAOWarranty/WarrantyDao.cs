@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 
 namespace JewelDAO.DAOWarranty
 {
@@ -12,28 +11,44 @@ namespace JewelDAO.DAOWarranty
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddWarranty(Warranty warranty)
+        public Warranty AddWarranty(Warranty warranty)
         {
             if (warranty == null)
             {
-                return false;
+                return null;
             }
             var existingWarranty = _jewelDbContext.Warranties.Find(warranty.WarrantyId);
             if (existingWarranty != null)
             {
-                return false;
+                return null;
             }
             try
             {
+                string newId = "";
+                List<Warranty> warranties = _jewelDbContext.Warranties.ToList();
+                if (warranties == null)
+                {
+                    newId = "W1";
+                }
+                else
+                {
+                    int maxId = warranties
+                    .Select(w => int.Parse(w.WarrantyId.Substring(1)))
+                    .DefaultIfEmpty(1)
+                    .Max();
+                    newId = $"W{maxId + 1}";
+                }
+
+                warranty.WarrantyId = newId;
                 _jewelDbContext.Warranties.Add(warranty);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return warranty;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding warranty: {ex.Message}");
-                return false;
+                return null;
             }
         }
 

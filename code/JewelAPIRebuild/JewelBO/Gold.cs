@@ -7,14 +7,18 @@ namespace JewelBO
         [Key]
         [Required]
         [StringLength(100)]
-        public string GoldId { get; set; }
-
+        public string GoldId { get; set; } = Guid.NewGuid().ToString();
         [Required]
         [StringLength(200)]
-        public string GoldName { get; set; }
-
+        public string GoldName { get; set; } = "Some Gold";
+        public string GoldCode { get; set; } = "Some Gold Code";
         [Required]
-        [Range(0, (double)decimal.MaxValue)]
-        public decimal GoldPrice { get; set; }
+        public string Unit { get; set; } = "Mace";
+        [Required]
+        public double SellPrice { get; set; } = 0.0;
+        [Required]
+        public double BuyPrice { get; set; } = 0.0;
+        [Required]
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }

@@ -7,8 +7,8 @@ namespace JewelDAO.DAOGem
     {
         List<Gem> GetGems();
         Gem GetGem(string gemId);
-        bool AddGem(Gem gem);
-        bool RemoveGem(string gemId);
-        bool UpdateGem(Gem gem);
+        Gem AddGem(Gem gem);
+        Boolean RemoveGem(string gemId);
+        Boolean UpdateGem(Gem gem);
     }
 }

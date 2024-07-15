@@ -101,9 +101,8 @@ namespace JewelSystemBE.Service.ServiceProduct
                 updatedProduct.UnitPrice = product.UnitPrice;
                 updatedProduct.TotalPrice = product.TotalPrice;
                 updatedProduct.BuyPrice = product.BuyPrice;
-
                 updatedProduct = UpdatePrice(updatedProduct);
-
+                UpdateStallItem(updatedProduct);
                 _jewelDbContext.Products.Update(updatedProduct);
                 _jewelDbContext.SaveChanges();
                 return true;
@@ -206,6 +205,27 @@ namespace JewelSystemBE.Service.ServiceProduct
             result.GemWeight = gemWeight;
 
             return result;
+        }
+        public void UpdateStallItem(Product product)
+        {
+            try
+            {
+                List<StallItem> stallItems = _jewelDbContext.StallItems.ToList();
+                StallItem stallItem = stallItems.Find(x => x.ProductId == product.ProductId);
+                if( stallItem != null && product.ProductQuantity != null)
+                {
+                    stallItem.quantity = product.ProductQuantity;
+                    _jewelDbContext.StallItems.Update(stallItem);
+                    _jewelDbContext.SaveChanges();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+            
+            
         }
 
         public string GenerateProductCode(Product product, List<Product> products)

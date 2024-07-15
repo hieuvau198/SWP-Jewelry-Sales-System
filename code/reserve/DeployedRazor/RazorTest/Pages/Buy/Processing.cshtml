@@ -30,7 +30,7 @@
                                     <form id="search-form" method="post" asp-page-handler="Search">
                                         <div class="text-center">
                                             <label for="invoiceId">Invoice ID:</label>
-                                            <input type="text" id="buyInvoiceSearch" placeholder="Enter Invoice ID" name="buyInvoiceSearch" value="@Model.BuyInvoiceSearch" />
+                                            <input class="form-control" type="text" id="buyInvoiceSearch" placeholder="Enter Invoice ID" name="buyInvoiceSearch" value="@Model.BuyInvoiceSearch" />
 @*                                             <label for="customerId">Customer Phone:</label>
                                             <input type="text" id="buyCustomerSearch" name="buyCustomerSearch" value="@Model.BuyCustomerSearch" /> *@
                                             <button type="submit" form="search-form" class="btn btn-outline-primary">Search</button>

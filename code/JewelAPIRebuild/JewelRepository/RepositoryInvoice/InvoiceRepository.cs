@@ -14,7 +14,7 @@ namespace JewelRepository.RepositoryInvoice
             _invoiceDao = invoiceDao;
         }
         
-        public bool AddInvoice(Invoice invoice)
+        public Invoice AddInvoice(Invoice invoice)
         {
             return _invoiceDao.AddInvoice(invoice);
         }

@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using RazorTest.Models;
 using RazorTest.Services;
 using RazorTest.Utilities;
+using System.ComponentModel;
 
 namespace RazorTest.Pages.stall
 {
@@ -13,10 +14,10 @@ namespace RazorTest.Pages.stall
         public const string SessionKeyUserObject = "_UserObject";
         public const string SessionKeyStallObject = "_StallObject";
 
-        public const string UrlStall = "https://hvjewel.azurewebsites.net/api/stall";
-        public const string UrlStallEmployee = "https://hvjewel.azurewebsites.net/api/stallemployee";
-        public const string UrlStallItem = "https://hvjewel.azurewebsites.net/api/stallitem";
-        public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
+        public const string UrlStall = "http://localhost:5071/api/stall";
+        public const string UrlStallEmployee = "http://localhost:5071/api/stallemployee";
+        public const string UrlStallItem = "http://localhost:5071/api/stallitem";
+        public const string UrlProduct = "http://localhost:5071/api/product";
 
         private readonly ApiService _apiService;
 
@@ -32,6 +33,7 @@ namespace RazorTest.Pages.stall
         public List<StallItem> StallItems { get; set; }
         public List<StallEmployee> DetailStallEmployees { get; set; }
         public List<StallItem> DetailStallItems { get; set; }
+        public List<Product> Products { get; set; }
         public async Task<IActionResult> OnGet()
         {
             try
@@ -48,7 +50,8 @@ namespace RazorTest.Pages.stall
                 Stalls = await _apiService.GetAsync<List<Stall>>(UrlStall);
                 StallEmployees = await _apiService.GetAsync<List<StallEmployee>>(UrlStallEmployee);
                 StallItems = await _apiService.GetAsync<List<StallItem>>(UrlStallItem);
-                if(Stalls.IsNullOrEmpty() || StallEmployees.IsNullOrEmpty() || StallItems.IsNullOrEmpty())
+                Products = await _apiService.GetAsync<List<Product>>(UrlProduct);
+                if (Stalls.IsNullOrEmpty() || StallEmployees.IsNullOrEmpty() || StallItems.IsNullOrEmpty() || Products.IsNullOrEmpty())
                 {
                     return RedirectToPage("/Error");
                 }
@@ -74,11 +77,11 @@ namespace RazorTest.Pages.stall
             }
             return Page();
         }
-        public async Task<IActionResult> OnPostEditEmployee(string stallEmployeeId, string stallName, string role)
+        public async Task<IActionResult> OnPostEditEmployee(string stallEmployeeId, string stallName)
         {
             try
             {
-                if (stallEmployeeId.IsNullOrEmpty() || stallName.IsNullOrEmpty() || role.IsNullOrEmpty())
+                if (stallEmployeeId.IsNullOrEmpty() || stallName.IsNullOrEmpty())
                 {
                     return RedirectToPage("/NotFound");
                 }
@@ -95,7 +98,6 @@ namespace RazorTest.Pages.stall
                     return RedirectToPage("/NotFound");
                 }
                 stallEmployee.StallName = stall.StallName;
-                stallEmployee.Role = role;
                 stallEmployee.StallId = stall.StallId;
                 var response = await _apiService.PutAsJsonAsync(UrlStallEmployee, stallEmployee);
                 if (!response.IsSuccessStatusCode)
@@ -152,5 +154,6 @@ namespace RazorTest.Pages.stall
             }
             return RedirectToPage();
         }
+        
     }
 }

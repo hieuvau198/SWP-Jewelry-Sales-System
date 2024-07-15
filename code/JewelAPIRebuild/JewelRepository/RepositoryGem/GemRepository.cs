@@ -12,7 +12,7 @@ namespace JewelRepository.RepositoryGem
             _gemDao = gemDao;
         }
 
-        public bool AddGem(Gem gem)
+        public Gem AddGem(Gem gem)
         {
             return _gemDao.AddGem(gem);
         }

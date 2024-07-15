@@ -10,7 +10,7 @@ namespace JewelService.ServiceGem
         {
             _gemRepository = gemRepository;
         }
-        public bool AddGem(Gem gem)
+        public Gem AddGem(Gem gem)
         {
             return _gemRepository.AddGem(gem);
         }

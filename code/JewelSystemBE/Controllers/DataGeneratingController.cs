@@ -26,5 +26,15 @@ namespace JewelSystemBE.Controllers
         {
             return Ok(await _dataGenerating.GetNewProductsToString());
         }
+        [HttpGet("StringSI")]
+        public async Task<ActionResult<string>> GetStringSI()
+        {
+            return Ok(await _dataGenerating.GetNewStallItemsToString());
+        }
+        [HttpGet("StringSE")]
+        public async Task<ActionResult<string>> GetStringSE()
+        {
+            return Ok(await _dataGenerating.GetNewStallEmployeesToString());
+        }
     }
 }

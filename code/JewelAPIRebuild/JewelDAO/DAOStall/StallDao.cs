@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 
 namespace JewelDAO.DAOStall
 {
@@ -38,7 +37,8 @@ namespace JewelDAO.DAOStall
 
         public List<Stall> GetStalls()
         {
-            return _jewelDbContext.Stalls.OrderByDescending(x => x.StallId).ToList();
+            List<Stall> stalls = _jewelDbContext.Stalls.OrderByDescending(x => x.StallId).ToList();
+            return stalls;
         }
 
         public bool RemoveStall(string stallId)
@@ -69,7 +69,7 @@ namespace JewelDAO.DAOStall
                 updatedStall.StallName = stall.StallName;
                 updatedStall.StallDescription = stall.StallDescription;
                 updatedStall.StallType = stall.StallType;
-                updatedStall.StaffId = stall.StaffId;
+                updatedStall.UserId = stall.UserId;
                 _jewelDbContext.Stalls.Update(updatedStall);
                 _jewelDbContext.SaveChanges();
                 return true;

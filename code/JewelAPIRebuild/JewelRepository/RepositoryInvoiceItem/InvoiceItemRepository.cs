@@ -12,7 +12,7 @@ namespace JewelRepository.RepositoryInvoiceItem
         {
             _invoiceItemDao = invoiceItemDao;
         }
-        public bool AddInvoiceItem(InvoiceItem invoiceItem)
+        public InvoiceItem AddInvoiceItem(InvoiceItem invoiceItem)
         {
             return _invoiceItemDao.AddInvoiceItem(invoiceItem);
         }

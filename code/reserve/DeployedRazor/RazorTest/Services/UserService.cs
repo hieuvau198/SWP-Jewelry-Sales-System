@@ -21,22 +21,22 @@ namespace RazorTest.Services
 
         public async Task<List<User>> GetUsersAsync()
         {
-            return await _apiService.GetAsync<List<User>>("https://hvjewel.azurewebsites.net/api/user");
+            return await _apiService.GetAsync<List<User>>("http://localhost:5071/api/user");
         }
 
         public async Task<User> GetUserByIdAsync(string userId)
         {
-            return await _apiService.GetAsync<User>($"https://hvjewel.azurewebsites.net/api/user/{userId}");
+            return await _apiService.GetAsync<User>($"http://localhost:5071/api/user/{userId}");
         }
 
         public async Task<HttpResponseMessage> CreateUserAsync(User user)
         {
-            return await _apiService.PostAsJsonAsync("https://hvjewel.azurewebsites.net/api/user", user);
+            return await _apiService.PostAsJsonAsync("http://localhost:5071/api/user", user);
         }
 
         public async Task<HttpResponseMessage> UpdateUserAsync(User user)
         {
-            var url = "https://hvjewel.azurewebsites.net/api/user";
+            var url = "http://localhost:5071/api/user";
             var json = JsonConvert.SerializeObject(user, new JsonSerializerSettings
             {
                 DateFormatString = "yyyy-MM-ddTHH:mm:ss.fffZ"
@@ -59,7 +59,7 @@ namespace RazorTest.Services
 
         public async Task<HttpResponseMessage> DeleteUserAsync(string userId)
         {
-            return await _apiService.DeleteAsync($"https://hvjewel.azurewebsites.net/api/user/{userId}");
+            return await _apiService.DeleteAsync($"http://localhost:5071/api/user/{userId}");
         }
         
     }

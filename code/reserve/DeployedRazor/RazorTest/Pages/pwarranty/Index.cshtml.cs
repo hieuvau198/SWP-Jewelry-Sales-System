@@ -40,7 +40,7 @@ namespace RazorTest.Pages.pwarranty
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
 
-            var warranties = await _apiService.GetAsync<List<Warranty>>("https://hvjewel.azurewebsites.net/api/warranty");
+            var warranties = await _apiService.GetAsync<List<Warranty>>("http://localhost:5071/api/warranty");
 
             if (warranties != null)
             {

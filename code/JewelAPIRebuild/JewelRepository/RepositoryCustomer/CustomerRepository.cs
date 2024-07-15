@@ -12,7 +12,7 @@ namespace JewelRepository.RepositoryCustomer
             _customerDao = customerDao;
         }
 
-        public bool AddCustomer(Customer customer)
+        public Customer AddCustomer(Customer customer)
         {
             return _customerDao.AddCustomer(customer);
         }

@@ -1,5 +1,5 @@
 using JewelBO;
-using JewelDAL;
+using JewelDAO;
 using JewelDAO.DAOAuth;
 using JewelDAO.DAOCustomer;
 using JewelDAO.DAODiscount;
@@ -7,8 +7,10 @@ using JewelDAO.DAOGem;
 using JewelDAO.DAOGold;
 using JewelDAO.DAOInvoice;
 using JewelDAO.DAOInvoiceItem;
-using JewelDAO.DAOJewel;
 using JewelDAO.DAOProduct;
+using JewelDAO.DAOStall;
+using JewelDAO.DAOStallEmployee;
+using JewelDAO.DAOStallItem;
 using JewelDAO.DAOUser;
 using JewelDAO.DAOWarranty;
 using JewelRepository.RepositoryAuth;
@@ -18,8 +20,10 @@ using JewelRepository.RepositoryGem;
 using JewelRepository.RepositoryGold;
 using JewelRepository.RepositoryInvoice;
 using JewelRepository.RepositoryInvoiceItem;
-using JewelRepository.RepositoryJewel;
 using JewelRepository.RepositoryProduct;
+using JewelRepository.RepositoryStall;
+using JewelRepository.RepositoryStallEmployee;
+using JewelRepository.RepositoryStallItem;
 using JewelRepository.RepositoryUser;
 using JewelRepository.RepositoryWarranty;
 using JewelService.ServiceAuth;
@@ -29,8 +33,10 @@ using JewelService.ServiceGem;
 using JewelService.ServiceGold;
 using JewelService.ServiceInvoice;
 using JewelService.ServiceInvoiceItem;
-using JewelService.ServiceJewel;
 using JewelService.ServiceProduct;
+using JewelService.ServiceStall;
+using JewelService.ServiceStallEmployee;
+using JewelService.ServiceStallItem;
 using JewelService.ServiceUser;
 using JewelService.ServiceWarranty;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -43,6 +49,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddHttpClient<GoldDao>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -56,21 +63,21 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddTransient<IAuthRepository, AuthRepository>();
 builder.Services.AddTransient<IAuthDao, AuthDao>();
 
-builder.Services.AddTransient<IUserService, UserService>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-builder.Services.AddTransient<IUserDao, UserDao>();
+builder.Services.AddTransient<ICustomerService, CustomerService>();
+builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
+builder.Services.AddTransient<ICustomerDao, CustomerDao>();
 
-builder.Services.AddTransient<IGoldService, GoldService>();
-builder.Services.AddTransient<IGoldRepository, GoldRepository>();
-builder.Services.AddTransient<IGoldDao, GoldDao>();
+builder.Services.AddTransient<IDiscountService, DiscountService>();
+builder.Services.AddTransient<IDiscountRepository, DiscountRepository>();
+builder.Services.AddTransient<IDiscountDao, DiscountDao>();
 
 builder.Services.AddTransient<IGemService, GemService>();
 builder.Services.AddTransient<IGemRepository, GemRepository>();
 builder.Services.AddTransient<IGemDao, GemDao>();
 
-builder.Services.AddTransient<ICustomerService, CustomerService>();
-builder.Services.AddTransient<ICustomerRepository, CustomerRepository>();
-builder.Services.AddTransient<ICustomerDao, CustomerDao>();
+builder.Services.AddTransient<IGoldService, GoldService>();
+builder.Services.AddTransient<IGoldRepository, GoldRepository>();
+builder.Services.AddTransient<IGoldDao, GoldDao>();
 
 builder.Services.AddTransient<IInvoiceService, InvoiceService>();
 builder.Services.AddTransient<IInvoiceRepository, InvoiceRepository>();
@@ -80,21 +87,30 @@ builder.Services.AddTransient<IInvoiceItemService, InvoiceItemService>();
 builder.Services.AddTransient<IInvoiceItemRepository, InvoiceItemRepository>();
 builder.Services.AddTransient<IInvoiceItemDao, InvoiceItemDao>();
 
-builder.Services.AddTransient<IJewelService, JewelService.ServiceJewel.JewelService>();
-builder.Services.AddTransient<IJewelRepository, JewelRepository.RepositoryJewel.JewelRepository>();
-builder.Services.AddTransient<IJewelDao, JewelDao>();
-
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
 builder.Services.AddTransient<IProductDao, ProductDao>();
 
-builder.Services.AddTransient<IDiscountService, DiscountService>();
-builder.Services.AddTransient<IDiscountRepository, DiscountRepository>();
-builder.Services.AddTransient<IDiscountDao, DiscountDao>();
+builder.Services.AddTransient<IStallService, StallService>();
+builder.Services.AddTransient<IStallRepository, StallRepository>();
+builder.Services.AddTransient<IStallDao, StallDao>();
+
+builder.Services.AddTransient<IStallEmployeeService, StallEmployeeService>();
+builder.Services.AddTransient<IStallEmployeeRepository, StallEmployeeRepository>();
+builder.Services.AddTransient<IStallEmployeeDao, StallEmployeeDao>();
+
+builder.Services.AddTransient<IStallItemService, StallItemService>();
+builder.Services.AddTransient<IStallItemRepository, StallItemRepository>();
+builder.Services.AddTransient<IStallItemDao, StallItemDao>();
+
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IUserRepository, UserRepository>();
+builder.Services.AddTransient<IUserDao, UserDao>();
 
 builder.Services.AddTransient<IWarrantyService, WarrantyService>();
 builder.Services.AddTransient<IWarrantyRepository, WarrantyRepository>();
 builder.Services.AddTransient<IWarrantyDao, WarrantyDao>();
+
 
 
 

@@ -6,7 +6,7 @@ namespace JewelDAO.DAOInvoiceItem
     {
         List<InvoiceItem> GetInvoiceItems();
         InvoiceItem GetInvoiceItem(string invoiceItemId);
-        bool AddInvoiceItem(InvoiceItem invoiceItem);
+        InvoiceItem AddInvoiceItem(InvoiceItem invoiceItem);
         bool RemoveInvoiceItem(string invoiceItemId);
         bool UpdateInvoiceItem(InvoiceItem invoiceItem);
     }

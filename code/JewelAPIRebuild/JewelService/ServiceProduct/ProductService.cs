@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 using JewelRepository.RepositoryProduct;
 
 namespace JewelService.ServiceProduct
@@ -13,7 +12,7 @@ namespace JewelService.ServiceProduct
             this._productRepository = productRepository;
         }
 
-        public bool AddProduct(Product product)
+        public Product AddProduct(Product product)
         {
             return _productRepository.AddProduct(product);
         }

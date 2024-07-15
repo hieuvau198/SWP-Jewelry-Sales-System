@@ -36,7 +36,7 @@ namespace RazorTest.Pages.pinvoiceitem
             }
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            var invoiceitems = await _apiService.GetAsync<List<InvoiceItem>>("https://hvjewel.azurewebsites.net/api/invoiceitem");
+            var invoiceitems = await _apiService.GetAsync<List<InvoiceItem>>("http://localhost:5071/api/invoiceitem");
 
             if (invoiceitems != null)
             {

@@ -12,7 +12,7 @@ namespace JewelService.ServiceGold
             _goldRepository = goldRepository;
         }
 
-        public bool AddGold(Gold gold)
+        public Gold AddGold(Gold gold)
         {
             return _goldRepository.AddGold(gold);
         }
@@ -32,7 +32,7 @@ namespace JewelService.ServiceGold
             return _goldRepository.GetGold(goldId);
         }
 
-        public List<Gold> GetGolds()
+        public Task<List<Gold>> GetGolds()
         {
             return _goldRepository.GetGolds();
         }

@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 
 namespace JewelDAO.DAOGem
 {
@@ -11,29 +10,28 @@ namespace JewelDAO.DAOGem
         {
             _jewelDbContext = jewelDbContext;
         }
-
-        public bool AddGem(Gem gem)
+        public Gem AddGem(Gem gem)
         {
             if (gem == null)
             {
-                return false;
+                return null;
             }
             var existingGem = _jewelDbContext.Gems.Find(gem.GemId);
             if (existingGem != null)
             {
-                return false;
+                return null;
             }
             try
             {
                 _jewelDbContext.Gems.Add(gem);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return gem;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding gem: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
@@ -50,9 +48,7 @@ namespace JewelDAO.DAOGem
         public bool RemoveGem(string gemId)
         {
             if (gemId == null)
-            {
-                return false;
-            }
+            { return false; }
             Gem gem = _jewelDbContext.Gems.Find(gemId);
             if (gem != null)
             {
@@ -66,14 +62,18 @@ namespace JewelDAO.DAOGem
         public bool UpdateGem(Gem gem)
         {
             if (gem == null)
-            {
-                return false;
-            }
+            { return false; }
             Gem updatedGem = _jewelDbContext.Gems.Find(gem.GemId);
             if (updatedGem != null)
             {
                 updatedGem.GemPrice = gem.GemPrice;
                 updatedGem.GemName = gem.GemName;
+                updatedGem.BuyPrice = gem.BuyPrice;
+                updatedGem.GemCode = gem.GemCode;
+                updatedGem.GemWeight = gem.GemWeight;
+                updatedGem.Unit = gem.Unit;
+
+
                 _jewelDbContext.Gems.Update(updatedGem);
                 _jewelDbContext.SaveChanges();
                 return true;

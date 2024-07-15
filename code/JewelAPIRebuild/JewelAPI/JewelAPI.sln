@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelAPI", "JewelAPI.csproj", "{7939AFC1-EF07-4157-B7A9-B98838FE32FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewelAPI", "JewelAPI.csproj", "{7939AFC1-EF07-4157-B7A9-B98838FE32FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelBO", "..\JewelBO\JewelBO.csproj", "{02C1DF81-4C86-4CBD-96FC-0184D9446A79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewelBO", "..\JewelBO\JewelBO.csproj", "{02C1DF81-4C86-4CBD-96FC-0184D9446A79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelDAL", "..\JewelDAL\JewelDAL.csproj", "{7C918CE9-7517-47F1-9562-837ED59A984A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewelService", "..\JewelService\JewelService.csproj", "{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelService", "..\JewelService\JewelService.csproj", "{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewelDAO", "..\JewelDAO\JewelDAO.csproj", "{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelDAO", "..\JewelDAO\JewelDAO.csproj", "{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewelRepository", "..\JewelRepository\JewelRepository.csproj", "{98125A1B-C41F-4B5A-95FB-833CA0746EAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelRepository", "..\JewelRepository\JewelRepository.csproj", "{98125A1B-C41F-4B5A-95FB-833CA0746EAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JewelDTO", "..\JewelDTO\JewelDTO.csproj", "{C5AA8B0C-6720-4A6E-8262-AF7C5EEB2BBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{02C1DF81-4C86-4CBD-96FC-0184D9446A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02C1DF81-4C86-4CBD-96FC-0184D9446A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02C1DF81-4C86-4CBD-96FC-0184D9446A79}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C918CE9-7517-47F1-9562-837ED59A984A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C918CE9-7517-47F1-9562-837ED59A984A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C918CE9-7517-47F1-9562-837ED59A984A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C918CE9-7517-47F1-9562-837ED59A984A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{98125A1B-C41F-4B5A-95FB-833CA0746EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98125A1B-C41F-4B5A-95FB-833CA0746EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98125A1B-C41F-4B5A-95FB-833CA0746EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AA8B0C-6720-4A6E-8262-AF7C5EEB2BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AA8B0C-6720-4A6E-8262-AF7C5EEB2BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AA8B0C-6720-4A6E-8262-AF7C5EEB2BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AA8B0C-6720-4A6E-8262-AF7C5EEB2BBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

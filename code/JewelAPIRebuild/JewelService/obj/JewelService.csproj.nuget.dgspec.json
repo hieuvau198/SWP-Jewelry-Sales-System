@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\JewelService.csproj": {}
+    "D:\\workspace\\vs\\rebuild\\JewelService\\JewelService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
+    "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
+        "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
         "projectName": "JewelBO",
-        "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
-        "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\obj\\",
+        "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,17 +71,17 @@
         }
       }
     },
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj": {
+    "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj",
-        "projectName": "JewelDAL",
-        "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj",
-        "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\obj\\",
+        "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj",
+        "projectName": "JewelDAO",
+        "projectPath": "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\vs\\rebuild\\JewelDAO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +96,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj"
+              "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
+                "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj"
               }
             }
           }
@@ -123,11 +123,21 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.6, )"
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
             }
           },
           "imports": [
@@ -150,85 +160,17 @@
         }
       }
     },
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj": {
+    "D:\\workspace\\vs\\rebuild\\JewelRepository\\JewelRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj",
-        "projectName": "JewelDAO",
-        "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj",
-        "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj"
-              },
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj",
+        "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelRepository\\JewelRepository.csproj",
         "projectName": "JewelRepository",
-        "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj",
-        "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\obj\\",
+        "projectPath": "D:\\workspace\\vs\\rebuild\\JewelRepository\\JewelRepository.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\vs\\rebuild\\JewelRepository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -243,11 +185,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj"
+              "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
+                "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj"
               },
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj"
+              "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj": {
+                "projectPath": "D:\\workspace\\vs\\rebuild\\JewelDAO\\JewelDAO.csproj"
               }
             }
           }
@@ -286,17 +228,17 @@
         }
       }
     },
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\JewelService.csproj": {
+    "D:\\workspace\\vs\\rebuild\\JewelService\\JewelService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\JewelService.csproj",
+        "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelService\\JewelService.csproj",
         "projectName": "JewelService",
-        "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\JewelService.csproj",
-        "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\obj\\",
+        "projectPath": "D:\\workspace\\vs\\rebuild\\JewelService\\JewelService.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\vs\\rebuild\\JewelService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -311,14 +253,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj"
+              "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
+                "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj"
               },
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAL\\JewelDAL.csproj"
-              },
-              "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj": {
-                "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj"
+              "D:\\workspace\\vs\\rebuild\\JewelRepository\\JewelRepository.csproj": {
+                "projectPath": "D:\\workspace\\vs\\rebuild\\JewelRepository\\JewelRepository.csproj"
               }
             }
           }

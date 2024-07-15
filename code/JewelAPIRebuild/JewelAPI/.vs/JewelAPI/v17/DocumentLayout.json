@@ -1,121 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\",
+  "WorkspaceRootPath": "D:\\workspace\\vs\\rebuild\\JewelAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\servicestallitem\\stallitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02C1DF81-4C86-4CBD-96FC-0184D9446A79}|..\\JewelBO\\JewelBO.csproj|d:\\workspace\\vs\\rebuild\\jewelbo\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\servicestallitem\\istallitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{02C1DF81-4C86-4CBD-96FC-0184D9446A79}|..\\JewelBO\\JewelBO.csproj|d:\\workspace\\vs\\rebuild\\jewelbo\\jewelbo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\servicestall\\stallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|d:\\workspace\\vs\\rebuild\\jewelapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\servicestall\\istallservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|d:\\workspace\\vs\\rebuild\\jewelapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositorystallitem\\istallitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|d:\\workspace\\vs\\rebuild\\jewelapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\serviceproduct\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\serviceproduct\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daostall\\istalldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daostall\\stalldao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daoproduct\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daoproduct\\iproductdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositorystall\\stallrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositorystall\\istallrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositoryinvoice\\invoicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositoryproduct\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositoryproduct\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\jewelrepository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02C1DF81-4C86-4CBD-96FC-0184D9446A79}|..\\JewelBO\\JewelBO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelbo\\stall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\serviceinvoiceitem\\invoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\serviceinvoiceitem\\iinvoiceitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\serviceuser\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daostallitem\\stallitemdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositorystallitem\\stallitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositorygold\\goldrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositorygold\\igoldrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daostallitem\\istallitemdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02C1DF81-4C86-4CBD-96FC-0184D9446A79}|..\\JewelBO\\JewelBO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelbo\\stallitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F680FAD1-BCFF-46CD-BB4E-09BAB7FEEB92}|..\\JewelService\\JewelService.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelservice\\servicecustomer\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daocustomer\\customerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{98125A1B-C41F-4B5A-95FB-833CA0746EAB}|..\\JewelRepository\\JewelRepository.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelrepository\\repositoryinvoiceitem\\iinvoiceitemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daodiscount\\discountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\daodiscount\\idiscountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023EBCBF-20AB-443C-B34A-8CF2057FDB4D}|..\\JewelDAO\\JewelDAO.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jeweldao\\jeweldao.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelapi\\controllers\\stallitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:controllers\\stallitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelapi\\controllers\\stallcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:controllers\\stallcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|c:\\users\\nammc\\desktop\\jewelapirebuild\\jewelapi\\migrations\\20240619114721_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:migrations\\20240619114721_x.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|d:\\workspace\\vs\\rebuild\\jewelapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7939AFC1-EF07-4157-B7A9-B98838FE32FF}|JewelAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -125,480 +32,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IStallRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStall\\IStallRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryStall\\IStallRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStall\\IStallRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryStall\\IStallRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:29:08.882Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IStallItemService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStallItem\\IStallItemService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceStallItem\\IStallItemService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStallItem\\IStallItemService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceStallItem\\IStallItemService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T04:15:24.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StallItemService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStallItem\\StallItemService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceStallItem\\StallItemService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStallItem\\StallItemService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceStallItem\\StallItemService.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T04:15:04.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOProduct\\ProductDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOProduct\\ProductDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOProduct\\ProductDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOProduct\\ProductDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T04:13:04.105Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IProductDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOProduct\\IProductDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOProduct\\IProductDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOProduct\\IProductDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOProduct\\IProductDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T04:13:01.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IStallDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStall\\IStallDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOStall\\IStallDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStall\\IStallDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOStall\\IStallDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:58:21.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StallDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStall\\StallDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOStall\\StallDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStall\\StallDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOStall\\StallDao.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwB0AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:59:42.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StallService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStall\\StallService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceStall\\StallService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStall\\StallService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceStall\\StallService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:24:01.797Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IStallService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStall\\IStallService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceStall\\IStallService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceStall\\IStallService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceStall\\IStallService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:16:54.541Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceProduct\\IProductService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceProduct\\IProductService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceProduct\\IProductService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceProduct\\IProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
+              "DocumentIndex": 0,
+              "Title": "Discount.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\rebuild\\JewelBO\\Discount.cs",
+              "RelativeDocumentMoniker": "..\\JewelBO\\Discount.cs",
+              "ToolTip": "D:\\workspace\\vs\\rebuild\\JewelBO\\Discount.cs",
+              "RelativeToolTip": "..\\JewelBO\\Discount.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAswB8AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:46:26.786Z",
+              "WhenOpened": "2024-07-13T12:04:59.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JewelBO",
+              "DocumentMoniker": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
+              "RelativeDocumentMoniker": "..\\JewelBO\\JewelBO.csproj",
+              "ToolTip": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
+              "RelativeToolTip": "..\\JewelBO\\JewelBO.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-13T11:45:36.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T11:03:16.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBIAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T11:02:15.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "IStallItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStallItem\\IStallItemRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryStallItem\\IStallItemRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStallItem\\IStallItemRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryStallItem\\IStallItemRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
+              "ToolTip": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "Controllers\\RoleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:27:14.598Z",
+              "WhenOpened": "2024-07-13T11:00:46.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "StallRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStall\\StallRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryStall\\StallRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStall\\StallRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryStall\\StallRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\workspace\\vs\\rebuild\\JewelAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAAF0AAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:28:46.774Z",
+              "WhenOpened": "2024-07-13T09:46:30.658Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryProduct\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryProduct\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryProduct\\ProductRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryProduct\\ProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:32:07.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "InvoiceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryInvoice\\InvoiceRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryInvoice\\InvoiceRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryInvoice\\InvoiceRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryInvoice\\InvoiceRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:31:26.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceProduct\\ProductService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceProduct\\ProductService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceProduct\\ProductService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceProduct\\ProductService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:17:00.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryProduct\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryProduct\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryProduct\\IProductRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryProduct\\IProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T04:02:53.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "JewelRepository.csproj",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\JewelRepository.csproj",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\JewelRepository.csproj",
-              "RelativeToolTip": "..\\JewelRepository\\JewelRepository.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-19T12:23:47.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Stall.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\Stall.cs",
-              "RelativeDocumentMoniker": "..\\JewelBO\\Stall.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\Stall.cs",
-              "RelativeToolTip": "..\\JewelBO\\Stall.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:01:30.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "InvoiceItemService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceInvoiceItem\\InvoiceItemService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceInvoiceItem\\InvoiceItemService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceInvoiceItem\\InvoiceItemService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceInvoiceItem\\InvoiceItemService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:17:18.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IInvoiceItemService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceInvoiceItem\\IInvoiceItemService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceInvoiceItem\\IInvoiceItemService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceInvoiceItem\\IInvoiceItemService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceInvoiceItem\\IInvoiceItemService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:17:13.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "StallItemDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStallItem\\StallItemDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOStallItem\\StallItemDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStallItem\\StallItemDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOStallItem\\StallItemDao.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T03:14:15.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "StallItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStallItem\\StallItemRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryStallItem\\StallItemRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryStallItem\\StallItemRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryStallItem\\StallItemRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:26:35.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IGoldRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryGold\\IGoldRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryGold\\IGoldRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryGold\\IGoldRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryGold\\IGoldRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:23:36.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IStallItemDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStallItem\\IStallItemDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOStallItem\\IStallItemDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOStallItem\\IStallItemDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOStallItem\\IStallItemDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:06:05.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceUser\\UserService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceUser\\UserService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceUser\\UserService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceUser\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:20:14.642Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GoldRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryGold\\GoldRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryGold\\GoldRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryGold\\GoldRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryGold\\GoldRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:33:09.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "StallItem.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\StallItem.cs",
-              "RelativeDocumentMoniker": "..\\JewelBO\\StallItem.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\StallItem.cs",
-              "RelativeToolTip": "..\\JewelBO\\StallItem.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:01:45.633Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CustomerService.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceCustomer\\CustomerService.cs",
-              "RelativeDocumentMoniker": "..\\JewelService\\ServiceCustomer\\CustomerService.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelService\\ServiceCustomer\\CustomerService.cs",
-              "RelativeToolTip": "..\\JewelService\\ServiceCustomer\\CustomerService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:15:50.773Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CustomerDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOCustomer\\CustomerDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAOCustomer\\CustomerDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAOCustomer\\CustomerDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAOCustomer\\CustomerDao.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:16:25.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IInvoiceItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryInvoiceItem\\IInvoiceItemRepository.cs",
-              "RelativeDocumentMoniker": "..\\JewelRepository\\RepositoryInvoiceItem\\IInvoiceItemRepository.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelRepository\\RepositoryInvoiceItem\\IInvoiceItemRepository.cs",
-              "RelativeToolTip": "..\\JewelRepository\\RepositoryInvoiceItem\\IInvoiceItemRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:15:40.94Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "DiscountDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAODiscount\\DiscountDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAODiscount\\DiscountDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAODiscount\\DiscountDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAODiscount\\DiscountDao.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:09:26.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IDiscountDao.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAODiscount\\IDiscountDao.cs",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\DAODiscount\\IDiscountDao.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\DAODiscount\\IDiscountDao.cs",
-              "RelativeToolTip": "..\\JewelDAO\\DAODiscount\\IDiscountDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T12:09:07.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "JewelDAO.csproj",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj",
-              "RelativeDocumentMoniker": "..\\JewelDAO\\JewelDAO.csproj",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelDAO\\JewelDAO.csproj",
-              "RelativeToolTip": "..\\JewelDAO\\JewelDAO.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-19T12:03:41.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "StallItemController.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\Controllers\\StallItemController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StallItemController.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\Controllers\\StallItemController.cs",
-              "RelativeToolTip": "Controllers\\StallItemController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T11:57:05.174Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "StallController.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\Controllers\\StallController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StallController.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\Controllers\\StallController.cs",
-              "RelativeToolTip": "Controllers\\StallController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T11:54:25.549Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "20240619114721_x.cs",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\Migrations\\20240619114721_x.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240619114721_x.cs",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\Migrations\\20240619114721_x.cs",
-              "RelativeToolTip": "Migrations\\20240619114721_x.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T11:47:21.874Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-19T11:43:14.424Z"
             }
           ]
         }

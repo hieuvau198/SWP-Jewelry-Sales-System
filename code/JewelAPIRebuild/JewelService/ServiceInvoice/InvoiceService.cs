@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 using JewelRepository.RepositoryInvoice;
 
 namespace JewelService.ServiceInvoice
@@ -13,7 +12,7 @@ namespace JewelService.ServiceInvoice
             this._invoiceRepository = invoiceRepository;
         }
 
-        public bool AddInvoice(Invoice invoice)
+        public Invoice AddInvoice(Invoice invoice)
         {
             return _invoiceRepository.AddInvoice(invoice);
         }

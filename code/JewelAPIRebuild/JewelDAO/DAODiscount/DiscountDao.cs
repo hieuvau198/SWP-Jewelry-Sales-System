@@ -1,6 +1,5 @@
 ﻿
 using JewelBO;
-using JewelDAL;
 
 namespace JewelDAO.DAODiscount
 {
@@ -13,25 +12,25 @@ namespace JewelDAO.DAODiscount
             _jewelDbContext = jewelDbContext;
         }
 
-        public bool AddDiscount(Discount discount)
+        public Discount AddDiscount(Discount discount)
         {
             if (discount == null)
-                return false;
+                return null;
 
             var existingDiscount = _jewelDbContext.Discounts.Find(discount.DiscountId);
             if (existingDiscount != null)
-                return false;
+                return null;
 
             try
             {
                 _jewelDbContext.Discounts.Add(discount);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return discount;
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error adding discount: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
@@ -73,6 +72,8 @@ namespace JewelDAO.DAODiscount
                 updatedDiscount.ProductType = discount.ProductType;
                 updatedDiscount.PublicDate = discount.PublicDate;
                 updatedDiscount.ExpireDate = discount.ExpireDate;
+                updatedDiscount.ProductId = discount.ProductId;
+                updatedDiscount.DiscountRate = discount.DiscountRate;
 
                 _jewelDbContext.Discounts.Update(updatedDiscount);
                 _jewelDbContext.SaveChanges();

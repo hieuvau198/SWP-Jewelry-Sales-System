@@ -1,12 +1,5 @@
-﻿
-using JewelBO;
-using JewelDAL;
+﻿using JewelBO;
 using JewelRepository.RepositoryAuth;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 
 namespace JewelService.ServiceAuth
 {
@@ -19,7 +12,7 @@ namespace JewelService.ServiceAuth
             this._authRepository = authRepository;
         }
 
-        public bool AuthenticateUser(string username, string password)
+        public string AuthenticateUser(string username, string password)
         {
             return _authRepository.AuthenticateUser(username, password);
         }
@@ -29,16 +22,13 @@ namespace JewelService.ServiceAuth
             return (_authRepository.RegisterUser(user));
         }
 
-        // auth with token
-        
-
         public User GetUserByUsername(string username)
         {
             return _authRepository.GetUserByUsername(username);
         }
-        public string GenerateJwtToken(string username)
+        public string GenerateJwtToken(User user, string role)
         {
-            return _authRepository.GenerateJwtToken(username);
+            return _authRepository.GenerateJwtToken(user, role);
         }
     }
 }

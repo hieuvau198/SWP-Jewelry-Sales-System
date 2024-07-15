@@ -3,7 +3,6 @@ using JewelSystemBE.Model;
 using JewelSystemBE.Service.ServiceAuth;
 using JewelSystemBE.Service.ServiceGold;
 using JewelSystemBE.Service.ServiceGem;
-using JewelSystemBE.Service.ServiceJewel;
 using JewelSystemBE.Service.ServiceUser;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +26,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddHttpClient<GoldPriceService>();//new
+builder.Services.AddHttpClient<GoldPriceService>(); //new
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -38,12 +37,12 @@ builder.Services.AddDbContext<JewelDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("JewelDBW2"));
 });
 
+
 // transient: create a new object every request
 // scope: create or use the existed object in scope
 // singleton: only one object
 
 builder.Services.AddTransient<IAuthService, AuthService>();
-builder.Services.AddTransient<IJewelService, JewelService>();
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IGoldService, GoldService>();
 builder.Services.AddTransient<IGemService, GemService>();
@@ -93,7 +92,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseDeveloperExceptionPage();//new of image
+    app.UseDeveloperExceptionPage();//new when demo image feature
 }
 
 var imagesPath = Path.Combine(Directory.GetCurrentDirectory(), "Images");//new of image
@@ -102,7 +101,6 @@ if (!Directory.Exists(imagesPath))
     Directory.CreateDirectory(imagesPath);
 }//new of image
 
-// Shows UseCors with CorsPolicyBuilder
 app.UseCors(builder =>
 {
     builder

@@ -13,7 +13,7 @@ namespace JewelRepository.RepositoryProduct
             _productDao = productDao;
         }
         
-        public bool AddProduct(Product product)
+        public Product AddProduct(Product product)
         {
             return _productDao.AddProduct(product);
         }
@@ -37,5 +37,7 @@ namespace JewelRepository.RepositoryProduct
         {
             return _productDao.UpdateProduct(product);
         }
+
+        
     }
 }

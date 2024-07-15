@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JewelBO\JewelBO.csproj" />
-    <ProjectReference Include="..\JewelDAL\JewelDAL.csproj" />
     <ProjectReference Include="..\JewelRepository\JewelRepository.csproj" />
   </ItemGroup>
 

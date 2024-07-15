@@ -4,9 +4,9 @@ namespace JewelService.ServiceGold
 {
     public interface IGoldService
     {
-        List<Gold> GetGolds();
+        Task<List<Gold>> GetGolds();
         Gold GetGold(string goldId);
-        Boolean AddGold(Gold gold);
+        Gold AddGold(Gold gold);
         Boolean RemoveGold(string goldId);
         Boolean UpdateGold(Gold gold);
     }

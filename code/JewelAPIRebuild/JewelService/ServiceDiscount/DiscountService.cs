@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 using JewelRepository.RepositoryDiscount;
 
 namespace JewelService.ServiceDiscount
@@ -13,7 +12,7 @@ namespace JewelService.ServiceDiscount
             _discountRepository = discountRepository;
         }
 
-        public bool AddDiscount(Discount discount)
+        public Discount AddDiscount(Discount discount)
         {
             return _discountRepository.AddDiscount(discount);
         }

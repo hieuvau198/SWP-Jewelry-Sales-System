@@ -45,7 +45,7 @@ namespace JewelAPI.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put(InvoiceItem invoiceItem)
+        public IActionResult Put([FromBody] InvoiceItem invoiceItem)
         {
             return Ok(_invoiceItemService.UpdateInvoiceItem(invoiceItem));
         }

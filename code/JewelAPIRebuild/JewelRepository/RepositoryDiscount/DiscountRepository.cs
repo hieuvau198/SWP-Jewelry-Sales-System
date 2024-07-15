@@ -11,7 +11,7 @@ namespace JewelRepository.RepositoryDiscount
         {
             _discountDao = discountDao;
         }
-        public bool AddDiscount(Discount discount)
+        public Discount AddDiscount(Discount discount)
         {
             return _discountDao.AddDiscount(discount);
         }

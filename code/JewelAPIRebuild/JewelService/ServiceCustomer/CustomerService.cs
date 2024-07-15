@@ -11,7 +11,7 @@ namespace JewelService.ServiceCustomer
             this._customerRepository = customerRepository;
         }
 
-        public bool AddCustomer(Customer customer)
+        public Customer AddCustomer(Customer customer)
         {
             return _customerRepository.AddCustomer(customer);
         }

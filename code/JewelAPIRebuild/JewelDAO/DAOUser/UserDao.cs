@@ -1,5 +1,5 @@
 ﻿using JewelBO;
-using JewelDAL;
+using Microsoft.IdentityModel.Tokens;
 
 namespace JewelDAO.DAOUser
 {
@@ -12,19 +12,19 @@ namespace JewelDAO.DAOUser
             this._jewelDbContext = jewelDbContext;
         }
 
-        public bool AddUser(User user)
+        public User AddUser(User user)
         {
             if (user == null)
             {
                 // If user object is null, return false indicating failure
-                return false;
+                return null;
             }
 
             var existingUser = _jewelDbContext.Users.FirstOrDefault(u => u.Username == user.Username);
             if (existingUser != null)
             {
                 // Username already exists, return false indicating failure
-                return false;
+                return null;
             }
 
             try
@@ -32,25 +32,36 @@ namespace JewelDAO.DAOUser
                 // Add the user to the context and save changes
                 _jewelDbContext.Users.Add(user);
                 _jewelDbContext.SaveChanges();
-                return true;
+                return user;
             }
             catch (Exception ex)
             {
                 // Log or handle the exception appropriately
                 Console.WriteLine($"Error adding user: {ex.Message}");
-                return false;
+                return null;
             }
         }
 
 
         public List<User> GetUsers()
         {
-            return _jewelDbContext.Users.OrderByDescending(x => x.Username).ToList();
+            List<User> results = _jewelDbContext.Users.OrderBy(x => x.UserId).ToList();
+            if (!results.IsNullOrEmpty())
+            {
+                foreach (var user in results)
+                {
+                    user.Password = null;
+                }
+            }
+            return results;
         }
 
         public User GetUser(string userId)
         {
-            return _jewelDbContext.Users.Find(userId);
+            User result = _jewelDbContext.Users.Find(userId);
+            if (result != null)
+            { result.Password = null; }
+            return result;
         }
 
         public bool RemoveUser(string userId)

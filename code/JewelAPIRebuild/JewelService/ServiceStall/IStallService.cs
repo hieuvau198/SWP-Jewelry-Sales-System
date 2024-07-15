@@ -1,14 +1,15 @@
-﻿using JewelBO;
+﻿
 
-namespace JewelService.SeviceStall
+using JewelBO;
+
+namespace JewelService.ServiceStall
 {
     public interface IStallService
     {
         List<Stall> GetStalls();
         Stall GetStall(string stallId);
         Stall AddStall(Stall stall);
-        bool UpdateStall(Stall stall);
-        bool RemoveStall(string stallId);
-
+        Boolean RemoveStall(string stallId);
+        Boolean UpdateStall(Stall stall);
     }
 }

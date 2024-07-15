@@ -67,7 +67,7 @@ namespace RazorTest.Pages
                 }
 
 
-                var products = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+                var products = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
 
                 // Filter products based on string filterType, filterGem, filterGold
                 if (!string.IsNullOrEmpty(filterType) && !filterType.Equals("All"))

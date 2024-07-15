@@ -6,7 +6,7 @@ namespace JewelService.ServiceGem
     {
         List<Gem> GetGems();
         Gem GetGem(string gemId);
-        Boolean AddGem(Gem gem);
+        Gem AddGem(Gem gem);
         Boolean RemoveGem(string gemId);
         Boolean UpdateGem(Gem gem);
 

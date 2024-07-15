@@ -6,6 +6,8 @@ namespace JewelSystemBE.Model
     {
         [Key]
         public string StallItemId { get; set; } = Guid.NewGuid().ToString();
+
+        public string StallId { get; set; } = "Some Stall ID";
         [Required]
         public string ProductId { get; set; } = "Some Product Id";
         [Required]

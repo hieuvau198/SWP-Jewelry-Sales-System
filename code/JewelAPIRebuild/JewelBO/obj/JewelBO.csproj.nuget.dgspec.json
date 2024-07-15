@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {}
+    "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj": {
+    "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
+        "projectUniqueName": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
         "projectName": "JewelBO",
-        "projectPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\JewelBO.csproj",
-        "packagesPath": "C:\\Users\\nammc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nammc\\Desktop\\JewelAPIRebuild\\JewelBO\\obj\\",
+        "projectPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\JewelBO.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\workspace\\vs\\rebuild\\JewelBO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nammc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

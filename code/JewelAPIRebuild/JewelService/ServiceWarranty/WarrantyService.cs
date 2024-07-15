@@ -1,5 +1,4 @@
 ﻿using JewelBO;
-using JewelDAL;
 using JewelRepository.RepositoryWarranty;
 
 namespace JewelService.ServiceWarranty
@@ -13,7 +12,7 @@ namespace JewelService.ServiceWarranty
             this._warrantyRepository = warrantyRepository;
         }
 
-        public bool AddWarranty(Warranty warranty)
+        public Warranty AddWarranty(Warranty warranty)
         {
             return _warrantyRepository.AddWarranty(warranty);
         }

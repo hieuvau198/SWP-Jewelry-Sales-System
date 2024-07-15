@@ -1,4 +1,6 @@
-﻿using JewelBO;
+﻿
+
+using JewelBO;
 
 namespace JewelService.ServiceStallItem
 {

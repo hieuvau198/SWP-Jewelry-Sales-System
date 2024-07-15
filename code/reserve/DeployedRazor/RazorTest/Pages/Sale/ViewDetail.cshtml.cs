@@ -24,9 +24,9 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyDiscountList = "_DiscountList";
         public const string SessionKeyViewDetailProductObject = "_ViewDetailProductObject";
 
-        public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
-        public const string UrlGetDiscounts = "https://hvjewel.azurewebsites.net/api/discount\r\n";
-        public const string UrlProduct = "https://hvjewel.azurewebsites.net/api/product";
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string UrlGetDiscounts = "http://localhost:5071/api/discount\r\n";
+        public const string UrlProduct = "http://localhost:5071/api/product";
 
         private readonly ApiService _apiService;
         private readonly ILogger<SaleHomePageModel> _logger;
@@ -69,7 +69,7 @@ namespace RazorTest.Pages.Sale
 
                 ViewProductDetail = HttpContext.Session.GetObject<Product>(SaleHomePageModel.SessionKeySelectedProduct);
 
-                List<Product> allProducts = await _apiService.GetAsync<List<Product>>("https://hvjewel.azurewebsites.net/api/product");
+                List<Product> allProducts = await _apiService.GetAsync<List<Product>>("http://localhost:5071/api/product");
                 if (allProducts.IsNullOrEmpty() || ViewProductDetail == null)
                 {
                     return RedirectToPage("/NotFound");

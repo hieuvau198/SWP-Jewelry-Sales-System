@@ -1,16 +1,16 @@
 ﻿using JewelBO;
 using JewelDAO.DAOStall;
 
-
 namespace JewelRepository.RepositoryStall
 {
     public class StallRepository : IStallRepository
     {
         private readonly IStallDao _stallDao;
-        public StallRepository(IStallDao IstallDao)
+        public StallRepository(IStallDao stallDao)
         {
-            _stallDao = IstallDao;
+            _stallDao = stallDao;
         }
+
         public Stall AddStall(Stall stall)
         {
             return _stallDao.AddStall(stall);
@@ -23,7 +23,7 @@ namespace JewelRepository.RepositoryStall
 
         public List<Stall> GetStalls()
         {
-            return _stallDao.GetStalls();   
+            return _stallDao.GetStalls();
         }
 
         public bool RemoveStall(string stallId)
@@ -33,7 +33,7 @@ namespace JewelRepository.RepositoryStall
 
         public bool UpdateStall(Stall stall)
         {
-            return (_stallDao.UpdateStall(stall));      
+            return (_stallDao.UpdateStall(stall));
         }
     }
 }

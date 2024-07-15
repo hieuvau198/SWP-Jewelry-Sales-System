@@ -36,7 +36,7 @@ namespace RazorTest.Pages.pgold
                 }
             // Process data
             User = HttpContext.Session.GetObject<User>(SessionKeyUserObject);
-            var golds = await _apiService.GetAsync<List<Gold>>("https://hvjewel.azurewebsites.net/api/gold");
+            var golds = await _apiService.GetAsync<List<Gold>>("http://localhost:5071/api/gold");
 
             return Page();
         }

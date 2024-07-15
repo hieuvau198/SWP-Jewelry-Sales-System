@@ -28,10 +28,10 @@ namespace RazorTest.Pages.Sale
         public const string SessionKeyAuthState = "_AuthState";
         public const string SessionKeyUserObject = "_UserObject";
 
-        public const string UrlUpdatePrice = "https://hvjewel.azurewebsites.net/api/product/UpdatePrice\r\n";
-        public const string UrlUpdatePrices = "https://hvjewel.azurewebsites.net/api/product/UpdatePrices\r\n";
-        public const string UrlGetCustomers = "https://hvjewel.azurewebsites.net/api/customer\r\n";
-        public const string UrlStallEmployees = "https://hvjewel.azurewebsites.net/api/stallemployee\r\n";
+        public const string UrlUpdatePrice = "http://localhost:5071/api/product/UpdatePrice\r\n";
+        public const string UrlUpdatePrices = "http://localhost:5071/api/product/UpdatePrices\r\n";
+        public const string UrlGetCustomers = "http://localhost:5071/api/customer\r\n";
+        public const string UrlStallEmployees = "http://localhost:5071/api/stallemployee\r\n";
 
         private readonly ApiService _apiService;
         private readonly ILogger<CartModel> _logger;

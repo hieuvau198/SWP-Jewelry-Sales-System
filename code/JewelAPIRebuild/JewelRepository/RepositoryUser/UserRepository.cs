@@ -12,7 +12,7 @@ namespace JewelRepository.RepositoryUser
         {
             _userDao = userDao;
         }
-        public bool AddUser(User user)
+        public User AddUser(User user)
         {
             return _userDao.AddUser(user);
         }
